@@ -2,7 +2,7 @@
 
 return {
 	malikAfro_0001 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -32,7 +32,7 @@ return {
 		}
 	},
 	malikAfro_0002 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -56,7 +56,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0003 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -80,7 +80,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0004 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -104,7 +104,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0005 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -128,7 +128,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0006 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -152,7 +152,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0007 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -178,7 +178,7 @@ return {
 		}
 	},
 	malikAfro_0009 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -204,7 +204,7 @@ return {
 		}
 	},
 	malikAfro_0011 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -230,7 +230,7 @@ return {
 		}
 	},
 	malikAfro_0013 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -256,7 +256,7 @@ return {
 		}
 	},
 	malikAfro_0015 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -282,7 +282,7 @@ return {
 		}
 	},
 	malikAfro_0017 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -308,7 +308,7 @@ return {
 		}
 	},
 	malikAfro_0019 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -339,7 +339,7 @@ return {
 		}
 	},
 	malikAfro_0022 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -367,7 +367,7 @@ return {
 		}
 	},
 	malikAfro_0024 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -395,7 +395,7 @@ return {
 		}
 	},
 	malikAfro_0027 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -421,7 +421,7 @@ return {
 		}
 	},
 	malikAfro_0029 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -447,7 +447,7 @@ return {
 		}
 	},
 	malikAfro_0031 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -473,7 +473,7 @@ return {
 		}
 	},
 	malikAfro_0033 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -499,7 +499,7 @@ return {
 		}
 	},
 	malikAfro_0035 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -525,7 +525,7 @@ return {
 		}
 	},
 	malikAfro_0037 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -551,7 +551,7 @@ return {
 		}
 	},
 	malikAfro_0039 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -575,7 +575,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0040 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -599,7 +599,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0041 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -627,7 +627,7 @@ return {
 		}
 	},
 	malikAfro_0043 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -655,7 +655,7 @@ return {
 		}
 	},
 	malikAfro_0046 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -681,7 +681,7 @@ return {
 		}
 	},
 	malikAfro_0048 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -707,7 +707,7 @@ return {
 		}
 	},
 	malikAfro_0050 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -733,7 +733,7 @@ return {
 		}
 	},
 	malikAfro_0052 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -759,7 +759,7 @@ return {
 		}
 	},
 	malikAfro_0054 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -785,7 +785,7 @@ return {
 		}
 	},
 	malikAfro_0056 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -811,7 +811,7 @@ return {
 		}
 	},
 	malikAfro_0058 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -837,7 +837,7 @@ return {
 		}
 	},
 	malikAfro_0060 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -863,7 +863,7 @@ return {
 		}
 	},
 	malikAfro_0062 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -889,7 +889,7 @@ return {
 		}
 	},
 	malikAfro_0064 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -915,7 +915,7 @@ return {
 		}
 	},
 	malikAfro_0066 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -941,7 +941,7 @@ return {
 		}
 	},
 	malikAfro_0068 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -967,7 +967,7 @@ return {
 		}
 	},
 	malikAfro_0070 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -993,7 +993,7 @@ return {
 		}
 	},
 	malikAfro_0072 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1021,7 +1021,7 @@ return {
 		}
 	},
 	malikAfro_0081 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1047,7 +1047,7 @@ return {
 		}
 	},
 	malikAfro_0083 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1073,7 +1073,7 @@ return {
 		}
 	},
 	malikAfro_0085 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1099,7 +1099,7 @@ return {
 		}
 	},
 	malikAfro_0087 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1129,7 +1129,7 @@ return {
 		}
 	},
 	malikAfro_0093 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1155,7 +1155,7 @@ return {
 		}
 	},
 	malikAfro_0095 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1181,7 +1181,7 @@ return {
 		}
 	},
 	malikAfro_0097 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1207,7 +1207,7 @@ return {
 		}
 	},
 	malikAfro_0099 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1233,7 +1233,7 @@ return {
 		}
 	},
 	malikAfro_0101 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1259,7 +1259,7 @@ return {
 		}
 	},
 	malikAfro_0112 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1283,7 +1283,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0113 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1307,7 +1307,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0114 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1331,7 +1331,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0115 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1355,7 +1355,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0116 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1379,7 +1379,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0117 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1403,7 +1403,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0118 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1427,7 +1427,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0119 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1451,7 +1451,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0120 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1475,7 +1475,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0121 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1499,7 +1499,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0122 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1523,7 +1523,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0123 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1547,7 +1547,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0124 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1571,7 +1571,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0125 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1598,7 +1598,7 @@ return {
 		}
 	},
 	malikAfro_0128 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1624,7 +1624,7 @@ return {
 		}
 	},
 	malikAfro_0131 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1648,7 +1648,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0132 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1672,7 +1672,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0133 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1696,7 +1696,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0134 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1720,7 +1720,7 @@ return {
 		alias = {}
 	},
 	malikAfro_0135 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1746,7 +1746,7 @@ return {
 		}
 	},
 	malikAfro_0137 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			200,
 			138
@@ -1770,7 +1770,7 @@ return {
 		alias = {}
 	},
 	malikAfro_freedom_0001 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -1800,7 +1800,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0007 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -1826,7 +1826,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0009 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -1852,7 +1852,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0011 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -1878,7 +1878,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0013 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -1904,7 +1904,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0015 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -1928,7 +1928,7 @@ return {
 		alias = {}
 	},
 	malikAfro_freedom_0016 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -1954,7 +1954,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0018 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -1980,7 +1980,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0020 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2006,7 +2006,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0022 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2032,7 +2032,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0024 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2058,7 +2058,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0026 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2084,7 +2084,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0028 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2110,7 +2110,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0030 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2136,7 +2136,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0032 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2162,7 +2162,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0034 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2188,7 +2188,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0036 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2214,7 +2214,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0038 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2240,7 +2240,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0040 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2266,7 +2266,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0042 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2292,7 +2292,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0044 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2318,7 +2318,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0046 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2344,7 +2344,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0048 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2370,7 +2370,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0050 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2396,7 +2396,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0052 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2422,7 +2422,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0054 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2448,7 +2448,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0056 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2474,7 +2474,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0058 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2500,7 +2500,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0060 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2526,7 +2526,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0062 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2557,7 +2557,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0069 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2581,7 +2581,7 @@ return {
 		alias = {}
 	},
 	malikAfro_freedom_0070 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2605,7 +2605,7 @@ return {
 		alias = {}
 	},
 	malikAfro_freedom_0071 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2629,7 +2629,7 @@ return {
 		alias = {}
 	},
 	malikAfro_freedom_0072 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2653,7 +2653,7 @@ return {
 		alias = {}
 	},
 	malikAfro_freedom_0073 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2677,7 +2677,7 @@ return {
 		alias = {}
 	},
 	malikAfro_freedom_0074 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2701,7 +2701,7 @@ return {
 		alias = {}
 	},
 	malikAfro_freedom_0075 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2725,7 +2725,7 @@ return {
 		alias = {}
 	},
 	malikAfro_freedom_0076 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2749,7 +2749,7 @@ return {
 		alias = {}
 	},
 	malikAfro_freedom_0077 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2773,7 +2773,7 @@ return {
 		alias = {}
 	},
 	malikAfro_freedom_0078 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2797,7 +2797,7 @@ return {
 		alias = {}
 	},
 	malikAfro_freedom_0079 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2821,7 +2821,7 @@ return {
 		alias = {}
 	},
 	malikAfro_freedom_0080 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2845,7 +2845,7 @@ return {
 		alias = {}
 	},
 	malikAfro_freedom_0081 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2877,7 +2877,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0089 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2905,7 +2905,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0091 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2933,7 +2933,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0097 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2959,7 +2959,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0099 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -2989,7 +2989,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0101 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -3019,7 +3019,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0111 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -3045,7 +3045,7 @@ return {
 		}
 	},
 	malikAfro_freedom_0113 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			304,
 			354
@@ -3071,7 +3071,7 @@ return {
 		}
 	},
 	malikAfro_rocks_0001 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			98,
 			93
@@ -3095,7 +3095,7 @@ return {
 		alias = {}
 	},
 	malikAfro_rocks_0002 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			98,
 			93
@@ -3119,7 +3119,7 @@ return {
 		alias = {}
 	},
 	malikAfro_rocks_0003 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			98,
 			93
@@ -3145,7 +3145,7 @@ return {
 		}
 	},
 	malikAfro_rocks_0005 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			98,
 			93
@@ -3171,7 +3171,7 @@ return {
 		}
 	},
 	malikAfro_rocks_0007 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			98,
 			93
@@ -3197,7 +3197,7 @@ return {
 		}
 	},
 	malikAfro_rocks_0009 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			98,
 			93
@@ -3223,7 +3223,7 @@ return {
 		}
 	},
 	malikAfro_rocks_0011 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			98,
 			93
@@ -3247,7 +3247,7 @@ return {
 		alias = {}
 	},
 	malikAfro_rocks_0012 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			98,
 			93
@@ -3271,7 +3271,7 @@ return {
 		alias = {}
 	},
 	malikAfro_rocks_0013 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			98,
 			93
@@ -3295,7 +3295,7 @@ return {
 		alias = {}
 	},
 	malikAfro_rocks_0014 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			98,
 			93
@@ -3319,7 +3319,7 @@ return {
 		alias = {}
 	},
 	malikAfro_rocks_0015 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			98,
 			93
@@ -3343,7 +3343,7 @@ return {
 		alias = {}
 	},
 	malikAfro_rocks_0016 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			98,
 			93
@@ -3367,7 +3367,7 @@ return {
 		alias = {}
 	},
 	malikAfro_rocks_0017 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			98,
 			93
@@ -3391,7 +3391,7 @@ return {
 		alias = {}
 	},
 	malikAfro_sign = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			82,
 			68
@@ -3415,7 +3415,7 @@ return {
 		alias = {}
 	},
 	malikAfro_slave_0001 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			127,
 			73
@@ -3439,7 +3439,7 @@ return {
 		alias = {}
 	},
 	malikAfro_slave_0002 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			127,
 			73
@@ -3463,7 +3463,7 @@ return {
 		alias = {}
 	},
 	malikAfro_slave_0003 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			127,
 			73
@@ -3487,7 +3487,7 @@ return {
 		alias = {}
 	},
 	malikAfro_slave_0004 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			127,
 			73
@@ -3511,7 +3511,7 @@ return {
 		alias = {}
 	},
 	malikAfro_slave_0005 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			127,
 			73
@@ -3535,7 +3535,7 @@ return {
 		alias = {}
 	},
 	malikAfro_slave_0006 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			127,
 			73
@@ -3559,7 +3559,7 @@ return {
 		alias = {}
 	},
 	malikAfro_slave_0007 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			127,
 			73
@@ -3587,7 +3587,7 @@ return {
 		}
 	},
 	malikAfro_slave_0009 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			127,
 			73
@@ -3613,7 +3613,7 @@ return {
 		}
 	},
 	malikAfro_slave_0011 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			127,
 			73
@@ -3639,7 +3639,7 @@ return {
 		}
 	},
 	malikAfro_slave_0013 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			127,
 			73
@@ -3665,7 +3665,7 @@ return {
 		}
 	},
 	malikAfro_slave_0015 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			127,
 			73
@@ -3691,7 +3691,7 @@ return {
 		}
 	},
 	malikAfro_slave_0017 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			127,
 			73
@@ -3717,7 +3717,7 @@ return {
 		}
 	},
 	malikAfro_slave_0019 = {
-		a_name = "go_hero_baby_malik-1.dds",
+		a_name = "go_hero_baby_malik-1.png",
 		size = {
 			127,
 			73

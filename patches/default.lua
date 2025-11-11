@@ -21,6 +21,9 @@ return {
     -- 英雄升级速度倍率，默认为 1
     hero_xp_gain_multiplier = 1,
 
+    -- 英雄受伤倍率，默认为 1
+    hero_health_damage_multiplier = 1,
+
     -- 路线是否倒转，默认为 false
     reverse_path = false,
 
@@ -35,4 +38,13 @@ return {
 
     -- 允许局内召唤英雄开关，默认为 false
     enable_hero_menu = false,
+
+    -- 怪物伤害倍率，默认为 1
+    enemy_damage_multiplier = 1,
+
+    -- 怪物受伤倍率，默认为 1
+    enemy_health_damage_multiplier = 1,
+
+    -- 怪物移速倍率，默认为 1
+    enemy_speed_multiplier = 1,
 }

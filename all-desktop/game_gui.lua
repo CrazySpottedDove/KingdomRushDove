@@ -816,6 +816,7 @@ function game_gui:init(w, h, game)
     signal.register("hand-midas-ends", hand_midas_ends_handler)
     signal.register("debug-ready-user-powers", debug_ready_user_powers_handler)
     signal.register("debug-ready-plants-crystals", debug_ready_plants_crystals_handler)
+    self:add_mobile_shortcut_buttons()
 end
 
 function game_gui:destroy()
@@ -886,6 +887,27 @@ end
 
 function game_gui:mousereleased(x, y, button)
     self.window:mousereleased(x, y, button)
+end
+
+function game_gui:add_mobile_shortcut_buttons()
+    if not IS_MOBILE then
+        return
+    end
+
+    local ks = self.key_shortcuts
+    local y = self.sh - 60
+    local idx = 0
+    for group, keys in pairs(ks) do
+        local key = type(keys) == "table" and keys[1] or keys
+        idx = idx + 1
+        local btn = KButton:new(V.v(80, 40))
+        btn.pos = V.v(20 + (idx - 1) * 90, y)
+        btn.text = tostring(key) -- 直接显示key名
+        function btn:on_click()
+            game_gui:keypressed(key)
+        end
+        self.layer_gui_top:add_child(btn)
+    end
 end
 
 function game_gui:keypressed(key, isrepeat)
@@ -1123,21 +1145,6 @@ function game_gui:keypressed(key, isrepeat)
         end
     elseif table.contains(ks.force_next_wave, key) then
         game_gui.game.store.force_next_wave = true
-        -- elseif self.is_premium and self.bag_button and not self.bag_button:is_disabled() and
-        --     table.contains(table.keys(ks.all_items), key) then
-        --     local bb = self.bag_button
-        --     local item = ks.all_items[key]
-        --     local last_selected_item = bb.selected_item
-
-        --     self:deselect_all()
-
-        --     if last_selected_item ~= item then
-        --         local ib = wid("bag_item_" .. item)
-
-        --         if ib and not ib:is_disabled() then
-        --             bb:select_item(item)
-        --         end
-        --     end
     elseif table.contains(ks.wealthy, key) then
         game_gui.game.store.player_gold = game_gui.game.store.player_gold + 99999
     elseif table.contains(ks.healthy, key) then

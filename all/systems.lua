@@ -33,7 +33,10 @@ local bnot = bit.bnot
 local random = math.random
 local ceil = math.ceil
 local floor = math.floor
+local sin = math.sin
+local cos = math.cos
 require("constants")
+local ffi = require("ffi")
 
 local function queue_insert(store, e)
     simulation:queue_insert_entity(e)
@@ -65,6 +68,7 @@ function sys.level:init(store)
     E:load()
 
     DI:patch_templates()
+    E:patch_config(store.config)
 
     W:load(store.level_name, store.level_mode, store.level_mode_override == GAME_MODE_ENDLESS)
     if store.criket and store.criket.on then
@@ -1501,7 +1505,7 @@ function sys.tween:init(store)
             return s * s
         end,
         sine = function(s)
-            return 0.5 * (1 - math.cos(s * math.pi))
+            return 0.5 * (1 - cos(s * math.pi))
         end
     }
     self.lerp = function(a, b, t, fn)
@@ -1715,92 +1719,24 @@ end
 sys.particle_system = {}
 sys.particle_system.name = "particle_system"
 
--- local Pool = require("pool")
+ffi.cdef [[
+    typedef struct {
+        float pos_x;
+        float pos_y;
+        float r;
+        float speed_x;
+        float speed_y;
+        float spin;
+        float scale_x;
+        float scale_y;
+        float ts;
+        float last_ts;
+        float lifetime;
+        int name_idx;
+    } particle_t;
+]]
 
 function sys.particle_system:init(store)
-    local function create_particle(ts)
-        return {
-            pos = {
-                x = 0,
-                y = 0
-            },
-            r = 0,
-            speed = {
-                x = 0,
-                y = 0
-            },
-            spin = 0,
-            scale_factor = {
-                x = 1,
-                y = 1
-            },
-            ts = ts,
-            last_ts = ts
-        }
-    end
-    local function reset_particle(p, ts)
-        -- p.pos.x = 0
-        -- p.pos.y = 0
-        -- p.r = 0
-        -- p.speed.x = 0
-        -- p.speed.y = 0
-        -- p.spin = 0
-        -- p.scale_factor.x = 1
-        -- p.scale_factor.y = 1
-        p.ts = ts
-        p.last_ts = ts
-    end
-    -- self.pool = Pool:new(create_particle, reset_particle, 2048)
-    self.new_frame = function(draw_order, z, sort_y_offset, sort_y)
-        return {
-            ss = nil,
-            flip_x = false,
-            flip_y = false,
-            pos = {
-                x = 0,
-                y = 0
-            },
-            r = 0,
-            scale = {
-                x = 1,
-                y = 1
-            },
-            anchor = {
-                x = 0.5,
-                y = 0.5
-            },
-            offset = {
-                x = 0,
-                y = 0
-            },
-            _draw_order = draw_order,
-            z = z,
-            sort_y = sort_y,
-            sort_y_offset = sort_y_offset,
-            alpha = 255,
-            hidden = nil
-        }
-    end
-    self.new_particle = function(ts)
-        return {
-            pos = {
-                x = 0,
-                y = 0
-            },
-            r = 0,
-            speed = {
-                x = 0,
-                y = 0
-            },
-            spin = 0,
-            scale_factor = {
-                x = 1,
-                y = 1
-            },
-            ts = ts,
-            last_ts = ts
-        }
-    end
     self.phase_interp = function(values, phase, default)
         if not values or #values == 0 then
             return default
@@ -1829,21 +1765,19 @@ function sys.particle_system:init(store)
             return a
         elseif a ~= nil and b ~= nil then
             return a + (b - a) * interval_phase
-        else
-            log.error("sys.particle_system:update phase_interp has nil values in %s", getdump(values))
-
-            return default
         end
+
+        return default
     end
 end
 
 function sys.particle_system:on_insert(entity, store)
     if entity.particle_system then
-        local s = entity.particle_system
+        local ps = entity.particle_system
 
-        s.emit_ts = (s.emit_ts and s.emit_ts or store.tick_ts) + s.ts_offset
-        s.ts = store.tick_ts
-        s.last_pos = {
+        ps.emit_ts = (ps.emit_ts and ps.emit_ts or store.tick_ts) + ps.ts_offset
+        ps.ts = store.tick_ts
+        ps.last_pos = {
             x = 0,
             y = 0
         }
@@ -1854,206 +1788,224 @@ end
 
 function sys.particle_system:on_remove(entity, store)
     if entity.particle_system then
-        local s = entity.particle_system
+        local ps = entity.particle_system
 
-        for i = #s.particles, 1, -1 do
-            local p = s.particles[i]
-            p.f.marked_to_remove = true
-            s.particles[i] = nil
+        for i = ps.particle_count, 1, -1 do
+            ps.particles[i] = nil
+            ps.frames[i].marked_to_remove = true
+            ps.frames[i] = nil
         end
-
     end
 
     return true
 end
 
 function sys.particle_system:on_update(dt, ts, store)
-    local new_frame = self.new_frame
-    local new_particle = self.new_particle
     local phase_interp = self.phase_interp
-    local pool = self.pool
-    -- local get_particle = pool.get
-    -- local release_particle = pool.release
-
     local particle_systems = store.particle_systems
-    for _, e in pairs(particle_systems) do
-        local s = e.particle_system
-        local tl = store.tick_length
-        local to_remove = {}
-        local target_rot
 
-        if s.track_id then
-            local target = store.entities[s.track_id]
+    for _, e in pairs(particle_systems) do
+        local ps = e.particle_system
+        local e_pos = e.pos
+        local target_rot
+        local particles = ps.particles
+        local frames = ps.frames
+
+        if ps.track_id then
+            local target = store.entities[ps.track_id]
 
             if target then
-                s.last_pos.x, s.last_pos.y = e.pos.x, e.pos.y
-                e.pos.x, e.pos.y = target.pos.x, target.pos.y
+                ps.last_pos.x, ps.last_pos.y = e.pos.x, e.pos.y
+                e_pos.x, e_pos.y = target.pos.x, target.pos.y
 
-                if s.track_offset then
-                    e.pos.x, e.pos.y = e.pos.x + s.track_offset.x, e.pos.y + s.track_offset.y
+                if ps.track_offset then
+                    e_pos.x, e_pos.y = e_pos.x + ps.track_offset.x, e_pos.y + ps.track_offset.y
                 end
 
                 if target.render and target.render.sprites[1] then
                     target_rot = target.render.sprites[1].r
                 end
             else
-                s.emit = false
-                s.source_lifetime = 0
+                ps.emit = false
+                ps.source_lifetime = 0
             end
         end
 
-        if s.emit_duration and s.emit then
-            if not s.emit_duration_ts then
-                s.emit_duration_ts = store.tick_ts
+        if ps.emit_duration and ps.emit then
+            if not ps.emit_duration_ts then
+                ps.emit_duration_ts = ts
             end
 
-            if store.tick_ts - s.emit_duration_ts > s.emit_duration then
-                s.emit = false
+            if ts - ps.emit_duration_ts > ps.emit_duration then
+                ps.emit = false
             end
         end
 
-        if not s.emit then
-            s.emit_ts = store.tick_ts + s.ts_offset
-        elseif ts - s.emit_ts > 1 / s.emission_rate then
-            local count = floor((ts - s.emit_ts) * s.emission_rate)
-
+        if not ps.emit then
+            ps.emit_ts = ts + ps.ts_offset
+        elseif ts - ps.emit_ts > 1 / ps.emission_rate then
+            local count = floor((ts - ps.emit_ts) * ps.emission_rate)
+            local particle_lifetime = (ps.particle_lifetime[1] + ps.particle_lifetime[2]) * 0.5
             for i = 1, count do
-                local pts = s.emit_ts + i / s.emission_rate
+                local pts = ps.emit_ts + i / ps.emission_rate
 
-                local draw_order = s.draw_order and 100000 * s.draw_order + e.id or floor(pts * 100)
-                local f = new_frame(draw_order, s.z, s.sort_y_offset, s.sort_y)
+                local draw_order = ps.draw_order and 100000 * ps.draw_order + e.id or floor(pts * 100)
+
+                ps.particle_count = ps.particle_count + 1
+
+                -- 发生粒子喷射。首先，我们生成粒子，并加入 .particles
+                -- 改用 particle_t 结构体
+                local p = ffi.new("particle_t", 0, 0,
+                    ps.emit_rotation and ps.emit_rotation or (ps.track_rotation and target_rot) or
+                        (ps.emit_direction + (random() - 0.5) * ps.emit_rotation_spread), 0, 0,
+                    ps.spin and random() * (ps.spin[2] - ps.spin[1]) + ps.spin[1] or 0, 1, 1, pts, pts,
+                    particle_lifetime, 0)
+
+                particles[ps.particle_count] = p
+
+                local f = {
+                    ss = nil,
+                    flip_x = false,
+                    flip_y = false,
+                    pos = {
+                        x = 0,
+                        y = 0
+                    },
+                    r = 0,
+                    scale = {
+                        x = 1,
+                        y = 1
+                    },
+                    anchor = {
+                        x = ps.anchor.x,
+                        y = ps.anchor.y
+                    },
+                    offset = {
+                        x = 0,
+                        y = 0
+                    },
+                    _draw_order = draw_order,
+                    z = ps.z,
+                    sort_y = ps.sort_y,
+                    sort_y_offset = ps.sort_y_offset,
+                    alpha = 255,
+                    hidden = nil
+                }
+
+                frames[ps.particle_count] = f
 
                 store.render_frames[#store.render_frames + 1] = f
 
-                local p = new_particle(pts)
-                -- local p = get_particle(pool,pts)
-
-                f.anchor.x, f.anchor.y = s.anchor.x, s.anchor.y
-
-                s.particles[#s.particles + 1] = p
-
-                p.f = f
-                p.lifetime = U.frandom(s.particle_lifetime[1], s.particle_lifetime[2])
-
-                if s.track_id then
+                if ps.track_id then
                     local factor = (i - 1) / count
-                    p.pos.x, p.pos.y = s.last_pos.x + (e.pos.x - s.last_pos.x) * factor,
-                        s.last_pos.y + (e.pos.y - s.last_pos.y) * factor
+                    p.pos_x, p.pos_y = ps.last_pos.x + (e_pos.x - ps.last_pos.x) * factor,
+                        ps.last_pos.y + (e_pos.y - ps.last_pos.y) * factor
                 else
-                    p.pos.x, p.pos.y = e.pos.x, e.pos.y
+                    p.pos_x, p.pos_y = e_pos.x, e_pos.y
                 end
 
-                if s.emit_area_spread then
-                    local sp = s.emit_area_spread
-
-                    p.pos.x = p.pos.x + U.frandom(-sp.x * 0.5, sp.x * 0.5)
-                    p.pos.y = p.pos.y + U.frandom(-sp.y * 0.5, sp.y * 0.5)
+                if ps.emit_area_spread then
+                    local sp = ps.emit_area_spread
+                    p.pos_x = p.pos_x + (random() - 0.5) * sp.x * 0.5
+                    p.pos_y = p.pos_y + (random() - 0.5) * sp.y * 0.5
                 end
 
-                if s.emit_offset then
-                    p.pos.x = p.pos.x + s.emit_offset.x
-                    p.pos.y = p.pos.y + s.emit_offset.y
+                if ps.emit_offset then
+                    p.pos_x = p.pos_x + ps.emit_offset.x
+                    p.pos_y = p.pos_y + ps.emit_offset.y
                 end
 
-                if s.emit_speed then
-                    p.speed.x, p.speed.y = V.rotate(s.emit_direction + U.frandom(-s.emit_spread, s.emit_spread),
-                        U.frandom(s.emit_speed[1], s.emit_speed[2]), 0)
+                if ps.emit_speed then
+                    local angle = ps.emission_rate + (random() - 0.5) * ps.emit_spread
+                    local len = random() * (ps.emit_speed[2] - ps.emit_speed[1]) + ps.emit_speed[1]
+
+                    p.speed_x = cos(angle) * len
+                    p.speed_y = sin(angle) * len
                 end
 
-                if s.emit_rotation then
-                    p.r = s.emit_rotation
-                elseif s.track_rotation and target_rot then
-                    p.r = target_rot
-                else
-                    p.r = s.emit_direction + U.frandom(-s.emit_rotation_spread, s.emit_rotation_spread)
+                if ps.scale_var then
+                    local factor = random() * (ps.scale_var[2] - ps.scale_var[1]) + ps.scale_var[1]
+
+                    p.scale_x = factor
+                    p.scale_y = factor
+                    -- p.scale_y = ps.scale_same_aspect and factor or random() * factor * 2
                 end
 
-                if s.spin then
-                    p.spin = U.frandom(s.spin[1], s.spin[2])
-                end
-
-                if s.scale_var then
-                    local factor = U.frandom(s.scale_var[1], s.scale_var[2])
-
-                    p.scale_factor = {
-                        x = factor,
-                        y = factor
-                    }
-
-                    if not s.scale_same_aspect then
-                        p.scale_factor.y = U.frandom(s.scale_var[1], s.scale_var[2])
-                    end
-                end
-
-                if s.names then
-                    if s.cycle_names then
-                        if not s._last_name_idx then
-                            s._last_name_idx = 0
+                if ps.names then
+                    if ps.cycle_names then
+                        if not ps._last_name_idx then
+                            ps._last_name_idx = 0
                         end
 
-                        s._last_name_idx = km.zmod(s._last_name_idx + 1, #s.names)
-                        p.name_idx = s._last_name_idx
+                        ps._last_name_idx = km.zmod(ps._last_name_idx + 1, #ps.names)
+                        p.name_idx = ps._last_name_idx
                     else
-                        p.name_idx = random(1, #s.names)
+                        p.name_idx = random(1, #ps.names)
                     end
                 end
             end
 
-            s.emit_ts = s.emit_ts + count * 1 / s.emission_rate
+            ps.emit_ts = ps.emit_ts + count * 1 / ps.emission_rate
         end
 
-        for i = 1, #s.particles do
+        -- 更新 particles，并管理它们的生命周期
+        -- 需要从后往前遍历，以满足 swap 删除方式，同时避免跳过元素
+        for i = ps.particle_count, 1, -1 do
             do
-                local p = s.particles[i]
-                local tp = ts - p.last_ts
+                local p = particles[i]
+                local f = frames[i]
                 local phase = (ts - p.ts) / p.lifetime
 
                 if phase >= 1 then
-                    to_remove[#to_remove + 1] = p
-
+                    -- 不再延迟删除，就地 swap
+                    local last_count = ps.particle_count
+                    particles[i] = particles[last_count]
+                    frames[i] = frames[last_count]
+                    particles[last_count] = nil
+                    frames[last_count] = nil
+                    ps.particle_count = last_count - 1
+                    f.marked_to_remove = true
                     goto label_51_0
                 elseif phase < 0 then
                     phase = 0
                 end
 
-                local f = p.f
-
+                local tp = ts - p.last_ts
                 p.last_ts = ts
-                p.pos.x, p.pos.y = p.pos.x + p.speed.x * tp, p.pos.y + p.speed.y * tp
-                f.pos.x, f.pos.y = p.pos.x, p.pos.y
+
+                p.pos_x, p.pos_y = p.pos_x + p.speed_x * tp, p.pos_y + p.speed_y * tp
+                f.pos.x, f.pos.y = p.pos_x, p.pos_y
                 p.r = p.r + p.spin * tp
                 f.r = p.r
 
-                local scale_x = phase_interp(s.scales_x, phase, 1)
-                local scale_y = phase_interp(s.scales_y, phase, 1)
+                f.scale.x, f.scale.y = phase_interp(ps.scales_x, phase, 1) * p.scale_x,
+                    phase_interp(ps.scales_y, phase, 1) * p.scale_y
+                f.alpha = phase_interp(ps.alphas, phase, 255)
 
-                f.scale.x, f.scale.y = scale_x * p.scale_factor.x, scale_y * p.scale_factor.y
-                f.alpha = phase_interp(s.alphas, phase, 255)
-
-                if s.sort_y_offsets then
-                    f.sort_y_offset = phase_interp(s.sort_y_offsets, phase, 1)
+                if ps.sort_y_offsets then
+                    f.sort_y_offset = phase_interp(ps.sort_y_offsets, phase, 1)
                 end
-                if s.color then
-                    f.color = s.color
+                if ps.color then
+                    f.color = ps.color
                 end
                 local fn
 
-                if s.animated then
+                if ps.animated then
                     local to = ts - p.ts
 
-                    if s.animation_fps then
-                        to = to * s.animation_fps / FPS
+                    if ps.animation_fps then
+                        to = to * ps.animation_fps / FPS
                     end
 
-                    if p.name_idx then
-                        fn = A:fn(s.names[p.name_idx], to, s.loop)
+                    if p.name_idx > 0 then
+                        fn = A:fn(ps.names[p.name_idx], to, ps.loop)
                     else
-                        fn = A:fn(s.name, to, s.loop)
+                        fn = A:fn(ps.name, to, ps.loop)
                     end
-                elseif p.name_idx then
-                    fn = s.names[p.name_idx]
+                elseif p.name_idx > 0 then
+                    fn = ps.names[p.name_idx]
                 else
-                    fn = s.name
+                    fn = ps.name
                 end
 
                 f.ss = I:s(fn)
@@ -2062,22 +2014,10 @@ function sys.particle_system:on_update(dt, ts, store)
             ::label_51_0::
         end
 
-        for i = 1, #to_remove do
-            local p = to_remove[i]
+        if ps.source_lifetime and ts - ps.ts > ps.source_lifetime then
+            ps.emit = false
 
-            for j = 1, #s.particles do
-                if s.particles[j] == p then
-                    table.remove(s.particles, j)
-                    break
-                end
-            end
-            p.f.marked_to_remove = true
-        end
-
-        if s.source_lifetime and ts - s.ts > s.source_lifetime then
-            s.emit = false
-
-            if #s.particles == 0 then
+            if ps.particle_count == 0 then
                 queue_remove(store, e)
             end
         end
@@ -2087,7 +2027,6 @@ end
 sys.render = {}
 sys.render.name = "render"
 
-local ffi = require("ffi")
 ffi.cdef [[
 typedef struct {
     double sort_y;
@@ -2098,7 +2037,71 @@ typedef struct {
 } RenderFrameFFI;
 void ffi_sort(RenderFrameFFI* arr, RenderFrameFFI* tmp, int n);
 ]]
-local lib_render_sort = ffi.load("all/librender_sort.dll")
+
+local lib_render_sort
+local ok, lib = pcall(ffi.load, "all/librender_sort.dll")
+if ok and lib then
+    lib_render_sort = lib
+else
+    -- fallback: 归并排序，直接用 FFI 数组和 tmp
+    local function cmp(a, b)
+        if a.z ~= b.z then
+            return a.z < b.z
+        end
+        if a.sort_y ~= b.sort_y then
+            return a.sort_y > b.sort_y
+        end
+        if a.draw_order ~= b.draw_order then
+            return a.draw_order < b.draw_order
+        end
+        if a.pos_x ~= b.pos_x then
+            return a.pos_x < b.pos_x
+        end
+        return false
+    end
+
+    local function merge(arr, tmp, left, mid, right)
+        for i = left, right do
+            tmp[i] = arr[i]
+        end
+        local i, j, k = left, mid + 1, left
+        while i <= mid and j <= right do
+            if not cmp(tmp[j], tmp[i]) then
+                arr[k] = tmp[i]
+                i = i + 1
+            else
+                arr[k] = tmp[j]
+                j = j + 1
+            end
+            k = k + 1
+        end
+        while i <= mid do
+            arr[k] = tmp[i]
+            i = i + 1
+            k = k + 1
+        end
+        while j <= right do
+            arr[k] = tmp[j]
+            j = j + 1
+            k = k + 1
+        end
+    end
+
+    local function merge_sort(arr, tmp, left, right)
+        if left < right then
+            local mid = math.floor((left + right) / 2)
+            merge_sort(arr, tmp, left, mid)
+            merge_sort(arr, tmp, mid + 1, right)
+            merge(arr, tmp, left, mid, right)
+        end
+    end
+
+    lib_render_sort = {
+        ffi_sort = function(arr, tmp, n)
+            merge_sort(arr, tmp, 0, n - 1)
+        end
+    }
+end
 
 function sys.render:init(store)
     store.render_frames = {}
@@ -2701,10 +2704,10 @@ function sys.last_hook:on_insert(e, d)
                     e.health.hp_max = e.health.hp_max * 1.15
                 end
             end
-            e.health.hp_max = d.config.enemy_health_multiplier * e.health.hp_max
+            -- e.health.hp_max = d.config.enemy_health_multiplier * e.health.hp_max
             e.health.hp = e.health.hp_max
             e.health.patched = true
-            e.enemy.gold = math.ceil(e.enemy.gold * d.config.enemy_gold_multiplier)
+            -- e.enemy.gold = math.ceil(e.enemy.gold * d.config.enemy_gold_multiplier)
         end
         d.enemy_count = d.enemy_count + 1
 

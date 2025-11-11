@@ -175,7 +175,7 @@ function screen:start_animation()
 			data.image
 		}, "/")
 
-		log.error("IMAGE FILE: %s exists:%s", imf, love.filesystem.exists(imf))
+		log.error("IMAGE FILE: %s exists:%s", imf, love.filesystem.getInfo(imf))
 
 		local imd = G.newImage(imf)
 		local img = KImageView:new(imd)

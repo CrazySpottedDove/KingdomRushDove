@@ -2,7 +2,7 @@
 
 return {
 	hero_oni_0001 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -29,7 +29,7 @@ return {
 		}
 	},
 	hero_oni_0003 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -55,7 +55,7 @@ return {
 		}
 	},
 	hero_oni_0005 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -81,7 +81,7 @@ return {
 		}
 	},
 	hero_oni_0007 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -107,7 +107,7 @@ return {
 		}
 	},
 	hero_oni_0009 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -133,7 +133,7 @@ return {
 		}
 	},
 	hero_oni_0011 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -157,7 +157,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0012 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -181,7 +181,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0013 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -205,7 +205,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0014 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -229,7 +229,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0015 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -253,7 +253,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0016 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -277,7 +277,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0017 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -303,7 +303,7 @@ return {
 		}
 	},
 	hero_oni_0019 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -329,7 +329,7 @@ return {
 		}
 	},
 	hero_oni_0021 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -355,7 +355,7 @@ return {
 		}
 	},
 	hero_oni_0023 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -381,7 +381,7 @@ return {
 		}
 	},
 	hero_oni_0025 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -407,7 +407,7 @@ return {
 		}
 	},
 	hero_oni_0027 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -433,7 +433,7 @@ return {
 		}
 	},
 	hero_oni_0029 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -459,7 +459,7 @@ return {
 		}
 	},
 	hero_oni_0031 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -483,7 +483,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0032 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -509,7 +509,7 @@ return {
 		}
 	},
 	hero_oni_0034 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -535,7 +535,7 @@ return {
 		}
 	},
 	hero_oni_0036 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -561,7 +561,7 @@ return {
 		}
 	},
 	hero_oni_0038 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -587,7 +587,7 @@ return {
 		}
 	},
 	hero_oni_0040 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -611,7 +611,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0041 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -635,7 +635,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0042 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -661,7 +661,7 @@ return {
 		}
 	},
 	hero_oni_0044 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -685,7 +685,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0046 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -709,7 +709,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0047 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -735,7 +735,7 @@ return {
 		}
 	},
 	hero_oni_0049 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -761,7 +761,7 @@ return {
 		}
 	},
 	hero_oni_0051 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -787,7 +787,7 @@ return {
 		}
 	},
 	hero_oni_0053 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -813,7 +813,7 @@ return {
 		}
 	},
 	hero_oni_0055 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -839,7 +839,7 @@ return {
 		}
 	},
 	hero_oni_0057 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -865,7 +865,7 @@ return {
 		}
 	},
 	hero_oni_0059 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -891,7 +891,7 @@ return {
 		}
 	},
 	hero_oni_0061 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -917,7 +917,7 @@ return {
 		}
 	},
 	hero_oni_0063 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -943,7 +943,7 @@ return {
 		}
 	},
 	hero_oni_0065 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -969,7 +969,7 @@ return {
 		}
 	},
 	hero_oni_0067 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -995,7 +995,7 @@ return {
 		}
 	},
 	hero_oni_0069 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1021,7 +1021,7 @@ return {
 		}
 	},
 	hero_oni_0071 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1064,7 +1064,7 @@ return {
 		}
 	},
 	hero_oni_0090 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1090,7 +1090,7 @@ return {
 		}
 	},
 	hero_oni_0092 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1116,7 +1116,7 @@ return {
 		}
 	},
 	hero_oni_0094 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1142,7 +1142,7 @@ return {
 		}
 	},
 	hero_oni_0096 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1168,7 +1168,7 @@ return {
 		}
 	},
 	hero_oni_0098 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1194,7 +1194,7 @@ return {
 		}
 	},
 	hero_oni_0100 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1220,7 +1220,7 @@ return {
 		}
 	},
 	hero_oni_0102 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1246,7 +1246,7 @@ return {
 		}
 	},
 	hero_oni_0104 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1272,7 +1272,7 @@ return {
 		}
 	},
 	hero_oni_0106 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1298,7 +1298,7 @@ return {
 		}
 	},
 	hero_oni_0108 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1324,7 +1324,7 @@ return {
 		}
 	},
 	hero_oni_0110 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1350,7 +1350,7 @@ return {
 		}
 	},
 	hero_oni_0112 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1374,7 +1374,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0113 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1398,7 +1398,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0114 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1422,7 +1422,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0115 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1446,7 +1446,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0116 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1470,7 +1470,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0117 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1494,7 +1494,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0118 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1518,7 +1518,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0119 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1542,7 +1542,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0120 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1566,7 +1566,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0121 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1592,7 +1592,7 @@ return {
 		}
 	},
 	hero_oni_0123 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1618,7 +1618,7 @@ return {
 		}
 	},
 	hero_oni_0125 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1644,7 +1644,7 @@ return {
 		}
 	},
 	hero_oni_0127 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1670,7 +1670,7 @@ return {
 		}
 	},
 	hero_oni_0129 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1696,7 +1696,7 @@ return {
 		}
 	},
 	hero_oni_0131 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1722,7 +1722,7 @@ return {
 		}
 	},
 	hero_oni_0133 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1748,7 +1748,7 @@ return {
 		}
 	},
 	hero_oni_0135 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1774,7 +1774,7 @@ return {
 		}
 	},
 	hero_oni_0137 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1800,7 +1800,7 @@ return {
 		}
 	},
 	hero_oni_0139 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1826,7 +1826,7 @@ return {
 		}
 	},
 	hero_oni_0141 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1852,7 +1852,7 @@ return {
 		}
 	},
 	hero_oni_0143 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1878,7 +1878,7 @@ return {
 		}
 	},
 	hero_oni_0145 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1904,7 +1904,7 @@ return {
 		}
 	},
 	hero_oni_0147 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1930,7 +1930,7 @@ return {
 		}
 	},
 	hero_oni_0149 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1956,7 +1956,7 @@ return {
 		}
 	},
 	hero_oni_0151 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -1982,7 +1982,7 @@ return {
 		}
 	},
 	hero_oni_0153 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2006,7 +2006,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0154 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2030,7 +2030,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0155 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2054,7 +2054,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0156 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2078,7 +2078,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0157 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2104,7 +2104,7 @@ return {
 		}
 	},
 	hero_oni_0159 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2130,7 +2130,7 @@ return {
 		}
 	},
 	hero_oni_0161 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2154,7 +2154,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0162 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2178,7 +2178,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0163 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2202,7 +2202,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0164 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2226,7 +2226,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0165 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2250,7 +2250,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0166 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2274,7 +2274,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0167 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2298,7 +2298,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0168 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2322,7 +2322,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0169 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2346,7 +2346,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0170 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2370,7 +2370,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0171 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2394,7 +2394,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0172 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2418,7 +2418,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0173 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2442,7 +2442,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0174 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2468,7 +2468,7 @@ return {
 		}
 	},
 	hero_oni_0176 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2492,7 +2492,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0177 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2516,7 +2516,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0178 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2540,7 +2540,7 @@ return {
 		alias = {}
 	},
 	hero_oni_0179 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2566,7 +2566,7 @@ return {
 		}
 	},
 	hero_oni_0181 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2592,7 +2592,7 @@ return {
 		}
 	},
 	hero_oni_0183 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2618,7 +2618,7 @@ return {
 		}
 	},
 	hero_oni_0185 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2644,7 +2644,7 @@ return {
 		}
 	},
 	hero_oni_0187 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2674,7 +2674,7 @@ return {
 		}
 	},
 	hero_oni_0193 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2700,7 +2700,7 @@ return {
 		}
 	},
 	hero_oni_0195 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2726,7 +2726,7 @@ return {
 		}
 	},
 	hero_oni_0197 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2752,7 +2752,7 @@ return {
 		}
 	},
 	hero_oni_0199 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2778,7 +2778,7 @@ return {
 		}
 	},
 	hero_oni_0201 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2804,7 +2804,7 @@ return {
 		}
 	},
 	hero_oni_0203 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2830,7 +2830,7 @@ return {
 		}
 	},
 	hero_oni_0205 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2856,7 +2856,7 @@ return {
 		}
 	},
 	hero_oni_0207 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2886,7 +2886,7 @@ return {
 		}
 	},
 	hero_oni_0213 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2912,7 +2912,7 @@ return {
 		}
 	},
 	hero_oni_0215 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2938,7 +2938,7 @@ return {
 		}
 	},
 	hero_oni_0217 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2973,7 +2973,7 @@ return {
 		}
 	},
 	hero_oni_0228 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -2999,7 +2999,7 @@ return {
 		}
 	},
 	hero_oni_0230 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -3025,7 +3025,7 @@ return {
 		}
 	},
 	hero_oni_0232 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -3051,7 +3051,7 @@ return {
 		}
 	},
 	hero_oni_0234 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -3077,7 +3077,7 @@ return {
 		}
 	},
 	hero_oni_0236 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			182,
 			158
@@ -3101,7 +3101,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0001 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3127,7 +3127,7 @@ return {
 		}
 	},
 	hero_oni_sword1_0003 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3153,7 +3153,7 @@ return {
 		}
 	},
 	hero_oni_sword1_0005 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3179,7 +3179,7 @@ return {
 		}
 	},
 	hero_oni_sword1_0007 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3205,7 +3205,7 @@ return {
 		}
 	},
 	hero_oni_sword1_0009 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3231,7 +3231,7 @@ return {
 		}
 	},
 	hero_oni_sword1_0011 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3255,7 +3255,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0012 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3279,7 +3279,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0013 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3303,7 +3303,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0014 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3327,7 +3327,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0015 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3351,7 +3351,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0016 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3375,7 +3375,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0017 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3399,7 +3399,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0018 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3423,7 +3423,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0019 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3447,7 +3447,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0020 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3471,7 +3471,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0021 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3495,7 +3495,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0022 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3519,7 +3519,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0023 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3543,7 +3543,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0024 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3567,7 +3567,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword1_0025 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3614,7 +3614,7 @@ return {
 		}
 	},
 	hero_oni_sword1_0048 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3640,7 +3640,7 @@ return {
 		}
 	},
 	hero_oni_sword1_0050 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3666,7 +3666,7 @@ return {
 		}
 	},
 	hero_oni_sword1_0052 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3690,7 +3690,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0001 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3716,7 +3716,7 @@ return {
 		}
 	},
 	hero_oni_sword2_0003 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3742,7 +3742,7 @@ return {
 		}
 	},
 	hero_oni_sword2_0005 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3768,7 +3768,7 @@ return {
 		}
 	},
 	hero_oni_sword2_0007 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3794,7 +3794,7 @@ return {
 		}
 	},
 	hero_oni_sword2_0009 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3820,7 +3820,7 @@ return {
 		}
 	},
 	hero_oni_sword2_0011 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3844,7 +3844,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0012 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3868,7 +3868,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0013 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3892,7 +3892,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0014 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3916,7 +3916,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0015 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3940,7 +3940,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0016 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3964,7 +3964,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0017 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -3988,7 +3988,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0018 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4012,7 +4012,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0019 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4036,7 +4036,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0020 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4060,7 +4060,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0021 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4084,7 +4084,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0022 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4108,7 +4108,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0023 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4132,7 +4132,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0024 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4156,7 +4156,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword2_0025 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4203,7 +4203,7 @@ return {
 		}
 	},
 	hero_oni_sword2_0048 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4229,7 +4229,7 @@ return {
 		}
 	},
 	hero_oni_sword2_0050 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4255,7 +4255,7 @@ return {
 		}
 	},
 	hero_oni_sword2_0052 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4285,7 +4285,7 @@ return {
 		}
 	},
 	hero_oni_sword3_0001 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4311,7 +4311,7 @@ return {
 		}
 	},
 	hero_oni_sword3_0003 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4337,7 +4337,7 @@ return {
 		}
 	},
 	hero_oni_sword3_0005 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4363,7 +4363,7 @@ return {
 		}
 	},
 	hero_oni_sword3_0007 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4389,7 +4389,7 @@ return {
 		}
 	},
 	hero_oni_sword3_0009 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4415,7 +4415,7 @@ return {
 		}
 	},
 	hero_oni_sword3_0011 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4441,7 +4441,7 @@ return {
 		}
 	},
 	hero_oni_sword3_0013 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4465,7 +4465,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0014 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4489,7 +4489,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0015 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4513,7 +4513,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0016 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4537,7 +4537,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0017 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4561,7 +4561,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0018 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4585,7 +4585,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0019 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4609,7 +4609,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0020 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4633,7 +4633,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0021 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4657,7 +4657,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0022 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4681,7 +4681,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0023 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4705,7 +4705,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0024 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4729,7 +4729,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0025 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4753,7 +4753,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0026 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4777,7 +4777,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0027 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4801,7 +4801,7 @@ return {
 		alias = {}
 	},
 	hero_oni_sword3_0028 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4843,7 +4843,7 @@ return {
 		}
 	},
 	hero_oni_sword3_0046 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4869,7 +4869,7 @@ return {
 		}
 	},
 	hero_oni_sword3_0048 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4895,7 +4895,7 @@ return {
 		}
 	},
 	hero_oni_sword3_0050 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4921,7 +4921,7 @@ return {
 		}
 	},
 	hero_oni_sword3_0052 = {
-		a_name = "go_hero_oni-1.dds",
+		a_name = "go_hero_oni-1.png",
 		size = {
 			40,
 			38
@@ -4945,7 +4945,7 @@ return {
 		alias = {}
 	},
         hero_giant_decal_0001 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 64, 48, 16},
         a_size = {1024, 1024},
@@ -4953,7 +4953,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0002 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 64, 48, 16},
         a_size = {1024, 1024},
@@ -4961,7 +4961,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0003 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 64, 48, 16},
         a_size = {1024, 1024},
@@ -4969,7 +4969,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0004 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 64, 48, 16},
         a_size = {1024, 1024},
@@ -4977,7 +4977,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0005 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 64, 48, 16},
         a_size = {1024, 1024},
@@ -4985,7 +4985,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0006 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 64, 48, 16},
         a_size = {1024, 1024},
@@ -4993,7 +4993,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0007 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 64, 48, 16},
         a_size = {1024, 1024},
@@ -5001,7 +5001,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0008 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 64, 48, 16},
         a_size = {1024, 1024},
@@ -5009,7 +5009,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0009 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 63, 48, 16},
         a_size = {1024, 1024},
@@ -5017,7 +5017,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0010 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 61, 48, 16},
         a_size = {1024, 1024},
@@ -5025,7 +5025,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0011 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 64, 48, 16},
         a_size = {1024, 1024},
@@ -5033,7 +5033,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0012 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 64, 48, 16},
         a_size = {1024, 1024},
@@ -5041,7 +5041,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0013 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 64, 48, 16},
         a_size = {1024, 1024},
@@ -5049,7 +5049,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0014 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 64, 48, 16},
         a_size = {1024, 1024},
@@ -5057,7 +5057,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0015 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 64, 48, 16},
         a_size = {1024, 1024},
@@ -5065,7 +5065,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0016 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {48, 64, 48, 16},
         a_size = {1024, 1024},
@@ -5073,7 +5073,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0017 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {48, 64, 48, 16},
         a_size = {1024, 1024},
@@ -5081,7 +5081,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0018 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {48, 63, 48, 16},
         a_size = {1024, 1024},
@@ -5089,7 +5089,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0019 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {48, 62, 48, 16},
         a_size = {1024, 1024},
@@ -5097,7 +5097,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0020 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {48, 61, 48, 16},
         a_size = {1024, 1024},
@@ -5105,7 +5105,7 @@ return {
         alias = {}
     },
     hero_giant_decal_0021 = {
-        a_name = "go_hero_giant-1.dds",
+        a_name = "go_hero_giant-1.png",
         size = {163, 124},
         trim = {49, 64, 48, 16},
         a_size = {1024, 1024},

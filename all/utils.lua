@@ -1677,8 +1677,10 @@ function U.predict_damage(entity, damage)
         protection = calc_explosion_protection(entity.health.magic_armor - damage.reduce_magic_armor)
     elseif band(damage.damage_type, DAMAGE_DISINTEGRATE) ~= 0 then
         protection = 0
-    elseif band(damage.damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_ELECTRICAL, DAMAGE_RUDE)) ~= 0 then
+    elseif band(damage.damage_type, bor(DAMAGE_EXPLOSION, DAMAGE_RUDE)) ~= 0 then
         protection = calc_explosion_protection(entity.health.armor - damage.reduce_armor)
+    elseif band(damage.damage_type, DAMAGE_ELECTRICAL) ~= 0 then
+        protection = (entity.health.armor - damage.reduce_armor) * 0.5
     elseif band(damage.damage_type, DAMAGE_SHOT) ~= 0 then
         protection = (entity.health.armor - damage.reduce_armor) * 0.7
     elseif band(damage.damage_type, DAMAGE_STAB) ~= 0 then

@@ -1,5 +1,5 @@
 local obj1 = {
-	["cash"] = 900;
+	["cash"] = 1000;
 	["groups"] = {
 		[1] = {
 			["interval"] = 800;
@@ -153,15 +153,6 @@ local obj1 = {
 							["path"] = 1;
 						};
 						[2] = {
-							["creep"] = "enemy_ghost";
-							["fixed_sub_path"] = 0;
-							["interval"] = 31.725932913053;
-							["interval_next"] = 5.8616942352861;
-							["max"] = 3;
-							["max_same"] = 0;
-							["path"] = 1;
-						};
-						[3] = {
 							["creep"] = "enemy_skeleton_big";
 							["fixed_sub_path"] = 0;
 							["interval"] = 38.918985621198;
@@ -170,7 +161,7 @@ local obj1 = {
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[4] = {
+						[3] = {
 							["creep"] = "enemy_giant_rat";
 							["fixed_sub_path"] = 0;
 							["interval"] = 12.245734379979;
@@ -236,8 +227,8 @@ local obj1 = {
 							["creep"] = "enemy_wererat";
 							["fixed_sub_path"] = 0;
 							["interval"] = 35.27483787236;
-							["interval_next"] = 7.6998951102996;
-							["max"] = 15;
+							["interval_next"] = 12;
+							["max"] = 14;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
@@ -246,7 +237,7 @@ local obj1 = {
 							["fixed_sub_path"] = 0;
 							["interval"] = 40.170275344042;
 							["interval_next"] = 7.6998951102996;
-							["max"] = 7;
+							["max"] = 6;
 							["max_same"] = 0;
 							["path"] = 1;
 						};

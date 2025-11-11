@@ -2,7 +2,7 @@
 
 return {
 	editor_red_circle = {
-		a_name = "go_editor-1.dds",
+		a_name = "go_editor-1.png",
 		size = {
 			200,
 			140
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	editor_square_blue = {
-		a_name = "go_editor-1.dds",
+		a_name = "go_editor-1.png",
 		size = {
 			64,
 			64
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	editor_triangle_blue = {
-		a_name = "go_editor-1.dds",
+		a_name = "go_editor-1.png",
 		size = {
 			64,
 			64
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	line_blue_dotted_thin = {
-		a_name = "go_editor-1.dds",
+		a_name = "go_editor-1.png",
 		size = {
 			256,
 			64
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	line_red_dotted = {
-		a_name = "go_editor-1.dds",
+		a_name = "go_editor-1.png",
 		size = {
 			256,
 			64
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	line_white_dotted = {
-		a_name = "go_editor-1.dds",
+		a_name = "go_editor-1.png",
 		size = {
 			256,
 			64
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	rally_feedback_0002 = {
-		a_name = "go_editor-1.dds",
+		a_name = "go_editor-1.png",
 		size = {
 			154,
 			150
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	waveFlag_0001 = {
-		a_name = "go_editor-1.dds",
+		a_name = "go_editor-1.png",
 		size = {
 			100,
 			100
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	waveFlag_0004 = {
-		a_name = "go_editor-1.dds",
+		a_name = "go_editor-1.png",
 		size = {
 			42,
 			36

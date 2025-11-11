@@ -31,6 +31,10 @@ sound_db.progress = 0
 sound_db.groups_total = 0
 sound_db.groups_done = 0
 sound_db.sounds_uses = {}
+local function is_file(path)
+    local info = love.filesystem.getInfo(path)
+    return info and info.type == "file"
+end
 
 local _THREADS_ENABLED = true
 
@@ -59,7 +63,7 @@ end
 -- 替换固定的 _MAX_THREADS = 8
 local _MAX_THREADS = calculate_audio_thread_count()
 
-local _LOAD_AUDIO_THREAD_CODE = "local cin,cout,th_i = ...\nrequire \"love.filesystem\"\nrequire \"love.audio\"\nrequire \"love.sound\"\nlocal file_count = 0\nwhile true do\n    -- get params\n    local file = cin:demand()\n    if file == 'QUIT' then goto quit end\n    local mode = cin:demand()\n    local id = cin:demand()\n    \n    if not love.filesystem.isFile(file) then\n        cout:push({'ERROR','Not a file',file})\n    else\n        local ok, result = pcall(love.audio.newSource, file, mode)\n        collectgarbage()\n        if ok and result then\n            cout:push({'OK',result,id})\n            file_count = file_count + 1\n        else\n            cout:push({'ERROR',result,file})\n        end\n    end\nend\n::quit::\ncout:supply({'DONE'})\n--print('TH  ' ..th_i.. ' QUIT - FILES LOADED ' .. file_count .. '\\n')\n"
+local _LOAD_AUDIO_THREAD_CODE = "local cin,cout,th_i = ...\nrequire \"love.filesystem\"\nrequire \"love.audio\"\nrequire \"love.sound\"\nlocal file_count = 0\nwhile true do\n    -- get params\n    local file = cin:demand()\n    if file == 'QUIT' then goto quit end\n    local mode = cin:demand()\n    local id = cin:demand()\n    \n  local info = love.filesystem.getInfo(file) \n if (not info) or (info.type ~= 'file')  then\n        cout:push({'ERROR','Not a file',file})\n    else\n        local ok, result = pcall(love.audio.newSource, file, mode)\n        collectgarbage()\n        if ok and result then\n            cout:push({'OK',result,id})\n            file_count = file_count + 1\n        else\n            cout:push({'ERROR',result,file})\n        end\n    end\nend\n::quit::\ncout:supply({'DONE'})\n--print('TH  ' ..th_i.. ' QUIT - FILES LOADED ' .. file_count .. '\\n')\n"
 
 function sound_db:init(path)
 	log.debug("path:%s", path)
@@ -343,7 +347,7 @@ function sound_db:load_group(name, yielding, filter)
 			else
 				local file = string.format(self.files_path .. "/%s", fn)
 
-				if love.filesystem.isFile(file) then
+				if is_file(file) then
 					local ok, master_src = pcall(love.audio.newSource, file, mode)
 
 					if ok and master_src then
@@ -531,7 +535,7 @@ function sound_db:resume()
 
 	for gid, group_active_sources in pairs(self.active_sources) do
 		for _, ast in pairs(group_active_sources) do
-			ast.source:resume()
+			ast.source:play()
 		end
 	end
 end
@@ -640,14 +644,16 @@ function sound_db:update(dt)
 		table.remove(sound_db.stop_queue, i)
 	end
 
-	for gid, group_active_sources in pairs(self.active_sources) do
-		for i = #group_active_sources, 1, -1 do
-			if group_active_sources[i].source:isStopped() then
-				log.paranoid("Reclaiming source %s", group_active_sources[i].source)
-				table.remove(group_active_sources, i)
-			end
-		end
-	end
+    if not self.paused then
+        for gid, group_active_sources in pairs(self.active_sources) do
+            for i = #group_active_sources, 1, -1 do
+                if not group_active_sources[i].source:isPlaying() then
+                    log.paranoid("Reclaiming source %s", group_active_sources[i].source)
+                    table.remove(group_active_sources, i)
+                end
+            end
+        end
+    end
 
 	local queue = sound_db.request_queue
 	local reqs_due = {}
@@ -757,7 +763,7 @@ local function get_or_create_source(source_pool)
 	for i = 1, #source_pool do
 		source = source_pool[i]
 
-		if source:isStopped() then
+		if not source:isPlaying() then
 			log.paranoid("Found free source at %d", i)
 
 			break
@@ -833,7 +839,7 @@ function sound_db:_play(request, source_pool)
 	end
 
 	source:setVolume(vol)
-	source:setLooping(opts.loop)
+	source:setLooping(opts.loop or false)
 
 	local success = source:play()
 
@@ -841,8 +847,8 @@ function sound_db:_play(request, source_pool)
 		if opts.seek and type(opts.seek) == "number" then
 			source:seek(opts.seek)
 
-			if source:isPaused() then
-				source:resume()
+			if not source:isPlaying() then
+				source:play()
 			end
 		end
 

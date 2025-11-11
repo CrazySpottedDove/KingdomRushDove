@@ -2,7 +2,7 @@
 
 return {
 	HalloweenBat_0001 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	HalloweenBat_0003 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	HalloweenBat_0005 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	HalloweenBat_0007 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	HalloweenBat_0009 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	HalloweenBat_0011 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	HalloweenBat_0013 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	HalloweenBat_0015 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	HalloweenBat_0017 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -236,7 +236,7 @@ return {
 		}
 	},
 	HalloweenBat_0019 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -262,7 +262,7 @@ return {
 		}
 	},
 	HalloweenBat_0021 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -288,7 +288,7 @@ return {
 		}
 	},
 	HalloweenBat_0023 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -314,7 +314,7 @@ return {
 		}
 	},
 	HalloweenBat_0025 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -340,7 +340,7 @@ return {
 		}
 	},
 	HalloweenBat_0027 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -366,7 +366,7 @@ return {
 		}
 	},
 	HalloweenBat_0029 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -392,7 +392,7 @@ return {
 		}
 	},
 	HalloweenBat_0031 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -418,7 +418,7 @@ return {
 		}
 	},
 	HalloweenBat_0033 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -444,7 +444,7 @@ return {
 		}
 	},
 	HalloweenBat_0035 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -470,7 +470,7 @@ return {
 		}
 	},
 	HalloweenBat_0037 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -496,7 +496,7 @@ return {
 		}
 	},
 	HalloweenBat_0039 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -522,7 +522,7 @@ return {
 		}
 	},
 	HalloweenBat_0041 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -548,7 +548,7 @@ return {
 		}
 	},
 	HalloweenBat_0043 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -574,7 +574,7 @@ return {
 		}
 	},
 	HalloweenBat_0045 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -600,7 +600,7 @@ return {
 		}
 	},
 	HalloweenBat_0047 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -626,7 +626,7 @@ return {
 		}
 	},
 	HalloweenBat_0049 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -652,7 +652,7 @@ return {
 		}
 	},
 	HalloweenBat_0051 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -678,7 +678,7 @@ return {
 		}
 	},
 	HalloweenBat_0053 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -704,7 +704,7 @@ return {
 		}
 	},
 	HalloweenBat_0055 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			152
@@ -730,7 +730,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0001 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -754,7 +754,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0002 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -780,7 +780,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0004 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -806,7 +806,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0006 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -832,7 +832,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0008 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -858,7 +858,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0010 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -884,7 +884,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0012 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -910,7 +910,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0014 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -936,7 +936,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0016 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -962,7 +962,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0018 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -988,7 +988,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0020 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1014,7 +1014,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0022 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1040,7 +1040,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0024 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1066,7 +1066,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0026 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1092,7 +1092,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0028 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1118,7 +1118,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0030 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1144,7 +1144,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0032 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1170,7 +1170,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0034 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1196,7 +1196,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0036 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1222,7 +1222,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0038 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1248,7 +1248,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0040 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1274,7 +1274,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0042 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1300,7 +1300,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0044 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1326,7 +1326,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0046 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1353,7 +1353,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0048 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -1379,7 +1379,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0050 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1403,7 +1403,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0051 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1427,7 +1427,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0052 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1451,7 +1451,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0053 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1475,7 +1475,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0054 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1499,7 +1499,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0055 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1523,7 +1523,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0056 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1547,7 +1547,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0057 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1573,7 +1573,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0058 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1599,7 +1599,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0059 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1623,7 +1623,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0060 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1647,7 +1647,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0061 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1671,7 +1671,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0062 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1695,7 +1695,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0063 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1719,7 +1719,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0064 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1743,7 +1743,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0065 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1767,7 +1767,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0066 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1791,7 +1791,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0067 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1815,7 +1815,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0068 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1839,7 +1839,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0069 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1863,7 +1863,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0070 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1887,7 +1887,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0073 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1911,7 +1911,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0074 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1935,7 +1935,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0075 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1959,7 +1959,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0076 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -1983,7 +1983,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0077 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2007,7 +2007,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0078 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2031,7 +2031,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0079 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2055,7 +2055,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0080 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2079,7 +2079,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0081 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2103,7 +2103,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0082 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2129,7 +2129,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0084 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2155,7 +2155,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0086 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2181,7 +2181,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0089 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2207,7 +2207,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0091 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2233,7 +2233,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0093 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2259,7 +2259,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0095 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2285,7 +2285,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0097 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2309,7 +2309,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0098 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2333,7 +2333,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0099 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2357,7 +2357,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0100 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2381,7 +2381,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0101 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2405,7 +2405,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0102 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2429,7 +2429,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0103 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2453,7 +2453,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0104 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2477,7 +2477,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0105 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2503,7 +2503,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0107 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2529,7 +2529,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0109 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2555,7 +2555,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0111 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2579,7 +2579,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0112 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2603,7 +2603,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0113 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2627,7 +2627,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0114 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2651,7 +2651,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0115 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2675,7 +2675,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0116 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2699,7 +2699,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0117 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2723,7 +2723,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0118 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2747,7 +2747,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0119 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2771,7 +2771,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0120 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2795,7 +2795,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0121 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2819,7 +2819,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0122 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2843,7 +2843,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0123 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2867,7 +2867,7 @@ return {
 		alias = {}
 	},
 	HalloweenBossBitch_0124 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2893,7 +2893,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0126 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			113,
 			70
@@ -2919,7 +2919,7 @@ return {
 		}
 	},
 	HalloweenBossBitch_0128 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			113,
 			70
@@ -2943,7 +2943,7 @@ return {
 		alias = {}
 	},
 	HalloweenFrankie_0001 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -2969,7 +2969,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0003 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -2995,7 +2995,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0005 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3021,7 +3021,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0007 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3047,7 +3047,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0009 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3073,7 +3073,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0011 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3099,7 +3099,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0013 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3125,7 +3125,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0015 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3151,7 +3151,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0017 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3177,7 +3177,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0019 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3203,7 +3203,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0021 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3229,7 +3229,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0023 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3255,7 +3255,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0025 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3281,7 +3281,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0027 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3307,7 +3307,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0029 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3333,7 +3333,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0031 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3359,7 +3359,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0033 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3385,7 +3385,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0035 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3411,7 +3411,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0037 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3437,7 +3437,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0039 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3463,7 +3463,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0041 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3489,7 +3489,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0043 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3515,7 +3515,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0045 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3541,7 +3541,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0047 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3567,7 +3567,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0049 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3593,7 +3593,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0051 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3619,7 +3619,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0053 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3645,7 +3645,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0055 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3671,7 +3671,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0057 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3697,7 +3697,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0059 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3723,7 +3723,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0061 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3749,7 +3749,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0063 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3775,7 +3775,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0065 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3801,7 +3801,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0067 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3827,7 +3827,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0069 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3853,7 +3853,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0071 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3879,7 +3879,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0073 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3905,7 +3905,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0075 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3931,7 +3931,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0077 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3957,7 +3957,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0079 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -3983,7 +3983,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0081 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4009,7 +4009,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0083 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4035,7 +4035,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0085 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4062,7 +4062,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0087 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4088,7 +4088,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0089 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4114,7 +4114,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0091 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4140,7 +4140,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0093 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4166,7 +4166,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0095 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4192,7 +4192,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0097 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4218,7 +4218,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0099 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4244,7 +4244,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0101 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4270,7 +4270,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0103 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4296,7 +4296,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0105 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4327,7 +4327,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0112 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4353,7 +4353,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0114 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4379,7 +4379,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0117 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4405,7 +4405,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0119 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4431,7 +4431,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0121 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4457,7 +4457,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0123 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4483,7 +4483,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0125 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4509,7 +4509,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0127 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4535,7 +4535,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0129 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4561,7 +4561,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0131 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4587,7 +4587,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0133 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4613,7 +4613,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0135 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4639,7 +4639,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0137 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4665,7 +4665,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0139 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4691,7 +4691,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0141 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			180,
 			160
@@ -4717,7 +4717,7 @@ return {
 		}
 	},
 	HalloweenFrankie_0143 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			180,
 			160
@@ -4743,7 +4743,7 @@ return {
 		}
 	},
 	HalloweenGhost_0001 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -4767,7 +4767,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0002 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -4791,7 +4791,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0003 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -4815,7 +4815,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0004 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -4839,7 +4839,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0005 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -4863,7 +4863,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0006 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -4887,7 +4887,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0007 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -4911,7 +4911,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0008 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -4935,7 +4935,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0009 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -4959,7 +4959,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0010 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -4983,7 +4983,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0011 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5007,7 +5007,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0012 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5031,7 +5031,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0013 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5055,7 +5055,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0014 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5079,7 +5079,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0015 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5103,7 +5103,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0016 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5127,7 +5127,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0017 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5151,7 +5151,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0018 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5175,7 +5175,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0019 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5199,7 +5199,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0020 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5223,7 +5223,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0021 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5247,7 +5247,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0022 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5271,7 +5271,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0023 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5295,7 +5295,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0024 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5319,7 +5319,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0025 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5343,7 +5343,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0026 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5367,7 +5367,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0027 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5391,7 +5391,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0028 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5415,7 +5415,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0029 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5439,7 +5439,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0030 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5463,7 +5463,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0031 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5487,7 +5487,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0032 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5511,7 +5511,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0033 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5535,7 +5535,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0034 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5559,7 +5559,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0035 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5583,7 +5583,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0036 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5607,7 +5607,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0037 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5631,7 +5631,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0038 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5655,7 +5655,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0039 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5679,7 +5679,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0040 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5703,7 +5703,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0041 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5727,7 +5727,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0042 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5751,7 +5751,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0043 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5775,7 +5775,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0044 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5799,7 +5799,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0045 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5823,7 +5823,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0046 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5847,7 +5847,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0047 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			82,
 			68
@@ -5871,7 +5871,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0048 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			82,
 			68
@@ -5895,7 +5895,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0049 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5919,7 +5919,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0050 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5943,7 +5943,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0051 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5967,7 +5967,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0052 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -5991,7 +5991,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0053 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6015,7 +6015,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0054 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6039,7 +6039,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0055 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6063,7 +6063,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0056 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6087,7 +6087,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0057 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6111,7 +6111,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0058 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6135,7 +6135,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0059 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6159,7 +6159,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0060 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6183,7 +6183,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0061 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6207,7 +6207,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0062 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6231,7 +6231,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0063 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6255,7 +6255,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0064 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6279,7 +6279,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0065 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6303,7 +6303,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0066 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6327,7 +6327,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0067 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6351,7 +6351,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0068 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6375,7 +6375,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0069 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6399,7 +6399,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0070 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6423,7 +6423,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0071 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6447,7 +6447,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0072 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6471,7 +6471,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0073 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6495,7 +6495,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0074 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6519,7 +6519,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0075 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6543,7 +6543,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0076 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6567,7 +6567,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0077 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6591,7 +6591,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0078 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6615,7 +6615,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0079 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6639,7 +6639,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0080 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6663,7 +6663,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0081 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6687,7 +6687,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0082 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6711,7 +6711,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0083 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6735,7 +6735,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0084 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6759,7 +6759,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0085 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6783,7 +6783,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0086 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6807,7 +6807,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0087 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6831,7 +6831,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0088 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6855,7 +6855,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0089 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6879,7 +6879,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0090 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6903,7 +6903,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0091 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6927,7 +6927,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0092 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6951,7 +6951,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0093 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6975,7 +6975,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0094 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -6999,7 +6999,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0095 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7023,7 +7023,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0096 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7047,7 +7047,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0097 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			82,
 			68
@@ -7074,7 +7074,7 @@ return {
 		}
 	},
 	HalloweenGhost_0100 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7098,7 +7098,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0101 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			82,
 			68
@@ -7124,7 +7124,7 @@ return {
 		}
 	},
 	HalloweenGhost_0103 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7150,7 +7150,7 @@ return {
 		}
 	},
 	HalloweenGhost_0105 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7174,7 +7174,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0106 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7198,7 +7198,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0107 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7222,7 +7222,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0108 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7246,7 +7246,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0109 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7270,7 +7270,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0110 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7294,7 +7294,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0111 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7318,7 +7318,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0112 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7342,7 +7342,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0113 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7368,7 +7368,7 @@ return {
 		}
 	},
 	HalloweenGhost_0115 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7392,7 +7392,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0116 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7416,7 +7416,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0117 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7440,7 +7440,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0118 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7464,7 +7464,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0119 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7488,7 +7488,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0120 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7512,7 +7512,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0121 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7536,7 +7536,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0122 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7560,7 +7560,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0123 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7584,7 +7584,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0124 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7608,7 +7608,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0125 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7634,7 +7634,7 @@ return {
 		}
 	},
 	HalloweenGhost_0127 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7658,7 +7658,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0128 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7682,7 +7682,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhost_0129 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7708,7 +7708,7 @@ return {
 		}
 	},
 	HalloweenGhost_0131 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7734,7 +7734,7 @@ return {
 		}
 	},
 	HalloweenGhost_0133 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			82,
 			68
@@ -7760,7 +7760,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0001 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -7786,7 +7786,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0002 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -7812,7 +7812,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0004 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -7838,7 +7838,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0006 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -7864,7 +7864,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0008 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -7890,7 +7890,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0010 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -7916,7 +7916,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0012 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -7942,7 +7942,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0015 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -7968,7 +7968,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0016 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -7994,7 +7994,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0018 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8020,7 +8020,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0020 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8046,7 +8046,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0022 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8072,7 +8072,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0024 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8098,7 +8098,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0026 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8124,7 +8124,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0029 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8150,7 +8150,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0030 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8176,7 +8176,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0032 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8202,7 +8202,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0034 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8228,7 +8228,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0036 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8254,7 +8254,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0038 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8280,7 +8280,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0040 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8306,7 +8306,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0043 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8333,7 +8333,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0044 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8361,7 +8361,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0046 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8387,7 +8387,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0048 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8411,7 +8411,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0049 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8435,7 +8435,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0050 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8459,7 +8459,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0051 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8483,7 +8483,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0052 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8507,7 +8507,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0053 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8533,7 +8533,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0055 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8559,7 +8559,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0057 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8585,7 +8585,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0061 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8609,7 +8609,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0062 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8635,7 +8635,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0064 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8659,7 +8659,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0065 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8683,7 +8683,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0066 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8707,7 +8707,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0067 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8733,7 +8733,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0069 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8759,7 +8759,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0071 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8783,7 +8783,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0072 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8807,7 +8807,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0073 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8831,7 +8831,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0074 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8855,7 +8855,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0075 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8879,7 +8879,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0076 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -8903,7 +8903,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0077 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8929,7 +8929,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0079 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8955,7 +8955,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0081 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -8979,7 +8979,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0082 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -9005,7 +9005,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0084 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -9031,7 +9031,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0086 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -9057,7 +9057,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0090 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9083,7 +9083,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0092 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9109,7 +9109,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0094 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9135,7 +9135,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0096 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9159,7 +9159,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0097 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -9183,7 +9183,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0098 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -9209,7 +9209,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0100 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9235,7 +9235,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0102 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9261,7 +9261,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0104 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9287,7 +9287,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0106 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9313,7 +9313,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0108 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9339,7 +9339,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0110 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9365,7 +9365,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0112 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9391,7 +9391,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0114 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9417,7 +9417,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0116 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9451,7 +9451,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0126 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9475,7 +9475,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0127 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9499,7 +9499,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0128 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9523,7 +9523,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0129 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9547,7 +9547,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0130 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9571,7 +9571,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0131 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9595,7 +9595,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0132 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9619,7 +9619,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0133 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9645,7 +9645,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0135 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9671,7 +9671,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0137 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9697,7 +9697,7 @@ return {
 		}
 	},
 	HalloweenGhoul_0139 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9721,7 +9721,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0140 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9745,7 +9745,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0141 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			84
@@ -9769,7 +9769,7 @@ return {
 		alias = {}
 	},
 	HalloweenGhoul_0142 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			84
@@ -9793,7 +9793,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0001 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -9819,7 +9819,7 @@ return {
 		}
 	},
 	HalloweenLycan_0003 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -9845,7 +9845,7 @@ return {
 		}
 	},
 	HalloweenLycan_0005 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -9871,7 +9871,7 @@ return {
 		}
 	},
 	HalloweenLycan_0007 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -9895,7 +9895,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0008 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -9921,7 +9921,7 @@ return {
 		}
 	},
 	HalloweenLycan_0010 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -9947,7 +9947,7 @@ return {
 		}
 	},
 	HalloweenLycan_0012 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -9973,7 +9973,7 @@ return {
 		}
 	},
 	HalloweenLycan_0014 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -9999,7 +9999,7 @@ return {
 		}
 	},
 	HalloweenLycan_0016 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10025,7 +10025,7 @@ return {
 		}
 	},
 	HalloweenLycan_0018 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10049,7 +10049,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0019 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10075,7 +10075,7 @@ return {
 		}
 	},
 	HalloweenLycan_0021 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10101,7 +10101,7 @@ return {
 		}
 	},
 	HalloweenLycan_0023 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10127,7 +10127,7 @@ return {
 		}
 	},
 	HalloweenLycan_0025 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10153,7 +10153,7 @@ return {
 		}
 	},
 	HalloweenLycan_0027 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10179,7 +10179,7 @@ return {
 		}
 	},
 	HalloweenLycan_0029 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10203,7 +10203,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0030 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10229,7 +10229,7 @@ return {
 		}
 	},
 	HalloweenLycan_0032 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10255,7 +10255,7 @@ return {
 		}
 	},
 	HalloweenLycan_0034 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10281,7 +10281,7 @@ return {
 		}
 	},
 	HalloweenLycan_0036 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10307,7 +10307,7 @@ return {
 		}
 	},
 	HalloweenLycan_0038 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10333,7 +10333,7 @@ return {
 		}
 	},
 	HalloweenLycan_0040 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10357,7 +10357,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0041 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10383,7 +10383,7 @@ return {
 		}
 	},
 	HalloweenLycan_0043 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10409,7 +10409,7 @@ return {
 		}
 	},
 	HalloweenLycan_0045 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10435,7 +10435,7 @@ return {
 		}
 	},
 	HalloweenLycan_0047 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10461,7 +10461,7 @@ return {
 		}
 	},
 	HalloweenLycan_0049 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10485,7 +10485,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0050 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10511,7 +10511,7 @@ return {
 		}
 	},
 	HalloweenLycan_0052 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10537,7 +10537,7 @@ return {
 		}
 	},
 	HalloweenLycan_0054 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10563,7 +10563,7 @@ return {
 		}
 	},
 	HalloweenLycan_0056 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10589,7 +10589,7 @@ return {
 		}
 	},
 	HalloweenLycan_0058 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10615,7 +10615,7 @@ return {
 		}
 	},
 	HalloweenLycan_0060 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10639,7 +10639,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0061 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10665,7 +10665,7 @@ return {
 		}
 	},
 	HalloweenLycan_0063 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10691,7 +10691,7 @@ return {
 		}
 	},
 	HalloweenLycan_0065 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10717,7 +10717,7 @@ return {
 		}
 	},
 	HalloweenLycan_0067 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10744,7 +10744,7 @@ return {
 		}
 	},
 	HalloweenLycan_0069 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10770,7 +10770,7 @@ return {
 		}
 	},
 	HalloweenLycan_0071 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10796,7 +10796,7 @@ return {
 		}
 	},
 	HalloweenLycan_0073 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10822,7 +10822,7 @@ return {
 		}
 	},
 	HalloweenLycan_0075 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10846,7 +10846,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0076 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10872,7 +10872,7 @@ return {
 		}
 	},
 	HalloweenLycan_0078 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10899,7 +10899,7 @@ return {
 		}
 	},
 	HalloweenLycan_0081 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10923,7 +10923,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0082 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10949,7 +10949,7 @@ return {
 		}
 	},
 	HalloweenLycan_0084 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -10975,7 +10975,7 @@ return {
 		}
 	},
 	HalloweenLycan_0087 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -10999,7 +10999,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0088 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -11026,7 +11026,7 @@ return {
 		}
 	},
 	HalloweenLycan_0091 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -11052,7 +11052,7 @@ return {
 		}
 	},
 	HalloweenLycan_0093 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -11078,7 +11078,7 @@ return {
 		}
 	},
 	HalloweenLycan_0095 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11107,7 +11107,7 @@ return {
 		}
 	},
 	HalloweenLycan_0100 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -11133,7 +11133,7 @@ return {
 		}
 	},
 	HalloweenLycan_0102 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11159,7 +11159,7 @@ return {
 		}
 	},
 	HalloweenLycan_0104 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11186,7 +11186,7 @@ return {
 		}
 	},
 	HalloweenLycan_0107 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11212,7 +11212,7 @@ return {
 		}
 	},
 	HalloweenLycan_0109 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11238,7 +11238,7 @@ return {
 		}
 	},
 	HalloweenLycan_0111 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11264,7 +11264,7 @@ return {
 		}
 	},
 	HalloweenLycan_0113 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11290,7 +11290,7 @@ return {
 		}
 	},
 	HalloweenLycan_0115 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11316,7 +11316,7 @@ return {
 		}
 	},
 	HalloweenLycan_0117 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11342,7 +11342,7 @@ return {
 		}
 	},
 	HalloweenLycan_0119 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11368,7 +11368,7 @@ return {
 		}
 	},
 	HalloweenLycan_0121 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11394,7 +11394,7 @@ return {
 		}
 	},
 	HalloweenLycan_0123 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11420,7 +11420,7 @@ return {
 		}
 	},
 	HalloweenLycan_0125 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11446,7 +11446,7 @@ return {
 		}
 	},
 	HalloweenLycan_0127 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11472,7 +11472,7 @@ return {
 		}
 	},
 	HalloweenLycan_0129 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11498,7 +11498,7 @@ return {
 		}
 	},
 	HalloweenLycan_0131 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11524,7 +11524,7 @@ return {
 		}
 	},
 	HalloweenLycan_0133 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11550,7 +11550,7 @@ return {
 		}
 	},
 	HalloweenLycan_0135 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11576,7 +11576,7 @@ return {
 		}
 	},
 	HalloweenLycan_0137 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11602,7 +11602,7 @@ return {
 		}
 	},
 	HalloweenLycan_0139 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11628,7 +11628,7 @@ return {
 		}
 	},
 	HalloweenLycan_0141 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11654,7 +11654,7 @@ return {
 		}
 	},
 	HalloweenLycan_0143 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11680,7 +11680,7 @@ return {
 		}
 	},
 	HalloweenLycan_0145 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11706,7 +11706,7 @@ return {
 		}
 	},
 	HalloweenLycan_0147 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11732,7 +11732,7 @@ return {
 		}
 	},
 	HalloweenLycan_0149 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11758,7 +11758,7 @@ return {
 		}
 	},
 	HalloweenLycan_0151 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11784,7 +11784,7 @@ return {
 		}
 	},
 	HalloweenLycan_0153 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11810,7 +11810,7 @@ return {
 		}
 	},
 	HalloweenLycan_0155 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11836,7 +11836,7 @@ return {
 		}
 	},
 	HalloweenLycan_0157 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11863,7 +11863,7 @@ return {
 		}
 	},
 	HalloweenLycan_0159 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11889,7 +11889,7 @@ return {
 		}
 	},
 	HalloweenLycan_0161 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11915,7 +11915,7 @@ return {
 		}
 	},
 	HalloweenLycan_0163 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11939,7 +11939,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0164 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11965,7 +11965,7 @@ return {
 		}
 	},
 	HalloweenLycan_0166 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -11989,7 +11989,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0167 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12015,7 +12015,7 @@ return {
 		}
 	},
 	HalloweenLycan_0169 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12041,7 +12041,7 @@ return {
 		}
 	},
 	HalloweenLycan_0171 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12065,7 +12065,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0172 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12089,7 +12089,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0173 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12115,7 +12115,7 @@ return {
 		}
 	},
 	HalloweenLycan_0175 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12139,7 +12139,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0176 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12165,7 +12165,7 @@ return {
 		}
 	},
 	HalloweenLycan_0178 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12191,7 +12191,7 @@ return {
 		}
 	},
 	HalloweenLycan_0181 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12221,7 +12221,7 @@ return {
 		}
 	},
 	HalloweenLycan_0187 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12247,7 +12247,7 @@ return {
 		}
 	},
 	HalloweenLycan_0189 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12274,7 +12274,7 @@ return {
 		}
 	},
 	HalloweenLycan_0192 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12301,7 +12301,7 @@ return {
 		}
 	},
 	HalloweenLycan_0195 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12328,7 +12328,7 @@ return {
 		}
 	},
 	HalloweenLycan_0198 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12355,7 +12355,7 @@ return {
 		}
 	},
 	HalloweenLycan_0201 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12382,7 +12382,7 @@ return {
 		}
 	},
 	HalloweenLycan_0204 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12408,7 +12408,7 @@ return {
 		}
 	},
 	HalloweenLycan_0206 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12434,7 +12434,7 @@ return {
 		}
 	},
 	HalloweenLycan_0208 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12460,7 +12460,7 @@ return {
 		}
 	},
 	HalloweenLycan_0210 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12484,7 +12484,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0211 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12510,7 +12510,7 @@ return {
 		}
 	},
 	HalloweenLycan_0213 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12536,7 +12536,7 @@ return {
 		}
 	},
 	HalloweenLycan_0215 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12560,7 +12560,7 @@ return {
 		alias = {}
 	},
 	HalloweenLycan_0216 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -12586,7 +12586,7 @@ return {
 		}
 	},
 	HalloweenLycan_0218 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -12612,7 +12612,7 @@ return {
 		}
 	},
 	HalloweenLycan_0220 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -12638,7 +12638,7 @@ return {
 		}
 	},
 	HalloweenLycan_0222 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -12664,7 +12664,7 @@ return {
 		}
 	},
 	HalloweenLycan_0224 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12690,7 +12690,7 @@ return {
 		}
 	},
 	HalloweenLycan_0226 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -12716,7 +12716,7 @@ return {
 		}
 	},
 	HalloweenLycan_0228 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			124,
 			87
@@ -12742,7 +12742,7 @@ return {
 		}
 	},
 	HalloweenLycan_0230 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12768,7 +12768,7 @@ return {
 		}
 	},
 	HalloweenLycan_0232 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12794,7 +12794,7 @@ return {
 		}
 	},
 	HalloweenLycan_0234 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			124,
 			87
@@ -12820,7 +12820,7 @@ return {
 		}
 	},
 	HalloweenPhantom_0001 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -12844,7 +12844,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0002 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -12868,7 +12868,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0003 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -12892,7 +12892,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0004 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -12916,7 +12916,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0005 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -12940,7 +12940,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0006 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -12964,7 +12964,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0007 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -12988,7 +12988,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0008 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13012,7 +13012,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0009 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13036,7 +13036,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0010 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13060,7 +13060,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0011 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13084,7 +13084,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0012 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13108,7 +13108,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0013 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13132,7 +13132,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0014 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13156,7 +13156,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0015 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13180,7 +13180,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0016 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13204,7 +13204,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0017 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13228,7 +13228,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0018 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13252,7 +13252,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0019 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13276,7 +13276,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0020 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13300,7 +13300,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0021 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13324,7 +13324,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0022 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13348,7 +13348,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0023 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13372,7 +13372,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0024 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13396,7 +13396,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0025 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13420,7 +13420,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0026 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13444,7 +13444,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0027 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13468,7 +13468,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0028 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13492,7 +13492,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0029 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13516,7 +13516,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0030 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13540,7 +13540,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0031 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13564,7 +13564,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0032 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13588,7 +13588,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0033 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13612,7 +13612,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0034 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13636,7 +13636,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0035 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13660,7 +13660,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0036 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13684,7 +13684,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0037 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13708,7 +13708,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0038 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13732,7 +13732,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0039 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13756,7 +13756,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0040 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13780,7 +13780,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0041 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13804,7 +13804,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0042 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13828,7 +13828,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0043 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13852,7 +13852,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0044 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13876,7 +13876,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0045 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13900,7 +13900,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0046 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13924,7 +13924,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0047 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13948,7 +13948,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0048 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13972,7 +13972,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0049 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -13996,7 +13996,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0050 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14020,7 +14020,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0051 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14044,7 +14044,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0052 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14068,7 +14068,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0053 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14092,7 +14092,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0054 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14116,7 +14116,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0055 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14142,7 +14142,7 @@ return {
 		}
 	},
 	HalloweenPhantom_0057 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14166,7 +14166,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0058 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14190,7 +14190,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0059 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14214,7 +14214,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0060 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14238,7 +14238,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0061 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14262,7 +14262,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0062 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14286,7 +14286,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0063 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14310,7 +14310,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0064 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14334,7 +14334,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0065 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14358,7 +14358,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0066 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14382,7 +14382,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0067 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14406,7 +14406,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0068 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14430,7 +14430,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0069 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14454,7 +14454,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0070 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14478,7 +14478,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0071 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14502,7 +14502,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0072 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14526,7 +14526,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0073 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14550,7 +14550,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0074 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14574,7 +14574,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0075 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14598,7 +14598,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0076 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14622,7 +14622,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0077 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14646,7 +14646,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0078 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14672,7 +14672,7 @@ return {
 		}
 	},
 	HalloweenPhantom_0080 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14698,7 +14698,7 @@ return {
 		}
 	},
 	HalloweenPhantom_0082 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14722,7 +14722,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0083 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14746,7 +14746,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0084 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14770,7 +14770,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0085 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14794,7 +14794,7 @@ return {
 		alias = {}
 	},
 	HalloweenPhantom_0086 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14820,7 +14820,7 @@ return {
 		}
 	},
 	HalloweenPhantom_0088 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14846,7 +14846,7 @@ return {
 		}
 	},
 	HalloweenPhantom_0090 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14872,7 +14872,7 @@ return {
 		}
 	},
 	HalloweenPhantom_0092 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14898,7 +14898,7 @@ return {
 		}
 	},
 	HalloweenPhantom_0094 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14924,7 +14924,7 @@ return {
 		}
 	},
 	HalloweenPhantom_0096 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14950,7 +14950,7 @@ return {
 		}
 	},
 	HalloweenPhantom_0098 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -14976,7 +14976,7 @@ return {
 		}
 	},
 	HalloweenPhantom_0100 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			158,
 			124
@@ -15002,7 +15002,7 @@ return {
 		}
 	},
 	HalloweenRider_0001 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15028,7 +15028,7 @@ return {
 		}
 	},
 	HalloweenRider_0003 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15054,7 +15054,7 @@ return {
 		}
 	},
 	HalloweenRider_0005 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15080,7 +15080,7 @@ return {
 		}
 	},
 	HalloweenRider_0007 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15106,7 +15106,7 @@ return {
 		}
 	},
 	HalloweenRider_0009 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15132,7 +15132,7 @@ return {
 		}
 	},
 	HalloweenRider_0011 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15156,7 +15156,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0012 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15180,7 +15180,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0013 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15204,7 +15204,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0014 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15228,7 +15228,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0015 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15252,7 +15252,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0016 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15276,7 +15276,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0017 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15300,7 +15300,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0018 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15324,7 +15324,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0019 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15348,7 +15348,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0020 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15372,7 +15372,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0021 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15396,7 +15396,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0022 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15420,7 +15420,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0023 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15444,7 +15444,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0024 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15468,7 +15468,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0025 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15492,7 +15492,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0026 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15516,7 +15516,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0027 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15540,7 +15540,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0028 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15564,7 +15564,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0029 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15588,7 +15588,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0030 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15612,7 +15612,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0031 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15636,7 +15636,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0032 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15660,7 +15660,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0033 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15684,7 +15684,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0034 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15708,7 +15708,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0035 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15732,7 +15732,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0036 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15758,7 +15758,7 @@ return {
 		}
 	},
 	HalloweenRider_0038 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15784,7 +15784,7 @@ return {
 		}
 	},
 	HalloweenRider_0040 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15810,7 +15810,7 @@ return {
 		}
 	},
 	HalloweenRider_0042 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15834,7 +15834,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0043 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15858,7 +15858,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0044 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15884,7 +15884,7 @@ return {
 		}
 	},
 	HalloweenRider_0046 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15910,7 +15910,7 @@ return {
 		}
 	},
 	HalloweenRider_0048 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15936,7 +15936,7 @@ return {
 		}
 	},
 	HalloweenRider_0050 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15962,7 +15962,7 @@ return {
 		}
 	},
 	HalloweenRider_0052 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -15988,7 +15988,7 @@ return {
 		}
 	},
 	HalloweenRider_0054 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16014,7 +16014,7 @@ return {
 		}
 	},
 	HalloweenRider_0056 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16040,7 +16040,7 @@ return {
 		}
 	},
 	HalloweenRider_0058 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16066,7 +16066,7 @@ return {
 		}
 	},
 	HalloweenRider_0060 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16092,7 +16092,7 @@ return {
 		}
 	},
 	HalloweenRider_0062 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16118,7 +16118,7 @@ return {
 		}
 	},
 	HalloweenRider_0064 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16144,7 +16144,7 @@ return {
 		}
 	},
 	HalloweenRider_0066 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16171,7 +16171,7 @@ return {
 		}
 	},
 	HalloweenRider_0069 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16197,7 +16197,7 @@ return {
 		}
 	},
 	HalloweenRider_0071 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16223,7 +16223,7 @@ return {
 		}
 	},
 	HalloweenRider_0073 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16249,7 +16249,7 @@ return {
 		}
 	},
 	HalloweenRider_0075 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16275,7 +16275,7 @@ return {
 		}
 	},
 	HalloweenRider_0077 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16301,7 +16301,7 @@ return {
 		}
 	},
 	HalloweenRider_0079 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16327,7 +16327,7 @@ return {
 		}
 	},
 	HalloweenRider_0081 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16353,7 +16353,7 @@ return {
 		}
 	},
 	HalloweenRider_0083 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16379,7 +16379,7 @@ return {
 		}
 	},
 	HalloweenRider_0085 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16405,7 +16405,7 @@ return {
 		}
 	},
 	HalloweenRider_0087 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16431,7 +16431,7 @@ return {
 		}
 	},
 	HalloweenRider_0089 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16457,7 +16457,7 @@ return {
 		}
 	},
 	HalloweenRider_0091 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16483,7 +16483,7 @@ return {
 		}
 	},
 	HalloweenRider_0093 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16509,7 +16509,7 @@ return {
 		}
 	},
 	HalloweenRider_0095 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16535,7 +16535,7 @@ return {
 		}
 	},
 	HalloweenRider_0097 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16561,7 +16561,7 @@ return {
 		}
 	},
 	HalloweenRider_0099 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16587,7 +16587,7 @@ return {
 		}
 	},
 	HalloweenRider_0101 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16613,7 +16613,7 @@ return {
 		}
 	},
 	HalloweenRider_0103 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16639,7 +16639,7 @@ return {
 		}
 	},
 	HalloweenRider_0105 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16665,7 +16665,7 @@ return {
 		}
 	},
 	HalloweenRider_0107 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16691,7 +16691,7 @@ return {
 		}
 	},
 	HalloweenRider_0109 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16717,7 +16717,7 @@ return {
 		}
 	},
 	HalloweenRider_0111 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16741,7 +16741,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0112 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16765,7 +16765,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0113 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16789,7 +16789,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0114 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16813,7 +16813,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0115 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16837,7 +16837,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0116 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16861,7 +16861,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0117 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16885,7 +16885,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0118 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16909,7 +16909,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0119 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16933,7 +16933,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0120 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16957,7 +16957,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0121 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -16981,7 +16981,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0122 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -17005,7 +17005,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0123 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -17029,7 +17029,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0124 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -17053,7 +17053,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0125 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -17077,7 +17077,7 @@ return {
 		alias = {}
 	},
 	HalloweenRider_0126 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -17103,7 +17103,7 @@ return {
 		}
 	},
 	HalloweenRider_0128 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -17129,7 +17129,7 @@ return {
 		}
 	},
 	HalloweenRider_0130 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -17155,7 +17155,7 @@ return {
 		}
 	},
 	HalloweenRider_0132 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -17181,7 +17181,7 @@ return {
 		}
 	},
 	HalloweenRider_0134 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -17207,7 +17207,7 @@ return {
 		}
 	},
 	HalloweenRider_0136 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -17233,7 +17233,7 @@ return {
 		}
 	},
 	HalloweenRider_0138 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -17259,7 +17259,7 @@ return {
 		}
 	},
 	HalloweenRider_0140 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -17285,7 +17285,7 @@ return {
 		}
 	},
 	HalloweenRider_0142 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			422,
 			146
@@ -17311,7 +17311,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0001 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17337,7 +17337,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0003 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -17363,7 +17363,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0005 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -17389,7 +17389,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0007 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -17415,7 +17415,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0009 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17441,7 +17441,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0011 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17467,7 +17467,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0013 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17493,7 +17493,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0015 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17519,7 +17519,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0017 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17545,7 +17545,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0019 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17569,7 +17569,7 @@ return {
 		alias = {}
 	},
 	HalloweenWerewolf_0020 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17593,7 +17593,7 @@ return {
 		alias = {}
 	},
 	HalloweenWerewolf_0021 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17619,7 +17619,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0023 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17645,7 +17645,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0025 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17671,7 +17671,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0027 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17697,7 +17697,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0029 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17723,7 +17723,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0031 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17749,7 +17749,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0033 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -17775,7 +17775,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0035 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -17801,7 +17801,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0037 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -17827,7 +17827,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0039 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -17853,7 +17853,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0041 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -17879,7 +17879,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0043 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -17905,7 +17905,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0045 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -17931,7 +17931,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0047 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -17957,7 +17957,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0049 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -17983,7 +17983,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0051 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18009,7 +18009,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0053 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -18035,7 +18035,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0055 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -18061,7 +18061,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0057 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18087,7 +18087,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0059 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -18113,7 +18113,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0061 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -18139,7 +18139,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0063 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18165,7 +18165,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0065 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -18191,7 +18191,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0067 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18217,7 +18217,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0069 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18243,7 +18243,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0071 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18269,7 +18269,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0073 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18293,7 +18293,7 @@ return {
 		alias = {}
 	},
 	HalloweenWerewolf_0074 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18317,7 +18317,7 @@ return {
 		alias = {}
 	},
 	HalloweenWerewolf_0075 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18343,7 +18343,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0077 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18369,7 +18369,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0079 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18406,7 +18406,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0092 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -18432,7 +18432,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0094 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18458,7 +18458,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0096 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18484,7 +18484,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0098 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18510,7 +18510,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0100 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18536,7 +18536,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0102 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18562,7 +18562,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0104 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18590,7 +18590,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0106 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18618,7 +18618,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0108 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18646,7 +18646,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0110 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18674,7 +18674,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0112 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18702,7 +18702,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0114 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18730,7 +18730,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0116 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18758,7 +18758,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0118 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18787,7 +18787,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0121 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18816,7 +18816,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0142 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -18842,7 +18842,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0144 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			127,
 			93
@@ -18868,7 +18868,7 @@ return {
 		}
 	},
 	HalloweenWerewolf_0146 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			127,
 			93
@@ -18894,7 +18894,7 @@ return {
 		}
 	},
 	HalloweenZombie_0001 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -18920,7 +18920,7 @@ return {
 		}
 	},
 	HalloweenZombie_0003 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -18946,7 +18946,7 @@ return {
 		}
 	},
 	HalloweenZombie_0005 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -18972,7 +18972,7 @@ return {
 		}
 	},
 	HalloweenZombie_0007 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -18998,7 +18998,7 @@ return {
 		}
 	},
 	HalloweenZombie_0009 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19024,7 +19024,7 @@ return {
 		}
 	},
 	HalloweenZombie_0011 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19050,7 +19050,7 @@ return {
 		}
 	},
 	HalloweenZombie_0013 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19076,7 +19076,7 @@ return {
 		}
 	},
 	HalloweenZombie_0015 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19102,7 +19102,7 @@ return {
 		}
 	},
 	HalloweenZombie_0017 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19128,7 +19128,7 @@ return {
 		}
 	},
 	HalloweenZombie_0019 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19154,7 +19154,7 @@ return {
 		}
 	},
 	HalloweenZombie_0021 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19180,7 +19180,7 @@ return {
 		}
 	},
 	HalloweenZombie_0023 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19204,7 +19204,7 @@ return {
 		alias = {}
 	},
 	HalloweenZombie_0024 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -19230,7 +19230,7 @@ return {
 		}
 	},
 	HalloweenZombie_0026 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19256,7 +19256,7 @@ return {
 		}
 	},
 	HalloweenZombie_0028 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19282,7 +19282,7 @@ return {
 		}
 	},
 	HalloweenZombie_0030 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19308,7 +19308,7 @@ return {
 		}
 	},
 	HalloweenZombie_0032 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19334,7 +19334,7 @@ return {
 		}
 	},
 	HalloweenZombie_0034 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19360,7 +19360,7 @@ return {
 		}
 	},
 	HalloweenZombie_0036 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19386,7 +19386,7 @@ return {
 		}
 	},
 	HalloweenZombie_0038 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19412,7 +19412,7 @@ return {
 		}
 	},
 	HalloweenZombie_0040 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19438,7 +19438,7 @@ return {
 		}
 	},
 	HalloweenZombie_0042 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19464,7 +19464,7 @@ return {
 		}
 	},
 	HalloweenZombie_0044 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19490,7 +19490,7 @@ return {
 		}
 	},
 	HalloweenZombie_0046 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -19516,7 +19516,7 @@ return {
 		}
 	},
 	HalloweenZombie_0048 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19542,7 +19542,7 @@ return {
 		}
 	},
 	HalloweenZombie_0050 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -19568,7 +19568,7 @@ return {
 		}
 	},
 	HalloweenZombie_0052 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19594,7 +19594,7 @@ return {
 		}
 	},
 	HalloweenZombie_0054 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19620,7 +19620,7 @@ return {
 		}
 	},
 	HalloweenZombie_0056 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19646,7 +19646,7 @@ return {
 		}
 	},
 	HalloweenZombie_0058 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19672,7 +19672,7 @@ return {
 		}
 	},
 	HalloweenZombie_0060 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19698,7 +19698,7 @@ return {
 		}
 	},
 	HalloweenZombie_0062 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19724,7 +19724,7 @@ return {
 		}
 	},
 	HalloweenZombie_0064 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19750,7 +19750,7 @@ return {
 		}
 	},
 	HalloweenZombie_0066 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19776,7 +19776,7 @@ return {
 		}
 	},
 	HalloweenZombie_0068 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19802,7 +19802,7 @@ return {
 		}
 	},
 	HalloweenZombie_0070 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19828,7 +19828,7 @@ return {
 		}
 	},
 	HalloweenZombie_0072 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19854,7 +19854,7 @@ return {
 		}
 	},
 	HalloweenZombie_0074 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19878,7 +19878,7 @@ return {
 		alias = {}
 	},
 	HalloweenZombie_0075 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19904,7 +19904,7 @@ return {
 		}
 	},
 	HalloweenZombie_0077 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19930,7 +19930,7 @@ return {
 		}
 	},
 	HalloweenZombie_0079 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19958,7 +19958,7 @@ return {
 		}
 	},
 	HalloweenZombie_0083 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -19984,7 +19984,7 @@ return {
 		}
 	},
 	HalloweenZombie_0085 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -20008,7 +20008,7 @@ return {
 		alias = {}
 	},
 	HalloweenZombie_0086 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -20032,7 +20032,7 @@ return {
 		alias = {}
 	},
 	HalloweenZombie_0087 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -20056,7 +20056,7 @@ return {
 		alias = {}
 	},
 	HalloweenZombie_0088 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -20083,7 +20083,7 @@ return {
 		}
 	},
 	HalloweenZombie_0091 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -20109,7 +20109,7 @@ return {
 		}
 	},
 	HalloweenZombie_0093 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -20133,7 +20133,7 @@ return {
 		alias = {}
 	},
 	HalloweenZombie_0094 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -20159,7 +20159,7 @@ return {
 		}
 	},
 	HalloweenZombie_0096 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -20185,7 +20185,7 @@ return {
 		}
 	},
 	HalloweenZombie_0098 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20211,7 +20211,7 @@ return {
 		}
 	},
 	HalloweenZombie_0100 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20235,7 +20235,7 @@ return {
 		alias = {}
 	},
 	HalloweenZombie_0101 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -20261,7 +20261,7 @@ return {
 		}
 	},
 	HalloweenZombie_0103 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -20287,7 +20287,7 @@ return {
 		}
 	},
 	HalloweenZombie_0105 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -20313,7 +20313,7 @@ return {
 		}
 	},
 	HalloweenZombie_0107 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20339,7 +20339,7 @@ return {
 		}
 	},
 	HalloweenZombie_0109 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20365,7 +20365,7 @@ return {
 		}
 	},
 	HalloweenZombie_0111 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20393,7 +20393,7 @@ return {
 		}
 	},
 	HalloweenZombie_0115 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20419,7 +20419,7 @@ return {
 		}
 	},
 	HalloweenZombie_0117 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20445,7 +20445,7 @@ return {
 		}
 	},
 	HalloweenZombie_0119 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20471,7 +20471,7 @@ return {
 		}
 	},
 	HalloweenZombie_0121 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20497,7 +20497,7 @@ return {
 		}
 	},
 	HalloweenZombie_0123 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20523,7 +20523,7 @@ return {
 		}
 	},
 	HalloweenZombie_0125 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20549,7 +20549,7 @@ return {
 		}
 	},
 	HalloweenZombie_0127 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20575,7 +20575,7 @@ return {
 		}
 	},
 	HalloweenZombie_0129 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20601,7 +20601,7 @@ return {
 		}
 	},
 	HalloweenZombie_0131 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20627,7 +20627,7 @@ return {
 		}
 	},
 	HalloweenZombie_0133 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20653,7 +20653,7 @@ return {
 		}
 	},
 	HalloweenZombie_0135 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20679,7 +20679,7 @@ return {
 		}
 	},
 	HalloweenZombie_0137 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -20705,7 +20705,7 @@ return {
 		}
 	},
 	HalloweenZombie_0139 = {
-		a_name = "go_enemies_halloween-2.dds",
+		a_name = "go_enemies_halloween-2.png",
 		size = {
 			68,
 			70
@@ -20731,7 +20731,7 @@ return {
 		}
 	},
 	HalloweenZombie_0141 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20757,7 +20757,7 @@ return {
 		}
 	},
 	HalloweenZombie_0143 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20783,7 +20783,7 @@ return {
 		}
 	},
 	HalloweenZombie_0145 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70
@@ -20809,7 +20809,7 @@ return {
 		}
 	},
 	HalloweenZombie_0147 = {
-		a_name = "go_enemies_halloween-1.dds",
+		a_name = "go_enemies_halloween-1.png",
 		size = {
 			68,
 			70

@@ -2,7 +2,7 @@
 
 return {
 	arivan_hero_fire_explosion_0001 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			104,
 			121
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	arivan_hero_fire_explosion_0003 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			104,
 			121
@@ -52,7 +52,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0004 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			104,
 			121
@@ -76,7 +76,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0005 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			104,
 			121
@@ -100,7 +100,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0006 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			104,
 			121
@@ -124,7 +124,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0007 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			104,
 			121
@@ -148,7 +148,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0008 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			104,
 			121
@@ -172,7 +172,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0009 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			104,
 			121
@@ -196,7 +196,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0010 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			104,
 			121
@@ -220,7 +220,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0011 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			104,
 			121
@@ -244,7 +244,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0012 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			104,
 			121
@@ -268,7 +268,7 @@ return {
 		alias = {}
 	},
 	arivan_hero_fire_explosion_0013 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			104,
 			121
@@ -294,7 +294,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0001 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -321,7 +321,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0002 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -345,7 +345,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0003 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -369,7 +369,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0004 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -393,7 +393,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0005 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -417,7 +417,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0006 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -441,7 +441,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0007 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -465,7 +465,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0008 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -489,7 +489,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0009 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -513,7 +513,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0010 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -537,7 +537,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0011 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -561,7 +561,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0012 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -585,7 +585,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0013 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -609,7 +609,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0014 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -633,7 +633,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0015 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -657,7 +657,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0016 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -681,7 +681,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0017 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -705,7 +705,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0018 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -729,7 +729,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0019 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -753,7 +753,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0020 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -777,7 +777,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0021 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -801,7 +801,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0022 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -825,7 +825,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0023 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -849,7 +849,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0024 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -873,7 +873,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0025 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -897,7 +897,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0026 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -921,7 +921,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0027 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -945,7 +945,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0028 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -969,7 +969,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0029 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -993,7 +993,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0030 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1017,7 +1017,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0031 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1041,7 +1041,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0032 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1065,7 +1065,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0033 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1089,7 +1089,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0034 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1113,7 +1113,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0035 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1137,7 +1137,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0036 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1161,7 +1161,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0037 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1185,7 +1185,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0038 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1209,7 +1209,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0039 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1233,7 +1233,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0040 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1257,7 +1257,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0041 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1281,7 +1281,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0042 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1305,7 +1305,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0043 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1329,7 +1329,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0044 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1353,7 +1353,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0045 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1377,7 +1377,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0046 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1401,7 +1401,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0047 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1425,7 +1425,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0048 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1449,7 +1449,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0049 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1473,7 +1473,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0050 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1499,7 +1499,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0052 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1525,7 +1525,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0054 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1551,7 +1551,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0056 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1577,7 +1577,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0058 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1603,7 +1603,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0060 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1629,7 +1629,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0062 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1655,7 +1655,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0064 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1681,7 +1681,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0066 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1707,7 +1707,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0068 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1733,7 +1733,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0070 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1759,7 +1759,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0072 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1785,7 +1785,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0075 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1811,7 +1811,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0077 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1837,7 +1837,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0079 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1863,7 +1863,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0081 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1889,7 +1889,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0083 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1915,7 +1915,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0085 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1941,7 +1941,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0087 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1967,7 +1967,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0090 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -1991,7 +1991,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0091 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2017,7 +2017,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0093 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2043,7 +2043,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0095 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2069,7 +2069,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0097 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2095,7 +2095,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0099 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2119,7 +2119,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0100 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2143,7 +2143,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0101 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2169,7 +2169,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0103 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2193,7 +2193,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0104 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2217,7 +2217,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0105 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2241,7 +2241,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0106 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2265,7 +2265,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0107 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2289,7 +2289,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0108 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2313,7 +2313,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0109 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2337,7 +2337,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0110 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2361,7 +2361,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0111 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2385,7 +2385,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0112 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2409,7 +2409,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0113 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2433,7 +2433,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0114 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2457,7 +2457,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0115 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2481,7 +2481,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0116 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2505,7 +2505,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0117 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2529,7 +2529,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0118 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2555,7 +2555,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0120 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2579,7 +2579,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0121 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2603,7 +2603,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0122 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2627,7 +2627,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0123 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2651,7 +2651,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0124 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2677,7 +2677,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0126 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2701,7 +2701,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0127 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2725,7 +2725,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0128 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2752,7 +2752,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0129 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2780,7 +2780,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0131 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2806,7 +2806,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0133 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2832,7 +2832,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0135 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2858,7 +2858,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0137 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2884,7 +2884,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0143 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2910,7 +2910,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0145 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2936,7 +2936,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0147 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2963,7 +2963,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0150 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -2989,7 +2989,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0152 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3015,7 +3015,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0154 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3041,7 +3041,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0156 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3067,7 +3067,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0158 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3093,7 +3093,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0160 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3117,7 +3117,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0161 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3143,7 +3143,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0163 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3169,7 +3169,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0165 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3195,7 +3195,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0167 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3221,7 +3221,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0169 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3247,7 +3247,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0171 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3273,7 +3273,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0173 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3299,7 +3299,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0175 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3325,7 +3325,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0177 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3349,7 +3349,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0178 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3375,7 +3375,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0180 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3401,7 +3401,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0182 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3427,7 +3427,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0184 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3453,7 +3453,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0186 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3479,7 +3479,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0188 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3505,7 +3505,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0190 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3529,7 +3529,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0191 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3553,7 +3553,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0192 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3577,7 +3577,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0193 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3601,7 +3601,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0194 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3625,7 +3625,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0195 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3649,7 +3649,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0196 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3673,7 +3673,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0197 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3697,7 +3697,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0198 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3721,7 +3721,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0199 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3745,7 +3745,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0200 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3769,7 +3769,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0201 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3793,7 +3793,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0202 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3817,7 +3817,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0203 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3841,7 +3841,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0204 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3865,7 +3865,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0205 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3889,7 +3889,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0206 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3913,7 +3913,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0207 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3937,7 +3937,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0208 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3961,7 +3961,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0209 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -3985,7 +3985,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0210 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4009,7 +4009,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0211 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4033,7 +4033,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0212 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4057,7 +4057,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0213 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4081,7 +4081,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0214 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4105,7 +4105,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0215 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4129,7 +4129,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0216 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4153,7 +4153,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0217 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4177,7 +4177,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0218 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4201,7 +4201,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0219 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4225,7 +4225,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0220 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4251,7 +4251,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0222 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4277,7 +4277,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0224 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4303,7 +4303,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0226 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4329,7 +4329,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0228 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4355,7 +4355,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0230 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4381,7 +4381,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0232 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4407,7 +4407,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0234 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4431,7 +4431,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_0235 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4458,7 +4458,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0237 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4484,7 +4484,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0239 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4510,7 +4510,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0241 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4536,7 +4536,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0243 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4566,7 +4566,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0245 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4594,7 +4594,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0247 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4620,7 +4620,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0251 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4646,7 +4646,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0253 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4674,7 +4674,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0261 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4700,7 +4700,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0263 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4726,7 +4726,7 @@ return {
 		}
 	},
 	fallen_angel_hero_0265 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			253,
 			211
@@ -4752,7 +4752,7 @@ return {
 		}
 	},
 	fallen_angel_hero_infernal_base_decal_0001 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -4780,7 +4780,7 @@ return {
 		}
 	},
 	fallen_angel_hero_infernal_base_decal_0002 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -4808,7 +4808,7 @@ return {
 		}
 	},
 	fallen_angel_hero_infernal_base_decal_0004 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -4836,7 +4836,7 @@ return {
 		}
 	},
 	fallen_angel_hero_infernal_base_decal_0006 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -4864,7 +4864,7 @@ return {
 		}
 	},
 	fallen_angel_hero_infernal_base_decal_0008 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -4892,7 +4892,7 @@ return {
 		}
 	},
 	fallen_angel_hero_infernal_base_decal_0010 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -4920,7 +4920,7 @@ return {
 		}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0001 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -4944,7 +4944,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0002 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -4968,7 +4968,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0003 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -4992,7 +4992,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0004 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5016,7 +5016,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0005 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5040,7 +5040,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0006 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5064,7 +5064,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0007 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5088,7 +5088,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0008 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5112,7 +5112,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0009 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5136,7 +5136,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0010 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5160,7 +5160,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0011 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5184,7 +5184,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0012 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5208,7 +5208,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0013 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5232,7 +5232,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0014 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5256,7 +5256,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0015 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5280,7 +5280,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0016 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5304,7 +5304,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0017 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5328,7 +5328,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0018 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5352,7 +5352,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0019 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5376,7 +5376,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0020 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5400,7 +5400,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0021 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5424,7 +5424,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_infernal_base_fireIn_0022 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			118,
 			84
@@ -5448,7 +5448,7 @@ return {
 		alias = {}
 	},
 	["fallen_angel_hero_proy_0001-f"] = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			28,
 			11
@@ -5472,7 +5472,7 @@ return {
 		alias = {}
 	},
 	["fallen_angel_hero_proy_0002-f"] = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			28,
 			11
@@ -5496,7 +5496,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_proy_hit_0001 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			42,
 			42
@@ -5522,7 +5522,7 @@ return {
 		}
 	},
 	fallen_angel_hero_proy_hit_0003 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			42,
 			42
@@ -5548,7 +5548,7 @@ return {
 		}
 	},
 	fallen_angel_hero_proy_hit_0005 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			42,
 			42
@@ -5574,7 +5574,7 @@ return {
 		}
 	},
 	fallen_angel_hero_proy_hit_0007 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			42,
 			42
@@ -5598,7 +5598,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_proy_particle = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			31,
 			20
@@ -5622,7 +5622,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_reapers_harvest_decal_0001 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			183,
 			70
@@ -5648,7 +5648,7 @@ return {
 		}
 	},
 	fallen_angel_hero_reapers_harvest_decal_0003 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			183,
 			70
@@ -5674,7 +5674,7 @@ return {
 		}
 	},
 	fallen_angel_hero_reapers_harvest_decal_0005 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			183,
 			70
@@ -5700,7 +5700,7 @@ return {
 		}
 	},
 	fallen_angel_hero_reapers_harvest_decal_0007 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			183,
 			70
@@ -5726,7 +5726,7 @@ return {
 		}
 	},
 	fallen_angel_hero_reapers_harvest_decal_0009 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			183,
 			70
@@ -5752,7 +5752,7 @@ return {
 		}
 	},
 	fallen_angel_hero_reapers_harvest_decal_0011 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			183,
 			70
@@ -5778,7 +5778,7 @@ return {
 		}
 	},
 	fallen_angel_hero_soul_eater_ball_0001 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			34,
 			20
@@ -5804,7 +5804,7 @@ return {
 		}
 	},
 	fallen_angel_hero_soul_eater_ball_0003 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			34,
 			20
@@ -5830,7 +5830,7 @@ return {
 		}
 	},
 	fallen_angel_hero_soul_eater_ball_0005 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			34,
 			20
@@ -5854,7 +5854,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_ball_0006 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			34,
 			20
@@ -5878,7 +5878,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0001 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -5902,7 +5902,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0002 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -5926,7 +5926,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0003 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -5950,7 +5950,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0004 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -5974,7 +5974,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0005 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -5998,7 +5998,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0006 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6022,7 +6022,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0007 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6046,7 +6046,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0008 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6070,7 +6070,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0009 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6094,7 +6094,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0010 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6118,7 +6118,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0011 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6142,7 +6142,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0012 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6166,7 +6166,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0013 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6190,7 +6190,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0014 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6214,7 +6214,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0015 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6238,7 +6238,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0016 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6262,7 +6262,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0017 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6286,7 +6286,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0018 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6310,7 +6310,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0019 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6334,7 +6334,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0020 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6358,7 +6358,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0021 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6382,7 +6382,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0022 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6406,7 +6406,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0023 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6430,7 +6430,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0024 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6454,7 +6454,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0025 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6478,7 +6478,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0026 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6502,7 +6502,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0027 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6526,7 +6526,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0028 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6550,7 +6550,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0029 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6574,7 +6574,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_decal_0030 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			98,
 			56
@@ -6598,7 +6598,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_explosion_0001 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			35,
 			35
@@ -6624,7 +6624,7 @@ return {
 		}
 	},
 	fallen_angel_hero_soul_eater_explosion_0003 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			35,
 			35
@@ -6650,7 +6650,7 @@ return {
 		}
 	},
 	fallen_angel_hero_soul_eater_explosion_0005 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			35,
 			35
@@ -6674,7 +6674,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_explosion_0006 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			35,
 			35
@@ -6698,7 +6698,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_explosion_0007 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			35,
 			35
@@ -6724,7 +6724,7 @@ return {
 		}
 	},
 	fallen_angel_hero_soul_eater_explosion_0009 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			35,
 			35
@@ -6748,7 +6748,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_soul_eater_sword = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			21,
 			35
@@ -6772,7 +6772,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_ultimate_angel_0001 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -6798,7 +6798,7 @@ return {
 		}
 	},
 	fallen_angel_hero_ultimate_angel_0003 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -6824,7 +6824,7 @@ return {
 		}
 	},
 	fallen_angel_hero_ultimate_angel_0005 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -6850,7 +6850,7 @@ return {
 		}
 	},
 	fallen_angel_hero_ultimate_angel_0007 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -6876,7 +6876,7 @@ return {
 		}
 	},
 	fallen_angel_hero_ultimate_angel_0009 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -6902,7 +6902,7 @@ return {
 		}
 	},
 	fallen_angel_hero_ultimate_angel_0011 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -6928,7 +6928,7 @@ return {
 		}
 	},
 	fallen_angel_hero_ultimate_angel_0013 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -6954,7 +6954,7 @@ return {
 		}
 	},
 	fallen_angel_hero_ultimate_angel_0015 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -6982,7 +6982,7 @@ return {
 		}
 	},
 	fallen_angel_hero_ultimate_angel_0017 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7010,7 +7010,7 @@ return {
 		}
 	},
 	fallen_angel_hero_ultimate_angel_0019 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7037,7 +7037,7 @@ return {
 		}
 	},
 	fallen_angel_hero_ultimate_angel_0021 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7063,7 +7063,7 @@ return {
 		}
 	},
 	fallen_angel_hero_ultimate_angel_0022 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7087,7 +7087,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_ultimate_angel_0023 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7111,7 +7111,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_ultimate_angel_0024 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7135,7 +7135,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_ultimate_angel_0030 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7159,7 +7159,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_ultimate_angel_0032 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7183,7 +7183,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_ultimate_angel_0033 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7207,7 +7207,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_ultimate_angel_0034 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7231,7 +7231,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_ultimate_angel_0035 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7257,7 +7257,7 @@ return {
 		}
 	},
 	fallen_angel_hero_ultimate_angel_0037 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7283,7 +7283,7 @@ return {
 		}
 	},
 	fallen_angel_hero_ultimate_angel_0039 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7307,7 +7307,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_ultimate_angel_0040 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7331,7 +7331,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_ultimate_angel_0041 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7355,7 +7355,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_ultimate_angel_0042 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7379,7 +7379,7 @@ return {
 		alias = {}
 	},
 	fallen_angel_hero_ultimate_angel_0043 = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			141,
 			70
@@ -7405,7 +7405,7 @@ return {
 		}
 	},
 	fallen_angel_hero_ultimate_meteor = {
-		a_name = "go_hero_lilith-1.dds",
+		a_name = "go_hero_lilith-1.png",
 		size = {
 			169,
 			28

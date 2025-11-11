@@ -2,7 +2,7 @@
 
 return {
 	hero_barracks_0001 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -30,7 +30,7 @@ return {
 		}
 	},
 	hero_barracks_0002 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -54,7 +54,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0003 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -78,7 +78,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0004 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -102,7 +102,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0005 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -126,7 +126,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0006 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -150,7 +150,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0007 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -176,7 +176,7 @@ return {
 		}
 	},
 	hero_barracks_0009 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -202,7 +202,7 @@ return {
 		}
 	},
 	hero_barracks_0011 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -226,7 +226,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0012 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -250,7 +250,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0013 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -276,7 +276,7 @@ return {
 		}
 	},
 	hero_barracks_0015 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -303,7 +303,7 @@ return {
 		}
 	},
 	hero_barracks_0018 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -329,7 +329,7 @@ return {
 		}
 	},
 	hero_barracks_0020 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -355,7 +355,7 @@ return {
 		}
 	},
 	hero_barracks_0022 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -379,7 +379,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0023 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -405,7 +405,7 @@ return {
 		}
 	},
 	hero_barracks_0025 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -431,7 +431,7 @@ return {
 		}
 	},
 	hero_barracks_0027 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -457,7 +457,7 @@ return {
 		}
 	},
 	hero_barracks_0032 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -483,7 +483,7 @@ return {
 		}
 	},
 	hero_barracks_0034 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -509,7 +509,7 @@ return {
 		}
 	},
 	hero_barracks_0036 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -533,7 +533,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0037 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -557,7 +557,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0038 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -581,7 +581,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0039 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -605,7 +605,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0040 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -629,7 +629,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0041 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -653,7 +653,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0042 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -677,7 +677,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0043 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -701,7 +701,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0044 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -725,7 +725,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0045 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -749,7 +749,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0046 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -773,7 +773,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0047 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -797,7 +797,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0048 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -821,7 +821,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0049 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -845,7 +845,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0050 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -871,7 +871,7 @@ return {
 		}
 	},
 	hero_barracks_0052 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -903,7 +903,7 @@ return {
 		}
 	},
 	hero_barracks_0056 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -929,7 +929,7 @@ return {
 		}
 	},
 	hero_barracks_0058 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -953,7 +953,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0059 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -977,7 +977,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0060 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1001,7 +1001,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0061 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1025,7 +1025,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0062 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1049,7 +1049,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0063 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1073,7 +1073,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0064 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1097,7 +1097,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0065 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1121,7 +1121,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0066 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1145,7 +1145,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0067 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1169,7 +1169,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0068 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1193,7 +1193,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0069 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1217,7 +1217,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0070 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1241,7 +1241,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0071 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1265,7 +1265,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0072 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1289,7 +1289,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0073 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1315,7 +1315,7 @@ return {
 		}
 	},
 	hero_barracks_0075 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1341,7 +1341,7 @@ return {
 		}
 	},
 	hero_barracks_0080 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1367,7 +1367,7 @@ return {
 		}
 	},
 	hero_barracks_0082 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1393,7 +1393,7 @@ return {
 		}
 	},
 	hero_barracks_0084 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1419,7 +1419,7 @@ return {
 		}
 	},
 	hero_barracks_0086 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1443,7 +1443,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0087 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1467,7 +1467,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0088 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1491,7 +1491,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0089 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1518,7 +1518,7 @@ return {
 		}
 	},
 	hero_barracks_0090 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1544,7 +1544,7 @@ return {
 		}
 	},
 	hero_barracks_0091 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1571,7 +1571,7 @@ return {
 		}
 	},
 	hero_barracks_0092 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1598,7 +1598,7 @@ return {
 		}
 	},
 	hero_barracks_0093 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1624,7 +1624,7 @@ return {
 		}
 	},
 	hero_barracks_0094 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1650,7 +1650,7 @@ return {
 		}
 	},
 	hero_barracks_0095 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1676,7 +1676,7 @@ return {
 		}
 	},
 	hero_barracks_0096 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1702,7 +1702,7 @@ return {
 		}
 	},
 	hero_barracks_0097 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1728,7 +1728,7 @@ return {
 		}
 	},
 	hero_barracks_0098 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1754,7 +1754,7 @@ return {
 		}
 	},
 	hero_barracks_0099 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1780,7 +1780,7 @@ return {
 		}
 	},
 	hero_barracks_0100 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1804,7 +1804,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0101 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1828,7 +1828,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0102 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1852,7 +1852,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0114 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1876,7 +1876,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0115 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1900,7 +1900,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0116 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1924,7 +1924,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0117 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1948,7 +1948,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0119 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1972,7 +1972,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0122 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -1996,7 +1996,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0123 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2020,7 +2020,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0124 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2044,7 +2044,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0125 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2068,7 +2068,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0126 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2092,7 +2092,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0127 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2116,7 +2116,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0128 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2140,7 +2140,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0129 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2164,7 +2164,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0130 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2188,7 +2188,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0131 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2212,7 +2212,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0133 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2236,7 +2236,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0134 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2260,7 +2260,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0135 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2284,7 +2284,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0136 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2308,7 +2308,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0137 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2332,7 +2332,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0138 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2356,7 +2356,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0139 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2380,7 +2380,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_0140 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			92,
 			110
@@ -2404,7 +2404,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0001 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2430,7 +2430,7 @@ return {
 		}
 	},
 	hero_barracks_buff_0002 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2454,7 +2454,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0003 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2478,7 +2478,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0004 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2502,7 +2502,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0005 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2526,7 +2526,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0006 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2550,7 +2550,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0007 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2576,7 +2576,7 @@ return {
 		}
 	},
 	hero_barracks_buff_0008 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2600,7 +2600,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0009 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2624,7 +2624,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0010 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2648,7 +2648,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0011 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2672,7 +2672,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0012 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2696,7 +2696,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0013 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2720,7 +2720,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0014 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2744,7 +2744,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0015 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2768,7 +2768,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0016 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2792,7 +2792,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0017 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2816,7 +2816,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0018 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2840,7 +2840,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0019 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2864,7 +2864,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0021 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2888,7 +2888,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0022 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2912,7 +2912,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0023 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2936,7 +2936,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0024 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2960,7 +2960,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0025 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -2984,7 +2984,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0026 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73
@@ -3008,7 +3008,7 @@ return {
 		alias = {}
 	},
 	hero_barracks_buff_0027 = {
-		a_name = "go_hero_gerald-1.dds",
+		a_name = "go_hero_gerald-1.png",
 		size = {
 			132,
 			73

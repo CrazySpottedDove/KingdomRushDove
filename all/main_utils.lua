@@ -420,7 +420,7 @@ function mu.get_debug_info(params)
 	o = o .. string.format("-------------------------------------------------------\n")
 	o = o .. string.format("-- SCREEN SETTINGS \n")
 	o = o .. string.format("FPS: %s  VSYNC: %s\n", DRAW_FPS, params.vsync)
-	o = o .. string.format("screen: %s,%s pixel scale:%s\n", love.graphics.getWidth(), love.graphics.getHeight(), love.window.getPixelScale())
+	o = o .. string.format("screen: %s,%s pixel scale:%s\n", love.graphics.getWidth(), love.graphics.getHeight(), love.window.getDPIScale())
 	o = o .. string.format("supported full screen modes for display 1:\n")
 
 	for _, v in pairs(love.window.getFullscreenModes(1)) do

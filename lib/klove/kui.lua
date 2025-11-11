@@ -219,7 +219,7 @@ function KMShaderDraw:shader_draw()
 
 		local pr, pg, pb, pa = G.getColor()
 
-		G.setColor(255, 255, 255, 255)
+		G.setColor(1, 1, 1, 1)
 
 		local scx, scy, scw, sch = G.getScissor()
 
@@ -291,7 +291,7 @@ function KMShaderDraw:shader_draw()
 		end
 
 		G.setScissor(scx, scy, scw, sch)
-		G.setColor(pr, pg, pb, pa)
+		G.setColor_old(pr, pg, pb, pa)
 	end
 
 	G.draw(self.canvases[#self.canvases], -m / ss, -m / ss, 0, 1 / ss)
@@ -730,7 +730,7 @@ function KView:draw()
 	local pr, pg, pb, pa = G.getColor()
 	local current_alpha = pa * self.alpha
 
-	G.setColor({
+	G.setColor_old({
 		255,
 		255,
 		255,
@@ -779,13 +779,13 @@ function KView:draw()
 		end
 
 		if self.colors.focused_outline then
-			G.setColor(self.colors.focused_outline)
+			G.setColor_old(self.colors.focused_outline)
 			G.rectangle("line", -1, -1, self.size.x + 1, self.size.y + 1)
 		end
 	end
 
 	G.pop()
-	G.setColor(pr, pg, pb, pa)
+	G.setColor_old(pr, pg, pb, pa)
 end
 
 function KView:_draw_self()
@@ -800,7 +800,7 @@ function KView:_draw_self()
 			self.colors.background[4] * current_alpha
 		}
 
-		G.setColor(new_c)
+		G.setColor_old(new_c)
 
 		if self.shape then
 			local fn = G[self.shape.name]
@@ -818,7 +818,7 @@ function KView:_draw_self()
 	if self.colors.tint then
 		local tint = self.colors.tint
 
-		G.setColor({
+		G.setColor_old({
 			tint[1],
 			tint[2],
 			tint[3],
@@ -856,7 +856,7 @@ function KView:_draw_self()
 	end
 
 	if DEBUG_KUI_DRAW_FOCUS_NAV and self.on_keypressed then
-		G.setColor(0, 0, 255, 255)
+		G.setColor(0, 0, 1, 1)
 
 		local x, y = 0, 0
 
@@ -873,7 +873,7 @@ function KView:_draw_self()
 		G.pop()
 	end
 
-	G.setColor(pr, pg, pb, pa)
+	G.setColor_old(pr, pg, pb, pa)
 end
 
 function KView:_draw_children()
@@ -1206,7 +1206,7 @@ end
 function KWindow:draw()
 	G.push()
 	G.translate(self.origin.x, self.origin.y)
-	G.setColor(255, 255, 255, 255)
+	G.setColor(1, 1, 1, 1)
 	KView.draw(self)
 	G.pop()
 end
@@ -1847,13 +1847,13 @@ function KLabel:_draw_self()
 
 		new_c[4] = self.alpha * pa / 255 * new_c[4]
 
-		G.setColor(new_c)
+		G.setColor_old(new_c)
 	end
 
 	local voff = self.font_adj and self.font_adj.top or 0
 
 	G.printf(self.text, self.text_offset.x, self.text_offset.y + voff, self.text_size.x, self.text_align)
-	G.setColor(pr, pg, pb, pa)
+	G.setColor_old(pr, pg, pb, pa)
 end
 
 function KLabel:get_wrap_lines()
@@ -2045,9 +2045,9 @@ function KScrollList:draw()
 	G.rotate(-self.r)
 
 	if not self.scroller_hidden and self._bottom_y > self.size.y then
-		G.setColor(self.colors.scroller_background)
+		G.setColor_old(self.colors.scroller_background)
 		G.rectangle("fill", self.scroller_rect.pos.x, self.scroller_rect.pos.y, self.scroller_rect.size.x, self.scroller_rect.size.y)
-		G.setColor(self.colors.scroller_foreground)
+		G.setColor_old(self.colors.scroller_foreground)
 
 		local scroller_height = self.size.y / self._bottom_y * (self.size.y - 2 * self.scroller_margin)
 		local scroller_offset = -self.scroll_origin_y / self._bottom_y * (self.size.y - 2 * self.scroller_margin)

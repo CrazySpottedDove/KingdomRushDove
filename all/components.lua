@@ -339,9 +339,10 @@ particle_system.track_offset = nil
 particle_system.track_rotation = nil
 particle_system.ts_offset = 0
 particle_system.z = Z_BULLET_PARTICLES
+-- frames, particles, particle_count 为私有属性，只允许在 system 中统一管理更新
 particle_system.frames = {}
 particle_system.particles = {}
-
+particle_system.particle_count = 0
 local main_script = E:register_c("main_script")
 
 main_script.insert = nil

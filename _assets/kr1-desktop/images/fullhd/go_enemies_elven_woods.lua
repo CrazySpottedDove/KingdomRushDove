@@ -2,7 +2,7 @@
 
 return {
 	["catapult-f_0001"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	["catapult-f_0003"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	["catapult-f_0005"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	["catapult-f_0007"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	["catapult-f_0009"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	["catapult-f_0011"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	["catapult-f_0013"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	["catapult-f_0015"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -208,7 +208,7 @@ return {
 		alias = {}
 	},
 	["catapult-f_0016"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -232,7 +232,7 @@ return {
 		alias = {}
 	},
 	["catapult-f_0017"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -265,7 +265,7 @@ return {
 		}
 	},
 	["catapult-f_0020"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -298,7 +298,7 @@ return {
 		}
 	},
 	["catapult-f_0035"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -324,7 +324,7 @@ return {
 		}
 	},
 	["catapult-f_0037"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -350,7 +350,7 @@ return {
 		}
 	},
 	["catapult-f_0039"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -376,7 +376,7 @@ return {
 		}
 	},
 	["catapult-f_0041"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -402,7 +402,7 @@ return {
 		}
 	},
 	["catapult-f_0043"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -430,7 +430,7 @@ return {
 		}
 	},
 	["catapult-f_0047"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -456,7 +456,7 @@ return {
 		}
 	},
 	["catapult-f_0049"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -480,7 +480,7 @@ return {
 		alias = {}
 	},
 	["catapult-f_0050"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -504,7 +504,7 @@ return {
 		alias = {}
 	},
 	["catapult-f_0051"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -528,7 +528,7 @@ return {
 		alias = {}
 	},
 	["catapult-f_0052"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -552,7 +552,7 @@ return {
 		alias = {}
 	},
 	["catapult-f_0053"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -578,7 +578,7 @@ return {
 		}
 	},
 	["catapult-f_0055"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -604,7 +604,7 @@ return {
 		}
 	},
 	["catapult-f_0057"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -630,7 +630,7 @@ return {
 		}
 	},
 	["catapult-f_0059"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -667,7 +667,7 @@ return {
 		}
 	},
 	["catapult-f_0072"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -693,7 +693,7 @@ return {
 		}
 	},
 	["catapult-f_0074"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -719,7 +719,7 @@ return {
 		}
 	},
 	["catapult-f_0076"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -745,7 +745,7 @@ return {
 		}
 	},
 	["catapult-f_0078"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -769,7 +769,7 @@ return {
 		alias = {}
 	},
 	["catapult-f_0079"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -795,7 +795,7 @@ return {
 		}
 	},
 	["catapult-f_0081"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -821,7 +821,7 @@ return {
 		}
 	},
 	["catapult-f_0083"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -847,7 +847,7 @@ return {
 		}
 	},
 	["catapult-f_0085"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -873,7 +873,7 @@ return {
 		}
 	},
 	["catapult-f_0087"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -897,7 +897,7 @@ return {
 		alias = {}
 	},
 	["catapult-f_0088"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -923,7 +923,7 @@ return {
 		}
 	},
 	["catapult-f_0090"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -949,7 +949,7 @@ return {
 		}
 	},
 	["catapult-f_0092"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -975,7 +975,7 @@ return {
 		}
 	},
 	["catapult-f_0094"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -1001,7 +1001,7 @@ return {
 		}
 	},
 	["catapult-f_0096"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -1025,7 +1025,7 @@ return {
 		alias = {}
 	},
 	["catapult-f_0097"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -1051,7 +1051,7 @@ return {
 		}
 	},
 	["catapult-f_0099"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -1077,7 +1077,7 @@ return {
 		}
 	},
 	["catapult-f_0101"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -1103,7 +1103,7 @@ return {
 		}
 	},
 	["catapult-f_0103"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -1129,7 +1129,7 @@ return {
 		}
 	},
 	["catapult-f_0105"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -1155,7 +1155,7 @@ return {
 		}
 	},
 	["catapult-f_0107"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -1181,7 +1181,7 @@ return {
 		}
 	},
 	["catapult-f_0109"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -1207,7 +1207,7 @@ return {
 		}
 	},
 	["catapult-f_0111"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -1233,7 +1233,7 @@ return {
 		}
 	},
 	["catapult-f_0113"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -1259,7 +1259,7 @@ return {
 		}
 	},
 	["catapult-f_0115"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -1283,7 +1283,7 @@ return {
 		alias = {}
 	},
 	["catapult-f_0116"] = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			196,
 			152
@@ -1307,7 +1307,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0001 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1331,7 +1331,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0002 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1357,7 +1357,7 @@ return {
 		}
 	},
 	gnoll_blighter_0004 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1383,7 +1383,7 @@ return {
 		}
 	},
 	gnoll_blighter_0006 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1409,7 +1409,7 @@ return {
 		}
 	},
 	gnoll_blighter_0008 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1435,7 +1435,7 @@ return {
 		}
 	},
 	gnoll_blighter_0010 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1461,7 +1461,7 @@ return {
 		}
 	},
 	gnoll_blighter_0012 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1487,7 +1487,7 @@ return {
 		}
 	},
 	gnoll_blighter_0014 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1513,7 +1513,7 @@ return {
 		}
 	},
 	gnoll_blighter_0016 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1539,7 +1539,7 @@ return {
 		}
 	},
 	gnoll_blighter_0018 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1565,7 +1565,7 @@ return {
 		}
 	},
 	gnoll_blighter_0020 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1591,7 +1591,7 @@ return {
 		}
 	},
 	gnoll_blighter_0022 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1617,7 +1617,7 @@ return {
 		}
 	},
 	gnoll_blighter_0024 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1643,7 +1643,7 @@ return {
 		}
 	},
 	gnoll_blighter_0026 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1669,7 +1669,7 @@ return {
 		}
 	},
 	gnoll_blighter_0028 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1695,7 +1695,7 @@ return {
 		}
 	},
 	gnoll_blighter_0030 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1721,7 +1721,7 @@ return {
 		}
 	},
 	gnoll_blighter_0032 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1747,7 +1747,7 @@ return {
 		}
 	},
 	gnoll_blighter_0034 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1773,7 +1773,7 @@ return {
 		}
 	},
 	gnoll_blighter_0036 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1799,7 +1799,7 @@ return {
 		}
 	},
 	gnoll_blighter_0038 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1825,7 +1825,7 @@ return {
 		}
 	},
 	gnoll_blighter_0040 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1851,7 +1851,7 @@ return {
 		}
 	},
 	gnoll_blighter_0042 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1877,7 +1877,7 @@ return {
 		}
 	},
 	gnoll_blighter_0044 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1903,7 +1903,7 @@ return {
 		}
 	},
 	gnoll_blighter_0046 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1929,7 +1929,7 @@ return {
 		}
 	},
 	gnoll_blighter_0048 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1955,7 +1955,7 @@ return {
 		}
 	},
 	gnoll_blighter_0050 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -1981,7 +1981,7 @@ return {
 		}
 	},
 	gnoll_blighter_0052 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2007,7 +2007,7 @@ return {
 		}
 	},
 	gnoll_blighter_0054 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2033,7 +2033,7 @@ return {
 		}
 	},
 	gnoll_blighter_0056 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2059,7 +2059,7 @@ return {
 		}
 	},
 	gnoll_blighter_0058 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2085,7 +2085,7 @@ return {
 		}
 	},
 	gnoll_blighter_0060 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2111,7 +2111,7 @@ return {
 		}
 	},
 	gnoll_blighter_0062 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2137,7 +2137,7 @@ return {
 		}
 	},
 	gnoll_blighter_0064 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2163,7 +2163,7 @@ return {
 		}
 	},
 	gnoll_blighter_0066 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2189,7 +2189,7 @@ return {
 		}
 	},
 	gnoll_blighter_0068 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2215,7 +2215,7 @@ return {
 		}
 	},
 	gnoll_blighter_0070 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2241,7 +2241,7 @@ return {
 		}
 	},
 	gnoll_blighter_0072 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2267,7 +2267,7 @@ return {
 		}
 	},
 	gnoll_blighter_0074 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2293,7 +2293,7 @@ return {
 		}
 	},
 	gnoll_blighter_0076 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2319,7 +2319,7 @@ return {
 		}
 	},
 	gnoll_blighter_0078 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2345,7 +2345,7 @@ return {
 		}
 	},
 	gnoll_blighter_0080 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2371,7 +2371,7 @@ return {
 		}
 	},
 	gnoll_blighter_0082 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2397,7 +2397,7 @@ return {
 		}
 	},
 	gnoll_blighter_0084 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2423,7 +2423,7 @@ return {
 		}
 	},
 	gnoll_blighter_0086 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2449,7 +2449,7 @@ return {
 		}
 	},
 	gnoll_blighter_0088 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2475,7 +2475,7 @@ return {
 		}
 	},
 	gnoll_blighter_0090 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2501,7 +2501,7 @@ return {
 		}
 	},
 	gnoll_blighter_0092 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2525,7 +2525,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0093 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2551,7 +2551,7 @@ return {
 		}
 	},
 	gnoll_blighter_0095 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2577,7 +2577,7 @@ return {
 		}
 	},
 	gnoll_blighter_0097 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2603,7 +2603,7 @@ return {
 		}
 	},
 	gnoll_blighter_0099 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2631,7 +2631,7 @@ return {
 		}
 	},
 	gnoll_blighter_0103 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2657,7 +2657,7 @@ return {
 		}
 	},
 	gnoll_blighter_0105 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2683,7 +2683,7 @@ return {
 		}
 	},
 	gnoll_blighter_0107 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2709,7 +2709,7 @@ return {
 		}
 	},
 	gnoll_blighter_0109 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2735,7 +2735,7 @@ return {
 		}
 	},
 	gnoll_blighter_0111 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2761,7 +2761,7 @@ return {
 		}
 	},
 	gnoll_blighter_0113 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2787,7 +2787,7 @@ return {
 		}
 	},
 	gnoll_blighter_0115 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2813,7 +2813,7 @@ return {
 		}
 	},
 	gnoll_blighter_0117 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2839,7 +2839,7 @@ return {
 		}
 	},
 	gnoll_blighter_0119 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2865,7 +2865,7 @@ return {
 		}
 	},
 	gnoll_blighter_0121 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2891,7 +2891,7 @@ return {
 		}
 	},
 	gnoll_blighter_0123 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2917,7 +2917,7 @@ return {
 		}
 	},
 	gnoll_blighter_0125 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2943,7 +2943,7 @@ return {
 		}
 	},
 	gnoll_blighter_0127 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2967,7 +2967,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0128 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -2993,7 +2993,7 @@ return {
 		}
 	},
 	gnoll_blighter_0130 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3017,7 +3017,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0131 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3043,7 +3043,7 @@ return {
 		}
 	},
 	gnoll_blighter_0133 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3069,7 +3069,7 @@ return {
 		}
 	},
 	gnoll_blighter_0135 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3095,7 +3095,7 @@ return {
 		}
 	},
 	gnoll_blighter_0137 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3121,7 +3121,7 @@ return {
 		}
 	},
 	gnoll_blighter_0139 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3148,7 +3148,7 @@ return {
 		}
 	},
 	gnoll_blighter_0140 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3174,7 +3174,7 @@ return {
 		}
 	},
 	gnoll_blighter_0142 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3200,7 +3200,7 @@ return {
 		}
 	},
 	gnoll_blighter_0144 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3226,7 +3226,7 @@ return {
 		}
 	},
 	gnoll_blighter_0146 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3252,7 +3252,7 @@ return {
 		}
 	},
 	gnoll_blighter_0148 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3278,7 +3278,7 @@ return {
 		}
 	},
 	gnoll_blighter_0150 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3302,7 +3302,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0151 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3326,7 +3326,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0152 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3350,7 +3350,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0153 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3374,7 +3374,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0154 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3398,7 +3398,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0155 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3422,7 +3422,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0156 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3446,7 +3446,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0157 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3470,7 +3470,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0158 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3494,7 +3494,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0159 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3518,7 +3518,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0160 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3542,7 +3542,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0161 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3566,7 +3566,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0162 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3592,7 +3592,7 @@ return {
 		}
 	},
 	gnoll_blighter_0164 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3618,7 +3618,7 @@ return {
 		}
 	},
 	gnoll_blighter_0166 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3644,7 +3644,7 @@ return {
 		}
 	},
 	gnoll_blighter_0168 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3668,7 +3668,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0169 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3692,7 +3692,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0170 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3716,7 +3716,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0171 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3740,7 +3740,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0172 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3764,7 +3764,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0173 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3788,7 +3788,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0174 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3814,7 +3814,7 @@ return {
 		}
 	},
 	gnoll_blighter_0176 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3840,7 +3840,7 @@ return {
 		}
 	},
 	gnoll_blighter_0178 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3866,7 +3866,7 @@ return {
 		}
 	},
 	gnoll_blighter_0180 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3892,7 +3892,7 @@ return {
 		}
 	},
 	gnoll_blighter_0182 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3918,7 +3918,7 @@ return {
 		}
 	},
 	gnoll_blighter_0185 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3944,7 +3944,7 @@ return {
 		}
 	},
 	gnoll_blighter_0187 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3970,7 +3970,7 @@ return {
 		}
 	},
 	gnoll_blighter_0189 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -3996,7 +3996,7 @@ return {
 		}
 	},
 	gnoll_blighter_0191 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -4022,7 +4022,7 @@ return {
 		}
 	},
 	gnoll_blighter_0193 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -4046,7 +4046,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0194 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -4070,7 +4070,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0195 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -4094,7 +4094,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0196 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -4118,7 +4118,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0197 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -4142,7 +4142,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0198 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -4166,7 +4166,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0199 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -4190,7 +4190,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0200 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -4214,7 +4214,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0201 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -4238,7 +4238,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0202 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -4262,7 +4262,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0203 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -4286,7 +4286,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0204 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -4310,7 +4310,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_0205 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			104
@@ -4334,7 +4334,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0001 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4358,7 +4358,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0002 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4384,7 +4384,7 @@ return {
 		}
 	},
 	gnoll_blighter_energy_0004 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4408,7 +4408,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0005 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4434,7 +4434,7 @@ return {
 		}
 	},
 	gnoll_blighter_energy_0007 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4458,7 +4458,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0008 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4482,7 +4482,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0009 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4506,7 +4506,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0010 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4530,7 +4530,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0011 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4556,7 +4556,7 @@ return {
 		}
 	},
 	gnoll_blighter_energy_0013 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4580,7 +4580,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0014 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4606,7 +4606,7 @@ return {
 		}
 	},
 	gnoll_blighter_energy_0016 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4630,7 +4630,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0017 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4654,7 +4654,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0018 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4680,7 +4680,7 @@ return {
 		}
 	},
 	gnoll_blighter_energy_0020 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4704,7 +4704,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0021 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4728,7 +4728,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0022 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4752,7 +4752,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0023 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4776,7 +4776,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0024 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4802,7 +4802,7 @@ return {
 		}
 	},
 	gnoll_blighter_energy_0026 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4828,7 +4828,7 @@ return {
 		}
 	},
 	gnoll_blighter_energy_0028 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4854,7 +4854,7 @@ return {
 		}
 	},
 	gnoll_blighter_energy_0030 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4878,7 +4878,7 @@ return {
 		alias = {}
 	},
 	gnoll_blighter_energy_0031 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			51,
 			45
@@ -4902,7 +4902,7 @@ return {
 		alias = {}
 	},
 	gnoll_burner_0001 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -4928,7 +4928,7 @@ return {
 		}
 	},
 	gnoll_burner_0003 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -4954,7 +4954,7 @@ return {
 		}
 	},
 	gnoll_burner_0005 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -4980,7 +4980,7 @@ return {
 		}
 	},
 	gnoll_burner_0007 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5004,7 +5004,7 @@ return {
 		alias = {}
 	},
 	gnoll_burner_0008 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5030,7 +5030,7 @@ return {
 		}
 	},
 	gnoll_burner_0010 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5056,7 +5056,7 @@ return {
 		}
 	},
 	gnoll_burner_0012 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5082,7 +5082,7 @@ return {
 		}
 	},
 	gnoll_burner_0014 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5108,7 +5108,7 @@ return {
 		}
 	},
 	gnoll_burner_0016 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5134,7 +5134,7 @@ return {
 		}
 	},
 	gnoll_burner_0018 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5158,7 +5158,7 @@ return {
 		alias = {}
 	},
 	gnoll_burner_0019 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5184,7 +5184,7 @@ return {
 		}
 	},
 	gnoll_burner_0021 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5210,7 +5210,7 @@ return {
 		}
 	},
 	gnoll_burner_0023 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5236,7 +5236,7 @@ return {
 		}
 	},
 	gnoll_burner_0025 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5262,7 +5262,7 @@ return {
 		}
 	},
 	gnoll_burner_0027 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5288,7 +5288,7 @@ return {
 		}
 	},
 	gnoll_burner_0029 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5312,7 +5312,7 @@ return {
 		alias = {}
 	},
 	gnoll_burner_0030 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5338,7 +5338,7 @@ return {
 		}
 	},
 	gnoll_burner_0032 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5364,7 +5364,7 @@ return {
 		}
 	},
 	gnoll_burner_0034 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5390,7 +5390,7 @@ return {
 		}
 	},
 	gnoll_burner_0036 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5416,7 +5416,7 @@ return {
 		}
 	},
 	gnoll_burner_0038 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5442,7 +5442,7 @@ return {
 		}
 	},
 	gnoll_burner_0040 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5466,7 +5466,7 @@ return {
 		alias = {}
 	},
 	gnoll_burner_0041 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5492,7 +5492,7 @@ return {
 		}
 	},
 	gnoll_burner_0043 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5518,7 +5518,7 @@ return {
 		}
 	},
 	gnoll_burner_0045 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5544,7 +5544,7 @@ return {
 		}
 	},
 	gnoll_burner_0047 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5570,7 +5570,7 @@ return {
 		}
 	},
 	gnoll_burner_0049 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5596,7 +5596,7 @@ return {
 		}
 	},
 	gnoll_burner_0051 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5620,7 +5620,7 @@ return {
 		alias = {}
 	},
 	gnoll_burner_0052 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5646,7 +5646,7 @@ return {
 		}
 	},
 	gnoll_burner_0054 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5672,7 +5672,7 @@ return {
 		}
 	},
 	gnoll_burner_0056 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5698,7 +5698,7 @@ return {
 		}
 	},
 	gnoll_burner_0058 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5724,7 +5724,7 @@ return {
 		}
 	},
 	gnoll_burner_0060 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5750,7 +5750,7 @@ return {
 		}
 	},
 	gnoll_burner_0062 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5774,7 +5774,7 @@ return {
 		alias = {}
 	},
 	gnoll_burner_0063 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5800,7 +5800,7 @@ return {
 		}
 	},
 	gnoll_burner_0065 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5826,7 +5826,7 @@ return {
 		}
 	},
 	gnoll_burner_0067 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5852,7 +5852,7 @@ return {
 		}
 	},
 	gnoll_burner_0069 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5878,7 +5878,7 @@ return {
 		}
 	},
 	gnoll_burner_0071 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5904,7 +5904,7 @@ return {
 		}
 	},
 	gnoll_burner_0073 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5930,7 +5930,7 @@ return {
 		}
 	},
 	gnoll_burner_0075 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5956,7 +5956,7 @@ return {
 		}
 	},
 	gnoll_burner_0077 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -5982,7 +5982,7 @@ return {
 		}
 	},
 	gnoll_burner_0079 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6008,7 +6008,7 @@ return {
 		}
 	},
 	gnoll_burner_0081 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6034,7 +6034,7 @@ return {
 		}
 	},
 	gnoll_burner_0083 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6060,7 +6060,7 @@ return {
 		}
 	},
 	gnoll_burner_0085 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6086,7 +6086,7 @@ return {
 		}
 	},
 	gnoll_burner_0087 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6112,7 +6112,7 @@ return {
 		}
 	},
 	gnoll_burner_0089 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6138,7 +6138,7 @@ return {
 		}
 	},
 	gnoll_burner_0091 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6164,7 +6164,7 @@ return {
 		}
 	},
 	gnoll_burner_0093 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6190,7 +6190,7 @@ return {
 		}
 	},
 	gnoll_burner_0095 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6216,7 +6216,7 @@ return {
 		}
 	},
 	gnoll_burner_0097 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6242,7 +6242,7 @@ return {
 		}
 	},
 	gnoll_burner_0099 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6268,7 +6268,7 @@ return {
 		}
 	},
 	gnoll_burner_0101 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6294,7 +6294,7 @@ return {
 		}
 	},
 	gnoll_burner_0103 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6320,7 +6320,7 @@ return {
 		}
 	},
 	gnoll_burner_0105 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6346,7 +6346,7 @@ return {
 		}
 	},
 	gnoll_burner_0107 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6372,7 +6372,7 @@ return {
 		}
 	},
 	gnoll_burner_0109 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6398,7 +6398,7 @@ return {
 		}
 	},
 	gnoll_burner_0111 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6424,7 +6424,7 @@ return {
 		}
 	},
 	gnoll_burner_0113 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6450,7 +6450,7 @@ return {
 		}
 	},
 	gnoll_burner_0115 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6476,7 +6476,7 @@ return {
 		}
 	},
 	gnoll_burner_0117 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6502,7 +6502,7 @@ return {
 		}
 	},
 	gnoll_burner_0119 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6528,7 +6528,7 @@ return {
 		}
 	},
 	gnoll_burner_0121 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6554,7 +6554,7 @@ return {
 		}
 	},
 	gnoll_burner_0123 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6580,7 +6580,7 @@ return {
 		}
 	},
 	gnoll_burner_0125 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6606,7 +6606,7 @@ return {
 		}
 	},
 	gnoll_burner_0127 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6632,7 +6632,7 @@ return {
 		}
 	},
 	gnoll_burner_0129 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6658,7 +6658,7 @@ return {
 		}
 	},
 	gnoll_burner_0131 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6684,7 +6684,7 @@ return {
 		}
 	},
 	gnoll_burner_0133 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6710,7 +6710,7 @@ return {
 		}
 	},
 	gnoll_burner_0135 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6736,7 +6736,7 @@ return {
 		}
 	},
 	gnoll_burner_0137 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6762,7 +6762,7 @@ return {
 		}
 	},
 	gnoll_burner_0139 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6788,7 +6788,7 @@ return {
 		}
 	},
 	gnoll_burner_0141 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6814,7 +6814,7 @@ return {
 		}
 	},
 	gnoll_burner_0143 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6840,7 +6840,7 @@ return {
 		}
 	},
 	gnoll_burner_0145 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6866,7 +6866,7 @@ return {
 		}
 	},
 	gnoll_burner_0147 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			104,
 			79
@@ -6892,7 +6892,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0001 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -6918,7 +6918,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0003 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -6944,7 +6944,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0005 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -6970,7 +6970,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0007 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -6994,7 +6994,7 @@ return {
 		alias = {}
 	},
 	gnoll_gnawer_0008 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7020,7 +7020,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0010 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7046,7 +7046,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0012 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7072,7 +7072,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0014 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7098,7 +7098,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0016 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7124,7 +7124,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0018 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7148,7 +7148,7 @@ return {
 		alias = {}
 	},
 	gnoll_gnawer_0019 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7174,7 +7174,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0021 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7200,7 +7200,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0023 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7226,7 +7226,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0025 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7252,7 +7252,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0027 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7278,7 +7278,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0029 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7302,7 +7302,7 @@ return {
 		alias = {}
 	},
 	gnoll_gnawer_0030 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7328,7 +7328,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0032 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7354,7 +7354,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0034 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7380,7 +7380,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0036 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7406,7 +7406,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0038 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7432,7 +7432,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0040 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7456,7 +7456,7 @@ return {
 		alias = {}
 	},
 	gnoll_gnawer_0041 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7482,7 +7482,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0043 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7508,7 +7508,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0045 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7534,7 +7534,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0047 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7560,7 +7560,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0049 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7586,7 +7586,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0051 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7610,7 +7610,7 @@ return {
 		alias = {}
 	},
 	gnoll_gnawer_0052 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7636,7 +7636,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0054 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7662,7 +7662,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0056 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7688,7 +7688,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0058 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7714,7 +7714,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0060 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7740,7 +7740,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0062 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7764,7 +7764,7 @@ return {
 		alias = {}
 	},
 	gnoll_gnawer_0063 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7790,7 +7790,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0065 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7816,7 +7816,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0067 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7847,7 +7847,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0070 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7873,7 +7873,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0072 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7899,7 +7899,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0074 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7927,7 +7927,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0078 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7953,7 +7953,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0080 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -7979,7 +7979,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0082 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8005,7 +8005,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0084 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8031,7 +8031,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0086 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8057,7 +8057,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0090 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8083,7 +8083,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0092 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8109,7 +8109,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0094 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8135,7 +8135,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0096 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8161,7 +8161,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0098 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8187,7 +8187,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0100 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8213,7 +8213,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0102 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8237,7 +8237,7 @@ return {
 		alias = {}
 	},
 	gnoll_gnawer_0103 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8261,7 +8261,7 @@ return {
 		alias = {}
 	},
 	gnoll_gnawer_0104 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8285,7 +8285,7 @@ return {
 		alias = {}
 	},
 	gnoll_gnawer_0105 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8311,7 +8311,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0107 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8337,7 +8337,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0109 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8363,7 +8363,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0111 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8389,7 +8389,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0113 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8415,7 +8415,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0115 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8441,7 +8441,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0117 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8467,7 +8467,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0119 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8493,7 +8493,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0121 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8519,7 +8519,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0123 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8545,7 +8545,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0125 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8571,7 +8571,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0129 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8597,7 +8597,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0131 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8623,7 +8623,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0133 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8649,7 +8649,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0135 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8675,7 +8675,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0137 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8701,7 +8701,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0139 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8727,7 +8727,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0141 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8753,7 +8753,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0143 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8779,7 +8779,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0145 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8805,7 +8805,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0147 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8831,7 +8831,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0149 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8857,7 +8857,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0151 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8883,7 +8883,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0153 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8909,7 +8909,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0155 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8935,7 +8935,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0157 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8961,7 +8961,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0159 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -8987,7 +8987,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0161 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -9013,7 +9013,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0163 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -9039,7 +9039,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0165 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -9065,7 +9065,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0167 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -9091,7 +9091,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0169 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -9117,7 +9117,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0171 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -9143,7 +9143,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0173 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -9169,7 +9169,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0175 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -9195,7 +9195,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0177 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -9221,7 +9221,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0179 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -9247,7 +9247,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0181 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -9273,7 +9273,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0183 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -9299,7 +9299,7 @@ return {
 		}
 	},
 	gnoll_gnawer_0185 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			110,
 			135
@@ -9325,7 +9325,7 @@ return {
 		}
 	},
 	gnoll_reaver_0001 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9351,7 +9351,7 @@ return {
 		}
 	},
 	gnoll_reaver_0003 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9377,7 +9377,7 @@ return {
 		}
 	},
 	gnoll_reaver_0005 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9403,7 +9403,7 @@ return {
 		}
 	},
 	gnoll_reaver_0007 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9427,7 +9427,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0008 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9453,7 +9453,7 @@ return {
 		}
 	},
 	gnoll_reaver_0010 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9479,7 +9479,7 @@ return {
 		}
 	},
 	gnoll_reaver_0012 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9505,7 +9505,7 @@ return {
 		}
 	},
 	gnoll_reaver_0014 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9531,7 +9531,7 @@ return {
 		}
 	},
 	gnoll_reaver_0016 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9557,7 +9557,7 @@ return {
 		}
 	},
 	gnoll_reaver_0018 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9581,7 +9581,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0019 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9607,7 +9607,7 @@ return {
 		}
 	},
 	gnoll_reaver_0021 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9631,7 +9631,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0022 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9657,7 +9657,7 @@ return {
 		}
 	},
 	gnoll_reaver_0024 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9683,7 +9683,7 @@ return {
 		}
 	},
 	gnoll_reaver_0026 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9709,7 +9709,7 @@ return {
 		}
 	},
 	gnoll_reaver_0028 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9733,7 +9733,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0029 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9759,7 +9759,7 @@ return {
 		}
 	},
 	gnoll_reaver_0031 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9785,7 +9785,7 @@ return {
 		}
 	},
 	gnoll_reaver_0033 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9811,7 +9811,7 @@ return {
 		}
 	},
 	gnoll_reaver_0035 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9837,7 +9837,7 @@ return {
 		}
 	},
 	gnoll_reaver_0037 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9863,7 +9863,7 @@ return {
 		}
 	},
 	gnoll_reaver_0039 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9887,7 +9887,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0040 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9913,7 +9913,7 @@ return {
 		}
 	},
 	gnoll_reaver_0042 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9939,7 +9939,7 @@ return {
 		}
 	},
 	gnoll_reaver_0044 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9965,7 +9965,7 @@ return {
 		}
 	},
 	gnoll_reaver_0046 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -9991,7 +9991,7 @@ return {
 		}
 	},
 	gnoll_reaver_0048 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10017,7 +10017,7 @@ return {
 		}
 	},
 	gnoll_reaver_0050 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10041,7 +10041,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0051 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10067,7 +10067,7 @@ return {
 		}
 	},
 	gnoll_reaver_0053 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10093,7 +10093,7 @@ return {
 		}
 	},
 	gnoll_reaver_0055 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10119,7 +10119,7 @@ return {
 		}
 	},
 	gnoll_reaver_0057 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10145,7 +10145,7 @@ return {
 		}
 	},
 	gnoll_reaver_0059 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10171,7 +10171,7 @@ return {
 		}
 	},
 	gnoll_reaver_0061 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10195,7 +10195,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0062 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10221,7 +10221,7 @@ return {
 		}
 	},
 	gnoll_reaver_0064 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10247,7 +10247,7 @@ return {
 		}
 	},
 	gnoll_reaver_0066 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10274,7 +10274,7 @@ return {
 		}
 	},
 	gnoll_reaver_0069 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10300,7 +10300,7 @@ return {
 		}
 	},
 	gnoll_reaver_0071 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10326,7 +10326,7 @@ return {
 		}
 	},
 	gnoll_reaver_0073 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10353,7 +10353,7 @@ return {
 		}
 	},
 	gnoll_reaver_0076 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10379,7 +10379,7 @@ return {
 		}
 	},
 	gnoll_reaver_0078 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10405,7 +10405,7 @@ return {
 		}
 	},
 	gnoll_reaver_0080 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10431,7 +10431,7 @@ return {
 		}
 	},
 	gnoll_reaver_0082 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10457,7 +10457,7 @@ return {
 		}
 	},
 	gnoll_reaver_0084 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10481,7 +10481,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0085 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10505,7 +10505,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0086 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10529,7 +10529,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0087 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10553,7 +10553,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0088 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10577,7 +10577,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0089 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10603,7 +10603,7 @@ return {
 		}
 	},
 	gnoll_reaver_0091 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10627,7 +10627,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0092 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10651,7 +10651,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0093 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10675,7 +10675,7 @@ return {
 		alias = {}
 	},
 	gnoll_reaver_0094 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10701,7 +10701,7 @@ return {
 		}
 	},
 	gnoll_reaver_0096 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10727,7 +10727,7 @@ return {
 		}
 	},
 	gnoll_reaver_0098 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			118,
 			75
@@ -10753,7 +10753,7 @@ return {
 		}
 	},
 	hyena_0001 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -10777,7 +10777,7 @@ return {
 		alias = {}
 	},
 	hyena_0002 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -10803,7 +10803,7 @@ return {
 		}
 	},
 	hyena_0004 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -10827,7 +10827,7 @@ return {
 		alias = {}
 	},
 	hyena_0005 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -10851,7 +10851,7 @@ return {
 		alias = {}
 	},
 	hyena_0006 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -10875,7 +10875,7 @@ return {
 		alias = {}
 	},
 	hyena_0007 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -10899,7 +10899,7 @@ return {
 		alias = {}
 	},
 	hyena_0008 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -10923,7 +10923,7 @@ return {
 		alias = {}
 	},
 	hyena_0009 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -10947,7 +10947,7 @@ return {
 		alias = {}
 	},
 	hyena_0010 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -10971,7 +10971,7 @@ return {
 		alias = {}
 	},
 	hyena_0011 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -10995,7 +10995,7 @@ return {
 		alias = {}
 	},
 	hyena_0012 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11021,7 +11021,7 @@ return {
 		}
 	},
 	hyena_0014 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11047,7 +11047,7 @@ return {
 		}
 	},
 	hyena_0016 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11073,7 +11073,7 @@ return {
 		}
 	},
 	hyena_0018 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11099,7 +11099,7 @@ return {
 		}
 	},
 	hyena_0020 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11125,7 +11125,7 @@ return {
 		}
 	},
 	hyena_0022 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11151,7 +11151,7 @@ return {
 		}
 	},
 	hyena_0024 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11177,7 +11177,7 @@ return {
 		}
 	},
 	hyena_0026 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11203,7 +11203,7 @@ return {
 		}
 	},
 	hyena_0028 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11229,7 +11229,7 @@ return {
 		}
 	},
 	hyena_0030 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11255,7 +11255,7 @@ return {
 		}
 	},
 	hyena_0032 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11279,7 +11279,7 @@ return {
 		alias = {}
 	},
 	hyena_0033 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11303,7 +11303,7 @@ return {
 		alias = {}
 	},
 	hyena_0034 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11327,7 +11327,7 @@ return {
 		alias = {}
 	},
 	hyena_0035 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11351,7 +11351,7 @@ return {
 		alias = {}
 	},
 	hyena_0036 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11375,7 +11375,7 @@ return {
 		alias = {}
 	},
 	hyena_0037 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11399,7 +11399,7 @@ return {
 		alias = {}
 	},
 	hyena_0038 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11423,7 +11423,7 @@ return {
 		alias = {}
 	},
 	hyena_0039 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11447,7 +11447,7 @@ return {
 		alias = {}
 	},
 	hyena_0040 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11471,7 +11471,7 @@ return {
 		alias = {}
 	},
 	hyena_0041 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11495,7 +11495,7 @@ return {
 		alias = {}
 	},
 	hyena_0042 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11519,7 +11519,7 @@ return {
 		alias = {}
 	},
 	hyena_0043 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11543,7 +11543,7 @@ return {
 		alias = {}
 	},
 	hyena_0044 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11567,7 +11567,7 @@ return {
 		alias = {}
 	},
 	hyena_0045 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11591,7 +11591,7 @@ return {
 		alias = {}
 	},
 	hyena_0046 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11615,7 +11615,7 @@ return {
 		alias = {}
 	},
 	hyena_0047 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11639,7 +11639,7 @@ return {
 		alias = {}
 	},
 	hyena_0048 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11663,7 +11663,7 @@ return {
 		alias = {}
 	},
 	hyena_0049 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11687,7 +11687,7 @@ return {
 		alias = {}
 	},
 	hyena_0050 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11711,7 +11711,7 @@ return {
 		alias = {}
 	},
 	hyena_0051 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11735,7 +11735,7 @@ return {
 		alias = {}
 	},
 	hyena_0052 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11759,7 +11759,7 @@ return {
 		alias = {}
 	},
 	hyena_0053 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11783,7 +11783,7 @@ return {
 		alias = {}
 	},
 	hyena_0054 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11809,7 +11809,7 @@ return {
 		}
 	},
 	hyena_0056 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11835,7 +11835,7 @@ return {
 		}
 	},
 	hyena_0058 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11861,7 +11861,7 @@ return {
 		}
 	},
 	hyena_0060 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11887,7 +11887,7 @@ return {
 		}
 	},
 	hyena_0062 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11913,7 +11913,7 @@ return {
 		}
 	},
 	hyena_0064 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11939,7 +11939,7 @@ return {
 		}
 	},
 	hyena_0066 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11965,7 +11965,7 @@ return {
 		}
 	},
 	hyena_0068 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -11991,7 +11991,7 @@ return {
 		}
 	},
 	hyena_0070 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			107,
 			96
@@ -12017,7 +12017,7 @@ return {
 		}
 	},
 	perython_0001 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12043,7 +12043,7 @@ return {
 		}
 	},
 	perython_0003 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12069,7 +12069,7 @@ return {
 		}
 	},
 	perython_0005 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12095,7 +12095,7 @@ return {
 		}
 	},
 	perython_0007 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12121,7 +12121,7 @@ return {
 		}
 	},
 	perython_0009 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12147,7 +12147,7 @@ return {
 		}
 	},
 	perython_0011 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12173,7 +12173,7 @@ return {
 		}
 	},
 	perython_0013 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12199,7 +12199,7 @@ return {
 		}
 	},
 	perython_0015 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12225,7 +12225,7 @@ return {
 		}
 	},
 	perython_0017 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12251,7 +12251,7 @@ return {
 		}
 	},
 	perython_0019 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12277,7 +12277,7 @@ return {
 		}
 	},
 	perython_0021 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12303,7 +12303,7 @@ return {
 		}
 	},
 	perython_0023 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12329,7 +12329,7 @@ return {
 		}
 	},
 	perython_0025 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12355,7 +12355,7 @@ return {
 		}
 	},
 	perython_0027 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12381,7 +12381,7 @@ return {
 		}
 	},
 	perython_0029 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12407,7 +12407,7 @@ return {
 		}
 	},
 	perython_0031 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12433,7 +12433,7 @@ return {
 		}
 	},
 	perython_0033 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12459,7 +12459,7 @@ return {
 		}
 	},
 	perython_0035 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12485,7 +12485,7 @@ return {
 		}
 	},
 	perython_0037 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12511,7 +12511,7 @@ return {
 		}
 	},
 	perython_0039 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12537,7 +12537,7 @@ return {
 		}
 	},
 	perython_0041 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12563,7 +12563,7 @@ return {
 		}
 	},
 	perython_0043 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12589,7 +12589,7 @@ return {
 		}
 	},
 	perython_0045 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12615,7 +12615,7 @@ return {
 		}
 	},
 	perython_0047 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12641,7 +12641,7 @@ return {
 		}
 	},
 	perython_0049 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12667,7 +12667,7 @@ return {
 		}
 	},
 	perython_0051 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12693,7 +12693,7 @@ return {
 		}
 	},
 	perython_0053 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12719,7 +12719,7 @@ return {
 		}
 	},
 	perython_0055 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12745,7 +12745,7 @@ return {
 		}
 	},
 	perython_0057 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12771,7 +12771,7 @@ return {
 		}
 	},
 	perython_0059 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143
@@ -12797,7 +12797,7 @@ return {
 		}
 	},
 	perython_0061 = {
-		a_name = "go_enemies_elven_woods-1.dds",
+		a_name = "go_enemies_elven_woods-1.png",
 		size = {
 			124,
 			143

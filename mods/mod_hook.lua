@@ -16,6 +16,22 @@ if IS_KR5 then
 else
     A = require("animation_db")
 end
+local function is_file(path)
+    if love.filesystem.getInfo then
+        local info = love.filesystem.getInfo(path)
+        return info and info.type == "file"
+    else
+        return FS.isFile(path)
+    end
+end
+local function is_directory(path)
+    if love.filesystem.getInfo then
+        local info = love.filesystem.getInfo(path)
+        return info and info.type == "directory"
+    else
+        return FS.IsDirectory(path)
+    end
+end
 
 local hook = {}
 
@@ -58,10 +74,10 @@ function hook.I.load_atlas(load_atlas, self, ref_scale, path, name, yielding)
     for _, mod_data in ipairs(hook.asc_mods_data) do
         local mod_assets_path = mod_data.path .. "/_assets/images"
 
-        if FS.isDirectory(mod_assets_path) then
+        if is_directory(mod_assets_path) then
             local lua_file = mod_assets_path .. "/" .. name .. ".lua"
 
-            if FS.isFile(lua_file) then
+            if is_file(lua_file) then
                 local name_scale = string.format("%s-%.6f", name, ref_scale)
 
                 if self.atlas_uses and self.atlas_uses[name_scale] then
@@ -83,10 +99,10 @@ function hook.I.queue_load_atlas(queue_load_atlas, self, ref_scale, path, name)
     for _, mod_data in ipairs(hook.asc_mods_data) do
         local mod_assets_path = mod_data.path .. "/_assets/images"
 
-        if FS.isDirectory(mod_assets_path) then
+        if is_directory(mod_assets_path) then
             local lua_file = mod_assets_path .. "/" .. name .. ".lua"
 
-            if FS.isFile(lua_file) then
+            if is_file(lua_file) then
                 local name_scale = string.format("%s-%.6f", name, ref_scale)
                 local removed_key = {}
 
@@ -123,8 +139,8 @@ function hook.S.init(init, self, path, overrides)
     for _, mod_data in ipairs(hook.asc_mods_data) do
         local mod_assets_path = mod_data.path .. "/_assets/sounds"
 
-        if FS.isDirectory(mod_assets_path) then
-            if FS.isFile(mod_assets_path .. "/settings.lua") then
+        if is_directory(mod_assets_path) then
+            if is_file(mod_assets_path .. "/settings.lua") then
                 local f_settings = FS.load(path .. "/settings.lua")()
 
                 if f_settings.source_groups then
@@ -139,7 +155,7 @@ function hook.S.init(init, self, path, overrides)
                 self.mod_load.settings = true
             end
 
-            if FS.isFile(mod_assets_path .. "/sounds.lua") then
+            if is_file(mod_assets_path .. "/sounds.lua") then
                 self.sounds = FS.load(mod_assets_path .. "/sounds.lua")()
 
                 log.info("Found sound's sounds override in mod %s", mod_data.name)
@@ -147,13 +163,13 @@ function hook.S.init(init, self, path, overrides)
                 self.mod_load.sounds = true
             end
 
-            if FS.isFile(mod_assets_path .. "/groups.lua") then
+            if is_file(mod_assets_path .. "/groups.lua") then
                 self.groups = FS.load(mod_assets_path .. "/groups.lua")()
 
                 log.info("Found sound's groups override in mod %s", mod_data.name)
             end
 
-            if FS.isFile(mod_assets_path .. "/extra.lua") then
+            if is_file(mod_assets_path .. "/extra.lua") then
                 local f_extra
 
                 f_extra = FS.load(mod_assets_path .. "/extra.lua")()
@@ -208,7 +224,7 @@ function hook.S.load_group(load_group, self, name, yielding, filter)
     for _, mod_data in ipairs(hook.asc_mods_data) do
         local mod_files_path = mod_data.path .. "/_assets/sounds/files"
 
-        if FS.isDirectory(mod_files_path) then
+        if is_directory(mod_files_path) then
             if self.sounds_uses and self.sounds_uses[name] then
                 self.sounds_uses[name] = nil
             end
@@ -237,7 +253,7 @@ function hook.LU.load_level(load_level, store, name)
     local level = load_level(store, name)
 
     for _, mod_data in ipairs(hook.asc_mods_data) do
-        if FS.isDirectory(mod_data.path .. "/data/levels") then
+        if is_directory(mod_data.path .. "/data/levels") then
             local origin_path = KR_PATH_GAME
             KR_PATH_GAME = mod_data.path
 
@@ -263,7 +279,7 @@ function hook.P.load(load, self, name, visible_coords)
     load(self, name, visible_coords)
 
     for _, mod_data in ipairs(hook.asc_mods_data) do
-        if FS.isDirectory(mod_data.path .. "/data/waves") then
+        if is_directory(mod_data.path .. "/data/waves") then
             local origin_path = KR_PATH_GAME
             KR_PATH_GAME = mod_data.path
 

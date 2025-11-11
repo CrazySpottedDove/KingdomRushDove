@@ -3,6 +3,10 @@
 local log = require("klua.log"):new("image_db")
 local G = love.graphics
 local FS = love.filesystem
+local function is_file(path)
+    local info = love.filesystem.getInfo(path)
+    return info and info.type == "file"
+end
 
 require("klua.table")
 require("klua.dump")
@@ -27,7 +31,8 @@ image_db.queue_load_done_images = 0
 image_db.use_canvas = true
 
 -- by dove
-image_db.supportedformats = love.graphics.getCompressedImageFormats()
+image_db.supportedformats = love.graphics.getImageFormats()
+-- local is_android = love.system.getOS() == "Android"
 
 -- 简化版本，只基于CPU核心数
 local function calculate_thread_count()
@@ -65,8 +70,8 @@ while true do
     if fn == 'QUIT' then goto quit end
     local path = cin:demand()
     local f = path .. '/' .. fn
-
-    if not love.filesystem.isFile(f) then
+    local info = love.filesystem.getInfo(f)
+    if (not info) or (info.type ~= "file") then
         cout:push({'ERROR','Not a file',f})
     else
         local data
@@ -439,7 +444,7 @@ function image_db:preload_atlas(ref_scale, path, name)
 
 	local group_file = path .. "/" .. name .. ".lua"
 
-	if not FS.isFile(group_file) then
+	if not is_file(group_file) then
 		log.error("atlas file %s not found for %s/%s", group_file, path, name)
 
 		return
@@ -454,6 +459,10 @@ function image_db:preload_atlas(ref_scale, path, name)
 		log.paranoid("loading atlas-frame: %s - %s", v.a_name, k)
 		v.group = name_scale
 		v.quad = G.newQuad(v.f_quad[1], v.f_quad[2], v.f_quad[3], v.f_quad[4], v.a_size[1], v.a_size[2])
+
+        -- if is_android then
+        --     v.a_name = v.a_name:gsub(".dds$", ".png")
+        -- end
 
 		if v.defer then
 			deferred_image_names[v.a_name] = true
@@ -534,7 +543,7 @@ function image_db:load(ref_scale, custom_paths)
 			local name = files[i]
 			local f = path .. "/" .. name
 
-			if FS.isFile(f) and (string.match(f, ".png$") or string.match(f, ".jpg$")) then
+			if is_file(f) and (string.match(f, ".png$") or string.match(f, ".jpg$")) then
 				local key = string.gsub(name, ".png$", "")
 
 				key = string.gsub(key, ".jpg$", "")
@@ -563,7 +572,7 @@ function image_db:load(ref_scale, custom_paths)
 			local name = files[i]
 			local f = path .. "/" .. name
 
-			if FS.isFile(f) and string.match(f, ".lua$") then
+			if is_file(f) and string.match(f, ".lua$") then
 				local file_basename = string.gsub(name, ".lua$", "")
 				local frames = require(path .. "." .. file_basename)
 				local queue = {}
@@ -595,7 +604,7 @@ end
 function image_db:load_image_file(fn, path)
 	local f = path .. "/" .. fn
 
-	if not FS.isFile(f) then
+	if not is_file(f) then
 		log.error("not a valid file: %s", f)
 
 		return
@@ -609,11 +618,16 @@ function image_db:load_image_file(fn, path)
 		if string.match(f, ".dds$") then
 			compressed = true
 
-			if not self.supportedformats.DXT3 then
-				log.error("DXT3 not supported. Could not load %s", f)
+            -- if is_android then
+            --     return self:load_image_file(fn:gsub("%.dds$", ".png"), path)
+            -- end
 
-				return nil
-			end
+			-- 检查 DXT3 和 BC7 是否都不支持
+            if not self.supportedformats.DXT3 then
+                log.error("DDS not supported (DXT3). Fallback to PNG for %s", f)
+                return nil
+            end
+
 		elseif string.match(f, ".astc$") then
 			compressed = true
 

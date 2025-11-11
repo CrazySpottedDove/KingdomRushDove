@@ -2,7 +2,7 @@
 
 return {
 	bandersnatch_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -31,7 +31,7 @@ return {
 		}
 	},
 	bandersnatch_0002 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -59,7 +59,7 @@ return {
 		}
 	},
 	bandersnatch_0004 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -85,7 +85,7 @@ return {
 		}
 	},
 	bandersnatch_0005 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -111,7 +111,7 @@ return {
 		}
 	},
 	bandersnatch_0006 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -139,7 +139,7 @@ return {
 		}
 	},
 	bandersnatch_0008 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -166,7 +166,7 @@ return {
 		}
 	},
 	bandersnatch_0018 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -190,7 +190,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0019 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -214,7 +214,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0020 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -238,7 +238,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0021 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -262,7 +262,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0022 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -286,7 +286,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0023 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -310,7 +310,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0024 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -334,7 +334,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0025 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -358,7 +358,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0026 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -382,7 +382,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0027 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -406,7 +406,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0028 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -430,7 +430,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0029 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -454,7 +454,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0030 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -478,7 +478,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0031 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -502,7 +502,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0032 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -526,7 +526,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0033 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -550,7 +550,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0034 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -574,7 +574,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0035 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -598,7 +598,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0036 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -622,7 +622,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0037 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -646,7 +646,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0038 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -670,7 +670,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0039 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -694,7 +694,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0040 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -718,7 +718,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0041 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -742,7 +742,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_0042 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -768,7 +768,7 @@ return {
 		}
 	},
 	bandersnatch_0043 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -794,7 +794,7 @@ return {
 		}
 	},
 	bandersnatch_0044 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -820,7 +820,7 @@ return {
 		}
 	},
 	bandersnatch_0045 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -846,7 +846,7 @@ return {
 		}
 	},
 	bandersnatch_0046 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -872,7 +872,7 @@ return {
 		}
 	},
 	bandersnatch_0047 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -898,7 +898,7 @@ return {
 		}
 	},
 	bandersnatch_0048 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -924,7 +924,7 @@ return {
 		}
 	},
 	bandersnatch_0049 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -950,7 +950,7 @@ return {
 		}
 	},
 	bandersnatch_0050 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -976,7 +976,7 @@ return {
 		}
 	},
 	bandersnatch_0051 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1002,7 +1002,7 @@ return {
 		}
 	},
 	bandersnatch_0052 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1028,7 +1028,7 @@ return {
 		}
 	},
 	bandersnatch_0053 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1054,7 +1054,7 @@ return {
 		}
 	},
 	bandersnatch_0066 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1080,7 +1080,7 @@ return {
 		}
 	},
 	bandersnatch_0067 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1106,7 +1106,7 @@ return {
 		}
 	},
 	bandersnatch_0068 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1132,7 +1132,7 @@ return {
 		}
 	},
 	bandersnatch_0069 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1158,7 +1158,7 @@ return {
 		}
 	},
 	bandersnatch_0070 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1184,7 +1184,7 @@ return {
 		}
 	},
 	bandersnatch_0071 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1210,7 +1210,7 @@ return {
 		}
 	},
 	bandersnatch_0072 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1236,7 +1236,7 @@ return {
 		}
 	},
 	bandersnatch_0073 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1262,7 +1262,7 @@ return {
 		}
 	},
 	bandersnatch_0074 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1288,7 +1288,7 @@ return {
 		}
 	},
 	bandersnatch_0075 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1314,7 +1314,7 @@ return {
 		}
 	},
 	bandersnatch_0076 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1340,7 +1340,7 @@ return {
 		}
 	},
 	bandersnatch_0077 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1366,7 +1366,7 @@ return {
 		}
 	},
 	bandersnatch_0091 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1392,7 +1392,7 @@ return {
 		}
 	},
 	bandersnatch_0093 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1418,7 +1418,7 @@ return {
 		}
 	},
 	bandersnatch_0095 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1444,7 +1444,7 @@ return {
 		}
 	},
 	bandersnatch_0097 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1471,7 +1471,7 @@ return {
 		}
 	},
 	bandersnatch_0100 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1498,7 +1498,7 @@ return {
 		}
 	},
 	bandersnatch_0103 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1525,7 +1525,7 @@ return {
 		}
 	},
 	bandersnatch_0106 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1551,7 +1551,7 @@ return {
 		}
 	},
 	bandersnatch_0108 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1577,7 +1577,7 @@ return {
 		}
 	},
 	bandersnatch_0110 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1603,7 +1603,7 @@ return {
 		}
 	},
 	bandersnatch_0112 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1629,7 +1629,7 @@ return {
 		}
 	},
 	bandersnatch_0115 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1655,7 +1655,7 @@ return {
 		}
 	},
 	bandersnatch_0116 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1681,7 +1681,7 @@ return {
 		}
 	},
 	bandersnatch_0118 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1707,7 +1707,7 @@ return {
 		}
 	},
 	bandersnatch_0120 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1733,7 +1733,7 @@ return {
 		}
 	},
 	bandersnatch_0122 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1759,7 +1759,7 @@ return {
 		}
 	},
 	bandersnatch_0124 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1785,7 +1785,7 @@ return {
 		}
 	},
 	bandersnatch_0126 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1820,7 +1820,7 @@ return {
 		}
 	},
 	bandersnatch_0137 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1846,7 +1846,7 @@ return {
 		}
 	},
 	bandersnatch_0139 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1872,7 +1872,7 @@ return {
 		}
 	},
 	bandersnatch_0141 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1898,7 +1898,7 @@ return {
 		}
 	},
 	bandersnatch_0143 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1924,7 +1924,7 @@ return {
 		}
 	},
 	bandersnatch_0145 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1950,7 +1950,7 @@ return {
 		}
 	},
 	bandersnatch_0147 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -1976,7 +1976,7 @@ return {
 		}
 	},
 	bandersnatch_0149 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2016,7 +2016,7 @@ return {
 		}
 	},
 	bandersnatch_0165 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2042,7 +2042,7 @@ return {
 		}
 	},
 	bandersnatch_0167 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2068,7 +2068,7 @@ return {
 		}
 	},
 	bandersnatch_0169 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2094,7 +2094,7 @@ return {
 		}
 	},
 	bandersnatch_0171 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2120,7 +2120,7 @@ return {
 		}
 	},
 	bandersnatch_0173 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2146,7 +2146,7 @@ return {
 		}
 	},
 	bandersnatch_0175 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2172,7 +2172,7 @@ return {
 		}
 	},
 	bandersnatch_0177 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2198,7 +2198,7 @@ return {
 		}
 	},
 	bandersnatch_0181 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2224,7 +2224,7 @@ return {
 		}
 	},
 	bandersnatch_0183 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2251,7 +2251,7 @@ return {
 		}
 	},
 	bandersnatch_0186 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2278,7 +2278,7 @@ return {
 		}
 	},
 	bandersnatch_0189 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2304,7 +2304,7 @@ return {
 		}
 	},
 	bandersnatch_0191 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2330,7 +2330,7 @@ return {
 		}
 	},
 	bandersnatch_0193 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2356,7 +2356,7 @@ return {
 		}
 	},
 	bandersnatch_0195 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			231,
 			163
@@ -2382,7 +2382,7 @@ return {
 		}
 	},
 	bandersnatch_spine_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			23,
 			28
@@ -2408,7 +2408,7 @@ return {
 		}
 	},
 	bandersnatch_spine_0003 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			23,
 			28
@@ -2434,7 +2434,7 @@ return {
 		}
 	},
 	bandersnatch_spine_0005 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			23,
 			28
@@ -2460,7 +2460,7 @@ return {
 		}
 	},
 	bandersnatch_spine_0007 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			23,
 			28
@@ -2484,7 +2484,7 @@ return {
 		alias = {}
 	},
 	bandersnatch_spines_blood_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			34,
 			34
@@ -2510,7 +2510,7 @@ return {
 		}
 	},
 	bandersnatch_spines_blood_0003 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			34,
 			34
@@ -2536,7 +2536,7 @@ return {
 		}
 	},
 	bandersnatch_spines_blood_0005 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			34,
 			34
@@ -2562,7 +2562,7 @@ return {
 		}
 	},
 	bandersnatch_spines_blood_0007 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			34,
 			34
@@ -2588,7 +2588,7 @@ return {
 		}
 	},
 	fairy_energyBall_red_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			186,
 			186
@@ -2615,7 +2615,7 @@ return {
 		}
 	},
 	fairy_energyBall_red_0004 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			186,
 			186
@@ -2642,7 +2642,7 @@ return {
 		}
 	},
 	fairy_energyBall_red_0007 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			186,
 			186
@@ -2669,7 +2669,7 @@ return {
 		}
 	},
 	fairy_energyBall_red_0010 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			186,
 			186
@@ -2696,7 +2696,7 @@ return {
 		}
 	},
 	fairy_energyBall_red_0013 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			186,
 			186
@@ -2723,7 +2723,7 @@ return {
 		}
 	},
 	fairy_energyBall_red_0016 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			186,
 			186
@@ -2747,7 +2747,7 @@ return {
 		alias = {}
 	},
 	fairy_energyBall_yellow_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			124,
 			124
@@ -2774,7 +2774,7 @@ return {
 		}
 	},
 	fairy_energyBall_yellow_0004 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			124,
 			124
@@ -2801,7 +2801,7 @@ return {
 		}
 	},
 	fairy_energyBall_yellow_0007 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			124,
 			124
@@ -2828,7 +2828,7 @@ return {
 		}
 	},
 	fairy_energyBall_yellow_0010 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			124,
 			124
@@ -2855,7 +2855,7 @@ return {
 		}
 	},
 	fairy_energyBall_yellow_0013 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			124,
 			124
@@ -2882,7 +2882,7 @@ return {
 		}
 	},
 	fairy_energyBall_yellow_0016 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			124,
 			124
@@ -2906,7 +2906,7 @@ return {
 		alias = {}
 	},
 	fairy_entryFx_big_red_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			82,
 			84
@@ -2932,7 +2932,7 @@ return {
 		}
 	},
 	fairy_entryFx_big_red_0003 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			82,
 			84
@@ -2958,7 +2958,7 @@ return {
 		}
 	},
 	fairy_entryFx_big_red_0005 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			82,
 			84
@@ -2984,7 +2984,7 @@ return {
 		}
 	},
 	fairy_entryFx_big_red_0007 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			82,
 			84
@@ -3010,7 +3010,7 @@ return {
 		}
 	},
 	fairy_entryFx_big_red_0009 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			82,
 			84
@@ -3036,7 +3036,7 @@ return {
 		}
 	},
 	fairy_entryFx_big_red_0011 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			82,
 			84
@@ -3062,7 +3062,7 @@ return {
 		}
 	},
 	fairy_entryFx_big_yellow_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			82,
 			84
@@ -3088,7 +3088,7 @@ return {
 		}
 	},
 	fairy_entryFx_big_yellow_0003 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			82,
 			84
@@ -3114,7 +3114,7 @@ return {
 		}
 	},
 	fairy_entryFx_big_yellow_0005 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			82,
 			84
@@ -3140,7 +3140,7 @@ return {
 		}
 	},
 	fairy_entryFx_big_yellow_0007 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			82,
 			84
@@ -3166,7 +3166,7 @@ return {
 		}
 	},
 	fairy_entryFx_big_yellow_0009 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			82,
 			84
@@ -3192,7 +3192,7 @@ return {
 		}
 	},
 	fairy_entryFx_big_yellow_0011 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			82,
 			84
@@ -3218,7 +3218,7 @@ return {
 		}
 	},
 	fairy_particle_red_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			51,
 			45
@@ -3244,7 +3244,7 @@ return {
 		}
 	},
 	fairy_particle_red_0003 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			51,
 			45
@@ -3270,7 +3270,7 @@ return {
 		}
 	},
 	fairy_particle_red_0005 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			51,
 			45
@@ -3296,7 +3296,7 @@ return {
 		}
 	},
 	fairy_particle_red_0007 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			51,
 			45
@@ -3322,7 +3322,7 @@ return {
 		}
 	},
 	fairy_particle_red_0009 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			51,
 			45
@@ -3348,7 +3348,7 @@ return {
 		}
 	},
 	fairy_particle_red_0011 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			51,
 			45
@@ -3374,7 +3374,7 @@ return {
 		}
 	},
 	fairy_particle_yellow_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			51,
 			45
@@ -3400,7 +3400,7 @@ return {
 		}
 	},
 	fairy_particle_yellow_0003 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			51,
 			45
@@ -3426,7 +3426,7 @@ return {
 		}
 	},
 	fairy_particle_yellow_0005 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			51,
 			45
@@ -3452,7 +3452,7 @@ return {
 		}
 	},
 	fairy_particle_yellow_0007 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			51,
 			45
@@ -3478,7 +3478,7 @@ return {
 		}
 	},
 	fairy_particle_yellow_0009 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			51,
 			45
@@ -3504,7 +3504,7 @@ return {
 		}
 	},
 	fairy_particle_yellow_0011 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			51,
 			45
@@ -3530,7 +3530,7 @@ return {
 		}
 	},
 	fungusRider_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3558,7 +3558,7 @@ return {
 		}
 	},
 	fungusRider_0005 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3586,7 +3586,7 @@ return {
 		}
 	},
 	fungusRider_0009 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3614,7 +3614,7 @@ return {
 		}
 	},
 	fungusRider_0013 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3642,7 +3642,7 @@ return {
 		}
 	},
 	fungusRider_0017 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3668,7 +3668,7 @@ return {
 		}
 	},
 	fungusRider_0019 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3692,7 +3692,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0020 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3718,7 +3718,7 @@ return {
 		}
 	},
 	fungusRider_0022 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3742,7 +3742,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0023 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3768,7 +3768,7 @@ return {
 		}
 	},
 	fungusRider_0025 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3792,7 +3792,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0026 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3818,7 +3818,7 @@ return {
 		}
 	},
 	fungusRider_0028 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3842,7 +3842,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0029 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3868,7 +3868,7 @@ return {
 		}
 	},
 	fungusRider_0031 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3892,7 +3892,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0032 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3918,7 +3918,7 @@ return {
 		}
 	},
 	fungusRider_0034 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3942,7 +3942,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0035 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3968,7 +3968,7 @@ return {
 		}
 	},
 	fungusRider_0037 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -3992,7 +3992,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0038 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4018,7 +4018,7 @@ return {
 		}
 	},
 	fungusRider_0040 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4042,7 +4042,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0041 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4068,7 +4068,7 @@ return {
 		}
 	},
 	fungusRider_0043 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4092,7 +4092,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0044 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4118,7 +4118,7 @@ return {
 		}
 	},
 	fungusRider_0046 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4142,7 +4142,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0047 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4168,7 +4168,7 @@ return {
 		}
 	},
 	fungusRider_0049 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4192,7 +4192,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0050 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4218,7 +4218,7 @@ return {
 		}
 	},
 	fungusRider_0052 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4242,7 +4242,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0053 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4268,7 +4268,7 @@ return {
 		}
 	},
 	fungusRider_0055 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4292,7 +4292,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0056 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4318,7 +4318,7 @@ return {
 		}
 	},
 	fungusRider_0058 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4342,7 +4342,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0059 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4368,7 +4368,7 @@ return {
 		}
 	},
 	fungusRider_0061 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4392,7 +4392,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0062 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4418,7 +4418,7 @@ return {
 		}
 	},
 	fungusRider_0064 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4442,7 +4442,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0065 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4468,7 +4468,7 @@ return {
 		}
 	},
 	fungusRider_0067 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4492,7 +4492,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0068 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4518,7 +4518,7 @@ return {
 		}
 	},
 	fungusRider_0070 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4542,7 +4542,7 @@ return {
 		alias = {}
 	},
 	fungusRider_0071 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4570,7 +4570,7 @@ return {
 		}
 	},
 	fungusRider_0073 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4596,7 +4596,7 @@ return {
 		}
 	},
 	fungusRider_0075 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4622,7 +4622,7 @@ return {
 		}
 	},
 	fungusRider_0077 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4648,7 +4648,7 @@ return {
 		}
 	},
 	fungusRider_0079 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4674,7 +4674,7 @@ return {
 		}
 	},
 	fungusRider_0081 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4700,7 +4700,7 @@ return {
 		}
 	},
 	fungusRider_0083 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4726,7 +4726,7 @@ return {
 		}
 	},
 	fungusRider_0085 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4752,7 +4752,7 @@ return {
 		}
 	},
 	fungusRider_0087 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4778,7 +4778,7 @@ return {
 		}
 	},
 	fungusRider_0089 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4804,7 +4804,7 @@ return {
 		}
 	},
 	fungusRider_0091 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4830,7 +4830,7 @@ return {
 		}
 	},
 	fungusRider_0093 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4856,7 +4856,7 @@ return {
 		}
 	},
 	fungusRider_0097 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4882,7 +4882,7 @@ return {
 		}
 	},
 	fungusRider_0099 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4908,7 +4908,7 @@ return {
 		}
 	},
 	fungusRider_0101 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4934,7 +4934,7 @@ return {
 		}
 	},
 	fungusRider_0103 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4960,7 +4960,7 @@ return {
 		}
 	},
 	fungusRider_0105 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -4986,7 +4986,7 @@ return {
 		}
 	},
 	fungusRider_0107 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5012,7 +5012,7 @@ return {
 		}
 	},
 	fungusRider_0109 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5038,7 +5038,7 @@ return {
 		}
 	},
 	fungusRider_0111 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5064,7 +5064,7 @@ return {
 		}
 	},
 	fungusRider_0113 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5090,7 +5090,7 @@ return {
 		}
 	},
 	fungusRider_0115 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5116,7 +5116,7 @@ return {
 		}
 	},
 	fungusRider_0117 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5142,7 +5142,7 @@ return {
 		}
 	},
 	fungusRider_0119 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5168,7 +5168,7 @@ return {
 		}
 	},
 	fungusRider_0121 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5194,7 +5194,7 @@ return {
 		}
 	},
 	fungusRider_0123 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5220,7 +5220,7 @@ return {
 		}
 	},
 	fungusRider_0125 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5246,7 +5246,7 @@ return {
 		}
 	},
 	fungusRider_0127 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5272,7 +5272,7 @@ return {
 		}
 	},
 	fungusRider_0129 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5298,7 +5298,7 @@ return {
 		}
 	},
 	fungusRider_0131 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5324,7 +5324,7 @@ return {
 		}
 	},
 	fungusRider_0133 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5350,7 +5350,7 @@ return {
 		}
 	},
 	fungusRider_0135 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5376,7 +5376,7 @@ return {
 		}
 	},
 	fungusRider_0137 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5402,7 +5402,7 @@ return {
 		}
 	},
 	fungusRider_0139 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5428,7 +5428,7 @@ return {
 		}
 	},
 	fungusRider_0141 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5454,7 +5454,7 @@ return {
 		}
 	},
 	fungusRider_0143 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5480,7 +5480,7 @@ return {
 		}
 	},
 	fungusRider_0145 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5506,7 +5506,7 @@ return {
 		}
 	},
 	fungusRider_0147 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5532,7 +5532,7 @@ return {
 		}
 	},
 	fungusRider_0149 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5558,7 +5558,7 @@ return {
 		}
 	},
 	fungusRider_0151 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5584,7 +5584,7 @@ return {
 		}
 	},
 	fungusRider_0153 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5610,7 +5610,7 @@ return {
 		}
 	},
 	fungusRider_0155 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5636,7 +5636,7 @@ return {
 		}
 	},
 	fungusRider_0157 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5662,7 +5662,7 @@ return {
 		}
 	},
 	fungusRider_0159 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5688,7 +5688,7 @@ return {
 		}
 	},
 	fungusRider_0161 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5714,7 +5714,7 @@ return {
 		}
 	},
 	fungusRider_0163 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5740,7 +5740,7 @@ return {
 		}
 	},
 	fungusRider_0165 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5766,7 +5766,7 @@ return {
 		}
 	},
 	fungusRider_0167 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5792,7 +5792,7 @@ return {
 		}
 	},
 	fungusRider_0169 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5818,7 +5818,7 @@ return {
 		}
 	},
 	fungusRider_0171 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5844,7 +5844,7 @@ return {
 		}
 	},
 	fungusRider_0173 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5870,7 +5870,7 @@ return {
 		}
 	},
 	fungusRider_0175 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			141,
 			158
@@ -5896,7 +5896,7 @@ return {
 		}
 	},
 	fungusRider_medium_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -5920,7 +5920,7 @@ return {
 		alias = {}
 	},
 	fungusRider_medium_0002 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -5946,7 +5946,7 @@ return {
 		}
 	},
 	fungusRider_medium_0004 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -5972,7 +5972,7 @@ return {
 		}
 	},
 	fungusRider_medium_0006 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -5998,7 +5998,7 @@ return {
 		}
 	},
 	fungusRider_medium_0008 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6024,7 +6024,7 @@ return {
 		}
 	},
 	fungusRider_medium_0010 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6048,7 +6048,7 @@ return {
 		alias = {}
 	},
 	fungusRider_medium_0011 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6074,7 +6074,7 @@ return {
 		}
 	},
 	fungusRider_medium_0013 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6100,7 +6100,7 @@ return {
 		}
 	},
 	fungusRider_medium_0015 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6126,7 +6126,7 @@ return {
 		}
 	},
 	fungusRider_medium_0017 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6152,7 +6152,7 @@ return {
 		}
 	},
 	fungusRider_medium_0019 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6178,7 +6178,7 @@ return {
 		}
 	},
 	fungusRider_medium_0021 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6204,7 +6204,7 @@ return {
 		}
 	},
 	fungusRider_medium_0023 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6228,7 +6228,7 @@ return {
 		alias = {}
 	},
 	fungusRider_medium_0024 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6254,7 +6254,7 @@ return {
 		}
 	},
 	fungusRider_medium_0026 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6280,7 +6280,7 @@ return {
 		}
 	},
 	fungusRider_medium_0028 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6306,7 +6306,7 @@ return {
 		}
 	},
 	fungusRider_medium_0030 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6332,7 +6332,7 @@ return {
 		}
 	},
 	fungusRider_medium_0032 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6358,7 +6358,7 @@ return {
 		}
 	},
 	fungusRider_medium_0034 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6384,7 +6384,7 @@ return {
 		}
 	},
 	fungusRider_medium_0036 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6408,7 +6408,7 @@ return {
 		alias = {}
 	},
 	fungusRider_medium_0037 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6434,7 +6434,7 @@ return {
 		}
 	},
 	fungusRider_medium_0039 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6460,7 +6460,7 @@ return {
 		}
 	},
 	fungusRider_medium_0041 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6488,7 +6488,7 @@ return {
 		}
 	},
 	fungusRider_medium_0043 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6514,7 +6514,7 @@ return {
 		}
 	},
 	fungusRider_medium_0045 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6542,7 +6542,7 @@ return {
 		}
 	},
 	fungusRider_medium_0049 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6568,7 +6568,7 @@ return {
 		}
 	},
 	fungusRider_medium_0051 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6594,7 +6594,7 @@ return {
 		}
 	},
 	fungusRider_medium_0053 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6620,7 +6620,7 @@ return {
 		}
 	},
 	fungusRider_medium_0055 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6646,7 +6646,7 @@ return {
 		}
 	},
 	fungusRider_medium_0057 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6672,7 +6672,7 @@ return {
 		}
 	},
 	fungusRider_medium_0059 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6698,7 +6698,7 @@ return {
 		}
 	},
 	fungusRider_medium_0063 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6732,7 +6732,7 @@ return {
 		}
 	},
 	fungusRider_medium_0065 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6758,7 +6758,7 @@ return {
 		}
 	},
 	fungusRider_medium_0067 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6784,7 +6784,7 @@ return {
 		}
 	},
 	fungusRider_medium_0077 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6810,7 +6810,7 @@ return {
 		}
 	},
 	fungusRider_medium_0079 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6836,7 +6836,7 @@ return {
 		}
 	},
 	fungusRider_medium_0081 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6862,7 +6862,7 @@ return {
 		}
 	},
 	fungusRider_medium_0083 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6888,7 +6888,7 @@ return {
 		}
 	},
 	fungusRider_medium_0085 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6914,7 +6914,7 @@ return {
 		}
 	},
 	fungusRider_medium_0087 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6940,7 +6940,7 @@ return {
 		}
 	},
 	fungusRider_medium_0089 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6966,7 +6966,7 @@ return {
 		}
 	},
 	fungusRider_medium_0091 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -6992,7 +6992,7 @@ return {
 		}
 	},
 	fungusRider_medium_0093 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -7018,7 +7018,7 @@ return {
 		}
 	},
 	fungusRider_medium_0095 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -7044,7 +7044,7 @@ return {
 		}
 	},
 	fungusRider_medium_0097 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -7070,7 +7070,7 @@ return {
 		}
 	},
 	fungusRider_medium_0099 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -7096,7 +7096,7 @@ return {
 		}
 	},
 	fungusRider_medium_0101 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -7122,7 +7122,7 @@ return {
 		}
 	},
 	fungusRider_medium_0103 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -7148,7 +7148,7 @@ return {
 		}
 	},
 	fungusRider_medium_0105 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -7174,7 +7174,7 @@ return {
 		}
 	},
 	fungusRider_medium_0107 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -7200,7 +7200,7 @@ return {
 		}
 	},
 	fungusRider_medium_0109 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -7226,7 +7226,7 @@ return {
 		}
 	},
 	fungusRider_medium_0111 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -7252,7 +7252,7 @@ return {
 		}
 	},
 	fungusRider_medium_0113 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -7278,7 +7278,7 @@ return {
 		}
 	},
 	fungusRider_medium_0115 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -7304,7 +7304,7 @@ return {
 		}
 	},
 	fungusRider_medium_0117 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -7330,7 +7330,7 @@ return {
 		}
 	},
 	fungusRider_medium_0119 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			101,
 			98
@@ -7354,7 +7354,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7378,7 +7378,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0002 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7404,7 +7404,7 @@ return {
 		}
 	},
 	fungusRider_small_0004 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7430,7 +7430,7 @@ return {
 		}
 	},
 	fungusRider_small_0006 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7454,7 +7454,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0007 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7480,7 +7480,7 @@ return {
 		}
 	},
 	fungusRider_small_0009 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7506,7 +7506,7 @@ return {
 		}
 	},
 	fungusRider_small_0011 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7532,7 +7532,7 @@ return {
 		}
 	},
 	fungusRider_small_0013 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7558,7 +7558,7 @@ return {
 		}
 	},
 	fungusRider_small_0015 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7582,7 +7582,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0016 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7608,7 +7608,7 @@ return {
 		}
 	},
 	fungusRider_small_0018 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7634,7 +7634,7 @@ return {
 		}
 	},
 	fungusRider_small_0020 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7660,7 +7660,7 @@ return {
 		}
 	},
 	fungusRider_small_0022 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7686,7 +7686,7 @@ return {
 		}
 	},
 	fungusRider_small_0024 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7710,7 +7710,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0025 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7736,7 +7736,7 @@ return {
 		}
 	},
 	fungusRider_small_0027 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7762,7 +7762,7 @@ return {
 		}
 	},
 	fungusRider_small_0029 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7788,7 +7788,7 @@ return {
 		}
 	},
 	fungusRider_small_0031 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7814,7 +7814,7 @@ return {
 		}
 	},
 	fungusRider_small_0033 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7838,7 +7838,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0034 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7864,7 +7864,7 @@ return {
 		}
 	},
 	fungusRider_small_0036 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7890,7 +7890,7 @@ return {
 		}
 	},
 	fungusRider_small_0038 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7916,7 +7916,7 @@ return {
 		}
 	},
 	fungusRider_small_0040 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7942,7 +7942,7 @@ return {
 		}
 	},
 	fungusRider_small_0042 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7966,7 +7966,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0043 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -7992,7 +7992,7 @@ return {
 		}
 	},
 	fungusRider_small_0045 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8018,7 +8018,7 @@ return {
 		}
 	},
 	fungusRider_small_0047 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8044,7 +8044,7 @@ return {
 		}
 	},
 	fungusRider_small_0049 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8070,7 +8070,7 @@ return {
 		}
 	},
 	fungusRider_small_0051 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8094,7 +8094,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0052 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8120,7 +8120,7 @@ return {
 		}
 	},
 	fungusRider_small_0054 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8146,7 +8146,7 @@ return {
 		}
 	},
 	fungusRider_small_0056 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8172,7 +8172,7 @@ return {
 		}
 	},
 	fungusRider_small_0058 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8198,7 +8198,7 @@ return {
 		}
 	},
 	fungusRider_small_0060 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8224,7 +8224,7 @@ return {
 		}
 	},
 	fungusRider_small_0062 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8250,7 +8250,7 @@ return {
 		}
 	},
 	fungusRider_small_0064 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8276,7 +8276,7 @@ return {
 		}
 	},
 	fungusRider_small_0066 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8302,7 +8302,7 @@ return {
 		}
 	},
 	fungusRider_small_0068 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8328,7 +8328,7 @@ return {
 		}
 	},
 	fungusRider_small_0070 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8354,7 +8354,7 @@ return {
 		}
 	},
 	fungusRider_small_0072 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8380,7 +8380,7 @@ return {
 		}
 	},
 	fungusRider_small_0074 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8406,7 +8406,7 @@ return {
 		}
 	},
 	fungusRider_small_0076 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8432,7 +8432,7 @@ return {
 		}
 	},
 	fungusRider_small_0078 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8458,7 +8458,7 @@ return {
 		}
 	},
 	fungusRider_small_0080 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8484,7 +8484,7 @@ return {
 		}
 	},
 	fungusRider_small_0082 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8510,7 +8510,7 @@ return {
 		}
 	},
 	fungusRider_small_0084 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8536,7 +8536,7 @@ return {
 		}
 	},
 	fungusRider_small_0086 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8560,7 +8560,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0087 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8593,7 +8593,7 @@ return {
 		}
 	},
 	fungusRider_small_0096 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8619,7 +8619,7 @@ return {
 		}
 	},
 	fungusRider_small_0098 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8645,7 +8645,7 @@ return {
 		}
 	},
 	fungusRider_small_0100 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8671,7 +8671,7 @@ return {
 		}
 	},
 	fungusRider_small_0102 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8697,7 +8697,7 @@ return {
 		}
 	},
 	fungusRider_small_0104 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8723,7 +8723,7 @@ return {
 		}
 	},
 	fungusRider_small_0106 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8749,7 +8749,7 @@ return {
 		}
 	},
 	fungusRider_small_0108 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8775,7 +8775,7 @@ return {
 		}
 	},
 	fungusRider_small_0110 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8801,7 +8801,7 @@ return {
 		}
 	},
 	fungusRider_small_0112 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8827,7 +8827,7 @@ return {
 		}
 	},
 	fungusRider_small_0114 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8851,7 +8851,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0115 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8875,7 +8875,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0116 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8899,7 +8899,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0117 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8923,7 +8923,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0118 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8947,7 +8947,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0119 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8971,7 +8971,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0120 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -8995,7 +8995,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0121 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -9019,7 +9019,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0122 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -9043,7 +9043,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0123 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -9067,7 +9067,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0124 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -9091,7 +9091,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0125 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -9115,7 +9115,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0126 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -9139,7 +9139,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0127 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -9163,7 +9163,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0128 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -9187,7 +9187,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0129 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -9211,7 +9211,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0130 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -9235,7 +9235,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0131 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -9259,7 +9259,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0132 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -9283,7 +9283,7 @@ return {
 		alias = {}
 	},
 	fungusRider_small_0133 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			73,
 			65
@@ -9307,7 +9307,7 @@ return {
 		alias = {}
 	},
 	gloomy_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9333,7 +9333,7 @@ return {
 		}
 	},
 	gloomy_0002 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9359,7 +9359,7 @@ return {
 		}
 	},
 	gloomy_0003 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9385,7 +9385,7 @@ return {
 		}
 	},
 	gloomy_0004 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9411,7 +9411,7 @@ return {
 		}
 	},
 	gloomy_0005 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9437,7 +9437,7 @@ return {
 		}
 	},
 	gloomy_0006 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9463,7 +9463,7 @@ return {
 		}
 	},
 	gloomy_0007 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9489,7 +9489,7 @@ return {
 		}
 	},
 	gloomy_0008 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9515,7 +9515,7 @@ return {
 		}
 	},
 	gloomy_0009 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9541,7 +9541,7 @@ return {
 		}
 	},
 	gloomy_0010 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9567,7 +9567,7 @@ return {
 		}
 	},
 	gloomy_0011 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9593,7 +9593,7 @@ return {
 		}
 	},
 	gloomy_0012 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9619,7 +9619,7 @@ return {
 		}
 	},
 	gloomy_0013 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9645,7 +9645,7 @@ return {
 		}
 	},
 	gloomy_0014 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9671,7 +9671,7 @@ return {
 		}
 	},
 	gloomy_0015 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9697,7 +9697,7 @@ return {
 		}
 	},
 	gloomy_0016 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9723,7 +9723,7 @@ return {
 		}
 	},
 	gloomy_0017 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9747,7 +9747,7 @@ return {
 		alias = {}
 	},
 	gloomy_0018 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9771,7 +9771,7 @@ return {
 		alias = {}
 	},
 	gloomy_0019 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9795,7 +9795,7 @@ return {
 		alias = {}
 	},
 	gloomy_0020 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9819,7 +9819,7 @@ return {
 		alias = {}
 	},
 	gloomy_0021 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9843,7 +9843,7 @@ return {
 		alias = {}
 	},
 	gloomy_0022 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9867,7 +9867,7 @@ return {
 		alias = {}
 	},
 	gloomy_0023 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9891,7 +9891,7 @@ return {
 		alias = {}
 	},
 	gloomy_0024 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9915,7 +9915,7 @@ return {
 		alias = {}
 	},
 	gloomy_0025 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9939,7 +9939,7 @@ return {
 		alias = {}
 	},
 	gloomy_0026 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9963,7 +9963,7 @@ return {
 		alias = {}
 	},
 	gloomy_0027 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -9987,7 +9987,7 @@ return {
 		alias = {}
 	},
 	gloomy_0028 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10011,7 +10011,7 @@ return {
 		alias = {}
 	},
 	gloomy_0029 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10035,7 +10035,7 @@ return {
 		alias = {}
 	},
 	gloomy_0030 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10059,7 +10059,7 @@ return {
 		alias = {}
 	},
 	gloomy_0031 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10083,7 +10083,7 @@ return {
 		alias = {}
 	},
 	gloomy_0032 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10107,7 +10107,7 @@ return {
 		alias = {}
 	},
 	gloomy_0033 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10131,7 +10131,7 @@ return {
 		alias = {}
 	},
 	gloomy_0034 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10155,7 +10155,7 @@ return {
 		alias = {}
 	},
 	gloomy_0035 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10179,7 +10179,7 @@ return {
 		alias = {}
 	},
 	gloomy_0036 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10203,7 +10203,7 @@ return {
 		alias = {}
 	},
 	gloomy_0037 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10227,7 +10227,7 @@ return {
 		alias = {}
 	},
 	gloomy_0038 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10251,7 +10251,7 @@ return {
 		alias = {}
 	},
 	gloomy_0039 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10275,7 +10275,7 @@ return {
 		alias = {}
 	},
 	gloomy_0040 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10299,7 +10299,7 @@ return {
 		alias = {}
 	},
 	gloomy_0041 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10323,7 +10323,7 @@ return {
 		alias = {}
 	},
 	gloomy_0042 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10347,7 +10347,7 @@ return {
 		alias = {}
 	},
 	gloomy_0043 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10371,7 +10371,7 @@ return {
 		alias = {}
 	},
 	gloomy_0044 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10395,7 +10395,7 @@ return {
 		alias = {}
 	},
 	gloomy_0045 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10419,7 +10419,7 @@ return {
 		alias = {}
 	},
 	gloomy_0046 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10443,7 +10443,7 @@ return {
 		alias = {}
 	},
 	gloomy_0047 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10467,7 +10467,7 @@ return {
 		alias = {}
 	},
 	gloomy_0048 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10491,7 +10491,7 @@ return {
 		alias = {}
 	},
 	gloomy_0049 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10515,7 +10515,7 @@ return {
 		alias = {}
 	},
 	gloomy_0050 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10539,7 +10539,7 @@ return {
 		alias = {}
 	},
 	gloomy_0051 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10565,7 +10565,7 @@ return {
 		}
 	},
 	gloomy_0053 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10591,7 +10591,7 @@ return {
 		}
 	},
 	gloomy_0055 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10617,7 +10617,7 @@ return {
 		}
 	},
 	gloomy_0057 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10643,7 +10643,7 @@ return {
 		}
 	},
 	gloomy_0059 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10669,7 +10669,7 @@ return {
 		}
 	},
 	gloomy_0061 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10693,7 +10693,7 @@ return {
 		alias = {}
 	},
 	gloomy_0062 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10717,7 +10717,7 @@ return {
 		alias = {}
 	},
 	gloomy_0063 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10741,7 +10741,7 @@ return {
 		alias = {}
 	},
 	gloomy_0064 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10765,7 +10765,7 @@ return {
 		alias = {}
 	},
 	gloomy_0065 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10789,7 +10789,7 @@ return {
 		alias = {}
 	},
 	gloomy_0066 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10813,7 +10813,7 @@ return {
 		alias = {}
 	},
 	gloomy_0067 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10837,7 +10837,7 @@ return {
 		alias = {}
 	},
 	gloomy_0068 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10861,7 +10861,7 @@ return {
 		alias = {}
 	},
 	gloomy_0069 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10885,7 +10885,7 @@ return {
 		alias = {}
 	},
 	gloomy_0070 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10909,7 +10909,7 @@ return {
 		alias = {}
 	},
 	gloomy_0071 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10933,7 +10933,7 @@ return {
 		alias = {}
 	},
 	gloomy_0072 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10957,7 +10957,7 @@ return {
 		alias = {}
 	},
 	gloomy_0073 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -10981,7 +10981,7 @@ return {
 		alias = {}
 	},
 	gloomy_0074 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -11005,7 +11005,7 @@ return {
 		alias = {}
 	},
 	gloomy_0075 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -11031,7 +11031,7 @@ return {
 		}
 	},
 	gloomy_0077 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -11058,7 +11058,7 @@ return {
 		}
 	},
 	gloomy_0080 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -11084,7 +11084,7 @@ return {
 		}
 	},
 	gloomy_0082 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -11110,7 +11110,7 @@ return {
 		}
 	},
 	gloomy_0084 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -11136,7 +11136,7 @@ return {
 		}
 	},
 	gloomy_0086 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -11160,7 +11160,7 @@ return {
 		alias = {}
 	},
 	gloomy_0087 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -11184,7 +11184,7 @@ return {
 		alias = {}
 	},
 	gloomy_0088 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -11208,7 +11208,7 @@ return {
 		alias = {}
 	},
 	gloomy_0089 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -11232,7 +11232,7 @@ return {
 		alias = {}
 	},
 	gloomy_0090 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			208,
 			104
@@ -11256,7 +11256,7 @@ return {
 		alias = {}
 	},
 	redcap_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11282,7 +11282,7 @@ return {
 		}
 	},
 	redcap_0002 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11308,7 +11308,7 @@ return {
 		}
 	},
 	redcap_0004 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11334,7 +11334,7 @@ return {
 		}
 	},
 	redcap_0006 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11360,7 +11360,7 @@ return {
 		}
 	},
 	redcap_0008 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11384,7 +11384,7 @@ return {
 		alias = {}
 	},
 	redcap_0009 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11410,7 +11410,7 @@ return {
 		}
 	},
 	redcap_0011 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11436,7 +11436,7 @@ return {
 		}
 	},
 	redcap_0013 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11462,7 +11462,7 @@ return {
 		}
 	},
 	redcap_0015 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11488,7 +11488,7 @@ return {
 		}
 	},
 	redcap_0017 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11514,7 +11514,7 @@ return {
 		}
 	},
 	redcap_0019 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11538,7 +11538,7 @@ return {
 		alias = {}
 	},
 	redcap_0020 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11564,7 +11564,7 @@ return {
 		}
 	},
 	redcap_0022 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11590,7 +11590,7 @@ return {
 		}
 	},
 	redcap_0024 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11616,7 +11616,7 @@ return {
 		}
 	},
 	redcap_0026 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11642,7 +11642,7 @@ return {
 		}
 	},
 	redcap_0028 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11668,7 +11668,7 @@ return {
 		}
 	},
 	redcap_0030 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11692,7 +11692,7 @@ return {
 		alias = {}
 	},
 	redcap_0031 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11718,7 +11718,7 @@ return {
 		}
 	},
 	redcap_0033 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11744,7 +11744,7 @@ return {
 		}
 	},
 	redcap_0035 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11770,7 +11770,7 @@ return {
 		}
 	},
 	redcap_0037 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11796,7 +11796,7 @@ return {
 		}
 	},
 	redcap_0039 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11822,7 +11822,7 @@ return {
 		}
 	},
 	redcap_0041 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11846,7 +11846,7 @@ return {
 		alias = {}
 	},
 	redcap_0042 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11872,7 +11872,7 @@ return {
 		}
 	},
 	redcap_0044 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11898,7 +11898,7 @@ return {
 		}
 	},
 	redcap_0046 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11924,7 +11924,7 @@ return {
 		}
 	},
 	redcap_0048 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11950,7 +11950,7 @@ return {
 		}
 	},
 	redcap_0050 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -11974,7 +11974,7 @@ return {
 		alias = {}
 	},
 	redcap_0051 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12000,7 +12000,7 @@ return {
 		}
 	},
 	redcap_0053 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12026,7 +12026,7 @@ return {
 		}
 	},
 	redcap_0055 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12052,7 +12052,7 @@ return {
 		}
 	},
 	redcap_0057 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12078,7 +12078,7 @@ return {
 		}
 	},
 	redcap_0059 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12104,7 +12104,7 @@ return {
 		}
 	},
 	redcap_0061 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12128,7 +12128,7 @@ return {
 		alias = {}
 	},
 	redcap_0062 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12154,7 +12154,7 @@ return {
 		}
 	},
 	redcap_0064 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12180,7 +12180,7 @@ return {
 		}
 	},
 	redcap_0066 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12206,7 +12206,7 @@ return {
 		}
 	},
 	redcap_0068 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12232,7 +12232,7 @@ return {
 		}
 	},
 	redcap_0070 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12258,7 +12258,7 @@ return {
 		}
 	},
 	redcap_0072 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12282,7 +12282,7 @@ return {
 		alias = {}
 	},
 	redcap_0073 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12308,7 +12308,7 @@ return {
 		}
 	},
 	redcap_0075 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12332,7 +12332,7 @@ return {
 		alias = {}
 	},
 	redcap_0076 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12358,7 +12358,7 @@ return {
 		}
 	},
 	redcap_0078 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12385,7 +12385,7 @@ return {
 		}
 	},
 	redcap_0081 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12411,7 +12411,7 @@ return {
 		}
 	},
 	redcap_0083 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12437,7 +12437,7 @@ return {
 		}
 	},
 	redcap_0085 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12461,7 +12461,7 @@ return {
 		alias = {}
 	},
 	redcap_0086 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12485,7 +12485,7 @@ return {
 		alias = {}
 	},
 	redcap_0087 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12509,7 +12509,7 @@ return {
 		alias = {}
 	},
 	redcap_0088 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12533,7 +12533,7 @@ return {
 		alias = {}
 	},
 	redcap_0089 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12557,7 +12557,7 @@ return {
 		alias = {}
 	},
 	redcap_0090 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12581,7 +12581,7 @@ return {
 		alias = {}
 	},
 	redcap_0092 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12609,7 +12609,7 @@ return {
 		}
 	},
 	redcap_0094 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12635,7 +12635,7 @@ return {
 		}
 	},
 	redcap_0096 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12661,7 +12661,7 @@ return {
 		}
 	},
 	redcap_0098 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12688,7 +12688,7 @@ return {
 		}
 	},
 	redcap_0101 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12714,7 +12714,7 @@ return {
 		}
 	},
 	redcap_0103 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12740,7 +12740,7 @@ return {
 		}
 	},
 	redcap_0105 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12766,7 +12766,7 @@ return {
 		}
 	},
 	redcap_0107 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12792,7 +12792,7 @@ return {
 		}
 	},
 	redcap_0109 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12818,7 +12818,7 @@ return {
 		}
 	},
 	redcap_0111 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12844,7 +12844,7 @@ return {
 		}
 	},
 	redcap_0113 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12870,7 +12870,7 @@ return {
 		}
 	},
 	redcap_0115 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12899,7 +12899,7 @@ return {
 		}
 	},
 	redcap_0120 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12925,7 +12925,7 @@ return {
 		}
 	},
 	redcap_0124 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12951,7 +12951,7 @@ return {
 		}
 	},
 	redcap_0126 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -12977,7 +12977,7 @@ return {
 		}
 	},
 	redcap_0128 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -13003,7 +13003,7 @@ return {
 		}
 	},
 	redcap_0130 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -13029,7 +13029,7 @@ return {
 		}
 	},
 	redcap_0132 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -13055,7 +13055,7 @@ return {
 		}
 	},
 	redcap_0134 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -13081,7 +13081,7 @@ return {
 		}
 	},
 	redcap_0136 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -13107,7 +13107,7 @@ return {
 		}
 	},
 	redcap_0138 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -13133,7 +13133,7 @@ return {
 		}
 	},
 	redcap_0140 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -13159,7 +13159,7 @@ return {
 		}
 	},
 	redcap_0142 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -13185,7 +13185,7 @@ return {
 		}
 	},
 	redcap_0144 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -13211,7 +13211,7 @@ return {
 		}
 	},
 	redcap_0146 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			113,
 			101
@@ -13238,7 +13238,7 @@ return {
 		}
 	},
 	satyrHoplite_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13269,7 +13269,7 @@ return {
 		}
 	},
 	satyrHoplite_0002 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13295,7 +13295,7 @@ return {
 		}
 	},
 	satyrHoplite_0004 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13321,7 +13321,7 @@ return {
 		}
 	},
 	satyrHoplite_0006 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13347,7 +13347,7 @@ return {
 		}
 	},
 	satyrHoplite_0008 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13371,7 +13371,7 @@ return {
 		alias = {}
 	},
 	satyrHoplite_0009 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13397,7 +13397,7 @@ return {
 		}
 	},
 	satyrHoplite_0011 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13423,7 +13423,7 @@ return {
 		}
 	},
 	satyrHoplite_0013 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13449,7 +13449,7 @@ return {
 		}
 	},
 	satyrHoplite_0015 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13475,7 +13475,7 @@ return {
 		}
 	},
 	satyrHoplite_0017 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13501,7 +13501,7 @@ return {
 		}
 	},
 	satyrHoplite_0019 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13525,7 +13525,7 @@ return {
 		alias = {}
 	},
 	satyrHoplite_0020 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13551,7 +13551,7 @@ return {
 		}
 	},
 	satyrHoplite_0022 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13577,7 +13577,7 @@ return {
 		}
 	},
 	satyrHoplite_0024 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13603,7 +13603,7 @@ return {
 		}
 	},
 	satyrHoplite_0026 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13629,7 +13629,7 @@ return {
 		}
 	},
 	satyrHoplite_0028 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13655,7 +13655,7 @@ return {
 		}
 	},
 	satyrHoplite_0030 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13679,7 +13679,7 @@ return {
 		alias = {}
 	},
 	satyrHoplite_0031 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13705,7 +13705,7 @@ return {
 		}
 	},
 	satyrHoplite_0033 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13731,7 +13731,7 @@ return {
 		}
 	},
 	satyrHoplite_0035 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13757,7 +13757,7 @@ return {
 		}
 	},
 	satyrHoplite_0037 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13783,7 +13783,7 @@ return {
 		}
 	},
 	satyrHoplite_0039 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13809,7 +13809,7 @@ return {
 		}
 	},
 	satyrHoplite_0041 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13833,7 +13833,7 @@ return {
 		alias = {}
 	},
 	satyrHoplite_0042 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13859,7 +13859,7 @@ return {
 		}
 	},
 	satyrHoplite_0044 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13885,7 +13885,7 @@ return {
 		}
 	},
 	satyrHoplite_0046 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13911,7 +13911,7 @@ return {
 		}
 	},
 	satyrHoplite_0048 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13937,7 +13937,7 @@ return {
 		}
 	},
 	satyrHoplite_0050 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13961,7 +13961,7 @@ return {
 		alias = {}
 	},
 	satyrHoplite_0051 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -13987,7 +13987,7 @@ return {
 		}
 	},
 	satyrHoplite_0053 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14013,7 +14013,7 @@ return {
 		}
 	},
 	satyrHoplite_0055 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14039,7 +14039,7 @@ return {
 		}
 	},
 	satyrHoplite_0057 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14065,7 +14065,7 @@ return {
 		}
 	},
 	satyrHoplite_0059 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14091,7 +14091,7 @@ return {
 		}
 	},
 	satyrHoplite_0061 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14115,7 +14115,7 @@ return {
 		alias = {}
 	},
 	satyrHoplite_0062 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14141,7 +14141,7 @@ return {
 		}
 	},
 	satyrHoplite_0064 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14167,7 +14167,7 @@ return {
 		}
 	},
 	satyrHoplite_0066 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14193,7 +14193,7 @@ return {
 		}
 	},
 	satyrHoplite_0069 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14219,7 +14219,7 @@ return {
 		}
 	},
 	satyrHoplite_0071 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14245,7 +14245,7 @@ return {
 		}
 	},
 	satyrHoplite_0073 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14271,7 +14271,7 @@ return {
 		}
 	},
 	satyrHoplite_0075 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14297,7 +14297,7 @@ return {
 		}
 	},
 	satyrHoplite_0077 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14323,7 +14323,7 @@ return {
 		}
 	},
 	satyrHoplite_0079 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14349,7 +14349,7 @@ return {
 		}
 	},
 	satyrHoplite_0081 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14375,7 +14375,7 @@ return {
 		}
 	},
 	satyrHoplite_0083 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14401,7 +14401,7 @@ return {
 		}
 	},
 	satyrHoplite_0085 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14427,7 +14427,7 @@ return {
 		}
 	},
 	satyrHoplite_0087 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14453,7 +14453,7 @@ return {
 		}
 	},
 	satyrHoplite_0089 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14479,7 +14479,7 @@ return {
 		}
 	},
 	satyrHoplite_0094 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14505,7 +14505,7 @@ return {
 		}
 	},
 	satyrHoplite_0096 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14531,7 +14531,7 @@ return {
 		}
 	},
 	satyrHoplite_0098 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14557,7 +14557,7 @@ return {
 		}
 	},
 	satyrHoplite_0100 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14585,7 +14585,7 @@ return {
 		}
 	},
 	satyrHoplite_0104 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14613,7 +14613,7 @@ return {
 		}
 	},
 	satyrHoplite_0106 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14641,7 +14641,7 @@ return {
 		}
 	},
 	satyrHoplite_0108 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14667,7 +14667,7 @@ return {
 		}
 	},
 	satyrHoplite_0109 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14693,7 +14693,7 @@ return {
 		}
 	},
 	satyrHoplite_0110 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14719,7 +14719,7 @@ return {
 		}
 	},
 	satyrHoplite_0111 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14745,7 +14745,7 @@ return {
 		}
 	},
 	satyrHoplite_0112 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14771,7 +14771,7 @@ return {
 		}
 	},
 	satyrHoplite_0113 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14797,7 +14797,7 @@ return {
 		}
 	},
 	satyrHoplite_0114 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14823,7 +14823,7 @@ return {
 		}
 	},
 	satyrHoplite_0115 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14849,7 +14849,7 @@ return {
 		}
 	},
 	satyrHoplite_0116 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14873,7 +14873,7 @@ return {
 		alias = {}
 	},
 	satyrHoplite_0117 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14897,7 +14897,7 @@ return {
 		alias = {}
 	},
 	satyrHoplite_0118 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14923,7 +14923,7 @@ return {
 		}
 	},
 	satyrHoplite_0119 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14949,7 +14949,7 @@ return {
 		}
 	},
 	satyrHoplite_0120 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -14976,7 +14976,7 @@ return {
 		}
 	},
 	satyrHoplite_0135 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -15000,7 +15000,7 @@ return {
 		alias = {}
 	},
 	satyrHoplite_0136 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -15024,7 +15024,7 @@ return {
 		alias = {}
 	},
 	satyrHoplite_0139 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -15051,7 +15051,7 @@ return {
 		}
 	},
 	satyrHoplite_0142 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -15077,7 +15077,7 @@ return {
 		}
 	},
 	satyrHoplite_0144 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -15103,7 +15103,7 @@ return {
 		}
 	},
 	satyrHoplite_0148 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -15129,7 +15129,7 @@ return {
 		}
 	},
 	satyrHoplite_0150 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -15155,7 +15155,7 @@ return {
 		}
 	},
 	satyrHoplite_0152 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -15181,7 +15181,7 @@ return {
 		}
 	},
 	satyrHoplite_0154 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -15207,7 +15207,7 @@ return {
 		}
 	},
 	satyrHoplite_0156 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -15233,7 +15233,7 @@ return {
 		}
 	},
 	satyrHoplite_0158 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -15259,7 +15259,7 @@ return {
 		}
 	},
 	satyrHoplite_0160 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -15285,7 +15285,7 @@ return {
 		}
 	},
 	satyrHoplite_0162 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			135,
 			84
@@ -15311,7 +15311,7 @@ return {
 		}
 	},
 	satyr_0001 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15335,7 +15335,7 @@ return {
 		alias = {}
 	},
 	satyr_0002 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15361,7 +15361,7 @@ return {
 		}
 	},
 	satyr_0004 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15387,7 +15387,7 @@ return {
 		}
 	},
 	satyr_0006 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15413,7 +15413,7 @@ return {
 		}
 	},
 	satyr_0008 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15439,7 +15439,7 @@ return {
 		}
 	},
 	satyr_0010 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15465,7 +15465,7 @@ return {
 		}
 	},
 	satyr_0012 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15491,7 +15491,7 @@ return {
 		}
 	},
 	satyr_0014 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15517,7 +15517,7 @@ return {
 		}
 	},
 	satyr_0016 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15543,7 +15543,7 @@ return {
 		}
 	},
 	satyr_0018 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15569,7 +15569,7 @@ return {
 		}
 	},
 	satyr_0020 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15595,7 +15595,7 @@ return {
 		}
 	},
 	satyr_0022 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15621,7 +15621,7 @@ return {
 		}
 	},
 	satyr_0024 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15647,7 +15647,7 @@ return {
 		}
 	},
 	satyr_0026 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15673,7 +15673,7 @@ return {
 		}
 	},
 	satyr_0028 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15699,7 +15699,7 @@ return {
 		}
 	},
 	satyr_0030 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15725,7 +15725,7 @@ return {
 		}
 	},
 	satyr_0032 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15751,7 +15751,7 @@ return {
 		}
 	},
 	satyr_0034 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15777,7 +15777,7 @@ return {
 		}
 	},
 	satyr_0036 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15803,7 +15803,7 @@ return {
 		}
 	},
 	satyr_0038 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15829,7 +15829,7 @@ return {
 		}
 	},
 	satyr_0040 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15855,7 +15855,7 @@ return {
 		}
 	},
 	satyr_0042 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15881,7 +15881,7 @@ return {
 		}
 	},
 	satyr_0044 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15907,7 +15907,7 @@ return {
 		}
 	},
 	satyr_0046 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15933,7 +15933,7 @@ return {
 		}
 	},
 	satyr_0048 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15959,7 +15959,7 @@ return {
 		}
 	},
 	satyr_0050 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -15985,7 +15985,7 @@ return {
 		}
 	},
 	satyr_0052 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16011,7 +16011,7 @@ return {
 		}
 	},
 	satyr_0054 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16037,7 +16037,7 @@ return {
 		}
 	},
 	satyr_0056 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16063,7 +16063,7 @@ return {
 		}
 	},
 	satyr_0058 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16089,7 +16089,7 @@ return {
 		}
 	},
 	satyr_0060 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16115,7 +16115,7 @@ return {
 		}
 	},
 	satyr_0062 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16141,7 +16141,7 @@ return {
 		}
 	},
 	satyr_0064 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16167,7 +16167,7 @@ return {
 		}
 	},
 	satyr_0066 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16193,7 +16193,7 @@ return {
 		}
 	},
 	satyr_0068 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16219,7 +16219,7 @@ return {
 		}
 	},
 	satyr_0070 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16245,7 +16245,7 @@ return {
 		}
 	},
 	satyr_0072 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16271,7 +16271,7 @@ return {
 		}
 	},
 	satyr_0074 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16297,7 +16297,7 @@ return {
 		}
 	},
 	satyr_0076 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16323,7 +16323,7 @@ return {
 		}
 	},
 	satyr_0078 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16349,7 +16349,7 @@ return {
 		}
 	},
 	satyr_0080 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16375,7 +16375,7 @@ return {
 		}
 	},
 	satyr_0082 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16399,7 +16399,7 @@ return {
 		alias = {}
 	},
 	satyr_0083 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16425,7 +16425,7 @@ return {
 		}
 	},
 	satyr_0085 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16451,7 +16451,7 @@ return {
 		}
 	},
 	satyr_0087 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16477,7 +16477,7 @@ return {
 		}
 	},
 	satyr_0089 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16503,7 +16503,7 @@ return {
 		}
 	},
 	satyr_0091 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16529,7 +16529,7 @@ return {
 		}
 	},
 	satyr_0093 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16555,7 +16555,7 @@ return {
 		}
 	},
 	satyr_0095 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16581,7 +16581,7 @@ return {
 		}
 	},
 	satyr_0097 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16607,7 +16607,7 @@ return {
 		}
 	},
 	satyr_0099 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16633,7 +16633,7 @@ return {
 		}
 	},
 	satyr_0101 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16659,7 +16659,7 @@ return {
 		}
 	},
 	satyr_0103 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16685,7 +16685,7 @@ return {
 		}
 	},
 	satyr_0105 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16709,7 +16709,7 @@ return {
 		alias = {}
 	},
 	satyr_0106 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16733,7 +16733,7 @@ return {
 		alias = {}
 	},
 	satyr_0107 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16757,7 +16757,7 @@ return {
 		alias = {}
 	},
 	satyr_0108 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16781,7 +16781,7 @@ return {
 		alias = {}
 	},
 	satyr_0109 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16805,7 +16805,7 @@ return {
 		alias = {}
 	},
 	satyr_0110 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16829,7 +16829,7 @@ return {
 		alias = {}
 	},
 	satyr_0111 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16853,7 +16853,7 @@ return {
 		alias = {}
 	},
 	satyr_0112 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16877,7 +16877,7 @@ return {
 		alias = {}
 	},
 	satyr_0113 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16901,7 +16901,7 @@ return {
 		alias = {}
 	},
 	satyr_0114 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16925,7 +16925,7 @@ return {
 		alias = {}
 	},
 	satyr_0115 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16949,7 +16949,7 @@ return {
 		alias = {}
 	},
 	satyr_0116 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16973,7 +16973,7 @@ return {
 		alias = {}
 	},
 	satyr_0117 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -16997,7 +16997,7 @@ return {
 		alias = {}
 	},
 	satyr_0118 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -17021,7 +17021,7 @@ return {
 		alias = {}
 	},
 	satyr_0119 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -17045,7 +17045,7 @@ return {
 		alias = {}
 	},
 	satyr_0120 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -17069,7 +17069,7 @@ return {
 		alias = {}
 	},
 	satyr_0121 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -17095,7 +17095,7 @@ return {
 		}
 	},
 	satyr_0123 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -17121,7 +17121,7 @@ return {
 		}
 	},
 	satyr_0125 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -17147,7 +17147,7 @@ return {
 		}
 	},
 	satyr_0127 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -17173,7 +17173,7 @@ return {
 		}
 	},
 	satyr_0129 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -17199,7 +17199,7 @@ return {
 		}
 	},
 	satyr_0131 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93
@@ -17225,7 +17225,7 @@ return {
 		}
 	},
 	satyr_0133 = {
-		a_name = "go_enemies_faerie_grove-1.dds",
+		a_name = "go_enemies_faerie_grove-1.png",
 		size = {
 			118,
 			93

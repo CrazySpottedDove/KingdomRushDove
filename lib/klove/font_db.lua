@@ -12,6 +12,10 @@ local font_db = {}
 function font_db:init(path)
 	self.path = path
 end
+local function is_file(path)
+    local info = love.filesystem.getInfo(path)
+    return info and info.type == "file"
+end
 
 function font_db:load(font_sizes)
 	self.fonts = {}
@@ -23,8 +27,8 @@ function font_db:load(font_sizes)
 	local path = self.path or "fonts"
 	local settings_f = path .. "/" .. "font_settings.lua"
 	local settings
-
-	if FS.isFile(settings_f) then
+    local info = FS.getInfo(settings_f)
+	if info and info.type == "file" then
 		local f, err = FS.load(settings_f)
 
 		if err then
@@ -53,7 +57,7 @@ function font_db:load(font_sizes)
 	end
 
 	for _, f in pairs(font_files) do
-		if not FS.isFile(f) then
+		if not is_file(f) then
 			-- block empty
 		elseif string.match(f, ".PNG$") or string.match(f, ".png$") then
 			local key = string.gsub(f, ".PNG$", "")
@@ -186,7 +190,7 @@ function font_db:create_text_image(text, size, alignment, font_name, font_size, 
 	G.setCanvas(c)
 
 	if debug_bg then
-		G.setColor(200, 200, 200, 100)
+		G.setColor(0.784, 0.784, 0.784, 0.392)
 		G.rectangle("fill", 0, 0, w + padding, h + padding)
 	end
 
@@ -194,7 +198,7 @@ function font_db:create_text_image(text, size, alignment, font_name, font_size, 
 	local vadj = fadj["middle-caps"] or 0
 
 	G.setFont(font)
-	G.setColor(color)
+	G.setColor_old(color)
 	G.printf(text, padding * 0.5, vadj + padding * 0.5, w, alignment)
 	G.setCanvas()
 

@@ -24,24 +24,25 @@ local bit = require("bit")
 require("constants")
 
 game = {}
-game.required_textures = { "go_decals", "go_enemies_common", "go_towers", "go_towers_pandas", "go_towers_dark_elf",
-    "go_towers_tricannon", "go_towers_demon_pit",
-    "go_towers_necromancer", "go_towers_ray",
-    "go_towers_elven_stargazers", "go_towers_sand", "go_towers_royal_archers",
-    "go_towers_arcane_wizard", "go_towers_rocket_gunners", "go_towers_flamespitter" }
+game.required_textures = {"go_decals", "go_enemies_common", "go_towers", "go_towers_pandas", "go_towers_dark_elf",
+                          "go_towers_tricannon", "go_towers_demon_pit", "go_towers_necromancer", "go_towers_ray",
+                          "go_towers_elven_stargazers", "go_towers_sand", "go_towers_royal_archers",
+                          "go_towers_arcane_wizard", "go_towers_rocket_gunners", "go_towers_flamespitter"}
 game.scale_required_textures = {}
 game.ref_h = REF_H
 game.ref_w = REF_W
 game.ref_res = TEXTURE_SIZE_ALIAS.ipad
 game.scale_required_textures_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIAS.fullhd
-game.required_sounds = { "common", "ElvesTowerTaunts", "ElvesCommonSounds", "tower_dark_elf", "tower_tricannon",
-    "tower_demon_pit", "tower_necromancer", "tower_pandas", "tower_ray", "tower_elven_stargazers",
-    "tower_sand", "tower_royal_archers", "tower_arcane_wizard", "tower_rocket_gunners", "tower_flamespitter"}
+game.required_sounds = {"common", "ElvesTowerTaunts", "ElvesCommonSounds", "tower_dark_elf", "tower_tricannon",
+                        "tower_demon_pit", "tower_necromancer", "tower_pandas", "tower_ray", "tower_elven_stargazers",
+                        "tower_sand", "tower_royal_archers", "tower_arcane_wizard", "tower_rocket_gunners",
+                        "tower_flamespitter"}
 
-game.simulation_systems = { "level", "wave_spawn", "mod_lifecycle", "main_script", "timed", "tween", "endless_patch",
-    "health", "count_groups", "hero_xp_tracking", "pops", "goal_line", "tower_upgrade",
-    "game_upgrades", "texts", "particle_system", "render", "sound_events", "seen_tracker",
-    "performance_monitor", "spatial_index", "last_hook", "lights" ,"assets_checker", "wave_generator"}
+game.simulation_systems = {"level", "wave_spawn", "mod_lifecycle", "main_script", "timed", "tween", "endless_patch",
+                           "health", "count_groups", "hero_xp_tracking", "pops", "goal_line", "tower_upgrade",
+                           "game_upgrades", "texts", "particle_system", "render", "sound_events", "seen_tracker",
+                           "performance_monitor", "spatial_index", "last_hook", "lights", "assets_checker",
+                           "wave_generator"}
 
 function game:init(screen_w, screen_h, done_callback)
     self.dash_start_offset = 0
@@ -93,7 +94,7 @@ function game:init(screen_w, screen_h, done_callback)
         self.camera.wb = (visible_h - v_bottom) * self.game_scale
         self.camera.zoom = 1
         self.camera.min_zoom = aspect > 1.7777777777777777 and math.min(screen_w, MAX_SCREEN_ASPECT * screen_h) /
-            (visible_w * self.game_scale) or 1
+                                   (visible_w * self.game_scale) or 1
         self.camera.max_zoom = KR_TARGET == "tablet" and 1.5 or 2
 
         function self.camera:clamp()
@@ -240,9 +241,9 @@ function game:init_debug()
     local data = require("data.game_debug_data")
 
     self.current_enemy_page = data.default_page_for_level and data.default_page_for_level[self.store.level_idx] or
-        data.default_page_for_terrain[self.store.level_terrain_type] or 1
+                                  data.default_page_for_terrain[self.store.level_terrain_type] or 1
     self.enemy_pages = data.enemy_pages
-    self.enemy_keys = { "q", "w", "e", "r", "t", "y", "u", "i", "o", "p" }
+    self.enemy_keys = {"q", "w", "e", "r", "t", "y", "u", "i", "o", "p"}
     self.dbg_active_pi = 1
 
     if localuser_game_init then
@@ -391,18 +392,18 @@ end
 
 function game:draw_enemy_pages()
     local function print_sh(str, x, y, color)
-        color = color and color or { 255, 255, 255 }
+        color = color and color or {255, 255, 255}
 
         G.setColor(0, 0, 0)
         G.print(str, x + 1, y + 1)
-        G.setColor(unpack(color))
+        G.setColor_old(unpack(color))
         G.print(str, x, y)
-        G.setColor(255, 255, 255)
+        G.setColor(1, 1, 1)
     end
 
     local sw, sh, scale, origin = SU.clamp_window_aspect(self.screen_w, self.screen_h, self.screen_w, self.screen_h)
 
-    G.setColor(0, 0, 0, 100)
+    G.setColor(0, 0, 0, 0.392)
     G.rectangle("fill", origin.x + 5, self.screen_h * 0.5 - 5, 270, self.screen_h / 3)
 
     local names = self.enemy_pages[self.current_enemy_page]
@@ -413,12 +414,12 @@ function game:draw_enemy_pages()
     for i, n in ipairs(names) do
         local key = self.enemy_keys[i]
 
-        print_sh(string.format("%s: %s", key, n), x, y, self.auto_send_list[n] and { 255, 100, 100 } or { 255, 255, 255 })
+        print_sh(string.format("%s: %s", key, n), x, y, self.auto_send_list[n] and {255, 100, 100} or {255, 255, 255})
 
         y = y + 12
     end
 
-    G.setColor(255, 255, 255)
+    G.setColor(1, 1, 1)
 
     y = y + 12
 
@@ -753,127 +754,19 @@ function game:front_draw_debug(rox, roy, gs)
 
         G.setCanvas(self.path_canvas)
 
-        -- if self.DBG_DRAW_PATHS == 2 then
-        -- 	for pi, p in ipairs(P.paths) do
-        -- 		if pi == self.dbg_active_pi then
-        -- 			local pw = P:path_width(pi)
-
-        -- 			for ni, o in pairs(p[1]) do
-        -- 				if P:is_node_valid(pi, ni) then
-        -- 					G.setColor(0, 0, 255, 150)
-        -- 					G.circle("fill", o.x, REF_H - o.y, pw, 16)
-        -- 				end
-        -- 			end
-        -- 		end
-        -- 	end
-        -- end
-
         for pi, p in ipairs(P.paths) do
             for _, sp in pairs(p) do
                 for ni, o in ipairs(sp) do
-                    -- if not P:is_node_valid(pi, ni) then
-                    -- 	G.setColor(255, 255, 0, 255)
-                    -- 	G.rectangle("fill", o.x - node_size, REF_H - o.y - node_size, 2 * node_size, 2 * node_size)
-                    -- else
                     if ni % 2 == 0 then
-                        G.setColor(255, 0, 0, 120)
+                        G.setColor(1, 0, 0, 0.47058823529411764)
                         G.circle("fill", o.x, REF_H - o.y, 3, 6)
                     end
-                    -- end
                 end
             end
         end
 
-        -- for pi, p in ipairs(P.paths) do
-        -- 	if pi == self.dbg_active_pi then
-        -- 		local start_node = P:get_start_node(pi)
-        -- 		local end_node = P:get_end_node(pi)
-        -- 		local v_start_node = P:get_visible_start_node(pi)
-        -- 		local v_end_node = P:get_visible_end_node(pi)
-        -- 		local dp_node = P:get_defend_point_node(pi)
-
-        -- 		log.debug("-- path color lines ------------------------------------------")
-
-        -- 		for sp_i, sp in pairs(p) do
-        -- 			for ni, o in ipairs(sp) do
-        -- 				if sp_i == 3 and ni == dp_node then
-        -- 					local p1 = p[1][ni]
-
-        -- 					G.setColor(0, 0, 0, 255)
-        -- 					G.setLineWidth(5)
-        -- 					G.circle("fill", p1.x, REF_H - p1.y, 20, 5)
-        -- 					log.debug("pi:%s ni:%s : %s (black)", pi, ni, "defend point")
-        -- 				end
-
-        -- 				if sp_i == 3 and (ni == start_node or ni == end_node) then
-        -- 					local p2, p3 = p[2][ni], p[3][ni]
-
-        -- 					G.setColor(255, 255, 255, 255)
-        -- 					G.setLineWidth(5)
-        -- 					G.line(p2.x, REF_H - p2.y, p3.x, REF_H - p3.y)
-        -- 					log.debug("pi:%s ni:%s : %s (white)", pi, ni, ni == start_node and "start" or "end")
-        -- 				end
-
-        -- 				if sp_i == 3 and (ni == v_start_node + 0 or ni == v_end_node - 0) then
-        -- 					local p2, p3 = p[2][ni], p[3][ni]
-
-        -- 					G.setColor(255, 0, 0, 255)
-        -- 					G.setLineWidth(3)
-        -- 					G.line(p2.x, REF_H - p2.y, p3.x, REF_H - p3.y)
-        -- 					log.debug("pi:%s ni:%s : %s (red)", pi, ni, ni == v_start_node and "visible start" or "visible end")
-        -- 				end
-
-        -- 				if sp_i == 3 and (ni == v_start_node + 10 or ni == v_end_node - 10) then
-        -- 					local p2, p3 = p[2][ni], p[3][ni]
-
-        -- 					G.setColor(0, 0, 255, 255)
-        -- 					G.setLineWidth(3)
-        -- 					G.line(p2.x, REF_H - p2.y, p3.x, REF_H - p3.y)
-        -- 					log.debug("pi:%s ni:%s : vis - 10 (blue)", pi, ni)
-        -- 				end
-
-        -- 				if sp_i == 3 and (ni == v_start_node + 20 or ni == v_end_node - 20) then
-        -- 					local p2, p3 = p[2][ni], p[3][ni]
-
-        -- 					G.setColor(0, 0, 0)
-        -- 					G.setColor(0, 255, 0, 255)
-        -- 					G.setLineWidth(3)
-        -- 					G.line(p2.x, REF_H - p2.y, p3.x, REF_H - p3.y)
-        -- 					log.debug("pi:%s ni:%s : vis - 20 (green)", pi, ni)
-        -- 				end
-
-        -- 				G.setLineWidth(1)
-        -- 				G.setColor(255, 0, 255, 255)
-        -- 				G.rectangle("line", o.x - point_size, REF_H - o.y - point_size, 2 * point_size, 2 * point_size)
-        -- 			end
-        -- 		end
-        -- 	end
-        -- end
-
-        -- if self.store.level and self.store.level.points_spawner and self.store.level.points_spawner.spawner_points then
-        -- 	G.setColor(0, 0, 255, 255)
-        -- 	G.setLineWidth(3)
-
-        -- 	for _, p in pairs(self.store.level.points_spawner.spawner_points) do
-        -- 		G.circle("fill", p.from.x, REF_H - p.from.y, 10, 8)
-        -- 		G.line(p.from.x, REF_H - p.from.y, p.to.x, REF_H - p.to.y)
-        -- 	end
-        -- end
-
-        -- if self.store.level then
-        -- 	G.setColor(0, 0, 255, 255)
-
-        -- 	for _, e in pairs(self.store.entities) do
-        -- 		if e.graveyard and e.graveyard.spawn_pos then
-        -- 			for _, p in pairs(e.graveyard.spawn_pos) do
-        -- 				G.circle("fill", p.x, REF_H - p.y, 5, 4)
-        -- 			end
-        -- 		end
-        -- 	end
-        -- end
-
         G.setLineWidth(1)
-        G.setColor(255, 255, 255, 255)
+        G.setColor(1, 1, 1, 1)
         G.setCanvas()
         G.pop()
     end
@@ -892,13 +785,13 @@ function game:front_draw_debug(rox, roy, gs)
             for j = 1, #GR.grid[i] do
                 local t = GR.grid[i][j]
 
-                G.setColor(GR.grid_colors[t] or { 100, 100, 100 })
+                G.setColor_old(GR.grid_colors[t] or {100, 100, 100})
                 G.rectangle("fill", (i - 1) * GR.cell_size, (j - 1) * GR.cell_size, GR.cell_size, GR.cell_size)
             end
         end
 
         if GR.waypoints_cache and GR.waypoints_cache.path_c then
-            G.setColor(GR.grid_colors.path)
+            G.setColor_old(GR.grid_colors.path)
 
             for _, n in pairs(GR.waypoints_cache.path_c) do
                 G.rectangle("fill", (n.x - 0.5) * GR.cell_size, (n.y - 0.5) * GR.cell_size, GR.cell_size * 0.5,
@@ -907,7 +800,7 @@ function game:front_draw_debug(rox, roy, gs)
         end
 
         if DEBUG_POINTS then
-            G.setColor(GR.grid_colors.path)
+            G.setColor_old(GR.grid_colors.path)
 
             for _, n in pairs(DEBUG_POINTS) do
                 G.rectangle("fill", (n.x - 0.5) * GR.cell_size, (n.y - 0.5) * GR.cell_size, GR.cell_size * 0.5,
@@ -916,14 +809,14 @@ function game:front_draw_debug(rox, roy, gs)
         end
 
         G.setCanvas()
-        G.setColor(255, 255, 255, 255)
+        G.setColor(1, 1, 1, 1)
         G.pop()
     end
 
     if self.DBG_DRAW_GRID then
-        G.setColor(255, 255, 255, 100)
+        G.setColor(1, 1, 1, 0.392)
         G.draw(self.grid_canvas)
-        G.setColor(255, 255, 255, 255)
+        G.setColor(1, 1, 1, 1)
     end
 
     if self.DBG_DRAW_RALLY_RANGES then
@@ -936,8 +829,7 @@ function game:front_draw_debug(rox, roy, gs)
                 local b = e.barrack
                 local s = E:get_template(b.soldier_type)
 
-                G.setColor(100, 100, 255, 100)
-
+                G.setColor(0.392, 0.392, 1, 0.392)
                 if s.melee then
                     local range = s.melee.range
 
@@ -946,7 +838,7 @@ function game:front_draw_debug(rox, roy, gs)
             end
         end
 
-        G.setColor(255, 255, 255, 255)
+        G.setColor(1, 1, 1, 1)
         G.pop()
     end
 
@@ -957,19 +849,19 @@ function game:front_draw_debug(rox, roy, gs)
 
         for _, e in pairs(self.store.entities) do
             if e.custom_attack and e.custom_attack.range then
-                G.setColor(100, 100, 255, 100)
+                G.setColor_old(100, 100, 255, 100)
                 G.ellipse("fill", e.pos.x, REF_H - e.pos.y, e.custom_attack.range, e.custom_attack.range * ASPECT)
             end
         end
 
         for _, e in pairs(self.store.entities) do
             if e.aura and e.aura.damage_radius then
-                G.setColor(100, 100, 255, 100)
+                G.setColor_old(100, 100, 255, 100)
                 G.ellipse("fill", e.pos.x, REF_H - e.pos.y, e.aura.damage_radius, e.aura.damage_radius * ASPECT)
             end
         end
 
-        G.setColor(255, 255, 255, 255)
+        G.setColor(1, 1, 1, 1)
         G.pop()
     end
 
@@ -994,21 +886,21 @@ function game:front_draw_debug(rox, roy, gs)
                     pos = V.v(pos.x + e.tower.range_offset.x, pos.y + e.tower.range_offset.y)
                 end
 
-                G.setColor(100, 100, 255, 100)
+                G.setColor_old(100, 100, 255, 100)
                 G.setLineWidth(3)
                 G.ellipse("line", pos.x, REF_H - pos.y, range, range * ASPECT)
 
                 if e.attacks and e.attacks.range_check_factor then
                     local f = e.attacks.range_check_factor
 
-                    G.setColor(100, 100, 255, 60)
+                    G.setColor_old(100, 100, 255, 60)
                     G.setLineWidth(3)
                     G.ellipse("line", pos.x, REF_H - pos.y, f * range, f * range * ASPECT)
                 end
             end
         end
 
-        G.setColor(255, 255, 255, 255)
+        G.setColor(1, 1, 1, 1)
         G.pop()
     end
 
@@ -1035,19 +927,19 @@ function game:front_draw_debug(rox, roy, gs)
             end
 
             if range then
-                G.setColor(100, 100, 255, 100)
+                G.setColor_old(100, 100, 255, 100)
                 G.setLineWidth(3)
                 G.ellipse("line", e.pos.x, REF_H - e.pos.y, range, range * ASPECT)
             end
 
             if min_range then
-                G.setColor(50, 50, 255, 100)
+                G.setColor_old(50, 50, 255, 100)
                 G.setLineWidth(2)
                 G.ellipse("line", e.pos.x, REF_H - e.pos.y, min_range, min_range * ASPECT)
             end
         end
 
-        G.setColor(255, 255, 255, 255)
+        G.setColor(1, 1, 1, 1)
         G.pop()
     end
 
@@ -1058,13 +950,13 @@ function game:front_draw_debug(rox, roy, gs)
 
         for _, e in pairs(self.store.entities) do
             if e.aura and e.aura.radius then
-                G.setColor(100, 100, 255, 100)
+                G.setColor_old(100, 100, 255, 100)
                 G.setLineWidth(3)
                 G.ellipse("line", e.pos.x, REF_H - e.pos.y, e.aura.radius, e.aura.radius * ASPECT)
             end
         end
 
-        G.setColor(255, 255, 255, 255)
+        G.setColor(1, 1, 1, 1)
         G.pop()
     end
 end
@@ -1078,18 +970,18 @@ function game:after_draw_debug(rox, roy, gs)
         for _, e in pairs(self.store.entities) do
             if e.pos and e.bullet then
                 G.setLineWidth(1)
-                G.setColor(200, 200, 0, 200)
+                G.setColor_old(200, 200, 0, 200)
                 G.line(e.pos.x - 1, REF_H - e.pos.y - 1, e.pos.x + 1, REF_H - e.pos.y + 1)
                 G.line(e.pos.x - 1, REF_H - e.pos.y + 1, e.pos.x + 1, REF_H - e.pos.y - 1)
             elseif e.pos and not e.bullet and not e.decal then
-                G.setColor(0, 0, 200, 200)
+                G.setColor_old(0, 0, 200, 200)
                 G.rectangle("fill", e.pos.x - 1, REF_H - e.pos.y - 4, 2, 8)
                 G.rectangle("fill", e.pos.x - 4, REF_H - e.pos.y - 1, 8, 2)
             end
         end
 
         G.pop()
-        G.setColor(255, 255, 255, 255)
+        G.setColor(1, 1, 1, 1)
     end
 
     if self.DBG_DRAW_CLICKABLE then
@@ -1099,7 +991,7 @@ function game:after_draw_debug(rox, roy, gs)
 
         for _, e in pairs(self.store.entities) do
             if e.ui then
-                G.setColor(255, 255, 0, 70)
+                G.setColor_old(255, 255, 0, 70)
 
                 local rect = e.ui.click_rect
 
@@ -1108,7 +1000,7 @@ function game:after_draw_debug(rox, roy, gs)
         end
 
         G.pop()
-        G.setColor(255, 255, 255, 255)
+        G.setColor(1, 1, 1, 1)
     end
 
     if self.DBG_DRAW_NAV_MESH then
@@ -1123,14 +1015,14 @@ function game:after_draw_debug(rox, roy, gs)
             if e.ui and e.ui.nav_mesh_id then
                 towers[tonumber(e.ui.nav_mesh_id)] = e
 
-                G.setColor(0, 0, 0, 255)
+                G.setColor_old(0, 0, 0, 255)
                 G.print(e.ui.nav_mesh_id, e.pos.x + 5, REF_H - e.pos.y - 8)
-                G.setColor(202, 202, 0, 255)
+                G.setColor_old(202, 202, 0, 255)
                 G.print(e.ui.nav_mesh_id, e.pos.x + 5 - 2, REF_H - e.pos.y - 8 - 2)
             end
         end
 
-        G.setColor(0, 100, 255, 255)
+        G.setColor_old(0, 100, 255, 255)
         G.setLineWidth(2)
         G.translate(0, -10)
 
@@ -1172,7 +1064,7 @@ function game:after_draw_debug(rox, roy, gs)
         local s2 = 10
         local s3 = 15
 
-        G.setColor(0, 0, 200, 255)
+        G.setColor_old(0, 0, 200, 255)
 
         for h_id, row in pairs(self.store.level.nav_mesh) do
             local e = towers[h_id]
@@ -1214,7 +1106,7 @@ function game:after_draw_debug(rox, roy, gs)
         end
 
         G.pop()
-        G.setColor(255, 255, 255, 255)
+        G.setColor(1, 1, 1, 1)
     end
 
     if self.DBG_DRAW_BULLET_TRAILS then
@@ -1231,10 +1123,10 @@ function game:after_draw_debug(rox, roy, gs)
         for _, e in pairs(self.store.entities) do
             if e.bullet and e.bullet.from and e.bullet.to and
                 (not self.DBG_DRAW_BULLET_TRAILS_SOURCE or e.bullet.source_id == self.DBG_DRAW_BULLET_TRAILS_SOURCE) then
-                G.setColor(0, 0, 255, 255)
+                G.setColor_old(0, 0, 255, 255)
                 G.circle("fill", e.bullet.from.x, REF_H - e.bullet.from.y, 4, 3)
                 G.circle("fill", e.bullet.to.x, REF_H - e.bullet.to.y, 4, 5)
-                G.setColor(0, 255, 100, 255)
+                G.setColor_old(0, 255, 100, 255)
                 G.circle("fill", e.pos.x, REF_H - e.pos.y, 1, 6)
             end
         end
@@ -1242,9 +1134,9 @@ function game:after_draw_debug(rox, roy, gs)
         G.setCanvas()
         G.scale(gs, gs)
         G.pop()
-        G.setColor(255, 255, 255, 200)
+        G.setColor(1, 1, 1, 0.784)
         G.draw(self.dbg_bullet_canvas)
-        G.setColor(255, 255, 255, 255)
+        G.setColor(1, 1, 1, 1)
     elseif self.dbg_bullet_canvas then
         self.dbg_bullet_canvas = nil
     end
@@ -1254,26 +1146,67 @@ function game:after_draw_debug(rox, roy, gs)
     end
 end
 
--- 绘制黑夜模式前景色
+-- -- 绘制黑夜模式前景色
+-- function game:draw_dark_foreground(rox, roy, gs)
+--     G.push()
+--     G.translate(rox, roy)
+--     G.scale(gs, gs)
+
+--     if not self.dark_canvas then
+--         self.dark_canvas = G.newCanvas(self.screen_w, self.screen_h, {
+--             stencil = true
+--         })
+
+--         G.setCanvas(self.dark_canvas)
+--     else
+--         G.setCanvas(self.dark_canvas)
+--         G.clear(0, 0, 0, 0)
+--     end
+
+--     love.graphics.stencil(function()
+--         -- 绘制圆形遮罩
+--         if self.store and self.store.lights then
+--             for _, l in pairs(self.store.lights) do
+--                 local _, uy = game_gui:g2u(l.pos)
+
+--                 love.graphics.circle("fill", l.pos.x, uy, l.radius)
+--             end
+--         end
+
+--         local x, y = game_gui.window:get_mouse_position()
+--         local ux, uy = game_gui.window:screen_to_view(x, y)
+--         local gx = game_gui:u2g(vec_2(ux, uy))
+
+--         love.graphics.circle("fill", gx, uy, 50)
+--     end, "replace", 1)
+
+--     -- 启用模板测试，只绘制模板值为0的区域
+--     love.graphics.setStencilTest("equal", 0)
+
+--     -- 绘制黑暗覆盖层
+--     -- 51 / 255 = 0.2
+--     -- 30 / 255 = 0.1176
+--     G.setColor(0, 0, 0.2, 0.1176)
+--     G.rectangle("fill", -rox - 20, -roy - 20, 2000, 1100)
+
+--     -- 恢复默认
+--     love.graphics.setStencilTest()
+--     G.setColor(1, 1, 1, 1)
+--     G.setCanvas()
+--     G.pop()
+-- end
+
 function game:draw_dark_foreground(rox, roy, gs)
     G.push()
     G.translate(rox, roy)
     G.scale(gs, gs)
 
-    if not self.dark_canvas then
-        self.dark_canvas = G.newCanvas()
-        G.setCanvas(self.dark_canvas)
-    else
-        G.setCanvas(self.dark_canvas)
-        G.clear(0, 0, 0, 0)
-    end
-
+    -- 直接在当前渲染目标（通常是屏幕）上使用 stencil，避免在 Canvas 上做 stencil 的兼容问题
     love.graphics.stencil(function()
-        -- 绘制圆形遮罩
+        -- 绘制圆形遮罩（将这些区域从遮罩中抠出）
         if self.store and self.store.lights then
             for _, l in pairs(self.store.lights) do
                 local _, uy = game_gui:g2u(l.pos)
-
                 love.graphics.circle("fill", l.pos.x, uy, l.radius)
             end
         end
@@ -1285,17 +1218,16 @@ function game:draw_dark_foreground(rox, roy, gs)
         love.graphics.circle("fill", gx, uy, 50)
     end, "replace", 1)
 
-    -- 启用模板测试，只绘制模板值为0的区域
+    -- 仅在 stencil 值为 0 的区域绘制暗色覆盖层（被抠出的圆形保持亮）
     love.graphics.setStencilTest("equal", 0)
 
-    -- 绘制黑暗覆盖层
-    G.setColor(0, 0, 51, 30)
+    G.setColor(0, 0, 0.2, 0.1176)
+    -- 覆盖一个足够大的矩形，注意使用相对于 push() 的坐标
     G.rectangle("fill", -rox - 20, -roy - 20, 2000, 1100)
 
     -- 恢复默认
     love.graphics.setStencilTest()
-    G.setColor(255, 255, 255, 255)
-    G.setCanvas()
+    G.setColor(1, 1, 1, 1)
     G.pop()
 end
 
@@ -1303,8 +1235,8 @@ end
 function game:draw_path(rox, roy, gs)
     if self.shown_path then
         local dash_length = 25 -- 虚线段长度
-        local gap_length = 15  -- 虚线间隔
-        local speed = 60       -- 虚线移动速度（像素/秒）
+        local gap_length = 15 -- 虚线间隔
+        local speed = 60 -- 虚线移动速度（像素/秒）
 
         -- 初始化路径数据
         local path_data = {}
@@ -1341,7 +1273,7 @@ function game:draw_path(rox, roy, gs)
             G.clear(0, 0, 0, 0)
         end
         G.setLineWidth(4)
-        G.setColor(255, 0, 0, 255)
+        G.setColor(1, 0, 0, 1)
 
         for spi = 1, #self.path_lines[self.shown_path] do
             local i = 1
@@ -1402,7 +1334,7 @@ function game:draw_path(rox, roy, gs)
         end
 
         G.setLineWidth(1)
-        G.setColor(255, 255, 255, 255)
+        G.setColor(1, 1, 1, 1)
         G.setCanvas()
         G.pop()
     elseif not self.path_canvas then
@@ -1430,11 +1362,12 @@ function game:draw_speed_state(rox, roy, gs)
         G.clear(0, 0, 0, 0)
     end
 
-    local r = 255 * (math.sin(d.ts) + 1)
-    local g = 255 * (math.sin(d.ts + 2) + 1)
-    local b = 255 * (math.sin(d.ts + 4) + 1)
+    local r = (math.sin(d.ts) + 1)
+    local g = (math.sin(d.ts + 2) + 1)
+    local b = (math.sin(d.ts + 4) + 1)
 
-    G.setColor(r, g, b, 180)
+    -- 180 / 255 = 0.7058823529411765
+    G.setColor(r, g, b, 0.7058823529411765)
     G.setFont(self.cn_font)
 
     -- local pos = vec_2(500, 500)
@@ -1484,7 +1417,7 @@ function game:draw_speed_state(rox, roy, gs)
     G.printf(string.format("按 %s 还原", game_gui.key_shortcuts.normal[1]), pos.x, pos.y - 35, G.getWidth() - pos.x)
 
     -- 恢复默认
-    G.setColor(255, 255, 255, 255)
+    G.setColor(1, 1, 1, 1)
     G.setCanvas()
     G.pop()
 end
@@ -1566,14 +1499,14 @@ function game:draw_game()
     G.pop()
 
     if self.DBG_DRAW_PATHS or self.shown_path then
-        G.setColor(255, 255, 255, 100)
+        G.setColor(1, 1, 1, 0.392)
         G.draw(self.path_canvas)
-        G.setColor(255, 255, 255, 255)
+        G.setColor(1, 1, 1, 1)
     end
 
     if d.night_mode then
         self:draw_dark_foreground(rox, roy, gs)
-        G.draw(self.dark_canvas)
+        -- G.draw(self.dark_canvas)
     end
 
     G.push()

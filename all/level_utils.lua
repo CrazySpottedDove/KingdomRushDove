@@ -16,6 +16,10 @@ local serpent = require("serpent")
 local bit = require("bit")
 local bor = bit.bor
 local LU = {}
+local function is_file(path)
+    local info = love.filesystem.getInfo(path)
+    return info and info.type == "file"
+end
 
 function LU.queue_insert(store, e)
 	simulation:queue_insert_entity(e)
@@ -60,7 +64,7 @@ function LU.load_level(store, name)
 	local level
 	local fn = KR_PATH_GAME .. "/data/levels/" .. name .. ".lua"
 
-	if not love.filesystem.isFile(fn) then
+	if not is_file(fn) then
 		log.debug("Level file does not exist for %s", fn)
 
 		level = {}
@@ -385,7 +389,8 @@ function LU.insert_hero(store, name, pos, force_full_level)
                 hero.hero.level = 10
             end
         end
-
+        hero.unit.damage_factor = store.config.hero_damage_multiplier * hero.unit.damage_factor
+        hero.health.damage_factor = store.config.hero_health_damage_multiplier * hero.health.damage_factor
         LU.queue_insert(store, hero)
         signal.emit("hero-added-no-panel", hero)
         return
@@ -431,6 +436,8 @@ function LU.insert_hero(store, name, pos, force_full_level)
             end
         end
         hero.unit.damage_factor = store.config.hero_damage_multiplier * hero.unit.damage_factor
+        hero.health.damage_factor = store.config.hero_health_damage_multiplier * hero.health.damage_factor
+        
         LU.queue_insert(store, hero)
         signal.emit("hero-added", hero)
     end

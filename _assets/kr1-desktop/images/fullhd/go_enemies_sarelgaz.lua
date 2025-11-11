@@ -2,7 +2,7 @@
 
 return {
 	spider_sonofsarelgaz_0001 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0002 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0003 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0004 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0005 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0006 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0007 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0008 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0009 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0010 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0011 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0012 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0013 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0014 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -340,7 +340,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0015 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -366,7 +366,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0016 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -392,7 +392,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0017 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -418,7 +418,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0018 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -442,7 +442,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0019 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -466,7 +466,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0020 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -490,7 +490,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0021 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -514,7 +514,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0022 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -538,7 +538,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0027 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -562,7 +562,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0028 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -586,7 +586,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0029 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -610,7 +610,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0030 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -634,7 +634,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0031 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -658,7 +658,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0032 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -682,7 +682,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0033 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -706,7 +706,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0034 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -730,7 +730,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0035 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -754,7 +754,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0036 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -778,7 +778,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0037 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -802,7 +802,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0038 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -826,7 +826,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0039 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -850,7 +850,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0040 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -884,7 +884,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0043 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -910,7 +910,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0045 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -936,7 +936,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0047 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -963,7 +963,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0050 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -987,7 +987,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0051 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1011,7 +1011,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0052 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1037,7 +1037,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0054 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1063,7 +1063,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0056 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1089,7 +1089,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0065 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1113,7 +1113,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0066 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1137,7 +1137,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0067 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1163,7 +1163,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0069 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1189,7 +1189,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0071 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1213,7 +1213,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0072 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1237,7 +1237,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0073 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1261,7 +1261,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0074 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1285,7 +1285,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0075 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1318,7 +1318,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0084 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1342,7 +1342,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0085 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1366,7 +1366,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0086 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1390,7 +1390,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0087 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1414,7 +1414,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0088 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1438,7 +1438,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0089 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1462,7 +1462,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0090 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1486,7 +1486,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0091 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1510,7 +1510,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0092 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1534,7 +1534,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0093 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1558,7 +1558,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0094 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1582,7 +1582,7 @@ return {
 		alias = {}
 	},
 	spider_sonofsarelgaz_0095 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96
@@ -1608,7 +1608,7 @@ return {
 		}
 	},
 	spider_sonofsarelgaz_0097 = {
-		a_name = "go_enemies_sarelgaz-1.dds",
+		a_name = "go_enemies_sarelgaz-1.png",
 		size = {
 			134,
 			96

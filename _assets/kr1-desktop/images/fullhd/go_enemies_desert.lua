@@ -2,7 +2,7 @@
 
 return {
 	desertArcher_0001 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	desertArcher_0003 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	desertArcher_0005 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	desertArcher_0007 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -104,7 +104,7 @@ return {
 		alias = {}
 	},
 	desertArcher_0008 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -130,7 +130,7 @@ return {
 		}
 	},
 	desertArcher_0010 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -156,7 +156,7 @@ return {
 		}
 	},
 	desertArcher_0012 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -182,7 +182,7 @@ return {
 		}
 	},
 	desertArcher_0014 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -208,7 +208,7 @@ return {
 		}
 	},
 	desertArcher_0016 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -234,7 +234,7 @@ return {
 		}
 	},
 	desertArcher_0018 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -258,7 +258,7 @@ return {
 		alias = {}
 	},
 	desertArcher_0019 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -284,7 +284,7 @@ return {
 		}
 	},
 	desertArcher_0021 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -310,7 +310,7 @@ return {
 		}
 	},
 	desertArcher_0023 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -336,7 +336,7 @@ return {
 		}
 	},
 	desertArcher_0025 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -362,7 +362,7 @@ return {
 		}
 	},
 	desertArcher_0027 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -388,7 +388,7 @@ return {
 		}
 	},
 	desertArcher_0029 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -412,7 +412,7 @@ return {
 		alias = {}
 	},
 	desertArcher_0030 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -438,7 +438,7 @@ return {
 		}
 	},
 	desertArcher_0032 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -464,7 +464,7 @@ return {
 		}
 	},
 	desertArcher_0034 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -490,7 +490,7 @@ return {
 		}
 	},
 	desertArcher_0036 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -516,7 +516,7 @@ return {
 		}
 	},
 	desertArcher_0038 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -542,7 +542,7 @@ return {
 		}
 	},
 	desertArcher_0040 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -566,7 +566,7 @@ return {
 		alias = {}
 	},
 	desertArcher_0041 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -592,7 +592,7 @@ return {
 		}
 	},
 	desertArcher_0043 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -618,7 +618,7 @@ return {
 		}
 	},
 	desertArcher_0045 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -644,7 +644,7 @@ return {
 		}
 	},
 	desertArcher_0047 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -670,7 +670,7 @@ return {
 		}
 	},
 	desertArcher_0049 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -696,7 +696,7 @@ return {
 		}
 	},
 	desertArcher_0051 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -720,7 +720,7 @@ return {
 		alias = {}
 	},
 	desertArcher_0052 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -746,7 +746,7 @@ return {
 		}
 	},
 	desertArcher_0054 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -772,7 +772,7 @@ return {
 		}
 	},
 	desertArcher_0056 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -798,7 +798,7 @@ return {
 		}
 	},
 	desertArcher_0058 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -824,7 +824,7 @@ return {
 		}
 	},
 	desertArcher_0060 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -850,7 +850,7 @@ return {
 		}
 	},
 	desertArcher_0062 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -874,7 +874,7 @@ return {
 		alias = {}
 	},
 	desertArcher_0063 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -900,7 +900,7 @@ return {
 		}
 	},
 	desertArcher_0065 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -926,7 +926,7 @@ return {
 		}
 	},
 	desertArcher_0067 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -952,7 +952,7 @@ return {
 		}
 	},
 	desertArcher_0068 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -979,7 +979,7 @@ return {
 		}
 	},
 	desertArcher_0071 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -1007,7 +1007,7 @@ return {
 		}
 	},
 	desertArcher_0075 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -1033,7 +1033,7 @@ return {
 		}
 	},
 	desertArcher_0077 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -1057,7 +1057,7 @@ return {
 		alias = {}
 	},
 	desertArcher_0078 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -1083,7 +1083,7 @@ return {
 		}
 	},
 	desertArcher_0080 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -1107,7 +1107,7 @@ return {
 		alias = {}
 	},
 	desertArcher_0081 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -1131,7 +1131,7 @@ return {
 		alias = {}
 	},
 	desertArcher_0082 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -1157,7 +1157,7 @@ return {
 		}
 	},
 	desertArcher_0084 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -1183,7 +1183,7 @@ return {
 		}
 	},
 	desertArcher_0086 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -1209,7 +1209,7 @@ return {
 		}
 	},
 	desertArcher_0112 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -1233,7 +1233,7 @@ return {
 		alias = {}
 	},
 	desertArcher_0113 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -1257,7 +1257,7 @@ return {
 		alias = {}
 	},
 	desertArcher_0114 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -1281,7 +1281,7 @@ return {
 		alias = {}
 	},
 	desertArcher_0115 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -1305,7 +1305,7 @@ return {
 		alias = {}
 	},
 	desertArcher_0116 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			76,
 			51
@@ -1329,7 +1329,7 @@ return {
 		alias = {}
 	},
 	desertArcher_0117 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			76,
 			51
@@ -1355,7 +1355,7 @@ return {
 		}
 	},
 	desertArcher_0119 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			76,
 			51
@@ -1379,7 +1379,7 @@ return {
 		alias = {}
 	},
 	desertExecutioner_0001 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1405,7 +1405,7 @@ return {
 		}
 	},
 	desertExecutioner_0003 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1431,7 +1431,7 @@ return {
 		}
 	},
 	desertExecutioner_0005 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1457,7 +1457,7 @@ return {
 		}
 	},
 	desertExecutioner_0007 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1483,7 +1483,7 @@ return {
 		}
 	},
 	desertExecutioner_0009 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1509,7 +1509,7 @@ return {
 		}
 	},
 	desertExecutioner_0011 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1535,7 +1535,7 @@ return {
 		}
 	},
 	desertExecutioner_0013 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1561,7 +1561,7 @@ return {
 		}
 	},
 	desertExecutioner_0015 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1587,7 +1587,7 @@ return {
 		}
 	},
 	desertExecutioner_0017 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1613,7 +1613,7 @@ return {
 		}
 	},
 	desertExecutioner_0019 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1639,7 +1639,7 @@ return {
 		}
 	},
 	desertExecutioner_0021 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1665,7 +1665,7 @@ return {
 		}
 	},
 	desertExecutioner_0023 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1691,7 +1691,7 @@ return {
 		}
 	},
 	desertExecutioner_0025 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1717,7 +1717,7 @@ return {
 		}
 	},
 	desertExecutioner_0027 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1743,7 +1743,7 @@ return {
 		}
 	},
 	desertExecutioner_0029 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1769,7 +1769,7 @@ return {
 		}
 	},
 	desertExecutioner_0031 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1795,7 +1795,7 @@ return {
 		}
 	},
 	desertExecutioner_0033 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1821,7 +1821,7 @@ return {
 		}
 	},
 	desertExecutioner_0035 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1847,7 +1847,7 @@ return {
 		}
 	},
 	desertExecutioner_0037 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1873,7 +1873,7 @@ return {
 		}
 	},
 	desertExecutioner_0039 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1899,7 +1899,7 @@ return {
 		}
 	},
 	desertExecutioner_0041 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1925,7 +1925,7 @@ return {
 		}
 	},
 	desertExecutioner_0043 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1951,7 +1951,7 @@ return {
 		}
 	},
 	desertExecutioner_0045 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -1977,7 +1977,7 @@ return {
 		}
 	},
 	desertExecutioner_0047 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2003,7 +2003,7 @@ return {
 		}
 	},
 	desertExecutioner_0049 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2029,7 +2029,7 @@ return {
 		}
 	},
 	desertExecutioner_0051 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2055,7 +2055,7 @@ return {
 		}
 	},
 	desertExecutioner_0053 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2081,7 +2081,7 @@ return {
 		}
 	},
 	desertExecutioner_0055 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2107,7 +2107,7 @@ return {
 		}
 	},
 	desertExecutioner_0057 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2133,7 +2133,7 @@ return {
 		}
 	},
 	desertExecutioner_0059 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2159,7 +2159,7 @@ return {
 		}
 	},
 	desertExecutioner_0061 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2185,7 +2185,7 @@ return {
 		}
 	},
 	desertExecutioner_0063 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2211,7 +2211,7 @@ return {
 		}
 	},
 	desertExecutioner_0065 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2237,7 +2237,7 @@ return {
 		}
 	},
 	desertExecutioner_0067 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2263,7 +2263,7 @@ return {
 		}
 	},
 	desertExecutioner_0069 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2289,7 +2289,7 @@ return {
 		}
 	},
 	desertExecutioner_0071 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2315,7 +2315,7 @@ return {
 		}
 	},
 	desertExecutioner_0073 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2342,7 +2342,7 @@ return {
 		}
 	},
 	desertExecutioner_0076 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2368,7 +2368,7 @@ return {
 		}
 	},
 	desertExecutioner_0078 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2395,7 +2395,7 @@ return {
 		}
 	},
 	desertExecutioner_0081 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2422,7 +2422,7 @@ return {
 		}
 	},
 	desertExecutioner_0084 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2449,7 +2449,7 @@ return {
 		}
 	},
 	desertExecutioner_0087 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2476,7 +2476,7 @@ return {
 		}
 	},
 	desertExecutioner_0090 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2500,7 +2500,7 @@ return {
 		alias = {}
 	},
 	desertExecutioner_0091 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2526,7 +2526,7 @@ return {
 		}
 	},
 	desertExecutioner_0093 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2555,7 +2555,7 @@ return {
 		}
 	},
 	desertExecutioner_0098 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2581,7 +2581,7 @@ return {
 		}
 	},
 	desertExecutioner_0100 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2607,7 +2607,7 @@ return {
 		}
 	},
 	desertExecutioner_0102 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2633,7 +2633,7 @@ return {
 		}
 	},
 	desertExecutioner_0104 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2659,7 +2659,7 @@ return {
 		}
 	},
 	desertExecutioner_0106 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2685,7 +2685,7 @@ return {
 		}
 	},
 	desertExecutioner_0108 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2712,7 +2712,7 @@ return {
 		}
 	},
 	desertExecutioner_0111 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2736,7 +2736,7 @@ return {
 		alias = {}
 	},
 	desertExecutioner_0112 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2762,7 +2762,7 @@ return {
 		}
 	},
 	desertExecutioner_0114 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2788,7 +2788,7 @@ return {
 		}
 	},
 	desertExecutioner_0116 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2814,7 +2814,7 @@ return {
 		}
 	},
 	desertExecutioner_0118 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			172,
 			127
@@ -2841,7 +2841,7 @@ return {
 		}
 	},
 	desertImmortal_0001 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -2867,7 +2867,7 @@ return {
 		}
 	},
 	desertImmortal_0003 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -2893,7 +2893,7 @@ return {
 		}
 	},
 	desertImmortal_0005 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -2919,7 +2919,7 @@ return {
 		}
 	},
 	desertImmortal_0007 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -2943,7 +2943,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0008 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -2969,7 +2969,7 @@ return {
 		}
 	},
 	desertImmortal_0010 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -2995,7 +2995,7 @@ return {
 		}
 	},
 	desertImmortal_0012 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3021,7 +3021,7 @@ return {
 		}
 	},
 	desertImmortal_0014 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3047,7 +3047,7 @@ return {
 		}
 	},
 	desertImmortal_0016 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3073,7 +3073,7 @@ return {
 		}
 	},
 	desertImmortal_0018 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3097,7 +3097,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0019 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3123,7 +3123,7 @@ return {
 		}
 	},
 	desertImmortal_0021 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3149,7 +3149,7 @@ return {
 		}
 	},
 	desertImmortal_0023 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3175,7 +3175,7 @@ return {
 		}
 	},
 	desertImmortal_0025 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3201,7 +3201,7 @@ return {
 		}
 	},
 	desertImmortal_0027 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			90,
 			70
@@ -3227,7 +3227,7 @@ return {
 		}
 	},
 	desertImmortal_0029 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3251,7 +3251,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0030 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3277,7 +3277,7 @@ return {
 		}
 	},
 	desertImmortal_0032 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3303,7 +3303,7 @@ return {
 		}
 	},
 	desertImmortal_0034 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3329,7 +3329,7 @@ return {
 		}
 	},
 	desertImmortal_0036 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3355,7 +3355,7 @@ return {
 		}
 	},
 	desertImmortal_0038 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3381,7 +3381,7 @@ return {
 		}
 	},
 	desertImmortal_0040 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3405,7 +3405,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0041 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3431,7 +3431,7 @@ return {
 		}
 	},
 	desertImmortal_0043 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3457,7 +3457,7 @@ return {
 		}
 	},
 	desertImmortal_0045 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3483,7 +3483,7 @@ return {
 		}
 	},
 	desertImmortal_0047 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3509,7 +3509,7 @@ return {
 		}
 	},
 	desertImmortal_0049 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3535,7 +3535,7 @@ return {
 		}
 	},
 	desertImmortal_0051 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3559,7 +3559,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0052 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3585,7 +3585,7 @@ return {
 		}
 	},
 	desertImmortal_0054 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			90,
 			70
@@ -3611,7 +3611,7 @@ return {
 		}
 	},
 	desertImmortal_0056 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3637,7 +3637,7 @@ return {
 		}
 	},
 	desertImmortal_0058 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3663,7 +3663,7 @@ return {
 		}
 	},
 	desertImmortal_0060 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3689,7 +3689,7 @@ return {
 		}
 	},
 	desertImmortal_0062 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3713,7 +3713,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0063 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3739,7 +3739,7 @@ return {
 		}
 	},
 	desertImmortal_0065 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3765,7 +3765,7 @@ return {
 		}
 	},
 	desertImmortal_0067 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3789,7 +3789,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0068 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3815,7 +3815,7 @@ return {
 		}
 	},
 	desertImmortal_0070 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3841,7 +3841,7 @@ return {
 		}
 	},
 	desertImmortal_0072 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3867,7 +3867,7 @@ return {
 		}
 	},
 	desertImmortal_0074 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3893,7 +3893,7 @@ return {
 		}
 	},
 	desertImmortal_0076 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3919,7 +3919,7 @@ return {
 		}
 	},
 	desertImmortal_0078 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3945,7 +3945,7 @@ return {
 		}
 	},
 	desertImmortal_0080 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3971,7 +3971,7 @@ return {
 		}
 	},
 	desertImmortal_0082 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -3997,7 +3997,7 @@ return {
 		}
 	},
 	desertImmortal_0084 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4023,7 +4023,7 @@ return {
 		}
 	},
 	desertImmortal_0086 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4049,7 +4049,7 @@ return {
 		}
 	},
 	desertImmortal_0088 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4073,7 +4073,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0089 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4097,7 +4097,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0090 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4123,7 +4123,7 @@ return {
 		}
 	},
 	desertImmortal_0092 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4149,7 +4149,7 @@ return {
 		}
 	},
 	desertImmortal_0094 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4173,7 +4173,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0095 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4197,7 +4197,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0096 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4221,7 +4221,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0097 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4245,7 +4245,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0098 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4278,7 +4278,7 @@ return {
 		}
 	},
 	desertImmortal_0107 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4304,7 +4304,7 @@ return {
 		}
 	},
 	desertImmortal_0109 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4328,7 +4328,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0110 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4352,7 +4352,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0111 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4378,7 +4378,7 @@ return {
 		}
 	},
 	desertImmortal_0113 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4402,7 +4402,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0114 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4426,7 +4426,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0115 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4452,7 +4452,7 @@ return {
 		}
 	},
 	desertImmortal_0117 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4478,7 +4478,7 @@ return {
 		}
 	},
 	desertImmortal_0119 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4504,7 +4504,7 @@ return {
 		}
 	},
 	desertImmortal_0121 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			90,
 			70
@@ -4530,7 +4530,7 @@ return {
 		}
 	},
 	desertImmortal_0123 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			90,
 			70
@@ -4554,7 +4554,7 @@ return {
 		alias = {}
 	},
 	desertImmortal_0124 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			90,
 			70
@@ -4578,7 +4578,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0001 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -4604,7 +4604,7 @@ return {
 		}
 	},
 	desertMunra_0003 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -4630,7 +4630,7 @@ return {
 		}
 	},
 	desertMunra_0005 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -4656,7 +4656,7 @@ return {
 		}
 	},
 	desertMunra_0007 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -4682,7 +4682,7 @@ return {
 		}
 	},
 	desertMunra_0009 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -4708,7 +4708,7 @@ return {
 		}
 	},
 	desertMunra_0011 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -4734,7 +4734,7 @@ return {
 		}
 	},
 	desertMunra_0013 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -4760,7 +4760,7 @@ return {
 		}
 	},
 	desertMunra_0015 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -4786,7 +4786,7 @@ return {
 		}
 	},
 	desertMunra_0017 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -4812,7 +4812,7 @@ return {
 		}
 	},
 	desertMunra_0019 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -4838,7 +4838,7 @@ return {
 		}
 	},
 	desertMunra_0021 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -4864,7 +4864,7 @@ return {
 		}
 	},
 	desertMunra_0023 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -4890,7 +4890,7 @@ return {
 		}
 	},
 	desertMunra_0025 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -4916,7 +4916,7 @@ return {
 		}
 	},
 	desertMunra_0027 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -4942,7 +4942,7 @@ return {
 		}
 	},
 	desertMunra_0029 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -4968,7 +4968,7 @@ return {
 		}
 	},
 	desertMunra_0031 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -4994,7 +4994,7 @@ return {
 		}
 	},
 	desertMunra_0033 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5020,7 +5020,7 @@ return {
 		}
 	},
 	desertMunra_0035 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5046,7 +5046,7 @@ return {
 		}
 	},
 	desertMunra_0037 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5072,7 +5072,7 @@ return {
 		}
 	},
 	desertMunra_0039 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5098,7 +5098,7 @@ return {
 		}
 	},
 	desertMunra_0041 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5124,7 +5124,7 @@ return {
 		}
 	},
 	desertMunra_0043 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5150,7 +5150,7 @@ return {
 		}
 	},
 	desertMunra_0045 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5176,7 +5176,7 @@ return {
 		}
 	},
 	desertMunra_0047 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5202,7 +5202,7 @@ return {
 		}
 	},
 	desertMunra_0049 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5228,7 +5228,7 @@ return {
 		}
 	},
 	desertMunra_0051 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5254,7 +5254,7 @@ return {
 		}
 	},
 	desertMunra_0053 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5280,7 +5280,7 @@ return {
 		}
 	},
 	desertMunra_0055 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5306,7 +5306,7 @@ return {
 		}
 	},
 	desertMunra_0057 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5332,7 +5332,7 @@ return {
 		}
 	},
 	desertMunra_0059 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5358,7 +5358,7 @@ return {
 		}
 	},
 	desertMunra_0061 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5384,7 +5384,7 @@ return {
 		}
 	},
 	desertMunra_0063 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5410,7 +5410,7 @@ return {
 		}
 	},
 	desertMunra_0065 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5436,7 +5436,7 @@ return {
 		}
 	},
 	desertMunra_0067 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5462,7 +5462,7 @@ return {
 		}
 	},
 	desertMunra_0069 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5488,7 +5488,7 @@ return {
 		}
 	},
 	desertMunra_0071 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5514,7 +5514,7 @@ return {
 		}
 	},
 	desertMunra_0073 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5538,7 +5538,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0074 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5570,7 +5570,7 @@ return {
 		}
 	},
 	desertMunra_0076 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5596,7 +5596,7 @@ return {
 		}
 	},
 	desertMunra_0078 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5622,7 +5622,7 @@ return {
 		}
 	},
 	desertMunra_0080 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5649,7 +5649,7 @@ return {
 		}
 	},
 	desertMunra_0083 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5675,7 +5675,7 @@ return {
 		}
 	},
 	desertMunra_0085 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5701,7 +5701,7 @@ return {
 		}
 	},
 	desertMunra_0087 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5727,7 +5727,7 @@ return {
 		}
 	},
 	desertMunra_0089 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5753,7 +5753,7 @@ return {
 		}
 	},
 	desertMunra_0091 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5779,7 +5779,7 @@ return {
 		}
 	},
 	desertMunra_0096 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5805,7 +5805,7 @@ return {
 		}
 	},
 	desertMunra_0098 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -5832,7 +5832,7 @@ return {
 		}
 	},
 	desertMunra_0101 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5858,7 +5858,7 @@ return {
 		}
 	},
 	desertMunra_0103 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5884,7 +5884,7 @@ return {
 		}
 	},
 	desertMunra_0105 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5912,7 +5912,7 @@ return {
 		}
 	},
 	desertMunra_0107 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5940,7 +5940,7 @@ return {
 		}
 	},
 	desertMunra_0113 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5966,7 +5966,7 @@ return {
 		}
 	},
 	desertMunra_0115 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -5992,7 +5992,7 @@ return {
 		}
 	},
 	desertMunra_0120 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6018,7 +6018,7 @@ return {
 		}
 	},
 	desertMunra_0122 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6045,7 +6045,7 @@ return {
 		}
 	},
 	desertMunra_0125 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6071,7 +6071,7 @@ return {
 		}
 	},
 	desertMunra_0127 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6097,7 +6097,7 @@ return {
 		}
 	},
 	desertMunra_0129 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6123,7 +6123,7 @@ return {
 		}
 	},
 	desertMunra_0131 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6149,7 +6149,7 @@ return {
 		}
 	},
 	desertMunra_0133 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6175,7 +6175,7 @@ return {
 		}
 	},
 	desertMunra_0135 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6201,7 +6201,7 @@ return {
 		}
 	},
 	desertMunra_0137 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6227,7 +6227,7 @@ return {
 		}
 	},
 	desertMunra_0139 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6253,7 +6253,7 @@ return {
 		}
 	},
 	desertMunra_0141 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6279,7 +6279,7 @@ return {
 		}
 	},
 	desertMunra_0143 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6305,7 +6305,7 @@ return {
 		}
 	},
 	desertMunra_0145 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6331,7 +6331,7 @@ return {
 		}
 	},
 	desertMunra_0147 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6357,7 +6357,7 @@ return {
 		}
 	},
 	desertMunra_0149 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6383,7 +6383,7 @@ return {
 		}
 	},
 	desertMunra_0151 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6409,7 +6409,7 @@ return {
 		}
 	},
 	desertMunra_0153 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6435,7 +6435,7 @@ return {
 		}
 	},
 	desertMunra_0155 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6461,7 +6461,7 @@ return {
 		}
 	},
 	desertMunra_0157 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6487,7 +6487,7 @@ return {
 		}
 	},
 	desertMunra_0159 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6513,7 +6513,7 @@ return {
 		}
 	},
 	desertMunra_0161 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6539,7 +6539,7 @@ return {
 		}
 	},
 	desertMunra_0163 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6565,7 +6565,7 @@ return {
 		}
 	},
 	desertMunra_0165 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6589,7 +6589,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0166 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6613,7 +6613,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0167 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6637,7 +6637,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0168 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6663,7 +6663,7 @@ return {
 		}
 	},
 	desertMunra_0170 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6689,7 +6689,7 @@ return {
 		}
 	},
 	desertMunra_0172 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6713,7 +6713,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0173 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6737,7 +6737,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0174 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6761,7 +6761,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0175 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6785,7 +6785,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0176 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6818,7 +6818,7 @@ return {
 		}
 	},
 	desertMunra_0185 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6844,7 +6844,7 @@ return {
 		}
 	},
 	desertMunra_0187 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6868,7 +6868,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0188 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6892,7 +6892,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0189 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6916,7 +6916,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0190 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6940,7 +6940,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0191 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6964,7 +6964,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0192 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -6988,7 +6988,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0193 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -7012,7 +7012,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0194 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -7036,7 +7036,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0195 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -7060,7 +7060,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0196 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -7084,7 +7084,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0197 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -7108,7 +7108,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0198 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			87,
 			62
@@ -7132,7 +7132,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0199 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -7156,7 +7156,7 @@ return {
 		alias = {}
 	},
 	desertMunra_0200 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			87,
 			62
@@ -7180,7 +7180,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0001 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7204,7 +7204,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0002 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7228,7 +7228,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0003 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7252,7 +7252,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0004 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7276,7 +7276,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0005 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7300,7 +7300,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0006 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7324,7 +7324,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0007 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7348,7 +7348,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0008 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			98,
 			123
@@ -7372,7 +7372,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0009 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			98,
 			123
@@ -7396,7 +7396,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0010 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7420,7 +7420,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0011 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7444,7 +7444,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0012 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7468,7 +7468,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0013 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7492,7 +7492,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0014 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7516,7 +7516,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0015 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7540,7 +7540,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0016 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7564,7 +7564,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0017 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7588,7 +7588,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0018 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7612,7 +7612,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0019 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7636,7 +7636,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0020 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7660,7 +7660,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0021 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7684,7 +7684,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0022 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7708,7 +7708,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0023 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7732,7 +7732,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0024 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7756,7 +7756,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0025 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7780,7 +7780,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0026 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7804,7 +7804,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0027 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7828,7 +7828,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0028 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			98,
 			123
@@ -7854,7 +7854,7 @@ return {
 		}
 	},
 	desertMunra_Sarcophagus_0030 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			98,
 			123
@@ -7880,7 +7880,7 @@ return {
 		}
 	},
 	desertMunra_Sarcophagus_0032 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			98,
 			123
@@ -7906,7 +7906,7 @@ return {
 		}
 	},
 	desertMunra_Sarcophagus_0034 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			98,
 			123
@@ -7930,7 +7930,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0035 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -7954,7 +7954,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0036 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			98,
 			123
@@ -7978,7 +7978,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0037 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			98,
 			123
@@ -8002,7 +8002,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0038 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			98,
 			123
@@ -8026,7 +8026,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0039 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			98,
 			123
@@ -8050,7 +8050,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0040 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			98,
 			123
@@ -8074,7 +8074,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0041 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			98,
 			123
@@ -8098,7 +8098,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0042 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			98,
 			123
@@ -8122,7 +8122,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0043 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -8146,7 +8146,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0044 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -8170,7 +8170,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0045 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -8194,7 +8194,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0046 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -8218,7 +8218,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0047 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -8242,7 +8242,7 @@ return {
 		alias = {}
 	},
 	desertMunra_Sarcophagus_0048 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			98,
 			123
@@ -8268,7 +8268,7 @@ return {
 		}
 	},
 	desertMunra_Sarcophagus_0050 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -8294,7 +8294,7 @@ return {
 		}
 	},
 	desertMunra_Sarcophagus_0052 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -8320,7 +8320,7 @@ return {
 		}
 	},
 	desertMunra_Sarcophagus_0054 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -8346,7 +8346,7 @@ return {
 		}
 	},
 	desertMunra_Sarcophagus_0056 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -8372,7 +8372,7 @@ return {
 		}
 	},
 	desertMunra_Sarcophagus_0058 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -8398,7 +8398,7 @@ return {
 		}
 	},
 	desertMunra_Sarcophagus_0060 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -8424,7 +8424,7 @@ return {
 		}
 	},
 	desertMunra_Sarcophagus_0062 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			98,
 			123
@@ -8450,7 +8450,7 @@ return {
 		}
 	},
 	desertRaider_0001 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8476,7 +8476,7 @@ return {
 		}
 	},
 	desertRaider_0003 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8502,7 +8502,7 @@ return {
 		}
 	},
 	desertRaider_0005 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8528,7 +8528,7 @@ return {
 		}
 	},
 	desertRaider_0007 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8552,7 +8552,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0008 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8578,7 +8578,7 @@ return {
 		}
 	},
 	desertRaider_0010 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8604,7 +8604,7 @@ return {
 		}
 	},
 	desertRaider_0012 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8630,7 +8630,7 @@ return {
 		}
 	},
 	desertRaider_0014 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8656,7 +8656,7 @@ return {
 		}
 	},
 	desertRaider_0016 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8682,7 +8682,7 @@ return {
 		}
 	},
 	desertRaider_0018 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8706,7 +8706,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0019 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8732,7 +8732,7 @@ return {
 		}
 	},
 	desertRaider_0021 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8758,7 +8758,7 @@ return {
 		}
 	},
 	desertRaider_0023 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8784,7 +8784,7 @@ return {
 		}
 	},
 	desertRaider_0025 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8810,7 +8810,7 @@ return {
 		}
 	},
 	desertRaider_0027 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8836,7 +8836,7 @@ return {
 		}
 	},
 	desertRaider_0029 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8860,7 +8860,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0030 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8886,7 +8886,7 @@ return {
 		}
 	},
 	desertRaider_0032 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8912,7 +8912,7 @@ return {
 		}
 	},
 	desertRaider_0034 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -8938,7 +8938,7 @@ return {
 		}
 	},
 	desertRaider_0036 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8964,7 +8964,7 @@ return {
 		}
 	},
 	desertRaider_0038 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -8990,7 +8990,7 @@ return {
 		}
 	},
 	desertRaider_0040 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9014,7 +9014,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0041 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9040,7 +9040,7 @@ return {
 		}
 	},
 	desertRaider_0043 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9066,7 +9066,7 @@ return {
 		}
 	},
 	desertRaider_0045 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9092,7 +9092,7 @@ return {
 		}
 	},
 	desertRaider_0047 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9118,7 +9118,7 @@ return {
 		}
 	},
 	desertRaider_0049 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9144,7 +9144,7 @@ return {
 		}
 	},
 	desertRaider_0051 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9168,7 +9168,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0052 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9194,7 +9194,7 @@ return {
 		}
 	},
 	desertRaider_0054 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9220,7 +9220,7 @@ return {
 		}
 	},
 	desertRaider_0056 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9246,7 +9246,7 @@ return {
 		}
 	},
 	desertRaider_0058 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9272,7 +9272,7 @@ return {
 		}
 	},
 	desertRaider_0060 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9298,7 +9298,7 @@ return {
 		}
 	},
 	desertRaider_0062 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9322,7 +9322,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0063 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9348,7 +9348,7 @@ return {
 		}
 	},
 	desertRaider_0065 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9374,7 +9374,7 @@ return {
 		}
 	},
 	desertRaider_0067 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9398,7 +9398,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0068 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -9426,7 +9426,7 @@ return {
 		}
 	},
 	desertRaider_0072 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -9454,7 +9454,7 @@ return {
 		}
 	},
 	desertRaider_0076 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -9480,7 +9480,7 @@ return {
 		}
 	},
 	desertRaider_0078 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9504,7 +9504,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0079 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9528,7 +9528,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0080 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -9554,7 +9554,7 @@ return {
 		}
 	},
 	desertRaider_0082 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -9580,7 +9580,7 @@ return {
 		}
 	},
 	desertRaider_0084 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -9604,7 +9604,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0085 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -9628,7 +9628,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0086 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -9652,7 +9652,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0087 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -9676,7 +9676,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0088 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9709,7 +9709,7 @@ return {
 		}
 	},
 	desertRaider_0097 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -9735,7 +9735,7 @@ return {
 		}
 	},
 	desertRaider_0099 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9759,7 +9759,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0100 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9783,7 +9783,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0101 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9807,7 +9807,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0102 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -9831,7 +9831,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0103 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			53
@@ -9855,7 +9855,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0104 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -9879,7 +9879,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0105 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -9903,7 +9903,7 @@ return {
 		alias = {}
 	},
 	desertRaider_0106 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			53
@@ -9927,7 +9927,7 @@ return {
 		alias = {}
 	},
 	desertThug_0001 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -9953,7 +9953,7 @@ return {
 		}
 	},
 	desertThug_0003 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -9979,7 +9979,7 @@ return {
 		}
 	},
 	desertThug_0005 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10005,7 +10005,7 @@ return {
 		}
 	},
 	desertThug_0007 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10029,7 +10029,7 @@ return {
 		alias = {}
 	},
 	desertThug_0008 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10055,7 +10055,7 @@ return {
 		}
 	},
 	desertThug_0010 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10081,7 +10081,7 @@ return {
 		}
 	},
 	desertThug_0012 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10107,7 +10107,7 @@ return {
 		}
 	},
 	desertThug_0014 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10133,7 +10133,7 @@ return {
 		}
 	},
 	desertThug_0016 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10159,7 +10159,7 @@ return {
 		}
 	},
 	desertThug_0018 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10183,7 +10183,7 @@ return {
 		alias = {}
 	},
 	desertThug_0019 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10209,7 +10209,7 @@ return {
 		}
 	},
 	desertThug_0021 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10235,7 +10235,7 @@ return {
 		}
 	},
 	desertThug_0023 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10261,7 +10261,7 @@ return {
 		}
 	},
 	desertThug_0025 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10287,7 +10287,7 @@ return {
 		}
 	},
 	desertThug_0027 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10313,7 +10313,7 @@ return {
 		}
 	},
 	desertThug_0029 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10337,7 +10337,7 @@ return {
 		alias = {}
 	},
 	desertThug_0030 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10363,7 +10363,7 @@ return {
 		}
 	},
 	desertThug_0032 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10389,7 +10389,7 @@ return {
 		}
 	},
 	desertThug_0034 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10415,7 +10415,7 @@ return {
 		}
 	},
 	desertThug_0036 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10441,7 +10441,7 @@ return {
 		}
 	},
 	desertThug_0038 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10467,7 +10467,7 @@ return {
 		}
 	},
 	desertThug_0040 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10491,7 +10491,7 @@ return {
 		alias = {}
 	},
 	desertThug_0041 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10517,7 +10517,7 @@ return {
 		}
 	},
 	desertThug_0043 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10543,7 +10543,7 @@ return {
 		}
 	},
 	desertThug_0045 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10569,7 +10569,7 @@ return {
 		}
 	},
 	desertThug_0047 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10595,7 +10595,7 @@ return {
 		}
 	},
 	desertThug_0049 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10621,7 +10621,7 @@ return {
 		}
 	},
 	desertThug_0051 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10645,7 +10645,7 @@ return {
 		alias = {}
 	},
 	desertThug_0052 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10671,7 +10671,7 @@ return {
 		}
 	},
 	desertThug_0054 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10697,7 +10697,7 @@ return {
 		}
 	},
 	desertThug_0056 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10723,7 +10723,7 @@ return {
 		}
 	},
 	desertThug_0058 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10749,7 +10749,7 @@ return {
 		}
 	},
 	desertThug_0060 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10775,7 +10775,7 @@ return {
 		}
 	},
 	desertThug_0062 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -10799,7 +10799,7 @@ return {
 		alias = {}
 	},
 	desertThug_0063 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10825,7 +10825,7 @@ return {
 		}
 	},
 	desertThug_0065 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10851,7 +10851,7 @@ return {
 		}
 	},
 	desertThug_0067 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10877,7 +10877,7 @@ return {
 		}
 	},
 	desertThug_0068 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10904,7 +10904,7 @@ return {
 		}
 	},
 	desertThug_0071 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10930,7 +10930,7 @@ return {
 		}
 	},
 	desertThug_0073 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -10956,7 +10956,7 @@ return {
 		}
 	},
 	desertThug_0075 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -10982,7 +10982,7 @@ return {
 		}
 	},
 	desertThug_0078 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -11006,7 +11006,7 @@ return {
 		alias = {}
 	},
 	desertThug_0079 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -11030,7 +11030,7 @@ return {
 		alias = {}
 	},
 	desertThug_0080 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -11056,7 +11056,7 @@ return {
 		}
 	},
 	desertThug_0082 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -11082,7 +11082,7 @@ return {
 		}
 	},
 	desertThug_0084 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -11106,7 +11106,7 @@ return {
 		alias = {}
 	},
 	desertThug_0085 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -11130,7 +11130,7 @@ return {
 		alias = {}
 	},
 	desertThug_0086 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -11154,7 +11154,7 @@ return {
 		alias = {}
 	},
 	desertThug_0087 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -11178,7 +11178,7 @@ return {
 		alias = {}
 	},
 	desertThug_0088 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -11211,7 +11211,7 @@ return {
 		}
 	},
 	desertThug_0097 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -11237,7 +11237,7 @@ return {
 		}
 	},
 	desertThug_0099 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -11261,7 +11261,7 @@ return {
 		alias = {}
 	},
 	desertThug_0100 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -11285,7 +11285,7 @@ return {
 		alias = {}
 	},
 	desertThug_0101 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			76,
 			51
@@ -11309,7 +11309,7 @@ return {
 		alias = {}
 	},
 	desertThug_0102 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -11333,7 +11333,7 @@ return {
 		alias = {}
 	},
 	desertThug_0103 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -11357,7 +11357,7 @@ return {
 		alias = {}
 	},
 	desertThug_0104 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -11381,7 +11381,7 @@ return {
 		alias = {}
 	},
 	desertThug_0105 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			76,
 			51
@@ -11405,7 +11405,7 @@ return {
 		alias = {}
 	},
 	desertThug_0106 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			76,
 			51
@@ -11429,7 +11429,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0001 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -11455,7 +11455,7 @@ return {
 		}
 	},
 	desertWolf_0003 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -11479,7 +11479,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0004 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -11503,7 +11503,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0005 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -11527,7 +11527,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0006 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -11551,7 +11551,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0007 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -11575,7 +11575,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0008 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -11599,7 +11599,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0009 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -11623,7 +11623,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0010 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -11647,7 +11647,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0011 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			83,
 			72
@@ -11673,7 +11673,7 @@ return {
 		}
 	},
 	desertWolf_0013 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			83,
 			72
@@ -11699,7 +11699,7 @@ return {
 		}
 	},
 	desertWolf_0015 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -11725,7 +11725,7 @@ return {
 		}
 	},
 	desertWolf_0017 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			83,
 			72
@@ -11751,7 +11751,7 @@ return {
 		}
 	},
 	desertWolf_0019 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			83,
 			72
@@ -11777,7 +11777,7 @@ return {
 		}
 	},
 	desertWolf_0021 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			83,
 			72
@@ -11803,7 +11803,7 @@ return {
 		}
 	},
 	desertWolf_0023 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			83,
 			72
@@ -11829,7 +11829,7 @@ return {
 		}
 	},
 	desertWolf_0025 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -11855,7 +11855,7 @@ return {
 		}
 	},
 	desertWolf_0027 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			83,
 			72
@@ -11881,7 +11881,7 @@ return {
 		}
 	},
 	desertWolf_0029 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			83,
 			72
@@ -11907,7 +11907,7 @@ return {
 		}
 	},
 	desertWolf_0031 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -11931,7 +11931,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0032 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -11955,7 +11955,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0033 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -11979,7 +11979,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0034 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12005,7 +12005,7 @@ return {
 		}
 	},
 	desertWolf_0036 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12031,7 +12031,7 @@ return {
 		}
 	},
 	desertWolf_0038 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12055,7 +12055,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0039 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12081,7 +12081,7 @@ return {
 		}
 	},
 	desertWolf_0041 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12107,7 +12107,7 @@ return {
 		}
 	},
 	desertWolf_0043 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12131,7 +12131,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0044 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12157,7 +12157,7 @@ return {
 		}
 	},
 	desertWolf_0046 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12181,7 +12181,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0047 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12205,7 +12205,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0048 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12231,7 +12231,7 @@ return {
 		}
 	},
 	desertWolf_0050 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12257,7 +12257,7 @@ return {
 		}
 	},
 	desertWolf_0052 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12281,7 +12281,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0053 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12305,7 +12305,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0054 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12329,7 +12329,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0055 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12353,7 +12353,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0056 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12386,7 +12386,7 @@ return {
 		}
 	},
 	desertWolf_0065 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12412,7 +12412,7 @@ return {
 		}
 	},
 	desertWolf_0067 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12436,7 +12436,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0068 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12460,7 +12460,7 @@ return {
 		alias = {}
 	},
 	desertWolf_0069 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			83,
 			72
@@ -12486,7 +12486,7 @@ return {
 		}
 	},
 	desertWolf_0071 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12512,7 +12512,7 @@ return {
 		}
 	},
 	desertWolf_0073 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12538,7 +12538,7 @@ return {
 		}
 	},
 	desertWolf_0075 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			83,
 			72
@@ -12564,7 +12564,7 @@ return {
 		}
 	},
 	desertWolf_0077 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			83,
 			72
@@ -12590,7 +12590,7 @@ return {
 		}
 	},
 	desertWolf_0079 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			83,
 			72
@@ -12616,7 +12616,7 @@ return {
 		}
 	},
 	desertWolf_0081 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			83,
 			72
@@ -12642,7 +12642,7 @@ return {
 		}
 	},
 	desertWolf_0083 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			83,
 			72
@@ -12668,7 +12668,7 @@ return {
 		}
 	},
 	desertWolf_0085 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			83,
 			72
@@ -12694,7 +12694,7 @@ return {
 		}
 	},
 	fallen_0001 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -12720,7 +12720,7 @@ return {
 		}
 	},
 	fallen_0003 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -12744,7 +12744,7 @@ return {
 		alias = {}
 	},
 	fallen_0004 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -12768,7 +12768,7 @@ return {
 		alias = {}
 	},
 	fallen_0005 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -12794,7 +12794,7 @@ return {
 		}
 	},
 	fallen_0007 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -12818,7 +12818,7 @@ return {
 		alias = {}
 	},
 	fallen_0008 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -12842,7 +12842,7 @@ return {
 		alias = {}
 	},
 	fallen_0009 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -12868,7 +12868,7 @@ return {
 		}
 	},
 	fallen_0011 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -12892,7 +12892,7 @@ return {
 		alias = {}
 	},
 	fallen_0012 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -12916,7 +12916,7 @@ return {
 		alias = {}
 	},
 	fallen_0013 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -12942,7 +12942,7 @@ return {
 		}
 	},
 	fallen_0015 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -12966,7 +12966,7 @@ return {
 		alias = {}
 	},
 	fallen_0016 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -12990,7 +12990,7 @@ return {
 		alias = {}
 	},
 	fallen_0017 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13016,7 +13016,7 @@ return {
 		}
 	},
 	fallen_0019 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13040,7 +13040,7 @@ return {
 		alias = {}
 	},
 	fallen_0020 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13064,7 +13064,7 @@ return {
 		alias = {}
 	},
 	fallen_0021 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13090,7 +13090,7 @@ return {
 		}
 	},
 	fallen_0023 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13114,7 +13114,7 @@ return {
 		alias = {}
 	},
 	fallen_0024 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13138,7 +13138,7 @@ return {
 		alias = {}
 	},
 	fallen_0025 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13164,7 +13164,7 @@ return {
 		}
 	},
 	fallen_0027 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13188,7 +13188,7 @@ return {
 		alias = {}
 	},
 	fallen_0028 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13212,7 +13212,7 @@ return {
 		alias = {}
 	},
 	fallen_0029 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13238,7 +13238,7 @@ return {
 		}
 	},
 	fallen_0031 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13262,7 +13262,7 @@ return {
 		alias = {}
 	},
 	fallen_0032 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13286,7 +13286,7 @@ return {
 		alias = {}
 	},
 	fallen_0033 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13310,7 +13310,7 @@ return {
 		alias = {}
 	},
 	fallen_0034 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13334,7 +13334,7 @@ return {
 		alias = {}
 	},
 	fallen_0035 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13358,7 +13358,7 @@ return {
 		alias = {}
 	},
 	fallen_0036 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13382,7 +13382,7 @@ return {
 		alias = {}
 	},
 	fallen_0037 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13408,7 +13408,7 @@ return {
 		}
 	},
 	fallen_0039 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13432,7 +13432,7 @@ return {
 		alias = {}
 	},
 	fallen_0040 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13456,7 +13456,7 @@ return {
 		alias = {}
 	},
 	fallen_0041 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13480,7 +13480,7 @@ return {
 		alias = {}
 	},
 	fallen_0042 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13504,7 +13504,7 @@ return {
 		alias = {}
 	},
 	fallen_0043 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13528,7 +13528,7 @@ return {
 		alias = {}
 	},
 	fallen_0044 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13552,7 +13552,7 @@ return {
 		alias = {}
 	},
 	fallen_0045 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13578,7 +13578,7 @@ return {
 		}
 	},
 	fallen_0047 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13602,7 +13602,7 @@ return {
 		alias = {}
 	},
 	fallen_0048 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13626,7 +13626,7 @@ return {
 		alias = {}
 	},
 	fallen_0049 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13653,7 +13653,7 @@ return {
 		}
 	},
 	fallen_0051 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13679,7 +13679,7 @@ return {
 		}
 	},
 	fallen_0053 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13705,7 +13705,7 @@ return {
 		}
 	},
 	fallen_0055 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13733,7 +13733,7 @@ return {
 		}
 	},
 	fallen_0059 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -13759,7 +13759,7 @@ return {
 		}
 	},
 	fallen_0061 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -13783,7 +13783,7 @@ return {
 		alias = {}
 	},
 	fallen_0062 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -13807,7 +13807,7 @@ return {
 		alias = {}
 	},
 	fallen_0063 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -13831,7 +13831,7 @@ return {
 		alias = {}
 	},
 	fallen_0064 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13858,7 +13858,7 @@ return {
 		}
 	},
 	fallen_0067 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13884,7 +13884,7 @@ return {
 		}
 	},
 	fallen_0070 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -13908,7 +13908,7 @@ return {
 		alias = {}
 	},
 	fallen_0071 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -13932,7 +13932,7 @@ return {
 		alias = {}
 	},
 	fallen_0072 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -13958,7 +13958,7 @@ return {
 		}
 	},
 	fallen_0074 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -13984,7 +13984,7 @@ return {
 		}
 	},
 	fallen_0076 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14008,7 +14008,7 @@ return {
 		alias = {}
 	},
 	fallen_0077 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14032,7 +14032,7 @@ return {
 		alias = {}
 	},
 	fallen_0078 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14056,7 +14056,7 @@ return {
 		alias = {}
 	},
 	fallen_0079 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14080,7 +14080,7 @@ return {
 		alias = {}
 	},
 	fallen_0080 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14113,7 +14113,7 @@ return {
 		}
 	},
 	fallen_0089 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14139,7 +14139,7 @@ return {
 		}
 	},
 	fallen_0091 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -14163,7 +14163,7 @@ return {
 		alias = {}
 	},
 	fallen_0092 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -14187,7 +14187,7 @@ return {
 		alias = {}
 	},
 	fallen_0093 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			48,
 			56
@@ -14211,7 +14211,7 @@ return {
 		alias = {}
 	},
 	fallen_0094 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			48,
 			56
@@ -14235,7 +14235,7 @@ return {
 		alias = {}
 	},
 	fallen_0095 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -14261,7 +14261,7 @@ return {
 		}
 	},
 	fallen_0097 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -14285,7 +14285,7 @@ return {
 		alias = {}
 	},
 	fallen_0098 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -14309,7 +14309,7 @@ return {
 		alias = {}
 	},
 	fallen_0099 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -14333,7 +14333,7 @@ return {
 		alias = {}
 	},
 	fallen_0100 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -14359,7 +14359,7 @@ return {
 		}
 	},
 	fallen_0102 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -14385,7 +14385,7 @@ return {
 		}
 	},
 	fallen_0104 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -14411,7 +14411,7 @@ return {
 		}
 	},
 	fallen_0106 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -14437,7 +14437,7 @@ return {
 		}
 	},
 	fallen_0108 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			48,
 			56
@@ -14467,7 +14467,7 @@ return {
 		}
 	},
 	fallen_0114 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14493,7 +14493,7 @@ return {
 		}
 	},
 	fallen_0116 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14517,7 +14517,7 @@ return {
 		alias = {}
 	},
 	fallen_0117 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14541,7 +14541,7 @@ return {
 		alias = {}
 	},
 	fallen_0118 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			48,
 			56
@@ -14565,7 +14565,7 @@ return {
 		alias = {}
 	},
 	fallen_0119 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			48,
 			56
@@ -14589,7 +14589,7 @@ return {
 		alias = {}
 	},
 	fallen_0120 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14613,7 +14613,7 @@ return {
 		alias = {}
 	},
 	fallen_0121 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14637,7 +14637,7 @@ return {
 		alias = {}
 	},
 	fallen_0122 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14661,7 +14661,7 @@ return {
 		alias = {}
 	},
 	fallen_0123 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			48,
 			56
@@ -14685,7 +14685,7 @@ return {
 		alias = {}
 	},
 	fallen_0124 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14709,7 +14709,7 @@ return {
 		alias = {}
 	},
 	fallen_0125 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			48,
 			56
@@ -14733,7 +14733,7 @@ return {
 		alias = {}
 	},
 	fallen_0126 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14757,7 +14757,7 @@ return {
 		alias = {}
 	},
 	fallen_0127 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			48,
 			56
@@ -14781,7 +14781,7 @@ return {
 		alias = {}
 	},
 	fallen_0128 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14805,7 +14805,7 @@ return {
 		alias = {}
 	},
 	fallen_0129 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14829,7 +14829,7 @@ return {
 		alias = {}
 	},
 	fallen_0130 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14853,7 +14853,7 @@ return {
 		alias = {}
 	},
 	fallen_0131 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14877,7 +14877,7 @@ return {
 		alias = {}
 	},
 	fallen_0132 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14901,7 +14901,7 @@ return {
 		alias = {}
 	},
 	fallen_0133 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14925,7 +14925,7 @@ return {
 		alias = {}
 	},
 	fallen_0134 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14949,7 +14949,7 @@ return {
 		alias = {}
 	},
 	fallen_0135 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -14973,7 +14973,7 @@ return {
 		alias = {}
 	},
 	fallen_0136 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -14997,7 +14997,7 @@ return {
 		alias = {}
 	},
 	fallen_0137 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			48,
 			56
@@ -15021,7 +15021,7 @@ return {
 		alias = {}
 	},
 	fallen_0138 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -15045,7 +15045,7 @@ return {
 		alias = {}
 	},
 	fallen_0139 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -15069,7 +15069,7 @@ return {
 		alias = {}
 	},
 	fallen_0140 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -15093,7 +15093,7 @@ return {
 		alias = {}
 	},
 	fallen_0141 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -15117,7 +15117,7 @@ return {
 		alias = {}
 	},
 	fallen_0142 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -15141,7 +15141,7 @@ return {
 		alias = {}
 	},
 	fallen_0143 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -15165,7 +15165,7 @@ return {
 		alias = {}
 	},
 	fallen_0144 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -15189,7 +15189,7 @@ return {
 		alias = {}
 	},
 	fallen_0145 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -15213,7 +15213,7 @@ return {
 		alias = {}
 	},
 	fallen_0146 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			48,
 			56
@@ -15237,7 +15237,7 @@ return {
 		alias = {}
 	},
 	scorpion_0001 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -15261,7 +15261,7 @@ return {
 		alias = {}
 	},
 	scorpion_0002 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -15285,7 +15285,7 @@ return {
 		alias = {}
 	},
 	scorpion_0003 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -15309,7 +15309,7 @@ return {
 		alias = {}
 	},
 	scorpion_0004 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -15333,7 +15333,7 @@ return {
 		alias = {}
 	},
 	scorpion_0005 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -15357,7 +15357,7 @@ return {
 		alias = {}
 	},
 	scorpion_0006 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -15381,7 +15381,7 @@ return {
 		alias = {}
 	},
 	scorpion_0007 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -15405,7 +15405,7 @@ return {
 		alias = {}
 	},
 	scorpion_0008 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -15429,7 +15429,7 @@ return {
 		alias = {}
 	},
 	scorpion_0009 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -15453,7 +15453,7 @@ return {
 		alias = {}
 	},
 	scorpion_0010 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15477,7 +15477,7 @@ return {
 		alias = {}
 	},
 	scorpion_0011 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15501,7 +15501,7 @@ return {
 		alias = {}
 	},
 	scorpion_0012 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15525,7 +15525,7 @@ return {
 		alias = {}
 	},
 	scorpion_0013 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15549,7 +15549,7 @@ return {
 		alias = {}
 	},
 	scorpion_0014 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15573,7 +15573,7 @@ return {
 		alias = {}
 	},
 	scorpion_0015 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15597,7 +15597,7 @@ return {
 		alias = {}
 	},
 	scorpion_0016 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15621,7 +15621,7 @@ return {
 		alias = {}
 	},
 	scorpion_0017 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15645,7 +15645,7 @@ return {
 		alias = {}
 	},
 	scorpion_0018 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15669,7 +15669,7 @@ return {
 		alias = {}
 	},
 	scorpion_0019 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15693,7 +15693,7 @@ return {
 		alias = {}
 	},
 	scorpion_0020 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15717,7 +15717,7 @@ return {
 		alias = {}
 	},
 	scorpion_0021 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15741,7 +15741,7 @@ return {
 		alias = {}
 	},
 	scorpion_0022 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15765,7 +15765,7 @@ return {
 		alias = {}
 	},
 	scorpion_0023 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15789,7 +15789,7 @@ return {
 		alias = {}
 	},
 	scorpion_0024 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15813,7 +15813,7 @@ return {
 		alias = {}
 	},
 	scorpion_0025 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15837,7 +15837,7 @@ return {
 		alias = {}
 	},
 	scorpion_0026 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15861,7 +15861,7 @@ return {
 		alias = {}
 	},
 	scorpion_0027 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15885,7 +15885,7 @@ return {
 		alias = {}
 	},
 	scorpion_0028 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15909,7 +15909,7 @@ return {
 		alias = {}
 	},
 	scorpion_0029 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15935,7 +15935,7 @@ return {
 		}
 	},
 	scorpion_0031 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -15961,7 +15961,7 @@ return {
 		}
 	},
 	scorpion_0033 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -15987,7 +15987,7 @@ return {
 		}
 	},
 	scorpion_0035 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16014,7 +16014,7 @@ return {
 		}
 	},
 	scorpion_0038 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16038,7 +16038,7 @@ return {
 		alias = {}
 	},
 	scorpion_0039 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16062,7 +16062,7 @@ return {
 		alias = {}
 	},
 	scorpion_0040 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16088,7 +16088,7 @@ return {
 		}
 	},
 	scorpion_0042 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16114,7 +16114,7 @@ return {
 		}
 	},
 	scorpion_0044 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16140,7 +16140,7 @@ return {
 		}
 	},
 	scorpion_0046 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -16167,7 +16167,7 @@ return {
 		}
 	},
 	scorpion_0048 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16193,7 +16193,7 @@ return {
 		}
 	},
 	scorpion_0050 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16219,7 +16219,7 @@ return {
 		}
 	},
 	scorpion_0052 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16248,7 +16248,7 @@ return {
 		}
 	},
 	scorpion_0057 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16272,7 +16272,7 @@ return {
 		alias = {}
 	},
 	scorpion_0058 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16296,7 +16296,7 @@ return {
 		alias = {}
 	},
 	scorpion_0059 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16320,7 +16320,7 @@ return {
 		alias = {}
 	},
 	scorpion_0060 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16344,7 +16344,7 @@ return {
 		alias = {}
 	},
 	scorpion_0061 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16368,7 +16368,7 @@ return {
 		alias = {}
 	},
 	scorpion_0062 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16392,7 +16392,7 @@ return {
 		alias = {}
 	},
 	scorpion_0063 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16416,7 +16416,7 @@ return {
 		alias = {}
 	},
 	scorpion_0064 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16440,7 +16440,7 @@ return {
 		alias = {}
 	},
 	scorpion_0065 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16464,7 +16464,7 @@ return {
 		alias = {}
 	},
 	scorpion_0067 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -16488,7 +16488,7 @@ return {
 		alias = {}
 	},
 	scorpion_0068 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -16512,7 +16512,7 @@ return {
 		alias = {}
 	},
 	scorpion_0069 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -16538,7 +16538,7 @@ return {
 		}
 	},
 	scorpion_0071 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16564,7 +16564,7 @@ return {
 		}
 	},
 	scorpion_0073 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16588,7 +16588,7 @@ return {
 		alias = {}
 	},
 	scorpion_0074 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16612,7 +16612,7 @@ return {
 		alias = {}
 	},
 	scorpion_0075 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16636,7 +16636,7 @@ return {
 		alias = {}
 	},
 	scorpion_0076 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -16660,7 +16660,7 @@ return {
 		alias = {}
 	},
 	scorpion_0077 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -16693,7 +16693,7 @@ return {
 		}
 	},
 	scorpion_0086 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -16719,7 +16719,7 @@ return {
 		}
 	},
 	scorpion_0088 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -16743,7 +16743,7 @@ return {
 		alias = {}
 	},
 	scorpion_0089 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			118,
 			70
@@ -16767,7 +16767,7 @@ return {
 		alias = {}
 	},
 	scorpion_0090 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16791,7 +16791,7 @@ return {
 		alias = {}
 	},
 	scorpion_0091 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16815,7 +16815,7 @@ return {
 		alias = {}
 	},
 	scorpion_0092 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16839,7 +16839,7 @@ return {
 		alias = {}
 	},
 	scorpion_0093 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16863,7 +16863,7 @@ return {
 		alias = {}
 	},
 	scorpion_0094 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16887,7 +16887,7 @@ return {
 		alias = {}
 	},
 	scorpion_0095 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16911,7 +16911,7 @@ return {
 		alias = {}
 	},
 	scorpion_0096 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16935,7 +16935,7 @@ return {
 		alias = {}
 	},
 	scorpion_0097 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16961,7 +16961,7 @@ return {
 		}
 	},
 	scorpion_0099 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			118,
 			70
@@ -16985,7 +16985,7 @@ return {
 		alias = {}
 	},
 	tremor_0001 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17009,7 +17009,7 @@ return {
 		alias = {}
 	},
 	tremor_0002 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17033,7 +17033,7 @@ return {
 		alias = {}
 	},
 	tremor_0003 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17057,7 +17057,7 @@ return {
 		alias = {}
 	},
 	tremor_0004 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17081,7 +17081,7 @@ return {
 		alias = {}
 	},
 	tremor_0005 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17105,7 +17105,7 @@ return {
 		alias = {}
 	},
 	tremor_0006 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17129,7 +17129,7 @@ return {
 		alias = {}
 	},
 	tremor_0007 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17153,7 +17153,7 @@ return {
 		alias = {}
 	},
 	tremor_0008 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17177,7 +17177,7 @@ return {
 		alias = {}
 	},
 	tremor_0009 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17201,7 +17201,7 @@ return {
 		alias = {}
 	},
 	tremor_0010 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17225,7 +17225,7 @@ return {
 		alias = {}
 	},
 	tremor_0011 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17249,7 +17249,7 @@ return {
 		alias = {}
 	},
 	tremor_0012 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17273,7 +17273,7 @@ return {
 		alias = {}
 	},
 	tremor_0013 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17297,7 +17297,7 @@ return {
 		alias = {}
 	},
 	tremor_0014 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17321,7 +17321,7 @@ return {
 		alias = {}
 	},
 	tremor_0015 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			82,
 			75
@@ -17345,7 +17345,7 @@ return {
 		alias = {}
 	},
 	tremor_0016 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			82,
 			75
@@ -17369,7 +17369,7 @@ return {
 		alias = {}
 	},
 	tremor_0017 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17393,7 +17393,7 @@ return {
 		alias = {}
 	},
 	tremor_0018 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17417,7 +17417,7 @@ return {
 		alias = {}
 	},
 	tremor_0019 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17441,7 +17441,7 @@ return {
 		alias = {}
 	},
 	tremor_0020 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17465,7 +17465,7 @@ return {
 		alias = {}
 	},
 	tremor_0021 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			82,
 			75
@@ -17489,7 +17489,7 @@ return {
 		alias = {}
 	},
 	tremor_0022 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			82,
 			75
@@ -17513,7 +17513,7 @@ return {
 		alias = {}
 	},
 	tremor_0023 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17537,7 +17537,7 @@ return {
 		alias = {}
 	},
 	tremor_0024 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17561,7 +17561,7 @@ return {
 		alias = {}
 	},
 	tremor_0025 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			82,
 			75
@@ -17585,7 +17585,7 @@ return {
 		alias = {}
 	},
 	tremor_0026 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			82,
 			75
@@ -17609,7 +17609,7 @@ return {
 		alias = {}
 	},
 	tremor_0027 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17633,7 +17633,7 @@ return {
 		alias = {}
 	},
 	tremor_0028 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17657,7 +17657,7 @@ return {
 		alias = {}
 	},
 	tremor_0029 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			82,
 			75
@@ -17681,7 +17681,7 @@ return {
 		alias = {}
 	},
 	tremor_0030 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			82,
 			75
@@ -17705,7 +17705,7 @@ return {
 		alias = {}
 	},
 	tremor_0031 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17729,7 +17729,7 @@ return {
 		alias = {}
 	},
 	tremor_0032 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17753,7 +17753,7 @@ return {
 		alias = {}
 	},
 	tremor_0033 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17777,7 +17777,7 @@ return {
 		alias = {}
 	},
 	tremor_0034 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17801,7 +17801,7 @@ return {
 		alias = {}
 	},
 	tremor_0035 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17825,7 +17825,7 @@ return {
 		alias = {}
 	},
 	tremor_0036 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17849,7 +17849,7 @@ return {
 		alias = {}
 	},
 	tremor_0037 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17873,7 +17873,7 @@ return {
 		alias = {}
 	},
 	tremor_0038 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17897,7 +17897,7 @@ return {
 		alias = {}
 	},
 	tremor_0039 = {
-		a_name = "go_enemies_desert-3.dds",
+		a_name = "go_enemies_desert-3.png",
 		size = {
 			82,
 			75
@@ -17921,7 +17921,7 @@ return {
 		alias = {}
 	},
 	tremor_0040 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17945,7 +17945,7 @@ return {
 		alias = {}
 	},
 	tremor_0041 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17969,7 +17969,7 @@ return {
 		alias = {}
 	},
 	tremor_0042 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -17993,7 +17993,7 @@ return {
 		alias = {}
 	},
 	tremor_0043 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18017,7 +18017,7 @@ return {
 		alias = {}
 	},
 	tremor_0044 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18044,7 +18044,7 @@ return {
 		}
 	},
 	tremor_0046 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18070,7 +18070,7 @@ return {
 		}
 	},
 	tremor_0048 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18096,7 +18096,7 @@ return {
 		}
 	},
 	tremor_0050 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18124,7 +18124,7 @@ return {
 		}
 	},
 	tremor_0054 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18150,7 +18150,7 @@ return {
 		}
 	},
 	tremor_0056 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18176,7 +18176,7 @@ return {
 		}
 	},
 	tremor_0058 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18203,7 +18203,7 @@ return {
 		}
 	},
 	tremor_0061 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18229,7 +18229,7 @@ return {
 		}
 	},
 	tremor_0064 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			82,
 			75
@@ -18253,7 +18253,7 @@ return {
 		alias = {}
 	},
 	tremor_0065 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18277,7 +18277,7 @@ return {
 		alias = {}
 	},
 	tremor_0066 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18301,7 +18301,7 @@ return {
 		alias = {}
 	},
 	tremor_0067 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18325,7 +18325,7 @@ return {
 		alias = {}
 	},
 	tremor_0068 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18349,7 +18349,7 @@ return {
 		alias = {}
 	},
 	tremor_0069 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18373,7 +18373,7 @@ return {
 		alias = {}
 	},
 	tremor_0070 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18397,7 +18397,7 @@ return {
 		alias = {}
 	},
 	tremor_0071 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18421,7 +18421,7 @@ return {
 		alias = {}
 	},
 	tremor_0072 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18445,7 +18445,7 @@ return {
 		alias = {}
 	},
 	tremor_0073 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18471,7 +18471,7 @@ return {
 		}
 	},
 	tremor_0075 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18497,7 +18497,7 @@ return {
 		}
 	},
 	tremor_0077 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18521,7 +18521,7 @@ return {
 		alias = {}
 	},
 	tremor_0078 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18547,7 +18547,7 @@ return {
 		}
 	},
 	tremor_0080 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18573,7 +18573,7 @@ return {
 		}
 	},
 	tremor_0082 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			82,
 			75
@@ -18597,7 +18597,7 @@ return {
 		alias = {}
 	},
 	tremor_0083 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18623,7 +18623,7 @@ return {
 		}
 	},
 	tremor_0085 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18647,7 +18647,7 @@ return {
 		alias = {}
 	},
 	tremor_0086 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18671,7 +18671,7 @@ return {
 		alias = {}
 	},
 	tremor_0087 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18695,7 +18695,7 @@ return {
 		alias = {}
 	},
 	tremor_0088 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18719,7 +18719,7 @@ return {
 		alias = {}
 	},
 	tremor_0089 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18743,7 +18743,7 @@ return {
 		alias = {}
 	},
 	tremor_0090 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18767,7 +18767,7 @@ return {
 		alias = {}
 	},
 	tremor_0091 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18791,7 +18791,7 @@ return {
 		alias = {}
 	},
 	tremor_0092 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18815,7 +18815,7 @@ return {
 		alias = {}
 	},
 	tremor_0093 = {
-		a_name = "go_enemies_desert-2.dds",
+		a_name = "go_enemies_desert-2.png",
 		size = {
 			82,
 			75
@@ -18839,7 +18839,7 @@ return {
 		alias = {}
 	},
 	tremor_0094 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			82,
 			75
@@ -18863,7 +18863,7 @@ return {
 		alias = {}
 	},
 	tremor_0095 = {
-		a_name = "go_enemies_desert-1.dds",
+		a_name = "go_enemies_desert-1.png",
 		size = {
 			82,
 			75

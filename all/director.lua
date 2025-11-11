@@ -50,7 +50,7 @@ function director:init(params)
     for _, v in pairs(sound_paths) do
         local p = v.path .. "/sounds"
 
-        if love.filesystem.exists(p .. "/sounds.lua") then
+        if love.filesystem.getInfo(p .. "/sounds.lua") then
             S:init(p)
 
             break
@@ -593,13 +593,13 @@ function director:unload_texture_groups(groups, texture_size, ref_height, item_n
         if KR_PATH_ASSETS_GAME_FALLBACK then
             local texture_path = KR_PATH_ASSETS_GAME_TARGET .. "/images/" .. texture_size
 
-            if love.filesystem.exists(texture_path .. "/" .. group .. ".lua") then
+            if love.filesystem.getInfo(texture_path .. "/" .. group .. ".lua") then
                 -- block empty
             else
                 for _, v in pairs(KR_PATH_ASSETS_GAME_FALLBACK) do
                     texture_path = v.path .. "/images/" .. v.texture_size
 
-                    if love.filesystem.exists(texture_path .. "/" .. group .. ".lua") then
+                    if love.filesystem.getInfo(texture_path .. "/" .. group .. ".lua") then
                         log.debug(" --- texture group %s fallback to %s", group, texture_path)
 
                         forced_texture_size = v.texture_size
@@ -637,7 +637,7 @@ function director:load_texture_groups(groups, texture_size, ref_height, queue, i
             for _, n in pairs(features.overrides) do
                 local ov_path = texture_path .. "/_ov/" .. n
 
-                if love.filesystem.exists(ov_path .. "/" .. group .. ".lua") then
+                if love.filesystem.getInfo(ov_path .. "/" .. group .. ".lua") then
                     log.debug("  +++ texture group %s overriden by %s", group, n)
 
                     texture_path = ov_path

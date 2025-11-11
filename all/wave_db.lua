@@ -19,6 +19,10 @@ local gms = {
     -- [GAME_MODE_ENDLESS] = "endless"
     [GAME_MODE_ENDLESS] = "campaign" -- endless模式下也加载普通模式的波次
 }
+local function is_file(path)
+    local info = love.filesystem.getInfo(path)
+    return info and info.type == "file"
+end
 
 function wave_db:patch_waves(criket)
     self.db.groups = {}
@@ -80,7 +84,7 @@ function wave_db:load(level_name, game_mode, endless)
     local wen = string.format("%s_extra", wn)
     local wef = string.format("%s.lua", wen)
 
-    if FS.isFile(wef) then
+    if is_file(wef) then
         log.info("Found extra waves: %s", wef)
 
         local ok, wchunk = pcall(FS.load, wef)

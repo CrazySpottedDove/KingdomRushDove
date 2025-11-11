@@ -3,6 +3,10 @@
 local log = require("klua.log"):new("shader_db")
 local FS = love.filesystem
 local shader_db = {}
+local function is_file(path)
+    local info = love.filesystem.getInfo(path)
+    return info and info.type == "file"
+end
 
 function shader_db:init(shader_path, preload)
 	self.path = shader_path
@@ -15,7 +19,7 @@ function shader_db:init(shader_path, preload)
 			local name = files[i]
 			local f = self.path .. "/" .. name
 
-			if FS.isFile(f) and string.match(f, ".c$") then
+			if is_file(f) and string.match(f, ".c$") then
 				self:get(string.gsub(name, ".c$", ""))
 			end
 		end

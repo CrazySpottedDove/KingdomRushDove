@@ -11,6 +11,10 @@ local ceil = math.ceil
 local floor = math.floor
 local max = math.max
 local min = math.min
+local function is_file(path)
+    local info = love.filesystem.getInfo(path)
+    return info and info.type == "file"
+end
 
 require("constants")
 
@@ -70,7 +74,7 @@ function animation_db:load()
         local name = files[i]
         local f = path .. "/" .. name
 
-        if FS.isFile(f) and string.match(f, ".lua$") then
+        if is_file(f) and string.match(f, ".lua$") then
             load_ani_file(f)
         end
     end

@@ -2,7 +2,7 @@
 
 return {
 	bloodsydianGnoll_0001 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0002 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0004 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0006 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0008 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0010 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0012 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0014 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0016 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -236,7 +236,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0018 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -262,7 +262,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0020 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -288,7 +288,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0022 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -314,7 +314,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0024 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -340,7 +340,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0026 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -366,7 +366,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0028 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -392,7 +392,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0030 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -418,7 +418,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0032 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -444,7 +444,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0034 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -470,7 +470,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0036 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -496,7 +496,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0038 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -522,7 +522,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0040 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -548,7 +548,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0042 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -574,7 +574,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0044 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -600,7 +600,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0046 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -626,7 +626,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0048 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -652,7 +652,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0050 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -678,7 +678,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0052 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -704,7 +704,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0054 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -730,7 +730,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0056 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -756,7 +756,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0058 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -782,7 +782,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0060 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -808,7 +808,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0062 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -834,7 +834,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0064 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -860,7 +860,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0067 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -884,7 +884,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0068 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -910,7 +910,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0070 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -934,7 +934,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0071 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -958,7 +958,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0072 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -982,7 +982,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0073 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1006,7 +1006,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0074 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1030,7 +1030,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0075 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1054,7 +1054,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0076 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1078,7 +1078,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0077 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1102,7 +1102,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0078 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1126,7 +1126,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0079 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1150,7 +1150,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0080 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1174,7 +1174,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0081 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1198,7 +1198,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0082 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1222,7 +1222,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0083 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1246,7 +1246,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0084 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1272,7 +1272,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0086 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1298,7 +1298,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0088 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1324,7 +1324,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0090 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1348,7 +1348,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0091 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1372,7 +1372,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0092 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1398,7 +1398,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0094 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1424,7 +1424,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0096 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1450,7 +1450,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0098 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1476,7 +1476,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0100 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1502,7 +1502,7 @@ return {
 		}
 	},
 	bloodsydianGnoll_0102 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1526,7 +1526,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0103 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1550,7 +1550,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0104 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1574,7 +1574,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0105 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1598,7 +1598,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0106 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1622,7 +1622,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0107 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1646,7 +1646,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0108 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1670,7 +1670,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0109 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1694,7 +1694,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0110 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1718,7 +1718,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0111 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1742,7 +1742,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0112 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1766,7 +1766,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0113 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1790,7 +1790,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0114 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1814,7 +1814,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0115 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1838,7 +1838,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0116 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1862,7 +1862,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0117 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1886,7 +1886,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0118 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1910,7 +1910,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0119 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1934,7 +1934,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0120 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1958,7 +1958,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0121 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -1982,7 +1982,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0122 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2006,7 +2006,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0123 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2030,7 +2030,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0124 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2054,7 +2054,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0125 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2078,7 +2078,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0126 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2102,7 +2102,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0127 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2126,7 +2126,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0128 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2150,7 +2150,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0129 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2174,7 +2174,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0130 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2198,7 +2198,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0131 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2222,7 +2222,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0132 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2246,7 +2246,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0133 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2270,7 +2270,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0134 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2294,7 +2294,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0135 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2318,7 +2318,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0136 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2342,7 +2342,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0137 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2366,7 +2366,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0138 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2390,7 +2390,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0139 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2414,7 +2414,7 @@ return {
 		alias = {}
 	},
 	bloodsydianGnoll_0140 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			183,
 			127
@@ -2438,7 +2438,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0001 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2485,7 +2485,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0002 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2511,7 +2511,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0004 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2537,7 +2537,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0006 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2563,7 +2563,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0008 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2589,7 +2589,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0010 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2615,7 +2615,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0012 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2641,7 +2641,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0014 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2667,7 +2667,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0016 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2693,7 +2693,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0018 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2719,7 +2719,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0020 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2745,7 +2745,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0022 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2771,7 +2771,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0024 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2797,7 +2797,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0026 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2823,7 +2823,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0028 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2849,7 +2849,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0030 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2875,7 +2875,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0032 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2901,7 +2901,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0034 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2927,7 +2927,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0036 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2953,7 +2953,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0038 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -2979,7 +2979,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0040 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3005,7 +3005,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0042 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3031,7 +3031,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0044 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3057,7 +3057,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0046 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3083,7 +3083,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0048 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3109,7 +3109,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0050 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3135,7 +3135,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0052 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3161,7 +3161,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0054 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3187,7 +3187,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0056 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3213,7 +3213,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0058 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3239,7 +3239,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0060 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3265,7 +3265,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0062 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3291,7 +3291,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0064 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3317,7 +3317,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0066 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3343,7 +3343,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0068 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3369,7 +3369,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0070 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3395,7 +3395,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0072 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3421,7 +3421,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0079 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3447,7 +3447,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0081 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3473,7 +3473,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0083 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3499,7 +3499,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0085 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3525,7 +3525,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0087 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3551,7 +3551,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0089 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3577,7 +3577,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0091 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3603,7 +3603,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0093 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3629,7 +3629,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0095 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3655,7 +3655,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0097 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3681,7 +3681,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0108 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3707,7 +3707,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0110 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3733,7 +3733,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0112 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3759,7 +3759,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0114 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3785,7 +3785,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0116 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3811,7 +3811,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0118 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3837,7 +3837,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0120 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3863,7 +3863,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0122 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3889,7 +3889,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0124 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3915,7 +3915,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0126 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3941,7 +3941,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0128 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3967,7 +3967,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0130 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -3993,7 +3993,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0132 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4019,7 +4019,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0134 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4043,7 +4043,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0135 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4067,7 +4067,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0136 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4093,7 +4093,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0146 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4119,7 +4119,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0148 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4148,7 +4148,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0150 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4175,7 +4175,7 @@ return {
 		}
 	},
 	bloodsydianWarlock_0153 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4199,7 +4199,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0157 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4223,7 +4223,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0158 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4247,7 +4247,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0159 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4271,7 +4271,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0160 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4295,7 +4295,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0161 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4319,7 +4319,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0162 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4343,7 +4343,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0163 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4367,7 +4367,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0164 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4391,7 +4391,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0165 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4415,7 +4415,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0166 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4439,7 +4439,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0167 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4463,7 +4463,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0168 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4487,7 +4487,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0169 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4511,7 +4511,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0170 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4535,7 +4535,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0171 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4559,7 +4559,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0172 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4583,7 +4583,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0173 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4607,7 +4607,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0174 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4631,7 +4631,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0175 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4655,7 +4655,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0176 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4679,7 +4679,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0177 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4703,7 +4703,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0178 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4727,7 +4727,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0179 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4751,7 +4751,7 @@ return {
 		alias = {}
 	},
 	bloodsydianWarlock_0180 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			225,
 			121
@@ -4775,7 +4775,7 @@ return {
 		alias = {}
 	},
 	ogre_mage_0001 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -4803,7 +4803,7 @@ return {
 		}
 	},
 	ogre_mage_0002 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -4829,7 +4829,7 @@ return {
 		}
 	},
 	ogre_mage_0004 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -4855,7 +4855,7 @@ return {
 		}
 	},
 	ogre_mage_0006 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -4881,7 +4881,7 @@ return {
 		}
 	},
 	ogre_mage_0008 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -4907,7 +4907,7 @@ return {
 		}
 	},
 	ogre_mage_0010 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -4933,7 +4933,7 @@ return {
 		}
 	},
 	ogre_mage_0012 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -4959,7 +4959,7 @@ return {
 		}
 	},
 	ogre_mage_0014 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -4985,7 +4985,7 @@ return {
 		}
 	},
 	ogre_mage_0016 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5011,7 +5011,7 @@ return {
 		}
 	},
 	ogre_mage_0018 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5037,7 +5037,7 @@ return {
 		}
 	},
 	ogre_mage_0020 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5063,7 +5063,7 @@ return {
 		}
 	},
 	ogre_mage_0022 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5089,7 +5089,7 @@ return {
 		}
 	},
 	ogre_mage_0024 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5115,7 +5115,7 @@ return {
 		}
 	},
 	ogre_mage_0026 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5141,7 +5141,7 @@ return {
 		}
 	},
 	ogre_mage_0028 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5167,7 +5167,7 @@ return {
 		}
 	},
 	ogre_mage_0030 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5193,7 +5193,7 @@ return {
 		}
 	},
 	ogre_mage_0032 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5219,7 +5219,7 @@ return {
 		}
 	},
 	ogre_mage_0034 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5245,7 +5245,7 @@ return {
 		}
 	},
 	ogre_mage_0036 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5271,7 +5271,7 @@ return {
 		}
 	},
 	ogre_mage_0038 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5297,7 +5297,7 @@ return {
 		}
 	},
 	ogre_mage_0040 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5323,7 +5323,7 @@ return {
 		}
 	},
 	ogre_mage_0042 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5349,7 +5349,7 @@ return {
 		}
 	},
 	ogre_mage_0044 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5375,7 +5375,7 @@ return {
 		}
 	},
 	ogre_mage_0046 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5401,7 +5401,7 @@ return {
 		}
 	},
 	ogre_mage_0048 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5427,7 +5427,7 @@ return {
 		}
 	},
 	ogre_mage_0050 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5453,7 +5453,7 @@ return {
 		}
 	},
 	ogre_mage_0052 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5479,7 +5479,7 @@ return {
 		}
 	},
 	ogre_mage_0054 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5505,7 +5505,7 @@ return {
 		}
 	},
 	ogre_mage_0056 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5531,7 +5531,7 @@ return {
 		}
 	},
 	ogre_mage_0058 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5557,7 +5557,7 @@ return {
 		}
 	},
 	ogre_mage_0060 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5583,7 +5583,7 @@ return {
 		}
 	},
 	ogre_mage_0062 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5609,7 +5609,7 @@ return {
 		}
 	},
 	ogre_mage_0064 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5635,7 +5635,7 @@ return {
 		}
 	},
 	ogre_mage_0066 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5661,7 +5661,7 @@ return {
 		}
 	},
 	ogre_mage_0068 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5687,7 +5687,7 @@ return {
 		}
 	},
 	ogre_mage_0070 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5713,7 +5713,7 @@ return {
 		}
 	},
 	ogre_mage_0072 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5739,7 +5739,7 @@ return {
 		}
 	},
 	ogre_mage_0074 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5765,7 +5765,7 @@ return {
 		}
 	},
 	ogre_mage_0076 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5791,7 +5791,7 @@ return {
 		}
 	},
 	ogre_mage_0078 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5817,7 +5817,7 @@ return {
 		}
 	},
 	ogre_mage_0080 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5843,7 +5843,7 @@ return {
 		}
 	},
 	ogre_mage_0082 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5869,7 +5869,7 @@ return {
 		}
 	},
 	ogre_mage_0084 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5895,7 +5895,7 @@ return {
 		}
 	},
 	ogre_mage_0086 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5919,7 +5919,7 @@ return {
 		alias = {}
 	},
 	ogre_mage_0087 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5945,7 +5945,7 @@ return {
 		}
 	},
 	ogre_mage_0089 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5971,7 +5971,7 @@ return {
 		}
 	},
 	ogre_mage_0091 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -5997,7 +5997,7 @@ return {
 		}
 	},
 	ogre_mage_0093 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6023,7 +6023,7 @@ return {
 		}
 	},
 	ogre_mage_0095 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6049,7 +6049,7 @@ return {
 		}
 	},
 	ogre_mage_0097 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6075,7 +6075,7 @@ return {
 		}
 	},
 	ogre_mage_0099 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6101,7 +6101,7 @@ return {
 		}
 	},
 	ogre_mage_0101 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6127,7 +6127,7 @@ return {
 		}
 	},
 	ogre_mage_0103 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6153,7 +6153,7 @@ return {
 		}
 	},
 	ogre_mage_0105 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6179,7 +6179,7 @@ return {
 		}
 	},
 	ogre_mage_0107 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6205,7 +6205,7 @@ return {
 		}
 	},
 	ogre_mage_0109 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6231,7 +6231,7 @@ return {
 		}
 	},
 	ogre_mage_0111 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6257,7 +6257,7 @@ return {
 		}
 	},
 	ogre_mage_0113 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6283,7 +6283,7 @@ return {
 		}
 	},
 	ogre_mage_0115 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6307,7 +6307,7 @@ return {
 		alias = {}
 	},
 	ogre_mage_0116 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6333,7 +6333,7 @@ return {
 		}
 	},
 	ogre_mage_0118 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6359,7 +6359,7 @@ return {
 		}
 	},
 	ogre_mage_0123 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6385,7 +6385,7 @@ return {
 		}
 	},
 	ogre_mage_0125 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6411,7 +6411,7 @@ return {
 		}
 	},
 	ogre_mage_0127 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6437,7 +6437,7 @@ return {
 		}
 	},
 	ogre_mage_0129 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6463,7 +6463,7 @@ return {
 		}
 	},
 	ogre_mage_0131 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6489,7 +6489,7 @@ return {
 		}
 	},
 	ogre_mage_0133 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6513,7 +6513,7 @@ return {
 		alias = {}
 	},
 	ogre_mage_0134 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6537,7 +6537,7 @@ return {
 		alias = {}
 	},
 	ogre_mage_0135 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6561,7 +6561,7 @@ return {
 		alias = {}
 	},
 	ogre_mage_0136 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6585,7 +6585,7 @@ return {
 		alias = {}
 	},
 	ogre_mage_0137 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6609,7 +6609,7 @@ return {
 		alias = {}
 	},
 	ogre_mage_0138 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6635,7 +6635,7 @@ return {
 		}
 	},
 	ogre_mage_0140 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			211,
 			110
@@ -6663,7 +6663,7 @@ return {
 		}
 	},
 	ogre_mage_damage_0001 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			65,
 			65
@@ -6689,7 +6689,7 @@ return {
 		}
 	},
 	ogre_mage_damage_0003 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			65,
 			65
@@ -6715,7 +6715,7 @@ return {
 		}
 	},
 	ogre_mage_damage_0005 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			65,
 			65
@@ -6741,7 +6741,7 @@ return {
 		}
 	},
 	ogre_mage_damage_0007 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			65,
 			65
@@ -6767,7 +6767,7 @@ return {
 		}
 	},
 	ogre_mage_damage_0009 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			65,
 			65
@@ -6793,7 +6793,7 @@ return {
 		}
 	},
 	ogre_mage_damage_0011 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			65,
 			65
@@ -6819,7 +6819,7 @@ return {
 		}
 	},
 	ogre_mage_damage_0013 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			65,
 			65
@@ -6850,7 +6850,7 @@ return {
 		}
 	},
 	perython_rock_0001 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -6876,7 +6876,7 @@ return {
 		}
 	},
 	perython_rock_0003 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -6902,7 +6902,7 @@ return {
 		}
 	},
 	perython_rock_0005 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -6928,7 +6928,7 @@ return {
 		}
 	},
 	perython_rock_0007 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -6954,7 +6954,7 @@ return {
 		}
 	},
 	perython_rock_0009 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -6980,7 +6980,7 @@ return {
 		}
 	},
 	perython_rock_0011 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7006,7 +7006,7 @@ return {
 		}
 	},
 	perython_rock_0013 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7032,7 +7032,7 @@ return {
 		}
 	},
 	perython_rock_0015 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7058,7 +7058,7 @@ return {
 		}
 	},
 	perython_rock_0017 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7084,7 +7084,7 @@ return {
 		}
 	},
 	perython_rock_0019 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7110,7 +7110,7 @@ return {
 		}
 	},
 	perython_rock_0021 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7136,7 +7136,7 @@ return {
 		}
 	},
 	perython_rock_0023 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7162,7 +7162,7 @@ return {
 		}
 	},
 	perython_rock_0025 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7188,7 +7188,7 @@ return {
 		}
 	},
 	perython_rock_0027 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7214,7 +7214,7 @@ return {
 		}
 	},
 	perython_rock_0029 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7240,7 +7240,7 @@ return {
 		}
 	},
 	perython_rock_0030 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7266,7 +7266,7 @@ return {
 		}
 	},
 	perython_rock_0032 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7292,7 +7292,7 @@ return {
 		}
 	},
 	perython_rock_0034 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7318,7 +7318,7 @@ return {
 		}
 	},
 	perython_rock_0036 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7344,7 +7344,7 @@ return {
 		}
 	},
 	perython_rock_0038 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7370,7 +7370,7 @@ return {
 		}
 	},
 	perython_rock_0040 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7396,7 +7396,7 @@ return {
 		}
 	},
 	perython_rock_0043 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7422,7 +7422,7 @@ return {
 		}
 	},
 	perython_rock_0045 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7448,7 +7448,7 @@ return {
 		}
 	},
 	perython_rock_0047 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141
@@ -7474,7 +7474,7 @@ return {
 		}
 	},
 	perython_rock_0049 = {
-		a_name = "go_enemies_hulking_rage-1.dds",
+		a_name = "go_enemies_hulking_rage-1.png",
 		size = {
 			70,
 			141

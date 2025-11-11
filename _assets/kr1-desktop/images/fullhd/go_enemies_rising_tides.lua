@@ -2,7 +2,7 @@
 
 return {
 	BlackSurge_towerAttack_0001 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			124,
 			110
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	BlackSurge_towerAttack_0003 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			124,
 			110
@@ -52,7 +52,7 @@ return {
 		alias = {}
 	},
 	BlackSurge_towerAttack_0004 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			124,
 			110
@@ -76,7 +76,7 @@ return {
 		alias = {}
 	},
 	BlackSurge_towerAttack_0005 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			124,
 			110
@@ -102,7 +102,7 @@ return {
 		}
 	},
 	BlackSurge_towerAttack_0007 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			124,
 			110
@@ -129,7 +129,7 @@ return {
 		}
 	},
 	BlackSurge_towerAttack_0010 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			124,
 			110
@@ -156,7 +156,7 @@ return {
 		}
 	},
 	BlackSurge_towerAttack_0013 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			124,
 			110
@@ -183,7 +183,7 @@ return {
 		}
 	},
 	BlackSurge_towerAttack_0016 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			124,
 			110
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	BlackSurge_towerAttack_0019 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			124,
 			110
@@ -236,7 +236,7 @@ return {
 		}
 	},
 	BlackSurge_towerAttack_0021 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			124,
 			110
@@ -260,7 +260,7 @@ return {
 		alias = {}
 	},
 	BlackSurge_towerAttack_0022 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			124,
 			110
@@ -284,7 +284,7 @@ return {
 		alias = {}
 	},
 	BlackSurge_towerAttack_0023 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			124,
 			110
@@ -310,7 +310,7 @@ return {
 		}
 	},
 	Blacksurge_0001 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -336,7 +336,7 @@ return {
 		}
 	},
 	Blacksurge_0003 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -362,7 +362,7 @@ return {
 		}
 	},
 	Blacksurge_0005 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -388,7 +388,7 @@ return {
 		}
 	},
 	Blacksurge_0007 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -414,7 +414,7 @@ return {
 		}
 	},
 	Blacksurge_0009 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -440,7 +440,7 @@ return {
 		}
 	},
 	Blacksurge_0011 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -466,7 +466,7 @@ return {
 		}
 	},
 	Blacksurge_0013 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -492,7 +492,7 @@ return {
 		}
 	},
 	Blacksurge_0015 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -518,7 +518,7 @@ return {
 		}
 	},
 	Blacksurge_0017 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -544,7 +544,7 @@ return {
 		}
 	},
 	Blacksurge_0019 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -570,7 +570,7 @@ return {
 		}
 	},
 	Blacksurge_0021 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -596,7 +596,7 @@ return {
 		}
 	},
 	Blacksurge_0023 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -622,7 +622,7 @@ return {
 		}
 	},
 	Blacksurge_0025 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -648,7 +648,7 @@ return {
 		}
 	},
 	Blacksurge_0027 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -674,7 +674,7 @@ return {
 		}
 	},
 	Blacksurge_0029 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -700,7 +700,7 @@ return {
 		}
 	},
 	Blacksurge_0031 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -726,7 +726,7 @@ return {
 		}
 	},
 	Blacksurge_0033 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -752,7 +752,7 @@ return {
 		}
 	},
 	Blacksurge_0035 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -778,7 +778,7 @@ return {
 		}
 	},
 	Blacksurge_0037 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -804,7 +804,7 @@ return {
 		}
 	},
 	Blacksurge_0039 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -830,7 +830,7 @@ return {
 		}
 	},
 	Blacksurge_0041 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -856,7 +856,7 @@ return {
 		}
 	},
 	Blacksurge_0043 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -882,7 +882,7 @@ return {
 		}
 	},
 	Blacksurge_0045 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -908,7 +908,7 @@ return {
 		}
 	},
 	Blacksurge_0047 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -934,7 +934,7 @@ return {
 		}
 	},
 	Blacksurge_0049 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -960,7 +960,7 @@ return {
 		}
 	},
 	Blacksurge_0051 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -986,7 +986,7 @@ return {
 		}
 	},
 	Blacksurge_0053 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1012,7 +1012,7 @@ return {
 		}
 	},
 	Blacksurge_0055 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -1038,7 +1038,7 @@ return {
 		}
 	},
 	Blacksurge_0057 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -1064,7 +1064,7 @@ return {
 		}
 	},
 	Blacksurge_0059 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1090,7 +1090,7 @@ return {
 		}
 	},
 	Blacksurge_0061 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -1116,7 +1116,7 @@ return {
 		}
 	},
 	Blacksurge_0063 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -1142,7 +1142,7 @@ return {
 		}
 	},
 	Blacksurge_0065 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1168,7 +1168,7 @@ return {
 		}
 	},
 	Blacksurge_0067 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -1194,7 +1194,7 @@ return {
 		}
 	},
 	Blacksurge_0069 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1220,7 +1220,7 @@ return {
 		}
 	},
 	Blacksurge_0071 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -1246,7 +1246,7 @@ return {
 		}
 	},
 	Blacksurge_0073 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -1272,7 +1272,7 @@ return {
 		}
 	},
 	Blacksurge_0075 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -1298,7 +1298,7 @@ return {
 		}
 	},
 	Blacksurge_0077 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1324,7 +1324,7 @@ return {
 		}
 	},
 	Blacksurge_0079 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -1350,7 +1350,7 @@ return {
 		}
 	},
 	Blacksurge_0081 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1376,7 +1376,7 @@ return {
 		}
 	},
 	Blacksurge_0083 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1402,7 +1402,7 @@ return {
 		}
 	},
 	Blacksurge_0085 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1428,7 +1428,7 @@ return {
 		}
 	},
 	Blacksurge_0087 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -1454,7 +1454,7 @@ return {
 		}
 	},
 	Blacksurge_0089 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1480,7 +1480,7 @@ return {
 		}
 	},
 	Blacksurge_0091 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1506,7 +1506,7 @@ return {
 		}
 	},
 	Blacksurge_0093 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1532,7 +1532,7 @@ return {
 		}
 	},
 	Blacksurge_0095 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -1558,7 +1558,7 @@ return {
 		}
 	},
 	Blacksurge_0097 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -1584,7 +1584,7 @@ return {
 		}
 	},
 	Blacksurge_0099 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1610,7 +1610,7 @@ return {
 		}
 	},
 	Blacksurge_0101 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -1644,7 +1644,7 @@ return {
 		}
 	},
 	Blacksurge_0111 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1670,7 +1670,7 @@ return {
 		}
 	},
 	Blacksurge_0113 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1694,7 +1694,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0114 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1718,7 +1718,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0115 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1744,7 +1744,7 @@ return {
 		}
 	},
 	Blacksurge_0117 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1770,7 +1770,7 @@ return {
 		}
 	},
 	Blacksurge_0119 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1794,7 +1794,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0120 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1818,7 +1818,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0121 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1844,7 +1844,7 @@ return {
 		}
 	},
 	Blacksurge_0123 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1870,7 +1870,7 @@ return {
 		}
 	},
 	Blacksurge_0125 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1894,7 +1894,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0126 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1918,7 +1918,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0127 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1942,7 +1942,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0128 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1966,7 +1966,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0129 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -1990,7 +1990,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0130 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2014,7 +2014,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0131 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2038,7 +2038,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0132 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2062,7 +2062,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0133 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2088,7 +2088,7 @@ return {
 		}
 	},
 	Blacksurge_0135 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2114,7 +2114,7 @@ return {
 		}
 	},
 	Blacksurge_0137 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2138,7 +2138,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0138 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2162,7 +2162,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0139 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2188,7 +2188,7 @@ return {
 		}
 	},
 	Blacksurge_0141 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2214,7 +2214,7 @@ return {
 		}
 	},
 	Blacksurge_0143 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2238,7 +2238,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0144 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2262,7 +2262,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0145 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2288,7 +2288,7 @@ return {
 		}
 	},
 	Blacksurge_0147 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2312,7 +2312,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0148 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2338,7 +2338,7 @@ return {
 		}
 	},
 	Blacksurge_0150 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2364,7 +2364,7 @@ return {
 		}
 	},
 	Blacksurge_0152 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2390,7 +2390,7 @@ return {
 		}
 	},
 	Blacksurge_0154 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2418,7 +2418,7 @@ return {
 		}
 	},
 	Blacksurge_0158 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2444,7 +2444,7 @@ return {
 		}
 	},
 	Blacksurge_0160 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2470,7 +2470,7 @@ return {
 		}
 	},
 	Blacksurge_0162 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2496,7 +2496,7 @@ return {
 		}
 	},
 	Blacksurge_0164 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2522,7 +2522,7 @@ return {
 		}
 	},
 	Blacksurge_0166 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2548,7 +2548,7 @@ return {
 		}
 	},
 	Blacksurge_0168 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2581,7 +2581,7 @@ return {
 		}
 	},
 	Blacksurge_0177 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2615,7 +2615,7 @@ return {
 		}
 	},
 	Blacksurge_0187 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2641,7 +2641,7 @@ return {
 		}
 	},
 	Blacksurge_0189 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2667,7 +2667,7 @@ return {
 		}
 	},
 	Blacksurge_0191 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2695,7 +2695,7 @@ return {
 		}
 	},
 	Blacksurge_0195 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2721,7 +2721,7 @@ return {
 		}
 	},
 	Blacksurge_0197 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2747,7 +2747,7 @@ return {
 		}
 	},
 	Blacksurge_0199 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2773,7 +2773,7 @@ return {
 		}
 	},
 	Blacksurge_0201 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2799,7 +2799,7 @@ return {
 		}
 	},
 	Blacksurge_0203 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2825,7 +2825,7 @@ return {
 		}
 	},
 	Blacksurge_0205 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2851,7 +2851,7 @@ return {
 		}
 	},
 	Blacksurge_0207 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2877,7 +2877,7 @@ return {
 		}
 	},
 	Blacksurge_0209 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2903,7 +2903,7 @@ return {
 		}
 	},
 	Blacksurge_0211 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2929,7 +2929,7 @@ return {
 		}
 	},
 	Blacksurge_0213 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2955,7 +2955,7 @@ return {
 		}
 	},
 	Blacksurge_0215 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -2981,7 +2981,7 @@ return {
 		}
 	},
 	Blacksurge_0217 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3007,7 +3007,7 @@ return {
 		}
 	},
 	Blacksurge_0219 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3033,7 +3033,7 @@ return {
 		}
 	},
 	Blacksurge_0221 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3059,7 +3059,7 @@ return {
 		}
 	},
 	Blacksurge_0223 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3085,7 +3085,7 @@ return {
 		}
 	},
 	Blacksurge_0225 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3111,7 +3111,7 @@ return {
 		}
 	},
 	Blacksurge_0227 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3137,7 +3137,7 @@ return {
 		}
 	},
 	Blacksurge_0229 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3163,7 +3163,7 @@ return {
 		}
 	},
 	Blacksurge_0231 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3189,7 +3189,7 @@ return {
 		}
 	},
 	Blacksurge_0233 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3219,7 +3219,7 @@ return {
 		}
 	},
 	Blacksurge_0239 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3245,7 +3245,7 @@ return {
 		}
 	},
 	Blacksurge_0241 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3269,7 +3269,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0242 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3293,7 +3293,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0243 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3317,7 +3317,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0244 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3341,7 +3341,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0245 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3365,7 +3365,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0246 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3389,7 +3389,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0247 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3413,7 +3413,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0248 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3437,7 +3437,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0249 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3461,7 +3461,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0250 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3485,7 +3485,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0251 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3511,7 +3511,7 @@ return {
 		}
 	},
 	Blacksurge_0253 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3537,7 +3537,7 @@ return {
 		}
 	},
 	Blacksurge_0255 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3563,7 +3563,7 @@ return {
 		}
 	},
 	Blacksurge_0257 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3589,7 +3589,7 @@ return {
 		}
 	},
 	Blacksurge_0259 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3615,7 +3615,7 @@ return {
 		}
 	},
 	Blacksurge_0261 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3641,7 +3641,7 @@ return {
 		}
 	},
 	Blacksurge_0263 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -3668,7 +3668,7 @@ return {
 		}
 	},
 	Blacksurge_0266 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -3695,7 +3695,7 @@ return {
 		}
 	},
 	Blacksurge_0269 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3722,7 +3722,7 @@ return {
 		}
 	},
 	Blacksurge_0272 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3749,7 +3749,7 @@ return {
 		}
 	},
 	Blacksurge_0275 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -3776,7 +3776,7 @@ return {
 		}
 	},
 	Blacksurge_0278 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -3803,7 +3803,7 @@ return {
 		}
 	},
 	Blacksurge_0281 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -3830,7 +3830,7 @@ return {
 		}
 	},
 	Blacksurge_0284 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3857,7 +3857,7 @@ return {
 		}
 	},
 	Blacksurge_0287 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -3884,7 +3884,7 @@ return {
 		}
 	},
 	Blacksurge_0290 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -3911,7 +3911,7 @@ return {
 		}
 	},
 	Blacksurge_0293 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -3935,7 +3935,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0294 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			169,
 			104
@@ -3959,7 +3959,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0295 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -3983,7 +3983,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0296 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4007,7 +4007,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0297 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4031,7 +4031,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0298 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4055,7 +4055,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0299 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4079,7 +4079,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0300 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4103,7 +4103,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0301 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4127,7 +4127,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0302 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4151,7 +4151,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0303 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4175,7 +4175,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0304 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4199,7 +4199,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0305 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4223,7 +4223,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0306 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4247,7 +4247,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0307 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4271,7 +4271,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0308 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4295,7 +4295,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0309 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4321,7 +4321,7 @@ return {
 		}
 	},
 	Blacksurge_0311 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4345,7 +4345,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0312 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4369,7 +4369,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0313 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4393,7 +4393,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0314 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4417,7 +4417,7 @@ return {
 		alias = {}
 	},
 	Blacksurge_0315 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4443,7 +4443,7 @@ return {
 		}
 	},
 	Blacksurge_0317 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4470,7 +4470,7 @@ return {
 		}
 	},
 	Blacksurge_0320 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			104
@@ -4494,7 +4494,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0001 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4522,7 +4522,7 @@ return {
 		}
 	},
 	BloodShell_0003 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4548,7 +4548,7 @@ return {
 		}
 	},
 	BloodShell_0005 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4574,7 +4574,7 @@ return {
 		}
 	},
 	BloodShell_0007 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4600,7 +4600,7 @@ return {
 		}
 	},
 	BloodShell_0009 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4626,7 +4626,7 @@ return {
 		}
 	},
 	BloodShell_0011 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4652,7 +4652,7 @@ return {
 		}
 	},
 	BloodShell_0013 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4678,7 +4678,7 @@ return {
 		}
 	},
 	BloodShell_0015 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4704,7 +4704,7 @@ return {
 		}
 	},
 	BloodShell_0019 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4730,7 +4730,7 @@ return {
 		}
 	},
 	BloodShell_0021 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4756,7 +4756,7 @@ return {
 		}
 	},
 	BloodShell_0023 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4782,7 +4782,7 @@ return {
 		}
 	},
 	BloodShell_0025 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4808,7 +4808,7 @@ return {
 		}
 	},
 	BloodShell_0027 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4834,7 +4834,7 @@ return {
 		}
 	},
 	BloodShell_0029 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4860,7 +4860,7 @@ return {
 		}
 	},
 	BloodShell_0031 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4886,7 +4886,7 @@ return {
 		}
 	},
 	BloodShell_0033 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4912,7 +4912,7 @@ return {
 		}
 	},
 	BloodShell_0035 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4938,7 +4938,7 @@ return {
 		}
 	},
 	BloodShell_0037 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4964,7 +4964,7 @@ return {
 		}
 	},
 	BloodShell_0039 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -4990,7 +4990,7 @@ return {
 		}
 	},
 	BloodShell_0041 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5016,7 +5016,7 @@ return {
 		}
 	},
 	BloodShell_0043 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5042,7 +5042,7 @@ return {
 		}
 	},
 	BloodShell_0045 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5068,7 +5068,7 @@ return {
 		}
 	},
 	BloodShell_0047 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5094,7 +5094,7 @@ return {
 		}
 	},
 	BloodShell_0049 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5120,7 +5120,7 @@ return {
 		}
 	},
 	BloodShell_0051 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5144,7 +5144,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0052 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5174,7 +5174,7 @@ return {
 		}
 	},
 	BloodShell_0056 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5200,7 +5200,7 @@ return {
 		}
 	},
 	BloodShell_0058 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5226,7 +5226,7 @@ return {
 		}
 	},
 	BloodShell_0060 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5256,7 +5256,7 @@ return {
 		}
 	},
 	BloodShell_0066 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5282,7 +5282,7 @@ return {
 		}
 	},
 	BloodShell_0068 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5308,7 +5308,7 @@ return {
 		}
 	},
 	BloodShell_0070 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5334,7 +5334,7 @@ return {
 		}
 	},
 	BloodShell_0072 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5360,7 +5360,7 @@ return {
 		}
 	},
 	BloodShell_0074 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5386,7 +5386,7 @@ return {
 		}
 	},
 	BloodShell_0076 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5412,7 +5412,7 @@ return {
 		}
 	},
 	BloodShell_0080 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5438,7 +5438,7 @@ return {
 		}
 	},
 	BloodShell_0082 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5464,7 +5464,7 @@ return {
 		}
 	},
 	BloodShell_0084 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5490,7 +5490,7 @@ return {
 		}
 	},
 	BloodShell_0086 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5516,7 +5516,7 @@ return {
 		}
 	},
 	BloodShell_0088 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5547,7 +5547,7 @@ return {
 		}
 	},
 	BloodShell_0095 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5573,7 +5573,7 @@ return {
 		}
 	},
 	BloodShell_0097 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5597,7 +5597,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0098 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5625,7 +5625,7 @@ return {
 		}
 	},
 	BloodShell_0102 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5653,7 +5653,7 @@ return {
 		}
 	},
 	BloodShell_0106 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5681,7 +5681,7 @@ return {
 		}
 	},
 	BloodShell_0110 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5709,7 +5709,7 @@ return {
 		}
 	},
 	BloodShell_0114 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5733,7 +5733,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0115 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5757,7 +5757,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0116 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5781,7 +5781,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0117 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5805,7 +5805,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0118 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5829,7 +5829,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0119 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5853,7 +5853,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0120 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5877,7 +5877,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0121 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5901,7 +5901,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0122 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5925,7 +5925,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0123 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5949,7 +5949,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0124 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5973,7 +5973,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0125 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -5997,7 +5997,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0126 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -6021,7 +6021,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0127 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -6045,7 +6045,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0128 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -6069,7 +6069,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0129 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -6093,7 +6093,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0130 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -6119,7 +6119,7 @@ return {
 		}
 	},
 	BloodShell_0132 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -6143,7 +6143,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0133 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -6167,7 +6167,7 @@ return {
 		alias = {}
 	},
 	BloodShell_0134 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			143,
 			101
@@ -6195,7 +6195,7 @@ return {
 		}
 	},
 	Bluegale_0001 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6223,7 +6223,7 @@ return {
 		}
 	},
 	Bluegale_0003 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6249,7 +6249,7 @@ return {
 		}
 	},
 	Bluegale_0005 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6275,7 +6275,7 @@ return {
 		}
 	},
 	Bluegale_0007 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6301,7 +6301,7 @@ return {
 		}
 	},
 	Bluegale_0009 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6327,7 +6327,7 @@ return {
 		}
 	},
 	Bluegale_0011 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -6353,7 +6353,7 @@ return {
 		}
 	},
 	Bluegale_0013 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6379,7 +6379,7 @@ return {
 		}
 	},
 	Bluegale_0015 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6405,7 +6405,7 @@ return {
 		}
 	},
 	Bluegale_0017 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6431,7 +6431,7 @@ return {
 		}
 	},
 	Bluegale_0021 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6457,7 +6457,7 @@ return {
 		}
 	},
 	Bluegale_0023 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6483,7 +6483,7 @@ return {
 		}
 	},
 	Bluegale_0025 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6509,7 +6509,7 @@ return {
 		}
 	},
 	Bluegale_0027 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6535,7 +6535,7 @@ return {
 		}
 	},
 	Bluegale_0029 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6561,7 +6561,7 @@ return {
 		}
 	},
 	Bluegale_0031 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6587,7 +6587,7 @@ return {
 		}
 	},
 	Bluegale_0033 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6613,7 +6613,7 @@ return {
 		}
 	},
 	Bluegale_0035 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6639,7 +6639,7 @@ return {
 		}
 	},
 	Bluegale_0037 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6665,7 +6665,7 @@ return {
 		}
 	},
 	Bluegale_0039 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6691,7 +6691,7 @@ return {
 		}
 	},
 	Bluegale_0041 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6717,7 +6717,7 @@ return {
 		}
 	},
 	Bluegale_0043 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6743,7 +6743,7 @@ return {
 		}
 	},
 	Bluegale_0045 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6769,7 +6769,7 @@ return {
 		}
 	},
 	Bluegale_0047 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6795,7 +6795,7 @@ return {
 		}
 	},
 	Bluegale_0049 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6821,7 +6821,7 @@ return {
 		}
 	},
 	Bluegale_0051 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6847,7 +6847,7 @@ return {
 		}
 	},
 	Bluegale_0053 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6873,7 +6873,7 @@ return {
 		}
 	},
 	Bluegale_0055 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6899,7 +6899,7 @@ return {
 		}
 	},
 	Bluegale_0057 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6925,7 +6925,7 @@ return {
 		}
 	},
 	Bluegale_0059 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6951,7 +6951,7 @@ return {
 		}
 	},
 	Bluegale_0061 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -6977,7 +6977,7 @@ return {
 		}
 	},
 	Bluegale_0063 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7003,7 +7003,7 @@ return {
 		}
 	},
 	Bluegale_0065 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7029,7 +7029,7 @@ return {
 		}
 	},
 	Bluegale_0067 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7055,7 +7055,7 @@ return {
 		}
 	},
 	Bluegale_0069 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7081,7 +7081,7 @@ return {
 		}
 	},
 	Bluegale_0071 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7107,7 +7107,7 @@ return {
 		}
 	},
 	Bluegale_0073 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7133,7 +7133,7 @@ return {
 		}
 	},
 	Bluegale_0075 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7159,7 +7159,7 @@ return {
 		}
 	},
 	Bluegale_0077 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7185,7 +7185,7 @@ return {
 		}
 	},
 	Bluegale_0079 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7211,7 +7211,7 @@ return {
 		}
 	},
 	Bluegale_0081 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7237,7 +7237,7 @@ return {
 		}
 	},
 	Bluegale_0083 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7263,7 +7263,7 @@ return {
 		}
 	},
 	Bluegale_0085 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7289,7 +7289,7 @@ return {
 		}
 	},
 	Bluegale_0087 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7315,7 +7315,7 @@ return {
 		}
 	},
 	Bluegale_0089 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7341,7 +7341,7 @@ return {
 		}
 	},
 	Bluegale_0091 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7367,7 +7367,7 @@ return {
 		}
 	},
 	Bluegale_0093 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7393,7 +7393,7 @@ return {
 		}
 	},
 	Bluegale_0095 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7419,7 +7419,7 @@ return {
 		}
 	},
 	Bluegale_0097 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7446,7 +7446,7 @@ return {
 		}
 	},
 	Bluegale_0100 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7470,7 +7470,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0101 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7527,7 +7527,7 @@ return {
 		}
 	},
 	Bluegale_0111 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7553,7 +7553,7 @@ return {
 		}
 	},
 	Bluegale_0113 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7579,7 +7579,7 @@ return {
 		}
 	},
 	Bluegale_0115 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7605,7 +7605,7 @@ return {
 		}
 	},
 	Bluegale_0117 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7631,7 +7631,7 @@ return {
 		}
 	},
 	Bluegale_0119 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7657,7 +7657,7 @@ return {
 		}
 	},
 	Bluegale_0121 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7683,7 +7683,7 @@ return {
 		}
 	},
 	Bluegale_0123 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7709,7 +7709,7 @@ return {
 		}
 	},
 	Bluegale_0125 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7735,7 +7735,7 @@ return {
 		}
 	},
 	Bluegale_0136 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7761,7 +7761,7 @@ return {
 		}
 	},
 	Bluegale_0138 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7787,7 +7787,7 @@ return {
 		}
 	},
 	Bluegale_0140 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7813,7 +7813,7 @@ return {
 		}
 	},
 	Bluegale_0142 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -7839,7 +7839,7 @@ return {
 		}
 	},
 	Bluegale_0144 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7865,7 +7865,7 @@ return {
 		}
 	},
 	Bluegale_0146 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7891,7 +7891,7 @@ return {
 		}
 	},
 	Bluegale_0148 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7917,7 +7917,7 @@ return {
 		}
 	},
 	Bluegale_0150 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7943,7 +7943,7 @@ return {
 		}
 	},
 	Bluegale_0152 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7969,7 +7969,7 @@ return {
 		}
 	},
 	Bluegale_0154 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -7995,7 +7995,7 @@ return {
 		}
 	},
 	Bluegale_0156 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8021,7 +8021,7 @@ return {
 		}
 	},
 	Bluegale_0158 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8047,7 +8047,7 @@ return {
 		}
 	},
 	Bluegale_0160 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8073,7 +8073,7 @@ return {
 		}
 	},
 	Bluegale_0162 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8099,7 +8099,7 @@ return {
 		}
 	},
 	Bluegale_0164 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8125,7 +8125,7 @@ return {
 		}
 	},
 	Bluegale_0166 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -8151,7 +8151,7 @@ return {
 		}
 	},
 	Bluegale_0182 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8177,7 +8177,7 @@ return {
 		}
 	},
 	Bluegale_0184 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8203,7 +8203,7 @@ return {
 		}
 	},
 	Bluegale_0186 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8231,7 +8231,7 @@ return {
 		}
 	},
 	Bluegale_0190 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8257,7 +8257,7 @@ return {
 		}
 	},
 	Bluegale_0192 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8283,7 +8283,7 @@ return {
 		}
 	},
 	Bluegale_0194 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8309,7 +8309,7 @@ return {
 		}
 	},
 	Bluegale_0196 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8349,7 +8349,7 @@ return {
 		}
 	},
 	Bluegale_0212 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8375,7 +8375,7 @@ return {
 		}
 	},
 	Bluegale_0214 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8401,7 +8401,7 @@ return {
 		}
 	},
 	Bluegale_0216 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8427,7 +8427,7 @@ return {
 		}
 	},
 	Bluegale_0218 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8457,7 +8457,7 @@ return {
 		}
 	},
 	Bluegale_0224 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8483,7 +8483,7 @@ return {
 		}
 	},
 	Bluegale_0226 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8509,7 +8509,7 @@ return {
 		}
 	},
 	Bluegale_0228 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8535,7 +8535,7 @@ return {
 		}
 	},
 	Bluegale_0230 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8561,7 +8561,7 @@ return {
 		}
 	},
 	Bluegale_0232 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8587,7 +8587,7 @@ return {
 		}
 	},
 	Bluegale_0234 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8613,7 +8613,7 @@ return {
 		}
 	},
 	Bluegale_0236 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8639,7 +8639,7 @@ return {
 		}
 	},
 	Bluegale_0238 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8665,7 +8665,7 @@ return {
 		}
 	},
 	Bluegale_0240 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8691,7 +8691,7 @@ return {
 		}
 	},
 	Bluegale_0242 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8717,7 +8717,7 @@ return {
 		}
 	},
 	Bluegale_0244 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8745,7 +8745,7 @@ return {
 		}
 	},
 	Bluegale_0248 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8773,7 +8773,7 @@ return {
 		}
 	},
 	Bluegale_0252 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8801,7 +8801,7 @@ return {
 		}
 	},
 	Bluegale_0256 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -8829,7 +8829,7 @@ return {
 		}
 	},
 	Bluegale_0260 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -8853,7 +8853,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0261 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -8877,7 +8877,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0262 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -8901,7 +8901,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0263 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -8925,7 +8925,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0264 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -8949,7 +8949,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0265 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -8973,7 +8973,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0266 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -8997,7 +8997,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0267 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -9021,7 +9021,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0268 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -9045,7 +9045,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0269 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -9069,7 +9069,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0270 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -9093,7 +9093,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0271 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -9117,7 +9117,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0272 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -9141,7 +9141,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0273 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -9165,7 +9165,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0274 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -9189,7 +9189,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0275 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -9213,7 +9213,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0276 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -9239,7 +9239,7 @@ return {
 		}
 	},
 	Bluegale_0278 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -9263,7 +9263,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0279 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -9287,7 +9287,7 @@ return {
 		alias = {}
 	},
 	Bluegale_0280 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -9315,7 +9315,7 @@ return {
 		}
 	},
 	Bluegale_ray_0001 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			34
@@ -9339,7 +9339,7 @@ return {
 		alias = {}
 	},
 	Bluegale_ray_0002 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			34
@@ -9363,7 +9363,7 @@ return {
 		alias = {}
 	},
 	Bluegale_ray_0003 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			34
@@ -9387,7 +9387,7 @@ return {
 		alias = {}
 	},
 	Bluegale_ray_0004 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			34
@@ -9413,7 +9413,7 @@ return {
 		}
 	},
 	Bluegale_ray_0006 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			34
@@ -9439,7 +9439,7 @@ return {
 		}
 	},
 	Bluegale_ray_0008 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			34
@@ -9465,7 +9465,7 @@ return {
 		}
 	},
 	Bluegale_ray_0010 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			34
@@ -9491,7 +9491,7 @@ return {
 		}
 	},
 	Bluegale_ray_0012 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			34
@@ -9517,7 +9517,7 @@ return {
 		}
 	},
 	Bluegale_ray_0014 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			34
@@ -9543,7 +9543,7 @@ return {
 		}
 	},
 	Bluegale_ray_0016 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			169,
 			34
@@ -9567,7 +9567,7 @@ return {
 		alias = {}
 	},
 	Bluegale_stormCloud_0001 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			163,
 			87
@@ -9591,7 +9591,7 @@ return {
 		alias = {}
 	},
 	Bluegale_stormCloud_0002 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			163,
 			87
@@ -9615,7 +9615,7 @@ return {
 		alias = {}
 	},
 	Bluegale_stormRay_0001 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -9820,7 +9820,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0182 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -9846,7 +9846,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0184 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			368,
 			163
@@ -9872,7 +9872,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0186 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -9898,7 +9898,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0188 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -9924,7 +9924,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0190 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -9950,7 +9950,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0192 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -9976,7 +9976,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0194 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -10002,7 +10002,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0196 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -10028,7 +10028,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0198 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -10054,7 +10054,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0200 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -10080,7 +10080,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0202 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -10106,7 +10106,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0204 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -10132,7 +10132,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0206 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -10158,7 +10158,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0208 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -10184,7 +10184,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0210 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -10210,7 +10210,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0212 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -10236,7 +10236,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0214 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -10262,7 +10262,7 @@ return {
 		}
 	},
 	Bluegale_stormRay_0216 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			368,
 			163
@@ -10288,7 +10288,7 @@ return {
 		}
 	},
 	GreenfinArmor_0001 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -10314,7 +10314,7 @@ return {
 		}
 	},
 	GreenfinArmor_0003 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -10340,7 +10340,7 @@ return {
 		}
 	},
 	GreenfinArmor_0005 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -10366,7 +10366,7 @@ return {
 		}
 	},
 	GreenfinArmor_0007 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -10390,7 +10390,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0008 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -10416,7 +10416,7 @@ return {
 		}
 	},
 	GreenfinArmor_0010 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -10442,7 +10442,7 @@ return {
 		}
 	},
 	GreenfinArmor_0012 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -10468,7 +10468,7 @@ return {
 		}
 	},
 	GreenfinArmor_0014 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -10494,7 +10494,7 @@ return {
 		}
 	},
 	GreenfinArmor_0016 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -10520,7 +10520,7 @@ return {
 		}
 	},
 	GreenfinArmor_0018 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -10544,7 +10544,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0019 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -10570,7 +10570,7 @@ return {
 		}
 	},
 	GreenfinArmor_0021 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -10596,7 +10596,7 @@ return {
 		}
 	},
 	GreenfinArmor_0023 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -10622,7 +10622,7 @@ return {
 		}
 	},
 	GreenfinArmor_0025 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -10648,7 +10648,7 @@ return {
 		}
 	},
 	GreenfinArmor_0027 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -10674,7 +10674,7 @@ return {
 		}
 	},
 	GreenfinArmor_0029 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -10698,7 +10698,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0030 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -10724,7 +10724,7 @@ return {
 		}
 	},
 	GreenfinArmor_0032 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -10750,7 +10750,7 @@ return {
 		}
 	},
 	GreenfinArmor_0034 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -10776,7 +10776,7 @@ return {
 		}
 	},
 	GreenfinArmor_0036 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -10802,7 +10802,7 @@ return {
 		}
 	},
 	GreenfinArmor_0038 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -10828,7 +10828,7 @@ return {
 		}
 	},
 	GreenfinArmor_0040 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -10852,7 +10852,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0041 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -10878,7 +10878,7 @@ return {
 		}
 	},
 	GreenfinArmor_0043 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -10904,7 +10904,7 @@ return {
 		}
 	},
 	GreenfinArmor_0045 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -10930,7 +10930,7 @@ return {
 		}
 	},
 	GreenfinArmor_0047 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -10956,7 +10956,7 @@ return {
 		}
 	},
 	GreenfinArmor_0049 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -10982,7 +10982,7 @@ return {
 		}
 	},
 	GreenfinArmor_0051 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11006,7 +11006,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0052 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11032,7 +11032,7 @@ return {
 		}
 	},
 	GreenfinArmor_0054 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11058,7 +11058,7 @@ return {
 		}
 	},
 	GreenfinArmor_0056 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11084,7 +11084,7 @@ return {
 		}
 	},
 	GreenfinArmor_0058 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11110,7 +11110,7 @@ return {
 		}
 	},
 	GreenfinArmor_0060 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11136,7 +11136,7 @@ return {
 		}
 	},
 	GreenfinArmor_0062 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11160,7 +11160,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0063 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11186,7 +11186,7 @@ return {
 		}
 	},
 	GreenfinArmor_0065 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11212,7 +11212,7 @@ return {
 		}
 	},
 	GreenfinArmor_0067 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11238,7 +11238,7 @@ return {
 		}
 	},
 	GreenfinArmor_0068 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11264,7 +11264,7 @@ return {
 		}
 	},
 	GreenfinArmor_0070 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11290,7 +11290,7 @@ return {
 		}
 	},
 	GreenfinArmor_0072 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11316,7 +11316,7 @@ return {
 		}
 	},
 	GreenfinArmor_0074 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11342,7 +11342,7 @@ return {
 		}
 	},
 	GreenfinArmor_0077 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11366,7 +11366,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0078 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11390,7 +11390,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0079 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11414,7 +11414,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0080 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11438,7 +11438,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0081 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11462,7 +11462,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0082 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11488,7 +11488,7 @@ return {
 		}
 	},
 	GreenfinArmor_0084 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11514,7 +11514,7 @@ return {
 		}
 	},
 	GreenfinArmor_0086 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11540,7 +11540,7 @@ return {
 		}
 	},
 	GreenfinArmor_0088 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11566,7 +11566,7 @@ return {
 		}
 	},
 	GreenfinArmor_0090 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11592,7 +11592,7 @@ return {
 		}
 	},
 	GreenfinArmor_0092 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11618,7 +11618,7 @@ return {
 		}
 	},
 	GreenfinArmor_0094 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11644,7 +11644,7 @@ return {
 		}
 	},
 	GreenfinArmor_0096 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11670,7 +11670,7 @@ return {
 		}
 	},
 	GreenfinArmor_0098 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11696,7 +11696,7 @@ return {
 		}
 	},
 	GreenfinArmor_0100 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11722,7 +11722,7 @@ return {
 		}
 	},
 	GreenfinArmor_0102 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11748,7 +11748,7 @@ return {
 		}
 	},
 	GreenfinArmor_0104 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11774,7 +11774,7 @@ return {
 		}
 	},
 	GreenfinArmor_0106 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11798,7 +11798,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0107 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11826,7 +11826,7 @@ return {
 		}
 	},
 	GreenfinArmor_0111 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11854,7 +11854,7 @@ return {
 		}
 	},
 	GreenfinArmor_0115 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11882,7 +11882,7 @@ return {
 		}
 	},
 	GreenfinArmor_0119 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11910,7 +11910,7 @@ return {
 		}
 	},
 	GreenfinArmor_0123 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -11934,7 +11934,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0124 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11958,7 +11958,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0125 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -11982,7 +11982,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0126 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -12006,7 +12006,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0127 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -12030,7 +12030,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0128 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -12054,7 +12054,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0129 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -12078,7 +12078,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0130 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -12102,7 +12102,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0131 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -12126,7 +12126,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0132 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -12150,7 +12150,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0133 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -12174,7 +12174,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0134 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -12198,7 +12198,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0135 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -12222,7 +12222,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0136 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -12248,7 +12248,7 @@ return {
 		}
 	},
 	GreenfinArmor_0138 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -12272,7 +12272,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0139 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -12298,7 +12298,7 @@ return {
 		}
 	},
 	GreenfinArmor_0141 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -12322,7 +12322,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0142 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -12346,7 +12346,7 @@ return {
 		alias = {}
 	},
 	GreenfinArmor_0143 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -12372,7 +12372,7 @@ return {
 		}
 	},
 	GreenfinNetsBig_0001 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			90,
 			62
@@ -12398,7 +12398,7 @@ return {
 		}
 	},
 	GreenfinNetsBig_0003 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			90,
 			62
@@ -12424,7 +12424,7 @@ return {
 		}
 	},
 	GreenfinNetsBig_0005 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			90,
 			62
@@ -12450,7 +12450,7 @@ return {
 		}
 	},
 	GreenfinNetsBig_0007 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			90,
 			62
@@ -12476,7 +12476,7 @@ return {
 		}
 	},
 	GreenfinNetsBig_0009 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			90,
 			62
@@ -12502,7 +12502,7 @@ return {
 		}
 	},
 	GreenfinNetsBig_0011 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			90,
 			62
@@ -12528,7 +12528,7 @@ return {
 		}
 	},
 	GreenfinNetsBig_0013 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			90,
 			62
@@ -12554,7 +12554,7 @@ return {
 		}
 	},
 	GreenfinNetsBig_0015 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			90,
 			62
@@ -12580,7 +12580,7 @@ return {
 		}
 	},
 	GreenfinNets_0001 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			76,
 			48
@@ -12606,7 +12606,7 @@ return {
 		}
 	},
 	GreenfinNets_0003 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			76,
 			48
@@ -12632,7 +12632,7 @@ return {
 		}
 	},
 	GreenfinNets_0005 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			76,
 			48
@@ -12658,7 +12658,7 @@ return {
 		}
 	},
 	GreenfinNets_0007 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			76,
 			48
@@ -12684,7 +12684,7 @@ return {
 		}
 	},
 	GreenfinNets_0009 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			76,
 			48
@@ -12710,7 +12710,7 @@ return {
 		}
 	},
 	GreenfinNets_0011 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			76,
 			48
@@ -12736,7 +12736,7 @@ return {
 		}
 	},
 	GreenfinNets_0013 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			76,
 			48
@@ -12762,7 +12762,7 @@ return {
 		}
 	},
 	GreenfinNets_0015 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			76,
 			48
@@ -12788,7 +12788,7 @@ return {
 		}
 	},
 	Greenfin_0001 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -12814,7 +12814,7 @@ return {
 		}
 	},
 	Greenfin_0003 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -12840,7 +12840,7 @@ return {
 		}
 	},
 	Greenfin_0005 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -12866,7 +12866,7 @@ return {
 		}
 	},
 	Greenfin_0007 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -12890,7 +12890,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0008 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -12916,7 +12916,7 @@ return {
 		}
 	},
 	Greenfin_0010 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -12942,7 +12942,7 @@ return {
 		}
 	},
 	Greenfin_0012 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -12968,7 +12968,7 @@ return {
 		}
 	},
 	Greenfin_0014 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -12994,7 +12994,7 @@ return {
 		}
 	},
 	Greenfin_0016 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -13020,7 +13020,7 @@ return {
 		}
 	},
 	Greenfin_0018 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -13044,7 +13044,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0019 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -13070,7 +13070,7 @@ return {
 		}
 	},
 	Greenfin_0021 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -13096,7 +13096,7 @@ return {
 		}
 	},
 	Greenfin_0023 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13122,7 +13122,7 @@ return {
 		}
 	},
 	Greenfin_0025 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13148,7 +13148,7 @@ return {
 		}
 	},
 	Greenfin_0027 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13174,7 +13174,7 @@ return {
 		}
 	},
 	Greenfin_0029 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13198,7 +13198,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0030 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13224,7 +13224,7 @@ return {
 		}
 	},
 	Greenfin_0032 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13250,7 +13250,7 @@ return {
 		}
 	},
 	Greenfin_0034 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13276,7 +13276,7 @@ return {
 		}
 	},
 	Greenfin_0036 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13302,7 +13302,7 @@ return {
 		}
 	},
 	Greenfin_0038 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13328,7 +13328,7 @@ return {
 		}
 	},
 	Greenfin_0040 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13352,7 +13352,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0041 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13378,7 +13378,7 @@ return {
 		}
 	},
 	Greenfin_0043 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13404,7 +13404,7 @@ return {
 		}
 	},
 	Greenfin_0045 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13430,7 +13430,7 @@ return {
 		}
 	},
 	Greenfin_0047 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13456,7 +13456,7 @@ return {
 		}
 	},
 	Greenfin_0049 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13482,7 +13482,7 @@ return {
 		}
 	},
 	Greenfin_0051 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13506,7 +13506,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0052 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13532,7 +13532,7 @@ return {
 		}
 	},
 	Greenfin_0054 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13558,7 +13558,7 @@ return {
 		}
 	},
 	Greenfin_0056 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13584,7 +13584,7 @@ return {
 		}
 	},
 	Greenfin_0058 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13610,7 +13610,7 @@ return {
 		}
 	},
 	Greenfin_0060 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13636,7 +13636,7 @@ return {
 		}
 	},
 	Greenfin_0062 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -13660,7 +13660,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0063 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13686,7 +13686,7 @@ return {
 		}
 	},
 	Greenfin_0065 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13712,7 +13712,7 @@ return {
 		}
 	},
 	Greenfin_0067 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -13738,7 +13738,7 @@ return {
 		}
 	},
 	Greenfin_0068 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -13764,7 +13764,7 @@ return {
 		}
 	},
 	Greenfin_0070 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -13790,7 +13790,7 @@ return {
 		}
 	},
 	Greenfin_0072 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -13816,7 +13816,7 @@ return {
 		}
 	},
 	Greenfin_0074 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -13842,7 +13842,7 @@ return {
 		}
 	},
 	Greenfin_0077 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -13866,7 +13866,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0078 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13890,7 +13890,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0079 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -13914,7 +13914,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0080 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -13938,7 +13938,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0081 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -13962,7 +13962,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0082 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -13988,7 +13988,7 @@ return {
 		}
 	},
 	Greenfin_0084 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14014,7 +14014,7 @@ return {
 		}
 	},
 	Greenfin_0086 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14040,7 +14040,7 @@ return {
 		}
 	},
 	Greenfin_0088 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14066,7 +14066,7 @@ return {
 		}
 	},
 	Greenfin_0090 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14092,7 +14092,7 @@ return {
 		}
 	},
 	Greenfin_0092 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14118,7 +14118,7 @@ return {
 		}
 	},
 	Greenfin_0094 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14144,7 +14144,7 @@ return {
 		}
 	},
 	Greenfin_0096 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14170,7 +14170,7 @@ return {
 		}
 	},
 	Greenfin_0098 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14196,7 +14196,7 @@ return {
 		}
 	},
 	Greenfin_0100 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14222,7 +14222,7 @@ return {
 		}
 	},
 	Greenfin_0102 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14251,7 +14251,7 @@ return {
 		}
 	},
 	Greenfin_0107 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14279,7 +14279,7 @@ return {
 		}
 	},
 	Greenfin_0111 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14307,7 +14307,7 @@ return {
 		}
 	},
 	Greenfin_0115 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14335,7 +14335,7 @@ return {
 		}
 	},
 	Greenfin_0119 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14363,7 +14363,7 @@ return {
 		}
 	},
 	Greenfin_0123 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14387,7 +14387,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0124 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14411,7 +14411,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0125 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14435,7 +14435,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0126 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14459,7 +14459,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0127 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14483,7 +14483,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0128 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14507,7 +14507,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0129 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14531,7 +14531,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0130 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14555,7 +14555,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0131 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14579,7 +14579,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0132 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14603,7 +14603,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0133 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14627,7 +14627,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0134 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14651,7 +14651,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0135 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14675,7 +14675,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0136 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			101,
 			76
@@ -14701,7 +14701,7 @@ return {
 		}
 	},
 	Greenfin_0138 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14725,7 +14725,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0139 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14751,7 +14751,7 @@ return {
 		}
 	},
 	Greenfin_0141 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14775,7 +14775,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0142 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14799,7 +14799,7 @@ return {
 		alias = {}
 	},
 	Greenfin_0143 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			101,
 			76
@@ -14825,7 +14825,7 @@ return {
 		}
 	},
 	Redspine_0001 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -14851,7 +14851,7 @@ return {
 		}
 	},
 	Redspine_0003 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -14877,7 +14877,7 @@ return {
 		}
 	},
 	Redspine_0005 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -14903,7 +14903,7 @@ return {
 		}
 	},
 	Redspine_0007 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -14929,7 +14929,7 @@ return {
 		}
 	},
 	Redspine_0009 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -14955,7 +14955,7 @@ return {
 		}
 	},
 	Redspine_0011 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -14981,7 +14981,7 @@ return {
 		}
 	},
 	Redspine_0013 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -15007,7 +15007,7 @@ return {
 		}
 	},
 	Redspine_0015 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15033,7 +15033,7 @@ return {
 		}
 	},
 	Redspine_0017 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15059,7 +15059,7 @@ return {
 		}
 	},
 	Redspine_0019 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -15085,7 +15085,7 @@ return {
 		}
 	},
 	Redspine_0021 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -15111,7 +15111,7 @@ return {
 		}
 	},
 	Redspine_0023 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -15137,7 +15137,7 @@ return {
 		}
 	},
 	Redspine_0025 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15163,7 +15163,7 @@ return {
 		}
 	},
 	Redspine_0027 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15189,7 +15189,7 @@ return {
 		}
 	},
 	Redspine_0029 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15215,7 +15215,7 @@ return {
 		}
 	},
 	Redspine_0031 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15241,7 +15241,7 @@ return {
 		}
 	},
 	Redspine_0033 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15267,7 +15267,7 @@ return {
 		}
 	},
 	Redspine_0035 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15293,7 +15293,7 @@ return {
 		}
 	},
 	Redspine_0037 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15319,7 +15319,7 @@ return {
 		}
 	},
 	Redspine_0039 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15345,7 +15345,7 @@ return {
 		}
 	},
 	Redspine_0041 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15371,7 +15371,7 @@ return {
 		}
 	},
 	Redspine_0043 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15397,7 +15397,7 @@ return {
 		}
 	},
 	Redspine_0045 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15423,7 +15423,7 @@ return {
 		}
 	},
 	Redspine_0047 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15449,7 +15449,7 @@ return {
 		}
 	},
 	Redspine_0049 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15475,7 +15475,7 @@ return {
 		}
 	},
 	Redspine_0051 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15501,7 +15501,7 @@ return {
 		}
 	},
 	Redspine_0053 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15527,7 +15527,7 @@ return {
 		}
 	},
 	Redspine_0055 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15553,7 +15553,7 @@ return {
 		}
 	},
 	Redspine_0057 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15579,7 +15579,7 @@ return {
 		}
 	},
 	Redspine_0059 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15605,7 +15605,7 @@ return {
 		}
 	},
 	Redspine_0061 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15631,7 +15631,7 @@ return {
 		}
 	},
 	Redspine_0063 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15657,7 +15657,7 @@ return {
 		}
 	},
 	Redspine_0065 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15683,7 +15683,7 @@ return {
 		}
 	},
 	Redspine_0067 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15709,7 +15709,7 @@ return {
 		}
 	},
 	Redspine_0069 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15735,7 +15735,7 @@ return {
 		}
 	},
 	Redspine_0071 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15761,7 +15761,7 @@ return {
 		}
 	},
 	Redspine_0073 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15785,7 +15785,7 @@ return {
 		alias = {}
 	},
 	Redspine_0074 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15818,7 +15818,7 @@ return {
 		}
 	},
 	Redspine_0076 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15844,7 +15844,7 @@ return {
 		}
 	},
 	Redspine_0078 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15870,7 +15870,7 @@ return {
 		}
 	},
 	Redspine_0080 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15896,7 +15896,7 @@ return {
 		}
 	},
 	Redspine_0082 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15922,7 +15922,7 @@ return {
 		}
 	},
 	Redspine_0084 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -15948,7 +15948,7 @@ return {
 		}
 	},
 	Redspine_0086 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -15974,7 +15974,7 @@ return {
 		}
 	},
 	Redspine_0088 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16000,7 +16000,7 @@ return {
 		}
 	},
 	Redspine_0097 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16026,7 +16026,7 @@ return {
 		}
 	},
 	Redspine_0099 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16052,7 +16052,7 @@ return {
 		}
 	},
 	Redspine_0101 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16078,7 +16078,7 @@ return {
 		}
 	},
 	Redspine_0103 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16104,7 +16104,7 @@ return {
 		}
 	},
 	Redspine_0105 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16130,7 +16130,7 @@ return {
 		}
 	},
 	Redspine_0107 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16156,7 +16156,7 @@ return {
 		}
 	},
 	Redspine_0109 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16182,7 +16182,7 @@ return {
 		}
 	},
 	Redspine_0111 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16208,7 +16208,7 @@ return {
 		}
 	},
 	Redspine_0113 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16232,7 +16232,7 @@ return {
 		alias = {}
 	},
 	Redspine_0114 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16258,7 +16258,7 @@ return {
 		}
 	},
 	Redspine_0116 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16284,7 +16284,7 @@ return {
 		}
 	},
 	Redspine_0118 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16310,7 +16310,7 @@ return {
 		}
 	},
 	Redspine_0120 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16336,7 +16336,7 @@ return {
 		}
 	},
 	Redspine_0122 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16362,7 +16362,7 @@ return {
 		}
 	},
 	Redspine_0124 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16388,7 +16388,7 @@ return {
 		}
 	},
 	Redspine_0126 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16414,7 +16414,7 @@ return {
 		}
 	},
 	Redspine_0128 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16440,7 +16440,7 @@ return {
 		}
 	},
 	Redspine_0130 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16466,7 +16466,7 @@ return {
 		}
 	},
 	Redspine_0132 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16492,7 +16492,7 @@ return {
 		}
 	},
 	Redspine_0134 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16524,7 +16524,7 @@ return {
 		}
 	},
 	Redspine_0142 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16552,7 +16552,7 @@ return {
 		}
 	},
 	Redspine_0146 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16580,7 +16580,7 @@ return {
 		}
 	},
 	Redspine_0150 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16608,7 +16608,7 @@ return {
 		}
 	},
 	Redspine_0154 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16636,7 +16636,7 @@ return {
 		}
 	},
 	Redspine_0158 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16660,7 +16660,7 @@ return {
 		alias = {}
 	},
 	Redspine_0159 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16684,7 +16684,7 @@ return {
 		alias = {}
 	},
 	Redspine_0160 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16708,7 +16708,7 @@ return {
 		alias = {}
 	},
 	Redspine_0161 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16732,7 +16732,7 @@ return {
 		alias = {}
 	},
 	Redspine_0162 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16756,7 +16756,7 @@ return {
 		alias = {}
 	},
 	Redspine_0163 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16780,7 +16780,7 @@ return {
 		alias = {}
 	},
 	Redspine_0164 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16804,7 +16804,7 @@ return {
 		alias = {}
 	},
 	Redspine_0165 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16828,7 +16828,7 @@ return {
 		alias = {}
 	},
 	Redspine_0166 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16852,7 +16852,7 @@ return {
 		alias = {}
 	},
 	Redspine_0167 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16876,7 +16876,7 @@ return {
 		alias = {}
 	},
 	Redspine_0168 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16900,7 +16900,7 @@ return {
 		alias = {}
 	},
 	Redspine_0169 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16924,7 +16924,7 @@ return {
 		alias = {}
 	},
 	Redspine_0170 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			160,
 			90
@@ -16948,7 +16948,7 @@ return {
 		alias = {}
 	},
 	Redspine_0171 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16972,7 +16972,7 @@ return {
 		alias = {}
 	},
 	Redspine_0172 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -16996,7 +16996,7 @@ return {
 		alias = {}
 	},
 	Redspine_0173 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -17020,7 +17020,7 @@ return {
 		alias = {}
 	},
 	Redspine_0174 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -17046,7 +17046,7 @@ return {
 		}
 	},
 	Redspine_0176 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -17070,7 +17070,7 @@ return {
 		alias = {}
 	},
 	Redspine_0177 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -17094,7 +17094,7 @@ return {
 		alias = {}
 	},
 	Redspine_0178 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			160,
 			90
@@ -17122,7 +17122,7 @@ return {
 		}
 	},
 	Shark_0001 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17149,7 +17149,7 @@ return {
 		}
 	},
 	Shark_0004 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17176,7 +17176,7 @@ return {
 		}
 	},
 	Shark_0007 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17203,7 +17203,7 @@ return {
 		}
 	},
 	Shark_0010 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17230,7 +17230,7 @@ return {
 		}
 	},
 	Shark_0013 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17257,7 +17257,7 @@ return {
 		}
 	},
 	Shark_0016 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17281,7 +17281,7 @@ return {
 		alias = {}
 	},
 	Shark_0017 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17307,7 +17307,7 @@ return {
 		}
 	},
 	Shark_0019 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17331,7 +17331,7 @@ return {
 		alias = {}
 	},
 	Shark_0020 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17357,7 +17357,7 @@ return {
 		}
 	},
 	Shark_0022 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17381,7 +17381,7 @@ return {
 		alias = {}
 	},
 	Shark_0023 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17407,7 +17407,7 @@ return {
 		}
 	},
 	Shark_0025 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17431,7 +17431,7 @@ return {
 		alias = {}
 	},
 	Shark_0026 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			290,
 			146
@@ -17455,7 +17455,7 @@ return {
 		alias = {}
 	},
 	Shark_0027 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			290,
 			146
@@ -17479,7 +17479,7 @@ return {
 		alias = {}
 	},
 	Shark_0028 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17503,7 +17503,7 @@ return {
 		alias = {}
 	},
 	Shark_0029 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17527,7 +17527,7 @@ return {
 		alias = {}
 	},
 	Shark_0030 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17551,7 +17551,7 @@ return {
 		alias = {}
 	},
 	Shark_0031 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17575,7 +17575,7 @@ return {
 		alias = {}
 	},
 	Shark_0032 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17599,7 +17599,7 @@ return {
 		alias = {}
 	},
 	Shark_0033 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17623,7 +17623,7 @@ return {
 		alias = {}
 	},
 	Shark_0034 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17647,7 +17647,7 @@ return {
 		alias = {}
 	},
 	Shark_0035 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17671,7 +17671,7 @@ return {
 		alias = {}
 	},
 	Shark_0036 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17695,7 +17695,7 @@ return {
 		alias = {}
 	},
 	Shark_0037 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17719,7 +17719,7 @@ return {
 		alias = {}
 	},
 	Shark_0038 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17743,7 +17743,7 @@ return {
 		alias = {}
 	},
 	Shark_0039 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17767,7 +17767,7 @@ return {
 		alias = {}
 	},
 	Shark_0040 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17791,7 +17791,7 @@ return {
 		alias = {}
 	},
 	Shark_0041 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17817,7 +17817,7 @@ return {
 		}
 	},
 	Shark_0043 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17841,7 +17841,7 @@ return {
 		alias = {}
 	},
 	Shark_0044 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17865,7 +17865,7 @@ return {
 		alias = {}
 	},
 	Shark_0045 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			290,
 			146
@@ -17891,7 +17891,7 @@ return {
 		}
 	},
 	Shark_0047 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			290,
 			146
@@ -17915,7 +17915,7 @@ return {
 		alias = {}
 	},
 	Shark_0048 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			290,
 			146
@@ -17939,7 +17939,7 @@ return {
 		alias = {}
 	},
 	Shark_0049 = {
-		a_name = "go_enemies_rising_tides-2.dds",
+		a_name = "go_enemies_rising_tides-2.png",
 		size = {
 			290,
 			146
@@ -17965,7 +17965,7 @@ return {
 		}
 	},
 	Shark_0051 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -17992,7 +17992,7 @@ return {
 		}
 	},
 	Shark_0054 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18016,7 +18016,7 @@ return {
 		alias = {}
 	},
 	Shark_0055 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18040,7 +18040,7 @@ return {
 		alias = {}
 	},
 	Shark_0056 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18064,7 +18064,7 @@ return {
 		alias = {}
 	},
 	Shark_0057 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18088,7 +18088,7 @@ return {
 		alias = {}
 	},
 	Shark_0058 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18112,7 +18112,7 @@ return {
 		alias = {}
 	},
 	Shark_0059 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18136,7 +18136,7 @@ return {
 		alias = {}
 	},
 	Shark_0060 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18160,7 +18160,7 @@ return {
 		alias = {}
 	},
 	Shark_0061 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18184,7 +18184,7 @@ return {
 		alias = {}
 	},
 	Shark_0062 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18208,7 +18208,7 @@ return {
 		alias = {}
 	},
 	Shark_0063 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18232,7 +18232,7 @@ return {
 		alias = {}
 	},
 	Shark_0064 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18256,7 +18256,7 @@ return {
 		alias = {}
 	},
 	Shark_0065 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18280,7 +18280,7 @@ return {
 		alias = {}
 	},
 	Shark_0066 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18304,7 +18304,7 @@ return {
 		alias = {}
 	},
 	Shark_0067 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18328,7 +18328,7 @@ return {
 		alias = {}
 	},
 	Shark_0068 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18352,7 +18352,7 @@ return {
 		alias = {}
 	},
 	Shark_0069 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18376,7 +18376,7 @@ return {
 		alias = {}
 	},
 	Shark_0070 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18400,7 +18400,7 @@ return {
 		alias = {}
 	},
 	Shark_0071 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18424,7 +18424,7 @@ return {
 		alias = {}
 	},
 	Shark_0072 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18448,7 +18448,7 @@ return {
 		alias = {}
 	},
 	Shark_0073 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18472,7 +18472,7 @@ return {
 		alias = {}
 	},
 	Shark_0074 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18496,7 +18496,7 @@ return {
 		alias = {}
 	},
 	Shark_0075 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18520,7 +18520,7 @@ return {
 		alias = {}
 	},
 	Shark_0076 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18544,7 +18544,7 @@ return {
 		alias = {}
 	},
 	Shark_0077 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18568,7 +18568,7 @@ return {
 		alias = {}
 	},
 	Shark_0078 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18592,7 +18592,7 @@ return {
 		alias = {}
 	},
 	Shark_0079 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18616,7 +18616,7 @@ return {
 		alias = {}
 	},
 	Shark_0080 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18640,7 +18640,7 @@ return {
 		alias = {}
 	},
 	Shark_0081 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18664,7 +18664,7 @@ return {
 		alias = {}
 	},
 	Shark_0082 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18688,7 +18688,7 @@ return {
 		alias = {}
 	},
 	Shark_0083 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18712,7 +18712,7 @@ return {
 		alias = {}
 	},
 	Shark_0084 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18736,7 +18736,7 @@ return {
 		alias = {}
 	},
 	Shark_0085 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18760,7 +18760,7 @@ return {
 		alias = {}
 	},
 	Shark_0086 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18784,7 +18784,7 @@ return {
 		alias = {}
 	},
 	Shark_0087 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18808,7 +18808,7 @@ return {
 		alias = {}
 	},
 	Shark_0088 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18834,7 +18834,7 @@ return {
 		}
 	},
 	Shark_0090 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18858,7 +18858,7 @@ return {
 		alias = {}
 	},
 	Shark_0091 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18882,7 +18882,7 @@ return {
 		alias = {}
 	},
 	Shark_0092 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18906,7 +18906,7 @@ return {
 		alias = {}
 	},
 	Shark_0093 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18930,7 +18930,7 @@ return {
 		alias = {}
 	},
 	Shark_0094 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18956,7 +18956,7 @@ return {
 		}
 	},
 	Shark_0096 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -18980,7 +18980,7 @@ return {
 		alias = {}
 	},
 	Shark_0097 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -19004,7 +19004,7 @@ return {
 		alias = {}
 	},
 	Shark_0098 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -19028,7 +19028,7 @@ return {
 		alias = {}
 	},
 	Shark_0099 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -19055,7 +19055,7 @@ return {
 		}
 	},
 	Shark_0102 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -19082,7 +19082,7 @@ return {
 		}
 	},
 	Shark_0105 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -19109,7 +19109,7 @@ return {
 		}
 	},
 	Shark_0108 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -19136,7 +19136,7 @@ return {
 		}
 	},
 	Shark_0111 = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			290,
 			146
@@ -19163,7 +19163,7 @@ return {
 		}
 	},
 	atomicBomb_shadow = {
-		a_name = "go_enemies_rising_tides-1.dds",
+		a_name = "go_enemies_rising_tides-1.png",
 		size = {
 			104,
 			56

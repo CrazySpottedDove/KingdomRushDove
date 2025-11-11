@@ -2,7 +2,7 @@
 
 return {
 	hero_viking_0001 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0002 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0003 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0004 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0005 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0006 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0007 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0008 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -196,7 +196,7 @@ return {
 		}
 	},
 	hero_viking_0010 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -222,7 +222,7 @@ return {
 		}
 	},
 	hero_viking_0012 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -248,7 +248,7 @@ return {
 		}
 	},
 	hero_viking_0014 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -277,7 +277,7 @@ return {
 		}
 	},
 	hero_viking_0019 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -303,7 +303,7 @@ return {
 		}
 	},
 	hero_viking_0021 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -329,7 +329,7 @@ return {
 		}
 	},
 	hero_viking_0023 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -355,7 +355,7 @@ return {
 		}
 	},
 	hero_viking_0025 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -381,7 +381,7 @@ return {
 		}
 	},
 	hero_viking_0027 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -407,7 +407,7 @@ return {
 		}
 	},
 	hero_viking_0029 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -435,7 +435,7 @@ return {
 		}
 	},
 	hero_viking_0033 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -461,7 +461,7 @@ return {
 		}
 	},
 	hero_viking_0035 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -487,7 +487,7 @@ return {
 		}
 	},
 	hero_viking_0037 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -513,7 +513,7 @@ return {
 		}
 	},
 	hero_viking_0039 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -537,7 +537,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0040 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -561,7 +561,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0041 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -585,7 +585,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0042 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			202,
 			164
@@ -611,7 +611,7 @@ return {
 		}
 	},
 	hero_viking_0044 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			202,
 			164
@@ -637,7 +637,7 @@ return {
 		}
 	},
 	hero_viking_0046 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			202,
 			164
@@ -666,7 +666,7 @@ return {
 		}
 	},
 	hero_viking_0051 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -692,7 +692,7 @@ return {
 		}
 	},
 	hero_viking_0053 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -718,7 +718,7 @@ return {
 		}
 	},
 	hero_viking_0055 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -744,7 +744,7 @@ return {
 		}
 	},
 	hero_viking_0057 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -770,7 +770,7 @@ return {
 		}
 	},
 	hero_viking_0059 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -796,7 +796,7 @@ return {
 		}
 	},
 	hero_viking_0061 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -822,7 +822,7 @@ return {
 		}
 	},
 	hero_viking_0063 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -850,7 +850,7 @@ return {
 		}
 	},
 	hero_viking_0067 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -876,7 +876,7 @@ return {
 		}
 	},
 	hero_viking_0069 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -902,7 +902,7 @@ return {
 		}
 	},
 	hero_viking_0071 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			202,
 			164
@@ -928,7 +928,7 @@ return {
 		}
 	},
 	hero_viking_0073 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -954,7 +954,7 @@ return {
 		}
 	},
 	hero_viking_0075 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -980,7 +980,7 @@ return {
 		}
 	},
 	hero_viking_0077 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1006,7 +1006,7 @@ return {
 		}
 	},
 	hero_viking_0079 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1032,7 +1032,7 @@ return {
 		}
 	},
 	hero_viking_0081 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1058,7 +1058,7 @@ return {
 		}
 	},
 	hero_viking_0083 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1084,7 +1084,7 @@ return {
 		}
 	},
 	hero_viking_0085 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1110,7 +1110,7 @@ return {
 		}
 	},
 	hero_viking_0087 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1136,7 +1136,7 @@ return {
 		}
 	},
 	hero_viking_0089 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1162,7 +1162,7 @@ return {
 		}
 	},
 	hero_viking_0091 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1188,7 +1188,7 @@ return {
 		}
 	},
 	hero_viking_0093 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1214,7 +1214,7 @@ return {
 		}
 	},
 	hero_viking_0095 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1240,7 +1240,7 @@ return {
 		}
 	},
 	hero_viking_0097 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1264,7 +1264,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0098 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1290,7 +1290,7 @@ return {
 		}
 	},
 	hero_viking_0100 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1316,7 +1316,7 @@ return {
 		}
 	},
 	hero_viking_0102 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1342,7 +1342,7 @@ return {
 		}
 	},
 	hero_viking_0104 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1368,7 +1368,7 @@ return {
 		}
 	},
 	hero_viking_0106 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1394,7 +1394,7 @@ return {
 		}
 	},
 	hero_viking_0108 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1420,7 +1420,7 @@ return {
 		}
 	},
 	hero_viking_0110 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			202,
 			164
@@ -1446,7 +1446,7 @@ return {
 		}
 	},
 	hero_viking_0112 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1472,7 +1472,7 @@ return {
 		}
 	},
 	hero_viking_0114 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1498,7 +1498,7 @@ return {
 		}
 	},
 	hero_viking_0116 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1524,7 +1524,7 @@ return {
 		}
 	},
 	hero_viking_0118 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1554,7 +1554,7 @@ return {
 		}
 	},
 	hero_viking_0120 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1582,7 +1582,7 @@ return {
 		}
 	},
 	hero_viking_0122 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1610,7 +1610,7 @@ return {
 		}
 	},
 	hero_viking_0124 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1640,7 +1640,7 @@ return {
 		}
 	},
 	hero_viking_0127 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1668,7 +1668,7 @@ return {
 		}
 	},
 	hero_viking_0129 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1698,7 +1698,7 @@ return {
 		}
 	},
 	hero_viking_0131 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1726,7 +1726,7 @@ return {
 		}
 	},
 	hero_viking_0133 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1750,7 +1750,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0143 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1776,7 +1776,7 @@ return {
 		}
 	},
 	hero_viking_0147 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1802,7 +1802,7 @@ return {
 		}
 	},
 	hero_viking_0149 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1826,7 +1826,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0152 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1852,7 +1852,7 @@ return {
 		}
 	},
 	hero_viking_0154 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1878,7 +1878,7 @@ return {
 		}
 	},
 	hero_viking_0156 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1905,7 +1905,7 @@ return {
 		}
 	},
 	hero_viking_0165 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1931,7 +1931,7 @@ return {
 		}
 	},
 	hero_viking_0167 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1957,7 +1957,7 @@ return {
 		}
 	},
 	hero_viking_0169 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -1981,7 +1981,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0170 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2005,7 +2005,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0171 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2029,7 +2029,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0172 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2053,7 +2053,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0173 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2077,7 +2077,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0174 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2101,7 +2101,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0175 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2127,7 +2127,7 @@ return {
 		}
 	},
 	hero_viking_0177 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2153,7 +2153,7 @@ return {
 		}
 	},
 	hero_viking_0179 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2179,7 +2179,7 @@ return {
 		}
 	},
 	hero_viking_0181 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2205,7 +2205,7 @@ return {
 		}
 	},
 	hero_viking_0183 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2231,7 +2231,7 @@ return {
 		}
 	},
 	hero_viking_0185 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2257,7 +2257,7 @@ return {
 		}
 	},
 	hero_viking_0187 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2285,7 +2285,7 @@ return {
 		}
 	},
 	hero_viking_0189 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2311,7 +2311,7 @@ return {
 		}
 	},
 	hero_viking_0191 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2337,7 +2337,7 @@ return {
 		}
 	},
 	hero_viking_0193 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2365,7 +2365,7 @@ return {
 		}
 	},
 	hero_viking_0195 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2391,7 +2391,7 @@ return {
 		}
 	},
 	hero_viking_0197 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2417,7 +2417,7 @@ return {
 		}
 	},
 	hero_viking_0201 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2443,7 +2443,7 @@ return {
 		}
 	},
 	hero_viking_0203 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2469,7 +2469,7 @@ return {
 		}
 	},
 	hero_viking_0207 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2495,7 +2495,7 @@ return {
 		}
 	},
 	hero_viking_0209 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2521,7 +2521,7 @@ return {
 		}
 	},
 	hero_viking_0211 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2547,7 +2547,7 @@ return {
 		}
 	},
 	hero_viking_0213 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2573,7 +2573,7 @@ return {
 		}
 	},
 	hero_viking_0215 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2599,7 +2599,7 @@ return {
 		}
 	},
 	hero_viking_0217 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2625,7 +2625,7 @@ return {
 		}
 	},
 	hero_viking_0219 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2651,7 +2651,7 @@ return {
 		}
 	},
 	hero_viking_0221 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2675,7 +2675,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0222 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2699,7 +2699,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0223 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2723,7 +2723,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0224 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2747,7 +2747,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0225 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2771,7 +2771,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0226 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2795,7 +2795,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0227 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2819,7 +2819,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0228 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2843,7 +2843,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0229 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2867,7 +2867,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0230 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2891,7 +2891,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0231 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2915,7 +2915,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0232 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2939,7 +2939,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0233 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -2963,7 +2963,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0234 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			202,
 			164
@@ -2989,7 +2989,7 @@ return {
 		}
 	},
 	hero_viking_0236 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -3015,7 +3015,7 @@ return {
 		}
 	},
 	hero_viking_0238 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -3041,7 +3041,7 @@ return {
 		}
 	},
 	hero_viking_0240 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			202,
 			164
@@ -3065,7 +3065,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0241 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			202,
 			164
@@ -3089,7 +3089,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0242 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			202,
 			164
@@ -3113,7 +3113,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0243 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -3137,7 +3137,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0244 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -3161,7 +3161,7 @@ return {
 		alias = {}
 	},
 	hero_viking_0245 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -3187,7 +3187,7 @@ return {
 		}
 	},
 	hero_viking_0247 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			202,
 			164
@@ -3211,7 +3211,7 @@ return {
 		alias = {}
 	},
 	hero_viking_ancestor_0001 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3235,7 +3235,7 @@ return {
 		alias = {}
 	},
 	hero_viking_ancestor_0002 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3259,7 +3259,7 @@ return {
 		alias = {}
 	},
 	hero_viking_ancestor_0003 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3283,7 +3283,7 @@ return {
 		alias = {}
 	},
 	hero_viking_ancestor_0004 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3307,7 +3307,7 @@ return {
 		alias = {}
 	},
 	hero_viking_ancestor_0005 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3331,7 +3331,7 @@ return {
 		alias = {}
 	},
 	hero_viking_ancestor_0006 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3355,7 +3355,7 @@ return {
 		alias = {}
 	},
 	hero_viking_ancestor_0007 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3379,7 +3379,7 @@ return {
 		alias = {}
 	},
 	hero_viking_ancestor_0008 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3405,7 +3405,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0010 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			102,
 			86
@@ -3431,7 +3431,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0012 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			102,
 			86
@@ -3457,7 +3457,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0014 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			102,
 			86
@@ -3483,7 +3483,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0016 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			102,
 			86
@@ -3511,7 +3511,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0020 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3537,7 +3537,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0022 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3563,7 +3563,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0024 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3589,7 +3589,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0026 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3617,7 +3617,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0030 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3643,7 +3643,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0032 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3669,7 +3669,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0034 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3695,7 +3695,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0036 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3721,7 +3721,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0038 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3747,7 +3747,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0040 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3773,7 +3773,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0042 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3799,7 +3799,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0044 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3825,7 +3825,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0046 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3851,7 +3851,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0048 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3877,7 +3877,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0050 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3903,7 +3903,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0052 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3929,7 +3929,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0054 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3955,7 +3955,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0056 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -3981,7 +3981,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0058 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -4007,7 +4007,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0060 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -4033,7 +4033,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0062 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -4059,7 +4059,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0064 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -4085,7 +4085,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0066 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -4111,7 +4111,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0068 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -4135,7 +4135,7 @@ return {
 		alias = {}
 	},
 	hero_viking_ancestor_0069 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -4161,7 +4161,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0071 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -4187,7 +4187,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0073 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -4213,7 +4213,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0075 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -4239,7 +4239,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0077 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -4265,7 +4265,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0079 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			102,
 			86
@@ -4291,7 +4291,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0081 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			102,
 			86
@@ -4317,7 +4317,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0083 = {
-		a_name = "go_hero_ingvar-2.dds",
+		a_name = "go_hero_ingvar-2.png",
 		size = {
 			102,
 			86
@@ -4343,7 +4343,7 @@ return {
 		}
 	},
 	hero_viking_ancestor_0085 = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			102,
 			86
@@ -4369,7 +4369,7 @@ return {
 		}
 	},
 	hero_viking_axeDecal = {
-		a_name = "go_hero_ingvar-1.dds",
+		a_name = "go_hero_ingvar-1.png",
 		size = {
 			48,
 			24

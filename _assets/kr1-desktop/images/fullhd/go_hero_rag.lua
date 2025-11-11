@@ -2,7 +2,7 @@
 
 return {
 	razzAndRaggs_hero_layer1_0001 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -29,7 +29,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0002 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -55,7 +55,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0004 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -81,7 +81,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0006 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -107,7 +107,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0008 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -133,7 +133,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0010 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -159,7 +159,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0012 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -185,7 +185,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0014 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -211,7 +211,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0016 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -237,7 +237,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0018 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -263,7 +263,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0020 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -289,7 +289,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0022 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -315,7 +315,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0024 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -341,7 +341,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0026 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -367,7 +367,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0028 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -393,7 +393,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0030 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -419,7 +419,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0032 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -445,7 +445,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0034 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -471,7 +471,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0036 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -497,7 +497,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0038 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -523,7 +523,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0040 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -549,7 +549,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0042 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -573,7 +573,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_layer1_0043 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -597,7 +597,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_layer1_0044 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -621,7 +621,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_layer1_0045 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -647,7 +647,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0047 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -673,7 +673,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0049 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -699,7 +699,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0053 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -725,7 +725,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0055 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -751,7 +751,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0057 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -777,7 +777,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0059 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -803,7 +803,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0061 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -829,7 +829,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0063 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -855,7 +855,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0065 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -881,7 +881,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0067 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -907,7 +907,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0069 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -933,7 +933,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0071 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -959,7 +959,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0073 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -997,7 +997,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0074 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1023,7 +1023,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0076 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1049,7 +1049,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0078 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1075,7 +1075,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0080 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1101,7 +1101,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0082 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1127,7 +1127,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0084 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1153,7 +1153,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0086 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1179,7 +1179,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0088 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1205,7 +1205,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0090 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1231,7 +1231,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0092 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1257,7 +1257,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0094 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1283,7 +1283,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0096 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1309,7 +1309,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0098 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1335,7 +1335,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0100 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1361,7 +1361,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0102 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1387,7 +1387,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0104 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1411,7 +1411,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_layer1_0105 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1437,7 +1437,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0107 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1463,7 +1463,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0109 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1489,7 +1489,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0111 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1515,7 +1515,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0113 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1541,7 +1541,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0115 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1567,7 +1567,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0117 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1593,7 +1593,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0119 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1619,7 +1619,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0121 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1658,7 +1658,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0136 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1684,7 +1684,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0138 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1710,7 +1710,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0140 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1736,7 +1736,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0142 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1762,7 +1762,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0144 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1788,7 +1788,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0146 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1814,7 +1814,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0149 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1840,7 +1840,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0151 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1868,7 +1868,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0155 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1894,7 +1894,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0157 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1926,7 +1926,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0161 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1954,7 +1954,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0163 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -1982,7 +1982,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0165 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2008,7 +2008,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0167 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2034,7 +2034,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0169 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2060,7 +2060,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0171 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2086,7 +2086,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0173 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2112,7 +2112,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0175 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2138,7 +2138,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0177 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2164,7 +2164,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0179 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2190,7 +2190,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0181 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2216,7 +2216,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0183 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2242,7 +2242,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0185 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2268,7 +2268,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0187 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2294,7 +2294,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0189 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2320,7 +2320,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0191 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2346,7 +2346,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0193 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2372,7 +2372,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0195 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2398,7 +2398,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0197 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2424,7 +2424,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0199 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2450,7 +2450,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0210 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2484,7 +2484,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0212 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2518,7 +2518,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0214 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2552,7 +2552,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0216 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2586,7 +2586,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0218 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2620,7 +2620,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0220 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2654,7 +2654,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0222 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2688,7 +2688,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0224 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2722,7 +2722,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0226 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2756,7 +2756,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0228 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2790,7 +2790,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0230 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2816,7 +2816,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0232 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2850,7 +2850,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0234 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2884,7 +2884,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0236 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2918,7 +2918,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0260 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2950,7 +2950,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0360 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -2976,7 +2976,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0362 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3002,7 +3002,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0364 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3028,7 +3028,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0366 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3054,7 +3054,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0368 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3080,7 +3080,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0370 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3106,7 +3106,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0372 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3132,7 +3132,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0374 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3158,7 +3158,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0376 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3184,7 +3184,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0378 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3210,7 +3210,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0380 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3236,7 +3236,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0382 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3262,7 +3262,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0384 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3288,7 +3288,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0386 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3312,7 +3312,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_layer1_0387 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3338,7 +3338,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0389 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3364,7 +3364,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0391 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3388,7 +3388,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_layer1_0392 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3412,7 +3412,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_layer1_0393 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3436,7 +3436,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_layer1_0394 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3460,7 +3460,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_layer1_0395 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3486,7 +3486,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0397 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3512,7 +3512,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0399 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3538,7 +3538,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0401 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3562,7 +3562,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_layer1_0402 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3586,7 +3586,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_layer1_0403 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3610,7 +3610,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_layer1_0404 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3634,7 +3634,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_layer1_0405 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3660,7 +3660,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0407 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3686,7 +3686,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer1_0409 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -3712,7 +3712,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0001 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4087,7 +4087,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0218 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4121,7 +4121,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0220 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4147,7 +4147,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0222 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4173,7 +4173,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0224 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4199,7 +4199,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0226 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4225,7 +4225,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0228 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4251,7 +4251,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0250 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4277,7 +4277,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0252 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4303,7 +4303,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0254 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4329,7 +4329,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0256 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4355,7 +4355,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0258 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4381,7 +4381,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0280 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4407,7 +4407,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0282 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4433,7 +4433,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0284 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4459,7 +4459,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0286 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4485,7 +4485,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0288 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4511,7 +4511,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0310 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4537,7 +4537,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0312 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4563,7 +4563,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0314 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4589,7 +4589,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0316 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4615,7 +4615,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0318 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4641,7 +4641,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0340 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4667,7 +4667,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0342 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4693,7 +4693,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0344 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4719,7 +4719,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0346 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4745,7 +4745,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_layer2_0348 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			281,
 			188
@@ -4771,7 +4771,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0001 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -4799,7 +4799,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0002 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -4825,7 +4825,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0004 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -4849,7 +4849,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_polymorph_0005 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -4875,7 +4875,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0007 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -4899,7 +4899,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_polymorph_0008 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -4925,7 +4925,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0010 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -4949,7 +4949,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_polymorph_0011 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -4975,7 +4975,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0013 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -4999,7 +4999,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_polymorph_0016 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5025,7 +5025,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0018 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5053,7 +5053,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0022 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5081,7 +5081,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0026 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5107,7 +5107,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0028 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5133,7 +5133,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0030 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5161,7 +5161,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0034 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5189,7 +5189,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0038 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5215,7 +5215,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0041 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5241,7 +5241,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0043 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5267,7 +5267,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0045 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5293,7 +5293,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0047 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5319,7 +5319,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0049 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5345,7 +5345,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0051 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5371,7 +5371,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0053 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5397,7 +5397,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_polymorph_0055 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			135,
 			84
@@ -5423,7 +5423,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_proy = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			42,
 			23
@@ -5447,7 +5447,7 @@ return {
 		alias = {}
 	},
 	["razzAndRaggs_hero_proy-f"] = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			42,
 			23
@@ -5471,7 +5471,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_proy_hit_0001 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			42,
 			42
@@ -5497,7 +5497,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_proy_hit_0003 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			42,
 			42
@@ -5523,7 +5523,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_proy_hit_0005 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			42,
 			42
@@ -5549,7 +5549,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_proy_hit_0007 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			42,
 			42
@@ -5573,7 +5573,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_proy_particle = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			31,
 			20
@@ -5597,7 +5597,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ray_0001 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			250,
 			59
@@ -5623,7 +5623,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_ray_0003 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			250,
 			59
@@ -5649,7 +5649,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_ray_0005 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			250,
 			59
@@ -5675,7 +5675,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_ray_0007 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			250,
 			59
@@ -5701,7 +5701,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_ray_0009 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			250,
 			59
@@ -5727,7 +5727,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_ray_0011 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			250,
 			59
@@ -5753,7 +5753,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_ray_0013 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			250,
 			59
@@ -5779,7 +5779,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_throw_proys_0001 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			70,
 			56
@@ -5803,7 +5803,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_throw_proys_0002 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			70,
 			56
@@ -5827,7 +5827,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_throw_proys_0003 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			70,
 			56
@@ -5851,7 +5851,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_throw_proys_0004 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			70,
 			56
@@ -5875,7 +5875,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_throw_proys_0005 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			70,
 			56
@@ -5899,7 +5899,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0001 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -5925,7 +5925,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_ultimateFx_0003 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -5949,7 +5949,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0004 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -5973,7 +5973,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0005 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -5997,7 +5997,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0006 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6021,7 +6021,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0007 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6045,7 +6045,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0008 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6069,7 +6069,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0009 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6093,7 +6093,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0010 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6117,7 +6117,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0011 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6141,7 +6141,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0012 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6165,7 +6165,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0013 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6189,7 +6189,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0014 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6213,7 +6213,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0015 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6237,7 +6237,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0016 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6261,7 +6261,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0017 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6285,7 +6285,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0018 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6309,7 +6309,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0019 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6333,7 +6333,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_hero_ultimateFx_0020 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			118,
 			155
@@ -6359,7 +6359,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_ultimateFx_decal_0001 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			155,
 			113
@@ -6385,7 +6385,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_ultimateFx_decal_0003 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			155,
 			113
@@ -6411,7 +6411,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_ultimateFx_decal_0005 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			155,
 			113
@@ -6437,7 +6437,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_ultimateFx_decal_0007 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			155,
 			113
@@ -6463,7 +6463,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_ultimateFx_decal_0009 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			155,
 			113
@@ -6489,7 +6489,7 @@ return {
 		}
 	},
 	razzAndRaggs_hero_ultimateFx_decal_0011 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			155,
 			113
@@ -6515,7 +6515,7 @@ return {
 		}
 	},
 	razzAndRaggs_rabbit_explosion_0001 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6541,7 +6541,7 @@ return {
 		}
 	},
 	razzAndRaggs_rabbit_explosion_0003 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6565,7 +6565,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0004 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6589,7 +6589,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0005 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6613,7 +6613,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0006 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6637,7 +6637,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0007 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6661,7 +6661,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0008 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6685,7 +6685,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0009 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6709,7 +6709,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0010 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6733,7 +6733,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0011 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6757,7 +6757,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0012 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6781,7 +6781,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0013 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6805,7 +6805,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0014 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6829,7 +6829,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0015 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6853,7 +6853,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0016 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6877,7 +6877,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0017 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6901,7 +6901,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0018 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6925,7 +6925,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0019 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82
@@ -6949,7 +6949,7 @@ return {
 		alias = {}
 	},
 	razzAndRaggs_rabbit_explosion_0020 = {
-		a_name = "go_hero_rag-1.dds",
+		a_name = "go_hero_rag-1.png",
 		size = {
 			56,
 			82

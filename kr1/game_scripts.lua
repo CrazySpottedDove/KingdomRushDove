@@ -3664,14 +3664,14 @@ function scripts.eb_moloch.update(this, store)
 
     while true do
         if this.health.dead then
-            game.store.force_next_wave = true
+            -- store.force_next_wave = true
             this.phase = "dead"
 
-            LU.kill_all_enemies(store, true)
+            -- LU.kill_all_enemies(store, true)
             S:queue(this.sound_events.death)
             U.y_animation_play(this, "death", nil, store.tick_ts)
             signal.emit("boss-killed", this)
-            LU.kill_all_enemies(store, true)
+            -- LU.kill_all_enemies(store, true)
 
             this.phase = "death-complete"
 
@@ -4642,17 +4642,11 @@ function scripts.ray_tesla.update(this, store)
                                    (v.enemy or v.template_name == "hero_thor")
                     end)
                 if bounce_targets then
-                    if this.bounces + 1 >= this.max_bounces then
-                        for _, t in pairs(bounce_targets) do
-                            if t.template_name == "hero_thor" then
-                                bounce_target = t
-                                break
-                            end
+                    for _, t in pairs(bounce_targets) do
+                        if t.template_name == "hero_thor" then
+                            bounce_target = t
+                            break
                         end
-                    elseif bounce_targets[#bounce_targets].template_name == "hero_thor" then
-                        bounce_target = bounce_targets[#bounce_targets]
-                    elseif #bounce_targets > 1 and bounce_targets[#bounce_targets - 1].template_name == "hero_thor" then
-                        bounce_target = bounce_targets[#bounce_targets - 1]
                     end
                 end
 
@@ -4676,6 +4670,7 @@ function scripts.ray_tesla.update(this, store)
                         this.bounce_damage_factor_min)
                     if bounce_target.template_name == "hero_thor" then
                         r.bounces = 0
+                        r.max_bounces = r.max_bounces * 5
                     else
                         r.bounces = this.bounces + 1
                     end
@@ -14204,7 +14199,7 @@ function scripts.ray_frankenstein.update(this, store)
                 r.bullet.source_id = target.id
                 r.bullet.damage_factor = b.damage_factor
                 if bounce_target.template_name == "hero_thor" then
-                    r.bounces = this.bounces + 1
+                    r.bounces = (this.bounces + 1) * 5
                     r.bounce_range = this.bounce_range * 1.5
                 else
                     r.bounces = this.bounces - 1
@@ -31704,7 +31699,7 @@ function scripts.moon_controller_s72.insert_hook(this, store)
         if this.health.hp then
             this.health.hp = this.health.hp *
                                  (1 + E:get_template("moon_controller_s72").enemy_hp_buff *
-                                     (1 + store.wave_group_number / 15))
+                                     (0.9 + store.wave_group_number / 12))
         end
     end
     if this.soldier then
@@ -31725,7 +31720,7 @@ function scripts.moon_controller_s72.insert_hook(this, store)
         if this.health.hp then
             this.health.hp = this.health.hp *
                                  (1 - E:get_template("moon_controller_s72").enemy_hp_buff *
-                                     (1 + store.wave_group_number / 15))
+                                     (0.9 + store.wave_group_number / 12))
         end
     end
 end
@@ -31921,6 +31916,7 @@ function scripts.eb_jack.update(this, store)
     while true do
         if this.health.dead then
             SU.y_enemy_death(store, this)
+            LU.kill_all_enemies(store, true)
             return
         end
         if last_quit_hp - this.health.hp >= quit_threshold then
@@ -31932,7 +31928,7 @@ function scripts.eb_jack.update(this, store)
             this.health.immune_to = F_ALL
             U.y_animation_wait(this)
             local ni = km.clamp(P:get_start_node(this.nav_path.pi), P:get_end_node(this.nav_path.pi),
-                this.nav_path.ni + 10)
+                this.nav_path.ni + 11)
             local dest = P:node_pos(this.nav_path.pi, this.nav_path.spi, ni)
             this.pos.x, this.pos.y = dest.x, dest.y
             U.y_animation_play(this, "rise", nil, store.tick_ts, 1)
@@ -31976,7 +31972,6 @@ function scripts.eb_jack.update(this, store)
                 end
                 coroutine.yield()
             end
-
         end
     end
 end
@@ -32022,4 +32017,3 @@ function scripts.eb_jack_spawner_aura.update(this, store)
 end
 
 return scripts
-

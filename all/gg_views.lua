@@ -209,7 +209,7 @@ function GGLabel:_draw_self()
 
 		new_c[4] = self.alpha * pa / 255 * new_c[4]
 
-		G.setColor(new_c)
+		G.setColor_old(new_c)
 
 		local sox, soy = self.text_shadow_offset.x, self.text_shadow_offset.y
 
@@ -239,11 +239,11 @@ function GGLabel:_draw_self()
 
 		new_c[4] = self.alpha * pa / 255 * new_c[4]
 
-		G.setColor(new_c)
+		G.setColor_old(new_c)
 	end
 
 	G.printf(self.text, self.text_offset.x, self.text_offset.y + voff, self.text_size.x * font_scale, self.text_align, 0, 1 / font_scale)
-	G.setColor(pr, pg, pb, pa)
+	G.setColor_old(pr, pg, pb, pa)
 end
 
 function GGLabel:get_wrap_lines()
@@ -638,7 +638,7 @@ function GG9View:initialize(image_name, size, slice_rect)
 	local oim = I:i(oss.atlas)
 	local pr, pg, pb, pa = G.getColor()
 
-	G.setColor(255, 255, 255, 255)
+	G.setColor(1, 1, 1, 1)
 
 	local scx, scy, scw, sch = G.getScissor()
 	local imgw, imgh = oss.size[1], oss.size[2]
@@ -711,7 +711,7 @@ function GG9View:initialize(image_name, size, slice_rect)
 	G.pop()
 	G.setScissor(scx, scy, scw, sch)
 	G.setCanvas()
-	G.setColor(pr, pg, pb, pa)
+	G.setColor_old(pr, pg, pb, pa)
 
 	local view_size = V.v(canvas:getDimensions())
 
@@ -822,7 +822,7 @@ function GG9SlicesView:initialize(size, slices_prefix, direction)
 	local canvas = G.newCanvas(cw, ch)
 	local pr, pg, pb, pa = G.getColor()
 
-	G.setColor(255, 255, 255, 255)
+	G.setColor(1, 1, 1, 1)
 
 	local scx, scy, scw, sch = G.getScissor()
 
@@ -881,7 +881,7 @@ function GG9SlicesView:initialize(size, slices_prefix, direction)
 	G.pop()
 	G.setScissor(scx, scy, scw, sch)
 	G.setCanvas()
-	G.setColor(pr, pg, pb, pa)
+	G.setColor_old(pr, pg, pb, pa)
 
 	local view_size = V.v(canvas:getDimensions())
 

@@ -2,7 +2,7 @@
 
 return {
 	hero_mage_0001 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0002 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -52,7 +52,7 @@ return {
 		}
 	},
 	hero_mage_0004 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -78,7 +78,7 @@ return {
 		}
 	},
 	hero_mage_0006 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -104,7 +104,7 @@ return {
 		}
 	},
 	hero_mage_0008 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -130,7 +130,7 @@ return {
 		}
 	},
 	hero_mage_0010 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -156,7 +156,7 @@ return {
 		}
 	},
 	hero_mage_0012 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -182,7 +182,7 @@ return {
 		}
 	},
 	hero_mage_0014 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -208,7 +208,7 @@ return {
 		}
 	},
 	hero_mage_0016 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -234,7 +234,7 @@ return {
 		}
 	},
 	hero_mage_0018 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -261,7 +261,7 @@ return {
 		}
 	},
 	hero_mage_0020 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -287,7 +287,7 @@ return {
 		}
 	},
 	hero_mage_0022 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -313,7 +313,7 @@ return {
 		}
 	},
 	hero_mage_0024 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -340,7 +340,7 @@ return {
 		}
 	},
 	hero_mage_0027 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -366,7 +366,7 @@ return {
 		}
 	},
 	hero_mage_0029 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -392,7 +392,7 @@ return {
 		}
 	},
 	hero_mage_0031 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -418,7 +418,7 @@ return {
 		}
 	},
 	hero_mage_0033 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -444,7 +444,7 @@ return {
 		}
 	},
 	hero_mage_0035 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -470,7 +470,7 @@ return {
 		}
 	},
 	hero_mage_0037 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -496,7 +496,7 @@ return {
 		}
 	},
 	hero_mage_0040 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -531,7 +531,7 @@ return {
 		}
 	},
 	hero_mage_0042 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -557,7 +557,7 @@ return {
 		}
 	},
 	hero_mage_0044 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -583,7 +583,7 @@ return {
 		}
 	},
 	hero_mage_0046 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -609,7 +609,7 @@ return {
 		}
 	},
 	hero_mage_0048 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -633,7 +633,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0049 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -657,7 +657,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0050 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -681,7 +681,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0051 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -705,7 +705,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0052 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -729,7 +729,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0053 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -753,7 +753,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0054 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -777,7 +777,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0055 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -801,7 +801,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0056 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -825,7 +825,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0057 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -849,7 +849,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0058 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -873,7 +873,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0059 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -897,7 +897,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0060 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -921,7 +921,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0061 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -948,7 +948,7 @@ return {
 		}
 	},
 	hero_mage_0064 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -974,7 +974,7 @@ return {
 		}
 	},
 	hero_mage_0066 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1000,7 +1000,7 @@ return {
 		}
 	},
 	hero_mage_0071 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1026,7 +1026,7 @@ return {
 		}
 	},
 	hero_mage_0073 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1052,7 +1052,7 @@ return {
 		}
 	},
 	hero_mage_0075 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1078,7 +1078,7 @@ return {
 		}
 	},
 	hero_mage_0077 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1102,7 +1102,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0078 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1128,7 +1128,7 @@ return {
 		}
 	},
 	hero_mage_0080 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1154,7 +1154,7 @@ return {
 		}
 	},
 	hero_mage_0082 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1180,7 +1180,7 @@ return {
 		}
 	},
 	hero_mage_0084 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1204,7 +1204,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0085 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1228,7 +1228,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0086 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1252,7 +1252,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0087 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1276,7 +1276,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0088 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1300,7 +1300,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0089 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1324,7 +1324,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0090 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1348,7 +1348,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0091 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1372,7 +1372,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0092 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1398,7 +1398,7 @@ return {
 		}
 	},
 	hero_mage_0097 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1424,7 +1424,7 @@ return {
 		}
 	},
 	hero_mage_0099 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1450,7 +1450,7 @@ return {
 		}
 	},
 	hero_mage_0101 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1476,7 +1476,7 @@ return {
 		}
 	},
 	hero_mage_0105 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1502,7 +1502,7 @@ return {
 		}
 	},
 	hero_mage_0107 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1528,7 +1528,7 @@ return {
 		}
 	},
 	hero_mage_0109 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1554,7 +1554,7 @@ return {
 		}
 	},
 	hero_mage_0111 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1578,7 +1578,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0112 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1604,7 +1604,7 @@ return {
 		}
 	},
 	hero_mage_0114 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1628,7 +1628,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0115 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1652,7 +1652,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0116 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1676,7 +1676,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0117 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1708,7 +1708,7 @@ return {
 		}
 	},
 	hero_mage_0119 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1741,7 +1741,7 @@ return {
 		}
 	},
 	hero_mage_0122 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1771,7 +1771,7 @@ return {
 		}
 	},
 	hero_mage_0140 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1797,7 +1797,7 @@ return {
 		}
 	},
 	hero_mage_0143 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1824,7 +1824,7 @@ return {
 		}
 	},
 	hero_mage_0145 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1850,7 +1850,7 @@ return {
 		}
 	},
 	hero_mage_0147 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1878,7 +1878,7 @@ return {
 		}
 	},
 	hero_mage_0149 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1905,7 +1905,7 @@ return {
 		}
 	},
 	hero_mage_0151 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1933,7 +1933,7 @@ return {
 		}
 	},
 	hero_mage_0153 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1957,7 +1957,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0159 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -1983,7 +1983,7 @@ return {
 		}
 	},
 	hero_mage_0162 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -2007,7 +2007,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0163 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -2031,7 +2031,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0164 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -2055,7 +2055,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0165 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -2079,7 +2079,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0166 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -2103,7 +2103,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0167 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -2129,7 +2129,7 @@ return {
 		}
 	},
 	hero_mage_0169 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -2153,7 +2153,7 @@ return {
 		alias = {}
 	},
 	hero_mage_0170 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -2179,7 +2179,7 @@ return {
 		}
 	},
 	hero_mage_0172 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -2205,7 +2205,7 @@ return {
 		}
 	},
 	hero_mage_0174 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -2231,7 +2231,7 @@ return {
 		}
 	},
 	hero_mage_0176 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -2257,7 +2257,7 @@ return {
 		}
 	},
 	hero_mage_0178 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			86,
 			108
@@ -2283,7 +2283,7 @@ return {
 		}
 	},
 	hero_mage_bolt_0001 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			58,
 			38
@@ -2307,7 +2307,7 @@ return {
 		alias = {}
 	},
 	hero_mage_bolt_0002 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			58,
 			38
@@ -2331,7 +2331,7 @@ return {
 		alias = {}
 	},
 	hero_mage_bolt_0003 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			58,
 			38
@@ -2358,7 +2358,7 @@ return {
 		}
 	},
 	hero_mage_bolt_0006 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			58,
 			38
@@ -2384,7 +2384,7 @@ return {
 		}
 	},
 	hero_mage_bolt_0008 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			58,
 			38
@@ -2410,7 +2410,7 @@ return {
 		}
 	},
 	hero_mage_bolt_0010 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			58,
 			38
@@ -2434,7 +2434,7 @@ return {
 		alias = {}
 	},
 	hero_mage_rain_0001 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2458,7 +2458,7 @@ return {
 		alias = {}
 	},
 	hero_mage_rain_0002 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2482,7 +2482,7 @@ return {
 		alias = {}
 	},
 	hero_mage_rain_0003 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2506,7 +2506,7 @@ return {
 		alias = {}
 	},
 	hero_mage_rain_0004 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2530,7 +2530,7 @@ return {
 		alias = {}
 	},
 	hero_mage_rain_0005 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2554,7 +2554,7 @@ return {
 		alias = {}
 	},
 	hero_mage_rain_0006 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2578,7 +2578,7 @@ return {
 		alias = {}
 	},
 	hero_mage_rain_0007 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2602,7 +2602,7 @@ return {
 		alias = {}
 	},
 	hero_mage_rain_0008 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2626,7 +2626,7 @@ return {
 		alias = {}
 	},
 	hero_mage_rain_0009 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2650,7 +2650,7 @@ return {
 		alias = {}
 	},
 	hero_mage_rain_0010 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2674,7 +2674,7 @@ return {
 		alias = {}
 	},
 	hero_mage_rain_0011 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2698,7 +2698,7 @@ return {
 		alias = {}
 	},
 	hero_mage_rain_0012 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2722,7 +2722,7 @@ return {
 		alias = {}
 	},
 	hero_mage_rain_0013 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2746,7 +2746,7 @@ return {
 		alias = {}
 	},
 	hero_mage_rain_0014 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2772,7 +2772,7 @@ return {
 		}
 	},
 	hero_mage_rain_0016 = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			126,
 			226
@@ -2798,7 +2798,7 @@ return {
 		}
 	},
 	hero_mage_rain_decal = {
-		a_name = "go_hero_magnus-1.dds",
+		a_name = "go_hero_magnus-1.png",
 		size = {
 			128,
 			82

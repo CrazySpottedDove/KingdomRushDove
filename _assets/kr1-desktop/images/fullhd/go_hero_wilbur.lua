@@ -2,7 +2,7 @@
 
 return {
 	decal_wilbur_shadow = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			233,
 			349
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0001 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0002 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -76,7 +76,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_box_0004 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -102,7 +102,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_box_0006 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -128,7 +128,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_box_0008 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -154,7 +154,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_box_0010 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -180,7 +180,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_box_0012 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -204,7 +204,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0013 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -230,7 +230,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_box_0015 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -256,7 +256,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_box_0017 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -282,7 +282,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_box_0019 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -308,7 +308,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_box_0021 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -332,7 +332,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0022 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -358,7 +358,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_box_0024 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -384,7 +384,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_box_0026 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -410,7 +410,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_box_0028 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -436,7 +436,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_box_0030 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -460,7 +460,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0031 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -484,7 +484,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0032 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -508,7 +508,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0033 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -532,7 +532,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0034 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -556,7 +556,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0035 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -580,7 +580,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0036 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -604,7 +604,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0037 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -628,7 +628,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0038 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -652,7 +652,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0039 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -676,7 +676,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0040 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -700,7 +700,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0041 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -724,7 +724,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0042 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -748,7 +748,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0043 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -772,7 +772,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0044 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -796,7 +796,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0045 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -820,7 +820,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0046 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -844,7 +844,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_bomb_box_0047 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			65,
 			84
@@ -870,7 +870,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_decal_0001 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			87,
 			65
@@ -897,7 +897,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_decal_0004 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			87,
 			65
@@ -924,7 +924,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_decal_0007 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			87,
 			65
@@ -951,7 +951,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_decal_0010 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			87,
 			65
@@ -978,7 +978,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_decal_0013 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			87,
 			65
@@ -1005,7 +1005,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_decal_0016 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			87,
 			65
@@ -1032,7 +1032,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_decal_0019 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			87,
 			65
@@ -1059,7 +1059,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_decal_0022 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			87,
 			65
@@ -1086,7 +1086,7 @@ return {
 		}
 	},
 	hero_wilburg_bomb_decal_0025 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			87,
 			65
@@ -1113,7 +1113,7 @@ return {
 		}
 	},
 	hero_wilburg_box = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			51,
 			51
@@ -1137,7 +1137,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_0001 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			113,
 			90
@@ -1161,7 +1161,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_0002 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			113,
 			90
@@ -1185,7 +1185,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_0003 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			113,
 			90
@@ -1209,7 +1209,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_0004 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			113,
 			90
@@ -1233,7 +1233,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_0005 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			113,
 			90
@@ -1257,7 +1257,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_0006 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			113,
 			90
@@ -1281,7 +1281,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_0007 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			113,
 			90
@@ -1305,7 +1305,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_0008 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			113,
 			90
@@ -1331,7 +1331,7 @@ return {
 		}
 	},
 	hero_wilburg_box_hit_0010 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			113,
 			90
@@ -1355,7 +1355,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_0011 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			113,
 			90
@@ -1379,7 +1379,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_0012 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			113,
 			90
@@ -1403,7 +1403,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_0013 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			113,
 			90
@@ -1427,7 +1427,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_smoke_a_0001 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			39,
 			28
@@ -1451,7 +1451,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_smoke_a_0002 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			39,
 			28
@@ -1475,7 +1475,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_smoke_a_0003 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			39,
 			28
@@ -1501,7 +1501,7 @@ return {
 		}
 	},
 	hero_wilburg_box_hit_smoke_a_0005 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			39,
 			28
@@ -1527,7 +1527,7 @@ return {
 		}
 	},
 	hero_wilburg_box_hit_smoke_a_0007 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			39,
 			28
@@ -1553,7 +1553,7 @@ return {
 		}
 	},
 	hero_wilburg_box_hit_smoke_a_0009 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			39,
 			28
@@ -1579,7 +1579,7 @@ return {
 		}
 	},
 	hero_wilburg_box_hit_smoke_a_0011 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			39,
 			28
@@ -1603,7 +1603,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_box_hit_smoke_b_0001 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			42,
 			31
@@ -1629,7 +1629,7 @@ return {
 		}
 	},
 	hero_wilburg_box_hit_smoke_b_0003 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			42,
 			31
@@ -1655,7 +1655,7 @@ return {
 		}
 	},
 	hero_wilburg_box_hit_smoke_b_0005 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			42,
 			31
@@ -1681,7 +1681,7 @@ return {
 		}
 	},
 	hero_wilburg_box_hit_smoke_b_0007 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			42,
 			31
@@ -1707,7 +1707,7 @@ return {
 		}
 	},
 	hero_wilburg_drones_0001 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -1735,7 +1735,7 @@ return {
 		}
 	},
 	hero_wilburg_drones_0003 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -1761,7 +1761,7 @@ return {
 		}
 	},
 	hero_wilburg_drones_0007 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -1789,7 +1789,7 @@ return {
 		}
 	},
 	hero_wilburg_drones_0009 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -1815,7 +1815,7 @@ return {
 		}
 	},
 	hero_wilburg_drones_0013 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -1839,7 +1839,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_drones_0014 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -1863,7 +1863,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_drones_0015 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -1889,7 +1889,7 @@ return {
 		}
 	},
 	hero_wilburg_drones_0016 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -1913,7 +1913,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_drones_0017 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -1937,7 +1937,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_drones_0018 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -1961,7 +1961,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_drones_0019 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -1985,7 +1985,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_drones_0020 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -2009,7 +2009,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_drones_0021 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -2033,7 +2033,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_drones_0022 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -2057,7 +2057,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_drones_0023 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -2081,7 +2081,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_drones_0024 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -2105,7 +2105,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_drones_0025 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -2129,7 +2129,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_drones_0026 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -2153,7 +2153,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_drones_0027 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -2177,7 +2177,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_drones_0028 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			56,
 			56
@@ -2201,7 +2201,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0001 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2225,7 +2225,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0002 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2249,7 +2249,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0003 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2273,7 +2273,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0004 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2297,7 +2297,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0005 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2321,7 +2321,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0006 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2345,7 +2345,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0007 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2369,7 +2369,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0008 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2393,7 +2393,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0009 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2417,7 +2417,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0010 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2441,7 +2441,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0011 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2465,7 +2465,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0012 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2489,7 +2489,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0013 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2513,7 +2513,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0014 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2537,7 +2537,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0015 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2561,7 +2561,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0016 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2585,7 +2585,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0017 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2609,7 +2609,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0018 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2633,7 +2633,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0019 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2657,7 +2657,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0020 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2681,7 +2681,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0021 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2705,7 +2705,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0022 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2729,7 +2729,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0023 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2753,7 +2753,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_flash_shoot_0024 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			53,
 			37
@@ -2777,7 +2777,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_layer1_0001 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3155,7 +3155,7 @@ return {
 		}
 	},
 	hero_wilburg_layer1_0134 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3181,7 +3181,7 @@ return {
 		}
 	},
 	hero_wilburg_layer1_0136 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3205,7 +3205,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_layer1_0137 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3229,7 +3229,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_layer1_0138 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3255,7 +3255,7 @@ return {
 		}
 	},
 	hero_wilburg_layer1_0140 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3281,7 +3281,7 @@ return {
 		}
 	},
 	hero_wilburg_layer1_0142 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3307,7 +3307,7 @@ return {
 		}
 	},
 	hero_wilburg_layer1_0144 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3331,7 +3331,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_layer1_0145 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3355,7 +3355,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_layer1_0146 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3381,7 +3381,7 @@ return {
 		}
 	},
 	hero_wilburg_layer1_0148 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3407,7 +3407,7 @@ return {
 		}
 	},
 	hero_wilburg_layer1_0150 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3433,7 +3433,7 @@ return {
 		}
 	},
 	hero_wilburg_layer1_0152 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3459,7 +3459,7 @@ return {
 		}
 	},
 	hero_wilburg_layer1_0154 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3485,7 +3485,7 @@ return {
 		}
 	},
 	hero_wilburg_layer1_0156 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3511,7 +3511,7 @@ return {
 		}
 	},
 	hero_wilburg_layer1_0158 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3537,7 +3537,7 @@ return {
 		}
 	},
 	hero_wilburg_layer2_0045 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3567,7 +3567,7 @@ return {
 		}
 	},
 	hero_wilburg_layer2_0047 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3597,7 +3597,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0001 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3647,7 +3647,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0003 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3697,7 +3697,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0013 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3723,7 +3723,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0015 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3749,7 +3749,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0017 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3777,7 +3777,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0019 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3803,7 +3803,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0021 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3831,7 +3831,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0027 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3857,7 +3857,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0045 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3887,7 +3887,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0047 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3917,7 +3917,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0063 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3943,7 +3943,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0065 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3969,7 +3969,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0067 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -3995,7 +3995,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0071 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4021,7 +4021,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0073 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4051,7 +4051,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0079 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4081,7 +4081,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0085 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4107,7 +4107,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0089 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4131,7 +4131,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_layer3_0090 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4155,7 +4155,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_layer3_0093 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4181,7 +4181,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0095 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4205,7 +4205,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_layer3_0108 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4231,7 +4231,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0112 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4257,7 +4257,7 @@ return {
 		}
 	},
 	hero_wilburg_layer3_0128 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4283,7 +4283,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0001 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4309,7 +4309,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0003 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4335,7 +4335,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0005 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4361,7 +4361,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0007 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4387,7 +4387,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0009 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4413,7 +4413,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0011 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4439,7 +4439,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0013 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4465,7 +4465,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0015 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4491,7 +4491,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0017 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4517,7 +4517,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0019 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4543,7 +4543,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0021 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4569,7 +4569,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0023 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4595,7 +4595,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0025 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4621,7 +4621,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0027 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4647,7 +4647,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0045 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4673,7 +4673,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0047 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4699,7 +4699,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0049 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4725,7 +4725,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0051 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4751,7 +4751,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0053 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4777,7 +4777,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0055 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4803,7 +4803,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0057 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4829,7 +4829,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0059 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4855,7 +4855,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0061 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4881,7 +4881,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0063 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4907,7 +4907,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0065 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4933,7 +4933,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0067 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4959,7 +4959,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0069 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -4985,7 +4985,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0071 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5011,7 +5011,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0073 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5037,7 +5037,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0075 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5063,7 +5063,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0077 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5089,7 +5089,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0079 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5115,7 +5115,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0081 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5141,7 +5141,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0083 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5167,7 +5167,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0085 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5193,7 +5193,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0087 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5219,7 +5219,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0089 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5245,7 +5245,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0091 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5271,7 +5271,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0093 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5297,7 +5297,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0095 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5321,7 +5321,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_layer4_0096 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5349,7 +5349,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0098 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5375,7 +5375,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0100 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5401,7 +5401,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0102 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5427,7 +5427,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0104 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5453,7 +5453,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0106 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5479,7 +5479,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0108 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5505,7 +5505,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0110 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5531,7 +5531,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0112 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5555,7 +5555,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_layer4_0113 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5579,7 +5579,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_layer4_0114 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5605,7 +5605,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0116 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5631,7 +5631,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0118 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5657,7 +5657,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0120 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5683,7 +5683,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0122 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5709,7 +5709,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0124 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5735,7 +5735,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0126 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5761,7 +5761,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0130 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5787,7 +5787,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0132 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5813,7 +5813,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0134 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5839,7 +5839,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0136 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5865,7 +5865,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0138 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5891,7 +5891,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0140 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5917,7 +5917,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0142 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5943,7 +5943,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0144 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5969,7 +5969,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0146 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -5995,7 +5995,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0148 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -6021,7 +6021,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0160 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -6047,7 +6047,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0162 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -6073,7 +6073,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0164 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -6099,7 +6099,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0166 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -6123,7 +6123,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_layer4_0167 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -6147,7 +6147,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_layer4_0168 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -6173,7 +6173,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0170 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -6199,7 +6199,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0172 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -6225,7 +6225,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0174 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -6251,7 +6251,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0176 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -6277,7 +6277,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0178 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -6303,7 +6303,7 @@ return {
 		}
 	},
 	hero_wilburg_layer4_0180 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			242,
 			270
@@ -6329,7 +6329,7 @@ return {
 		}
 	},
 	hero_wilburg_missile_0001 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			51,
 			31
@@ -6353,7 +6353,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_missile_0002 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			51,
 			31
@@ -6377,7 +6377,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_missile_0003 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			51,
 			31
@@ -6401,7 +6401,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_missile_particle = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			17,
 			17
@@ -6425,7 +6425,7 @@ return {
 		alias = {}
 	},
 	hero_wilburg_shoot_floor_0001 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			39,
 			37
@@ -6451,7 +6451,7 @@ return {
 		}
 	},
 	hero_wilburg_shoot_floor_0003 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			39,
 			37
@@ -6477,7 +6477,7 @@ return {
 		}
 	},
 	hero_wilburg_shoot_floor_0005 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			39,
 			37
@@ -6503,7 +6503,7 @@ return {
 		}
 	},
 	hero_wilburg_shoot_floor_0007 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			39,
 			37
@@ -6529,7 +6529,7 @@ return {
 		}
 	},
 	hero_wilburg_shoot_floor_0009 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			39,
 			37
@@ -6555,7 +6555,7 @@ return {
 		}
 	},
 	hero_wilburg_shoot_floor_0011 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			39,
 			37
@@ -6581,7 +6581,7 @@ return {
 		}
 	},
 	hero_wilburg_smoke_0001 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			118,
 			155
@@ -6607,7 +6607,7 @@ return {
 		}
 	},
 	hero_wilburg_smoke_0003 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			118,
 			155
@@ -6633,7 +6633,7 @@ return {
 		}
 	},
 	hero_wilburg_smoke_0005 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			118,
 			155
@@ -6659,7 +6659,7 @@ return {
 		}
 	},
 	hero_wilburg_smoke_0007 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			118,
 			155
@@ -6685,7 +6685,7 @@ return {
 		}
 	},
 	hero_wilburg_smoke_0009 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			118,
 			155
@@ -6711,7 +6711,7 @@ return {
 		}
 	},
 	hero_wilburg_smoke_0011 = {
-		a_name = "go_hero_wilbur-1.dds",
+		a_name = "go_hero_wilbur-1.png",
 		size = {
 			118,
 			155

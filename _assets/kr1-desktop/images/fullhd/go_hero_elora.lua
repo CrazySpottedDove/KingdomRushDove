@@ -2,7 +2,7 @@
 
 return {
 	hero_frost_0001 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -30,7 +30,7 @@ return {
 		}
 	},
 	hero_frost_0002 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -56,7 +56,7 @@ return {
 		}
 	},
 	hero_frost_0004 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -82,7 +82,7 @@ return {
 		}
 	},
 	hero_frost_0006 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -108,7 +108,7 @@ return {
 		}
 	},
 	hero_frost_0010 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -134,7 +134,7 @@ return {
 		}
 	},
 	hero_frost_0012 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -160,7 +160,7 @@ return {
 		}
 	},
 	hero_frost_0014 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -187,7 +187,7 @@ return {
 		}
 	},
 	hero_frost_0017 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -213,7 +213,7 @@ return {
 		}
 	},
 	hero_frost_0019 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -239,7 +239,7 @@ return {
 		}
 	},
 	hero_frost_0021 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -265,7 +265,7 @@ return {
 		}
 	},
 	hero_frost_0023 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -291,7 +291,7 @@ return {
 		}
 	},
 	hero_frost_0025 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -317,7 +317,7 @@ return {
 		}
 	},
 	hero_frost_0027 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -343,7 +343,7 @@ return {
 		}
 	},
 	hero_frost_0029 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -369,7 +369,7 @@ return {
 		}
 	},
 	hero_frost_0031 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -399,7 +399,7 @@ return {
 		}
 	},
 	hero_frost_0033 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -425,7 +425,7 @@ return {
 		}
 	},
 	hero_frost_0035 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -451,7 +451,7 @@ return {
 		}
 	},
 	hero_frost_0037 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -477,7 +477,7 @@ return {
 		}
 	},
 	hero_frost_0039 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -503,7 +503,7 @@ return {
 		}
 	},
 	hero_frost_0041 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -529,7 +529,7 @@ return {
 		}
 	},
 	hero_frost_0043 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -555,7 +555,7 @@ return {
 		}
 	},
 	hero_frost_0045 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -581,7 +581,7 @@ return {
 		}
 	},
 	hero_frost_0047 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -607,7 +607,7 @@ return {
 		}
 	},
 	hero_frost_0049 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -633,7 +633,7 @@ return {
 		}
 	},
 	hero_frost_0051 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -661,7 +661,7 @@ return {
 		}
 	},
 	hero_frost_0055 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -687,7 +687,7 @@ return {
 		}
 	},
 	hero_frost_0057 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -714,7 +714,7 @@ return {
 		}
 	},
 	hero_frost_0060 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -740,7 +740,7 @@ return {
 		}
 	},
 	hero_frost_0062 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -766,7 +766,7 @@ return {
 		}
 	},
 	hero_frost_0064 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -792,7 +792,7 @@ return {
 		}
 	},
 	hero_frost_0066 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -821,7 +821,7 @@ return {
 		}
 	},
 	hero_frost_0071 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -847,7 +847,7 @@ return {
 		}
 	},
 	hero_frost_0073 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -873,7 +873,7 @@ return {
 		}
 	},
 	hero_frost_0075 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -899,7 +899,7 @@ return {
 		}
 	},
 	hero_frost_0077 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -925,7 +925,7 @@ return {
 		}
 	},
 	hero_frost_0079 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -951,7 +951,7 @@ return {
 		}
 	},
 	hero_frost_0081 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -977,7 +977,7 @@ return {
 		}
 	},
 	hero_frost_0083 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1003,7 +1003,7 @@ return {
 		}
 	},
 	hero_frost_0088 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1029,7 +1029,7 @@ return {
 		}
 	},
 	hero_frost_0090 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1055,7 +1055,7 @@ return {
 		}
 	},
 	hero_frost_0092 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1081,7 +1081,7 @@ return {
 		}
 	},
 	hero_frost_0094 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1107,7 +1107,7 @@ return {
 		}
 	},
 	hero_frost_0096 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1133,7 +1133,7 @@ return {
 		}
 	},
 	hero_frost_0098 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1159,7 +1159,7 @@ return {
 		}
 	},
 	hero_frost_0100 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1183,7 +1183,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0101 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1207,7 +1207,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0102 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1231,7 +1231,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0103 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1255,7 +1255,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0104 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1279,7 +1279,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0105 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1303,7 +1303,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0106 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1327,7 +1327,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0107 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1351,7 +1351,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0108 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1375,7 +1375,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0109 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1399,7 +1399,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0110 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1423,7 +1423,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0111 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1447,7 +1447,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0112 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1471,7 +1471,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0113 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1495,7 +1495,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0114 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1519,7 +1519,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0115 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1543,7 +1543,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0116 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1567,7 +1567,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0117 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1591,7 +1591,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0118 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1615,7 +1615,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0119 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1639,7 +1639,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0120 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1663,7 +1663,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0121 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1687,7 +1687,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0122 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1713,7 +1713,7 @@ return {
 		}
 	},
 	hero_frost_0126 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1737,7 +1737,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0127 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1761,7 +1761,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0128 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1785,7 +1785,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0129 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1809,7 +1809,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0130 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1835,7 +1835,7 @@ return {
 		}
 	},
 	hero_frost_0132 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1861,7 +1861,7 @@ return {
 		}
 	},
 	hero_frost_0134 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1885,7 +1885,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0135 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1909,7 +1909,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0136 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1933,7 +1933,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0137 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1957,7 +1957,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0138 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -1981,7 +1981,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0139 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -2005,7 +2005,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0140 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -2029,7 +2029,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0141 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -2053,7 +2053,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0142 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -2077,7 +2077,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0143 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -2101,7 +2101,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0144 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -2125,7 +2125,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0145 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -2149,7 +2149,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0146 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -2173,7 +2173,7 @@ return {
 		alias = {}
 	},
 	hero_frost_0147 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -2200,7 +2200,7 @@ return {
 		}
 	},
 	hero_frost_0150 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -2226,7 +2226,7 @@ return {
 		}
 	},
 	hero_frost_0152 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			116,
 			148
@@ -2250,7 +2250,7 @@ return {
 		alias = {}
 	},
 	hero_frost_bolt_0001 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			82,
 			48
@@ -2276,7 +2276,7 @@ return {
 		}
 	},
 	hero_frost_bolt_0003 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			82,
 			48
@@ -2302,7 +2302,7 @@ return {
 		}
 	},
 	hero_frost_bolt_0005 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			82,
 			48
@@ -2328,7 +2328,7 @@ return {
 		}
 	},
 	hero_frost_bolt_0007 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			82,
 			48
@@ -2354,7 +2354,7 @@ return {
 		}
 	},
 	hero_frost_bolt_0009 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			82,
 			48
@@ -2380,7 +2380,7 @@ return {
 		}
 	},
 	hero_frost_bolt_0011 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			82,
 			48
@@ -2406,7 +2406,7 @@ return {
 		}
 	},
 	hero_frost_groundFreeze_1_0001 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2430,7 +2430,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_1_0002 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2454,7 +2454,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_1_0003 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2478,7 +2478,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_1_0004 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2502,7 +2502,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_1_0005 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2526,7 +2526,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_1_0006 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2550,7 +2550,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_1_0007 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2574,7 +2574,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_1_0008 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2598,7 +2598,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_1_0009 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2622,7 +2622,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_1_0010 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2646,7 +2646,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_1_0011 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2670,7 +2670,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_2_0001 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2694,7 +2694,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_2_0002 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2718,7 +2718,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_2_0003 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2742,7 +2742,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_2_0004 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2766,7 +2766,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_2_0005 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2790,7 +2790,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_2_0006 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2814,7 +2814,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_2_0007 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2838,7 +2838,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_2_0008 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2862,7 +2862,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_2_0009 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2886,7 +2886,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_2_0010 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2910,7 +2910,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_2_0011 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2934,7 +2934,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_3_0001 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2958,7 +2958,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_3_0002 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -2982,7 +2982,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_3_0003 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -3006,7 +3006,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_3_0004 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -3030,7 +3030,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_3_0005 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -3054,7 +3054,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_3_0006 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -3078,7 +3078,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_3_0007 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -3102,7 +3102,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_3_0008 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -3126,7 +3126,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_3_0009 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -3150,7 +3150,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_3_0010 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -3174,7 +3174,7 @@ return {
 		alias = {}
 	},
 	hero_frost_groundFreeze_3_0011 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			120,
 			58
@@ -3198,7 +3198,7 @@ return {
 		alias = {}
 	},
 	hero_frost_idleEffect_0001 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3224,7 +3224,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0003 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3250,7 +3250,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0005 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3276,7 +3276,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0007 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3302,7 +3302,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0009 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3328,7 +3328,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0011 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3354,7 +3354,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0013 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3380,7 +3380,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0015 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3406,7 +3406,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0017 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3432,7 +3432,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0019 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3458,7 +3458,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0021 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3484,7 +3484,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0023 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3510,7 +3510,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0025 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3536,7 +3536,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0027 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3562,7 +3562,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0029 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3588,7 +3588,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0031 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3614,7 +3614,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0033 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3640,7 +3640,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0035 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3666,7 +3666,7 @@ return {
 		}
 	},
 	hero_frost_idleEffect_0037 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			128,
 			102
@@ -3692,7 +3692,7 @@ return {
 		}
 	},
 	hero_frost_runParticle_0001 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			34,
 			24
@@ -3722,7 +3722,7 @@ return {
 		}
 	},
 	hero_frost_runParticle_0007 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			34,
 			24
@@ -3748,7 +3748,7 @@ return {
 		}
 	},
 	hero_frost_runParticle_0009 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			34,
 			24
@@ -3774,7 +3774,7 @@ return {
 		}
 	},
 	hero_frost_runParticle_0011 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			34,
 			24
@@ -3800,7 +3800,7 @@ return {
 		}
 	},
 	hero_frost_runParticle_0013 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			34,
 			24
@@ -3824,7 +3824,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0001 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -3848,7 +3848,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0002 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -3872,7 +3872,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0003 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -3896,7 +3896,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0004 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -3920,7 +3920,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0005 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -3944,7 +3944,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0006 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -3968,7 +3968,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0007 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -3992,7 +3992,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0008 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4016,7 +4016,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0009 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4040,7 +4040,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0010 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4064,7 +4064,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0011 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4088,7 +4088,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0012 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4112,7 +4112,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0013 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4136,7 +4136,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0014 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4160,7 +4160,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0015 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4200,7 +4200,7 @@ return {
 		}
 	},
 	hero_frost_spikes_1_0031 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4224,7 +4224,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0032 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4248,7 +4248,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0033 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4272,7 +4272,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0034 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4296,7 +4296,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0035 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4320,7 +4320,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0036 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4344,7 +4344,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0037 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4368,7 +4368,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0038 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4392,7 +4392,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0039 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4416,7 +4416,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0040 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4440,7 +4440,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0041 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4464,7 +4464,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0042 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4488,7 +4488,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0043 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4512,7 +4512,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0044 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4536,7 +4536,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0045 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4560,7 +4560,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0046 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4584,7 +4584,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0047 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4608,7 +4608,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0048 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4632,7 +4632,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0049 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4656,7 +4656,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0050 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4680,7 +4680,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0051 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4704,7 +4704,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0052 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4728,7 +4728,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_1_0053 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -4752,7 +4752,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0001 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -4776,7 +4776,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0002 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -4800,7 +4800,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0003 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -4824,7 +4824,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0004 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -4848,7 +4848,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0005 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -4872,7 +4872,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0006 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -4896,7 +4896,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0007 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -4920,7 +4920,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0008 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -4944,7 +4944,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0009 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -4968,7 +4968,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0010 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -4992,7 +4992,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0011 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5016,7 +5016,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0012 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5040,7 +5040,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0013 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5064,7 +5064,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0014 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5088,7 +5088,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0015 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5129,7 +5129,7 @@ return {
 		}
 	},
 	hero_frost_spikes_2_0032 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5153,7 +5153,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0033 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5177,7 +5177,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0034 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5201,7 +5201,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0035 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5225,7 +5225,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0036 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5249,7 +5249,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0037 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5273,7 +5273,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0038 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5297,7 +5297,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0039 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5321,7 +5321,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0040 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5345,7 +5345,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0041 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5369,7 +5369,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0042 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5393,7 +5393,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0043 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5417,7 +5417,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0044 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5441,7 +5441,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0045 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5465,7 +5465,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0046 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5489,7 +5489,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0047 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5513,7 +5513,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0048 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5537,7 +5537,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0049 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5561,7 +5561,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0050 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5585,7 +5585,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0051 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5609,7 +5609,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0052 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5633,7 +5633,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0053 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5657,7 +5657,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_2_0054 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122
@@ -5681,7 +5681,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_decal1 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			170,
 			148
@@ -5705,7 +5705,7 @@ return {
 		alias = {}
 	},
 	hero_frost_spikes_decal2 = {
-		a_name = "go_hero_elora-1.dds",
+		a_name = "go_hero_elora-1.png",
 		size = {
 			142,
 			122

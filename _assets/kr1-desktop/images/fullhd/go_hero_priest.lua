@@ -1,7 +1,7 @@
 -- chunkname: @./kr2-desktop/assets/images/fullhd/go_hero_priest.lua
 return {
     hero_barracks_buff_0001 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {41, 51, 38, 3},
         a_size = {1024, 1024},
@@ -9,7 +9,7 @@ return {
         alias = {"hero_barracks_buff_0028"}
     },
     hero_barracks_buff_0002 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {40, 51, 37, 3},
         a_size = {1024, 1024},
@@ -17,7 +17,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0003 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {49, 51, 45, 6},
         a_size = {1024, 1024},
@@ -25,7 +25,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0004 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {49, 51, 46, 6},
         a_size = {1024, 1024},
@@ -33,7 +33,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0005 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {48, 51, 45, 6},
         a_size = {1024, 1024},
@@ -41,7 +41,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0006 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {48, 51, 44, 5},
         a_size = {1024, 1024},
@@ -49,7 +49,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0007 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {47, 51, 44, 5},
         a_size = {1024, 1024},
@@ -57,7 +57,7 @@ return {
         alias = {"hero_barracks_buff_0020"}
     },
     hero_barracks_buff_0008 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {46, 51, 43, 5},
         a_size = {1024, 1024},
@@ -65,7 +65,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0009 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {45, 51, 43, 4},
         a_size = {1024, 1024},
@@ -73,7 +73,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0010 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {44, 51, 42, 4},
         a_size = {1024, 1024},
@@ -81,7 +81,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0011 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {44, 51, 41, 4},
         a_size = {1024, 1024},
@@ -89,7 +89,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0012 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {43, 51, 40, 4},
         a_size = {1024, 1024},
@@ -97,7 +97,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0013 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {42, 51, 40, 3},
         a_size = {1024, 1024},
@@ -105,7 +105,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0014 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {41, 51, 39, 3},
         a_size = {1024, 1024},
@@ -113,7 +113,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0015 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {41, 51, 38, 3},
         a_size = {1024, 1024},
@@ -121,7 +121,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0016 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {40, 51, 38, 3},
         a_size = {1024, 1024},
@@ -129,7 +129,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0017 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {49, 51, 45, 6},
         a_size = {1024, 1024},
@@ -137,7 +137,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0018 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {48, 51, 45, 6},
         a_size = {1024, 1024},
@@ -145,7 +145,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0019 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {48, 51, 44, 5},
         a_size = {1024, 1024},
@@ -153,7 +153,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0021 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {46, 51, 43, 5},
         a_size = {1024, 1024},
@@ -161,7 +161,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0022 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {45, 51, 43, 4},
         a_size = {1024, 1024},
@@ -169,7 +169,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0023 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {44, 51, 42, 4},
         a_size = {1024, 1024},
@@ -177,7 +177,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0024 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {44, 51, 41, 4},
         a_size = {1024, 1024},
@@ -185,7 +185,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0025 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {43, 51, 41, 4},
         a_size = {1024, 1024},
@@ -193,7 +193,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0026 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {42, 51, 40, 3},
         a_size = {1024, 1024},
@@ -201,7 +201,7 @@ return {
         alias = {}
     },
     hero_barracks_buff_0027 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {132, 73},
         trim = {41, 51, 39, 3},
         a_size = {1024, 1024},
@@ -209,7 +209,7 @@ return {
         alias = {}
     },
     hero_priest_0001 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 110, 39, 30},
         a_size = {1024, 1024},
@@ -218,7 +218,7 @@ return {
                  "hero_priest_0121", "hero_priest_0209"}
     },
     hero_priest_0003 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 110, 39, 30},
         a_size = {1024, 1024},
@@ -226,7 +226,7 @@ return {
         alias = {"hero_priest_0004"}
     },
     hero_priest_0005 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 110, 37, 30},
         a_size = {1024, 1024},
@@ -234,7 +234,7 @@ return {
         alias = {"hero_priest_0006"}
     },
     hero_priest_0007 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 110, 35, 30},
         a_size = {1024, 1024},
@@ -242,7 +242,7 @@ return {
         alias = {"hero_priest_0008"}
     },
     hero_priest_0009 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 110, 33, 30},
         a_size = {1024, 1024},
@@ -250,7 +250,7 @@ return {
         alias = {"hero_priest_0010"}
     },
     hero_priest_0011 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 110, 32, 30},
         a_size = {1024, 1024},
@@ -258,7 +258,7 @@ return {
         alias = {"hero_priest_0012"}
     },
     hero_priest_0013 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 110, 32, 30},
         a_size = {1024, 1024},
@@ -266,7 +266,7 @@ return {
         alias = {"hero_priest_0014"}
     },
     hero_priest_0015 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 110, 34, 30},
         a_size = {1024, 1024},
@@ -274,7 +274,7 @@ return {
         alias = {"hero_priest_0016"}
     },
     hero_priest_0017 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 110, 34, 30},
         a_size = {1024, 1024},
@@ -282,7 +282,7 @@ return {
         alias = {"hero_priest_0018"}
     },
     hero_priest_0019 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 110, 36, 30},
         a_size = {1024, 1024},
@@ -290,7 +290,7 @@ return {
         alias = {"hero_priest_0020"}
     },
     hero_priest_0021 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 110, 37, 30},
         a_size = {1024, 1024},
@@ -298,7 +298,7 @@ return {
         alias = {"hero_priest_0022"}
     },
     hero_priest_0023 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 110, 38, 30},
         a_size = {1024, 1024},
@@ -306,7 +306,7 @@ return {
         alias = {"hero_priest_0024"}
     },
     hero_priest_0025 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {15, 109, 40, 30},
         a_size = {1024, 1024},
@@ -314,7 +314,7 @@ return {
         alias = {}
     },
     hero_priest_0026 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {110, 188},
         trim = {32, 104, 39, 30},
         a_size = {1024, 1024},
@@ -322,7 +322,7 @@ return {
         alias = {}
     },
     hero_priest_0027 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {110, 188},
         trim = {33, 102, 39, 30},
         a_size = {1024, 1024},
@@ -330,7 +330,7 @@ return {
         alias = {}
     },
     hero_priest_0028 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 106, 39, 30},
         a_size = {1024, 1024},
@@ -338,7 +338,7 @@ return {
         alias = {}
     },
     hero_priest_0029 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {110, 188},
         trim = {30, 111, 40, 30},
         a_size = {1024, 1024},
@@ -346,7 +346,7 @@ return {
         alias = {}
     },
     hero_priest_0030 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {20, 109, 34, 30},
         a_size = {1024, 1024},
@@ -354,7 +354,7 @@ return {
         alias = {"hero_priest_0031"}
     },
     hero_priest_0032 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {13, 112, 36, 30},
         a_size = {1024, 1024},
@@ -362,7 +362,7 @@ return {
         alias = {"hero_priest_0033"}
     },
     hero_priest_0034 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {11, 105, 39, 30},
         a_size = {1024, 1024},
@@ -370,7 +370,7 @@ return {
         alias = {"hero_priest_0035"}
     },
     hero_priest_0036 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {11, 107, 39, 29},
         a_size = {1024, 1024},
@@ -378,7 +378,7 @@ return {
         alias = {}
     },
     hero_priest_0037 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {32, 121, 23, 28},
         a_size = {1024, 1024},
@@ -386,7 +386,7 @@ return {
         alias = {"hero_priest_0038"}
     },
     hero_priest_0039 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {22, 122, 12, 21},
         a_size = {1024, 1024},
@@ -394,7 +394,7 @@ return {
         alias = {"hero_priest_0040"}
     },
     hero_priest_0041 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {34, 127, 9, 21},
         a_size = {1024, 1024},
@@ -402,7 +402,7 @@ return {
         alias = {"hero_priest_0042"}
     },
     hero_priest_0043 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {40, 127, 10, 27},
         a_size = {1024, 1024},
@@ -410,7 +410,7 @@ return {
         alias = {"hero_priest_0044"}
     },
     hero_priest_0045 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {40, 127, 23, 27},
         a_size = {1024, 1024},
@@ -418,7 +418,7 @@ return {
         alias = {"hero_priest_0046", "hero_priest_0047", "hero_priest_0048"}
     },
     hero_priest_0049 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {110, 188},
         trim = {32, 114, 39, 32},
         a_size = {1024, 1024},
@@ -426,7 +426,7 @@ return {
         alias = {"hero_priest_0050"}
     },
     hero_priest_0052 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 112, 35, 30},
         a_size = {1024, 1024},
@@ -434,7 +434,7 @@ return {
         alias = {"hero_priest_0053"}
     },
     hero_priest_0054 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 112, 31, 29},
         a_size = {1024, 1024},
@@ -442,7 +442,7 @@ return {
         alias = {"hero_priest_0055"}
     },
     hero_priest_0056 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {29, 115, 31, 29},
         a_size = {1024, 1024},
@@ -450,7 +450,7 @@ return {
         alias = {"hero_priest_0057", "hero_priest_0058"}
     },
     hero_priest_0059 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {29, 104, 35, 30},
         a_size = {1024, 1024},
@@ -458,7 +458,7 @@ return {
         alias = {"hero_priest_0060"}
     },
     hero_priest_0061 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {24, 96, 36, 30},
         a_size = {1024, 1024},
@@ -466,7 +466,7 @@ return {
         alias = {}
     },
     hero_priest_0062 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {24, 96, 36, 30},
         a_size = {1024, 1024},
@@ -474,7 +474,7 @@ return {
         alias = {}
     },
     hero_priest_0063 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {23, 96, 37, 30},
         a_size = {1024, 1024},
@@ -482,7 +482,7 @@ return {
         alias = {}
     },
     hero_priest_0064 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {22, 92, 37, 30},
         a_size = {1024, 1024},
@@ -490,7 +490,7 @@ return {
         alias = {}
     },
     hero_priest_0065 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {18, 87, 37, 30},
         a_size = {1024, 1024},
@@ -498,7 +498,7 @@ return {
         alias = {}
     },
     hero_priest_0066 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {15, 84, 39, 30},
         a_size = {1024, 1024},
@@ -506,7 +506,7 @@ return {
         alias = {}
     },
     hero_priest_0067 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {13, 82, 39, 30},
         a_size = {1024, 1024},
@@ -514,7 +514,7 @@ return {
         alias = {}
     },
     hero_priest_0068 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {12, 81, 39, 30},
         a_size = {1024, 1024},
@@ -522,7 +522,7 @@ return {
         alias = {}
     },
     hero_priest_0069 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {12, 81, 40, 30},
         a_size = {1024, 1024},
@@ -530,7 +530,7 @@ return {
         alias = {}
     },
     hero_priest_0070 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {12, 80, 40, 30},
         a_size = {1024, 1024},
@@ -538,7 +538,7 @@ return {
         alias = {}
     },
     hero_priest_0071 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {11, 80, 40, 30},
         a_size = {1024, 1024},
@@ -546,7 +546,7 @@ return {
         alias = {}
     },
     hero_priest_0072 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {11, 79, 40, 30},
         a_size = {1024, 1024},
@@ -554,7 +554,7 @@ return {
         alias = {}
     },
     hero_priest_0073 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {10, 79, 40, 30},
         a_size = {1024, 1024},
@@ -562,7 +562,7 @@ return {
         alias = {}
     },
     hero_priest_0074 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {10, 78, 39, 30},
         a_size = {1024, 1024},
@@ -570,7 +570,7 @@ return {
         alias = {}
     },
     hero_priest_0075 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {9, 78, 39, 30},
         a_size = {1024, 1024},
@@ -578,7 +578,7 @@ return {
         alias = {}
     },
     hero_priest_0076 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {9, 77, 39, 30},
         a_size = {1024, 1024},
@@ -586,7 +586,7 @@ return {
         alias = {}
     },
     hero_priest_0077 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {8, 76, 39, 30},
         a_size = {1024, 1024},
@@ -594,7 +594,7 @@ return {
         alias = {}
     },
     hero_priest_0078 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {8, 77, 39, 30},
         a_size = {1024, 1024},
@@ -602,7 +602,7 @@ return {
         alias = {}
     },
     hero_priest_0079 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {9, 77, 39, 30},
         a_size = {1024, 1024},
@@ -610,7 +610,7 @@ return {
         alias = {}
     },
     hero_priest_0080 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 92, 40, 30},
         a_size = {1024, 1024},
@@ -618,7 +618,7 @@ return {
         alias = {}
     },
     hero_priest_0084 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {15, 114, 48, 30},
         a_size = {1024, 1024},
@@ -626,7 +626,7 @@ return {
         alias = {}
     },
     hero_priest_0085 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {13, 114, 51, 30},
         a_size = {1024, 1024},
@@ -634,7 +634,7 @@ return {
         alias = {}
     },
     hero_priest_0086 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {11, 116, 54, 30},
         a_size = {1024, 1024},
@@ -642,7 +642,7 @@ return {
         alias = {}
     },
     hero_priest_0087 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {9, 133, 54, 23},
         a_size = {1024, 1024},
@@ -650,7 +650,7 @@ return {
         alias = {}
     },
     hero_priest_0088 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {10, 140, 54, 24},
         a_size = {1024, 1024},
@@ -658,7 +658,7 @@ return {
         alias = {"hero_priest_0089"}
     },
     hero_priest_0090 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {7, 136, 56, 22},
         a_size = {1024, 1024},
@@ -666,7 +666,7 @@ return {
         alias = {}
     },
     hero_priest_0091 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 111, 37, 30},
         a_size = {1024, 1024},
@@ -674,7 +674,7 @@ return {
         alias = {"hero_priest_0092"}
     },
     hero_priest_0093 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 111, 31, 30},
         a_size = {1024, 1024},
@@ -682,7 +682,7 @@ return {
         alias = {"hero_priest_0094"}
     },
     hero_priest_0095 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {27, 111, 31, 30},
         a_size = {1024, 1024},
@@ -690,7 +690,7 @@ return {
         alias = {"hero_priest_0096"}
     },
     hero_priest_0097 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {27, 111, 34, 30},
         a_size = {1024, 1024},
@@ -698,7 +698,7 @@ return {
         alias = {"hero_priest_0098"}
     },
     hero_priest_0099 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {24, 109, 29, 30},
         a_size = {1024, 1024},
@@ -706,7 +706,7 @@ return {
         alias = {}
     },
     hero_priest_0100 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {24, 109, 29, 30},
         a_size = {1024, 1024},
@@ -714,7 +714,7 @@ return {
         alias = {}
     },
     hero_priest_0101 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {19, 99, 21, 20},
         a_size = {1024, 1024},
@@ -722,7 +722,7 @@ return {
         alias = {}
     },
     hero_priest_0102 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {19, 99, 21, 20},
         a_size = {1024, 1024},
@@ -730,7 +730,7 @@ return {
         alias = {}
     },
     hero_priest_0103 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {17, 97, 19, 19},
         a_size = {1024, 1024},
@@ -738,7 +738,7 @@ return {
         alias = {}
     },
     hero_priest_0104 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {17, 97, 19, 19},
         a_size = {1024, 1024},
@@ -746,7 +746,7 @@ return {
         alias = {"hero_priest_0105"}
     },
     hero_priest_0106 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {17, 97, 19, 19},
         a_size = {1024, 1024},
@@ -754,7 +754,7 @@ return {
         alias = {}
     },
     hero_priest_0107 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {17, 97, 19, 19},
         a_size = {1024, 1024},
@@ -762,7 +762,7 @@ return {
         alias = {"hero_priest_0108"}
     },
     hero_priest_0109 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {18, 97, 20, 18},
         a_size = {1024, 1024},
@@ -770,7 +770,7 @@ return {
         alias = {}
     },
     hero_priest_0110 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {18, 97, 20, 18},
         a_size = {1024, 1024},
@@ -778,7 +778,7 @@ return {
         alias = {}
     },
     hero_priest_0111 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {18, 97, 20, 18},
         a_size = {1024, 1024},
@@ -786,7 +786,7 @@ return {
         alias = {}
     },
     hero_priest_0112 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {18, 97, 20, 18},
         a_size = {1024, 1024},
@@ -794,7 +794,7 @@ return {
         alias = {}
     },
     hero_priest_0113 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {21, 100, 23, 22},
         a_size = {1024, 1024},
@@ -802,7 +802,7 @@ return {
         alias = {}
     },
     hero_priest_0114 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {21, 100, 23, 22},
         a_size = {1024, 1024},
@@ -810,7 +810,7 @@ return {
         alias = {}
     },
     hero_priest_0115 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {25, 109, 30, 30},
         a_size = {1024, 1024},
@@ -818,7 +818,7 @@ return {
         alias = {"hero_priest_0116"}
     },
     hero_priest_0117 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {27, 111, 34, 30},
         a_size = {1024, 1024},
@@ -826,7 +826,7 @@ return {
         alias = {}
     },
     hero_priest_0118 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {27, 111, 34, 30},
         a_size = {1024, 1024},
@@ -834,7 +834,7 @@ return {
         alias = {}
     },
     hero_priest_0119 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {27, 112, 37, 30},
         a_size = {1024, 1024},
@@ -842,7 +842,7 @@ return {
         alias = {"hero_priest_0120"}
     },
     hero_priest_0122 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 111, 37, 29},
         a_size = {1024, 1024},
@@ -850,7 +850,7 @@ return {
         alias = {}
     },
     hero_priest_0123 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 111, 31, 29},
         a_size = {1024, 1024},
@@ -858,7 +858,7 @@ return {
         alias = {}
     },
     hero_priest_0124 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {27, 79, 31, 24},
         a_size = {1024, 1024},
@@ -866,7 +866,7 @@ return {
         alias = {}
     },
     hero_priest_0125 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {27, 79, 36, 24},
         a_size = {1024, 1024},
@@ -874,7 +874,7 @@ return {
         alias = {}
     },
     hero_priest_0126 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {29, 79, 36, 24},
         a_size = {1024, 1024},
@@ -882,7 +882,7 @@ return {
         alias = {}
     },
     hero_priest_0127 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {30, 79, 35, 25},
         a_size = {1024, 1024},
@@ -890,7 +890,7 @@ return {
         alias = {}
     },
     hero_priest_0128 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {30, 79, 35, 25},
         a_size = {1024, 1024},
@@ -898,7 +898,7 @@ return {
         alias = {}
     },
     hero_priest_0129 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {30, 78, 33, 24},
         a_size = {1024, 1024},
@@ -906,7 +906,7 @@ return {
         alias = {}
     },
     hero_priest_0130 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {18, 76, 21, 24},
         a_size = {1024, 1024},
@@ -914,7 +914,7 @@ return {
         alias = {}
     },
     hero_priest_0131 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {7, 72, 12, 24},
         a_size = {1024, 1024},
@@ -922,7 +922,7 @@ return {
         alias = {}
     },
     hero_priest_0132 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {12, 69, 19, 24},
         a_size = {1024, 1024},
@@ -930,7 +930,7 @@ return {
         alias = {}
     },
     hero_priest_0133 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 53, 33, 23},
         a_size = {1024, 1024},
@@ -938,7 +938,7 @@ return {
         alias = {}
     },
     hero_priest_0134 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {110, 188},
         trim = {38, 34, 44, 53},
         a_size = {1024, 1024},
@@ -946,7 +946,7 @@ return {
         alias = {}
     },
     hero_priest_0135 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {110, 188},
         trim = {43, 27, 50, 80},
         a_size = {1024, 1024},
@@ -954,7 +954,7 @@ return {
         alias = {}
     },
     hero_priest_0136 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {110, 188},
         trim = {43, 27, 50, 121},
         a_size = {1024, 1024},
@@ -962,7 +962,7 @@ return {
         alias = {}
     },
     hero_priest_0147 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {110, 188},
         trim = {45, 15, 48, 82},
         a_size = {1024, 1024},
@@ -970,7 +970,7 @@ return {
         alias = {}
     },
     hero_priest_0148 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {110, 188},
         trim = {39, 16, 42, 65},
         a_size = {1024, 1024},
@@ -978,7 +978,7 @@ return {
         alias = {}
     },
     hero_priest_0149 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 12, 39, 35},
         a_size = {1024, 1024},
@@ -986,7 +986,7 @@ return {
         alias = {}
     },
     hero_priest_0150 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {21, 61, 28, 18},
         a_size = {1024, 1024},
@@ -994,7 +994,7 @@ return {
         alias = {}
     },
     hero_priest_0151 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {21, 72, 23, 19},
         a_size = {1024, 1024},
@@ -1002,7 +1002,7 @@ return {
         alias = {}
     },
     hero_priest_0152 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {21, 93, 23, 18},
         a_size = {1024, 1024},
@@ -1010,7 +1010,7 @@ return {
         alias = {}
     },
     hero_priest_0153 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {17, 93, 23, 18},
         a_size = {1024, 1024},
@@ -1018,7 +1018,7 @@ return {
         alias = {}
     },
     hero_priest_0154 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {13, 104, 19, 16},
         a_size = {1024, 1024},
@@ -1026,7 +1026,7 @@ return {
         alias = {}
     },
     hero_priest_0155 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {10, 104, 16, 15},
         a_size = {1024, 1024},
@@ -1034,7 +1034,7 @@ return {
         alias = {}
     },
     hero_priest_0156 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {8, 102, 14, 15},
         a_size = {1024, 1024},
@@ -1042,7 +1042,7 @@ return {
         alias = {}
     },
     hero_priest_0157 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {7, 102, 13, 14},
         a_size = {1024, 1024},
@@ -1050,7 +1050,7 @@ return {
         alias = {}
     },
     hero_priest_0158 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {6, 99, 12, 14},
         a_size = {1024, 1024},
@@ -1058,7 +1058,7 @@ return {
         alias = {}
     },
     hero_priest_0159 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {6, 99, 12, 14},
         a_size = {1024, 1024},
@@ -1066,7 +1066,7 @@ return {
         alias = {}
     },
     hero_priest_0160 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {5, 97, 11, 13},
         a_size = {1024, 1024},
@@ -1074,7 +1074,7 @@ return {
         alias = {}
     },
     hero_priest_0161 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {4, 97, 10, 13},
         a_size = {1024, 1024},
@@ -1082,7 +1082,7 @@ return {
         alias = {}
     },
     hero_priest_0162 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {3, 97, 9, 13},
         a_size = {1024, 1024},
@@ -1090,7 +1090,7 @@ return {
         alias = {}
     },
     hero_priest_0163 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {2, 97, 9, 13},
         a_size = {1024, 1024},
@@ -1098,7 +1098,7 @@ return {
         alias = {}
     },
     hero_priest_0164 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 111, 39, 29},
         a_size = {1024, 1024},
@@ -1106,7 +1106,7 @@ return {
         alias = {}
     },
     hero_priest_0168 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {27, 114, 37, 30},
         a_size = {1024, 1024},
@@ -1114,7 +1114,7 @@ return {
         alias = {"hero_priest_0169"}
     },
     hero_priest_0170 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {27, 116, 31, 29},
         a_size = {1024, 1024},
@@ -1122,7 +1122,7 @@ return {
         alias = {"hero_priest_0171"}
     },
     hero_priest_0172 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {27, 117, 30, 29},
         a_size = {1024, 1024},
@@ -1130,7 +1130,7 @@ return {
         alias = {"hero_priest_0173"}
     },
     hero_priest_0174 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {27, 118, 35, 29},
         a_size = {1024, 1024},
@@ -1138,7 +1138,7 @@ return {
         alias = {"hero_priest_0175", "hero_priest_0176"}
     },
     hero_priest_0177 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {31, 102, 35, 30},
         a_size = {1024, 1024},
@@ -1146,7 +1146,7 @@ return {
         alias = {"hero_priest_0178"}
     },
     hero_priest_0179 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {30, 97, 37, 30},
         a_size = {1024, 1024},
@@ -1154,7 +1154,7 @@ return {
         alias = {"hero_priest_0180"}
     },
     hero_priest_0181 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {29, 95, 38, 30},
         a_size = {1024, 1024},
@@ -1162,7 +1162,7 @@ return {
         alias = {"hero_priest_0182"}
     },
     hero_priest_0183 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {29, 96, 40, 30},
         a_size = {1024, 1024},
@@ -1170,7 +1170,7 @@ return {
         alias = {}
     },
     hero_priest_0184 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {29, 96, 40, 30},
         a_size = {1024, 1024},
@@ -1178,7 +1178,7 @@ return {
         alias = {}
     },
     hero_priest_0185 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {29, 97, 40, 30},
         a_size = {1024, 1024},
@@ -1186,7 +1186,7 @@ return {
         alias = {}
     },
     hero_priest_0186 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {29, 97, 40, 30},
         a_size = {1024, 1024},
@@ -1194,7 +1194,7 @@ return {
         alias = {}
     },
     hero_priest_0187 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {29, 97, 40, 30},
         a_size = {1024, 1024},
@@ -1202,7 +1202,7 @@ return {
         alias = {}
     },
     hero_priest_0188 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {29, 98, 40, 30},
         a_size = {1024, 1024},
@@ -1210,7 +1210,7 @@ return {
         alias = {}
     },
     hero_priest_0189 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {110, 188},
         trim = {29, 98, 40, 30},
         a_size = {1024, 1024},
@@ -1218,7 +1218,7 @@ return {
         alias = {}
     },
     hero_priest_0190 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {110, 188},
         trim = {29, 99, 40, 30},
         a_size = {1024, 1024},
@@ -1226,7 +1226,7 @@ return {
         alias = {}
     },
     hero_priest_0191 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {30, 107, 40, 30},
         a_size = {1024, 1024},
@@ -1234,7 +1234,7 @@ return {
         alias = {"hero_priest_0192"}
     },
     hero_priest_0193 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 110, 39, 30},
         a_size = {1024, 1024},
@@ -1242,7 +1242,7 @@ return {
         alias = {}
     },
     hero_priest_0194 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {29, 77, 31, 27},
         a_size = {1024, 1024},
@@ -1250,7 +1250,7 @@ return {
         alias = {}
     },
     hero_priest_0195 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {30, 77, 32, 27},
         a_size = {1024, 1024},
@@ -1258,7 +1258,7 @@ return {
         alias = {}
     },
     hero_priest_0196 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {30, 77, 32, 27},
         a_size = {1024, 1024},
@@ -1266,7 +1266,7 @@ return {
         alias = {}
     },
     hero_priest_0197 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {30, 77, 32, 27},
         a_size = {1024, 1024},
@@ -1274,7 +1274,7 @@ return {
         alias = {}
     },
     hero_priest_0198 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {30, 77, 32, 27},
         a_size = {1024, 1024},
@@ -1282,7 +1282,7 @@ return {
         alias = {}
     },
     hero_priest_0199 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {30, 77, 32, 27},
         a_size = {1024, 1024},
@@ -1290,7 +1290,7 @@ return {
         alias = {}
     },
     hero_priest_0200 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {30, 77, 32, 27},
         a_size = {1024, 1024},
@@ -1298,7 +1298,7 @@ return {
         alias = {}
     },
     hero_priest_0201 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {30, 77, 32, 27},
         a_size = {1024, 1024},
@@ -1306,7 +1306,7 @@ return {
         alias = {}
     },
     hero_priest_0202 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {29, 77, 32, 27},
         a_size = {1024, 1024},
@@ -1314,7 +1314,7 @@ return {
         alias = {}
     },
     hero_priest_0203 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {29, 77, 31, 28},
         a_size = {1024, 1024},
@@ -1322,7 +1322,7 @@ return {
         alias = {}
     },
     hero_priest_0204 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {28, 78, 31, 27},
         a_size = {1024, 1024},
@@ -1330,7 +1330,7 @@ return {
         alias = {}
     },
     hero_priest_0205 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {26, 78, 30, 27},
         a_size = {1024, 1024},
@@ -1338,7 +1338,7 @@ return {
         alias = {}
     },
     hero_priest_0206 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {26, 103, 28, 26},
         a_size = {1024, 1024},
@@ -1346,7 +1346,7 @@ return {
         alias = {}
     },
     hero_priest_0207 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {30, 104, 34, 30},
         a_size = {1024, 1024},
@@ -1354,7 +1354,7 @@ return {
         alias = {}
     },
     hero_priest_0208 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {110, 188},
         trim = {30, 104, 36, 30},
         a_size = {1024, 1024},
@@ -1362,7 +1362,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0001 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {42, 53},
         trim = {3, 27, 20, 6},
         a_size = {1024, 1024},
@@ -1370,7 +1370,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0002 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {3, 25, 20, 8},
         a_size = {1024, 1024},
@@ -1378,7 +1378,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0003 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {3, 24, 20, 11},
         a_size = {1024, 1024},
@@ -1386,7 +1386,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0004 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {3, 22, 7, 3},
         a_size = {1024, 1024},
@@ -1394,7 +1394,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0005 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {3, 20, 7, 5},
         a_size = {1024, 1024},
@@ -1402,7 +1402,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0006 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {2, 18, 7, 0},
         a_size = {1024, 1024},
@@ -1410,7 +1410,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0007 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {2, 17, 8, 1},
         a_size = {1024, 1024},
@@ -1418,7 +1418,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0008 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {2, 15, 8, 3},
         a_size = {1024, 1024},
@@ -1426,7 +1426,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0009 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {2, 14, 6, 1},
         a_size = {1024, 1024},
@@ -1434,7 +1434,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0010 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {2, 12, 6, 2},
         a_size = {1024, 1024},
@@ -1442,7 +1442,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0011 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {2, 10, 6, 4},
         a_size = {1024, 1024},
@@ -1450,7 +1450,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0012 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {2, 9, 6, 5},
         a_size = {1024, 1024},
@@ -1458,7 +1458,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0013 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {2, 7, 7, 0},
         a_size = {1024, 1024},
@@ -1466,7 +1466,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0014 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {2, 5, 7, 1},
         a_size = {1024, 1024},
@@ -1474,7 +1474,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0015 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {42, 53},
         trim = {3, 4, 7, 2},
         a_size = {1024, 1024},
@@ -1482,7 +1482,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0016 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {42, 53},
         trim = {3, 10, 7, 4},
         a_size = {1024, 1024},
@@ -1490,7 +1490,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0017 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {3, 9, 7, 6},
         a_size = {1024, 1024},
@@ -1498,7 +1498,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0018 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {3, 8, 7, 8},
         a_size = {1024, 1024},
@@ -1506,7 +1506,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0019 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {3, 15, 7, 9},
         a_size = {1024, 1024},
@@ -1514,7 +1514,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0020 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {3, 14, 7, 11},
         a_size = {1024, 1024},
@@ -1522,7 +1522,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0021 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {3, 12, 7, 13},
         a_size = {1024, 1024},
@@ -1530,7 +1530,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0022 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {42, 53},
         trim = {4, 11, 16, 15},
         a_size = {1024, 1024},
@@ -1538,7 +1538,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0023 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {8, 18, 16, 17},
         a_size = {1024, 1024},
@@ -1546,7 +1546,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0024 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {8, 16, 16, 19},
         a_size = {1024, 1024},
@@ -1554,7 +1554,7 @@ return {
         alias = {}
     },
     hero_priest_healFx_0025 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {42, 53},
         trim = {8, 14, 16, 21},
         a_size = {1024, 1024},
@@ -1562,7 +1562,7 @@ return {
         alias = {}
     },
     hero_priest_healWave = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {73, 34},
         trim = {1, 1, 0, 0},
         a_size = {1024, 1024},
@@ -1570,7 +1570,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0001 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {2, 5, 1, 3},
         a_size = {1024, 1024},
@@ -1578,7 +1578,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0002 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {4, 5, 3, 3},
         a_size = {1024, 1024},
@@ -1586,7 +1586,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0003 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {6, 5, 5, 3},
         a_size = {1024, 1024},
@@ -1594,7 +1594,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0004 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {9, 5, 6, 3},
         a_size = {1024, 1024},
@@ -1602,7 +1602,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0005 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {10, 5, 9, 3},
         a_size = {1024, 1024},
@@ -1610,7 +1610,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0006 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {11, 5, 10, 3},
         a_size = {1024, 1024},
@@ -1618,7 +1618,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0007 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {11, 5, 11, 3},
         a_size = {1024, 1024},
@@ -1626,7 +1626,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0008 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {11, 5, 11, 3},
         a_size = {1024, 1024},
@@ -1634,7 +1634,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0009 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {11, 5, 11, 3},
         a_size = {1024, 1024},
@@ -1642,7 +1642,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0010 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {11, 5, 11, 3},
         a_size = {1024, 1024},
@@ -1650,7 +1650,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0011 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {11, 5, 11, 4},
         a_size = {1024, 1024},
@@ -1658,7 +1658,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0012 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {11, 5, 10, 4},
         a_size = {1024, 1024},
@@ -1666,7 +1666,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0013 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {10, 5, 10, 3},
         a_size = {1024, 1024},
@@ -1674,7 +1674,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0014 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {10, 5, 9, 3},
         a_size = {1024, 1024},
@@ -1682,7 +1682,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0015 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {9, 6, 9, 3},
         a_size = {1024, 1024},
@@ -1690,7 +1690,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0016 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {9, 6, 9, 3},
         a_size = {1024, 1024},
@@ -1698,7 +1698,7 @@ return {
         alias = {}
     },
     hero_priest_revive_0017 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {68, 73},
         trim = {9, 15, 9, 3},
         a_size = {1024, 1024},
@@ -1706,7 +1706,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0001 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {20, 26},
         trim = {0, 0, 18, 24},
         a_size = {1024, 1024},
@@ -1714,7 +1714,7 @@ return {
         alias = {"hero_priest_shieldFx_0020"}
     },
     hero_priest_shieldFx_0002 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {20, 26},
         trim = {4, 9, 4, 5},
         a_size = {1024, 1024},
@@ -1722,7 +1722,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0003 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {20, 26},
         trim = {2, 6, 2, 3},
         a_size = {1024, 1024},
@@ -1730,7 +1730,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0004 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {20, 26},
         trim = {0, 4, 1, 1},
         a_size = {1024, 1024},
@@ -1738,7 +1738,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0005 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {20, 26},
         trim = {1, 4, 1, 1},
         a_size = {1024, 1024},
@@ -1746,7 +1746,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0006 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {20, 26},
         trim = {1, 4, 1, 2},
         a_size = {1024, 1024},
@@ -1754,7 +1754,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0007 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {20, 26},
         trim = {1, 4, 2, 3},
         a_size = {1024, 1024},
@@ -1762,7 +1762,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0008 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {20, 26},
         trim = {2, 4, 2, 3},
         a_size = {1024, 1024},
@@ -1770,7 +1770,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0009 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {20, 26},
         trim = {2, 4, 2, 4},
         a_size = {1024, 1024},
@@ -1778,7 +1778,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0010 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {20, 26},
         trim = {2, 4, 2, 4},
         a_size = {1024, 1024},
@@ -1786,7 +1786,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0011 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {20, 26},
         trim = {2, 4, 2, 5},
         a_size = {1024, 1024},
@@ -1794,7 +1794,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0012 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {20, 26},
         trim = {2, 4, 2, 5},
         a_size = {1024, 1024},
@@ -1802,7 +1802,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0013 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {20, 26},
         trim = {2, 3, 2, 5},
         a_size = {1024, 1024},
@@ -1810,7 +1810,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0014 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {20, 26},
         trim = {2, 3, 2, 6},
         a_size = {1024, 1024},
@@ -1818,7 +1818,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0015 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {20, 26},
         trim = {2, 3, 2, 6},
         a_size = {1024, 1024},
@@ -1826,7 +1826,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0016 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {20, 26},
         trim = {2, 2, 2, 6},
         a_size = {1024, 1024},
@@ -1834,7 +1834,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0017 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {20, 26},
         trim = {2, 2, 2, 6},
         a_size = {1024, 1024},
@@ -1842,7 +1842,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0018 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {20, 26},
         trim = {2, 2, 2, 7},
         a_size = {1024, 1024},
@@ -1850,7 +1850,7 @@ return {
         alias = {}
     },
     hero_priest_shieldFx_0019 = {
-        a_name = "go_hero_priest-2.dds",
+        a_name = "go_hero_priest-2.png",
         size = {20, 26},
         trim = {2, 1, 2, 7},
         a_size = {1024, 1024},
@@ -1858,7 +1858,7 @@ return {
         alias = {}
     },
     hero_priest_swords_0001 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 24, 5, 2},
         a_size = {1024, 1024},
@@ -1866,7 +1866,7 @@ return {
         alias = {"hero_priest_swords_0024"}
     },
     hero_priest_swords_0002 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 24, 5, 2},
         a_size = {1024, 1024},
@@ -1874,7 +1874,7 @@ return {
         alias = {"hero_priest_swords_0023"}
     },
     hero_priest_swords_0003 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 23, 5, 2},
         a_size = {1024, 1024},
@@ -1882,7 +1882,7 @@ return {
         alias = {}
     },
     hero_priest_swords_0004 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 23, 5, 2},
         a_size = {1024, 1024},
@@ -1890,7 +1890,7 @@ return {
         alias = {}
     },
     hero_priest_swords_0005 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 23, 5, 2},
         a_size = {1024, 1024},
@@ -1898,7 +1898,7 @@ return {
         alias = {}
     },
     hero_priest_swords_0006 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 22, 5, 2},
         a_size = {1024, 1024},
@@ -1906,7 +1906,7 @@ return {
         alias = {}
     },
     hero_priest_swords_0007 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 22, 5, 2},
         a_size = {1024, 1024},
@@ -1914,7 +1914,7 @@ return {
         alias = {}
     },
     hero_priest_swords_0008 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 22, 5, 2},
         a_size = {1024, 1024},
@@ -1922,7 +1922,7 @@ return {
         alias = {"hero_priest_swords_0016"}
     },
     hero_priest_swords_0009 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 21, 5, 2},
         a_size = {1024, 1024},
@@ -1930,7 +1930,7 @@ return {
         alias = {"hero_priest_swords_0015"}
     },
     hero_priest_swords_0010 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 21, 5, 2},
         a_size = {1024, 1024},
@@ -1938,7 +1938,7 @@ return {
         alias = {"hero_priest_swords_0014"}
     },
     hero_priest_swords_0011 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 20, 5, 2},
         a_size = {1024, 1024},
@@ -1946,7 +1946,7 @@ return {
         alias = {"hero_priest_swords_0013"}
     },
     hero_priest_swords_0012 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 20, 5, 2},
         a_size = {1024, 1024},
@@ -1954,7 +1954,7 @@ return {
         alias = {}
     },
     hero_priest_swords_0017 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 22, 5, 2},
         a_size = {1024, 1024},
@@ -1962,7 +1962,7 @@ return {
         alias = {}
     },
     hero_priest_swords_0018 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 22, 5, 2},
         a_size = {1024, 1024},
@@ -1970,7 +1970,7 @@ return {
         alias = {}
     },
     hero_priest_swords_0019 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 22, 5, 2},
         a_size = {1024, 1024},
@@ -1978,7 +1978,7 @@ return {
         alias = {}
     },
     hero_priest_swords_0020 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 23, 5, 2},
         a_size = {1024, 1024},
@@ -1986,7 +1986,7 @@ return {
         alias = {}
     },
     hero_priest_swords_0021 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 23, 5, 2},
         a_size = {1024, 1024},
@@ -1994,7 +1994,7 @@ return {
         alias = {}
     },
     hero_priest_swords_0022 = {
-        a_name = "go_hero_priest-1.dds",
+        a_name = "go_hero_priest-1.png",
         size = {160, 121},
         trim = {5, 24, 5, 2},
         a_size = {1024, 1024},

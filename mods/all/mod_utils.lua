@@ -10,6 +10,14 @@ if IS_KR5 then
 else
     A = require("animation_db")
 end
+local function is_directory(path)
+    if love.filesystem.getInfo then
+        local info = love.filesystem.getInfo(path)
+        return info and info.type == "directory"
+    else
+        return FS.IsDirectory(path)
+    end
+end
 
 local mod_utils = {}
 
@@ -26,6 +34,8 @@ mod_utils.ppref = ""
 if not love.filesystem.isFused() then
     mod_utils.ppref = base_dir ~= work_dir and "" or "src/"
 end
+
+local exists = FS.getInfo or FS.exists
 
 -- 元表：自动创建不存在表
 mod_utils.auto_table_mt = {
@@ -66,7 +76,7 @@ function mod_utils:get_subdirs(path, filter_fn)
         local filepath = path .. "/" .. file
 
         -- 检查是否为目录
-        if not filter_fn or filter_fn(file, filepath) and not table.contains(self.ignored_path, file) and FS.isDirectory(filepath) then
+        if not filter_fn or filter_fn(file, filepath) and not table.contains(self.ignored_path, file) and is_directory(filepath) then
             -- 将目录信息添加到结果表中
             table.insert(folders, {
                 name = file,    -- 目录名称
@@ -192,7 +202,7 @@ function mod_utils:check_get_available_mods(main_config)
         -- 检查是否是兼容游戏版本
         if type(config.game_version) == "string" and config.game_version == KR_GAME or type(config.game_version) == "table" and table.contains(config.game_version, KR_GAME) then
             -- 检查模组是否启用且路径存在
-            if config.enabled and love.filesystem.exists(mod_data.path) then
+            if config.enabled and exists(mod_data.path) then
                 -- 添加优先级信息到模组数据中
                 mod_data["priority"] = config.priority or 0
                 table.insert(mods_data, mod_data)

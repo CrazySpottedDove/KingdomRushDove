@@ -2,7 +2,7 @@
 
 return {
 	bolverk_hero_0001 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -33,7 +33,7 @@ return {
 		}
 	},
 	bolverk_hero_0002 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -59,7 +59,7 @@ return {
 		}
 	},
 	bolverk_hero_0003 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -83,7 +83,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0004 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -107,7 +107,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0005 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -131,7 +131,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0006 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -155,7 +155,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0007 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -179,7 +179,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0011 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -205,7 +205,7 @@ return {
 		}
 	},
 	bolverk_hero_0013 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -231,7 +231,7 @@ return {
 		}
 	},
 	bolverk_hero_0015 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -257,7 +257,7 @@ return {
 		}
 	},
 	bolverk_hero_0017 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -283,7 +283,7 @@ return {
 		}
 	},
 	bolverk_hero_0019 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -309,7 +309,7 @@ return {
 		}
 	},
 	bolverk_hero_0021 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -335,7 +335,7 @@ return {
 		}
 	},
 	bolverk_hero_0023 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -361,7 +361,7 @@ return {
 		}
 	},
 	bolverk_hero_0025 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -387,7 +387,7 @@ return {
 		}
 	},
 	bolverk_hero_0027 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -411,7 +411,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0028 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -437,7 +437,7 @@ return {
 		}
 	},
 	bolverk_hero_0030 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -463,7 +463,7 @@ return {
 		}
 	},
 	bolverk_hero_0032 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -489,7 +489,7 @@ return {
 		}
 	},
 	bolverk_hero_0034 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -515,7 +515,7 @@ return {
 		}
 	},
 	bolverk_hero_0037 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -544,7 +544,7 @@ return {
 		}
 	},
 	bolverk_hero_0039 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -570,7 +570,7 @@ return {
 		}
 	},
 	bolverk_hero_0041 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -596,7 +596,7 @@ return {
 		}
 	},
 	bolverk_hero_0043 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -622,7 +622,7 @@ return {
 		}
 	},
 	bolverk_hero_0045 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -648,7 +648,7 @@ return {
 		}
 	},
 	bolverk_hero_0047 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -674,7 +674,7 @@ return {
 		}
 	},
 	bolverk_hero_0049 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -700,7 +700,7 @@ return {
 		}
 	},
 	bolverk_hero_0051 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -726,7 +726,7 @@ return {
 		}
 	},
 	bolverk_hero_0053 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -752,7 +752,7 @@ return {
 		}
 	},
 	bolverk_hero_0055 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -778,7 +778,7 @@ return {
 		}
 	},
 	bolverk_hero_0057 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -804,7 +804,7 @@ return {
 		}
 	},
 	bolverk_hero_0059 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -830,7 +830,7 @@ return {
 		}
 	},
 	bolverk_hero_0061 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -856,7 +856,7 @@ return {
 		}
 	},
 	bolverk_hero_0066 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -880,7 +880,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0067 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -904,7 +904,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0068 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -928,7 +928,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0069 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -952,7 +952,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0070 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -976,7 +976,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0071 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1000,7 +1000,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0072 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1024,7 +1024,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0073 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1048,7 +1048,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0074 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1072,7 +1072,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0075 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1096,7 +1096,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0076 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1120,7 +1120,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0077 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1144,7 +1144,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0078 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1168,7 +1168,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0079 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1192,7 +1192,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0080 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1216,7 +1216,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0081 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1240,7 +1240,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0082 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1264,7 +1264,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0083 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1288,7 +1288,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0084 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1312,7 +1312,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0085 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1336,7 +1336,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0086 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1360,7 +1360,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0087 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1384,7 +1384,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0088 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1408,7 +1408,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0089 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1432,7 +1432,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0090 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1456,7 +1456,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0091 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1480,7 +1480,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0092 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1504,7 +1504,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0093 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1528,7 +1528,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0094 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1552,7 +1552,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0095 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1576,7 +1576,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0096 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1600,7 +1600,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0097 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1624,7 +1624,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0098 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1648,7 +1648,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0099 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1672,7 +1672,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0100 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1696,7 +1696,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0101 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1720,7 +1720,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0102 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1744,7 +1744,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0103 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1768,7 +1768,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0104 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1792,7 +1792,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0107 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1816,7 +1816,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0108 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1840,7 +1840,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0109 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1864,7 +1864,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0110 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1888,7 +1888,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0111 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1912,7 +1912,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0112 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1936,7 +1936,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0113 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1960,7 +1960,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0114 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -1984,7 +1984,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0115 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2008,7 +2008,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0116 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2032,7 +2032,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0117 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2056,7 +2056,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0118 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2082,7 +2082,7 @@ return {
 		}
 	},
 	bolverk_hero_0120 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2106,7 +2106,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0121 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2130,7 +2130,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0122 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2156,7 +2156,7 @@ return {
 		}
 	},
 	bolverk_hero_0124 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2182,7 +2182,7 @@ return {
 		}
 	},
 	bolverk_hero_0126 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2208,7 +2208,7 @@ return {
 		}
 	},
 	bolverk_hero_0128 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2232,7 +2232,7 @@ return {
 		alias = {}
 	},
 	bolverk_hero_0129 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2258,7 +2258,7 @@ return {
 		}
 	},
 	bolverk_hero_0131 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2284,7 +2284,7 @@ return {
 		}
 	},
 	bolverk_hero_0133 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2310,7 +2310,7 @@ return {
 		}
 	},
 	bolverk_hero_0135 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2336,7 +2336,7 @@ return {
 		}
 	},
 	bolverk_hero_0137 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2362,7 +2362,7 @@ return {
 		}
 	},
 	bolverk_hero_0139 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2388,7 +2388,7 @@ return {
 		}
 	},
 	bolverk_hero_0141 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93
@@ -2415,7 +2415,7 @@ return {
 		}
 	},
 	bolverk_hero_0144 = {
-		a_name = "go_hero_bolverk-1.dds",
+		a_name = "go_hero_bolverk-1.png",
 		size = {
 			110,
 			93

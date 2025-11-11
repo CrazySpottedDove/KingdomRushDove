@@ -306,7 +306,7 @@ function editor:draw()
 
 			for i, bezier in ipairs(path.beziers) do
 				G.setLineWidth(pi == self.path_selected and curve_selected_w or curve_w)
-				G.setColor(self.path_selected == pi and color_curve_sel or color_curve)
+				G.setColor_old(self.path_selected == pi and color_curve_sel or color_curve)
 				G.line(bezier:render())
 
 				local p1x, p1y = bezier:getControlPoint(1)
@@ -317,7 +317,7 @@ function editor:draw()
 
 				if self.path_selected == pi then
 					G.setLineWidth(width_w)
-					G.setColor(color_width)
+					G.setColor_old(color_width)
 
 					if i == 1 then
 						local n1x, n1y = V.mul(w1 / 2, V.rotate(km.pi_2, V.normalize(p2x - p1x, p2y - p1y)))
@@ -331,7 +331,7 @@ function editor:draw()
 					G.line(p4x, p4y, p4x + n4x, p4y + n4y)
 					G.line(p4x, p4y, p4x + -n4x, p4y - n4y)
 					G.setLineWidth(1)
-					G.setColor(color_handle)
+					G.setColor_old(color_handle)
 					G.line(p1x, p1y, p2x, p2y)
 					G.line(p3x, p3y, p4x, p4y)
 					G.circle("fill", p2x, p2y, node_w / 2, 8)
@@ -347,13 +347,13 @@ function editor:draw()
 				local p1x, p1y = bezier:getControlPoint(1)
 				local p4x, p4y = bezier:getControlPoint(4)
 
-				G.setColor(color_node)
+				G.setColor_old(color_node)
 
 				if i == 1 then
 					G.circle("fill", p1x, p1y, node_w, 6)
-					G.setColor(color_curve)
+					G.setColor_old(color_curve)
 					G.print(pi, p1x - 3, p1y + 6, 0, 1, -1)
-					G.setColor(color_node)
+					G.setColor_old(color_node)
 				end
 
 				if self.path_selected == pi then
@@ -368,16 +368,16 @@ function editor:draw()
 			local fnt = G.getFont()
 
 			G.setFont(F:f("DroidSansMono", 10))
-			G.setColor(255, 255, 255, 255)
+			G.setColor(1, 1, 1, 1)
 
 			for pi, path in ipairs(self.path_points) do
 				for spi, subpath in ipairs(path) do
 					for ni, o in pairs(subpath) do
 						if spi == 1 and ni % 10 == 0 then
 							G.circle("fill", o.x, o.y, 4, 6)
-							G.setColor(0, 0, 0, 255)
+							G.setColor(0, 0, 0, 1)
 							G.print(ni, o.x, o.y, 0, 1, -1)
-							G.setColor(255, 255, 255, 255)
+							G.setColor(1, 1, 1, 1)
 						else
 							G.circle("fill", o.x, o.y, 2, 6)
 						end
@@ -390,7 +390,7 @@ function editor:draw()
 			G.setFont(fnt)
 		end
 
-		G.setColor(255, 255, 255, 255)
+		G.setColor(1, 1, 1, 1)
 		G.setCanvas()
 		G.pop()
 	end
@@ -411,7 +411,7 @@ function editor:draw()
 			for j = 1, #GR.grid[i] do
 				local t = GR.grid[i][j]
 
-				G.setColor(GR.grid_colors[t] or {
+				G.setColor_old(GR.grid_colors[t] or {
 					100,
 					100,
 					100
@@ -421,7 +421,7 @@ function editor:draw()
 		end
 
 		G.setCanvas()
-		G.setColor(255, 255, 255, 255)
+		G.setColor(1, 1, 1, 1)
 		G.pop()
 	end
 
@@ -439,9 +439,9 @@ function editor:draw()
 		for _, e in pairs(self.store.entities) do
 			if e.pos then
 				if e.render and e.render.sprites[1].hidden then
-					G.setColor(0, 0, 200, 50)
+					G.setColor_old(0, 0, 200, 50)
 				else
-					G.setColor(0, 0, 200, 200)
+					G.setColor_old(0, 0, 200, 200)
 				end
 
 				G.rectangle("fill", e.pos.x - 2, e.pos.y - 8, 4, 16)
@@ -460,7 +460,7 @@ function editor:draw()
 		end
 
 		G.setCanvas()
-		G.setColor(255, 255, 255, 255)
+		G.setColor(1, 1, 1, 1)
 		G.pop()
 	end
 
@@ -495,15 +495,15 @@ function editor:draw()
 						end
 					end
 
-					G.setColor(0, 0, 0, 255)
+					G.setColor_old(0, 0, 0, 255)
 					G.print(e.ui.nav_mesh_id, e.pos.x + 5, e.pos.y + 18, 0, 1, -1)
 
 					if tonumber(e.ui.nav_mesh_id) == sel_h_id then
-						G.setColor(255, 255, 0, 255)
+						G.setColor_old(255, 255, 0, 255)
 					elseif has_edges then
-						G.setColor(160, 160, 255, 255)
+						G.setColor_old(160, 160, 255, 255)
 					else
-						G.setColor(60, 60, 60, 255)
+						G.setColor_old(60, 60, 60, 255)
 					end
 
 					G.print(e.ui.nav_mesh_id, e.pos.x + 5 - 1, e.pos.y + 18 + 1, 0, 1, -1)
@@ -511,7 +511,7 @@ function editor:draw()
 			end
 
 			G.setFont(fnt)
-			G.setColor(0, 100, 255, 255)
+			G.setColor_old(0, 100, 255, 255)
 			G.translate(0, 10)
 
 			local ox, oy = 40, 15
@@ -522,10 +522,10 @@ function editor:draw()
 
 				if not e or h_id ~= sel_h_id then
 					G.setLineWidth(2)
-					G.setColor(0, 100, 255, 50)
+					G.setColor_old(0, 100, 255, 50)
 				else
 					G.setLineWidth(4)
-					G.setColor(0, 100, 255, 255)
+					G.setColor_old(0, 100, 255, 255)
 				end
 
 				local oe = towers[row[1]]
@@ -556,15 +556,15 @@ function editor:draw()
 			local s2 = 10
 			local s3 = 15
 
-			G.setColor(0, 0, 200, 255)
+			G.setColor_old(0, 0, 200, 255)
 
 			for h_id, row in pairs(self.store.level.nav_mesh) do
 				local e = towers[h_id]
 
 				if not e or h_id ~= sel_h_id then
-					G.setColor(0, 0, 200, 100)
+					G.setColor_old(0, 0, 200, 100)
 				else
-					G.setColor(0, 0, 200, 255)
+					G.setColor_old(0, 0, 200, 255)
 				end
 
 				for i = 1, 4 do
@@ -601,7 +601,7 @@ function editor:draw()
 		end
 
 		G.setCanvas()
-		G.setColor(255, 255, 255, 255)
+		G.setColor(1, 1, 1, 1)
 		G.pop()
 	end
 
@@ -622,7 +622,7 @@ function editor:draw()
 			G.push()
 			G.translate(rox, self.screen_h - roy)
 			G.scale(gs, -gs)
-			G.setColor(color_selected)
+			G.setColor_old(color_selected)
 			G.setLineWidth(sel_w)
 
 			for _, item in pairs(self.gui.path_nodes_selected) do
@@ -638,15 +638,15 @@ function editor:draw()
 				end
 			end
 
-			G.setColor(255, 255, 255, 255)
+			G.setColor(1, 1, 1, 1)
 			G.pop()
 		end
 	end
 
 	if self.grid_visible then
-		G.setColor(255, 255, 255, 100)
+        G.setColor(1, 1, 1, 0.392)
 		G.draw(self.grid_canvas)
-		G.setColor(255, 255, 255, 255)
+		G.setColor(1, 1, 1, 1)
 
 		if self.tool_pointer.tool == "grid" then
 			G.push()
@@ -657,7 +657,7 @@ function editor:draw()
 			local bsize = self.tool_pointer.size
 			local bw = bsize / 2 * GR.cell_size
 
-			G.setColor(255, 255, 255, 200)
+            G.setColor(1, 1, 1, 0.784)
 			G.setLineWidth(1)
 			G.line(bx - bw, by - bw, bx + bw, by - bw)
 			G.line(bx + bw, by - bw, bx + bw, by + bw)
@@ -668,18 +668,18 @@ function editor:draw()
 	end
 
 	if self.entities_visible then
-		G.setColor(255, 255, 255, 255)
+		G.setColor(1, 1, 1, 1)
 		G.draw(self.entities_canvas)
-		G.setColor(255, 255, 255, 255)
+		G.setColor(1, 1, 1, 1)
 	end
 
 	if self.nav_visible then
-		G.setColor(255, 255, 255, 255)
+		G.setColor(1, 1, 1, 1)
 		G.draw(self.nav_canvas)
-		G.setColor(255, 255, 255, 255)
+		G.setColor(1, 1, 1, 1)
 	end
 
-	G.setColor(0, 0, 0, 200)
+	G.setColor_old(0, 0, 0, 200)
 	G.setLineWidth(2)
 	G.push()
 	G.translate(rox, self.screen_h - roy)
@@ -689,7 +689,7 @@ function editor:draw()
 	G.print("4:3", 8, 14, 0, 1, -1)
 	G.pop()
 	G.setLineWidth(1)
-	G.setColor(255, 255, 255, 255)
+	G.setColor(1, 1, 1, 1)
 	self.gui.window:draw()
 	G.pop()
 end
