@@ -1025,7 +1025,6 @@ function game_gui:keypressed(key, isrepeat)
     end
 
     local ks = self.key_shortcuts
-
     if table.contains(ks.pow_1, key) and not self.power_1:is_disabled() then
         self.power_1:toggle_selection()
     elseif table.contains(ks.pow_2, key) and not self.power_2:is_disabled() then
