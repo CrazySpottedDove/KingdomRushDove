@@ -2019,7 +2019,14 @@ void ffi_sort(RenderFrameFFI* arr, RenderFrameFFI* tmp, int n);
 ]]
 
 local lib_render_sort
-local ok, lib = pcall(ffi.load, "all/librender_sort.dll")
+local libname
+if jit and jit.os == "Windows" then
+    libname = "all/librender_sort.dll"
+else
+    libname = "all/librender_sort.so"
+end
+
+local ok, lib = pcall(ffi.load, libname)
 if ok and lib then
     lib_render_sort = lib
 else
