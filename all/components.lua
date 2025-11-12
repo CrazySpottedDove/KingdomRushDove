@@ -177,6 +177,7 @@ tween.props[1] = E:clone_c("tween_prop")
 tween.remove = true
 tween.reverse = false
 tween.disabled = nil
+-- 对于只运行一次的 tween(如淡入)，请手动将 run_once 赋为 true，以节省每帧更新的性能开销
 tween.run_once = nil
 tween.ts = nil
 tween.random_ts = nil

@@ -35,6 +35,7 @@ local ceil = math.ceil
 local floor = math.floor
 local sin = math.sin
 local cos = math.cos
+local PI = math.pi
 require("constants")
 local ffi = require("ffi")
 
@@ -1462,7 +1463,7 @@ function sys.pops:on_update(dt, ts, store)
                 end
 
                 e.pos = V.v(pos_x, pos_y)
-                e.render.sprites[1].r = random(-21, 21) * math.pi / 180
+                e.render.sprites[1].r = random(-21, 21) * PI / 180
                 e.render.sprites[1].ts = store.tick_ts
 
                 queue_insert(store, e)
@@ -1493,81 +1494,154 @@ end
 sys.tween = {}
 sys.tween.name = "tween"
 
-local function lerp_boolean(a, b, t)
-    return a
+--- LERP FUNCTIONS BEGIN
+
+local function lerp_boolean_multiply(a, b, t, s, key)
+    s[key] = a[2] and s[key]
 end
 
-local function lerp_step(a, b, t)
-    return a
+local function lerp_boolean(a, b, t, s, key)
+    s[key] = a[2]
 end
 
-local function lerp_number_linear(a, b, t)
-    return a + (b - a) * t
+local function lerp_number_step_multiply(a, b, t, s, key)
+    s[key] = a[2] * s[key]
 end
 
-local function lerp_number_quad(a, b, t)
-    return a + (b - a) * t * t
+local function lerp_number_step(a, b, t, s, key)
+    s[key] = a[2]
 end
 
-local function lerp_number_sine(a, b, t)
-    return a + (b - a) * (0.5 * (1 - cos(t * math.pi)))
+local function lerp_number_linear_multiply(a, b, t, s, key)
+    s[key] = a == b and (a[2] * s[key]) or ((a[2] + (b[2] - a[2]) * (t - a[1]) / (b[1] - a[1])) * s[key])
 end
 
-local function lerp_table_linear(a, b, t)
-    return {
-        x = a.x + (b.x - a.x) * t,
-        y = a.y + (b.y - a.y) * t
-    }
+local function lerp_number_linear(a, b, t, s, key)
+    s[key] = a == b and a[2] or (a[2] + (b[2] - a[2]) * (t - a[1]) / (b[1] - a[1]))
 end
 
-local function lerp_table_quad(a, b, t)
-    return {
-        x = a.x + (b.x - a.x) * t * t,
-        y = a.y + (b.y - a.y) * t * t
-    }
-end
-
-local function lerp_table_sine(a, b, t)
-    local ft = 0.5 * (1 - cos(t * math.pi))
-    return {
-        x = a.x + (b.x - a.x) * ft,
-        y = a.y + (b.y - a.y) * ft
-    }
-end
-
-function sys.tween:init(store)
-    self.fns = {
-        step = function(s)
-            return 0
-        end,
-        linear = function(s)
-            return s
-        end,
-        quad = function(s)
-            return s * s
-        end,
-        sine = function(s)
-            return 0.5 * (1 - cos(s * math.pi))
-        end
-    }
-    self.lerp = function(a, b, t, fn)
-        local ta = type(a)
-        if ta == "boolean" then
-            return a
-        else
-            local f = self.fns[fn or "linear"]
-            local ft = f(t)
-            if ta == "table" then
-                return {
-                    x = a.x + (b.x - a.x) * ft,
-                    y = a.y + (b.y - a.y) * ft
-                }
-            else
-                return a + (b - a) * ft
-            end
-        end
+local function lerp_number_quad_multiply(a, b, t, s, key)
+    if a == b then
+        s[key] = a[2] * s[key]
+        return
     end
+    local tt = (t - a[1]) / (b[1] - a[1])
+    s[key] = (a[2] + (b[2] - a[2]) * tt * tt) * s[key]
+
 end
+
+local function lerp_number_quad(a, b, t, s, key)
+    if a == b then
+        s[key] = a[2]
+        return
+    end
+    local tt = (t - a[1]) / (b[1] - a[1])
+    s[key] = a[2] + (b[2] - a[2]) * tt * tt
+end
+
+local function lerp_number_sine_multiply(a, b, t, s, key)
+    s[key] = a == b and (a[2] * s[key]) or
+                 (a + (b - a) * (0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))) * s[key])
+end
+
+local function lerp_number_sine(a, b, t, s, key)
+    s[key] = a == b and a[2] or (a[2] + (b[2] - a[2]) * (0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))))
+end
+
+local function lerp_table_step(a, b, t, s, key)
+    s[key].x = a[2].x
+    s[key].y = a[2].y
+end
+
+local function lerp_table_step_multiply(a, b, t, s, key)
+    s[key].x = a[2].x * s[key].x
+    s[key].y = a[2].y * s[key].y
+end
+
+local function lerp_table_linear(a, b, t, s, key)
+    if a == b then
+        s[key].x = a[2].x
+        s[key].y = a[2].y
+        return
+    end
+    local tt = (t - a[1]) / (b[1] - a[1])
+    local av = a[2]
+    local bv = b[2]
+    s[key].x = av.x + (bv.x - av.x) * tt
+    s[key].y = av.y + (bv.y - av.y) * tt
+end
+
+local function lerp_table_linear_multiply(a, b, t, s, key)
+    if a == b then
+        s[key].x = a[2].x * s[key].x
+        s[key].y = a[2].y * s[key].y
+        return
+    end
+
+    local tt = (t - a[1]) / (b[1] - a[1])
+    local av = a[2]
+    local bv = b[2]
+    s[key].x = (av.x + (bv.x - av.x) * tt) * s[key].x
+    s[key].y = (av.y + (bv.y - av.y) * tt) * s[key].y
+end
+
+local function lerp_table_quad(a, b, t, s, key)
+    if a == b then
+        s[key].x = a[2].x
+        s[key].y = a[2].y
+        return
+    end
+
+    local tt = (t - a[1]) / (b[1] - a[1])
+    local av = a[2]
+    local bv = b[2]
+    s[key].x = av.x + (bv.x - av.x) * tt * tt
+    s[key].y = av.y + (bv.y - av.y) * tt * tt
+end
+
+local function lerp_table_quad_multiply(a, b, t, s, key)
+    if a == b then
+        s[key].x = a[2].x * s[key].x
+        s[key].y = a[2].y * s[key].y
+        return
+    end
+
+    local tt = (t - a[1]) / (b[1] - a[1])
+    local av = a[2]
+    local bv = b[2]
+    s[key].x = (av.x + (bv.x - av.x) * tt * tt) * s[key].x
+    s[key].y = (av.y + (bv.y - av.y) * tt * tt) * s[key].y
+end
+
+local function lerp_table_sine_multiply(a, b, t, s, key)
+    if a == b then
+        s[key].x = a[2].x * s[key].x
+        s[key].y = a[2].y * s[key].y
+        return
+    end
+
+    local ft = 0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))
+    local av = a[2]
+    local bv = b[2]
+    s[key].x = (av.x + (bv.x - av.x) * ft) * s[key].x
+    s[key].y = (av.y + (bv.y - av.y) * ft) * s[key].y
+end
+
+local function lerp_table_sine(a, b, t, s, key)
+    if a == b then
+        s[key].x = a[2].x
+        s[key].y = a[2].y
+        return
+    end
+
+    local ft = 0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))
+    local av = a[2]
+    local bv = b[2]
+    s[key].x = av.x + (bv.x - av.x) * ft
+    s[key].y = av.y + (bv.y - av.y) * ft
+end
+
+--- LERP FUNCTIONS END
 
 function sys.tween:on_insert(entity, store)
     if entity.tween then
@@ -1592,31 +1666,43 @@ function sys.tween:on_insert(entity, store)
             end
 
             -- 为了避免每次更新都动态查找合适的插值函数，我们应该在 insert 的时候就确定下来。插值函数的赋值单元为 tween_prop。
-            if p.interp == "step" then
-                p.interp_fn = lerp_step
-                goto continue
-            end
             do
                 local key_type = type(p.keys[1][2])
+                local interp_type = p.interp or "linear"
+                local multiply = p.multiply
+                local sprite = entity.render.sprites[p.sprite_id]
+                -- 初始化
+                if not sprite[p.name] then
+                    if key_type == "table" then
+                        sprite[p.name] = V.vclone(p.keys[1][2])
+                    else
+                        sprite[p.name] = p.keys[1][2]
+                    end
+                end
+                -- 选择插值函数
                 if key_type == "boolean" then
-                    p.interp_fn = lerp_boolean
+                    p.interp_fn = multiply and lerp_boolean_multiply or lerp_boolean
                     goto continue
                 end
                 if key_type == "number" then
-                    if not p.interp or p.interp == "linear" then
-                        p.interp_fn = lerp_number_linear
-                    elseif p.interp == "quad" then
-                        p.interp_fn = lerp_number_quad
-                    elseif p.interp == "sine" then
-                        p.interp_fn = lerp_number_sine
+                    if interp_type == "linear" then
+                        p.interp_fn = multiply and lerp_number_linear_multiply or lerp_number_linear
+                    elseif interp_type == "sine" then
+                        p.interp_fn = multiply and lerp_number_sine_multiply or lerp_number_sine
+                    elseif interp_type == "step" then
+                        p.interp_fn = multiply and lerp_number_step_multiply or lerp_number_step
+                    elseif interp_type == "quad" then
+                        p.interp_fn = multiply and lerp_number_quad_multiply or lerp_number_quad
                     end
                 elseif key_type == "table" then
-                    if not p.interp or p.interp == "linear" then
-                        p.interp_fn = lerp_table_linear
-                    elseif p.interp == "quad" then
-                        p.interp_fn = lerp_table_quad
-                    elseif p.interp == "sine" then
-                        p.interp_fn = lerp_table_sine
+                    if interp_type == "linear" then
+                        p.interp_fn = multiply and lerp_table_linear_multiply or lerp_table_linear
+                    elseif interp_type == "sine" then
+                        p.interp_fn = multiply and lerp_table_sine_multiply or lerp_table_sine
+                    elseif interp_type == "step" then
+                        p.interp_fn = multiply and lerp_table_step_multiply or lerp_table_step
+                    elseif interp_type == "quad" then
+                        p.interp_fn = multiply and lerp_table_quad_multiply or lerp_table_quad
                     end
                 end
             end
@@ -1633,10 +1719,6 @@ function sys.tween:on_insert(entity, store)
 end
 
 function sys.tween:on_update(dt, ts, store)
-    -- local fns = self.fns
-
-    local lerp = self.lerp
-
     local entities = store.entities_with_tween
     for _, e in pairs(entities) do
         if e.tween.disabled then
@@ -1681,23 +1763,8 @@ function sys.tween:on_update(dt, ts, store)
                         end
                     end
 
-                    -- local value = ka == kb and ka[2] or
-                    --                   lerp(ka[2], kb[2], (time - ka[1]) / (kb[1] - ka[1]), ka[3] or tween_prop.interp)
-                    local value = ka == kb and ka[2] or
-                                      tween_prop.interp_fn(ka[2], kb[2], (time - ka[1]) / (kb[1] - ka[1]))
-
-                    if tween_prop.multiply then
-                        if type(value) == "boolean" then
-                            s[tween_prop.name] = value and s[tween_prop.name]
-                        elseif type(value) == "table" then
-                            s[tween_prop.name].x = value.x * s[tween_prop.name].x
-                            s[tween_prop.name].y = value.y * s[tween_prop.name].y
-                        else
-                            s[tween_prop.name] = value * s[tween_prop.name]
-                        end
-                    else
-                        s[tween_prop.name] = value
-                    end
+                    -- 直接通过 interp_fn 来进行插值计算和赋值，避免创建中间变量与小表的频繁创建，降低 gc 压力
+                    tween_prop.interp_fn(ka, kb, time, s, tween_prop.name)
 
                     finished = finished and tween_prop.loop or ka == kb
                 end
