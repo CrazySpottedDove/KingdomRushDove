@@ -890,7 +890,6 @@ tt.tween.reverse = false
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 150}}
 tt.tween.run_once = true
 tt.render.sprites[1].color = {0, 255, 255}
-tt.render.sprites[1].alpha = 150
 
 local decal_high_elven_sentinel_preview = RT("decal_high_elven_sentinel_preview", "decal_tween")
 decal_high_elven_sentinel_preview.render.sprites[1].name = "CrossbowHunterDecalDotted"

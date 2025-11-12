@@ -6134,6 +6134,7 @@ function BooleanToggleItem:initialize(key_text, initial_value, size)
     self.value_label.pos = V.v(self.size.x - 70, 0)
     self.value_label.font_name = "body"
     self.value_label.font_size = 16
+    self.value_label.text = nil
     self.value_label.text_align = "center"
     self.value_label.vertical_align = "middle"
     self.value_label.colors.text_yes = {100, 255, 100, 255}
@@ -6159,7 +6160,7 @@ function BooleanToggleItem:update_display()
             self.value_label.colors.text = self.value_label.colors.text_no
         end
     elseif self._type == "number" then
-        if not self.value_label.text or self.value_label.text == "" then
+        if not self.value_label.text then
             self.value_label.text = tostring(self.value)
         end
         self.value_label.colors.text = self.value_label.colors.text_default
@@ -6239,10 +6240,10 @@ function BooleanToggleItem:on_keypressed(key)
                 if byteoffset > 1 then
                     self.value_label.text = string.sub(text, 1, byteoffset - 1)
                 else
-                    self.value_label.text = "0"
+                    self.value_label.text = ""
                 end
             else
-                self.value_label.text = "0"
+                self.value_label.text = ""
             end
             local num = tonumber(self.value_label.text)
             if num then
