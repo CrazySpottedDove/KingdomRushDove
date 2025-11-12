@@ -2251,7 +2251,7 @@ function sys.render:on_remove(entity, store)
         for i = #entity.render.sprites, 1, -1 do
             local s = entity.render.sprites[i]
             s.marked_to_remove = true
-            entity.render.sprites[i] = nil
+            -- entity.render.sprites[i] = nil
         end
     end
 
