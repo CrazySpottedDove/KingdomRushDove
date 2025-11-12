@@ -2508,7 +2508,7 @@ tt.hero.skills.chainspell.xp_level_steps = {
     [8] = 3
 }
 tt.hero.skills.disintegrate = CC("hero_skill")
-tt.hero.skills.disintegrate.total_damage = {250, 500, 750}
+tt.hero.skills.disintegrate.total_damage = {300, 600, 900}
 tt.hero.skills.disintegrate.count = {4, 6, 8}
 tt.hero.skills.disintegrate.xp_gain = {20, 35, 50}
 tt.hero.skills.disintegrate.xp_level_steps = {
@@ -2529,6 +2529,14 @@ tt.hero.skills.arcanefocus.xp_level_steps = {
     [1] = 1,
     [4] = 2,
     [7] = 3
+}
+tt.hero.skills.arcanetorrent = CC("hero_skill")
+tt.hero.skills.arcanetorrent.factor = {0.04, 0.05, 0.06, 0.07}
+tt.hero.skills.arcanetorrent.xp_level_steps = {
+    [1] = 1,
+    [4] = 2,
+    [7] = 3,
+    [10] = 4
 }
 tt.health.armor = nil
 tt.health.dead_lifetime = 15
@@ -2610,6 +2618,8 @@ tt.ranged.attacks[2].cooldown = 4
 tt.ranged.attacks[2].bullet = "ray_wizard_chain"
 tt.ranged.attacks[2].xp_from_skill = "chainspell"
 tt.arcanefocus_extra = 0
+tt.arcanetorrent_factor = 0
+tt.arcanetorrent_factor_base = 0.04
 
 tt = RT("fx_wizard_disintegrate", "fx")
 tt.render.sprites[1].name = "fx_wizard_disintegrate"

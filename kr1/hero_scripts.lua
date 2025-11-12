@@ -1273,12 +1273,6 @@ scripts.hero_wizard = {
     level_up = function(this, store)
         local hl, ls = level_up_basic(this)
 
-        local mage_tower_types = {"mage", "archmage", "sorcerer", "sunray", "arcane_wizard", "necromancer"}
-        local mage_towers = table.filter(store.towers, function(_, e)
-            return e.tower and table.contains(mage_tower_types, e.tower.type)
-        end)
-        this.mage_tower_count = #mage_towers
-
         this.melee.attacks[1].damage_min = ls.melee_damage_min[hl]
         this.melee.attacks[1].damage_max = ls.melee_damage_max[hl]
 
@@ -1287,8 +1281,8 @@ scripts.hero_wizard = {
             a.disabled = nil
             a.loops = s.count[s.level]
             local b = E:get_template("missile_wizard")
-            b.bullet.damage_max = s.damage[s.level] + this.mage_tower_count
-            b.bullet.damage_min = s.damage[s.level] + this.mage_tower_count
+            b.bullet.damage_max = s.damage[s.level]
+            b.bullet.damage_min = s.damage[s.level]
         end)
 
         upgrade_skill(this, "chainspell", function(this, s)
@@ -1301,7 +1295,7 @@ scripts.hero_wizard = {
         upgrade_skill(this, "disintegrate", function(this, s)
             local a = this.timed_attacks.list[1]
             a.disabled = nil
-            a.total_damage = s.total_damage[s.level] + this.mage_tower_count * 15
+            a.total_damage = s.total_damage[s.level]
             a.count = s.count[s.level]
         end)
 
@@ -1315,9 +1309,13 @@ scripts.hero_wizard = {
             this.arcanefocus_extra = s.extra_damage[s.level]
         end)
 
+        upgrade_skill(this, "arcanetorrent", function(this, s)
+            this.arcanetorrent_factor_base = s.factor[s.level]
+        end)
+
         local m = E:get_template("mod_ray_wizard")
-        m.damage_max = ls.ranged_damage_max[hl] + this.mage_tower_count * 4 + this.arcanefocus_extra
-        m.damage_min = ls.ranged_damage_min[hl] + this.mage_tower_count * 4 + this.arcanefocus_extra
+        m.damage_max = ls.ranged_damage_max[hl] + this.arcanefocus_extra
+        m.damage_min = ls.ranged_damage_min[hl] + this.arcanefocus_extra
 
         this.health.hp = this.health.hp_max
     end,
@@ -1325,17 +1323,27 @@ scripts.hero_wizard = {
         local h = this.health
         local he = this.hero
         local a, skill, brk, sta
-
+        local unit = this.unit
+        local a_disintegrate = this.timed_attacks.list[1]
+        local a_missile = this.timed_attacks.list[2]
+        local skill_disintegrate = this.hero.skills.disintegrate
+        local skill_missile = this.hero.skills.magicmissile
         U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
 
         this.health_bar.hidden = false
+
+        local arcane_torrent_ts = store.tick_ts
+
+        local function filter_fn (v)
+            return v.health.hp <= a_disintegrate.total_damage * unit.damage_factor
+        end
 
         while true do
             if h.dead then
                 SU.y_hero_death_and_respawn(store, this)
             end
 
-            if this.unit.is_stunned then
+            if unit.is_stunned then
                 SU.soldier_idle(store, this)
             else
                 while this.nav_rally.new do
@@ -1348,30 +1356,16 @@ scripts.hero_wizard = {
                     U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
                 end
 
-                a = this.timed_attacks.list[1]
-                skill = this.hero.skills.disintegrate
+                a = a_disintegrate
+                skill = skill_disintegrate
 
                 if ready_to_use_skill(a, store) then
-                    local triggers = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans,
-                        function(v)
-                            return v.health.hp <= a.total_damage
-                        end)
+                    local targets = U.find_enemies_in_range_filter_on(this.pos, a.max_range, a.vis_flags, a.vis_bans, filter_fn)
 
-                    if not triggers then
-                        SU.delay_attack(store, a, 0.13333333333333333)
+                    if not targets then
+                        a.ts = a.ts + fts(10)
                     else
-                        local remaining_damage = a.total_damage * this.unit.damage_factor
-
-                        local targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.vis_flags,
-                            a.vis_bans, function(v)
-                                return v.health.hp <= remaining_damage
-                            end)
-
-                        if not targets then
-                            SU.delay_attack(store, a, 0.13333333333333333)
-
-                            goto label_326_0
-                        end
+                        local remaining_damage = a.total_damage * unit.damage_factor
 
                         a.ts = store.tick_ts
 
@@ -1414,13 +1408,11 @@ scripts.hero_wizard = {
                     end
                 end
 
-                a = this.timed_attacks.list[2]
-                skill = this.hero.skills.magicmissile
+                a = a_missile
+                skill = skill_missile
 
                 if ready_to_use_skill(a, store) then
-                    local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, false, a.vis_flags,
-                        a.vis_bans)
-
+                    local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
                     if target then
                         local start_ts = store.tick_ts
                         this.health.immune_to = F_ALL
@@ -1431,6 +1423,20 @@ scripts.hero_wizard = {
                         this.health.immune_to = 0
                         goto label_326_0
                     end
+                end
+
+                if store.tick_ts - arcane_torrent_ts > 1 then
+                    arcane_torrent_ts = store.tick_ts
+                    local count = 0
+                    for _, t in pairs(store.towers) do
+                        if table.contains(GS.mage_towers, t.template_name) then
+                            count = count + 1
+                        end
+                    end
+                    local tmp = 1 + this.arcanetorrent_factor_base * count
+                    this.unit.damage_factor = this.unit.damage_factor / (1 + this.arcanetorrent_factor) *
+                        tmp
+                    this.arcanetorrent_factor = tmp - 1
                 end
 
                 brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)

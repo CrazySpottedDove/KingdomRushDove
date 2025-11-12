@@ -665,10 +665,19 @@ get_damage(b.bullet)
 d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
 map["魔法飞弹"] = str(cooldown_str(),"纽维斯发射",count,"枚魔法飞弹，全图范围内追踪敌人，每枚飞弹造成",damage_str(),"。")
-map["连锁反应"] = str()
-map["分解"] = str()
-map["法术洪流"] = str()
-
+set_skill(h.hero.skills.chainspell)
+count = s.bounces[max_lvl]
+cooldown = h.ranged.attacks[2].cooldown
+map["连锁反应"] = str(cooldown_str(),"纽维斯的普攻额外进行",count,"次弹射。")
+set_skill(h.hero.skills.disintegrate)
+count = s.count[max_lvl]
+local total_damage = s.total_damage[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+map["分解"] = str(cooldown_str(),"纽维斯用知识的力量分解最多",count,"名血量总和不超过",total_damage,"的敌人。")
+set_skill(h.hero.skills.arcanetorrent)
+factor = s.factor[max_lvl]
+map["法术洪流"] = str("年迈的法师热衷于在后辈前展示力量。场上每多一座法师塔，纽维斯的伤害就提升",
+    factor * 100, "%。该伤害提升对魔法飞弹、分解同样生效。")
 set_hero("hero_beastmaster")
 map["野猪朋友"] = str()
 map["猎鹰朋友"] = str()
