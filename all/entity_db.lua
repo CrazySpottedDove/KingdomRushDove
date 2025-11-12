@@ -22,6 +22,21 @@ function entity_db:load()
     require("components")
     require("templates")
     require("game_templates")
+    -- self:test_tween()
+end
+
+function entity_db:test_tween()
+    for name, e in pairs(self.entities) do
+        if e.tween then
+            for _, prop in pairs(e.tween.props) do
+                for _, key in pairs(prop.keys) do
+                    if key[3] then
+                        log.error("template %s has tween with ease function in [keys], which is not supported in entity_db:test_tween()", name)
+                    end
+                end
+            end
+        end
+    end
 end
 
 -- 性能与内存测试函数
