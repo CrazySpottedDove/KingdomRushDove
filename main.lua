@@ -988,10 +988,10 @@ function love.errorhandler(msg)
     -- 	table.insert(tip, "oops, 发生协程错误! 请将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面，由于是协程错误不影响游戏可按 “Esc” 关闭本界面\n")
     if has_tip then
         table.insert(tip,
-            "666，程序爆炸了! 如果您不想被吐槽看不懂中文的话，请先按照提示说的做。还是搞不定，再将本界面与此前界面截图并反馈，而不是仅语言描述。按 “-” 显示此前界面以截图。\n")
+            "666，程序爆炸了! 如果您不想被吐槽看不懂中文的话，请先按照提示说的做。还是搞不定，再将本界面与此前界面截图并反馈，而不是仅语言描述。\n")
     elseif not has_tip then
         table.insert(tip,
-            "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图，并按 “-” 显示崩溃前界面，一并截图展示，并用语言简要说明发生了什么。\n")
+            "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图，截图反馈并用语言简要说明发生了什么。\n")
     end
 
     if love.nx then
@@ -1022,7 +1022,7 @@ function love.errorhandler(msg)
 
     G.present()
 
-    show_last = false
+    show_last = true
 
     local function draw()
         if show_last then
@@ -1038,16 +1038,21 @@ function love.errorhandler(msg)
         LLDEBUGGER.start()
     end
 
-    return function()
+    -- return function()
+
+    -- end
+    while true do
         love.event.pump()
 
         for e, a, b, c in love.event.poll() do
             if e == "quit" then
+                quiterr = true
+                love.event.quit()
                 return
             elseif e == "keypressed" then
                 if a == "escape" and error_type == "coro" then
                     quiterr = true
-                    break
+                    return
                 elseif a == "-" then
                     show_last = not show_last
                 else
@@ -1060,7 +1065,7 @@ function love.errorhandler(msg)
                     name = "Game"
                 end
 
-                local buttons = {"OK", "Cancel"}
+                local buttons = { "OK", "Cancel" }
                 local pressed = love.window.showMessageBox("Quit " .. name .. "?", "", buttons)
 
                 if pressed == 1 then
@@ -1072,15 +1077,11 @@ function love.errorhandler(msg)
         draw()
 
         if love.timer then
-            love.timer.sleep(1)
+            love.timer.sleep(2)
         end
 
-        -- if quiterr then
-        --     break
-        -- end
-
+        if quiterr then
+            break
+        end
     end
-    -- while true do
-
-    -- end
 end
