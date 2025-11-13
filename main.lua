@@ -925,7 +925,7 @@ function love.errorhandler(msg)
     local font = G.setNewFont(math.floor(love.window.toPixels(15)))
     local cn_font = G.setNewFont("_assets/all-desktop/fonts/msyh.ttc", math.floor(love.window.toPixels(16)))
 
-    G.setBackgrounColor(0.349, 0.616, 0.863)
+    G.setBackgroundColor(0.349, 0.616, 0.863)
     G.setColor(1, 1, 1, 1)
 
     local trace = debug.traceback()
@@ -988,10 +988,10 @@ function love.errorhandler(msg)
     -- 	table.insert(tip, "oops, 发生协程错误! 请将本界面与此前界面截图并反馈，而不是仅语言描述，按 “z” 显示此前界面，由于是协程错误不影响游戏可按 “Esc” 关闭本界面\n")
     if has_tip then
         table.insert(tip,
-            "666，程序爆炸了! 如果您不想被吐槽看不懂中文的话，请先按照提示说的做。还是搞不定，再将本界面与此前界面截图并反馈，而不是仅语言描述。按 “z” 显示此前界面以截图。\n")
+            "666，程序爆炸了! 如果您不想被吐槽看不懂中文的话，请先按照提示说的做。还是搞不定，再将本界面与此前界面截图并反馈，而不是仅语言描述。按 “-” 显示此前界面以截图。\n")
     elseif not has_tip then
         table.insert(tip,
-            "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图，并按 “z” 显示崩溃前界面，一并截图展示，并用语言简要说明发生了什么。\n")
+            "666，程序爆炸了！如果您不想被吐槽看不懂中文的话，请首先确定版本是否为最新。如果不是最新，不要反馈，不要找作者。如果版本为最新，再完整截下蓝屏的图，并按 “-” 显示崩溃前界面，一并截图展示，并用语言简要说明发生了什么。\n")
     end
 
     if love.nx then
@@ -1022,10 +1022,11 @@ function love.errorhandler(msg)
 
     G.present()
 
+    show_last = false
+
     local function draw()
-        if love.keyboard.isDown("z") then
+        if show_last then
             G.present()
-            love.timer.sleep(0.4)
         else
             G.draw(error_canvas, 0, 0)
         end
@@ -1043,10 +1044,12 @@ function love.errorhandler(msg)
         for e, a, b, c in love.event.poll() do
             if e == "quit" then
                 return
-            elseif e == "keypressed" and a == "escape" then
-                if error_type == "coro" then
+            elseif e == "keypressed" then
+                if a == "escape" and error_type == "coro" then
                     quiterr = true
                     break
+                elseif a == "-" then
+                    show_last = not show_last
                 else
                     return
                 end
@@ -1069,7 +1072,7 @@ function love.errorhandler(msg)
         draw()
 
         if love.timer then
-            love.timer.sleep(0.1)
+            love.timer.sleep(1)
         end
 
         -- if quiterr then
