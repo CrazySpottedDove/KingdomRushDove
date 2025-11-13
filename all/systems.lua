@@ -1673,7 +1673,8 @@ function sys.tween:on_insert(entity, store)
                     if sprite[p.name] then
                         key_type = type(sprite[p.name])
                     else
-
+                        error(entity.template_name .. " tween_prop " .. p.name ..
+                                  " has no keys and sprite has no such property")
                     end
                 else
                     key_type = type(p.keys[1][2])

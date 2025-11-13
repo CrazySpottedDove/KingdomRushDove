@@ -2444,8 +2444,7 @@ tt.render.sprites[1].loop = false
 tt.render.sprites[1].z = Z_SCREEN_FIXED + 3
 tt.render.sprites[1].anchor.x = 3.6666666666666665
 tt.render.sprites[1].scale = IS_PHONE and vec_2(1.45, 1.45) or nil
--- 故意设置一个错误
-tt.tween.props[1].name = nil
+tt.tween.props[1].name = "r"
 tt.tween.props[1].keys = {{0, math.pi / 5}, {0, math.pi * 0.5}}
 tt.tween.disabled = true
 tt.tween.remove = false
