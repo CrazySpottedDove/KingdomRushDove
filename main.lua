@@ -232,7 +232,6 @@ if KR_TARGET == "tablet" then
 end
 -- ...existing code...
 
-
 local log = require("klua.log")
 
 require("klua.table")
@@ -871,7 +870,7 @@ local function crash_report(str)
     end
 end
 
-function love.errhandler(msg)
+function love.errorhandler(msg)
     local error_canvas = G.newCanvas(G.getWidth(), G.getHeight())
     local last_canvas = G.getCanvas()
     G.setCanvas(error_canvas)
@@ -1038,7 +1037,7 @@ function love.errhandler(msg)
         LLDEBUGGER.start()
     end
 
-    while true do
+    return function()
         love.event.pump()
 
         for e, a, b, c in love.event.poll() do
@@ -1073,8 +1072,12 @@ function love.errhandler(msg)
             love.timer.sleep(0.1)
         end
 
-        if quiterr then
-            break
-        end
+        -- if quiterr then
+        --     break
+        -- end
+
     end
+    -- while true do
+
+    -- end
 end

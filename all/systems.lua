@@ -1667,10 +1667,20 @@ function sys.tween:on_insert(entity, store)
 
             -- 为了避免每次更新都动态查找合适的插值函数，我们应该在 insert 的时候就确定下来。插值函数的赋值单元为 tween_prop。
             do
-                local key_type = type(p.keys[1][2])
+                local sprite = entity.render.sprites[p.sprite_id]
+                local key_type
+                if #p.keys == 0 then
+                    if sprite[p.name] then
+                        key_type = type(sprite[p.name])
+                    else
+
+                    end
+                else
+                    key_type = type(p.keys[1][2])
+                end
+
                 local interp_type = p.interp or "linear"
                 local multiply = p.multiply
-                local sprite = entity.render.sprites[p.sprite_id]
                 -- 初始化
                 if not sprite[p.name] then
                     if key_type == "table" then
