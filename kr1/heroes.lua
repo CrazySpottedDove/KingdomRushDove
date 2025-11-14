@@ -3760,7 +3760,7 @@ tt.hero.skills.kraken.xp_level_steps = {
 }
 tt.hero.skills.scattershot = CC("hero_skill")
 tt.hero.skills.scattershot.fragments = {4, 6, 8}
-tt.hero.skills.scattershot.fragment_damage = {12, 14, 15}
+tt.hero.skills.scattershot.fragment_damage = {12, 15, 18}
 tt.hero.skills.scattershot.xp_gain = {40, 80, 120}
 tt.hero.skills.scattershot.xp_level_steps = {
     [2] = 1,
