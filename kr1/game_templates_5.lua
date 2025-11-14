@@ -5727,11 +5727,11 @@ return function()
     tt.hps.heal_max = b.healing_prayer.heal
     tt.hps.heal_every = b.healing_prayer.heal_every
 
-    function tt.main_script.insert(this, store, script)
+    function tt.main_script.insert(this, store)
         this.hps.heal_min = this.hps.heal_min[this.modifier.level]
         this.hps.heal_max = this.hps.heal_max[this.modifier.level]
 
-        return scripts.mod_hps.insert(this, store, script)
+        return scripts.mod_hps.insert(this, store)
     end
 
     tt.main_script.update = scripts.mod_hps.update
@@ -6430,10 +6430,10 @@ return function()
     tt.modifier.vis_flags = bor(F_MOD, F_STUN)
     tt.modifier.vis_bans = bor(F_BOSS)
 
-    function tt.main_script.insert(this, store, script)
+    function tt.main_script.insert(this, store)
         this.modifier.duration = this.wave_of_roots.mod_duration[this.modifier.level]
 
-        return scripts.mod_stun.insert(this, store, script)
+        return scripts.mod_stun.insert(this, store)
     end
 
     tt = E:register_t("tower_demon_pit_lvl1", "tower_KR5")
@@ -10462,7 +10462,7 @@ return function()
     tt.aura.excluded_entities = nil
     tt.main_script.update = scripts.aura_apply_damage.update
 
-    function tt.main_script.insert(this, store, script)
+    function tt.main_script.insert(this, store)
         if this.render then
             for _, s in pairs(this.render.sprites) do
                 s.ts = store.tick_ts
@@ -18578,12 +18578,12 @@ return function()
     tt.main_script.update = scripts.tower_barrack_mercenaries_KR5.update
     tt.main_script.remove = scripts.tower_barrack.remove
 
-    function tt.main_script.insert(this, store, script)
+    function tt.main_script.insert(this, store)
         if this.render.sprites[1].flip_x == true then
             this.barrack.respawn_offset.x = this.barrack.respawn_offset.x * -1
         end
 
-        return scripts.tower_barrack.insert(this, store, script)
+        return scripts.tower_barrack.insert(this, store)
     end
 
     tt.render.sprites[1].animated = false

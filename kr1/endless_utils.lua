@@ -40,7 +40,7 @@ end
 
 local EU = {}
 
-local function engineer_focus_bomb_update(this, store, script)
+local function engineer_focus_bomb_update(this, store)
     local b = this.bullet
     local dmin, dmax = b.damage_min, b.damage_max
     local dradius = b.damage_radius
@@ -474,7 +474,7 @@ function patch_upgrade_map.archer_critical(level, endless)
     for _, name in pairs(table.append(UP:arrows(), {"arrow_arcane_burst"}, true)) do
         local arrow = E:get_template(name)
         if not arrow._endless_archer_critical then
-            arrow.main_script.insert = U.function_append(function(this, store, script)
+            arrow.main_script.insert = U.function_append(function(this, store)
                 if not this.bullet._endless_archer_critical then
                     this.bullet._endless_archer_critical = true
                     if math.random() < this._endless_archer_critical then

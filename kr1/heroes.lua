@@ -11439,7 +11439,7 @@ tt.aura.vis_flags = bor(F_RANGED)
 tt.aura.excluded_entities = nil
 tt.main_script.update = scripts.aura_apply_damage.update
 
-function tt.main_script.insert(this, store, script)
+function tt.main_script.insert(this, store)
     if this.render then
         for _, s in pairs(this.render.sprites) do
             s.ts = store.tick_ts

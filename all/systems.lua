@@ -1090,7 +1090,7 @@ end
 
 function sys.main_script:on_insert(entity, store)
     if entity.main_script and entity.main_script.insert then
-        return entity.main_script.insert(entity, store, entity.main_script)
+        return entity.main_script.insert(entity, store)
     else
         return true
     end
@@ -1107,7 +1107,7 @@ function sys.main_script:on_update(dt, ts, store)
         end
 
         if s.co then
-            local success, err = coroutine.resume(s.co, e, store, s)
+            local success, err = coroutine.resume(s.co, e, store)
 
             -- if coroutine.status(s.co) == "dead" or err ~= nil then
             --     if err ~= nil then
@@ -2426,8 +2426,9 @@ function sys.render:on_update(dt, ts, store)
     local entities = d.entities_with_render
     local show_health_bar = store.config and store.config.show_health_bar
     for _, e in pairs(entities) do
-        for i = 1, #e.render.sprites do
-            local s = e.render.sprites[i]
+        local sprites = e.render.sprites
+        for i = 1, #sprites do
+            local s = sprites[i]
             if s.ts > ts then
                 s.hidden = true
                 s._wait = true

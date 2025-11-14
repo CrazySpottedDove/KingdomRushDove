@@ -601,7 +601,7 @@ scripts.hero_alleria = {
 }
 -- 幻影-攻击影子
 scripts.mirage_shadow = {
-    insert = function(this, store, script)
+    insert = function(this, store)
         local b = this.bullet
         local target = store.entities[b.target_id]
         if not target then
@@ -610,7 +610,7 @@ scripts.mirage_shadow = {
         b.to = V.vclone(target.pos)
         return true
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local b = this.bullet
         local target = store.entities[b.target_id]
         local start_ts = store.tick_ts
@@ -678,12 +678,12 @@ scripts.mirage_shadow = {
 }
 -- 幻影-闪避影子
 scripts.soldier_mirage_illusion = {
-    insert = function(this, store, script)
+    insert = function(this, store)
         this.lifespan.ts = store.tick_ts
         this.melee.order = U.attack_order(this.melee.attacks)
         return true
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local attack = this.melee.attacks[1]
         U.y_wait(store, attack.cooldown - fts(23))
 
@@ -764,7 +764,7 @@ scripts.hero_mirage = {
         end)
         this.health.hp = this.health.hp_max
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local h = this.health
         local he = this.hero
         local a_sd = this.timed_attacks.list[1]
@@ -1040,13 +1040,13 @@ scripts.hero_mirage = {
 }
 -- 纽维斯-攻击
 scripts.ray_wizard_chain = {
-    insert = function(this, store, script)
+    insert = function(this, store)
         if not store.entities[this.bullet.target_id] then
             return false
         end
         return true
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local b = this.bullet
         local s = this.render.sprites[1]
         local target = store.entities[b.target_id]
@@ -1150,7 +1150,7 @@ scripts.ray_wizard_chain = {
 }
 -- 纽维斯-攻击伤害
 scripts.mod_ray_wizard = {
-    insert = function(this, store, script)
+    insert = function(this, store)
         local target = store.entities[this.modifier.target_id]
         if not target or not target.health or target.health.dead then
             return false
@@ -1158,7 +1158,7 @@ scripts.mod_ray_wizard = {
         this.modifier.ts = store.tick_ts
         return true
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local m = this.modifier
         local target = store.entities[m.target_id]
         local total_damage = math.random(this.damage_min, this.damage_max) * m.damage_factor
@@ -1319,7 +1319,7 @@ scripts.hero_wizard = {
 
         this.health.hp = this.health.hp_max
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local h = this.health
         local he = this.hero
         local a, skill, brk, sta
@@ -1470,7 +1470,7 @@ scripts.soldier_sand_warrior = {
         t.respawn = nil
         return t
     end,
-    insert = function(this, store, script)
+    insert = function(this, store)
         this.melee.order = U.attack_order(this.melee.attacks)
         this.health.hp_max = this.health.hp_max + this.health.hp_inc * this.unit.level
         local node_offset = math.random(3, 6)
@@ -1481,7 +1481,7 @@ scripts.soldier_sand_warrior = {
         end
         return true
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local attack = this.melee.attacks[1]
         local target
         local expired = false
@@ -1593,7 +1593,7 @@ scripts.hero_alric = {
         update_regen(this)
         this.health.hp = this.health.hp_max
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local h = this.health
         local he = this.hero
         local swa = this.timed_attacks.list[1]
@@ -2787,7 +2787,7 @@ scripts.hero_beastmaster = {
         this.health.hp = this.health.hp_max
         this.timed_attacks.list[2].ts = -this.timed_attacks.list[2].cooldown
     end,
-    insert = function(this, store, script)
+    insert = function(this, store)
         this.hero.fn_level_up(this, store)
         this.melee.order = U.attack_order(this.melee.attacks)
         local e = E:create_entity("aura_beastmaster_regeneration")
@@ -2796,7 +2796,7 @@ scripts.hero_beastmaster = {
         queue_insert(store, e)
         return true
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local h = this.health
         local he = this.hero
         local a, skill, brk, sta
@@ -3712,7 +3712,7 @@ scripts.hero_malik = {
 }
 -- 德得尔-护甲buff
 scripts.mod_priest_armor = {
-    insert = function(this, store, script)
+    insert = function(this, store)
         local target = store.entities[this.modifier.target_id]
 
         if not target or target.health.dead then
@@ -3742,7 +3742,7 @@ scripts.mod_priest_armor = {
         signal.emit("mod-applied", this, target)
         return true
     end,
-    remove = function(this, store, script)
+    remove = function(this, store)
         local target = store.entities[this.modifier.target_id]
         if target then
             SU.armor_dec(target, this.armor_inc)
@@ -3752,7 +3752,7 @@ scripts.mod_priest_armor = {
         end
         return true
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local m = this.modifier
         local last_ts = store.tick_ts
         local target = store.entities[m.target_id]
@@ -4505,8 +4505,8 @@ scripts.hero_magnus = {
 }
 -- 格劳尔-巨石
 scripts.giant_boulder = {
-    insert = function(this, store, script)
-        if not scripts.bomb.insert(this, store, script) then
+    insert = function(this, store)
+        if not scripts.bomb.insert(this, store) then
             return false
         end
 
@@ -4530,7 +4530,7 @@ scripts.giant_boulder = {
 }
 -- 格劳尔-岩晶肘击
 scripts.mod_giant_massivedamage = {
-    insert = function(this, store, script)
+    insert = function(this, store)
         local m = this.modifier
         local source = store.entities[m.source_id]
         local target = store.entities[m.target_id]
@@ -4572,7 +4572,7 @@ scripts.mod_giant_massivedamage = {
 }
 -- 格劳尔-堡垒
 scripts.aura_giant_bastion = {
-    update = function(this, store, script)
+    update = function(this, store)
         local hero = store.entities[this.aura.source_id]
 
         this.pos = hero.pos
@@ -4684,7 +4684,7 @@ scripts.hero_giant = {
         this.health.hp = this.health.hp_max
     end,
 
-    insert = function(this, store, script)
+    insert = function(this, store)
         this.hero.fn_level_up(this, store)
 
         this.melee.order = U.attack_order(this.melee.attacks)
@@ -4697,7 +4697,7 @@ scripts.hero_giant = {
         return true
     end,
 
-    update = function(this, store, script)
+    update = function(this, store)
         local h = this.health
         local he = this.hero
         local a, skill, brk, sta
@@ -5371,7 +5371,7 @@ scripts.hero_pirate = {
         this.health.hp = this.health.hp_max
     end
 }
-function scripts.hero_pirate.insert(this, store, script)
+function scripts.hero_pirate.insert(this, store)
     this.hero.fn_level_up(this, store)
 
     this.melee.order = U.attack_order(this.melee.attacks)
@@ -5388,7 +5388,7 @@ function scripts.hero_pirate.insert(this, store, script)
     return true
 end
 
-function scripts.hero_pirate.update(this, store, script)
+function scripts.hero_pirate.update(this, store)
     local h = this.health
     local he = this.hero
     local a, skill, brk, sta
@@ -6383,7 +6383,7 @@ scripts.hero_ignus = {
     end
 }
 scripts.aura_oni_rage = {
-    update = function(this, store, script)
+    update = function(this, store)
         local hero = store.entities[this.aura.source_id]
         this.pos = hero.pos
         local s = this.render.sprites[1]
@@ -6414,7 +6414,7 @@ scripts.aura_oni_rage = {
 }
 -- 鬼侍
 scripts.hero_oni = {
-    insert = function(this, store, script)
+    insert = function(this, store)
         this.hero.fn_level_up(this, store)
         this.melee.order = U.attack_order(this.melee.attacks)
         local e = E:create_entity("aura_oni_rage")
@@ -6951,7 +6951,7 @@ function scripts.hero_10yr.get_info(this)
 end
 
 scripts.power_fireball_10yr = {
-    update = function(this, store, script)
+    update = function(this, store)
         local b = this.bullet
         local mspeed = 10 * FPS
         local particle = E:create_entity("ps_power_fireball")
@@ -7258,7 +7258,7 @@ scripts.hero_monk = {
         this.timed_attacks.list[1].ts = -this.timed_attacks.list[1].cooldown
         this.timed_attacks.list[2].ts = -this.timed_attacks.list[2].cooldown
     end,
-    insert = function(this, store, script)
+    insert = function(this, store)
         this.hero.fn_level_up(this, store)
         this.melee.order = {
             [1] = 4,
@@ -7269,7 +7269,7 @@ scripts.hero_monk = {
         }
         return true
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local h = this.health
         local he = this.hero
         local a, skill, brk, sta
@@ -9855,7 +9855,7 @@ end
 
 scripts.mod_lynn_ultimate = {}
 
-function scripts.mod_lynn_ultimate.insert(this, store, script)
+function scripts.mod_lynn_ultimate.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target or target.health.dead then
@@ -9876,7 +9876,7 @@ function scripts.mod_lynn_ultimate.insert(this, store, script)
     return true
 end
 
-function scripts.mod_lynn_ultimate.update(this, store, script)
+function scripts.mod_lynn_ultimate.update(this, store)
     local target
     local m = this.modifier
     local dps = this.dps
@@ -9949,7 +9949,7 @@ end
 
 scripts.mod_lynn_weakening = {}
 
-function scripts.mod_lynn_weakening.insert(this, store, script)
+function scripts.mod_lynn_weakening.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target or target.health.dead or target.enemy and not target.enemy.can_accept_magic then
@@ -9970,7 +9970,7 @@ function scripts.mod_lynn_weakening.insert(this, store, script)
     return true
 end
 
-function scripts.mod_lynn_weakening.remove(this, store, script)
+function scripts.mod_lynn_weakening.remove(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if target then
@@ -10554,7 +10554,7 @@ function scripts.shot_wilbur.update(this, store)
 end
 scripts.missile_wilbur = {}
 
-function scripts.missile_wilbur.insert(this, store, script)
+function scripts.missile_wilbur.insert(this, store)
     local b = this.bullet
 
     b.to.x = this.pos.x
@@ -10575,7 +10575,7 @@ function scripts.missile_wilbur.insert(this, store, script)
         end
     end
 
-    return scripts.missile.insert(this, store, script)
+    return scripts.missile.insert(this, store)
 end
 
 scripts.hero_veznan = {}
@@ -17062,7 +17062,7 @@ end
 
 scripts.mod_hero_hunter_ricochet_attack = {}
 
-function scripts.mod_hero_hunter_ricochet_attack.update(this, store, script)
+function scripts.mod_hero_hunter_ricochet_attack.update(this, store)
     local m = this.modifier
     local start_ts = store.tick_ts
     local already_hit = false
@@ -17139,7 +17139,7 @@ end
 
 scripts.aura_hero_hunter_shoot_around = {}
 
-function scripts.aura_hero_hunter_shoot_around.update(this, store, script)
+function scripts.aura_hero_hunter_shoot_around.update(this, store)
     this.aura.ts = store.tick_ts
 
     local last_hit_ts = 0
@@ -17667,7 +17667,7 @@ end
 
 scripts.soldier_hero_hunter_ultimate = {}
 
-function scripts.soldier_hero_hunter_ultimate.update(this, store, script)
+function scripts.soldier_hero_hunter_ultimate.update(this, store)
     local brk, stam, star
 
     this.reinforcement.ts = store.tick_ts
@@ -18460,7 +18460,7 @@ end
 
 scripts.soldier_hero_space_elf_astral_reflection = {}
 
-function scripts.soldier_hero_space_elf_astral_reflection.update(this, store, script)
+function scripts.soldier_hero_space_elf_astral_reflection.update(this, store)
     local brk, stam, star, a
 
     this.reinforcement.ts = store.tick_ts
@@ -18731,7 +18731,7 @@ end
 
 scripts.aura_hero_space_elf_void_rift = {}
 
-function scripts.aura_hero_space_elf_void_rift.update(this, store, script)
+function scripts.aura_hero_space_elf_void_rift.update(this, store)
     this.aura.ts = store.tick_ts
 
     local last_hit_ts = 0
@@ -19573,7 +19573,7 @@ end
 
 scripts.hero_raelyn_command_orders_dark_knight = {}
 
-function scripts.hero_raelyn_command_orders_dark_knight.update(this, store, script)
+function scripts.hero_raelyn_command_orders_dark_knight.update(this, store)
     local brk, stam, star
 
     this.reinforcement.ts = store.tick_ts
@@ -20344,7 +20344,7 @@ end
 
 scripts.bullet_hero_venom_ranged_tentacle = {}
 
-function scripts.bullet_hero_venom_ranged_tentacle.insert(this, store, script)
+function scripts.bullet_hero_venom_ranged_tentacle.insert(this, store)
     if not this.bullet.mods then
         this.bullet.mods = {"mod_bullet_hero_venom_ranged_tentacle_stun"}
     else
@@ -20356,7 +20356,7 @@ end
 
 scripts.decal_hero_venom_spike = {}
 
-function scripts.decal_hero_venom_spike.update(this, store, script)
+function scripts.decal_hero_venom_spike.update(this, store)
     U.y_animation_play(this, "in", false, store.tick_ts)
     U.animation_start(this, "idle", false, store.tick_ts, true)
 
@@ -20392,7 +20392,7 @@ end
 
 scripts.mod_hero_venom_eat_enemy_regen = {}
 
-function scripts.mod_hero_venom_eat_enemy_regen.update(this, store, script)
+function scripts.mod_hero_venom_eat_enemy_regen.update(this, store)
     local m = this.modifier
 
     this.modifier.ts = store.tick_ts
@@ -20436,7 +20436,7 @@ end
 
 scripts.decal_hero_venom_death = {}
 
-function scripts.decal_hero_venom_death.update(this, store, script)
+function scripts.decal_hero_venom_death.update(this, store)
     U.y_wait(store, fts(19))
 
     this.render.sprites[1].hidden = false
@@ -20496,7 +20496,7 @@ end
 
 scripts.aura_hero_venom_ultimate = {}
 
-function scripts.aura_hero_venom_ultimate.update(this, store, script)
+function scripts.aura_hero_venom_ultimate.update(this, store)
     local first_hit_ts
     local last_hit_ts = 0
     local cycles_count = 0
@@ -21406,7 +21406,7 @@ end
 
 scripts.bolt_hero_dragon_gem_attack = {}
 
-function scripts.bolt_hero_dragon_gem_attack.update(this, store, script)
+function scripts.bolt_hero_dragon_gem_attack.update(this, store)
     local b = this.bullet
     local s = this.render.sprites[1]
     local mspeed = b.min_speed
@@ -21603,7 +21603,7 @@ end
 
 scripts.aura_hero_dragon_gem_skill_stun = {}
 
-function scripts.aura_hero_dragon_gem_skill_stun.update(this, store, script)
+function scripts.aura_hero_dragon_gem_skill_stun.update(this, store)
     local first_hit_ts
     local last_hit_ts = 0
     local cycles_count = 0
@@ -21913,7 +21913,7 @@ end
 
 scripts.aura_hero_dragon_gem_crystal_totem = {}
 
-function scripts.aura_hero_dragon_gem_crystal_totem.update(this, store, script)
+function scripts.aura_hero_dragon_gem_crystal_totem.update(this, store)
     local first_hit_ts
     local last_hit_ts = 0
     local cycles_count = 0
@@ -22270,7 +22270,7 @@ end
 
 scripts.mod_hero_dragon_gem_passive_charge = {}
 
-function scripts.mod_hero_dragon_gem_passive_charge.update(this, store, script)
+function scripts.mod_hero_dragon_gem_passive_charge.update(this, store)
     local m = this.modifier
 
     this.modifier.ts = store.tick_ts
@@ -22885,7 +22885,7 @@ end
 
 scripts.bullet_hero_witch_basic = {}
 
-function scripts.bullet_hero_witch_basic.insert(this, store, script)
+function scripts.bullet_hero_witch_basic.insert(this, store)
     local b = this.bullet
 
     if this.impulse_per_distance then
@@ -23076,7 +23076,7 @@ end
 
 scripts.aura_hero_witch_path_aoe = {}
 
-function scripts.aura_hero_witch_path_aoe.update(this, store, script)
+function scripts.aura_hero_witch_path_aoe.update(this, store)
     local first_hit_ts
     local last_hit_ts = 0
     local cycles_count = 0
@@ -23203,7 +23203,7 @@ end
 
 scripts.bullet_witch_skill_polymorph = {}
 
-function scripts.bullet_witch_skill_polymorph.update(this, store, script)
+function scripts.bullet_witch_skill_polymorph.update(this, store)
     local b = this.bullet
     local s = this.render.sprites[1]
     local mspeed = b.min_speed
@@ -23412,7 +23412,7 @@ function scripts.mod_hero_witch_skill_polymorph.insert(this, store)
     return false
 end
 
-function scripts.mod_hero_witch_skill_polymorph.update(this, store, script)
+function scripts.mod_hero_witch_skill_polymorph.update(this, store)
     local m = this.modifier
 
     this.modifier.ts = store.tick_ts
@@ -23482,7 +23482,7 @@ end
 
 scripts.aura_hero_witch_decoy_explotion = {}
 
-function scripts.aura_hero_witch_decoy_explotion.update(this, store, script)
+function scripts.aura_hero_witch_decoy_explotion.update(this, store)
     local first_hit_ts
     local last_hit_ts = 0
     local cycles_count = 0
@@ -23595,7 +23595,7 @@ end
 
 scripts.soldier_hero_witch_decoy = {}
 
-function scripts.soldier_hero_witch_decoy.update(this, store, script)
+function scripts.soldier_hero_witch_decoy.update(this, store)
     local brk, stam, star
 
     this.reinforcement.ts = store.tick_ts
@@ -24340,7 +24340,7 @@ end
 
 scripts.bolt_dragon_bone_basic_attack = {}
 
-function scripts.bolt_dragon_bone_basic_attack.update(this, store, script)
+function scripts.bolt_dragon_bone_basic_attack.update(this, store)
     local b = this.bullet
     local s = this.render.sprites[1]
     local mspeed = b.min_speed
@@ -24588,7 +24588,7 @@ end
 
 scripts.aura_dragon_bone_cloud = {}
 
-function scripts.aura_dragon_bone_cloud.update(this, store, script)
+function scripts.aura_dragon_bone_cloud.update(this, store)
     local first_hit_ts
     local last_hit_ts = 0
     local cycles_count = 0
@@ -24798,7 +24798,7 @@ end
 
 scripts.bolt_dragon_bone_burst = {}
 
-function scripts.bolt_dragon_bone_burst.insert(this, store, script)
+function scripts.bolt_dragon_bone_burst.insert(this, store)
     local b = this.bullet
 
     b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
@@ -25593,7 +25593,7 @@ end
 
 scripts.soldier_lumenir_ultimate = {}
 
-function scripts.soldier_lumenir_ultimate.insert(this, store, script)
+function scripts.soldier_lumenir_ultimate.insert(this, store)
     this.melee.order = U.attack_order(this.melee.attacks)
 
     return true
@@ -25687,7 +25687,7 @@ end
 
 scripts.mod_hero_lumenir_sword_hit = {}
 
-function scripts.mod_hero_lumenir_sword_hit.update(this, store, script)
+function scripts.mod_hero_lumenir_sword_hit.update(this, store)
     local m = this.modifier
 
     this.modifier.ts = store.tick_ts
@@ -25803,7 +25803,7 @@ function scripts.mod_hero_lumenir_shield.insert(this, store)
     return true
 end
 
-function scripts.mod_hero_lumenir_shield.update(this, store, script)
+function scripts.mod_hero_lumenir_shield.update(this, store)
     local m = this.modifier
 
     this.modifier.ts = store.tick_ts
@@ -27081,19 +27081,19 @@ function scripts.mod_hero_wukong_attacks_combos.queue(this, store, insertion)
     scripts.hero_wukong.choose_next_random_attack(source)
 end
 
-function scripts.mod_hero_wukong_attacks_combos.insert(this, store, script)
+function scripts.mod_hero_wukong_attacks_combos.insert(this, store)
     return false
 end
 
 scripts.soldier_hero_wukong_zhu_apprentice = {}
 
-function scripts.soldier_hero_wukong_zhu_apprentice.insert(this, store, script)
+function scripts.soldier_hero_wukong_zhu_apprentice.insert(this, store)
     this.melee.order = U.attack_order(this.melee.attacks)
 
     return true
 end
 
-function scripts.soldier_hero_wukong_zhu_apprentice.update(this, store, script)
+function scripts.soldier_hero_wukong_zhu_apprentice.update(this, store)
     local brk, stam, star, a
 
     this.render.sprites[1].ts = store.tick_ts
@@ -27257,7 +27257,7 @@ end
 
 scripts.fx_hero_wukong_giant_staff = {}
 
-function scripts.fx_hero_wukong_giant_staff.update(this, store, script)
+function scripts.fx_hero_wukong_giant_staff.update(this, store)
     U.animation_start(this, "in", nil, store.tick_ts, false, 1, true)
 
     -- this.render.sprites[2].hidden = true
@@ -27359,7 +27359,7 @@ end
 
 scripts.aura_apply_mod_hero_wukong_ultimate = {}
 
-function scripts.aura_apply_mod_hero_wukong_ultimate.update(this, store, script)
+function scripts.aura_apply_mod_hero_wukong_ultimate.update(this, store)
     local first_hit_ts
     local last_hit_ts = 0
     local cycles_count = 0

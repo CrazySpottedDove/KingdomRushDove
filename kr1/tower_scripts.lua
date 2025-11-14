@@ -126,7 +126,7 @@ scripts.tower_archer_dwarf = {
             cooldown = cooldown
         }
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local at = this.attacks
         local as = this.attacks.list[1]
         local ab = this.attacks.list[2]
@@ -570,7 +570,7 @@ scripts.tower_musketeer = {
 }
 -- 弩堡
 scripts.tower_crossbow = {
-    remove = function(this, store, script)
+    remove = function(this, store)
         local mods = table.filter(store.modifiers, function(_, e)
             return e.modifier and e.modifier.source_id == this.id
         end)
@@ -588,7 +588,7 @@ scripts.tower_crossbow = {
         end
         return true
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local shooter_sprite_ids = {3, 4}
         local a = this.attacks
         local aa = this.attacks.list[1]
@@ -890,7 +890,7 @@ scripts.tower_crossbow = {
 }
 -- 图腾
 scripts.tower_totem = {
-    update = function(this, store, script)
+    update = function(this, store)
         local last_target_pos = v(0, 0)
         local shots_count = 0
         local shooter_sprite_ids = {3, 4}
@@ -2304,20 +2304,20 @@ scripts.tower_sorcerer = {
 }
 -- 大法
 scripts.tower_archmage = {
-    insert = function(this, store, script)
+    insert = function(this, store)
         this._last_t_angle = math.pi * 3 * 0.5
         this._stored_bullets = {}
 
         return true
     end,
-    remove = function(this, store, script)
+    remove = function(this, store)
         for _, b in pairs(this._stored_bullets) do
             queue_remove(store, b)
         end
 
         return true
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local tower_sid = 2
         local shooter_sid = 3
         local s_tower = this.render.sprites[tower_sid]
@@ -2513,7 +2513,7 @@ scripts.tower_archmage = {
 }
 -- 死法
 scripts.tower_necromancer = {
-    insert = function(this, store, script)
+    insert = function(this, store)
         if not store.skeletons_count then
             store.skeletons_count = 0
         end
@@ -2531,10 +2531,10 @@ scripts.tower_necromancer = {
 
         return true
     end,
-    remove = function(this, store, script)
+    remove = function(this, store)
         return true
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local shooter_sid = 3
         local skull_glow_sid = 4
         local skull_fx_sid = 5
@@ -3306,7 +3306,7 @@ end
 
 -- 大贝莎
 scripts.tower_bfg = {
-    update = function(this, store, script)
+    update = function(this, store)
         local tower_sid = 2
         local a = this.attacks
         local ab = this.attacks.list[1]
@@ -3544,7 +3544,7 @@ scripts.lava_dwaarp = {
 }
 -- 地震
 scripts.tower_dwaarp = {
-    insert = function(this, store, script)
+    insert = function(this, store)
         local function fx_points(this)
             local points = {}
             local factor = this.attacks.range / this.origin_range
@@ -3574,7 +3574,7 @@ scripts.tower_dwaarp = {
         this.fx_points = fx_points
         return true
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local a = this.attacks
         local aa = this.attacks.list[1]
         local la = this.attacks.list[2]
@@ -4123,7 +4123,7 @@ scripts.tower_tesla = {
             cooldown = this.attacks.list[1].cooldown
         }
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local tower_sid = 2
         local a = this.attacks
         local ar = this.attacks.list[1]
@@ -4283,10 +4283,10 @@ scripts.tower_mech = {
             cooldown = cooldown
         }
     end,
-    insert = function(this, store, script)
+    insert = function(this, store)
         return true
     end,
-    update = function(this, store, script)
+    update = function(this, store)
         local tower_sid = 2
         local wts
         local is_open = false
@@ -4367,21 +4367,21 @@ scripts.tower_mech = {
 }
 scripts.soldier_mecha = {}
 
-function scripts.soldier_mecha.insert(this, store, script)
+function scripts.soldier_mecha.insert(this, store)
     this.attacks.order = U.attack_order(this.attacks.list)
     this.idle_flip.ts = store.tick_ts
 
     return true
 end
 
-function scripts.soldier_mecha.remove(this, store, script)
+function scripts.soldier_mecha.remove(this, store)
     S:stop("MechWalk")
     S:stop("MechSteam")
 
     return true
 end
 
-function scripts.soldier_mecha.update(this, store, script)
+function scripts.soldier_mecha.update(this, store)
     local ab = this.attacks.list[1]
     local am = this.attacks.list[2]
     local ao = this.attacks.list[3]
@@ -5323,7 +5323,7 @@ end
 
 scripts.tower_tricannon = {}
 
-function scripts.tower_tricannon.update(this, store, script)
+function scripts.tower_tricannon.update(this, store)
     local tower_sid = 2
     local a = this.attacks
     local ab = this.attacks.list[1]
@@ -5579,7 +5579,7 @@ end
 
 scripts.mod_tricannon_overheat_dps = {}
 
-function scripts.mod_tricannon_overheat_dps.insert(this, store, script)
+function scripts.mod_tricannon_overheat_dps.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target or target.health.dead then
@@ -5981,7 +5981,7 @@ end
 
 scripts.mod_tower_dark_elf_big_target = {}
 
-function scripts.mod_tower_dark_elf_big_target.update(this, store, script)
+function scripts.mod_tower_dark_elf_big_target.update(this, store)
     local m = this.modifier
 
     this.modifier.ts = store.tick_ts
@@ -6636,7 +6636,7 @@ function scripts.tower_demon_pit.get_info(this)
     }
 end
 
-function scripts.tower_demon_pit.update(this, store, script)
+function scripts.tower_demon_pit.update(this, store)
     local a = this.attacks
     local ab = a.list[1]
     local ag = a.list[2]
@@ -6772,7 +6772,7 @@ end
 
 scripts.decal_tower_demon_pit_reload = {}
 
-function scripts.decal_tower_demon_pit_reload.update(this, store, script)
+function scripts.decal_tower_demon_pit_reload.update(this, store)
     this.render.sprites[1].ts = store.tick_ts
 
     y_animation_wait(this)
@@ -6784,7 +6784,7 @@ end
 
 scripts.soldier_tower_demon_pit = {}
 
-function scripts.soldier_tower_demon_pit.update(this, store, script)
+function scripts.soldier_tower_demon_pit.update(this, store)
     local brk, stam
     local u = UP:get_upgrade("engineer_efficiency")
     this.reinforcement.ts = store.tick_ts
@@ -6966,7 +6966,7 @@ end
 
 scripts.projecticle_big_guy_tower_demon_pit = {}
 
-function scripts.projecticle_big_guy_tower_demon_pit.update(this, store, script)
+function scripts.projecticle_big_guy_tower_demon_pit.update(this, store)
     local jumping = true
     local b = this.bullet
     local bullet_fly = true
@@ -7023,7 +7023,7 @@ end
 
 scripts.big_guy_tower_demon_pit = {}
 
-function scripts.big_guy_tower_demon_pit.update(this, store, script)
+function scripts.big_guy_tower_demon_pit.update(this, store)
     this.health.hp_max = this.health_level[this.level]
     this.health.hp = this.health.hp_max
 
@@ -7455,7 +7455,7 @@ end
 
 scripts.bullet_tower_necromancer = {}
 
-function scripts.bullet_tower_necromancer.insert(this, store, script)
+function scripts.bullet_tower_necromancer.insert(this, store)
     local b = this.bullet
 
     if b.target_id then
@@ -7821,7 +7821,7 @@ end
 
 scripts.mod_tower_necromancer_curse = {}
 
-function scripts.mod_tower_necromancer_curse.insert(this, store, script)
+function scripts.mod_tower_necromancer_curse.insert(this, store)
     local m = this.modifier
     local target = store.entities[m.target_id]
     local source = store.entities[m.source_id]
@@ -7890,7 +7890,7 @@ function scripts.mod_tower_necromancer_curse.insert(this, store, script)
     return true
 end
 
-function scripts.mod_tower_necromancer_curse.remove(this, store, script)
+function scripts.mod_tower_necromancer_curse.remove(this, store)
     local m = this.modifier
     local target = store.entities[m.target_id]
 
@@ -7941,7 +7941,7 @@ end
 
 scripts.soldier_tower_necromancer_skeleton = {}
 
-function scripts.soldier_tower_necromancer_skeleton.update(this, store, script)
+function scripts.soldier_tower_necromancer_skeleton.update(this, store)
     local brk, stam, star
     local source = this.source
 
@@ -8154,7 +8154,7 @@ end
 
 scripts.aura_tower_necromancer_skill_debuff = {}
 
-function scripts.aura_tower_necromancer_skill_debuff.update(this, store, script)
+function scripts.aura_tower_necromancer_skill_debuff.update(this, store)
     local first_hit_ts
     local last_hit_ts = 0
     local cycles_count = 0
@@ -8277,7 +8277,7 @@ end
 
 scripts.aura_tower_necromancer_skill_rider = {}
 
-function scripts.aura_tower_necromancer_skill_rider.update(this, store, script)
+function scripts.aura_tower_necromancer_skill_rider.update(this, store)
     local first_hit_ts
     local last_hit_ts = 0
     local sid_rider = 1
@@ -8545,7 +8545,7 @@ end
 
 scripts.mod_tower_necromancer_skill_debuff = {}
 
-function scripts.mod_tower_necromancer_skill_debuff.insert(this, store, script)
+function scripts.mod_tower_necromancer_skill_debuff.insert(this, store)
     local target = store.entities[this.modifier.target_id]
     local source = store.entities[this.modifier.source_id]
 
@@ -8557,7 +8557,7 @@ function scripts.mod_tower_necromancer_skill_debuff.insert(this, store, script)
     return false
 end
 
-function scripts.mod_tower_necromancer_skill_debuff.update(this, store, script)
+function scripts.mod_tower_necromancer_skill_debuff.update(this, store)
     local m = this.modifier
 
     this.modifier.ts = store.tick_ts
@@ -8605,7 +8605,7 @@ function scripts.mod_tower_necromancer_skill_debuff.update(this, store, script)
     queue_remove(store, this)
 end
 
-function scripts.mod_tower_necromancer_skill_debuff.remove(this, store, script)
+function scripts.mod_tower_necromancer_skill_debuff.remove(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if target and not target.health.dead then
@@ -8621,7 +8621,7 @@ end
 
 scripts.bolt_tower_pandas_ray = {}
 
-function scripts.bolt_tower_pandas_ray.insert(this, store, script)
+function scripts.bolt_tower_pandas_ray.insert(this, store)
     local b = this.bullet
 
     if b.target_id then
@@ -8635,7 +8635,7 @@ function scripts.bolt_tower_pandas_ray.insert(this, store, script)
     return true
 end
 
-function scripts.bolt_tower_pandas_ray.update(this, store, script)
+function scripts.bolt_tower_pandas_ray.update(this, store)
     local b = this.bullet
     local target = store.entities[b.target_id]
 
@@ -8747,7 +8747,7 @@ function scripts.tower_pandas.get_info(this)
     }
 end
 
-function scripts.tower_pandas.update(this, store, script)
+function scripts.tower_pandas.update(this, store)
     local b = this.barrack
     local formation_offset = 0
     local at = this.attacks
@@ -9294,7 +9294,7 @@ function scripts.tower_pandas.update(this, store, script)
     end
 end
 
-function scripts.tower_pandas.remove(this, store, script)
+function scripts.tower_pandas.remove(this, store)
     if this.tower.sell then
         for _, panda in pairs(this.pandas) do
             if panda.status == "on_tower" then
@@ -9319,12 +9319,12 @@ function scripts.tower_pandas.remove(this, store, script)
         end
     end
 
-    return scripts.tower_barrack.remove(this, store, script)
+    return scripts.tower_barrack.remove(this, store)
 end
 
 scripts.bullet_tower_pandas_spawn_soldier = {}
 
-function scripts.bullet_tower_pandas_spawn_soldier.insert(this, store, script)
+function scripts.bullet_tower_pandas_spawn_soldier.insert(this, store)
     local b = this.bullet
 
     b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
@@ -9334,7 +9334,7 @@ function scripts.bullet_tower_pandas_spawn_soldier.insert(this, store, script)
     return true
 end
 
-function scripts.bullet_tower_pandas_spawn_soldier.update(this, store, script)
+function scripts.bullet_tower_pandas_spawn_soldier.update(this, store)
     local b = this.bullet
 
     this.render.sprites[1].flip_x = b.from.x > b.to.x
@@ -9564,7 +9564,7 @@ end
 
 scripts.bullet_tower_pandas_air = {}
 
-function scripts.bullet_tower_pandas_air.update(this, store, script)
+function scripts.bullet_tower_pandas_air.update(this, store)
     local b = this.bullet
     local s = this.render.sprites[1]
     local mspeed = b.min_speed
@@ -9763,7 +9763,7 @@ end
 
 scripts.soldier_tower_pandas = {}
 
-function scripts.soldier_tower_pandas.insert(this, store, script)
+function scripts.soldier_tower_pandas.insert(this, store)
     if this.melee then
         this.melee.order = U.attack_order(this.melee.attacks)
     end
@@ -9780,7 +9780,7 @@ function scripts.soldier_tower_pandas.insert(this, store, script)
     return true
 end
 
-function scripts.soldier_tower_pandas.update(this, store, script)
+function scripts.soldier_tower_pandas.update(this, store)
     local tower = store.entities[this.soldier.tower_id]
 
     U.sprites_hide(this, nil, nil, true)
@@ -10670,7 +10670,7 @@ end
 
 scripts.mod_tower_ray_slow = {}
 
-function scripts.mod_tower_ray_slow.insert(this, store, script)
+function scripts.mod_tower_ray_slow.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target or target.health.dead or not target.motion or target.motion.invulnerable then
@@ -10690,7 +10690,7 @@ function scripts.mod_tower_ray_slow.insert(this, store, script)
     return true
 end
 
-function scripts.mod_tower_ray_slow.remove(this, store, script)
+function scripts.mod_tower_ray_slow.remove(this, store)
     if not this.modifier_inserted then
         return true
     end
@@ -11161,7 +11161,7 @@ function scripts.tower_stargazers.create_star_death(this, store, enemy, factor)
     end
 end
 
-function scripts.tower_stargazers.update(this, store, script)
+function scripts.tower_stargazers.update(this, store)
     local a = this.attacks
     local aa = this.attacks.list[1]
     local at = this.attacks.list[2]
@@ -11617,7 +11617,7 @@ end
 -- 沙丘哨兵 BEGIN
 scripts.tower_sand = {}
 
-function scripts.tower_sand.update(this, store, script)
+function scripts.tower_sand.update(this, store)
     local a = this.attacks
     local ba = a.list[1]
 
@@ -11962,7 +11962,7 @@ end
 
 scripts.aura_tower_sand_skill_big_blade = {}
 
-function scripts.aura_tower_sand_skill_big_blade.update(this, store, script)
+function scripts.aura_tower_sand_skill_big_blade.update(this, store)
     local first_hit_ts
     local last_hit_ts = 0
     local cycles_count = 0
@@ -13222,7 +13222,7 @@ end
 -- 牢大 BEGIN
 scripts.tower_rocket_gunners = {}
 
-function scripts.tower_rocket_gunners.update(this, store, script)
+function scripts.tower_rocket_gunners.update(this, store)
     local tower_sid = 2
     local b = this.barrack
     local formation_offset = 0
@@ -13386,7 +13386,7 @@ local function tower_rocket_gunners_phosphoric_area_damage(soldier, store, targe
     end
 end
 
-function scripts.soldier_tower_rocket_gunners.update(this, store, script)
+function scripts.soldier_tower_rocket_gunners.update(this, store)
     local brk, sta
     local tower = store.entities[this.soldier.tower_id]
     local is_taking_off = tower.tower_upgrade_persistent_data.is_taking_off[this.soldier.tower_soldier_idx]
@@ -14387,7 +14387,7 @@ end
 
 scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target = {}
 
-function scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target.update(this, store, script)
+function scripts.mod_soldier_tower_rocket_gunners_sting_missiles_target.update(this, store)
     local m = this.modifier
 
     this.modifier.ts = store.tick_ts
@@ -14969,7 +14969,7 @@ end
 
 scripts.bullet_tower_flamespitter_skill_bomb_payload = {}
 
-function scripts.bullet_tower_flamespitter_skill_bomb_payload.update(this, store, script)
+function scripts.bullet_tower_flamespitter_skill_bomb_payload.update(this, store)
     local function spawn_burn_fx(pi, spi, ni, burn_fx_id)
         local pos = P:node_pos(pi, spi, ni)
         local s = E:create_entity(this.burn_fx)
@@ -15038,7 +15038,7 @@ end
 
 scripts.controller_tower_flamespitter_column = {}
 
-function scripts.controller_tower_flamespitter_column.update(this, store, script)
+function scripts.controller_tower_flamespitter_column.update(this, store)
     local count_decals = 6
     local dist_v = V.vv(0)
 
