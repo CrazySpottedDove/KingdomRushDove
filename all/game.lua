@@ -80,7 +80,7 @@ function game:init(screen_w, screen_h, done_callback)
         right = v_right
     }
 
-    if KR_TARGET == "phone" or KR_TARGET == "tablet" then
+    -- if KR_TARGET == "phone" or KR_TARGET == "tablet" then
         self.camera = {}
         self.camera.x = screen_w * 0.5
         self.camera.y = screen_h * 0.5
@@ -129,7 +129,7 @@ function game:init(screen_w, screen_h, done_callback)
                 this.tweener = nil
             end
         end
-    end
+    -- end
 
     RU.init()
 
@@ -301,14 +301,36 @@ function game:keyreleased(key, isrepeat)
 end
 
 function game:mousepressed(x, y, button, istouch)
+    -- local wx, wy = self:screen_to_world(x, y)
     self.game_gui:mousepressed(x, y, button, istouch)
 end
 
 function game:mousereleased(x, y, button, istouch)
+    -- local wx, wy = self:screen_to_world(x, y)
     self.game_gui:mousereleased(x, y, button, istouch)
 end
 
+-- function game:screen_to_world(sx, sy)
+--     if not self.camera then
+--         return sx, sy
+--     end
+--     local c = self.camera
+--     local gs = self.game_scale * c.zoom
+--     local dox = c.x * c.zoom - self.screen_w * 0.5
+--     local doy = c.y * c.zoom - self.screen_h * 0.5
+--     local rox, roy = -dox, -doy
+--     local wx = (sx - rox) / gs
+--     local wy = (sy - roy) / gs
+--     return wx, wy
+-- end
+
 function game:wheelmoved(dx, dy)
+    if self.camera then
+        local old_zoom = self.camera.zoom
+        self.camera.zoom = self.camera.zoom * (1 + dy * 0.1)
+        self.camera:clamp()
+    end
+
     if self.game_gui.wheelmoved then
         self.game_gui:wheelmoved(dx, dy)
     end

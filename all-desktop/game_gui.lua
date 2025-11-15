@@ -1166,9 +1166,18 @@ function game_gui:focus(focus)
 end
 
 function game_gui:g2u(p, snap)
-    local sx = (p.x * self.game.game_scale + self.game.game_ref_origin.x - self.window.origin.x) / self.gui_scale
-    local sy = (-1 * (p.y * self.game.game_scale + self.game.game_ref_origin.y - self.sh * self.gui_scale) -
-                   self.window.origin.y) / self.gui_scale
+    local game = self.game
+    -- local sx = (p.x * self.game.game_scale  + self.game.game_ref_origin.x - self.window.origin.x) / self.gui_scale
+    -- local sy = (-1 * (p.y * self.game.game_scale + self.game.game_ref_origin.y - self.sh * self.gui_scale) -
+    --                self.window.origin.y) / self.gui_scale
+
+    -- if snap then
+    --     sx, sy = math.floor(sx + 0.5), math.floor(sy + 0.5)
+    -- end
+
+    -- return sx, sy
+    local sx = (p.x * game.game_scale - game.camera.x) * game.camera.zoom / game_gui.gui_scale + self.sw / 2
+    local sy = ((game.ref_h - p.y) * game.game_scale - game.camera.y) * game.camera.zoom / game_gui.gui_scale + self.sh / 2
 
     if snap then
         sx, sy = math.floor(sx + 0.5), math.floor(sy + 0.5)
@@ -1178,6 +1187,31 @@ function game_gui:g2u(p, snap)
 end
 
 function game_gui:u2g(s)
+    local game = self.game
+
+    -- local px = (s.x * self.gui_scale + self.window.origin.x - self.game.game_ref_origin.x) / self.game.game_scale
+    -- local py =
+    --     (self.sh * self.gui_scale - (s.y * self.gui_scale + self.window.origin.y) - self.game.game_ref_origin.y) /
+    --         self.game.game_scale
+
+    -- return px, py
+    local px = ((s.x - self.sw / 2) * game_gui.gui_scale / game.camera.zoom + game.camera.x) / game.game_scale
+    local py = game.ref_h - ((s.y - self.sh / 2) * game_gui.gui_scale / game.camera.zoom + game.camera.y) / game.game_scale
+
+    return px, py
+end
+
+function game_gui:g2u_old(p, snap)
+        local sx = (p.x * self.game.game_scale  + self.game.game_ref_origin.x - self.window.origin.x) / self.gui_scale
+    local sy = (-1 * (p.y * self.game.game_scale + self.game.game_ref_origin.y - self.sh * self.gui_scale) -
+                   self.window.origin.y) / self.gui_scale
+    if snap then
+        sx, sy = math.floor(sx + 0.5), math.floor(sy + 0.5)
+    end
+    return sx, sy
+end
+
+function game_gui:u2g_old(s)
     local px = (s.x * self.gui_scale + self.window.origin.x - self.game.game_ref_origin.x) / self.game.game_scale
     local py =
         (self.sh * self.gui_scale - (s.y * self.gui_scale + self.window.origin.y) - self.game.game_ref_origin.y) /
@@ -1185,6 +1219,7 @@ function game_gui:u2g(s)
 
     return px, py
 end
+
 
 function game_gui:entity_at_pos(x, y)
     return U.find_entity_at_pos(self.game.simulation.store.entities, x, y)
@@ -1253,8 +1288,8 @@ function game_gui:show_rally_range(x, y, range)
 
     rr.range_shown = range
     rr.pos.x, rr.pos.y = x, y
-    rr.scale = v(range * self.game.game_scale / (rr.actual_radius.x * self.gui_scale),
-        range * self.game.game_scale * ASPECT / (rr.actual_radius.y * self.gui_scale))
+    rr.scale = v(range * self.game.game_scale * self.game.camera.zoom / (rr.actual_radius.x * self.gui_scale),
+        range * self.game.game_scale * self.game.camera.zoom * ASPECT / (rr.actual_radius.y * self.gui_scale))
     rr.hidden = false
 end
 
@@ -1270,8 +1305,8 @@ function game_gui:show_tower_range(x, y, range)
 
     r.range_shown = range
     r.pos.x, r.pos.y = x, y
-    r.scale = v(range * self.game.game_scale / (r.actual_radius.x * self.gui_scale),
-        range * self.game.game_scale * ASPECT / (r.actual_radius.y * self.gui_scale))
+    r.scale = v(range * self.game.game_scale * self.game.camera.zoom / (r.actual_radius.x * self.gui_scale),
+        range * self.game.game_scale * self.game.camera.zoom * ASPECT / (r.actual_radius.y * self.gui_scale))
     r.hidden = false
 end
 
@@ -1280,8 +1315,8 @@ function game_gui:show_tower_range_upgrade(x, y, range)
 
     r.range_shown = range
     r.pos.x, r.pos.y = x, y
-    r.scale = v(range * self.game.game_scale / (r.actual_radius.x * self.gui_scale),
-        range * self.game.game_scale * ASPECT / (r.actual_radius.y * self.gui_scale))
+    r.scale = v(range * self.game.game_scale * self.game.camera.zoom / (r.actual_radius.x * self.gui_scale),
+        range * self.game.game_scale * self.game.camera.zoom * ASPECT / (r.actual_radius.y * self.gui_scale))
     r.hidden = false
 end
 
@@ -1290,8 +1325,8 @@ function game_gui:show_melee_range(x, y, range)
 
     r.range_shown = range
     r.pos.x, r.pos.y = x, y
-    r.scale.x = range * self.game.game_scale / (r.actual_radius.x * self.gui_scale)
-    r.scale.y = range * self.game.game_scale * ASPECT / (r.actual_radius.y * self.gui_scale)
+    r.scale.x = range * self.game.game_scale * self.game.camera.zoom / (r.actual_radius.x * self.gui_scale)
+    r.scale.y = range * self.game.game_scale * self.game.camera.zoom * ASPECT / (r.actual_radius.y * self.gui_scale)
     r.hidden = false
 end
 
@@ -1300,8 +1335,8 @@ function game_gui:show_ranged_range(x, y, range)
 
     r.range_shown = range
     r.pos.x, r.pos.y = x, y
-    r.scale.x = range * self.game.game_scale / (r.actual_radius.x * self.gui_scale)
-    r.scale.y = range * self.game.game_scale * ASPECT / (r.actual_radius.y * self.gui_scale)
+    r.scale.x = range * self.game.game_scale * self.game.camera.zoom / (r.actual_radius.x * self.gui_scale)
+    r.scale.y = range * self.game.game_scale * self.game.camera.zoom * ASPECT / (r.actual_radius.y * self.gui_scale)
     r.hidden = false
 end
 
@@ -1349,7 +1384,7 @@ function game_gui:show_wave_flags(group)
 
             if incoming_report and #incoming_report > 0 then
                 local wf = WaveFlag:new(w.some_flying, duration, incoming_report, w.path_index)
-                local wfx, wfy = self:g2u(item.pos)
+                local wfx, wfy = self:g2u_old(item.pos)
 
                 wf.pointer.r = item.r - math.pi * 0.5
                 wf.hidden = false
@@ -6882,8 +6917,8 @@ function TowerMenu:show()
     self.tweening = true
     local game_time = 0.12 * game_gui.game.store.speed_factor
     self.tweeners = {timer:tween(game_time, self.scale, {
-        x = 1,
-        y = 1
+        x = game_gui.game.camera.zoom,
+        y = game_gui.game.camera.zoom
     }, "out-quad"), timer:tween(game_time, self, {
         alpha = 1
     }, "out-quad", function()
@@ -6913,8 +6948,8 @@ function TowerMenu:hide()
     self.tweeners = {timer:tween(game_time, self, {
         alpha = 0
     }, "out-quad"), timer:tween(game_time, self.scale, {
-        x = 0.6,
-        y = 0.6
+        x = 0.6 * game_gui.game.camera.zoom,
+        y = 0.6 * game_gui.game.camera.zoom
     }, "out-quad", function()
         self.hidden = true
         self.tweening = false
