@@ -2131,15 +2131,17 @@ function scripts.arrow.insert(this, store)
     end
 
     if b.predict_target_pos then
-        local err_x, err_y = 0, 0
+        -- local err_x, err_y = 0, 0
 
-        if b.prediction_error then
-            err_x = target.motion.speed.x == 0 and 0 or U.frandom(0, 1) * 10
-            err_y = target.motion.speed.y == 0 and 0 or U.frandom(0, 1) * -10
-        end
+        -- if b.prediction_error then
+        --     err_x = target.motion.speed.x == 0 and 0 or U.frandom(0, 1) * 10
+        --     err_y = target.motion.speed.y == 0 and 0 or U.frandom(0, 1) * -10
+        -- end
 
-        b.to.x = b.to.x + target.motion.speed.x * b.flight_time + err_x
-        b.to.y = b.to.y + target.motion.speed.y * b.flight_time + err_y
+        -- b.to.x = b.to.x + target.motion.speed.x * b.flight_time + err_x
+        -- b.to.y = b.to.y + target.motion.speed.y * b.flight_time + err_y
+        b.to.x = b.to.x + target.motion.speed.x * b.flight_time
+        b.to.y = b.to.y + target.motion.speed.y * b.flight_time
     end
 
     b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
@@ -2173,16 +2175,24 @@ function scripts.arrow.update(this, store)
 
         queue_insert(store, ps)
     end
+    local last_ts = store.tick_ts
+    local v_x = b.speed.x
+    local v_y = b.speed.y
+    local this_pos = this.pos
+    this_pos.x, this_pos.y = b.from.x, b.from.y
+    local g = b.g
+    local expected_stop_time = b.flight_time - store.tick_length + b.ts
 
-    while store.tick_ts - b.ts + store.tick_length <= b.flight_time do
+    while store.tick_ts <= expected_stop_time do
         coroutine.yield()
-        b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
-        this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+        local dt = store.tick_ts - last_ts
+        this_pos.x = this_pos.x + v_x * dt
+        this_pos.y = this_pos.y + v_y * dt
 
         if b.rotation_speed then
             s.r = s.r + b.rotation_speed * store.tick_length
         else
-            s.r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+            s.r = math.atan2(v_y, v_x)
 
             if b.asymmetrical and math.abs(s.r) > math.pi * 0.5 then
                 s.flip_y = true
@@ -2195,13 +2205,16 @@ function scripts.arrow.update(this, store)
 
         if b.hide_radius then
             local hide_radius_squared = b.hide_radius * b.hide_radius
-            s.hidden = V.dist2(this.pos.x, this.pos.y, b.from.x, b.from.y) < hide_radius_squared or
-                           V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) < hide_radius_squared
+            s.hidden = V.dist2(this_pos.x, this_pos.y, b.from.x, b.from.y) < hide_radius_squared or
+                           V.dist2(this_pos.x, this_pos.y, b.to.x, b.to.y) < hide_radius_squared
 
             if ps then
                 ps.particle_system.emit = not s.hidden
             end
         end
+
+        v_y = v_y + g * dt
+        last_ts = last_ts + dt
     end
 
     local hit = false
@@ -2214,7 +2227,7 @@ function scripts.arrow.update(this, store)
                 target_pos.y + target.unit.hit_offset.y
         end
 
-        if V.dist2(this.pos.x, this.pos.y, target_pos.x, target_pos.y) < b.hit_distance * b.hit_distance * 1.44 and
+        if V.dist2(this_pos.x, this_pos.y, target_pos.x, target_pos.y) < b.hit_distance * b.hit_distance * 1.44 and
             not SU.unit_dodges(store, target, true) and (not b.hit_chance or math.random() < b.hit_chance) then
             hit = true
             local d = SU.create_bullet_damage(b, target.id, this.id)
