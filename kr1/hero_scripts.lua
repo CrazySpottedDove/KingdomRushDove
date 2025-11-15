@@ -7622,6 +7622,182 @@ scripts.hero_voodoo_witch = {
         this.health.hp = this.health.hp_max
     end
 }
+function scripts.hero_voodoo_witch.insert(this, store)
+    this.hero.fn_level_up(this, store, true)
+
+    this.ranged.order = U.attack_order(this.ranged.attacks)
+    this.melee.order = U.attack_order(this.melee.attacks)
+
+    local e = E:create_entity("voodoo_witch_death_aura")
+    e.aura.source_id = this.id
+    e.aura.ts = store.tick_ts
+    queue_insert(store, e)
+
+    local e = E:create_entity("voodoo_witch_skull_aura")
+    e.aura.source_id = this.id
+    e.aura.ts = store.tick_ts
+    queue_insert(store, e)
+
+    return true
+end
+
+function scripts.hero_voodoo_witch.update(this, store)
+    local h = this.health
+    local he = this.hero
+    local a, skill, brk, sta
+
+    U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+
+    this.health_bar.hidden = false
+
+    while true do
+        if h.dead then
+            SU.y_hero_death_and_respawn(store, this)
+        end
+
+        if this.unit.is_stunned then
+            SU.soldier_idle(store, this)
+        else
+            while this.nav_rally.new do
+                if SU.y_hero_new_rally(store, this) then
+                    goto label_458_0
+                end
+            end
+
+            if SU.hero_level_up(store, this) then
+                U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+            end
+
+            a = this.timed_attacks.list[1]
+            skill = this.hero.skills.voodoomagic
+
+            if not a.disabled and store.tick_ts - a.ts > a.cooldown then
+                local targets_in_range = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags,
+                    a.vis_bans)
+
+                if not targets_in_range then
+                    SU.delay_attack(store, a, 0.267)
+                else
+                    local targets_per_type = {}
+
+                    for _, t in pairs(store.enemies) do
+                        if not t.health.dead then
+                            if not targets_per_type[t.template_name] then
+                                targets_per_type[t.template_name] = {t}
+                            else
+                                table.insert(targets_per_type[t.template_name], t)
+                            end
+                        end
+                    end
+
+                    local targets
+
+                    for _, t in pairs(targets_in_range) do
+                        local v = targets_per_type[t.template_name]
+
+                        if v and #v >= a.min_count then
+                            targets = v
+                            break
+                        end
+                    end
+
+                    if not targets then
+                        SU.delay_attack(store, a, 0.267)
+                    else
+                        table.sort(targets, function(e1, e2)
+                            return V.dist(e1.pos.x, e1.pos.y, this.pos.x, this.pos.y) <
+                                       V.dist(e2.pos.x, e2.pos.y, this.pos.x, this.pos.y)
+                        end)
+
+                        targets = table.slice(targets, 1, a.count)
+
+                        S:queue(a.sound)
+                        U.animation_start(this, a.animation, nil, store.tick_ts)
+
+                        local start_ts = store.tick_ts
+
+                        while store.tick_ts - start_ts < fts(10) do
+                            if SU.hero_interrupted(this) then
+                                goto label_458_0
+                            end
+
+                            coroutine.yield()
+                        end
+
+                        a.ts = store.tick_ts
+
+                        SU.hero_gain_xp_from_skill(this, skill)
+
+                        for _, t in pairs(targets) do
+                            if not t.health.dead and store.entities[t.id] then
+                                local m = E:create_entity(a.mod_fx)
+
+                                m.modifier.target_id = t.id
+                                m.modifier.source_id = this.id
+
+                                queue_insert(store, m)
+                            end
+                        end
+
+                        U.y_wait(store, fts(16))
+
+                        for _, t in pairs(targets) do
+                            if not t.health.dead and store.entities[t.id] then
+                                local d = E:create_entity("damage")
+
+                                d.source_id = this.id
+                                d.target_id = t.id
+                                d.value = a.damage
+                                d.damage_type = a.damage_type
+
+                                queue_damage(store, d)
+
+                                local m = E:create_entity(a.mod_slow)
+
+                                m.modifier.target_id = t.id
+                                m.modifier.source_id = this.id
+
+                                queue_insert(store, m)
+                            end
+                        end
+
+                        while not U.animation_finished(this) do
+                            if SU.hero_interrupted(this) then
+                                break
+                            end
+
+                            coroutine.yield()
+                        end
+
+                        goto label_458_0
+                    end
+                end
+            end
+
+            brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+            if brk or sta ~= A_NO_TARGET then
+                -- block empty
+            else
+                brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+                if brk then
+                    -- block empty
+                elseif SU.soldier_go_back_step(store, this) then
+                    -- block empty
+                else
+                    SU.soldier_idle(store, this)
+                    SU.soldier_regen(store, this)
+                end
+            end
+        end
+
+        ::label_458_0::
+
+        coroutine.yield()
+    end
+end
+
 -- 螃蟹
 scripts.hero_crab = {
     level_up = function(this, store)

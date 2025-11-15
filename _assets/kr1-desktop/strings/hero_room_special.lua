@@ -751,12 +751,46 @@ local amount = e.hps.heal_min
 map["狂野体质"] = str("每隔", cycle_time, "秒，兽王恢复", amount, "点生命值。")
 
 set_hero("hero_voodoo_witch")
-map["冷笑骷髅"] = str()
-map["亡骨献祭"] = str()
-map["骨骸舞蹈"] = str()
-map["恐惧光环"] = str()
-map["巫毒魔法"] = str()
-
+set_skill(h.hero.skills.laughingskulls)
+set_bullet("bolt_voodoo_witch_skull")
+get_damage(b.bullet)
+for _, value in pairs(s.extra_damage) do
+    d[1].damage_min = d[1].damage_min + value
+    d[1].damage_max = d[1].damage_max + value
+end
+e = E:get_template("voodoo_witch_skull")
+cooldown = e.ranged.attacks[1].cooldown
+count = e.max_shots
+map["冷笑骷髅"] = str("冷笑骷髅每隔",cooldown,"秒攻击一名敌人，造成",damage_str(),"，最多攻击",count,"次。")
+set_skill(h.hero.skills.deathskull)
+get_damage(e.sacrifice)
+d[1].damage_min = s.damage[max_lvl]
+d[1].damage_max = s.damage[max_lvl]
+map["亡骨献祭"] = str("冷笑骷髅完成使命时，砸向敌人，造成",damage_str(),"。")
+set_skill(h.hero.skills.bonedance)
+count = s.skull_count[max_lvl]
+map["骨骸舞蹈"] = str("每当敌军或友军在女巫身边死亡时，女巫将提取亡灵之力，召唤冷笑骷髅，跟随女巫战斗。冷笑骷髅最多存在",count,"个。")
+set_skill(h.hero.skills.deathaura)
+factor = s.slow_factor[max_lvl]
+e = E:get_template("voodoo_witch_death_aura")
+cycle_time = e.aura.cycle_time
+radius = e.aura.radius
+get_damage(e.aura)
+d[1].damage_min = e.aura.damage
+d[1].damage_max = e.aura.damage
+map["恐惧光环"] = str("女巫散发出恐惧光环，每隔",cycle_time,"秒对",radius,
+    "范围内敌人造成",damage_str(),"，并使其受到",factor*100,"%的减速效果。")
+set_skill(h.hero.skills.voodoomagic)
+get_damage(h.timed_attacks.list[1])
+d[1].damage_min = s.damage[max_lvl]
+d[1].damage_max = s.damage[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+e = E:get_template("mod_voodoo_witch_magic_slow")
+factor = 1-e.slow.factor
+duration = e.modifier.duration
+count = s.count[max_lvl]
+map["巫毒魔法"] = str(cooldown_str(),"女巫施展巫毒魔法，使最多",count,"名敌人减速",factor*100,
+    "%，持续",duration,"秒，并对其造成",damage_str(),"。")
 set_hero("hero_alien")
 map["能量飞镖"] = str()
 map["净化协议"] = str()
