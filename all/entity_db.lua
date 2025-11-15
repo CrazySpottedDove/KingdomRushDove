@@ -22,6 +22,7 @@ function entity_db:load()
     require("components")
     require("templates")
     require("game_templates")
+    -- self:test_tween()
 end
 
 function entity_db:test_tween()
@@ -32,6 +33,9 @@ function entity_db:test_tween()
                     if key[3] then
                         log.error("template %s has tween with ease function in [keys], which is not supported in entity_db:test_tween()", name)
                     end
+                end
+                if not e.render.sprites[prop.sprite_id] then
+                    log.error("template %s has tween with invalid sprite_id %s", name, tostring(prop.sprite_id))
                 end
             end
         end

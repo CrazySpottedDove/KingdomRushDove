@@ -1668,6 +1668,10 @@ function sys.tween:on_insert(entity, store)
             -- 为了避免每次更新都动态查找合适的插值函数，我们应该在 insert 的时候就确定下来。插值函数的赋值单元为 tween_prop。
             do
                 local sprite = entity.render.sprites[p.sprite_id]
+                if not sprite then
+                    error(entity.template_name .. " tween_prop " .. p.name ..
+                              " has invalid sprite_id " .. tostring(p.sprite_id))
+                end
                 local key_type
                 if #p.keys == 0 then
                     if sprite[p.name] then
