@@ -256,6 +256,14 @@ function game:init_debug()
 end
 
 local tick_length_limit = TICK_LENGTH * 1.1
+local click_state = {
+    active = false,
+    press_time = 0,
+    threshold = 0.1,
+    x = 0,
+    y = 0,
+}
+
 function game:update(dt)
     if DEBUG then
         self:update_debug(dt)
@@ -267,6 +275,16 @@ function game:update(dt)
     -- else
     -- 	self.simulation:update(dt)
     -- end
+    if click_state.active then
+        local now = love.timer.getTime()
+        if now - click_state.press_time > click_state.threshold then
+            local sx, sy = love.mouse.getPosition()
+            self.camera.x = self.camera.x - sx + click_state.x
+            self.camera.y = self.camera.y - sy + click_state.y
+            click_state.x = sx
+            click_state.y = sy
+        end
+    end
     local d = self.simulation.store
     if dt > tick_length_limit then
         dt = tick_length_limit
@@ -301,28 +319,17 @@ function game:keyreleased(key, isrepeat)
 end
 
 function game:mousepressed(x, y, button, istouch)
-    -- local wx, wy = self:screen_to_world(x, y)
+    click_state.active = true
+    click_state.press_time = love.timer.getTime()
+    click_state.x = x
+    click_state.y = y
     self.game_gui:mousepressed(x, y, button, istouch)
 end
 
 function game:mousereleased(x, y, button, istouch)
-    -- local wx, wy = self:screen_to_world(x, y)
+    click_state.active = false
     self.game_gui:mousereleased(x, y, button, istouch)
 end
-
--- function game:screen_to_world(sx, sy)
---     if not self.camera then
---         return sx, sy
---     end
---     local c = self.camera
---     local gs = self.game_scale * c.zoom
---     local dox = c.x * c.zoom - self.screen_w * 0.5
---     local doy = c.y * c.zoom - self.screen_h * 0.5
---     local rox, roy = -dox, -doy
---     local wx = (sx - rox) / gs
---     local wy = (sy - roy) / gs
---     return wx, wy
--- end
 
 function game:wheelmoved(dx, dy)
     if self.camera then
@@ -336,20 +343,68 @@ function game:wheelmoved(dx, dy)
     end
 end
 
+game._touch_points = {} -- id -> {x, y}
+game._pinch_last_dist = nil
+game._pinch_last_center = nil
+game._pinch_last_zoom = nil
+
 function game:touchpressed(id, x, y, dx, dy, pressure)
-    if game_gui.touchpressed then
+    self._touch_points[id] = {
+        x = x,
+        y = y
+    }
+    -- 保持原有 GUI 事件
+    if self.game_gui and self.game_gui.touchpressed then
         self.game_gui:touchpressed(id, x, y, dx, dy, pressure)
     end
 end
 
 function game:touchreleased(id, x, y, dx, dy, pressure)
-    if self.game_gui.touchreleased then
+    self._touch_points[id] = nil
+    self._pinch_last_dist = nil
+    self._pinch_last_center = nil
+    self._pinch_last_zoom = nil
+    if self.game_gui and self.game_gui.touchreleased then
         self.game_gui:touchreleased(id, x, y, dx, dy, pressure)
     end
 end
 
 function game:touchmoved(id, x, y, dx, dy, pressure)
-    if self.game_gui.touchmoved then
+    self._touch_points[id] = {
+        x = x,
+        y = y
+    }
+    local points = self._touch_points
+    local ids = {}
+    for k in pairs(points) do
+        table.insert(ids, k)
+    end
+    if #ids == 2 and self.camera then
+        local id1, id2 = ids[1], ids[2]
+        local p1, p2 = points[id1], points[id2]
+        if p1 and p2 then
+            local cx = (p1.x + p2.x) / 2
+            local cy = (p1.y + p2.y) / 2
+            local dist = math.sqrt((p1.x - p2.x) ^ 2 + (p1.y - p2.y) ^ 2)
+            if not self._pinch_last_dist then
+                self._pinch_last_dist = dist
+                self._pinch_last_center = {
+                    x = cx,
+                    y = cy
+                }
+                self._pinch_last_zoom = self.camera.zoom
+            else
+                local scale = dist / self._pinch_last_dist
+                local new_zoom = km.clamp(self.camera.min_zoom, self.camera.max_zoom, self._pinch_last_zoom * scale)
+                -- 以两指中心为缩放中心
+                local old_zoom = self.camera.zoom
+                local ratio = old_zoom / new_zoom
+                self.camera.zoom = new_zoom
+                self.camera:clamp()
+            end
+        end
+    end
+    if self.game_gui and self.game_gui.touchmoved then
         self.game_gui:touchmoved(id, x, y, dx, dy, pressure)
     end
 end
