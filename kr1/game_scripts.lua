@@ -6577,7 +6577,7 @@ scripts.s15_rotten_spawner = {}
 function scripts.s15_rotten_spawner.update(this, store)
     local cooldown, max_count, ts, last_wave
 
-    while true do
+    while true and (not store.boss_killed) do
         ::label_263_0::
 
         while (not max_count or max_count == 0) and store.wave_group_number == last_wave do
@@ -31818,7 +31818,7 @@ function scripts.moon_controller_s72.update(this, store)
         U.insert_insert_hook(store, this.id, this.insert_hook)
         local spawn_ts = time - spawn_gap
         hold_time = hold_time_base + store.wave_group_number
-        while store.tick_ts - time < hold_time do
+        while store.tick_ts - time < hold_time and (not store.boss_killed) do
             if store.tick_ts - spawn_ts > spawn_gap then
                 local i = 1
                 local remain_spawn_count = spawn_count
@@ -31917,6 +31917,7 @@ function scripts.eb_jack.update(this, store)
         if this.health.dead then
             SU.y_enemy_death(store, this)
             LU.kill_all_enemies(store, true)
+            store.boss_killed = true
             return
         end
         if last_quit_hp - this.health.hp >= quit_threshold then
