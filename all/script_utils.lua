@@ -2303,9 +2303,9 @@ local function y_soldier_melee_block_and_attacks(store, this)
     if store.tick_ts - this.soldier.last_block_ts < fts(1) then
         return false, A_NO_TARGET
     end
-    this.soldier.last_block_ts = store.tick_ts
     local target = soldier_pick_melee_target(store, this)
     if not target then
+        this.soldier.last_block_ts = store.tick_ts
         return false, A_NO_TARGET
     end
     if soldier_move_to_slot_step(store, this, target) then
