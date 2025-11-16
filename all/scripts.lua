@@ -2384,17 +2384,21 @@ function scripts.arrow_missile.update(this, store)
 
         queue_insert(store, ps)
     end
-
-    while store.tick_ts - b.ts + store.tick_length <= b.flight_time do
+    local expected_stop_time = b.ts + b.flight_time - store.tick_length
+    local v_x = b.speed.x
+    local v_y = b.speed.y
+    local last_ts = store.tick_ts
+    this.pos.x, this.pos.y = b.from.x, b.from.y
+    while store.tick_ts <= expected_stop_time do
         coroutine.yield()
-        b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
-        this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+        local dt = store.tick_ts - last_ts
+        this.pos.x = this.pos.x + v_x * dt
+        this.pos.y = this.pos.y + v_y * dt
 
         if b.rotation_speed then
             s.r = s.r + b.rotation_speed * store.tick_length
         else
-            s.r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
-
+            s.r = math.atan2(v_y, v_x)
             if b.asymmetrical and math.abs(s.r) > math.pi * 0.5 then
                 s.flip_y = true
             end
@@ -2413,6 +2417,8 @@ function scripts.arrow_missile.update(this, store)
                 ps.particle_system.emit = not s.hidden
             end
         end
+        v_y = v_y + b.g * dt
+        last_ts = store.tick_ts
         target = store.entities[b.target_id]
         if not target or target.health.dead then
             break
