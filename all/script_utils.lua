@@ -2780,7 +2780,7 @@ local function y_enemy_death(store, this)
         can_spawn = false
     end
     local terrain_type = band(GR:cell_type(this.pos.x, this.pos.y), TERRAIN_TYPES_MASK)
-    if (band(this.health.last_damage_types, bor(DAMAGE_EXPLOSION, DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE, DAMAGE_SHOT)) ~=
+    if (band(this.health.last_damage_types, bor(DAMAGE_EXPLOSION, DAMAGE_INSTAKILL, DAMAGE_FX_EXPLODE, DAMAGE_SHOT, DAMAGE_RUDE)) ~=
         0 and band(this.health.last_damage_types, bor(DAMAGE_FX_NOT_EXPLODE, DAMAGE_DISINTEGRATE)) == 0 and
         this.unit.can_explode) or (this.unit.explode_when_silenced_death and not this.enemy.can_do_magic) and
         this.unit.explode_fx and band(terrain_type, TERRAIN_WATER) == 0 then

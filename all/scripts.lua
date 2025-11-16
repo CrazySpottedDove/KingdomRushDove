@@ -2146,7 +2146,6 @@ function scripts.arrow.insert(this, store)
 
     b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
     b.ts = store.tick_ts
-    b.last_pos = V.vclone(b.from)
 
     if b.rotation_speed then
         b.rotation_speed = b.rotation_speed * (b.to.x > this.pos.x and -1 or 1)
@@ -2180,15 +2179,13 @@ function scripts.arrow.update(this, store)
     local v_y = b.speed.y
     local this_pos = this.pos
     this_pos.x, this_pos.y = b.from.x, b.from.y
-
-    local expected_stop_time = b.flight_time - store.tick_length + b.ts
+    local expected_stop_time = b.ts + b.flight_time - store.tick_length
 
     while store.tick_ts <= expected_stop_time do
         coroutine.yield()
         local dt = store.tick_ts - last_ts
         this_pos.x = this_pos.x + v_x * dt
         this_pos.y = this_pos.y + v_y * dt
-
         if b.rotation_speed then
             s.r = s.r + b.rotation_speed * store.tick_length
         else
@@ -2214,12 +2211,22 @@ function scripts.arrow.update(this, store)
         end
 
         v_y = v_y + b.g * dt
-        last_ts = last_ts + dt
+        last_ts = store.tick_ts
     end
 
     local hit = false
 
     if target and target.health and not target.health.dead then
+        -- print("b.to")
+        -- debug_macros.print(b.to)
+        -- print("b.from")
+        -- debug_macros.print(b.from)
+        -- print("this.pos")
+        -- debug_macros.print(this.pos)
+        -- print("flight_time")
+        -- debug_macros.print(b.flight_time)
+        -- print("delta_x/speed.x")
+        -- debug_macros.print((b.to.x - b.from.x) / b.speed.x)
         local target_pos = V.vclone(target.pos)
 
         if target.unit and target.unit.hit_offset and not b.ignore_hit_offset then

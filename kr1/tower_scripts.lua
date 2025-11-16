@@ -11149,7 +11149,7 @@ function scripts.tower_stargazers.create_star_death(this, store, enemy, factor)
             for i = 1, mod_star_m.stars_death_stars[pow_s.level] do
                 local target = targets[km.zmod(i, targets_count)]
                 local b = E:create_entity(mod_star_m.bullet)
-                b.pos = e_pos
+                b.pos = vclone(e_pos)
                 b.bullet.from = vclone(b.pos)
                 b.bullet.to = v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
                 b.bullet.target_id = target.id
@@ -11169,7 +11169,7 @@ function scripts.tower_stargazers.update(this, store)
     local moon_sid = this.render.moon_sid
     local elf_sid = this.render.elf_sid
     local teleport_sid = this.render.teleport_sid
-    local shots = 5
+    local shots = aa.count
     local pow_t = this.powers.teleport
     local pow_s = this.powers.stars_death
     local mod_star_m = E:get_template("mod_tower_elven_stargazers_star_death").modifier
@@ -11200,6 +11200,9 @@ function scripts.tower_stargazers.update(this, store)
         end
         if pow_s.changed then
             pow_s.changed = nil
+            aa.cooldown = aa.cooldown_base + pow_s.level * aa.ray_timing
+            shots = aa.count_base + pow_s.level
+            aa.count = shots
         end
 
         SU.towers_swaped(store, this, a.list)
