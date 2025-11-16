@@ -2725,25 +2725,35 @@ function scripts.bomb.update(this, store)
         queue_insert(store, ps)
     end
 
-    while store.tick_ts - b.ts + store.tick_length < b.flight_time do
+    local expected_stop_time = b.ts + b.flight_time - store.tick_length
+    local this_pos = this.pos
+    this_pos.x = b.from.x
+    this_pos.y = b.from.y
+    local v_x = b.speed.x
+    local v_y = b.speed.y
+    local last_ts = store.tick_ts
+    local sprites = this.render.sprites
+    while store.tick_ts < expected_stop_time do
         coroutine.yield()
-
-        b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
-        this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+        local dt = store.tick_ts - last_ts
+        this_pos.x = this_pos.x + v_x * dt
+        this_pos.y = this_pos.y + v_y * dt
 
         if b.align_with_trajectory then
-            this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+            sprites[1].r = math.atan2(v_y, v_x)
         elseif b.rotation_speed then
-            this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
+            sprites[1].r = sprites[1].r + b.rotation_speed * store.tick_length
         end
 
         if b.hide_radius then
-            this.render.sprites[1].hidden = V.dist2(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius ^ 2 or
-                                                V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius ^ 2
+            sprites[1].hidden = V.dist2(this_pos.x, this_pos.y, b.from.x, b.from.y) < b.hide_radius * b.hide_radius or
+                                                V.dist2(this_pos.x, this_pos.y, b.to.x, b.to.y) < b.hide_radius * b.hide_radius
         end
+        v_y = v_y + b.g * dt
+        last_ts = last_ts + dt
     end
 
-    local enemies = U.find_enemies_in_range(store, b.to, 0, dradius, b.damage_flags, b.damage_bans)
+    local enemies = U.find_enemies_in_range_filter_off(this_pos, dradius, b.damage_flags, b.damage_bans)
     if enemies then
         for i = 1, #enemies do
             local enemy = enemies[i]
