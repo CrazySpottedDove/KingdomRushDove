@@ -2180,7 +2180,7 @@ function scripts.arrow.update(this, store)
     local v_y = b.speed.y
     local this_pos = this.pos
     this_pos.x, this_pos.y = b.from.x, b.from.y
-    local g = b.g
+
     local expected_stop_time = b.flight_time - store.tick_length + b.ts
 
     while store.tick_ts <= expected_stop_time do
@@ -2213,7 +2213,7 @@ function scripts.arrow.update(this, store)
             end
         end
 
-        v_y = v_y + g * dt
+        v_y = v_y + b.g * dt
         last_ts = last_ts + dt
     end
 

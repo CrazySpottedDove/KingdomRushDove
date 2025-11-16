@@ -528,11 +528,8 @@ soldier.name = nil
 soldier.tower_id = nil
 soldier.melee_slot_offset = v(0, 0)
 soldier.target_id = nil
--- -- max_targets 不为 nil 时，允许士兵拦截多个敌方单位
--- soldier.max_targets = nil
--- soldier.target_ids = nil
 soldier.courage_ts = 0
-soldier.guard_time = fts(1)
+soldier.last_block_ts = 0
 
 local reinforcement = E:register_c("reinforcement")
 
@@ -797,6 +794,7 @@ ranged.order = {
 	1
 }
 ranged.forced_ts = 0
+ranged.last_range_ts = 0
 
 local timed_attacks = E:register_c("timed_attacks")
 

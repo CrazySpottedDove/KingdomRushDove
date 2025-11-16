@@ -5303,8 +5303,6 @@ function scripts.hero_dracolich.update(this, store)
                     ::label_407_0::
 
                     goto label_407_1
-                elseif i == 1 and this.motion.arrived then
-                    U.y_wait(store, this.soldier.guard_time)
                 end
             end
         end
@@ -14658,8 +14656,6 @@ function scripts.hero_faustus.update(this, store)
                     end
 
                     goto label_112_1
-                elseif i == 1 and this.motion.arrived then
-                    U.y_wait(store, this.soldier.guard_time)
                 end
             end
         end
@@ -15970,8 +15966,6 @@ function scripts.hero_dragon.update(this, store)
                     end
 
                     goto label_383_1
-                elseif i == 1 and this.motion.arrived then
-                    U.y_wait(store, this.soldier.guard_time)
                 end
             end
         end

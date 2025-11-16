@@ -1419,11 +1419,15 @@ end
 ---@param this table 士兵实体
 ---@return table 目标, table 攻击, table 预测位置
 local function soldier_pick_ranged_target_and_attack(store, this)
-    local in_range = false
+    local r = this.ranged
+    if store.tick_ts - r.last_range_ts < fts(1) then
+        return nil, nil
+    end
+    r.last_range_ts = store.tick_ts
     local awaiting_target
     local target
-    for _, i in pairs(this.ranged.order) do
-        local a = this.ranged.attacks[i]
+    for _, i in pairs(r.order) do
+        local a = r.attacks[i]
         if a.disabled then
             -- block empty
         elseif a.sync_animation and not this.render.sprites[1].sync_flag then
@@ -1438,8 +1442,8 @@ local function soldier_pick_ranged_target_and_attack(store, this)
             end
             if target then
                 local ready = store.tick_ts - a.ts >= a.cooldown * this.cooldown_factor
-                if this.ranged.forced_cooldown then
-                    ready = ready and store.tick_ts - this.ranged.forced_ts >= this.ranged.forced_cooldown *
+                if r.forced_cooldown then
+                    ready = ready and store.tick_ts - r.forced_ts >= r.forced_cooldown *
                                 this.cooldown_factor
                 end
                 if not ready then
@@ -1463,9 +1467,6 @@ end
 local function y_soldier_ranged_attacks(store, this)
     local target, attack, pred_pos = soldier_pick_ranged_target_and_attack(store, this)
     if not target then
-        if this.motion.arrived then
-            U.y_wait(store, this.soldier.guard_time)
-        end
         return false, A_NO_TARGET
     end
     if not attack then
@@ -2299,11 +2300,12 @@ end
 ---@return boolean 是否提前结束, number 状态码
 ---@desc 状态码：A_NO_TARGET(1) 无目标, A_IN_COOLDOWN(2) 冷却中, A_DONE(3) 完成
 local function y_soldier_melee_block_and_attacks(store, this)
+    if store.tick_ts - this.soldier.last_block_ts < fts(1) then
+        return false, A_NO_TARGET
+    end
+    this.soldier.last_block_ts = store.tick_ts
     local target = soldier_pick_melee_target(store, this)
     if not target then
-        if this.motion.arrived then
-            U.y_wait(store, this.soldier.guard_time)
-        end
         return false, A_NO_TARGET
     end
     if soldier_move_to_slot_step(store, this, target) then
@@ -2390,7 +2392,7 @@ local function soldier_regen(store, this)
         this.regen.health = math.ceil(this.health.hp_max * GS.soldier_regen_factor)
     end
     if store.tick_ts - this.regen.last_hit_ts > this.regen.last_hit_standoff_time then
-        this.regen.ts_counter = this.regen.ts_counter + store.tick_length + this.soldier.guard_time
+        this.regen.ts_counter = this.regen.ts_counter + store.tick_length
         if this.regen.ts_counter > this.regen.cooldown then
             if this.health.hp < this.health.hp_max then
                 this.health.hp = km.clamp(0, this.health.hp_max, this.health.hp + this.regen.health)
