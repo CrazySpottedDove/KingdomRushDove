@@ -4354,7 +4354,6 @@ function scripts.fireball.update(this, store)
     if b.g then
         b.speed = SU.initial_parabola_speed(b.from, b.to, flight_time, b.g)
         b.ts = store.tick_ts
-        b.last_pos = V.vclone(b.from)
     end
 
     if b.emit_decal then
@@ -4369,15 +4368,20 @@ function scripts.fireball.update(this, store)
     end
 
     if b.g then
+        local last_ts = store.tick_ts
+        local speed = b.speed
+        local this_pos = this.pos
         while flight_time > store.tick_ts - b.ts + store.tick_length do
             coroutine.yield()
-
-            b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
-            this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+            local dt = store.tick_ts - last_ts
+            this.pos.x = this.pos.x + speed.x * dt
+            this.pos.y = this.pos.y + speed.y * dt
 
             if this.render then
-                this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+                this.render.sprites[1].r = math.atan2(speed.y, speed.x)
             end
+            speed.y = speed.y + b.g * dt
+            last_ts = store.tick_ts
         end
     else
         while V.dist(this.pos.x, this.pos.y, b.to.x, b.to.y) > mspeed * tl do
