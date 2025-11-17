@@ -7184,10 +7184,7 @@ scripts.hero_alien = {
         end)
 
         upgrade_skill(this, "vibroblades", function(this, s)
-            local a = this.melee.attacks[1]
-            a.damage_min = a.damage_min + s.extra_damage[s.level]
-            a.damage_max = a.damage_max + s.extra_damage[s.level]
-            a.damage_type = s.damage_type
+            this.vibroblades_extra = s.extra_damage[s.level]
         end)
 
         upgrade_skill(this, "finalcountdown", function(this, s)
@@ -7201,6 +7198,171 @@ scripts.hero_alien = {
         this.timed_attacks.list[2].ts = -this.timed_attacks.list[2].cooldown
     end
 }
+
+function scripts.hero_alien.vibroblades_side_effect(this, store, attack, damage)
+    local d = E:create_entity("damage")
+    d.source_id = this.id
+    d.target_id = damage.target_id
+    d.value = this.vibroblades_extra * this.unit.damage_factor
+    d.damage_type = this.hero.skills.vibroblades.damage_type
+    queue_damage(store, d)
+end
+
+function scripts.hero_alien.insert(this, store)
+    this.hero.fn_level_up(this, store)
+
+    this.melee.order = U.attack_order(this.melee.attacks)
+    this.ranged.order = U.attack_order(this.ranged.attacks)
+
+    return true
+end
+
+function scripts.hero_alien.update(this, store)
+    local h = this.health
+    local he = this.hero
+    local a, skill, brk, sta
+
+    U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+
+    this.health_bar.hidden = false
+
+    while true do
+        if h.dead then
+            SU.y_hero_death_and_respawn(store, this)
+        end
+
+        if this.unit.is_stunned then
+            SU.soldier_idle(store, this)
+        else
+            while this.nav_rally.new do
+                if SU.y_hero_new_rally(store, this) then
+                    goto label_353_1
+                end
+            end
+
+            if SU.hero_level_up(store, this) then
+                U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+            end
+
+            a = this.timed_attacks.list[1]
+            skill = this.hero.skills.abduction
+
+            if not a.disabled and store.tick_ts - a.ts > a.cooldown then
+                local trigger = U.find_random_enemy(store, this.pos, 0, a.range, a.vis_flags, a.vis_bans, function(v)
+                    return not table.contains(a.invalid_templates, v.template_name) and
+                               (skill.level == 3 or v.health.hp <= a.total_hp) and
+                               P:is_node_valid(v.nav_path.pi, v.nav_path.ni + 10) and
+                               P:is_node_valid(v.nav_path.pi, v.nav_path.ni - 10)
+                end)
+
+                if not trigger then
+                    SU.delay_attack(store, a, 0.13333333333333333)
+
+                    goto label_353_0
+                end
+
+                a.ts = store.tick_ts
+
+                SU.hero_gain_xp_from_skill(this, skill)
+                S:queue(a.sound)
+                U.animation_start(this, a.animation, nil, store.tick_ts)
+                U.y_wait(store, a.spawn_time)
+
+                local abduction_hp, abduction_count = trigger.health.hp, 1
+                local targets = U.find_enemies_in_range(store, trigger.pos, 0, a.attack_radius, a.vis_flags, a.vis_bans,
+                    function(v)
+                        local ok = v ~= trigger and abduction_hp + v.health.hp <= a.total_hp and abduction_count <
+                                       a.total_targets and not table.contains(a.invalid_templates, v.template_name) and
+                                       P:is_node_valid(v.nav_path.pi, v.nav_path.ni + 10) and
+                                       P:is_node_valid(v.nav_path.pi, v.nav_path.ni - 10)
+
+                        if ok then
+                            abduction_hp = abduction_hp + v.health.hp
+                            abduction_count = abduction_count + 1
+                        end
+
+                        return ok
+                    end)
+
+                if targets then
+                    table.insert(targets, trigger)
+                else
+                    targets = {trigger}
+                end
+
+                if targets then
+                    local e = E:create_entity(a.entity)
+
+                    e.pos = V.vclone(trigger.pos)
+                    e.targets = targets
+
+                    queue_insert(store, e)
+
+                    e.owner = this
+                end
+
+                U.y_animation_wait(this)
+
+                goto label_353_1
+            end
+
+            ::label_353_0::
+
+            a = this.timed_attacks.list[2]
+            skill = this.hero.skills.purificationprotocol
+
+            if not a.disabled and store.tick_ts - a.ts > a.cooldown then
+                local target = U.find_foremost_enemy(store, this.pos, 0, a.range, nil, a.vis_flags, a.vis_bans)
+
+                if not target then
+                    SU.delay_attack(store, a, 0.13333333333333333)
+                else
+                    a.ts = store.tick_ts
+
+                    SU.hero_gain_xp_from_skill(this, skill)
+                    S:queue(a.sound)
+                    U.animation_start(this, a.animation, nil, store.tick_ts)
+                    U.y_wait(store, a.spawn_time)
+
+                    local e = E:create_entity(a.entity)
+
+                    e.pos = V.vclone(target.pos)
+                    e.target_id = target.id
+
+                    queue_insert(store, e)
+
+                    e.owner = this
+
+                    U.y_animation_wait(this)
+
+                    goto label_353_1
+                end
+            end
+
+            brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+            if brk then
+                -- block empty
+            else
+                brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+                if brk or sta ~= A_NO_TARGET then
+                    -- block empty
+                elseif SU.soldier_go_back_step(store, this) then
+                    -- block empty
+                else
+                    SU.soldier_idle(store, this)
+                    SU.soldier_regen(store, this)
+                end
+            end
+        end
+
+        ::label_353_1::
+
+        coroutine.yield()
+    end
+end
+
 -- 库绍
 scripts.hero_monk = {
     level_up = function(this, store)

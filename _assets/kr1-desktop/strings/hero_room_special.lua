@@ -708,8 +708,9 @@ get_damage(e.melee.attacks[1], 2)
 chance = e.dodge.chance
 cooldown = h.timed_attacks.list[2].cooldown
 map["野猪朋友"] = str(cooldown_str(), "兽王随机召唤", count,
-    "只野猪、野狼，跟随兽王战斗。野猪拥有", health_str(), "，每次攻击造成", damage_str(),"；野狼拥有",
-    health_str(2), "，每次攻击造成", damage_str(2), "，且拥有",rate_str(chance),"闪避攻击。")
+    "只野猪、野狼，跟随兽王战斗。野猪拥有", health_str(), "，每次攻击造成", damage_str(),
+    "；野狼拥有", health_str(2), "，每次攻击造成", damage_str(2), "，且拥有", rate_str(chance),
+    "闪避攻击。")
 set_skill(h.hero.skills.falconer)
 count = s.count[max_lvl]
 e = E:get_template("beastmaster_falcon")
@@ -718,8 +719,9 @@ get_damage(e.custom_attack)
 e = E:get_template("mod_beastmaster_falcon")
 duration = e.modifier.duration
 factor = 1 - e.slow.factor
-map["猎鹰朋友"] = str("兽王身边伴有",count,"只猎鹰。猎鹰每隔",cooldown,
-    "秒发动一次攻击，造成",damage_str(),"，并使目标受到",factor*100,"%的减速效果，持续",duration,"秒。")
+map["猎鹰朋友"] = str("兽王身边伴有", count, "只猎鹰。猎鹰每隔", cooldown,
+    "秒发动一次攻击，造成", damage_str(), "，并使目标受到", factor * 100, "%的减速效果，持续",
+    duration, "秒。")
 set_skill(h.hero.skills.stampede)
 count = s.rhinos[max_lvl]
 duration = s.duration[max_lvl]
@@ -730,9 +732,8 @@ get_damage(e.attack)
 d[1].damage_max = s.damage[max_lvl]
 d[1].damage_min = s.damage[max_lvl]
 cooldown = h.timed_attacks.list[1].cooldown
-map["犀牛朋友"] = str(cooldown_str(), "兽王召唤", count,
-    "只犀牛，犀牛冲锋对路径上的敌人造成", damage_str(), "，并有", rate_str(chance),
-    "使其眩晕", duration_2, "秒。犀牛驻场", duration, "秒。")
+map["犀牛朋友"] = str(cooldown_str(), "兽王召唤", count, "只犀牛，犀牛冲锋对路径上的敌人造成",
+    damage_str(), "，并有", rate_str(chance), "使其眩晕", duration_2, "秒。犀牛驻场", duration, "秒。")
 set_skill(h.hero.skills.deeplashes)
 cooldown = s.cooldown[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
@@ -761,15 +762,18 @@ end
 e = E:get_template("voodoo_witch_skull")
 cooldown = e.ranged.attacks[1].cooldown
 count = e.max_shots
-map["冷笑骷髅"] = str("冷笑骷髅每隔",cooldown,"秒攻击一名敌人，造成",damage_str(),"，最多攻击",count,"次。")
+map["冷笑骷髅"] = str("冷笑骷髅每隔", cooldown, "秒攻击一名敌人，造成", damage_str(),
+    "，最多攻击", count, "次。")
 set_skill(h.hero.skills.deathskull)
 get_damage(e.sacrifice)
 d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
-map["亡骨献祭"] = str("冷笑骷髅完成使命时，砸向敌人，造成",damage_str(),"。")
+map["亡骨献祭"] = str("冷笑骷髅完成使命时，砸向敌人，造成", damage_str(), "。")
 set_skill(h.hero.skills.bonedance)
 count = s.skull_count[max_lvl]
-map["骨骸舞蹈"] = str("每当敌军或友军在女巫身边死亡时，女巫将提取亡灵之力，召唤冷笑骷髅，跟随女巫战斗。冷笑骷髅最多存在",count,"个。")
+map["骨骸舞蹈"] = str(
+    "每当敌军或友军在女巫身边死亡时，女巫将提取亡灵之力，召唤冷笑骷髅，跟随女巫战斗。冷笑骷髅最多存在",
+    count, "个。")
 set_skill(h.hero.skills.deathaura)
 factor = s.slow_factor[max_lvl]
 e = E:get_template("voodoo_witch_death_aura")
@@ -778,24 +782,62 @@ radius = e.aura.radius
 get_damage(e.aura)
 d[1].damage_min = e.aura.damage
 d[1].damage_max = e.aura.damage
-map["恐惧光环"] = str("女巫散发出恐惧光环，每隔",cycle_time,"秒对",radius,
-    "范围内敌人造成",damage_str(),"，并使其受到",factor*100,"%的减速效果。")
+map["恐惧光环"] = str("女巫散发出恐惧光环，每隔", cycle_time, "秒对", radius, "范围内敌人造成",
+    damage_str(), "，并使其受到", factor * 100, "%的减速效果。")
 set_skill(h.hero.skills.voodoomagic)
 get_damage(h.timed_attacks.list[1])
 d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
 cooldown = h.timed_attacks.list[1].cooldown
 e = E:get_template("mod_voodoo_witch_magic_slow")
-factor = 1-e.slow.factor
+factor = 1 - e.slow.factor
 duration = e.modifier.duration
 count = s.count[max_lvl]
-map["巫毒魔法"] = str(cooldown_str(),"女巫施展巫毒魔法，使最多",count,"名敌人减速",factor*100,
-    "%，持续",duration,"秒，并对其造成",damage_str(),"。")
+map["巫毒魔法"] = str(cooldown_str(), "女巫施展巫毒魔法，使最多", count, "名敌人减速",
+    factor * 100, "%，持续", duration, "秒，并对其造成", damage_str(), "。")
+
 set_hero("hero_alien")
-map["能量飞镖"] = str()
-map["净化协议"] = str()
-map["母舰劫持"] = str()
-map["最终手段"] = str()
+set_skill(h.hero.skills.energyglaive)
+chance = s.bounce_chance[max_lvl]
+set_bullet("alien_glaive")
+get_damage(b.bullet)
+d[1].damage_max = s.damage[max_lvl]
+d[1].damage_min = s.damage[max_lvl]
+cooldown = h.ranged.attacks[1].cooldown
+e = E:get_template("mod_slow_alien_glaive")
+factor = 1 - e.slow.factor
+duration = e.modifier.duration
+map["能量飞镖"] = str(cooldown_str(), "沙塔投掷能量飞镖，造成", damage_str(), "与持续", duration,
+    "秒的", factor * 100, "%减速效果。飞镖每次名字敌人都有", rate_str(chance),
+    "弹射至附近敌人。")
+set_skill(h.hero.skills.purificationprotocol)
+duration = s.duration[max_lvl]
+cooldown = h.timed_attacks.list[2].cooldown
+e = E:get_template("alien_purification_drone")
+get_damage(e.dps)
+cycle_time = e.dps.damage_every
+map["净化协议"] = str(cooldown_str(), "沙塔召唤驻场", duration,
+    "秒的净化无人机，自动锁定敌人，造成持续眩晕，并每", cycle_time, "秒对敌人造成",
+    damage_str(), "。")
+set_skill(h.hero.skills.abduction)
+count = s.total_targets[max_lvl]
+amount = s.total_hp[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+map["母舰劫持"] = str(cooldown_str(), "沙塔呼叫母舰，随机劫持最多", count, "名血量总和不超过",
+    amount, "的敌人，或一名血量不限的敌人，直接将他们移出战场。")
+set_skill(h.hero.skills.vibroblades)
+d[1].damage_type = s.damage_type
+d[1].damage_min = s.extra_damage[max_lvl]
+d[1].damage_max = s.extra_damage[max_lvl]
+map["鸣颤战刃"] = str("沙塔每次普攻额外附带", damage_str(), "。")
+set_skill(h.hero.skills.finalcountdown)
+get_damage(h.selfdestruct)
+d[1].damage_min = s.damage[max_lvl]
+d[1].damage_max = s.damage[max_lvl]
+e = E:get_template("mod_alien_selfdestruct")
+duration = e.modifier.duration
+map["最终手段"] = str("沙塔复活时间为6秒，并在升级时刷新所有技能冷却。当生命值耗尽时，沙塔自爆，对周围敌人造成", damage_str(),
+    "，并使其受到", duration, "秒的眩晕效果。")
 
 set_hero("hero_monk")
 map["虎型拳"] = str()
