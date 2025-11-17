@@ -343,6 +343,7 @@ return {
     ["kr1-desktop/images/fullhd/go_stage72_bg-1.png"] = { size = 1896869},
     ["kr1-desktop/images/fullhd/go_stage90_bg-1.png"] = { size = 3207420},
     ["kr1-desktop/images/fullhd/go_stage91_bg-1.png"] = { size = 3813251},
+    ["kr1-desktop/images/fullhd/go_stage92_bg-1.png"] = { size = 2635820},
     ["kr1-desktop/images/fullhd/go_stages_ancient_metropolis-1.png"] = { size = 1725927},
     ["kr1-desktop/images/fullhd/go_stages_bittering_rancor-1.png"] = { size = 1896169},
     ["kr1-desktop/images/fullhd/go_stages_blackburn-1.png"] = { size = 73584},

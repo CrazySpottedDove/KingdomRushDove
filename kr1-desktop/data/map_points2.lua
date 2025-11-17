@@ -168,6 +168,13 @@ return {
                 x = 300,
                 y = 1000
             }
+        },
+        [92] = {
+            number = "92",
+            pos = {
+                x = 1120,
+                y = 748
+            }
         }
     },
     endless_flags = {
