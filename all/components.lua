@@ -162,6 +162,7 @@ tween_prop.name = "alpha"
 tween_prop.disabled = nil
 tween_prop.ignore_reverse = nil
 tween_prop.interp = nil
+-- 铁皮原版代码允许在 key[3] 中指定插值方法，这个行为在 dove 版中被禁用（这种接口多样只会使项目更加混乱，并提升性能压力）。每个 tween_prop 只能有一个插值方法，通过 tween_prop.interp 指定。当 tween_prop.interp == nil 时，默认取 "linear"。
 tween_prop.keys = {}
 tween_prop.loop = false
 tween_prop.multiply = nil
@@ -176,6 +177,7 @@ tween.props[1] = E:clone_c("tween_prop")
 tween.remove = true
 tween.reverse = false
 tween.disabled = nil
+-- 对于只运行一次的 tween(如淡入)，请手动将 run_once 赋为 true，以节省每帧更新的性能开销
 tween.run_once = nil
 tween.ts = nil
 tween.random_ts = nil
@@ -526,11 +528,8 @@ soldier.name = nil
 soldier.tower_id = nil
 soldier.melee_slot_offset = v(0, 0)
 soldier.target_id = nil
--- -- max_targets 不为 nil 时，允许士兵拦截多个敌方单位
--- soldier.max_targets = nil
--- soldier.target_ids = nil
 soldier.courage_ts = 0
-soldier.guard_time = fts(1)
+soldier.last_block_ts = 0
 
 local reinforcement = E:register_c("reinforcement")
 
@@ -795,6 +794,7 @@ ranged.order = {
 	1
 }
 ranged.forced_ts = 0
+ranged.last_range_ts = 0
 
 local timed_attacks = E:register_c("timed_attacks")
 

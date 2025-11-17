@@ -3143,6 +3143,30 @@ return {
 		},
 		alias = {}
 	},
+    ["stage_thumbs_0092"] = {
+		a_name = "go_stage92_bg-1.png",
+		size = {
+			342,
+			246
+		},
+		trim = {
+			0,
+            0,
+            0,
+            0
+		},
+		a_size = {
+			1920,
+			1080
+		},
+		f_quad = {
+			0,
+			0,
+			342,
+			246
+		},
+		alias = {}
+	},
 	["stage_thumbs_0110"] = {
 		a_name = "level_select-1.png",
 		size = {

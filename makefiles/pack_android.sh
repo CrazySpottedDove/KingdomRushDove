@@ -40,7 +40,7 @@ JOBS=${JOBS:-$(nproc 2>/dev/null || echo 4)}
 
 echo "Creating base archive (excluding PNGs) -> $ARCHIVE_DIR"
 # 先打包项目中除 png 和 .versions 的文件（避免把 archive 自己打进去）
-zip -r "$ARCHIVE_DIR" . -x "*.png" -x ".versions/*" -x "tmp/*" -x "*.exe" -x ".git/*" -q
+zip -r "$ARCHIVE_DIR" . -x "*.png" -x ".versions/*" -x "tmp/*" -x "*.exe" -x ".git/*" -x "KingdomRushDoveUpdater" -q
 
 # 创建临时目录用于放置缩放后的 png，保留相对路径
 tempdir=$(mktemp -d)

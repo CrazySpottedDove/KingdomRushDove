@@ -183,9 +183,6 @@ function simulation:insert_entity(e)
 	d.entities[e.id] = e
 
 	d.entity_count = d.entity_count + 1
-	-- d.entity_max = d.entity_count >= d.entity_max and d.entity_count or d.entity_max
-
-	-- log.error("entity (%s) %s added", e.id, e.template_name)
 end
 
 function simulation:remove_entity(e)

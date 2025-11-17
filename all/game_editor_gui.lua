@@ -1138,9 +1138,9 @@ function gui:select_node(pi, ni, add)
 
 		self:show_path_node()
 
-		self.editor.path_selected = nil
+		-- self.editor.path_selected = nil
 
-		self:select_list_path()
+		-- self:select_list_path()
 	end
 
 	self.editor.paths_dirty = true
@@ -1153,7 +1153,7 @@ function gui:path_nodes_select(x, y, w, h)
 
 	if not w or not h then
 		multi = false
-		w, h = NODE_SELECTION_WINDOW, NODE_SELECTION_WINDOW
+		w, h = NODE_SELECTION_WINDOW * 2, NODE_SELECTION_WINDOW * 2
 		x, y = x - w / 2, y - h / 2
 	end
 

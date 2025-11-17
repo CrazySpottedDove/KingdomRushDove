@@ -16,7 +16,21 @@ return {
         }
     }, {
         template = "tower_holder",
-        ["editor.game_mode"] = 0,
+        ["editor.game_mode"] = 1,
+        pos = {
+            x = 394,
+            y = 137
+        },
+        ["tower.default_rally_pos"] = {
+            x = 486,
+            y = 130
+        },
+        ["tower.holder_id"] = "18",
+        ["tower.terrain_style"] = 8,
+        ["ui.nav_mesh_id"] = "18"
+    },{
+        template = "tower_barrack_1",
+        ["editor.game_mode"] = 2,
         pos = {
             x = 394,
             y = 137

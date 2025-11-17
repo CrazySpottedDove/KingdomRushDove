@@ -71,7 +71,7 @@ end
 
 local all_callbacks = {
 	"draw",
-	"errhand",
+	"errorhandler",
 	"update"
 }
 
