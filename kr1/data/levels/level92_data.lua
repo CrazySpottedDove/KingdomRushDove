@@ -10,6 +10,67 @@ return {
             ["render.sprites[1].z"] = 1000
         },
         {
+            template = "decal_defend_point",
+            ["editor.exit_id"] = 1,
+            pos = {
+                x = 73,
+                y = 41
+            }
+        },
+        {
+            template = "decal_defend_point",
+            ["editor.exit_id"] = 1,
+            pos = {
+                x = 709,
+                y = 42
+            }
+        },
+        {
+            template = "decal_water_wave",
+            ["delayed_play.max_delay"] = 3,
+            ["delayed_play.min_delay"] = 1,
+            pos = {
+                x = 67,
+                y = 187
+            },
+            r = 0,
+            ["render.sprites[1].r"] = 0,
+            ["render.sprites[1].scale"] = {
+                x = 1,
+                y = 1
+            }
+        },
+        {
+            template = "decal_water_wave",
+            ["delayed_play.max_delay"] = 3,
+            ["delayed_play.min_delay"] = 1,
+            pos = {
+                x = 227,
+                y = 266
+            },
+            r = 0,
+            ["render.sprites[1].r"] = 0,
+            ["render.sprites[1].scale"] = {
+                x = 1,
+                y = 1
+            }
+        },
+        {
+            template = "decal_water_wave",
+            ["delayed_play.max_delay"] = 3,
+            ["delayed_play.min_delay"] = 1,
+            pos = {
+                x = 428,
+                y = 701
+            },
+            r = 0,
+            ["render.sprites[1].r"] = 0,
+            ["render.sprites[1].scale"] = {
+                x = 1,
+                y = 1
+            }
+        },
+        {
             template = "tower_holder",
             ["editor.game_mode"] = 0,
             pos = {
@@ -20,7 +81,9 @@ return {
                 x = 262,
                 y = 117
             },
-            ["tower.holder_id"] = "26"
+            ["tower.terrain_style"] = 1,
+            ["tower.holder_id"] = "26",
+            ["ui.nav_mesh_id"] = "26"
         },
         {
             template = "tower_holder",
@@ -33,7 +96,9 @@ return {
                 x = 643,
                 y = 124
             },
-            ["tower.holder_id"] = "34"
+            ["tower.holder_id"] = "34",
+            ["tower.terrain_style"] = 1,
+            ["ui.nav_mesh_id"] = "34"
         },
         {
             template = "tower_holder",
@@ -46,7 +111,9 @@ return {
                 x = 611,
                 y = 177
             },
-            ["tower.holder_id"] = "28"
+            ["tower.terrain_style"] = 1,
+            ["tower.holder_id"] = "28",
+            ["ui.nav_mesh_id"] = "28"
         },
         {
             template = "tower_holder",
@@ -59,7 +126,9 @@ return {
                 x = 619,
                 y = 229
             },
-            ["tower.holder_id"] = "38"
+            ["tower.terrain_style"] = 1,
+            ["tower.holder_id"] = "38",
+            ["ui.nav_mesh_id"] = "38"
         },
         {
             template = "tower_holder",
@@ -72,7 +141,9 @@ return {
                 x = 395,
                 y = 240
             },
-            ["tower.holder_id"] = "16"
+            ["tower.terrain_style"] = 1,
+            ["tower.holder_id"] = "16",
+            ["ui.nav_mesh_id"] = "16"
         },
         {
             template = "tower_holder",
@@ -81,24 +152,28 @@ return {
                 x = 720,
                 y = 282
             },
+            ["tower.terrain_style"] = 1,
             ["tower.default_rally_pos"] = {
                 x = 618,
                 y = 275
             },
-            ["tower.holder_id"] = "24"
+            ["tower.holder_id"] = "24",
+            ["ui.nav_mesh_id"] = "24"
         },
         {
             template = "tower_holder",
             ["editor.game_mode"] = 0,
             pos = {
-                x = 500,
-                y = 330
+                x = 485,
+                y = 321
             },
             ["tower.default_rally_pos"] = {
                 x = 401,
                 y = 316
             },
-            ["tower.holder_id"] = "30"
+            ["tower.terrain_style"] = 1,
+            ["tower.holder_id"] = "30",
+            ["ui.nav_mesh_id"] = "30"
         },
         {
             template = "tower_holder",
@@ -111,7 +186,9 @@ return {
                 x = 640,
                 y = 376
             },
-            ["tower.holder_id"] = "20"
+            ["tower.terrain_style"] = 1,
+            ["tower.holder_id"] = "20",
+            ["ui.nav_mesh_id"] = "20"
         },
         {
             template = "tower_holder",
@@ -124,7 +201,9 @@ return {
                 x = 800,
                 y = 429
             },
-            ["tower.holder_id"] = "36"
+            ["tower.terrain_style"] = 1,
+            ["tower.holder_id"] = "36",
+            ["ui.nav_mesh_id"] = "36"
         },
         {
             template = "tower_holder",
@@ -133,11 +212,13 @@ return {
                 x = -71,
                 y = 366
             },
+            ["tower.terrain_style"] = 1,
             ["tower.default_rally_pos"] = {
                 x = -47,
                 y = 474
             },
-            ["tower.holder_id"] = "10"
+            ["tower.holder_id"] = "10",
+            ["ui.nav_mesh_id"] = "10"
         },
         {
             template = "tower_holder",
@@ -146,11 +227,13 @@ return {
                 x = 55,
                 y = 366
             },
+            ["tower.terrain_style"] = 1,
             ["tower.default_rally_pos"] = {
                 x = 83,
                 y = 446
             },
-            ["tower.holder_id"] = "22"
+            ["tower.holder_id"] = "22",
+            ["ui.nav_mesh_id"] = "22"
         },
         {
             template = "tower_holder",
@@ -159,11 +242,13 @@ return {
                 x = 934,
                 y = 400
             },
+            ["tower.terrain_style"] = 1,
             ["tower.default_rally_pos"] = {
                 x = 975,
                 y = 474
             },
-            ["tower.holder_id"] = "12"
+            ["tower.holder_id"] = "12",
+            ["ui.nav_mesh_id"] = "12"
         },
         {
             template = "tower_holder",
@@ -172,11 +257,13 @@ return {
                 x = 548,
                 y = 425
             },
+            ["tower.terrain_style"] = 1,
             ["tower.default_rally_pos"] = {
                 x = 629,
                 y = 435
             },
-            ["tower.holder_id"] = "14"
+            ["tower.holder_id"] = "14",
+            ["ui.nav_mesh_id"] = "14"
         },
         {
             template = "tower_holder",
@@ -185,11 +272,13 @@ return {
                 x = 55,
                 y = 527
             },
+            ["tower.terrain_style"] = 1,
             ["tower.default_rally_pos"] = {
                 x = 23,
                 y = 474
             },
-            ["tower.holder_id"] = "2"
+            ["tower.holder_id"] = "2",
+            ["ui.nav_mesh_id"] = "2"
         },
         {
             template = "tower_holder",
@@ -198,11 +287,13 @@ return {
                 x = 790,
                 y = 537
             },
+            ["tower.terrain_style"] = 1,
             ["tower.default_rally_pos"] = {
                 x = 759,
                 y = 442
             },
-            ["tower.holder_id"] = "18"
+            ["tower.holder_id"] = "18",
+            ["ui.nav_mesh_id"] = "18"
         },
         {
             template = "tower_holder",
@@ -211,11 +302,13 @@ return {
                 x = 188,
                 y = 544
             },
+            ["tower.terrain_style"] = 1,
             ["tower.default_rally_pos"] = {
                 x = 304,
                 y = 569
             },
-            ["tower.holder_id"] = "4"
+            ["tower.holder_id"] = "4",
+            ["ui.nav_mesh_id"] = "4"
         },
         {
             template = "tower_holder",
@@ -224,11 +317,13 @@ return {
                 x = 895,
                 y = 579
             },
+            ["tower.terrain_style"] = 1,
             ["tower.default_rally_pos"] = {
                 x = 898,
                 y = 505
             },
-            ["tower.holder_id"] = "8"
+            ["tower.holder_id"] = "8",
+            ["ui.nav_mesh_id"] = "8"
         },
         {
             template = "tower_holder",
@@ -241,7 +336,9 @@ return {
                 x = 671,
                 y = 596
             },
-            ["tower.holder_id"] = "6"
+            ["tower.terrain_style"] = 1,
+            ["tower.holder_id"] = "6",
+            ["ui.nav_mesh_id"] = "6"
         },
         {
             template = "tower_holder",
@@ -254,7 +351,9 @@ return {
                 x = -71,
                 y = 603
             },
-            ["tower.holder_id"] = "32"
+            ["tower.terrain_style"] = 1,
+            ["tower.holder_id"] = "32",
+            ["ui.nav_mesh_id"] = "32"
         }
     },
     invalid_path_ranges = {},
@@ -278,9 +377,50 @@ return {
     level_terrain_type = 1,
     locked_hero = false,
     max_upgrade_level = 6,
-    nav_mesh = {},
+    nav_mesh = {
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {},
+        nil,
+        {}
+    },
     required_sounds = {},
     required_textures = {
-        "go_stage92_bg"
+        "go_stage92_bg",
+        "go_stages_jungle",
+        "go_enemies_jungle"
     }
 }
