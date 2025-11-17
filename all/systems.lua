@@ -35,6 +35,7 @@ local ceil = math.ceil
 local floor = math.floor
 local sin = math.sin
 local cos = math.cos
+local PI = math.pi
 require("constants")
 local ffi = require("ffi")
 
@@ -1089,7 +1090,7 @@ end
 
 function sys.main_script:on_insert(entity, store)
     if entity.main_script and entity.main_script.insert then
-        return entity.main_script.insert(entity, store, entity.main_script)
+        return entity.main_script.insert(entity, store)
     else
         return true
     end
@@ -1106,7 +1107,7 @@ function sys.main_script:on_update(dt, ts, store)
         end
 
         if s.co then
-            local success, err = coroutine.resume(s.co, e, store, s)
+            local success, err = coroutine.resume(s.co, e, store)
 
             -- if coroutine.status(s.co) == "dead" or err ~= nil then
             --     if err ~= nil then
@@ -1200,11 +1201,14 @@ end
 
 function sys.health:on_update(dt, ts, store)
     local new_damage_queue = {}
-    store.damages_applied = {}
-    for i = #store.damage_queue, 1, -1 do
-        local d = store.damage_queue[i]
+    local damage_queue = store.damage_queue
+    local damages_applied = {}
+    local damages_applied_count = 0
+    local entities = store.entities
+    for i = #damage_queue, 1, -1 do
+        local d = damage_queue[i]
 
-        local e = store.entities[d.target_id]
+        local e = entities[d.target_id]
 
         if not e then
             -- block empty
@@ -1219,22 +1223,27 @@ function sys.health:on_update(dt, ts, store)
 
                 h.last_damage_types = bor(h.last_damage_types, d.damage_type)
 
+                -- 吞噬即死
                 if band(d.damage_type, DAMAGE_EAT) ~= 0 then
                     d.damage_applied = h.hp
                     d.damage_result = bor(d.damage_result, DR_KILL)
                     h.hp = 0
-                    store.damages_applied[#store.damages_applied + 1] = d
+                    damages_applied_count = damages_applied_count + 1
+                    damages_applied[damages_applied_count] = d
+                    -- 减护甲
                 elseif band(d.damage_type, DAMAGE_ARMOR) ~= 0 then
 
                     d.value = d.value * (1 - e.health.armor_resilience)
 
                     SU.armor_dec(e, d.value)
                     d.damage_result = bor(d.damage_result, DR_ARMOR)
+                    -- 减法抗
                 elseif band(d.damage_type, DAMAGE_MAGICAL_ARMOR) ~= 0 then
                     d.value = d.value * (1 - e.health.armor_resilience)
 
                     SU.magic_armor_dec(e, d.value)
                     d.damage_result = bor(d.damage_result, DR_MAGICAL_ARMOR)
+                    -- 造成伤害
                 else
                     local actual_damage = U.predict_damage(e, d)
 
@@ -1255,7 +1264,7 @@ function sys.health:on_update(dt, ts, store)
                         if d.track_damage then
                             signal.emit("entity-damaged", e, d)
 
-                            local source = store.entities[d.source_id]
+                            local source = entities[d.source_id]
 
                             if source and source.track_damage then
                                 table.insert(source.track_damage.damaged, {e.id, actual_damage})
@@ -1263,34 +1272,27 @@ function sys.health:on_update(dt, ts, store)
                         end
                     end
 
-                    if e and h.spiked_armor > 0 and e.soldier and d.source_id then
-                        local sad_target_id = nil
+                    if h.spiked_armor > 0 and e.soldier and d.source_id and e.soldier.target_id == d.source_id then
+                        local t = entities[d.source_id]
+                        if t and t.health and not t.health.dead then
+                            local sad = E:create_entity("damage")
 
-                        if e.soldier.target_id == d.source_id then
-                            sad_target_id = d.source_id
-                        end
-
-                        if sad_target_id then
-                            local t = store.entities[sad_target_id]
-                            if t and t.health and not t.health.dead then
-                                local sad = E:create_entity("damage")
-
-                                sad.damage_type = DAMAGE_TRUE
-                                sad.value = h.spiked_armor * d.value
-                                sad.source_id = e.id
-                                sad.target_id = t.id
-                                new_damage_queue[#new_damage_queue + 1] = sad
-                            end
+                            sad.damage_type = DAMAGE_TRUE
+                            sad.value = h.spiked_armor * d.value
+                            sad.source_id = e.id
+                            sad.target_id = t.id
+                            new_damage_queue[#new_damage_queue + 1] = sad
                         end
                     end
-                    store.damages_applied[#store.damages_applied + 1] = d
+                    damages_applied_count = damages_applied_count + 1
+                    damages_applied[damages_applied_count] = d
                 end
 
                 if starting_hp > 0 and h.hp <= 0 then
                     signal.emit("entity-killed", e, d)
 
                     if d.track_kills then
-                        local source = store.entities[d.source_id]
+                        local source = entities[d.source_id]
 
                         if source and source.track_kills then
                             table.insert(source.track_kills.killed, e.id)
@@ -1349,6 +1351,7 @@ function sys.health:on_update(dt, ts, store)
         end
     end
     store.damage_queue = new_damage_queue
+    store.damages_applied = damages_applied
 end
 
 sys.count_groups = {}
@@ -1426,49 +1429,47 @@ sys.pops = {}
 sys.pops.name = "pops"
 
 function sys.pops:on_update(dt, ts, store)
-    for i = 1, #store.damages_applied do
-        local d = store.damages_applied[i]
-        if not d.pop or not d.target_id then
-            -- block empty
+    local damages_applied = store.damages_applied
+    local entities = store.entities
+    for i = 1, #damages_applied do
+        local d = damages_applied[i]
+        local pop, target_id = d.pop, d.target_id
+        if not pop or not target_id then
+            -- skip
         else
-            local source = store.entities[d.source_id]
-            local target = store.entities[d.target_id]
-            local pop_entity
-
-            if source and (source.enemy or source.soldier) then
-                pop_entity = source
-            elseif target then
-                pop_entity = target
-            else
-                goto label_37_0
+            local source = entities[d.source_id]
+            local target = entities[target_id]
+            local pop_entity = (source and (source.enemy or source.soldier)) and source or target
+            if not pop_entity then
+                goto continue
             end
 
-            if (not d.pop_chance or random() < d.pop_chance) and
-                (not d.pop_conds or band(d.damage_result, d.pop_conds) ~= 0) then
-                local name = d.pop[random(1, #d.pop)]
+            local pop_chance = d.pop_chance
+            local pop_conds = d.pop_conds
+            if (not pop_chance or random() < pop_chance) and (not pop_conds or band(d.damage_result, pop_conds) ~= 0) then
+
+                local name = pop[random(1, #pop)]
                 local e = E:create_entity(name)
 
                 if e.pop_over_target and target then
                     pop_entity = target
                 end
 
-                e.pos = V.v(pop_entity.pos.x, pop_entity.pos.y)
-
+                local pos_x, pos_y = pop_entity.pos.x, pop_entity.pos.y + e.pop_y_offset
                 if pop_entity.unit and pop_entity.unit.pop_offset then
-                    e.pos.y = e.pos.y + pop_entity.unit.pop_offset.y
+                    pos_y = pos_y + pop_entity.unit.pop_offset.y
                 elseif pop_entity == target and pop_entity.unit and pop_entity.unit.hit_offset then
-                    e.pos.y = e.pos.y + pop_entity.unit.hit_offset.y
+                    pos_y = pos_y + pop_entity.unit.hit_offset.y
                 end
 
-                e.pos.y = e.pos.y + e.pop_y_offset
-                e.render.sprites[1].r = random(-21, 21) * math.pi / 180
+                e.pos = V.v(pos_x, pos_y)
+                e.render.sprites[1].r = random(-21, 21) * PI / 180
                 e.render.sprites[1].ts = store.tick_ts
 
                 queue_insert(store, e)
             end
         end
-
-        ::label_37_0::
+        ::continue::
     end
 end
 
@@ -1476,8 +1477,8 @@ sys.timed = {}
 sys.timed.name = "timed"
 
 function sys.timed:on_update(dt, ts, store)
-    local timed = store.entities_with_timed
-    for _, e in pairs(timed) do
+    local entities = store.entities_with_timed
+    for _, e in pairs(entities) do
         local s = e.render.sprites[e.timed.sprite_id]
 
         if e.timed.disabled then
@@ -1493,39 +1494,154 @@ end
 sys.tween = {}
 sys.tween.name = "tween"
 
-function sys.tween:init(store)
-    self.fns = {
-        step = function(s)
-            return 0
-        end,
-        linear = function(s)
-            return s
-        end,
-        quad = function(s)
-            return s * s
-        end,
-        sine = function(s)
-            return 0.5 * (1 - cos(s * math.pi))
-        end
-    }
-    self.lerp = function(a, b, t, fn)
-        local ta = type(a)
-        if ta == "boolean" then
-            return a
-        else
-            local f = self.fns[fn or "linear"]
-            local ft = f(t)
-            if ta == "table" then
-                return {
-                    x = a.x + (b.x - a.x) * ft,
-                    y = a.y + (b.y - a.y) * ft
-                }
-            else
-                return a + (b - a) * ft
-            end
-        end
-    end
+--- LERP FUNCTIONS BEGIN
+
+local function lerp_boolean_multiply(a, b, t, s, key)
+    s[key] = a[2] and s[key]
 end
+
+local function lerp_boolean(a, b, t, s, key)
+    s[key] = a[2]
+end
+
+local function lerp_number_step_multiply(a, b, t, s, key)
+    s[key] = a[2] * s[key]
+end
+
+local function lerp_number_step(a, b, t, s, key)
+    s[key] = a[2]
+end
+
+local function lerp_number_linear_multiply(a, b, t, s, key)
+    s[key] = a == b and (a[2] * s[key]) or ((a[2] + (b[2] - a[2]) * (t - a[1]) / (b[1] - a[1])) * s[key])
+end
+
+local function lerp_number_linear(a, b, t, s, key)
+    s[key] = a == b and a[2] or (a[2] + (b[2] - a[2]) * (t - a[1]) / (b[1] - a[1]))
+end
+
+local function lerp_number_quad_multiply(a, b, t, s, key)
+    if a == b then
+        s[key] = a[2] * s[key]
+        return
+    end
+    local tt = (t - a[1]) / (b[1] - a[1])
+    s[key] = (a[2] + (b[2] - a[2]) * tt * tt) * s[key]
+
+end
+
+local function lerp_number_quad(a, b, t, s, key)
+    if a == b then
+        s[key] = a[2]
+        return
+    end
+    local tt = (t - a[1]) / (b[1] - a[1])
+    s[key] = a[2] + (b[2] - a[2]) * tt * tt
+end
+
+local function lerp_number_sine_multiply(a, b, t, s, key)
+    s[key] = a == b and (a[2] * s[key]) or
+                 (a + (b - a) * (0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))) * s[key])
+end
+
+local function lerp_number_sine(a, b, t, s, key)
+    s[key] = a == b and a[2] or (a[2] + (b[2] - a[2]) * (0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))))
+end
+
+local function lerp_table_step(a, b, t, s, key)
+    s[key].x = a[2].x
+    s[key].y = a[2].y
+end
+
+local function lerp_table_step_multiply(a, b, t, s, key)
+    s[key].x = a[2].x * s[key].x
+    s[key].y = a[2].y * s[key].y
+end
+
+local function lerp_table_linear(a, b, t, s, key)
+    if a == b then
+        s[key].x = a[2].x
+        s[key].y = a[2].y
+        return
+    end
+    local tt = (t - a[1]) / (b[1] - a[1])
+    local av = a[2]
+    local bv = b[2]
+    s[key].x = av.x + (bv.x - av.x) * tt
+    s[key].y = av.y + (bv.y - av.y) * tt
+end
+
+local function lerp_table_linear_multiply(a, b, t, s, key)
+    if a == b then
+        s[key].x = a[2].x * s[key].x
+        s[key].y = a[2].y * s[key].y
+        return
+    end
+
+    local tt = (t - a[1]) / (b[1] - a[1])
+    local av = a[2]
+    local bv = b[2]
+    s[key].x = (av.x + (bv.x - av.x) * tt) * s[key].x
+    s[key].y = (av.y + (bv.y - av.y) * tt) * s[key].y
+end
+
+local function lerp_table_quad(a, b, t, s, key)
+    if a == b then
+        s[key].x = a[2].x
+        s[key].y = a[2].y
+        return
+    end
+
+    local tt = (t - a[1]) / (b[1] - a[1])
+    local av = a[2]
+    local bv = b[2]
+    s[key].x = av.x + (bv.x - av.x) * tt * tt
+    s[key].y = av.y + (bv.y - av.y) * tt * tt
+end
+
+local function lerp_table_quad_multiply(a, b, t, s, key)
+    if a == b then
+        s[key].x = a[2].x * s[key].x
+        s[key].y = a[2].y * s[key].y
+        return
+    end
+
+    local tt = (t - a[1]) / (b[1] - a[1])
+    local av = a[2]
+    local bv = b[2]
+    s[key].x = (av.x + (bv.x - av.x) * tt * tt) * s[key].x
+    s[key].y = (av.y + (bv.y - av.y) * tt * tt) * s[key].y
+end
+
+local function lerp_table_sine_multiply(a, b, t, s, key)
+    if a == b then
+        s[key].x = a[2].x * s[key].x
+        s[key].y = a[2].y * s[key].y
+        return
+    end
+
+    local ft = 0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))
+    local av = a[2]
+    local bv = b[2]
+    s[key].x = (av.x + (bv.x - av.x) * ft) * s[key].x
+    s[key].y = (av.y + (bv.y - av.y) * ft) * s[key].y
+end
+
+local function lerp_table_sine(a, b, t, s, key)
+    if a == b then
+        s[key].x = a[2].x
+        s[key].y = a[2].y
+        return
+    end
+
+    local ft = 0.5 * (1 - cos((t - a[1]) / (b[1] - a[1]) * PI))
+    local av = a[2]
+    local bv = b[2]
+    s[key].x = av.x + (bv.x - av.x) * ft
+    s[key].y = av.y + (bv.y - av.y) * ft
+end
+
+--- LERP FUNCTIONS END
 
 function sys.tween:on_insert(entity, store)
     if entity.tween then
@@ -1548,6 +1664,61 @@ function sys.tween:on_insert(entity, store)
                     end
                 end
             end
+
+            -- 为了避免每次更新都动态查找合适的插值函数，我们应该在 insert 的时候就确定下来。插值函数的赋值单元为 tween_prop。
+            do
+                local sprite = entity.render.sprites[p.sprite_id]
+                local key_type
+                if #p.keys == 0 then
+                    if sprite[p.name] then
+                        key_type = type(sprite[p.name])
+                    else
+                        error(entity.template_name .. " tween_prop " .. p.name ..
+                                  " has no keys and sprite has no such property")
+                    end
+                else
+                    key_type = type(p.keys[1][2])
+                end
+
+                local interp_type = p.interp or "linear"
+                local multiply = p.multiply
+                -- 初始化
+                if not sprite[p.name] then
+                    if key_type == "table" then
+                        sprite[p.name] = V.vclone(p.keys[1][2])
+                    else
+                        sprite[p.name] = p.keys[1][2]
+                    end
+                end
+                -- 选择插值函数
+                if key_type == "boolean" then
+                    p.interp_fn = multiply and lerp_boolean_multiply or lerp_boolean
+                    goto continue
+                end
+                if key_type == "number" then
+                    if interp_type == "linear" then
+                        p.interp_fn = multiply and lerp_number_linear_multiply or lerp_number_linear
+                    elseif interp_type == "sine" then
+                        p.interp_fn = multiply and lerp_number_sine_multiply or lerp_number_sine
+                    elseif interp_type == "step" then
+                        p.interp_fn = multiply and lerp_number_step_multiply or lerp_number_step
+                    elseif interp_type == "quad" then
+                        p.interp_fn = multiply and lerp_number_quad_multiply or lerp_number_quad
+                    end
+                elseif key_type == "table" then
+                    if interp_type == "linear" then
+                        p.interp_fn = multiply and lerp_table_linear_multiply or lerp_table_linear
+                    elseif interp_type == "sine" then
+                        p.interp_fn = multiply and lerp_table_sine_multiply or lerp_table_sine
+                    elseif interp_type == "step" then
+                        p.interp_fn = multiply and lerp_table_step_multiply or lerp_table_step
+                    elseif interp_type == "quad" then
+                        p.interp_fn = multiply and lerp_table_quad_multiply or lerp_table_quad
+                    end
+                end
+            end
+
+            ::continue::
         end
 
         if entity.tween.random_ts then
@@ -1559,10 +1730,6 @@ function sys.tween:on_insert(entity, store)
 end
 
 function sys.tween:on_update(dt, ts, store)
-    local fns = self.fns
-
-    local lerp = self.lerp
-
     local entities = store.entities_with_tween
     for _, e in pairs(entities) do
         if e.tween.disabled then
@@ -1571,28 +1738,28 @@ function sys.tween:on_update(dt, ts, store)
             local finished = true
             local sprites = e.render.sprites
             local tween = e.tween
-            for _, t in pairs(e.tween.props) do
-                if t.disabled then
+            for _, tween_prop in pairs(tween.props) do
+                if tween_prop.disabled then
                     -- block empty
                 else
-                    local s = sprites[t.sprite_id]
-                    local keys = t.keys
+                    local s = sprites[tween_prop.sprite_id]
+                    local keys = tween_prop.keys
                     local ka = keys[1]
                     local kb = keys[#keys]
                     local start_time = ka[1]
                     local end_time = kb[1]
                     local duration = end_time - start_time
-                    local time = store.tick_ts - (t.ts or tween.ts or s.ts)
+                    local time = ts - (tween_prop.ts or tween.ts or s.ts)
 
-                    if t.time_offset then
-                        time = time + t.time_offset
+                    if tween_prop.time_offset then
+                        time = time + tween_prop.time_offset
                     end
 
-                    if t.loop then
+                    if tween_prop.loop then
                         time = time % duration
                     end
 
-                    if tween.reverse and not t.ignore_reverse then
+                    if tween.reverse and not tween_prop.ignore_reverse then
                         time = duration - time
                     end
 
@@ -1607,23 +1774,10 @@ function sys.tween:on_update(dt, ts, store)
                         end
                     end
 
-                    local value = ka == kb and ka[2] or
-                                      lerp(ka[2], kb[2], (time - ka[1]) / (kb[1] - ka[1]), ka[3] or t.interp)
+                    -- 直接通过 interp_fn 来进行插值计算和赋值，避免创建中间变量与小表的频繁创建，降低 gc 压力
+                    tween_prop.interp_fn(ka, kb, time, s, tween_prop.name)
 
-                    if t.multiply then
-                        if type(value) == "boolean" then
-                            s[t.name] = value and s[t.name]
-                        elseif type(value) == "table" then
-                            s[t.name].x = value.x * s[t.name].x
-                            s[t.name].y = value.y * s[t.name].y
-                        else
-                            s[t.name] = value * s[t.name]
-                        end
-                    else
-                        s[t.name] = value
-                    end
-
-                    finished = finished and t.loop or ka == kb
+                    finished = finished and tween_prop.loop or ka == kb
                 end
             end
 
@@ -2019,7 +2173,14 @@ void ffi_sort(RenderFrameFFI* arr, RenderFrameFFI* tmp, int n);
 ]]
 
 local lib_render_sort
-local ok, lib = pcall(ffi.load, "all/librender_sort.dll")
+local libname
+if jit and jit.os == "Windows" then
+    libname = "all/librender_sort.dll"
+else
+    libname = "all/librender_sort.so"
+end
+
+local ok, lib = pcall(ffi.load, libname)
 if ok and lib then
     lib_render_sort = lib
 else
@@ -2244,7 +2405,8 @@ function sys.render:on_remove(entity, store)
         for i = #entity.render.sprites, 1, -1 do
             local s = entity.render.sprites[i]
             s.marked_to_remove = true
-            entity.render.sprites[i] = nil
+            -- 这里不可以置 nil，以防其它地方使用 sprite 时发生错误
+            -- entity.render.sprites[i] = nil
         end
     end
 
@@ -2262,10 +2424,11 @@ end
 function sys.render:on_update(dt, ts, store)
     local d = store
     local entities = d.entities_with_render
-
+    local show_health_bar = store.config and store.config.show_health_bar
     for _, e in pairs(entities) do
-        for i = 1, #e.render.sprites do
-            local s = e.render.sprites[i]
+        local sprites = e.render.sprites
+        for i = 1, #sprites do
+            local s = sprites[i]
             if s.ts > ts then
                 s.hidden = true
                 s._wait = true
@@ -2303,7 +2466,7 @@ function sys.render:on_update(dt, ts, store)
             end
         end
 
-        if e.health_bar and store.config and store.config.show_health_bar then
+        if e.health_bar and show_health_bar then
             local hb = e.health_bar
             local fb = hb.frames[1]
             local ff = hb.frames[2]
@@ -2519,14 +2682,18 @@ sys.editor_overrides = {}
 sys.editor_overrides.name = "editor_overrides"
 
 function sys.editor_overrides:on_insert(entity, store)
-    if entity.editor and entity.editor.components then
-        for _, c in pairs(entity.editor.components) do
+    if not entity.editor then
+        return true
+    end
+    local editor = entity.editor
+    if editor.components then
+        for _, c in pairs(editor.components) do
             E:add_comps(entity, c)
         end
     end
 
-    if entity.editor and entity.editor.overrides then
-        for k, v in pairs(entity.editor.overrides) do
+    if editor.overrides then
+        for k, v in pairs(editor.overrides) do
             LU.eval_set_prop(entity, k, v)
         end
     end
@@ -2682,10 +2849,8 @@ function sys.last_hook:on_insert(e, d)
                     e.health.hp_max = e.health.hp_max * 1.15
                 end
             end
-            -- e.health.hp_max = d.config.enemy_health_multiplier * e.health.hp_max
             e.health.hp = e.health.hp_max
             e.health.patched = true
-            -- e.enemy.gold = math.ceil(e.enemy.gold * d.config.enemy_gold_multiplier)
         end
         d.enemy_count = d.enemy_count + 1
 

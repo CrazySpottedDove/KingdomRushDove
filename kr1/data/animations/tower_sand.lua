@@ -138,7 +138,7 @@ local a = {
 	},
 	tower_sand_lvl4_skill_2_decal_out = {
 		prefix = "tower_sand_lvl4_skill_2_decal",
-		to = 47,
+		to = 46,
 		from = 26
 	},
 	tower_sand_lvl4_skill_2_projectile_idle = {

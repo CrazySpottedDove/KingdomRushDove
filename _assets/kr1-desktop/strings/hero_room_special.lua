@@ -143,6 +143,19 @@ local function get_health(t, i)
     health[i].armor = t.health.armor
     health[i].magic_armor = t.health.magic_armor
 end
+local function health_str(i)
+    if not i then
+        i = 1
+    end
+    local h_str = hp_str(i)
+    if health[i].armor and health[i].armor > 0 then
+        h_str = str(h_str, "，", armor_str(i))
+    end
+    if health[i].magic_armor and health[i].magic_armor > 0 then
+        h_str = str(h_str, "，", magic_armor_str(i))
+    end
+    return h_str
+end
 
 local function cooldown_str()
     return str("每隔", cooldown, "秒，")
@@ -608,8 +621,8 @@ e = E:get_template("soldier_mirage_illusion")
 get_damage(e.melee.attacks[1])
 radius = e.melee.attacks[1].damage_radius
 map["移形换影"] = str("幻影每次遭遇近战攻击时，有", rate_str(chance),
-    "恢复10%最大生命值，进入无敌状态并闪离，在原地留下一个持续时间", duration,
-    "的影子。影子消失时，对", radius, "范围内敌人造成", damage_str(),
+    "恢复10%最大生命值，进入无敌状态并闪离，在原地留下一个存在", duration,
+    "秒的影子。影子消失时，对", radius, "范围内敌人造成", damage_str(),
     "。若幻影成功闪避近战攻击，将立刻缩减影舞", reward_shadowdance * 100, "%冷却与背刺",
     reward_lethalstrike * 100, "%冷却。面对范围攻击或远程攻击时，移形换影触发概率×60%。")
 set_skill(h.hero.skills.shadowdance)
@@ -664,30 +677,167 @@ set_bullet("missile_wizard")
 get_damage(b.bullet)
 d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
-map["魔法飞弹"] = str(cooldown_str(),"纽维斯发射",count,"枚魔法飞弹，全图范围内追踪敌人，每枚飞弹造成",damage_str(),"。")
-map["连锁反应"] = str()
-map["分解"] = str()
-map["法术洪流"] = str()
-
+map["魔法飞弹"] = str(cooldown_str(), "纽维斯发射", count,
+    "枚魔法飞弹，全图范围内追踪敌人，每枚飞弹造成", damage_str(), "。")
+set_skill(h.hero.skills.chainspell)
+count = s.bounces[max_lvl]
+cooldown = h.ranged.attacks[2].cooldown
+map["连锁反应"] = str(cooldown_str(), "纽维斯的普攻额外进行", count, "次弹射。")
+set_skill(h.hero.skills.disintegrate)
+count = s.count[max_lvl]
+local total_damage = s.total_damage[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+map["分解"] = str(cooldown_str(), "纽维斯用知识的力量分解最多", count, "名血量总和不超过",
+    total_damage, "的敌人。")
+set_skill(h.hero.skills.arcanetorrent)
+factor = s.factor[max_lvl]
+map["法术洪流"] = str(
+    "年迈的法师热衷于在后辈前展示力量。场上每多一座法师塔，纽维斯的伤害就提升",
+    factor * 100, "%。该伤害提升对魔法飞弹、分解同样生效。")
 set_hero("hero_beastmaster")
-map["野猪朋友"] = str()
-map["猎鹰朋友"] = str()
-map["犀牛朋友"] = str()
-map["愤怒鞭笞"] = str()
-map["狂野体质"] = str()
+set_skill(h.hero.skills.boarmaster)
+count = s.boars[max_lvl]
+e = E:get_template("beastmaster_boar")
+get_health(e)
+health[1].hp_max = s.boar_hp_max[max_lvl]
+get_damage(e.melee.attacks[1])
+e = E:get_template("beastmaster_wolf")
+get_health(e, 2)
+health[2].hp_max = s.wolf_hp_max[max_lvl]
+get_damage(e.melee.attacks[1], 2)
+chance = e.dodge.chance
+cooldown = h.timed_attacks.list[2].cooldown
+map["野猪朋友"] = str(cooldown_str(), "兽王随机召唤", count,
+    "只野猪、野狼，跟随兽王战斗。野猪拥有", health_str(), "，每次攻击造成", damage_str(),
+    "；野狼拥有", health_str(2), "，每次攻击造成", damage_str(2), "，且拥有", rate_str(chance),
+    "闪避攻击。")
+set_skill(h.hero.skills.falconer)
+count = s.count[max_lvl]
+e = E:get_template("beastmaster_falcon")
+cooldown = e.custom_attack.cooldown
+get_damage(e.custom_attack)
+e = E:get_template("mod_beastmaster_falcon")
+duration = e.modifier.duration
+factor = 1 - e.slow.factor
+map["猎鹰朋友"] = str("兽王身边伴有", count, "只猎鹰。猎鹰每隔", cooldown,
+    "秒发动一次攻击，造成", damage_str(), "，并使目标受到", factor * 100, "%的减速效果，持续",
+    duration, "秒。")
+set_skill(h.hero.skills.stampede)
+count = s.rhinos[max_lvl]
+duration = s.duration[max_lvl]
+chance = s.stun_chance[max_lvl]
+duration_2 = s.stun_duration[max_lvl]
+e = E:get_template("beastmaster_rhino")
+get_damage(e.attack)
+d[1].damage_max = s.damage[max_lvl]
+d[1].damage_min = s.damage[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+map["犀牛朋友"] = str(cooldown_str(), "兽王召唤", count, "只犀牛，犀牛冲锋对路径上的敌人造成",
+    damage_str(), "，并有", rate_str(chance), "使其眩晕", duration_2, "秒。犀牛驻场", duration, "秒。")
+set_skill(h.hero.skills.deeplashes)
+cooldown = s.cooldown[max_lvl]
+d[1].damage_max = s.damage[max_lvl]
+d[1].damage_min = s.damage[max_lvl]
+cooldown = s.cooldown[max_lvl]
+e = E:get_template("mod_beastmaster_lash")
+get_damage(e.dps, 2)
+d[2].damage_max = s.blood_damage[max_lvl]
+d[2].damage_min = s.blood_damage[max_lvl]
+duration = e.modifier.duration
+map["愤怒鞭笞"] = str(cooldown_str(), "兽王挥舞长鞭，对敌人造成", damage_str(),
+    "，并使其流血，在", duration, "秒内受到共", damage_str(2), "。")
+e = E:get_template("aura_beastmaster_regeneration")
+cycle_time = e.hps.heal_every
+local amount = e.hps.heal_min
+map["狂野体质"] = str("每隔", cycle_time, "秒，兽王恢复", amount, "点生命值。")
 
 set_hero("hero_voodoo_witch")
-map["冷笑骷髅"] = str()
-map["亡骨献祭"] = str()
-map["骨骸舞蹈"] = str()
-map["恐惧光环"] = str()
-map["巫毒魔法"] = str()
+set_skill(h.hero.skills.laughingskulls)
+set_bullet("bolt_voodoo_witch_skull")
+get_damage(b.bullet)
+for _, value in pairs(s.extra_damage) do
+    d[1].damage_min = d[1].damage_min + value
+    d[1].damage_max = d[1].damage_max + value
+end
+e = E:get_template("voodoo_witch_skull")
+cooldown = e.ranged.attacks[1].cooldown
+count = e.max_shots
+map["冷笑骷髅"] = str("冷笑骷髅每隔", cooldown, "秒攻击一名敌人，造成", damage_str(),
+    "，最多攻击", count, "次。")
+set_skill(h.hero.skills.deathskull)
+get_damage(e.sacrifice)
+d[1].damage_min = s.damage[max_lvl]
+d[1].damage_max = s.damage[max_lvl]
+map["亡骨献祭"] = str("冷笑骷髅完成使命时，砸向敌人，造成", damage_str(), "。")
+set_skill(h.hero.skills.bonedance)
+count = s.skull_count[max_lvl]
+map["骨骸舞蹈"] = str(
+    "每当敌军或友军在女巫身边死亡时，女巫将提取亡灵之力，召唤冷笑骷髅，跟随女巫战斗。冷笑骷髅最多存在",
+    count, "个。")
+set_skill(h.hero.skills.deathaura)
+factor = s.slow_factor[max_lvl]
+e = E:get_template("voodoo_witch_death_aura")
+cycle_time = e.aura.cycle_time
+radius = e.aura.radius
+get_damage(e.aura)
+d[1].damage_min = e.aura.damage
+d[1].damage_max = e.aura.damage
+map["恐惧光环"] = str("女巫散发出恐惧光环，每隔", cycle_time, "秒对", radius, "范围内敌人造成",
+    damage_str(), "，并使其受到", factor * 100, "%的减速效果。")
+set_skill(h.hero.skills.voodoomagic)
+get_damage(h.timed_attacks.list[1])
+d[1].damage_min = s.damage[max_lvl]
+d[1].damage_max = s.damage[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+e = E:get_template("mod_voodoo_witch_magic_slow")
+factor = 1 - e.slow.factor
+duration = e.modifier.duration
+count = s.count[max_lvl]
+map["巫毒魔法"] = str(cooldown_str(), "女巫施展巫毒魔法，使最多", count, "名敌人减速",
+    factor * 100, "%，持续", duration, "秒，并对其造成", damage_str(), "。")
 
 set_hero("hero_alien")
-map["能量飞镖"] = str()
-map["净化协议"] = str()
-map["母舰劫持"] = str()
-map["最终手段"] = str()
+set_skill(h.hero.skills.energyglaive)
+chance = s.bounce_chance[max_lvl]
+set_bullet("alien_glaive")
+get_damage(b.bullet)
+d[1].damage_max = s.damage[max_lvl]
+d[1].damage_min = s.damage[max_lvl]
+cooldown = h.ranged.attacks[1].cooldown
+e = E:get_template("mod_slow_alien_glaive")
+factor = 1 - e.slow.factor
+duration = e.modifier.duration
+map["能量飞镖"] = str(cooldown_str(), "沙塔投掷能量飞镖，造成", damage_str(), "与持续", duration,
+    "秒的", factor * 100, "%减速效果。飞镖每次名字敌人都有", rate_str(chance),
+    "弹射至附近敌人。")
+set_skill(h.hero.skills.purificationprotocol)
+duration = s.duration[max_lvl]
+cooldown = h.timed_attacks.list[2].cooldown
+e = E:get_template("alien_purification_drone")
+get_damage(e.dps)
+cycle_time = e.dps.damage_every
+map["净化协议"] = str(cooldown_str(), "沙塔召唤驻场", duration,
+    "秒的净化无人机，自动锁定敌人，造成持续眩晕，并每", cycle_time, "秒对敌人造成",
+    damage_str(), "。")
+set_skill(h.hero.skills.abduction)
+count = s.total_targets[max_lvl]
+amount = s.total_hp[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+map["母舰劫持"] = str(cooldown_str(), "沙塔呼叫母舰，随机劫持最多", count, "名血量总和不超过",
+    amount, "的敌人，或一名血量不限的敌人，直接将他们移出战场。")
+set_skill(h.hero.skills.vibroblades)
+d[1].damage_type = s.damage_type
+d[1].damage_min = s.extra_damage[max_lvl]
+d[1].damage_max = s.extra_damage[max_lvl]
+map["鸣颤战刃"] = str("沙塔每次普攻额外附带", damage_str(), "。")
+set_skill(h.hero.skills.finalcountdown)
+get_damage(h.selfdestruct)
+d[1].damage_min = s.damage[max_lvl]
+d[1].damage_max = s.damage[max_lvl]
+e = E:get_template("mod_alien_selfdestruct")
+duration = e.modifier.duration
+map["最终手段"] = str("沙塔复活时间为6秒，并在升级时刷新所有技能冷却。当生命值耗尽时，沙塔自爆，对周围敌人造成", damage_str(),
+    "，并使其受到", duration, "秒的眩晕效果。")
 
 set_hero("hero_monk")
 map["虎型拳"] = str()

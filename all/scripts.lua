@@ -57,7 +57,7 @@ local scripts = {}
 
 scripts.sequence = {}
 
-function scripts.sequence.update(this, store, script)
+function scripts.sequence.update(this, store)
     local function insert_fx(name)
         local fx = E:create_entity(name)
 
@@ -106,7 +106,7 @@ end
 
 scripts.delayed_sequence = {}
 
-function scripts.delayed_sequence.update(this, store, script)
+function scripts.delayed_sequence.update(this, store)
     local s = this.render.sprites[1]
     local d = this.delayed_sequence
     local current_idx = 0
@@ -130,7 +130,7 @@ end
 
 scripts.delayed_play = {}
 
-function scripts.delayed_play.update(this, store, script)
+function scripts.delayed_play.update(this, store)
     local s = this.render.sprites[1]
     local d = this.delayed_play
     local clicks = 0
@@ -269,7 +269,7 @@ end
 
 scripts.click_play = {}
 
-function scripts.click_play.update(this, store, script)
+function scripts.click_play.update(this, store)
     local s = this.render.sprites[1]
     local c = this.click_play
     local clicks = 0
@@ -527,7 +527,7 @@ function scripts.enemy_basic.get_info(this)
     return info
 end
 
-function scripts.enemy_basic.insert(this, store, script)
+function scripts.enemy_basic.insert(this, store)
     local next, new = P:next_entity_node(this, store.tick_length)
 
     if not next then
@@ -591,13 +591,13 @@ function scripts.enemy_basic.insert(this, store, script)
     return true
 end
 
-function scripts.enemy_basic.remove(this, store, script)
+function scripts.enemy_basic.remove(this, store)
     return true
 end
 
 scripts.enemy_passive = {}
 
-function scripts.enemy_passive.update(this, store, script)
+function scripts.enemy_passive.update(this, store)
     local terrain_type
 
     if this.render.sprites[1].name == "raise" then
@@ -636,7 +636,7 @@ end
 
 scripts.enemy_mixed = {}
 
-function scripts.enemy_mixed.update(this, store, script)
+function scripts.enemy_mixed.update(this, store)
     if this.render.sprites[1].name == "raise" then
         if this.sound_events and this.sound_events.raise then
             S:queue(this.sound_events.raise, this.sound_events.raise_args)
@@ -703,7 +703,7 @@ end
 
 scripts.enemy_mixed_water = {}
 
-function scripts.enemy_mixed_water.update(this, store, script)
+function scripts.enemy_mixed_water.update(this, store)
     local terrain_type
     local water_trail = E:create_entity("ps_water_trail")
 
@@ -769,7 +769,7 @@ end
 
 scripts.enemy_mixed_cliff = {}
 
-function scripts.enemy_mixed_cliff.update(this, store, script)
+function scripts.enemy_mixed_cliff.update(this, store)
     local terrain_type
 
     ::label_27_0::
@@ -825,7 +825,7 @@ end
 
 scripts.enemies_spawner = {}
 
-function scripts.enemies_spawner.update(this, store, script)
+function scripts.enemies_spawner.update(this, store)
     local sp = this.spawner
     local last_subpath = 0
     local cg
@@ -1016,7 +1016,7 @@ function scripts.soldier_reinforcement.get_info(this)
     return scripts.soldier_barrack.get_info(this)
 end
 
-function scripts.soldier_reinforcement.insert(this, store, script)
+function scripts.soldier_reinforcement.insert(this, store)
     if this.melee then
         this.melee.order = U.attack_order(this.melee.attacks)
     end
@@ -1033,7 +1033,7 @@ function scripts.soldier_reinforcement.insert(this, store, script)
     return true
 end
 
-function scripts.soldier_reinforcement.update(this, store, script)
+function scripts.soldier_reinforcement.update(this, store)
     local brk, stam, star
 
     this.reinforcement.ts = store.tick_ts
@@ -1237,7 +1237,7 @@ function scripts.soldier_barrack.get_info(this)
     }
 end
 
-function scripts.soldier_barrack.insert(this, store, script)
+function scripts.soldier_barrack.insert(this, store)
     if this.melee then
         this.melee.order = U.attack_order(this.melee.attacks)
     end
@@ -1305,11 +1305,11 @@ function scripts.soldier_barrack.insert(this, store, script)
     return true
 end
 
-function scripts.soldier_barrack.remove(this, store, script)
+function scripts.soldier_barrack.remove(this, store)
     return true
 end
 
-function scripts.soldier_barrack.update(this, store, script)
+function scripts.soldier_barrack.update(this, store)
     local brk, sta
 
     if this.vis._bans then
@@ -1472,7 +1472,7 @@ end
 
 scripts.tower_build = {}
 
-function scripts.tower_build.update(this, store, script)
+function scripts.tower_build.update(this, store)
     local start_ts = store.tick_ts
 
     this.render.sprites[4].ts = start_ts
@@ -1521,11 +1521,11 @@ end
 
 scripts.tower_archer = {}
 
-function scripts.tower_archer.insert(this, store, script)
+function scripts.tower_archer.insert(this, store)
     return true
 end
 
-function scripts.tower_archer.update(this, store, script)
+function scripts.tower_archer.update(this, store)
     local at = this.attacks
     local a = this.attacks.list[1]
     local shooter_sprite_ids = table.slice({3, 4, 5}, 1, #a.bullet_start_offset)
@@ -1656,11 +1656,11 @@ function scripts.tower_mage.get_info(this)
     return o
 end
 
-function scripts.tower_mage.insert(this, store, script)
+function scripts.tower_mage.insert(this, store)
     return true
 end
 
-function scripts.tower_mage.update(this, store, script)
+function scripts.tower_mage.update(this, store)
     local tower_sid = this.render.sid_tower
     local shooter_sid = this.render.sid_shooter
     local last_target_pos
@@ -1751,11 +1751,11 @@ end
 
 scripts.tower_engineer = {}
 
-function scripts.tower_engineer.insert(this, store, script)
+function scripts.tower_engineer.insert(this, store)
     return true
 end
 
-function scripts.tower_engineer.update(this, store, script)
+function scripts.tower_engineer.update(this, store)
     local a = this.attacks
     local ba = this.attacks.list[1]
 
@@ -1859,7 +1859,7 @@ function scripts.tower_barrack.get_info(this)
     }
 end
 
-function scripts.tower_barrack.insert(this, store, script)
+function scripts.tower_barrack.insert(this, store)
     if not this.barrack.rally_pos and this.tower.default_rally_pos then
         this.barrack.rally_pos = V.vclone(this.tower.default_rally_pos)
     end
@@ -1867,7 +1867,7 @@ function scripts.tower_barrack.insert(this, store, script)
     return true
 end
 
-function scripts.tower_barrack.remove(this, store, script)
+function scripts.tower_barrack.remove(this, store)
     for _, s in pairs(this.barrack.soldiers) do
         if s.health then
             s.health.dead = true
@@ -1879,7 +1879,7 @@ function scripts.tower_barrack.remove(this, store, script)
     return true
 end
 
-function scripts.tower_barrack.update(this, store, script)
+function scripts.tower_barrack.update(this, store)
     local tower_sid = 2
     local door_sid = 3
 
@@ -1984,7 +1984,7 @@ function scripts.tower_barrack_mercenaries.get_info(this)
         desc = _((this.info.i18n_key or string.upper(this.template_name)) .. "_DESCRIPTION")
     }
 end
-function scripts.tower_barrack_mercenaries.update(this, store, script)
+function scripts.tower_barrack_mercenaries.update(this, store)
     local b = this.barrack
     local door_sid = this.render.door_sid or 2
     while true do
@@ -2114,7 +2114,7 @@ end
 
 scripts.arrow = {}
 
-function scripts.arrow.insert(this, store, script)
+function scripts.arrow.insert(this, store)
     local b = this.bullet
     local target = store.entities[b.target_id]
 
@@ -2131,20 +2131,21 @@ function scripts.arrow.insert(this, store, script)
     end
 
     if b.predict_target_pos then
-        local err_x, err_y = 0, 0
+        -- local err_x, err_y = 0, 0
 
-        if b.prediction_error then
-            err_x = target.motion.speed.x == 0 and 0 or U.frandom(0, 1) * 10
-            err_y = target.motion.speed.y == 0 and 0 or U.frandom(0, 1) * -10
-        end
+        -- if b.prediction_error then
+        --     err_x = target.motion.speed.x == 0 and 0 or U.frandom(0, 1) * 10
+        --     err_y = target.motion.speed.y == 0 and 0 or U.frandom(0, 1) * -10
+        -- end
 
-        b.to.x = b.to.x + target.motion.speed.x * b.flight_time + err_x
-        b.to.y = b.to.y + target.motion.speed.y * b.flight_time + err_y
+        -- b.to.x = b.to.x + target.motion.speed.x * b.flight_time + err_x
+        -- b.to.y = b.to.y + target.motion.speed.y * b.flight_time + err_y
+        b.to.x = b.to.x + target.motion.speed.x * b.flight_time
+        b.to.y = b.to.y + target.motion.speed.y * b.flight_time
     end
 
     b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
     b.ts = store.tick_ts
-    b.last_pos = V.vclone(b.from)
 
     if b.rotation_speed then
         b.rotation_speed = b.rotation_speed * (b.to.x > this.pos.x and -1 or 1)
@@ -2161,7 +2162,7 @@ function scripts.arrow.insert(this, store, script)
     return true
 end
 
-function scripts.arrow.update(this, store, script)
+function scripts.arrow.update(this, store)
     local b = this.bullet
     local ps
     local s = this.render.sprites[1]
@@ -2173,16 +2174,22 @@ function scripts.arrow.update(this, store, script)
 
         queue_insert(store, ps)
     end
+    local last_ts = store.tick_ts
+    local v_x = b.speed.x
+    local v_y = b.speed.y
+    local this_pos = this.pos
+    this_pos.x, this_pos.y = b.from.x, b.from.y
+    local expected_stop_time = b.ts + b.flight_time - store.tick_length
 
-    while store.tick_ts - b.ts + store.tick_length <= b.flight_time do
+    while store.tick_ts <= expected_stop_time do
         coroutine.yield()
-        b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
-        this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
-
+        local dt = store.tick_ts - last_ts
+        this_pos.x = this_pos.x + v_x * dt
+        this_pos.y = this_pos.y + v_y * dt
         if b.rotation_speed then
             s.r = s.r + b.rotation_speed * store.tick_length
         else
-            s.r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+            s.r = math.atan2(v_y, v_x)
 
             if b.asymmetrical and math.abs(s.r) > math.pi * 0.5 then
                 s.flip_y = true
@@ -2195,18 +2202,31 @@ function scripts.arrow.update(this, store, script)
 
         if b.hide_radius then
             local hide_radius_squared = b.hide_radius * b.hide_radius
-            s.hidden = V.dist2(this.pos.x, this.pos.y, b.from.x, b.from.y) < hide_radius_squared or
-                           V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) < hide_radius_squared
+            s.hidden = V.dist2(this_pos.x, this_pos.y, b.from.x, b.from.y) < hide_radius_squared or
+                           V.dist2(this_pos.x, this_pos.y, b.to.x, b.to.y) < hide_radius_squared
 
             if ps then
                 ps.particle_system.emit = not s.hidden
             end
         end
+
+        v_y = v_y + b.g * dt
+        last_ts = store.tick_ts
     end
 
     local hit = false
 
     if target and target.health and not target.health.dead then
+        -- print("b.to")
+        -- debug_macros.print(b.to)
+        -- print("b.from")
+        -- debug_macros.print(b.from)
+        -- print("this.pos")
+        -- debug_macros.print(this.pos)
+        -- print("flight_time")
+        -- debug_macros.print(b.flight_time)
+        -- print("delta_x/speed.x")
+        -- debug_macros.print((b.to.x - b.from.x) / b.speed.x)
         local target_pos = V.vclone(target.pos)
 
         if target.unit and target.unit.hit_offset and not b.ignore_hit_offset then
@@ -2214,7 +2234,7 @@ function scripts.arrow.update(this, store, script)
                 target_pos.y + target.unit.hit_offset.y
         end
 
-        if V.dist2(this.pos.x, this.pos.y, target_pos.x, target_pos.y) < b.hit_distance * b.hit_distance * 1.44 and
+        if V.dist2(this_pos.x, this_pos.y, target_pos.x, target_pos.y) < b.hit_distance * b.hit_distance * 1.44 and
             not SU.unit_dodges(store, target, true) and (not b.hit_chance or math.random() < b.hit_chance) then
             hit = true
             local d = SU.create_bullet_damage(b, target.id, this.id)
@@ -2364,17 +2384,21 @@ function scripts.arrow_missile.update(this, store)
 
         queue_insert(store, ps)
     end
-
-    while store.tick_ts - b.ts + store.tick_length <= b.flight_time do
+    local expected_stop_time = b.ts + b.flight_time - store.tick_length
+    local v_x = b.speed.x
+    local v_y = b.speed.y
+    local last_ts = store.tick_ts
+    this.pos.x, this.pos.y = b.from.x, b.from.y
+    while store.tick_ts <= expected_stop_time do
         coroutine.yield()
-        b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
-        this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+        local dt = store.tick_ts - last_ts
+        this.pos.x = this.pos.x + v_x * dt
+        this.pos.y = this.pos.y + v_y * dt
 
         if b.rotation_speed then
             s.r = s.r + b.rotation_speed * store.tick_length
         else
-            s.r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
-
+            s.r = math.atan2(v_y, v_x)
             if b.asymmetrical and math.abs(s.r) > math.pi * 0.5 then
                 s.flip_y = true
             end
@@ -2393,6 +2417,8 @@ function scripts.arrow_missile.update(this, store)
                 ps.particle_system.emit = not s.hidden
             end
         end
+        v_y = v_y + b.g * dt
+        last_ts = store.tick_ts
         target = store.entities[b.target_id]
         if not target or target.health.dead then
             break
@@ -2627,7 +2653,7 @@ end
 
 scripts.arrow_endless_multishot = {}
 
-function scripts.arrow_endless_multishot.insert(this, store, script)
+function scripts.arrow_endless_multishot.insert(this, store)
     if this._endless_multishot > 0 then
         local targets = U.find_enemies_in_range(store, this.bullet.to, 0, 100, this.bullet.vis_flags,
             this.bullet.vis_bans)
@@ -2652,7 +2678,7 @@ function scripts.arrow_endless_multishot.insert(this, store, script)
     return true
 end
 scripts.mod_health_damage_factor_inc = {}
-function scripts.mod_health_damage_factor_inc.insert(this, store, script)
+function scripts.mod_health_damage_factor_inc.insert(this, store)
     if this.modifier.target_id then
         local target = store.entities[this.modifier.target_id]
 
@@ -2665,7 +2691,7 @@ function scripts.mod_health_damage_factor_inc.insert(this, store, script)
 end
 scripts.bomb = {}
 
-function scripts.bomb.insert(this, store, script)
+function scripts.bomb.insert(this, store)
     local b = this.bullet
 
     b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
@@ -2684,7 +2710,7 @@ function scripts.bomb.insert(this, store, script)
     return true
 end
 
-function scripts.bomb.update(this, store, script)
+function scripts.bomb.update(this, store)
     local b = this.bullet
     local dmin, dmax = b.damage_min, b.damage_max
     local dradius = b.damage_radius
@@ -2712,25 +2738,35 @@ function scripts.bomb.update(this, store, script)
         queue_insert(store, ps)
     end
 
-    while store.tick_ts - b.ts + store.tick_length < b.flight_time do
+    local expected_stop_time = b.ts + b.flight_time - store.tick_length
+    local this_pos = this.pos
+    this_pos.x = b.from.x
+    this_pos.y = b.from.y
+    local v_x = b.speed.x
+    local v_y = b.speed.y
+    local last_ts = store.tick_ts
+    local sprites = this.render.sprites
+    while store.tick_ts < expected_stop_time do
         coroutine.yield()
-
-        b.last_pos.x, b.last_pos.y = this.pos.x, this.pos.y
-        this.pos.x, this.pos.y = SU.position_in_parabola(store.tick_ts - b.ts, b.from, b.speed, b.g)
+        local dt = store.tick_ts - last_ts
+        this_pos.x = this_pos.x + v_x * dt
+        this_pos.y = this_pos.y + v_y * dt
 
         if b.align_with_trajectory then
-            this.render.sprites[1].r = V.angleTo(this.pos.x - b.last_pos.x, this.pos.y - b.last_pos.y)
+            sprites[1].r = math.atan2(v_y, v_x)
         elseif b.rotation_speed then
-            this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
+            sprites[1].r = sprites[1].r + b.rotation_speed * store.tick_length
         end
 
         if b.hide_radius then
-            this.render.sprites[1].hidden = V.dist2(this.pos.x, this.pos.y, b.from.x, b.from.y) < b.hide_radius ^ 2 or
-                                                V.dist2(this.pos.x, this.pos.y, b.to.x, b.to.y) < b.hide_radius ^ 2
+            sprites[1].hidden = V.dist2(this_pos.x, this_pos.y, b.from.x, b.from.y) < b.hide_radius * b.hide_radius or
+                                                V.dist2(this_pos.x, this_pos.y, b.to.x, b.to.y) < b.hide_radius * b.hide_radius
         end
+        v_y = v_y + b.g * dt
+        last_ts = last_ts + dt
     end
 
-    local enemies = U.find_enemies_in_range(store, b.to, 0, dradius, b.damage_flags, b.damage_bans)
+    local enemies = U.find_enemies_in_range_filter_off(this_pos, dradius, b.damage_flags, b.damage_bans)
     if enemies then
         for i = 1, #enemies do
             local enemy = enemies[i]
@@ -2848,7 +2884,7 @@ end
 
 scripts.enemy_bomb = {}
 
-function scripts.enemy_bomb.insert(this, store, script)
+function scripts.enemy_bomb.insert(this, store)
     local b = this.bullet
 
     if b.flight_time_base and b.flight_time_factor then
@@ -2869,7 +2905,7 @@ function scripts.enemy_bomb.insert(this, store, script)
     return true
 end
 
-function scripts.enemy_bomb.update(this, store, script)
+function scripts.enemy_bomb.update(this, store)
     local b = this.bullet
     local ps
 
@@ -2986,7 +3022,7 @@ end
 
 scripts.missile = {}
 
-function scripts.missile.insert(this, store, script)
+function scripts.missile.insert(this, store)
     local b = this.bullet
     local ps = E:create_entity(b.particles_name)
 
@@ -2997,7 +3033,7 @@ function scripts.missile.insert(this, store, script)
     return true
 end
 
-function scripts.missile.update(this, store, script)
+function scripts.missile.update(this, store)
     local b = this.bullet
     local target = store.entities[b.target_id]
     local mspeed = b.min_speed
@@ -3214,7 +3250,7 @@ end
 
 scripts.enemy_missile = {}
 
-function scripts.enemy_missile.update(this, store, script)
+function scripts.enemy_missile.update(this, store)
     local b = this.bullet
     local target = store.entities[b.target_id]
     local mspeed = b.min_speed
@@ -3363,7 +3399,7 @@ end
 
 scripts.bolt_enemy = {}
 
-function scripts.bolt_enemy.insert(this, store, script)
+function scripts.bolt_enemy.insert(this, store)
     local b = this.bullet
 
     b.speed.x, b.speed.y = V.normalize(b.to.x - b.from.x, b.to.y - b.from.y)
@@ -3373,7 +3409,7 @@ function scripts.bolt_enemy.insert(this, store, script)
     return true
 end
 
-function scripts.bolt_enemy.update(this, store, script)
+function scripts.bolt_enemy.update(this, store)
     local b = this.bullet
     local mspeed = b.min_speed
     local target, ps
@@ -3489,7 +3525,7 @@ end
 
 scripts.bolt = {}
 
-function scripts.bolt.insert(this, store, script)
+function scripts.bolt.insert(this, store)
     local b = this.bullet
 
     if b.target_id then
@@ -3513,7 +3549,7 @@ function scripts.bolt.insert(this, store, script)
     return true
 end
 
-function scripts.bolt.update(this, store, script)
+function scripts.bolt.update(this, store)
     local b = this.bullet
     local s = this.render.sprites[1]
     local mspeed = b.min_speed
@@ -3671,7 +3707,7 @@ function scripts.bolt.update(this, store, script)
 end
 
 scripts.bolt_trace_target = {}
-function scripts.bolt_trace_target.update(this, store, script)
+function scripts.bolt_trace_target.update(this, store)
     local b = this.bullet
     local s = this.render.sprites[1]
     local mspeed = b.min_speed
@@ -3867,11 +3903,11 @@ end
 
 scripts.bolt_blast = {}
 
-function scripts.bolt_blast.insert(this, store, script)
+function scripts.bolt_blast.insert(this, store)
     return true
 end
 
-function scripts.bolt_blast.update(this, store, script)
+function scripts.bolt_blast.update(this, store)
     local b = this.bullet
     local dradius = b.damage_radius + b.level * b.damage_radius_inc
     local dmin = b.damage_min + b.level * b.damage_inc
@@ -3905,7 +3941,7 @@ end
 
 scripts.shotgun = {}
 
-function scripts.shotgun.insert(this, store, script)
+function scripts.shotgun.insert(this, store)
     local b = this.bullet
 
     if b.start_fx then
@@ -3927,7 +3963,7 @@ function scripts.shotgun.insert(this, store, script)
     return true
 end
 
-function scripts.shotgun.update(this, store, script)
+function scripts.shotgun.update(this, store)
     local b = this.bullet
     local target = store.entities[b.target_id]
     local speed = b.min_speed
@@ -4176,7 +4212,7 @@ end
 
 scripts.ray_enemy = {}
 
-function scripts.ray_enemy.update(this, store, script)
+function scripts.ray_enemy.update(this, store)
     local b = this.bullet
     local s = this.render.sprites[1]
     local target = store.entities[b.target_id]
@@ -4551,7 +4587,7 @@ end
 
 scripts.aura_apply_mod = {}
 
-function scripts.aura_apply_mod.insert(this, store, script)
+function scripts.aura_apply_mod.insert(this, store)
     this.aura.ts = store.tick_ts
 
     if this.render then
@@ -4578,7 +4614,7 @@ function scripts.aura_apply_mod.insert(this, store, script)
     return true
 end
 
-function scripts.aura_apply_mod.update(this, store, script)
+function scripts.aura_apply_mod.update(this, store)
     local first_hit_ts
     local last_hit_ts = 0
     local cycles_count = 0
@@ -4740,7 +4776,7 @@ end
 
 scripts.aura_apply_damage = {}
 
-function scripts.aura_apply_damage.update(this, store, script)
+function scripts.aura_apply_damage.update(this, store)
     this.aura.ts = store.tick_ts
 
     local last_hit_ts = 0
@@ -4924,7 +4960,7 @@ end
 
 scripts.tunnel = {}
 
-function scripts.tunnel.update(this, store, script)
+function scripts.tunnel.update(this, store)
     local tu = this.tunnel
 
     if not tu.pick_ni then
@@ -5019,7 +5055,7 @@ end
 
 scripts.decal_tunnel_light = {}
 
-function scripts.decal_tunnel_light.update(this, store, script)
+function scripts.decal_tunnel_light.update(this, store)
     if this.track_names then
         if not this.track_ids then
             this.track_ids = {}
@@ -5125,7 +5161,7 @@ function scripts.mod_mark_flags.dequeue(this, store, insertion)
     end
 end
 
-function scripts.mod_mark_flags.update(this, store, script)
+function scripts.mod_mark_flags.update(this, store)
     local m = this.modifier
 
     m.ts = store.tick_ts
@@ -5145,7 +5181,7 @@ end
 
 scripts.mod_track_target = {}
 
-function scripts.mod_track_target.insert(this, store, script)
+function scripts.mod_track_target.insert(this, store)
     local m = this.modifier
     local target = store.entities[m.target_id]
 
@@ -5176,7 +5212,7 @@ function scripts.mod_track_target.insert(this, store, script)
     return true
 end
 
-function scripts.mod_track_target.update(this, store, script)
+function scripts.mod_track_target.update(this, store)
     local m = this.modifier
 
     this.modifier.ts = store.tick_ts
@@ -5377,7 +5413,7 @@ end
 
 scripts.mod_stun = {}
 
-function scripts.mod_stun.insert(this, store, script)
+function scripts.mod_stun.insert(this, store)
     local m = this.modifier
     local target = store.entities[m.target_id]
 
@@ -5440,7 +5476,7 @@ function scripts.mod_stun.insert(this, store, script)
     return true
 end
 
-function scripts.mod_stun.update(this, store, script)
+function scripts.mod_stun.update(this, store)
     local start_ts, target_hidden
     local m = this.modifier
     local target = store.entities[this.modifier.target_id]
@@ -5533,7 +5569,7 @@ function scripts.mod_stun.update(this, store, script)
     queue_remove(store, this)
 end
 
-function scripts.mod_stun.remove(this, store, script)
+function scripts.mod_stun.remove(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if target then
@@ -5549,7 +5585,7 @@ end
 
 scripts.mod_dps = {}
 
-function scripts.mod_dps.insert(this, store, script)
+function scripts.mod_dps.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target or target.health.dead then
@@ -5589,7 +5625,7 @@ function scripts.mod_dps.insert(this, store, script)
     return true
 end
 
-function scripts.mod_dps.update(this, store, script)
+function scripts.mod_dps.update(this, store)
     local cycles, total_damage = 0, 0
     local m = this.modifier
     local dps = this.dps
@@ -5703,7 +5739,7 @@ end
 
 scripts.mod_blood = {}
 
-function scripts.mod_blood.update(this, store, script)
+function scripts.mod_blood.update(this, store)
     local cycles, total_damage = 0, 0
     local m = this.modifier
     local dps = this.dps
@@ -5819,7 +5855,7 @@ end
 
 scripts.mod_hps = {}
 
-function scripts.mod_hps.insert(this, store, script)
+function scripts.mod_hps.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target or not target.health or target.health.dead then
@@ -5850,7 +5886,7 @@ function scripts.mod_hps.insert(this, store, script)
     return true
 end
 
-function scripts.mod_hps.update(this, store, script)
+function scripts.mod_hps.update(this, store)
     local m = this.modifier
     local hps = this.hps
     local duration = m.duration
@@ -5930,7 +5966,7 @@ end
 
 scripts.mod_armor_buff = {}
 
-function scripts.mod_armor_buff.insert(this, store, script)
+function scripts.mod_armor_buff.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target or target.health.dead or target.enemy and not target.enemy.can_accept_magic then
@@ -5978,7 +6014,7 @@ function scripts.mod_armor_buff.insert(this, store, script)
     return true
 end
 
-function scripts.mod_armor_buff.remove(this, store, script)
+function scripts.mod_armor_buff.remove(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if target then
@@ -5997,7 +6033,7 @@ function scripts.mod_armor_buff.remove(this, store, script)
     return true
 end
 
-function scripts.mod_armor_buff.update(this, store, script)
+function scripts.mod_armor_buff.update(this, store)
     local buff = this.armor_buff
     local m = this.modifier
     local last_ts = store.tick_ts
@@ -6085,7 +6121,7 @@ end
 
 scripts.mod_silence = {}
 
-function scripts.mod_silence.insert(this, store, script)
+function scripts.mod_silence.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target or target.health.dead or not target.enemy then
@@ -6116,7 +6152,7 @@ function scripts.mod_silence.insert(this, store, script)
     return true
 end
 
-function scripts.mod_silence.remove(this, store, script)
+function scripts.mod_silence.remove(this, store)
     local target = store.entities[this.modifier.target_id]
 
     scripts.remove_silence(target, store)
@@ -6126,7 +6162,7 @@ end
 
 scripts.mod_damage_factors = {}
 
-function scripts.mod_damage_factors.insert(this, store, script)
+function scripts.mod_damage_factors.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target or target.health.dead or not target.unit then
@@ -6163,7 +6199,7 @@ function scripts.mod_damage_factors.insert(this, store, script)
     return true
 end
 
-function scripts.mod_damage_factors.remove(this, store, script)
+function scripts.mod_damage_factors.remove(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if target and target.health and target.unit then
@@ -6181,7 +6217,7 @@ end
 
 scripts.mod_slow = {}
 
-function scripts.mod_slow.insert(this, store, script)
+function scripts.mod_slow.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target or target.health.dead or not target.motion or target.motion.invulnerable then
@@ -6203,7 +6239,7 @@ function scripts.mod_slow.insert(this, store, script)
     return true
 end
 
-function scripts.mod_slow.remove(this, store, script)
+function scripts.mod_slow.remove(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if target and target.health and target.motion then
@@ -6290,7 +6326,7 @@ end
 
 scripts.mod_tower_block = {}
 
-function scripts.mod_tower_block.update(this, store, script)
+function scripts.mod_tower_block.update(this, store)
     local m = this.modifier
     local target = store.entities[m.target_id]
 
@@ -6328,7 +6364,7 @@ end
 
 scripts.mod_tower_silence = {}
 
-function scripts.mod_tower_silence.update(this, store, script)
+function scripts.mod_tower_silence.update(this, store)
     local m = this.modifier
     local target = store.entities[m.target_id]
 
@@ -6371,7 +6407,7 @@ end
 
 scripts.mod_tower_remove = {}
 
-function scripts.mod_tower_remove.update(this, store, script)
+function scripts.mod_tower_remove.update(this, store)
     local m = this.modifier
     local target = store.entities[m.target_id]
 
@@ -6480,7 +6516,7 @@ function scripts.mod_heal_on_damage.update(this, store)
 end
 
 scripts.mod_heal_on_kill = {}
-function scripts.mod_heal_on_kill.insert(this, store, script)
+function scripts.mod_heal_on_kill.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target then
@@ -6497,7 +6533,7 @@ function scripts.mod_heal_on_kill.insert(this, store, script)
 
     return true
 end
-function scripts.mod_heal_on_kill.update(this, store, script)
+function scripts.mod_heal_on_kill.update(this, store)
     local m = this.modifier
     local hok = this.heal_on_kill
     local target = store.entities[m.target_id]
@@ -6552,7 +6588,7 @@ function scripts.mod_heal_on_kill.update(this, store, script)
 end
 
 scripts.mod_gain_on_kill = {}
-function scripts.mod_gain_on_kill.insert(this, store, script)
+function scripts.mod_gain_on_kill.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target then
@@ -6569,7 +6605,7 @@ function scripts.mod_gain_on_kill.insert(this, store, script)
 
     return true
 end
-function scripts.mod_gain_on_kill.update(this, store, script)
+function scripts.mod_gain_on_kill.update(this, store)
     local m = this.modifier
     local target = store.entities[m.target_id]
     this.pos = target.pos
@@ -6665,7 +6701,7 @@ function scripts.mod_gain_on_kill.update(this, store, script)
 end
 scripts.mod_simple_lifesteal = {}
 
-function scripts.mod_simple_lifesteal.insert(this, store, script)
+function scripts.mod_simple_lifesteal.insert(this, store)
     local source = store.entities[this.modifier.source_id]
 
     if source and source.health then
@@ -6677,7 +6713,7 @@ end
 
 scripts.mod_damage = {}
 
-function scripts.mod_damage.insert(this, store, script)
+function scripts.mod_damage.insert(this, store)
     local target = store.entities[this.modifier.target_id]
 
     if not target or not target.health or target.health.dead then
@@ -6927,7 +6963,7 @@ end
 
 scripts.mod_polymorph = {}
 
-function scripts.mod_polymorph.insert(this, store, script)
+function scripts.mod_polymorph.insert(this, store)
     local m = this.modifier
     local target = store.entities[m.target_id]
 
@@ -7005,11 +7041,11 @@ end
 
 scripts.background_sounds = {}
 
-function scripts.background_sounds.insert(this, store, script)
+function scripts.background_sounds.insert(this, store)
     return true
 end
 
-function scripts.background_sounds.update(this, store, script)
+function scripts.background_sounds.update(this, store)
     while true do
         local delay = math.random(this.min_delay, this.max_delay)
 
@@ -7600,7 +7636,7 @@ function scripts.power_fireball_control.can_select_point(this, x, y, store)
                    store.level:fn_can_power(store, GUI_MODE_POWER_1, V.v(x, y)) or GR:cell_is(x, y, TERRAIN_WATER))
 end
 
-function scripts.power_fireball_control.update(this, store, script)
+function scripts.power_fireball_control.update(this, store)
     local start_y = store.visible_coords and store.visible_coords.top or REF_H
     local ts
     local burst_interval = 0.33
@@ -7692,7 +7728,7 @@ end
 
 scripts.power_fireball = {}
 
-function scripts.power_fireball.update(this, store, script)
+function scripts.power_fireball.update(this, store)
     local b = this.bullet
     local mspeed = 13 * FPS
     local particle = E:create_entity("ps_power_fireball")
@@ -7812,7 +7848,7 @@ function scripts.power_reinforcements_control.can_select_point(this, x, y)
 end
 
 -- 经证实，该代码并没有被执行
-function scripts.power_reinforcements_control.insert(this, store, script)
+function scripts.power_reinforcements_control.insert(this, store)
     local x, y = this.pos.x, this.pos.y
 
     local i1 = math.random(1, 3)
@@ -8005,7 +8041,7 @@ end
 
 scripts.user_item_atomic_bomb = {}
 
-function scripts.user_item_atomic_bomb.update(this, store, script)
+function scripts.user_item_atomic_bomb.update(this, store)
     local plane = E:create_entity("decal_atomic_bomb_plane")
 
     plane.pos.x, plane.pos.y = this.pos.x, this.pos.y
@@ -8019,13 +8055,13 @@ end
 
 scripts.decal_atomic_bomb_plane = {}
 
-function scripts.decal_atomic_bomb_plane.insert(this, store, script)
+function scripts.decal_atomic_bomb_plane.insert(this, store)
     this.render.sprites[5].offset.y = this.bomb_dest.y - this.pos.y
 
     return true
 end
 
-function scripts.decal_atomic_bomb_plane.update(this, store, script)
+function scripts.decal_atomic_bomb_plane.update(this, store)
     local initial_y = this.pos.y
     local s_bomb = this.render.sprites[3]
     local bomb = E:create_entity("atomic_bomb")
@@ -8151,7 +8187,7 @@ end
 
 scripts.user_item_atomic_freeze = {}
 
-function scripts.user_item_atomic_freeze.insert(this, store, script)
+function scripts.user_item_atomic_freeze.insert(this, store)
     for _, e in pairs(store.entities) do
         if e.template_name == this.template_name then
             log.debug("atomic_freeze already exists, force silent removal")
@@ -8164,7 +8200,7 @@ function scripts.user_item_atomic_freeze.insert(this, store, script)
     return true
 end
 
-function scripts.user_item_atomic_freeze.update(this, store, script)
+function scripts.user_item_atomic_freeze.update(this, store)
     this.ts = store.tick_ts
 
     signal.emit("atomic-freeze-starts")
@@ -8225,7 +8261,7 @@ function scripts.user_item_freeze.can_select_point(this, x, y)
     return P:valid_node_nearby(x, y, nil, NF_POWER_1)
 end
 
-function scripts.user_item_freeze.insert(this, store, script)
+function scripts.user_item_freeze.insert(this, store)
     local x, y = this.pos.x, this.pos.y
     local b = this.bullet
 
@@ -8291,7 +8327,7 @@ function scripts.user_item_dynamite.can_select_point(this, x, y)
     return P:valid_node_nearby(x, y, nil, NF_POWER_1)
 end
 
-function scripts.user_item_dynamite.insert(this, store, script)
+function scripts.user_item_dynamite.insert(this, store)
     local x, y = this.pos.x, this.pos.y
     local b = this.bullet
 
@@ -8455,7 +8491,7 @@ end
 
 scripts.bomb_bouncing = {}
 
-function scripts.bomb_bouncing.insert(this, store, script)
+function scripts.bomb_bouncing.insert(this, store)
     local b = this.bullet
 
     b.speed = SU.initial_parabola_speed(b.from, b.to, b.flight_time, b.g)
@@ -8474,7 +8510,7 @@ function scripts.bomb_bouncing.insert(this, store, script)
     return true
 end
 
-function scripts.bomb_bouncing.update(this, store, script)
+function scripts.bomb_bouncing.update(this, store)
     local b = this.bullet
     local dmin, dmax = b.damage_min, b.damage_max
     local dradius = b.damage_radius
@@ -8766,10 +8802,10 @@ end
 
 scripts.arrow5_fixed_height = {}
 
-function scripts.arrow5_fixed_height.insert(this, store, script)
+function scripts.arrow5_fixed_height.insert(this, store)
     this.bullet.flight_time = 2 * (math.sqrt(2 * this.bullet.fixed_height * this.bullet.g * -1) / this.bullet.g * -1)
 
-    return scripts.arrow.insert(this, store, script)
+    return scripts.arrow.insert(this, store)
 end
 
 return scripts

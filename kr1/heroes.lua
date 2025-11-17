@@ -2508,7 +2508,7 @@ tt.hero.skills.chainspell.xp_level_steps = {
     [8] = 3
 }
 tt.hero.skills.disintegrate = CC("hero_skill")
-tt.hero.skills.disintegrate.total_damage = {250, 500, 750}
+tt.hero.skills.disintegrate.total_damage = {300, 600, 900}
 tt.hero.skills.disintegrate.count = {4, 6, 8}
 tt.hero.skills.disintegrate.xp_gain = {20, 35, 50}
 tt.hero.skills.disintegrate.xp_level_steps = {
@@ -2529,6 +2529,14 @@ tt.hero.skills.arcanefocus.xp_level_steps = {
     [1] = 1,
     [4] = 2,
     [7] = 3
+}
+tt.hero.skills.arcanetorrent = CC("hero_skill")
+tt.hero.skills.arcanetorrent.factor = {0.04, 0.05, 0.06, 0.07}
+tt.hero.skills.arcanetorrent.xp_level_steps = {
+    [1] = 1,
+    [4] = 2,
+    [7] = 3,
+    [10] = 4
 }
 tt.health.armor = nil
 tt.health.dead_lifetime = 15
@@ -2610,6 +2618,8 @@ tt.ranged.attacks[2].cooldown = 4
 tt.ranged.attacks[2].bullet = "ray_wizard_chain"
 tt.ranged.attacks[2].xp_from_skill = "chainspell"
 tt.arcanefocus_extra = 0
+tt.arcanetorrent_factor = 0
+tt.arcanetorrent_factor_base = 0.04
 
 tt = RT("fx_wizard_disintegrate", "fx")
 tt.render.sprites[1].name = "fx_wizard_disintegrate"
@@ -3750,7 +3760,7 @@ tt.hero.skills.kraken.xp_level_steps = {
 }
 tt.hero.skills.scattershot = CC("hero_skill")
 tt.hero.skills.scattershot.fragments = {4, 6, 8}
-tt.hero.skills.scattershot.fragment_damage = {12, 14, 15}
+tt.hero.skills.scattershot.fragment_damage = {12, 15, 18}
 tt.hero.skills.scattershot.xp_gain = {40, 80, 120}
 tt.hero.skills.scattershot.xp_level_steps = {
     [2] = 1,
@@ -4876,7 +4886,7 @@ tt.hero.skills.abduction.xp_level_steps = {
 }
 tt.hero.skills.abduction.xp_gain = {100, 150, 200}
 tt.hero.skills.vibroblades = CC("hero_skill")
-tt.hero.skills.vibroblades.extra_damage = {10, 15, 20}
+tt.hero.skills.vibroblades.extra_damage = {10, 20, 30}
 tt.hero.skills.vibroblades.damage_type = DAMAGE_TRUE
 tt.hero.skills.vibroblades.xp_level_steps = {
     [1] = 1,
@@ -4890,6 +4900,7 @@ tt.hero.skills.finalcountdown.xp_level_steps = {
     [4] = 2,
     [7] = 3
 }
+tt.vibroblades_extra = 10
 tt.hero.skills.finalcountdown.xp_gain = {100, 200, 300}
 tt.health.armor = nil
 tt.health.dead_lifetime = 6
@@ -4925,7 +4936,8 @@ tt.melee.attacks[1].cooldown = 1
 tt.melee.attacks[1].sound = "MeleeSword"
 tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.melee.attacks[1].vis_flags = F_BLOCK
-tt.melee.attacks[1].xp_gain_factor = 2.5
+tt.melee.attacks[1].xp_gain_factor = 2.7
+tt.melee.attacks[1].side_effect = scripts.hero_alien.vibroblades_side_effect
 tt.ranged.attacks[1] = CC("bullet_attack")
 tt.ranged.attacks[1].disabled = true
 tt.ranged.attacks[1].bullet = "alien_glaive"
@@ -5109,6 +5121,7 @@ tt.sound_events.finish = "HeroAlienDroneLeave"
 tt.sound_events.loop = "HeroAlienDroneLoop"
 tt.main_script.update = scripts.alien_purification_drone.update
 tt.dps.damage_max = 16
+tt.dps.damage_min = 16
 tt.dps.damage_every = fts(6)
 tt.dps.damage_type = DAMAGE_TRUE
 tt.mod = "mod_stun"
@@ -11429,7 +11442,7 @@ tt.aura.vis_flags = bor(F_RANGED)
 tt.aura.excluded_entities = nil
 tt.main_script.update = scripts.aura_apply_damage.update
 
-function tt.main_script.insert(this, store, script)
+function tt.main_script.insert(this, store)
     if this.render then
         for _, s in pairs(this.render.sprites) do
             s.ts = store.tick_ts

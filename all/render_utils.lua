@@ -140,15 +140,15 @@ function RU.draw_frames_range(frames, start_idx, max_z)
 			end
 
 			if f.color then
-				r, g, b = f.color[1], f.color[2], f.color[3]
+				r, g, b = f.color[1] /255, f.color[2] / 255, f.color[3] / 255
 			else
-				r, g, b = 255, 255, 255
+				r, g, b = 1, 1, 1
 			end
 
 			a = f.alpha
 
 			if a ~= la or r ~= lr or g ~= lg or b ~= lb then
-				batch:setColor(norm_color(r, g, b, a))
+				batch:setColor(r, g, b, a / 255)
 
 				lr, lg, lb, la = r, g, b, a
 			end
