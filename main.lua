@@ -1,4 +1,54 @@
 ﻿-- chunkname: @./main.lua
+local function check_update_async()
+    -- 1. 读取 update.lua
+    local ok, update_cfg = pcall(dofile, "update.lua")
+    if ok and type(update_cfg) ~= "table" or not update_cfg.auto_upgrade then
+        return
+    end
+
+    -- 2. 读取 current_version_commit_hash.txt
+    local hash_file = io.open("current_version_commit_hash.txt", "r")
+    if not hash_file then
+        return
+    end
+    local commit_hash = hash_file:read("*l")
+    hash_file:close()
+    if not commit_hash then
+        return
+    end
+
+    -- 3. 拼接命令
+    local binary = "kr_client"
+    if package.config:sub(1, 1) == "\\" then -- Windows
+        binary = "kr_client.exe"
+    end
+    local cmd = string.format('"%s" --check-new-version', binary)
+
+    -- 4. 启动线程调用
+    local thread = love.thread.newThread([[
+        local cmd, commit_hash = ...
+        -- 写入临时文件
+        local tmpfile = os.tmpname()
+        local f = io.open(tmpfile, "w")
+        if f then f:write(commit_hash) f:close() end
+        -- 设置环境变量或切换目录（如有需要）
+        -- 调用外部程序
+        local full_cmd = cmd
+        -- Windows下防止弹黑框
+        if package.config:sub(1,1) == "\\" then
+            full_cmd = 'cmd /C ' .. full_cmd
+        end
+        local pipe = io.popen(full_cmd, "r")
+        local resp = pipe and pipe:read("*a") or nil
+        if pipe then pipe:close() end
+        os.remove(tmpfile)
+        love.thread.getChannel("update_result"):push(resp or false)
+    ]])
+    thread:start(cmd, commit_hash)
+end
+
+local update_popup_shown = false
+
 do
     love.graphics.setColor_old = function(r, g, b, a)
         if type(r) == "table" then
@@ -503,6 +553,8 @@ function love.load(arg)
     end
 end
 
+local update_result_json = nil
+
 function love.update(dt)
     if DEBUG and not main.params.debug and main.params.repl then
         repl_t()
@@ -518,6 +570,43 @@ function love.update(dt)
     if custom_script and custom_script.update then
         custom_script:update(dt)
     end
+    do
+        if not update_popup_shown then
+            local ch = love.thread.getChannel("update_result")
+            local result = ch:pop()
+            if result and result ~= false then
+                local ok, resp = pcall(json.decode, result)
+                if ok and type(resp) == "table" and resp.has_update then
+                    update_result_json = result
+                    -- 弹窗有“升级”按钮
+                    local pressed = love.window.showMessageBox("发现新版本",
+                        "检测到有新内容可更新，是否立即升级？", {"升级", "取消"})
+                    if pressed == 1 then
+                        -- 用户选择升级，调用 upgrade_new_version
+                        local binary = "kr_client"
+                        if package.config:sub(1, 1) == "\\" then
+                            binary = "kr_client.exe"
+                        end
+                        -- 写入临时文件传递JSON
+                        local tmpfile = os.tmpname()
+                        local f = io.open(tmpfile, "w")
+                        if f then
+                            f:write(update_result_json)
+                            f:close()
+                        end
+                        local cmd = string.format('"%s" --upgrade-new-version < "%s"', binary, tmpfile)
+                        os.execute(cmd)
+                        os.remove(tmpfile)
+                        love.window.showMessageBox("升级完成", "资源已更新。", "info")
+                    end
+                end
+                update_popup_shown = true
+            elseif result == false then
+                update_popup_shown = true
+            end
+        end
+    end
+
 end
 
 function love.draw()
@@ -1065,7 +1154,7 @@ function love.errorhandler(msg)
                     name = "Game"
                 end
 
-                local buttons = { "OK", "Cancel" }
+                local buttons = {"OK", "Cancel"}
                 local pressed = love.window.showMessageBox("Quit " .. name .. "?", "", buttons)
 
                 if pressed == 1 then
