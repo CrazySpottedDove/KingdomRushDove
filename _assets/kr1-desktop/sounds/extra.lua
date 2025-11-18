@@ -451,6 +451,9 @@ return {
         music_stage91 = {
             sounds = {"MusicBattlePrep_91", "MusicBattle_91"}
         },
+        music_stage92 = {
+            sounds = {"MusicBattlePrep_92", "MusicBattle_92"}
+        },
         music_stage110 = {
             sounds = {"MusicBattlePrep_110", "MusicBattle_110"}
         }
@@ -1318,6 +1321,13 @@ return {
             source_group = "MUSIC",
             stream = true
         },
+        MusicBattlePrep_92 = {
+            files = {"Jungle_Prep.mp3"},
+            gain = 0.7,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+        },
         MusicBattlePrep_110 = {
             files = {"kro_bgmusic_t3_prebattle1[master_01-11].mp3"},
             gain = 0.3,
@@ -1845,6 +1855,13 @@ return {
         },
         MusicBattle_91 = {
             files = {"Battle_Rising_Tides.mp3"},
+            gain = 0.7,
+            loop = true,
+            source_group = "MUSIC",
+            stream = true
+        },
+        MusicBattle_92 = {
+            files = {"Jungle_Battle.mp3"},
             gain = 0.7,
             loop = true,
             source_group = "MUSIC",
