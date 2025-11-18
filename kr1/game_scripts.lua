@@ -31688,4 +31688,30 @@ function scripts.eb_jack_spawner_aura.update(this, store)
     queue_remove(store, this)
 end
 
+scripts.shaman_gravity_aura = {
+    update = function(this, store)
+        local a = this.aura
+        local source = store.entities[a.source_id]
+        a.ts = store.tick_ts
+        local gravity_inc = this.gravity_inc
+        while true do
+            source = store.entities[a.source_id]
+            if not source or source.health.dead then
+                queue_remove(store, this)
+                return
+            end
+            if store.tick_ts - a.ts < a.cycle_time or (not source.enemy.can_do_magic) then
+                coroutine.yield()
+            else
+                a.ts = store.tick_ts
+                for _, e in pairs(store.entities) do
+                    if e.bullet and e.bullet.g and U.is_inside_ellipse(e.pos, source.pos, a.radius) then
+                        e.bullet.g = e.bullet.g + gravity_inc
+                    end
+                end
+            end
+        end
+    end
+}
+
 return scripts
