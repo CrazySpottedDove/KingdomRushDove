@@ -808,7 +808,7 @@ e = E:get_template("mod_slow_alien_glaive")
 factor = 1 - e.slow.factor
 duration = e.modifier.duration
 map["能量飞镖"] = str(cooldown_str(), "沙塔投掷能量飞镖，造成", damage_str(), "与持续", duration,
-    "秒的", factor * 100, "%减速效果。飞镖每次名字敌人都有", rate_str(chance),
+    "秒的", factor * 100, "%减速效果。飞镖每次命中敌人都有", rate_str(chance),
     "弹射至附近敌人。")
 set_skill(h.hero.skills.purificationprotocol)
 duration = s.duration[max_lvl]
@@ -961,8 +961,9 @@ map["元素之怒"] = str()
 
 set_hero("hero_phoenix")
 map["净化"] = str()
-map["涅槃"] = str()
-map["余烬之路"] = str()
+map["焚祭"] = str()
+map["余烬之地"] = str()
+map["火焰之环"] = str()
 map["炽焰后裔"] = str()
 
 set_hero("hero_bravebark")
