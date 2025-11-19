@@ -1,6 +1,6 @@
 return {
 	["arborean_emissary_basic_attack_modifier_0001"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0002"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0003"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0004"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0005"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0006"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0007"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0008"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0009"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0010"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0011"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0012"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0013"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0014"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0015"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0016"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0017"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0018"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0019"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0020"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0021"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0022"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0023"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0024"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0025"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0026"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0027"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0028"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0029"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0030"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0031"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0032"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0033"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0034"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0035"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0036"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0037"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0038"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0039"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0040"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0041"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0042"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0043"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_0044"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			85
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0001"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0002"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0003"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0004"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0005"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0006"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0007"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0008"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0009"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0010"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0011"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0012"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0013"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0014"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0015"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0016"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0017"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0018"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0019"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0020"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0021"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0022"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0023"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0024"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0025"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0026"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0027"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0028"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0029"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0030"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0031"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0032"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0033"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0034"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0035"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0036"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0037"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0038"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0039"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0040"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0041"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0042"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0043"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_big_0044"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			107
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_decal"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			73,
 			51
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_basic_attack_modifier_decal_big"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			144,
 			82
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0001"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0002"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0003"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0004"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0005"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0006"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0007"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0008"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0009"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0010"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0011"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0012"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0013"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0014"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0015"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_0016"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			93
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0001"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0002"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0003"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0004"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0005"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0006"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0007"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0008"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0009"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0010"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0011"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0012"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0013"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0014"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0015"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0016"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0017"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0018"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0019"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0020"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0021"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0022"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0023"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0024"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0025"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0026"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0027"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0028"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0029"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_heal_glow_0030"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			85,
 			105
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0001"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0002"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0003"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0004"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0005"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0006"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0007"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0008"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0009"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0010"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0011"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0012"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0013"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0014"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0015"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0016"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0017"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0018"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0019"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0020"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0021"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0022"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0023"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0024"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0025"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0026"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0027"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0028"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0029"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_pollen_0030"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			51,
 			147
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0001"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0002"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0003"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0004"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0005"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0006"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0007"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0008"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0009"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0010"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0011"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0012"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0013"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0014"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0015"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0016"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0017"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0018"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0019"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0020"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0021"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0022"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0023"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0024"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0025"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0026"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0027"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0028"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_gift_of_nature_wisp_0029"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			79,
 			82
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0001"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0002"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0003"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0004"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0005"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0006"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0007"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0008"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0009"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0010"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0011"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0012"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0013"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0014"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0015"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0016"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0017"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0018"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_hit_0019"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			161,
 			144
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0001"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0002"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0003"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0004"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0005"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0006"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0007"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0008"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0009"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0010"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0011"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0012"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0013"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0014"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0015"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0016"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0017"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0018"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0019"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0020"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0021"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0022"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0023"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0024"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0025"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0026"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0027"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0028"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0029"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0030"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0031"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0032"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0033"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0034"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0035"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0036"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0037"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0038"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0039"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0040"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0041"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0042"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0043"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0044"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0045"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0046"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0047"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0048"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0049"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0050"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0051"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0052"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0053"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0054"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0055"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0056"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0057"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0058"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0059"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0060"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0061"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0062"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0063"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0064"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0065"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0066"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0067"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0068"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0069"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0070"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0071"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0072"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0073"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0074"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0075"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0076"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0077"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0078"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0079"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0080"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0081"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0082"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0083"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0084"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0085"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0086"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0087"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0088"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0089"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0090"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0091"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0092"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0093"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0094"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0095"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0096"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0097"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0098"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0099"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0100"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0101"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0102"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0103"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0104"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0105"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0106"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0107"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0108"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0109"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0110"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0111"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0112"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0113"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0114"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0115"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0116"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0117"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0118"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0119"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0120"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0121"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0122"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0123"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0124"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0125"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0126"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0127"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0128"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0129"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0130"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0131"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0132"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0133"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0134"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0135"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0136"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0137"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0138"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0139"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0140"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0141"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0142"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0143"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0144"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0145"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0146"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0147"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0148"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0149"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0150"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0151"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0152"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0153"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0154"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0155"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0156"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0157"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0158"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0159"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0160"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0161"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0162"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0163"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0164"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0165"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0166"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0167"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0168"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0169"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0170"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0171"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0172"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0173"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0174"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0175"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0176"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0177"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0178"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0179"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0180"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0181"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0182"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0183"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0184"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0185"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0186"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0187"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0188"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0189"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0190"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0191"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0192"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0193"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0194"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0195"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0196"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0197"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0198"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0199"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0200"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0201"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0202"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0203"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0204"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0205"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0206"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0207"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0208"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0209"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0210"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0211"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0212"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0213"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0214"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0215"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0216"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0217"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0218"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0219"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0220"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0221"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0222"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0223"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0224"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0225"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0226"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0227"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0228"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0229"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0230"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0231"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0232"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0233"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0234"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0235"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0236"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0237"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0238"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0239"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0240"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0241"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0242"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0243"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0244"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0245"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0246"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0247"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0248"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0249"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0250"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0251"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_lvl4_tower_layer1_0252"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			249,
 			363
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0001"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0002"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0003"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0004"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0005"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0006"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0007"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0008"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0009"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0010"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0011"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0012"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0013"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0014"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_particle_0015"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			71,
 			62
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_projectile_0001"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			53,
 			53
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_projectile_0002"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			53,
 			53
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_projectile_0003"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			53,
 			53
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_projectile_0004"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			53,
 			53
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_projectile_0005"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			53,
 			53
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_projectile_0006"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			53,
 			53
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_projectile_0007"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			53,
 			53
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_projectile_0008"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			53,
 			53
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_projectile_0009"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			53,
 			53
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_projectile_0010"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			53,
 			53
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_projectile_0011"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			53,
 			53
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_projectile_0012"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			53,
 			53
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0001"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0002"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0003"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0004"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0005"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0006"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0007"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0008"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0009"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0010"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0011"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0012"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0013"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0014"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0015"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0016"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0017"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0018"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0019"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0020"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0021"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0022"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0023"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0024"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0025"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_big_0026"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			124,
 			99
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0001"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0002"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0003"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0004"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0005"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0006"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0007"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0008"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0009"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0010"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0011"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0012"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0013"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0014"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0015"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0016"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0017"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0018"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0019"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0020"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_floor_0021"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			110,
 			88
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0001"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0002"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0003"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0004"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0005"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0006"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0007"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0008"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0009"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0010"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0011"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0012"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0013"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0014"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0015"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0016"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0017"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0018"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0019"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0020"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0021"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0022"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0023"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0024"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0025"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_thorny_garden_thorns_small_0026"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			99,
 			82
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_tower_build"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			127,
 			122
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["arborean_emissary_tower_preview"] = {
-		a_name = "go_towers_arborean_emissary-1.png",
+		a_name = "go_towers_arborean_emissary-1.dds",
 		size = {
 			147,
 			193

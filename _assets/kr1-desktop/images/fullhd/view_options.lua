@@ -2,7 +2,7 @@
 
 return {
 	options_bar = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			396,
 			15
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	options_barBg = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			422,
 			34
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	options_bg_notxt = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			720,
 			570
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	options_button_bg_0001 = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			194,
 			76
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	options_button_bg_0002 = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			194,
 			76
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	options_comboBox_0001 = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			188,
 			36
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	options_comboBox_0002 = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			188,
 			36
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	options_difArrows_0001 = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			30,
 			30
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	options_difArrows_0002 = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			30,
 			30
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	options_sounds_0001 = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			60,
 			60
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	options_sounds_0002 = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			60,
 			60
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	options_sounds_0003 = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			60,
 			60
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	options_sounds_0004 = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			60,
 			60
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	options_sounds_0005 = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			60,
 			60
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	options_sounds_0006 = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			60,
 			60
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	select_bg = {
-		a_name = "view_options-1.png",
+		a_name = "view_options-1.dds",
 		size = {
 			208,
 			38

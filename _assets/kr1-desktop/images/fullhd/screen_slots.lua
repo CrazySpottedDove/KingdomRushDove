@@ -2,7 +2,7 @@
 
 return {
 	homeMenu_bg = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			1920,
 			1080
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_de_0001 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			172,
 			66
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_de_0002 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			172,
 			66
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_de_0003 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			172,
 			66
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_en_0001 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			172,
 			66
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_en_0002 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			172,
 			66
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_en_0003 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			172,
 			66
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_es_0001 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			172,
 			66
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_es_0002 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			172,
 			66
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_es_0003 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			172,
 			66
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_fr_0001 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			172,
 			66
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_fr_0002 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			172,
 			66
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_fr_0003 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			172,
 			66
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_ja_0001 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			172,
 			66
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_ja_0002 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			172,
 			66
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_ja_0003 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			172,
 			66
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_ko_0001 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			172,
 			66
@@ -410,7 +410,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_ko_0002 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			172,
 			66
@@ -434,7 +434,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_ko_0003 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			172,
 			66
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_pt_0001 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			172,
 			66
@@ -482,7 +482,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_pt_0002 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			172,
 			66
@@ -506,7 +506,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_pt_0003 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			172,
 			66
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_ru_0001 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			172,
 			66
@@ -554,7 +554,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_ru_0002 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			172,
 			66
@@ -578,7 +578,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnCredits_ru_0003 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			172,
 			66
@@ -602,7 +602,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnCredits_zh-Hans_0001"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			172,
 			66
@@ -626,7 +626,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnCredits_zh-Hans_0002"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			172,
 			66
@@ -650,7 +650,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnCredits_zh-Hans_0003"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			172,
 			66
@@ -674,7 +674,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnCredits_zh-Hant_0001"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			172,
 			66
@@ -698,7 +698,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnCredits_zh-Hant_0002"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			172,
 			66
@@ -722,7 +722,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnCredits_zh-Hant_0003"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			172,
 			66
@@ -746,7 +746,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_de_0001 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -770,7 +770,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_de_0002 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -794,7 +794,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_de_0003 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -818,7 +818,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_en_0001 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -842,7 +842,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_en_0002 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -866,7 +866,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_en_0003 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -890,7 +890,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_es_0001 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -914,7 +914,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_es_0002 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -938,7 +938,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_es_0003 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -962,7 +962,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_fr_0001 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -986,7 +986,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_fr_0002 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1010,7 +1010,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_fr_0003 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1034,7 +1034,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_ja_0001 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1058,7 +1058,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_ja_0002 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1082,7 +1082,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_ja_0003 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1106,7 +1106,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_ko_0001 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1130,7 +1130,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_ko_0002 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1154,7 +1154,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_ko_0003 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1178,7 +1178,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_pt_0001 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1202,7 +1202,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_pt_0002 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1226,7 +1226,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_pt_0003 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1250,7 +1250,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_ru_0001 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1274,7 +1274,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_ru_0002 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1298,7 +1298,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnOptions_ru_0003 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1322,7 +1322,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnOptions_zh-Hans_0001"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1346,7 +1346,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnOptions_zh-Hans_0002"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1370,7 +1370,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnOptions_zh-Hans_0003"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1394,7 +1394,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnOptions_zh-Hant_0001"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1418,7 +1418,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnOptions_zh-Hant_0002"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1442,7 +1442,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnOptions_zh-Hant_0003"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			226,
 			88
@@ -1466,7 +1466,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_de_0001 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			242,
 			120
@@ -1490,7 +1490,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_de_0002 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			242,
 			120
@@ -1514,7 +1514,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_de_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1538,7 +1538,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_de_0004 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1562,7 +1562,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_de_0005 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1586,7 +1586,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_de_0006 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1610,7 +1610,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_de_0007 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1634,7 +1634,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_de_0008 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1658,7 +1658,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_de_0009 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1682,7 +1682,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_de_0010 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1706,7 +1706,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_de_0011 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1730,7 +1730,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_de_0012 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1754,7 +1754,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_delete_0001 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			32,
 			32
@@ -1778,7 +1778,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_delete_0002 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			32,
 			32
@@ -1802,7 +1802,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_delete_0003 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			32,
 			32
@@ -1826,7 +1826,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_en_0001 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1850,7 +1850,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_en_0002 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1874,7 +1874,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_en_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1898,7 +1898,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_en_0004 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1922,7 +1922,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_en_0005 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1946,7 +1946,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_en_0006 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1970,7 +1970,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_en_0007 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -1994,7 +1994,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_en_0008 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2018,7 +2018,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_en_0009 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2042,7 +2042,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_en_0010 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2066,7 +2066,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_en_0011 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2090,7 +2090,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_en_0012 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2114,7 +2114,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_es_0001 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2138,7 +2138,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_es_0002 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2162,7 +2162,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_es_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2186,7 +2186,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_es_0004 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2210,7 +2210,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_es_0005 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2234,7 +2234,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_es_0006 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2258,7 +2258,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_es_0007 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2282,7 +2282,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_es_0008 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2306,7 +2306,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_es_0009 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2330,7 +2330,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_es_0010 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2354,7 +2354,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_es_0011 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2378,7 +2378,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_es_0012 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2402,7 +2402,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_fr_0001 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2426,7 +2426,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_fr_0002 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2450,7 +2450,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_fr_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2474,7 +2474,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_fr_0004 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2498,7 +2498,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_fr_0005 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2522,7 +2522,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_fr_0006 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2546,7 +2546,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_fr_0007 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2570,7 +2570,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_fr_0008 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2594,7 +2594,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_fr_0009 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2618,7 +2618,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_fr_0010 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2642,7 +2642,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_fr_0011 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2666,7 +2666,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_fr_0012 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2690,7 +2690,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ja_0001 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2714,7 +2714,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ja_0002 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2738,7 +2738,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ja_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2762,7 +2762,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ja_0004 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2786,7 +2786,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ja_0005 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2810,7 +2810,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ja_0006 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2834,7 +2834,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ja_0007 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2858,7 +2858,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ja_0008 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2882,7 +2882,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ja_0009 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2906,7 +2906,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ja_0010 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2930,7 +2930,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ja_0011 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2954,7 +2954,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ja_0012 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -2978,7 +2978,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ko_0001 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3002,7 +3002,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ko_0002 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3026,7 +3026,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ko_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3050,7 +3050,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ko_0004 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3074,7 +3074,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ko_0005 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3098,7 +3098,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ko_0006 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3122,7 +3122,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ko_0007 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3146,7 +3146,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ko_0008 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3170,7 +3170,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ko_0009 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3194,7 +3194,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ko_0010 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3218,7 +3218,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ko_0011 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3242,7 +3242,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ko_0012 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3266,7 +3266,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_pt_0001 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3290,7 +3290,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_pt_0002 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3314,7 +3314,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_pt_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3338,7 +3338,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_pt_0004 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3362,7 +3362,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_pt_0005 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3386,7 +3386,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_pt_0006 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3410,7 +3410,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_pt_0007 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3434,7 +3434,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_pt_0008 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3458,7 +3458,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_pt_0009 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3482,7 +3482,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_pt_0010 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3506,7 +3506,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_pt_0011 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3530,7 +3530,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_pt_0012 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3554,7 +3554,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ru_0001 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3578,7 +3578,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ru_0002 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3602,7 +3602,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ru_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3626,7 +3626,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ru_0004 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3650,7 +3650,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ru_0005 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3674,7 +3674,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ru_0006 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3698,7 +3698,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ru_0007 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3722,7 +3722,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ru_0008 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3746,7 +3746,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ru_0009 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3770,7 +3770,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ru_0010 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3794,7 +3794,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ru_0011 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3818,7 +3818,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnSlot_ru_0012 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3842,7 +3842,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hans_0001"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3866,7 +3866,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hans_0002"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3890,7 +3890,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hans_0003"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3914,7 +3914,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hans_0004"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3938,7 +3938,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hans_0005"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3962,7 +3962,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hans_0006"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -3986,7 +3986,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hans_0007"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -4010,7 +4010,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hans_0008"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -4034,7 +4034,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hans_0009"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -4058,7 +4058,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hans_0010"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -4082,7 +4082,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hans_0011"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -4106,7 +4106,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hans_0012"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -4130,7 +4130,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hant_0001"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			242,
 			120
@@ -4154,7 +4154,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hant_0002"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			242,
 			120
@@ -4178,7 +4178,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hant_0003"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			242,
 			120
@@ -4202,7 +4202,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hant_0004"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			242,
 			120
@@ -4226,7 +4226,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hant_0005"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			242,
 			120
@@ -4250,7 +4250,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hant_0006"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			242,
 			120
@@ -4274,7 +4274,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hant_0007"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			242,
 			120
@@ -4298,7 +4298,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hant_0008"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			242,
 			120
@@ -4322,7 +4322,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hant_0009"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			242,
 			120
@@ -4346,7 +4346,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hant_0010"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			242,
 			120
@@ -4370,7 +4370,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hant_0011"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			242,
 			120
@@ -4394,7 +4394,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnSlot_zh-Hant_0012"] = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			242,
 			120
@@ -4418,7 +4418,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_de_0001 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			280,
 			146
@@ -4442,7 +4442,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_de_0002 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			280,
 			146
@@ -4466,7 +4466,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_de_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -4490,7 +4490,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_en_0001 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			280,
 			146
@@ -4514,7 +4514,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_en_0002 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			280,
 			146
@@ -4538,7 +4538,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_en_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -4562,7 +4562,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_es_0001 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			280,
 			146
@@ -4586,7 +4586,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_es_0002 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			280,
 			146
@@ -4610,7 +4610,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_es_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -4634,7 +4634,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_fr_0001 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			280,
 			146
@@ -4658,7 +4658,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_fr_0002 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			280,
 			146
@@ -4682,7 +4682,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_fr_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -4706,7 +4706,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_ja_0001 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			280,
 			146
@@ -4730,7 +4730,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_ja_0002 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			280,
 			146
@@ -4754,7 +4754,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_ja_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -4778,7 +4778,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_ko_0001 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			280,
 			146
@@ -4802,7 +4802,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_ko_0002 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			280,
 			146
@@ -4826,7 +4826,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_ko_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -4850,7 +4850,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_pt_0001 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -4874,7 +4874,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_pt_0002 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -4898,7 +4898,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_pt_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -4922,7 +4922,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_ru_0001 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -4946,7 +4946,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_ru_0002 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -4970,7 +4970,7 @@ return {
 		alias = {}
 	},
 	homeMenu_btnStart_ru_0003 = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -4994,7 +4994,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnStart_zh-Hans_0001"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -5018,7 +5018,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnStart_zh-Hans_0002"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -5042,7 +5042,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnStart_zh-Hans_0003"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -5066,7 +5066,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnStart_zh-Hant_0001"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -5090,7 +5090,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnStart_zh-Hant_0002"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -5114,7 +5114,7 @@ return {
 		alias = {}
 	},
 	["homeMenu_btnStart_zh-Hant_0003"] = {
-		a_name = "screen_slots-3.png",
+		a_name = "screen_slots-3.dds",
 		size = {
 			280,
 			146
@@ -5138,7 +5138,7 @@ return {
 		alias = {}
 	},
 	homeMenu_buttonsBg = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			570,
 			448
@@ -5162,7 +5162,7 @@ return {
 		alias = {}
 	},
 	homeMenu_confirm_menu_0001 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			720,
 			260
@@ -5186,7 +5186,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0001 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			580,
 			532
@@ -5210,7 +5210,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0002 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			580,
 			532
@@ -5234,7 +5234,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0003 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			580,
 			532
@@ -5258,7 +5258,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0004 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			580,
 			532
@@ -5282,7 +5282,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0005 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			580,
 			532
@@ -5306,7 +5306,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0006 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			580,
 			532
@@ -5330,7 +5330,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0007 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			580,
 			532
@@ -5354,7 +5354,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0008 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			580,
 			532
@@ -5378,7 +5378,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0009 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			580,
 			532
@@ -5402,7 +5402,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0010 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			580,
 			532
@@ -5426,7 +5426,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0011 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			580,
 			532
@@ -5450,7 +5450,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0012 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			580,
 			532
@@ -5474,7 +5474,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0013 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			580,
 			532
@@ -5498,7 +5498,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0014 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			580,
 			532
@@ -5522,7 +5522,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0015 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			580,
 			532
@@ -5546,7 +5546,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0016 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			580,
 			532
@@ -5570,7 +5570,7 @@ return {
 		alias = {}
 	},
 	homeMenu_logo_0017 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			580,
 			532
@@ -5594,7 +5594,7 @@ return {
 		alias = {}
 	},
 	homeMenu_quit_0001 = {
-		a_name = "screen_slots-4.png",
+		a_name = "screen_slots-4.dds",
 		size = {
 			200,
 			200
@@ -5618,7 +5618,7 @@ return {
 		alias = {}
 	},
 	homeMenu_quit_0002 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			200,
 			200
@@ -5642,7 +5642,7 @@ return {
 		alias = {}
 	},
 	homeMenu_quit_0003 = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			200,
 			200
@@ -5666,7 +5666,7 @@ return {
 		alias = {}
 	},
 	homeMenu_submenues_0001 = {
-		a_name = "screen_slots-2.png",
+		a_name = "screen_slots-2.dds",
 		size = {
 			448,
 			420
@@ -5690,7 +5690,7 @@ return {
 		alias = {}
 	},
 	main_options_bg_notxt = {
-		a_name = "screen_slots-1.png",
+		a_name = "screen_slots-1.dds",
 		size = {
 			700,
 			370

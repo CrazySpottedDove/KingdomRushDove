@@ -1,6 +1,6 @@
 return {
 	["ballista_tower_arrow_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			323,
 			59
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			323,
 			59
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			323,
 			59
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			323,
 			59
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			323,
 			59
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			323,
 			59
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			323,
 			59
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			323,
 			59
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			323,
 			59
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			323,
 			59
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			323,
 			59
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_fx_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			85
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_fx_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			85
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_fx_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			85
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_fx_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			85
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_fx_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			85
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_fx_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			85
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_fx_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			85
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_fx_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			85
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_fx_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			85
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_fx_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			85
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_fx_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			85
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_arrow_fx_0012"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			85
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0012"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0013"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0014"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0015"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0016"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0017"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0018"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0019"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0020"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0021"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0022"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0023"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0024"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0025"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0026"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0027"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0028"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0029"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_decal_0030"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			107,
 			107
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0012"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0013"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0014"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0015"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0016"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0017"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0018"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0019"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0020"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0021"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0022"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0023"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0024"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0025"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0026"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0027"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0028"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0029"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_explotion_0030"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			198,
 			247
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0012"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0013"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0014"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0015"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0016"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0017"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0018"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0019"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_fx_0020"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			105
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_particle_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			73,
 			76
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_particle_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			73,
 			76
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_particle_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			73,
 			76
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_particle_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			73,
 			76
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_particle_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			73,
 			76
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_particle_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			73,
 			76
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_particle_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			73,
 			76
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_particle_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			73,
 			76
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_particle_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			73,
 			76
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_particle_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			73,
 			76
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_particle_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			73,
 			76
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_particle_0012"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			73,
 			76
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_particle_0013"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			73,
 			76
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_particle_0014"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			73,
 			76
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_projectile"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			59,
 			62
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_bomb_projectile_idle"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			59,
 			62
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			96
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			96
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_2_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			119
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_2_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			119
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_2_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			119
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_2_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			119
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_2_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			119
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_2_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			119
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_2_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			119
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_2_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			119
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_2_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			119
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_2_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			119
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_2_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			119
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_2_0012"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			119
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			96
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			96
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			96
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			96
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			96
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			96
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			96
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			96
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_hit_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			99,
 			96
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0012"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0013"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0014"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0015"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_floor_0016"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			113,
 			127
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_1_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			65,
 			133
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_1_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			65,
 			133
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_1_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			65,
 			133
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_1_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			65,
 			133
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_1_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			65,
 			133
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_1_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			65,
 			133
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_1_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			65,
 			133
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_1_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			65,
 			133
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_1_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			65,
 			133
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_1_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			65,
 			133
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_1_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			65,
 			133
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_2_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			93
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_2_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			93
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_2_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			93
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_2_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			93
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_2_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			93
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_2_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			93
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_2_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			93
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_2_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			93
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_2_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			93
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_2_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			93
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_junk_particle_projectile_2_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			62,
 			93
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0012"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0013"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0014"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0015"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0016"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0017"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0018"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0019"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0020"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0021"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0022"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0023"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0024"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0025"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0026"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0027"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0028"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0029"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0030"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0031"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0032"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0033"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0034"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0035"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0036"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0037"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0038"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0039"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0040"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0041"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0042"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0043"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0044"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0045"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0046"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0047"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0048"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer1_0049"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0012"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0013"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0014"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0015"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0016"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0017"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0018"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0019"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0020"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0021"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0022"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0023"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0024"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0025"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0026"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0027"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0028"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0029"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0030"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0031"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0032"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0033"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0034"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0035"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0036"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0037"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0038"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0039"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0040"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0041"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0042"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0043"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0044"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0045"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0046"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0047"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0048"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer2_0049"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0012"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0013"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0014"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0015"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0016"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0017"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0018"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0019"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0020"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0021"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0022"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0023"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0024"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0025"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0026"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0027"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0028"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0029"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0030"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0031"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0032"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0033"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0034"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0035"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0036"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0037"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0038"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0039"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0040"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0041"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0042"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0043"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0044"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0045"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0046"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0047"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0048"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_base_layer3_0049"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			144,
 			195
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0012"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0013"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0014"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0015"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0016"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0017"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0018"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0019"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0020"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0021"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0022"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0023"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0024"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0025"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0026"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0027"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0028"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0029"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0030"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0031"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0032"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0033"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0034"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0035"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0036"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0037"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0038"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0039"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0040"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0041"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0042"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0043"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0044"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0045"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0046"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0047"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0048"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0049"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0050"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0051"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0052"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_goblin_0053"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			173,
 			116
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0012"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0013"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0014"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0015"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0016"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0017"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0018"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0019"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0020"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0021"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0022"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0023"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0024"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0025"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0026"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0027"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0028"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0029"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0030"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0031"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0032"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0033"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0034"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0035"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0036"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0037"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0038"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0039"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0040"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0041"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0042"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0043"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0044"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0045"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0046"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0047"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0048"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0049"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0050"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0051"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0052"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0053"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0054"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0055"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0056"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0057"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0058"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0059"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0060"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0061"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0062"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0063"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0064"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0065"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0066"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0067"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0068"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0069"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0070"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0071"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0072"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0073"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0074"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0075"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0076"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0077"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0078"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0079"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0080"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0081"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0082"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0083"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0084"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0085"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0086"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0087"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0088"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0089"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0090"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0091"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0092"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0093"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0094"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0095"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0096"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0097"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0098"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0099"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0100"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0101"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0102"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0103"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0104"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0105"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0106"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0107"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0108"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0109"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0110"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0111"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0112"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0113"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0114"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0115"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0116"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0117"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0118"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0119"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0120"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0121"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0122"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0123"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0124"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0125"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0126"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0127"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0128"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0129"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0130"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0131"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0132"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0133"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0134"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0135"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0136"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0137"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0138"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0139"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0140"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0141"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0142"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0143"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0144"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0145"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0146"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0147"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0148"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0149"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0150"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0151"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0152"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0153"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0154"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0155"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0156"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0157"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0158"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0159"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0160"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0161"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0162"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0163"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0164"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0165"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0166"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0167"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0168"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0169"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0170"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0171"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0172"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0173"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0174"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0175"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0176"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0177"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0178"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0179"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0180"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0181"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0182"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0183"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0184"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0185"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0186"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0187"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0188"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0189"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0190"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0191"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0192"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0193"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0194"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0195"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0196"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0197"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0198"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0199"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0200"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0201"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0202"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0203"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0204"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0205"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0206"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0207"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0208"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0209"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0210"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0211"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0212"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0213"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0214"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0215"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0216"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0217"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0218"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0219"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0220"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0221"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0222"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0223"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0224"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0225"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0226"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0227"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0228"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0229"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0230"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0231"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0232"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0233"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0234"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0235"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0236"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0237"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0238"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0239"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0240"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0241"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0242"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0243"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0244"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0245"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0246"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0247"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0248"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0249"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0250"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0251"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0252"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0253"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0254"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0255"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0256"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0257"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0258"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0259"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0260"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0261"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0262"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			161,
 			301
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0263"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			164,
 			295
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0264"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			164,
 			295
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0265"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			164,
 			295
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0266"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			164,
 			295
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_lvl4_tower_top_0267"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			164,
 			295
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			45,
 			73
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			45,
 			73
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			45,
 			73
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			45,
 			73
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			45,
 			73
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			45,
 			73
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_decal"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			53
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0012"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0013"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0014"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0015"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_missed_arrow_dust_0016"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			85,
 			136
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_preview"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			136,
 			224
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			465,
 			53
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			465,
 			53
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			465,
 			53
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			465,
 			53
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			465,
 			53
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			465,
 			53
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			465,
 			53
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			465,
 			53
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			465,
 			53
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			465,
 			53
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			465,
 			53
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_fx_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			79,
 			82
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_fx_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			79,
 			82
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_fx_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			79,
 			82
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_fx_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			79,
 			82
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_fx_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			79,
 			82
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_fx_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			79,
 			82
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_arrow_fx_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			79,
 			82
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0001"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0002"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0003"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0004"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0005"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0006"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0007"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0008"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0009"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0010"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0011"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0012"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0013"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0014"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0015"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0016"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0017"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0018"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0019"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0020"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0021"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0022"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0023"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0024"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_special_hit_0025"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			176,
 			164
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["ballista_tower_tower_construction"] = {
-		a_name = "go_towers_ballista-1.png",
+		a_name = "go_towers_ballista-1.dds",
 		size = {
 			119,
 			167

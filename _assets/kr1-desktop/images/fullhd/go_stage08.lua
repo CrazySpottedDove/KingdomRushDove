@@ -2,7 +2,7 @@
 
 return {
 	sasquash_0001 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	sasquash_0002 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -52,7 +52,7 @@ return {
 		}
 	},
 	sasquash_0004 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -76,7 +76,7 @@ return {
 		alias = {}
 	},
 	sasquash_0005 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			148,
 			114
@@ -102,7 +102,7 @@ return {
 		}
 	},
 	sasquash_0007 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -126,7 +126,7 @@ return {
 		alias = {}
 	},
 	sasquash_0008 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			148,
 			114
@@ -152,7 +152,7 @@ return {
 		}
 	},
 	sasquash_0010 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -176,7 +176,7 @@ return {
 		alias = {}
 	},
 	sasquash_0011 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -202,7 +202,7 @@ return {
 		}
 	},
 	sasquash_0013 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -226,7 +226,7 @@ return {
 		alias = {}
 	},
 	sasquash_0014 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -252,7 +252,7 @@ return {
 		}
 	},
 	sasquash_0016 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -276,7 +276,7 @@ return {
 		alias = {}
 	},
 	sasquash_0017 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -302,7 +302,7 @@ return {
 		}
 	},
 	sasquash_0019 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -326,7 +326,7 @@ return {
 		alias = {}
 	},
 	sasquash_0020 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			148,
 			114
@@ -352,7 +352,7 @@ return {
 		}
 	},
 	sasquash_0022 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -376,7 +376,7 @@ return {
 		alias = {}
 	},
 	sasquash_0023 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			148,
 			114
@@ -402,7 +402,7 @@ return {
 		}
 	},
 	sasquash_0025 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -426,7 +426,7 @@ return {
 		alias = {}
 	},
 	sasquash_0026 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			148,
 			114
@@ -450,7 +450,7 @@ return {
 		alias = {}
 	},
 	sasquash_0027 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -477,7 +477,7 @@ return {
 		}
 	},
 	sasquash_0029 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -501,7 +501,7 @@ return {
 		alias = {}
 	},
 	sasquash_0030 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -525,7 +525,7 @@ return {
 		alias = {}
 	},
 	sasquash_0031 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -549,7 +549,7 @@ return {
 		alias = {}
 	},
 	sasquash_0032 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -575,7 +575,7 @@ return {
 		}
 	},
 	sasquash_0034 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			148,
 			114
@@ -601,7 +601,7 @@ return {
 		}
 	},
 	sasquash_0036 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -627,7 +627,7 @@ return {
 		}
 	},
 	sasquash_0038 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -653,7 +653,7 @@ return {
 		}
 	},
 	sasquash_0040 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			148,
 			114
@@ -679,7 +679,7 @@ return {
 		}
 	},
 	sasquash_0042 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			148,
 			114
@@ -705,7 +705,7 @@ return {
 		}
 	},
 	sasquash_0044 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			148,
 			114
@@ -731,7 +731,7 @@ return {
 		}
 	},
 	sasquash_0046 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			148,
 			114
@@ -762,7 +762,7 @@ return {
 		}
 	},
 	sasquash_0053 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -788,7 +788,7 @@ return {
 		}
 	},
 	sasquash_0056 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -812,7 +812,7 @@ return {
 		alias = {}
 	},
 	sasquash_0057 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -836,7 +836,7 @@ return {
 		alias = {}
 	},
 	sasquash_0058 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -862,7 +862,7 @@ return {
 		}
 	},
 	sasquash_0060 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -888,7 +888,7 @@ return {
 		}
 	},
 	sasquash_0062 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -923,7 +923,7 @@ return {
 		}
 	},
 	sasquash_0073 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			148,
 			114
@@ -949,7 +949,7 @@ return {
 		}
 	},
 	sasquash_0075 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			148,
 			114
@@ -975,7 +975,7 @@ return {
 		}
 	},
 	sasquash_0077 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			148,
 			114
@@ -1001,7 +1001,7 @@ return {
 		}
 	},
 	sasquash_0079 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			148,
 			114
@@ -1027,7 +1027,7 @@ return {
 		}
 	},
 	sasquash_cave = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			222,
 			308
@@ -1051,7 +1051,7 @@ return {
 		alias = {}
 	},
 	sasquash_cave_inside = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			82,
 			122
@@ -1075,7 +1075,7 @@ return {
 		alias = {}
 	},
 	sasquash_cave_inside_over = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			82,
 			122
@@ -1099,7 +1099,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0001 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1125,7 +1125,7 @@ return {
 		}
 	},
 	sasquash_frozen_0002 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1149,7 +1149,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0003 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			212,
 			232
@@ -1173,7 +1173,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0004 = {
-		a_name = "go_stage08-2.png",
+		a_name = "go_stage08-2.dds",
 		size = {
 			212,
 			232
@@ -1197,7 +1197,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0005 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1221,7 +1221,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0006 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1245,7 +1245,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0007 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1269,7 +1269,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0008 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1293,7 +1293,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0009 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1317,7 +1317,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0010 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1341,7 +1341,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0011 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1365,7 +1365,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0012 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1389,7 +1389,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0013 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1413,7 +1413,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0014 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1437,7 +1437,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0015 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1461,7 +1461,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0016 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1485,7 +1485,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0017 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1509,7 +1509,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0018 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1533,7 +1533,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0019 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1557,7 +1557,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0020 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1581,7 +1581,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0021 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1605,7 +1605,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0022 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1629,7 +1629,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0023 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1653,7 +1653,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0024 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1688,7 +1688,7 @@ return {
 		}
 	},
 	sasquash_frozen_0035 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1712,7 +1712,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0036 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1736,7 +1736,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0037 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1760,7 +1760,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0038 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1784,7 +1784,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0039 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1808,7 +1808,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0040 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1832,7 +1832,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0041 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1856,7 +1856,7 @@ return {
 		alias = {}
 	},
 	sasquash_frozen_0042 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			212,
 			232
@@ -1880,7 +1880,7 @@ return {
 		alias = {}
 	},
 	stage8_cave1 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			278,
 			196
@@ -1904,7 +1904,7 @@ return {
 		alias = {}
 	},
 	stage8_cave2 = {
-		a_name = "go_stage08-1.png",
+		a_name = "go_stage08-1.dds",
 		size = {
 			238,
 			266

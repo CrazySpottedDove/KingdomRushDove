@@ -1,6 +1,6 @@
 return {
 	["Blaze_humitodeatras_0001"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["Blaze_humitodeatras_0002"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["Blaze_humitodeatras_0003"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["Blaze_humitodeatras_0004"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["Blaze_humitodeatras_0005"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["Blaze_humitodeatras_0006"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["Blaze_humitodeatras_0007"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["Blaze_humitodeatras_0008"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["Blaze_humitodeatras_0009"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["Blaze_humitodeatras_0010"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["Blaze_humitodeatras_0011"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["Blaze_humitodeatras_0012"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["Blaze_humitodeatras_0013"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["Blaze_humitodeatras_0014"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["Blaze_humitodeatras_0015"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			56,
 			93
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0001"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0002"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0003"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0004"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0005"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0006"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0007"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0008"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0009"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0010"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0011"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0012"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0013"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0014"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0015"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0016"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0017"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0018"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0019"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0020"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0021"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0022"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0023"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0024"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0025"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0026"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0027"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0028"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0029"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0030"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0031"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0032"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0033"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0034"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0035"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0036"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0037"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0038"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0039"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0040"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0041"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0042"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0043"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0044"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0045"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0046"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0047"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0048"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0049"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0050"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0051"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0052"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0053"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0054"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0055"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0056"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0057"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0058"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0059"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0060"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0061"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0062"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0063"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0064"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0065"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0066"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0067"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0068"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0069"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0070"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0071"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0072"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0073"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0074"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0075"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0076"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0077"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0078"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0079"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0080"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0081"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0082"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0083"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0084"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0085"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0086"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0087"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0088"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0089"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0090"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0091"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0092"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0093"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0094"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0095"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0096"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0097"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0098"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0099"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0100"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0101"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0102"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0103"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0104"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0105"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0106"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0107"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0108"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0109"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0110"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0111"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0112"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0113"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0114"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0115"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0116"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0117"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0118"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0119"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0120"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0121"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0122"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0123"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0124"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0125"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0126"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0127"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0128"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0129"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0130"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0131"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0132"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0133"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0134"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0135"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0136"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0137"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0138"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0139"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0140"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0141"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0142"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0143"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0144"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0145"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0146"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0147"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0148"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0149"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0150"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0151"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0152"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0153"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0154"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0155"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0156"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0157"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0158"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0159"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0160"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0161"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0162"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0163"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0164"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0165"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0166"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0167"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0168"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0169"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0170"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0171"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0172"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0173"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0174"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0175"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0176"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0177"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0178"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0179"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0180"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0181"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0182"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0183"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0184"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0185"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0186"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0187"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0188"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0189"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0190"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0191"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0192"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0193"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0194"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0195"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0196"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0197"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0198"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0199"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0200"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0201"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0202"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0203"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0204"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0205"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0206"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0207"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0208"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0209"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0210"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0211"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0212"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0213"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0214"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0215"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0216"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0217"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0218"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0219"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0220"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0221"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0222"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0223"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0224"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0225"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0226"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0227"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0228"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0229"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0230"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0231"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0232"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0233"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0234"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0235"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0236"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0237"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0238"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0239"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0240"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0241"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0242"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0243"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0244"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0245"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0246"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0247"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0248"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0249"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0250"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0251"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0252"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0253"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0254"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0255"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0256"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0257"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0258"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0259"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0260"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0261"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0262"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0263"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0264"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0265"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0266"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0267"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0268"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0269"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0270"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0271"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0272"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0273"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0274"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0275"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0276"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0277"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0278"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0279"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0280"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0281"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0282"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0283"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0284"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0285"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0286"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0287"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0288"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0289"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0290"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0291"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0292"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0293"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0294"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0295"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0296"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0297"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0298"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0299"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0300"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0301"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0302"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0303"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0304"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0305"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0306"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0307"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0308"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0309"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0310"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0311"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0312"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0313"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0314"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0315"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0316"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0317"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0318"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0319"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0320"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0321"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0322"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0323"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0324"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0325"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0326"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0327"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0328"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0329"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0330"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0331"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0332"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0333"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0334"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0335"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0336"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0337"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0338"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0339"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0340"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0341"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0342"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0343"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0344"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0345"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0346"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0347"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0348"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0349"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0350"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0351"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0352"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0353"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0354"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0355"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0356"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0357"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0358"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0359"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0360"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0361"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0362"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0363"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0364"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0365"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0366"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0367"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0368"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0369"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0370"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0371"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0372"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0373"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0374"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0375"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0376"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0377"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0378"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0379"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0380"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0381"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0382"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0383"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0384"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0385"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0386"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0387"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0388"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0389"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0390"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0391"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0392"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0393"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0394"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0395"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0396"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0397"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0398"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0399"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0400"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["Blaze_pibe_0401"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			335,
 			448
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0001"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0002"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0003"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0004"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0005"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0006"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0007"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0008"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0009"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0010"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0011"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0012"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0013"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0014"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0015"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0016"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0017"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0018"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0019"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0020"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0021"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1humito_0022"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			161,
 			221
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1y3decal_0001"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			184,
 			133
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1y3decal_0002"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			184,
 			133
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1y3decal_0003"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			184,
 			133
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1y3decal_0004"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			184,
 			133
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1y3decal_0005"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			184,
 			133
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1y3decal_0006"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			184,
 			133
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1y3decal_0007"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			184,
 			133
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill1y3decal_0008"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			184,
 			133
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0001"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0002"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0003"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0004"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0005"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0006"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0007"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0008"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0009"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0010"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0011"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0012"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0013"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0014"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0015"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0016"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0017"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0018"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0019"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2explosion_0020"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			201
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0001"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0002"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0003"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0004"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0005"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0006"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0007"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0008"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0009"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0010"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0011"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0012"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0013"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0014"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0015"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0016"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0017"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0018"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0019"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0020"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0021"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0022"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0023"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0024"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0025"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0026"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0027"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0028"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0029"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0030"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0031"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0032"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0033"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0034"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0035"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0036"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0037"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0038"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0039"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0040"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0041"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0042"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0043"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0044"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0045"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0046"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0047"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0048"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0049"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0050"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0051"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0052"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0053"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0054"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0055"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0056"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0057"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0058"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0059"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0060"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0061"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0062"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0063"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0064"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0065"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0066"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0067"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0068"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0069"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0070"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0071"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0072"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0073"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0074"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0075"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0076"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0077"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0078"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0079"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0080"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0081"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0082"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0083"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0084"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humo_0085"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			142,
 			167
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0001"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0002"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0003"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0004"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0005"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0006"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0007"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0008"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0009"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0010"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0011"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0012"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0013"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0014"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0015"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0016"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0017"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0018"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0019"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0020"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0021"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0022"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0023"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0024"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0025"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0026"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0027"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0028"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0029"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0030"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0031"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0032"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0033"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0034"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0035"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0036"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0037"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0038"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0039"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2humostatus_0040"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			107,
 			82
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill2proyectil"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			65,
 			62
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill3decal"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			156,
 			93
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill3status_0001"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			99,
 			142
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill3status_0002"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			99,
 			142
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill3status_0003"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			99,
 			142
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill3status_0004"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			99,
 			142
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill3status_0005"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			99,
 			142
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill3status_0006"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			99,
 			142
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill3status_0007"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			99,
 			142
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill3status_0008"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			99,
 			142
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill3status_0009"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			99,
 			142
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["Blaze_skill3status_0010"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			99,
 			142
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0001"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0002"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0003"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0004"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0005"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0006"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0007"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0008"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0009"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0010"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0011"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0012"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0013"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0014"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0015"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0016"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0017"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0018"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0019"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0020"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0021"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0022"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0023"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0024"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0025"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0026"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0027"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0028"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0029"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0030"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0031"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0032"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0033"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0034"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0035"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0036"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0037"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0038"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0039"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0040"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0041"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0042"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0043"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0044"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0045"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0046"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0047"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0048"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0049"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0050"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0051"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0052"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0053"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0054"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0055"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0056"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0057"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0058"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0059"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0060"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0061"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0062"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0063"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0064"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0065"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0066"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0067"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0068"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0069"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["Blaze_tren_0070"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			218,
 			488
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["Blaze_trendecal_0001"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			124,
 			93
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["Blaze_trendecal_0002"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			124,
 			93
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["Blaze_trendecal_0003"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			124,
 			93
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["Blaze_trendecal_0004"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			124,
 			93
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["Blaze_trendecal_0005"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			124,
 			93
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["Blaze_trendecal_0006"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			124,
 			93
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["Blaze_trendecal_0007"] = {
-		a_name = "go_hero_robot-1.png",
+		a_name = "go_hero_robot-1.dds",
 		size = {
 			124,
 			93

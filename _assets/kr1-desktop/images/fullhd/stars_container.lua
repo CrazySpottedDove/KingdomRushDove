@@ -1,6 +1,6 @@
 return {
 	["mapStarsContainer"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			311,
 			61
@@ -24,7 +24,7 @@ return {
 		alias = {}
 	},
 	["mapStarsContainer_numbers_0001"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			32,
 			32
@@ -48,7 +48,7 @@ return {
 		alias = {}
 	},
 	["mapStarsContainer_numbers_0002"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			32,
 			32
@@ -72,7 +72,7 @@ return {
 		alias = {}
 	},
 	["mapStarsContainer_numbers_0003"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			32,
 			32
@@ -96,7 +96,7 @@ return {
 		alias = {}
 	},
 	["mapStarsContainer_numbers_0004"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			32,
 			32
@@ -120,7 +120,7 @@ return {
 		alias = {}
 	},
 	["mapStarsContainer_numbers_0005"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			32,
 			32
@@ -144,7 +144,7 @@ return {
 		alias = {}
 	},
 	["mapStarsContainer_numbers_0006"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			32,
 			32
@@ -168,7 +168,7 @@ return {
 		alias = {}
 	},
 	["mapStarsContainer_numbers_0007"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			32,
 			32
@@ -192,7 +192,7 @@ return {
 		alias = {}
 	},
 	["mapStarsContainer_numbers_0008"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			32,
 			32
@@ -216,7 +216,7 @@ return {
 		alias = {}
 	},
 	["mapStarsContainer_numbers_0009"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			32,
 			32
@@ -240,7 +240,7 @@ return {
 		alias = {}
 	},
 	["mapStarsContainer_numbers_0010"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			32,
 			32
@@ -264,7 +264,7 @@ return {
 		alias = {}
 	},
 	["mapStarsContainer_numbers_0011"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			32,
 			32
@@ -288,7 +288,7 @@ return {
 		alias = {}
 	},
 	["mapStarsContainerEmpty"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			312,
 			62
@@ -312,7 +312,7 @@ return {
 		alias = {}
 	},
 	["mapStarsContainerIcons_0001"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			62,
 			62
@@ -336,7 +336,7 @@ return {
 		alias = {}
 	},
 	["mapStarsContainerIcons_0002"] = {
-		a_name = "stars_container-1.png",
+		a_name = "stars_container-1.dds",
 		size = {
 			62,
 			62

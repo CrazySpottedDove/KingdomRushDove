@@ -1,6 +1,6 @@
 return {
 	["hero_nyru_faery_dust_nyru_decal_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0016"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0017"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0018"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_faery_dust_nyru_decal_0019"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			124,
 			93
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0016"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0017"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0018"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0019"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0020"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0021"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0022"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0023"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0024"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0025"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0026"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0027"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0028"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_decal_0029"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			193,
 			167
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0016"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0017"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0018"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0019"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0020"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0021"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0022"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0023"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0024"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0025"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_FX_0026"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			133,
 			181
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0016"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0017"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0018"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_fairy_dust_modifier_0019"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			105,
 			105
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0016"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0017"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0018"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0019"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0020"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0021"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0022"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0023"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0024"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0025"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0026"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0027"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0028"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0029"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0030"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0031"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0032"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0033"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0034"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0035"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0036"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0037"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0038"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0039"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0040"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0041"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0042"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0043"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0044"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0045"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0046"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0047"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0048"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0049"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0050"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0051"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0052"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0053"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0054"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0055"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_0056"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			167,
 			161
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0016"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0017"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0018"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0019"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_leaf_whirlwind_hit_0020"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			116,
 			85
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0016"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0017"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0018"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0019"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0020"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0021"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0022"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0023"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0024"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0025"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0026"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0027"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0028"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0029"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0030"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0031"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0032"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0033"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0034"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0035"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0036"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0037"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0038"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0039"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0040"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0041"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0042"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0043"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0044"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0045"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0046"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0047"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0048"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0049"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0050"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0051"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0052"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0053"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0054"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0055"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0056"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0057"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0058"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0059"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0060"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0061"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0062"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0063"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0064"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0065"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0066"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0067"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0068"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0069"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0070"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0071"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0072"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0073"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0074"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0075"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0076"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0077"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0078"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0079"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0080"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0081"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0082"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0083"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0084"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0085"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0086"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0087"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0088"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0089"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0090"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0091"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0092"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0093"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0094"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0095"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0096"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0097"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0098"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0099"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0100"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0101"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0102"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0103"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0104"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0105"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0106"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0107"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0108"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0109"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0110"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0111"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0112"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0113"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0114"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0115"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0116"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0117"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0118"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0119"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0120"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0121"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0122"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0123"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0124"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0125"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0126"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0127"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0128"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0129"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0130"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0131"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0132"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0133"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0134"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0135"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0136"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0137"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0138"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0139"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0140"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0141"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0142"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0143"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0144"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0145"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0146"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0147"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0148"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0149"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0150"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0151"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0152"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0153"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0154"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0155"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0156"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0157"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0158"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0159"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0160"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0161"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0162"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0163"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0164"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0165"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0166"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0167"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0168"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0169"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0170"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0171"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0172"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0173"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0174"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0175"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0176"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0177"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0178"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0179"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0180"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0181"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0182"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0183"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0184"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0185"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0186"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0187"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0188"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0189"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0190"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0191"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0192"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0193"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0194"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0195"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0196"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0197"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0198"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0199"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0200"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0201"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0202"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0203"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0204"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0205"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0206"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0207"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0208"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0209"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0210"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0211"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0212"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0213"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0214"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0215"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0216"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0217"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0218"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0219"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0220"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0221"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0222"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0223"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0224"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0225"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0226"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0227"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0228"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0229"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0230"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0231"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0232"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0233"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0234"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0235"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0236"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0237"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0238"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0239"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0240"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0241"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0242"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0243"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0244"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0245"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0246"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0247"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0248"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0249"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0250"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0251"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0252"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0253"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0254"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0255"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0256"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0257"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0258"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0259"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0260"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0261"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0262"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0263"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0264"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0265"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0266"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0267"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0268"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0269"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0270"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0271"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0272"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0273"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0274"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0275"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0276"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0277"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0278"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0279"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0280"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0281"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0282"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0283"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0284"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0285"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0286"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0287"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0288"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0289"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0290"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0291"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0292"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0293"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0294"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0295"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0296"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0297"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0298"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0299"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0300"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0301"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0302"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0303"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0304"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0305"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0306"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0307"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0308"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0309"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0310"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0311"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0312"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0313"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0314"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0315"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0316"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0317"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0318"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0319"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0320"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0321"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0322"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0323"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0324"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0325"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0326"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0327"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0328"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0329"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0330"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0331"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0332"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0333"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0334"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0335"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0336"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0337"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0338"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0339"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0340"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0341"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0342"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0343"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0344"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0345"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0346"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0347"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0348"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0349"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0350"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0351"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0352"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0353"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0354"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0355"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0356"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0357"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0358"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0359"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0360"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0361"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0362"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0363"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0364"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0365"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0366"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0367"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0368"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0369"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0370"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0371"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0372"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0373"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0374"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0375"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0376"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0377"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0378"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0379"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0380"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0381"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0382"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0383"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0384"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0385"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0386"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0387"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0388"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0389"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0390"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0391"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0392"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0393"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0394"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0395"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0396"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0397"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0398"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0399"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0400"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_muyrn_0401"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			153,
 			255
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_hit_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			139,
 			127
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_particle_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			45,
 			45
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_ranged_attack_projectile"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			62,
 			62
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0016"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0017"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0018"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0019"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0020"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0021"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0022"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0023"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0024"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0025"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0026"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0027"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0028"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0029"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0030"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0031"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0032"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0033"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0034"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0035"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0036"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0037"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0038"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0039"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root1_0040"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			96
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0016"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0017"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0018"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0019"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0020"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0021"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0022"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0023"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0024"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0025"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0026"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0027"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0028"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0029"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0030"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0031"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0032"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0033"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0034"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0035"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0036"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0037"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0038"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0039"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root2_0040"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			90
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0016"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0017"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0018"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0019"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0020"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0021"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0022"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0023"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0024"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0025"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0026"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0027"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0028"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0029"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0030"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0031"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0032"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0033"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0034"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -17160,7 +17160,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0035"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -17184,7 +17184,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0036"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -17208,7 +17208,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0037"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -17232,7 +17232,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0038"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -17256,7 +17256,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0039"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -17280,7 +17280,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_root_defender_root_3_0040"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			122,
 			99
@@ -17304,7 +17304,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_attack_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			88,
 			71
@@ -17328,7 +17328,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_attack_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			88,
 			71
@@ -17352,7 +17352,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_attack_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			88,
 			71
@@ -17376,7 +17376,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_attack_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			88,
 			71
@@ -17400,7 +17400,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_attack_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			88,
 			71
@@ -17424,7 +17424,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_attack_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			88,
 			71
@@ -17448,7 +17448,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_attack_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			88,
 			71
@@ -17472,7 +17472,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_attack_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			88,
 			71
@@ -17496,7 +17496,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_attack_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			88,
 			71
@@ -17520,7 +17520,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_attack_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			88,
 			71
@@ -17544,7 +17544,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_hit_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			93,
 			90
@@ -17568,7 +17568,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_hit_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			93,
 			90
@@ -17592,7 +17592,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_hit_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			93,
 			90
@@ -17616,7 +17616,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_hit_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			93,
 			90
@@ -17640,7 +17640,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_hit_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			93,
 			90
@@ -17664,7 +17664,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_hit_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			93,
 			90
@@ -17688,7 +17688,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_hit_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			93,
 			90
@@ -17712,7 +17712,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_ray_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			445,
 			59
@@ -17736,7 +17736,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_ray_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			445,
 			59
@@ -17760,7 +17760,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_ray_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			445,
 			59
@@ -17784,7 +17784,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_ray_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			445,
 			59
@@ -17808,7 +17808,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_ray_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			445,
 			59
@@ -17832,7 +17832,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_ray_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			445,
 			59
@@ -17856,7 +17856,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_ray_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			445,
 			59
@@ -17880,7 +17880,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_ray_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			445,
 			59
@@ -17904,7 +17904,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_ray_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			445,
 			59
@@ -17928,7 +17928,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_ray_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			445,
 			59
@@ -17952,7 +17952,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_ray_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			445,
 			59
@@ -17976,7 +17976,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18000,7 +18000,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18024,7 +18024,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18048,7 +18048,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18072,7 +18072,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18096,7 +18096,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18120,7 +18120,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18144,7 +18144,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18168,7 +18168,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18192,7 +18192,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18216,7 +18216,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18240,7 +18240,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18264,7 +18264,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18288,7 +18288,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18312,7 +18312,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18336,7 +18336,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0016"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18360,7 +18360,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0017"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18384,7 +18384,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0018"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18408,7 +18408,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0019"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18432,7 +18432,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0020"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18456,7 +18456,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0021"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18480,7 +18480,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0022"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18504,7 +18504,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0023"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18528,7 +18528,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0024"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18552,7 +18552,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0025"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18576,7 +18576,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0026"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18600,7 +18600,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0027"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18624,7 +18624,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0028"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18648,7 +18648,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0029"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18672,7 +18672,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0030"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18696,7 +18696,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0031"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18720,7 +18720,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0032"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18744,7 +18744,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0033"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18768,7 +18768,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0034"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18792,7 +18792,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0035"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18816,7 +18816,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0036"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18840,7 +18840,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0037"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18864,7 +18864,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_sentinel_wisps_wisp_0038"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			96,
 			79
@@ -18888,7 +18888,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -18912,7 +18912,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -18936,7 +18936,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -18960,7 +18960,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -18984,7 +18984,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19008,7 +19008,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19032,7 +19032,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19056,7 +19056,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19080,7 +19080,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19104,7 +19104,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19128,7 +19128,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19152,7 +19152,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19176,7 +19176,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19200,7 +19200,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19224,7 +19224,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19248,7 +19248,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0016"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19272,7 +19272,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0017"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19296,7 +19296,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0018"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19320,7 +19320,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_air_0019"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			136,
 			130
@@ -19344,7 +19344,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19368,7 +19368,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19392,7 +19392,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19416,7 +19416,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19440,7 +19440,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19464,7 +19464,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19488,7 +19488,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19512,7 +19512,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19536,7 +19536,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19560,7 +19560,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19584,7 +19584,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19608,7 +19608,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19632,7 +19632,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0013"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19656,7 +19656,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0014"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19680,7 +19680,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0015"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19704,7 +19704,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0016"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19728,7 +19728,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0017"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19752,7 +19752,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0018"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19776,7 +19776,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_explosion_decal_0019"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			161,
 			96
@@ -19800,7 +19800,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_particle_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			99,
 			99
@@ -19824,7 +19824,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_particle_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			99,
 			99
@@ -19848,7 +19848,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_particle_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			99,
 			99
@@ -19872,7 +19872,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_particle_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			99,
 			99
@@ -19896,7 +19896,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_particle_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			99,
 			99
@@ -19920,7 +19920,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_particle_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			99,
 			99
@@ -19944,7 +19944,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_particle_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			99,
 			99
@@ -19968,7 +19968,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_particle_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			99,
 			99
@@ -19992,7 +19992,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_particle_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			99,
 			99
@@ -20016,7 +20016,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_particle_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			99,
 			99
@@ -20040,7 +20040,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_projectile_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			119
@@ -20064,7 +20064,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_projectile_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			119
@@ -20088,7 +20088,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_projectile_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			119
@@ -20112,7 +20112,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_projectile_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			119
@@ -20136,7 +20136,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_projectile_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			119
@@ -20160,7 +20160,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_projectile_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			119
@@ -20184,7 +20184,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_projectile_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			119
@@ -20208,7 +20208,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_projectile_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			119
@@ -20232,7 +20232,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_projectile_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			119
@@ -20256,7 +20256,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_projectile_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			119
@@ -20280,7 +20280,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_projectile_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			119
@@ -20304,7 +20304,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_verdant_blast_projectile_0012"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			119,
 			119
@@ -20328,7 +20328,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_walk2_roots_particle_0001"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			85,
 			39
@@ -20352,7 +20352,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_walk2_roots_particle_0002"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			85,
 			39
@@ -20376,7 +20376,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_walk2_roots_particle_0003"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			85,
 			39
@@ -20400,7 +20400,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_walk2_roots_particle_0004"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			85,
 			39
@@ -20424,7 +20424,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_walk2_roots_particle_0005"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			85,
 			39
@@ -20448,7 +20448,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_walk2_roots_particle_0006"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			85,
 			39
@@ -20472,7 +20472,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_walk2_roots_particle_0007"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			85,
 			39
@@ -20496,7 +20496,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_walk2_roots_particle_0008"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			85,
 			39
@@ -20520,7 +20520,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_walk2_roots_particle_0009"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			85,
 			39
@@ -20544,7 +20544,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_walk2_roots_particle_0010"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			85,
 			39
@@ -20568,7 +20568,7 @@ return {
 		alias = {},
 	},
 	["hero_nyru_walk2_roots_particle_0011"] = {
-		a_name = "go_hero_muyrn-1.png",
+		a_name = "go_hero_muyrn-1.dds",
 		size = {
 			85,
 			39

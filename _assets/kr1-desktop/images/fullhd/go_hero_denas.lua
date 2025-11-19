@@ -2,7 +2,7 @@
 
 return {
 	hero_king_0001 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	hero_king_0002 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	hero_king_0003 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	hero_king_0004 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	hero_king_0005 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	hero_king_0006 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	hero_king_0007 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -188,7 +188,7 @@ return {
 		}
 	},
 	hero_king_0009 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -214,7 +214,7 @@ return {
 		}
 	},
 	hero_king_0011 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -242,7 +242,7 @@ return {
 		}
 	},
 	hero_king_0015 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -268,7 +268,7 @@ return {
 		}
 	},
 	hero_king_0017 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -294,7 +294,7 @@ return {
 		}
 	},
 	hero_king_0019 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -320,7 +320,7 @@ return {
 		}
 	},
 	hero_king_0021 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -347,7 +347,7 @@ return {
 		}
 	},
 	hero_king_0024 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -371,7 +371,7 @@ return {
 		alias = {}
 	},
 	hero_king_0027 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -418,7 +418,7 @@ return {
 		}
 	},
 	hero_king_0028 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -466,7 +466,7 @@ return {
 		}
 	},
 	hero_king_0082 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -494,7 +494,7 @@ return {
 		}
 	},
 	hero_king_0084 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -520,7 +520,7 @@ return {
 		}
 	},
 	hero_king_0086 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -546,7 +546,7 @@ return {
 		}
 	},
 	hero_king_0088 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -572,7 +572,7 @@ return {
 		}
 	},
 	hero_king_0090 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -598,7 +598,7 @@ return {
 		}
 	},
 	hero_king_0092 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -644,7 +644,7 @@ return {
 		}
 	},
 	hero_king_0119 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -672,7 +672,7 @@ return {
 		}
 	},
 	hero_king_0121 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -698,7 +698,7 @@ return {
 		}
 	},
 	hero_king_0123 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -724,7 +724,7 @@ return {
 		}
 	},
 	hero_king_0125 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -750,7 +750,7 @@ return {
 		}
 	},
 	hero_king_0127 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -776,7 +776,7 @@ return {
 		}
 	},
 	hero_king_0129 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -802,7 +802,7 @@ return {
 		}
 	},
 	hero_king_0131 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -828,7 +828,7 @@ return {
 		}
 	},
 	hero_king_0133 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -854,7 +854,7 @@ return {
 		}
 	},
 	hero_king_0135 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -880,7 +880,7 @@ return {
 		}
 	},
 	hero_king_0137 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -904,7 +904,7 @@ return {
 		alias = {}
 	},
 	hero_king_0143 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -930,7 +930,7 @@ return {
 		}
 	},
 	hero_king_0145 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -956,7 +956,7 @@ return {
 		}
 	},
 	hero_king_0147 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -982,7 +982,7 @@ return {
 		}
 	},
 	hero_king_0149 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1008,7 +1008,7 @@ return {
 		}
 	},
 	hero_king_0151 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1034,7 +1034,7 @@ return {
 		}
 	},
 	hero_king_0153 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1060,7 +1060,7 @@ return {
 		}
 	},
 	hero_king_0155 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1084,7 +1084,7 @@ return {
 		alias = {}
 	},
 	hero_king_0156 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1111,7 +1111,7 @@ return {
 		}
 	},
 	hero_king_0158 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1137,7 +1137,7 @@ return {
 		}
 	},
 	hero_king_0160 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1163,7 +1163,7 @@ return {
 		}
 	},
 	hero_king_0162 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1187,7 +1187,7 @@ return {
 		alias = {}
 	},
 	hero_king_0163 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1211,7 +1211,7 @@ return {
 		alias = {}
 	},
 	hero_king_0164 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1235,7 +1235,7 @@ return {
 		alias = {}
 	},
 	hero_king_0165 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1259,7 +1259,7 @@ return {
 		alias = {}
 	},
 	hero_king_0166 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1283,7 +1283,7 @@ return {
 		alias = {}
 	},
 	hero_king_0167 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1307,7 +1307,7 @@ return {
 		alias = {}
 	},
 	hero_king_0168 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1331,7 +1331,7 @@ return {
 		alias = {}
 	},
 	hero_king_0169 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1355,7 +1355,7 @@ return {
 		alias = {}
 	},
 	hero_king_0170 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1379,7 +1379,7 @@ return {
 		alias = {}
 	},
 	hero_king_0171 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1403,7 +1403,7 @@ return {
 		alias = {}
 	},
 	hero_king_0172 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1427,7 +1427,7 @@ return {
 		alias = {}
 	},
 	hero_king_0173 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1451,7 +1451,7 @@ return {
 		alias = {}
 	},
 	hero_king_0174 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1475,7 +1475,7 @@ return {
 		alias = {}
 	},
 	hero_king_0175 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1504,7 +1504,7 @@ return {
 		}
 	},
 	hero_king_0180 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1530,7 +1530,7 @@ return {
 		}
 	},
 	hero_king_0183 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1556,7 +1556,7 @@ return {
 		}
 	},
 	hero_king_0185 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1584,7 +1584,7 @@ return {
 		}
 	},
 	hero_king_0189 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1610,7 +1610,7 @@ return {
 		}
 	},
 	hero_king_0191 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1638,7 +1638,7 @@ return {
 		}
 	},
 	hero_king_0195 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1664,7 +1664,7 @@ return {
 		}
 	},
 	hero_king_0197 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1692,7 +1692,7 @@ return {
 		}
 	},
 	hero_king_catapultDecal = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			92,
 			46
@@ -1716,7 +1716,7 @@ return {
 		alias = {}
 	},
 	hero_king_catapultProjectile = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			68,
 			52
@@ -1740,7 +1740,7 @@ return {
 		alias = {}
 	},
 	hero_king_cursing_0001 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1764,7 +1764,7 @@ return {
 		alias = {}
 	},
 	hero_king_cursing_0002 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1788,7 +1788,7 @@ return {
 		alias = {}
 	},
 	hero_king_cursing_0003 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1812,7 +1812,7 @@ return {
 		alias = {}
 	},
 	hero_king_cursing_0004 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1836,7 +1836,7 @@ return {
 		alias = {}
 	},
 	hero_king_cursing_0005 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1860,7 +1860,7 @@ return {
 		alias = {}
 	},
 	hero_king_cursing_0006 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1884,7 +1884,7 @@ return {
 		alias = {}
 	},
 	hero_king_cursing_0007 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1908,7 +1908,7 @@ return {
 		alias = {}
 	},
 	hero_king_glow = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1932,7 +1932,7 @@ return {
 		alias = {}
 	},
 	hero_king_glowShadow = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			216,
 			154
@@ -1956,7 +1956,7 @@ return {
 		alias = {}
 	},
 	hero_king_projectiles_0001 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			34,
 			34
@@ -1980,7 +1980,7 @@ return {
 		alias = {}
 	},
 	hero_king_projectiles_0002 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			34,
 			34
@@ -2004,7 +2004,7 @@ return {
 		alias = {}
 	},
 	hero_king_projectiles_0003 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			34,
 			34
@@ -2028,7 +2028,7 @@ return {
 		alias = {}
 	},
 	hero_king_projectiles_0004 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			34,
 			34
@@ -2052,7 +2052,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			120,
 			68
@@ -2076,7 +2076,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0001 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2100,7 +2100,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0002 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2124,7 +2124,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0003 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2148,7 +2148,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0004 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2172,7 +2172,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0005 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2196,7 +2196,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0006 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2220,7 +2220,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0007 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2244,7 +2244,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0008 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2268,7 +2268,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0009 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2292,7 +2292,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0010 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2316,7 +2316,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0011 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2340,7 +2340,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0012 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2364,7 +2364,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0013 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2388,7 +2388,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0014 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2412,7 +2412,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0015 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2436,7 +2436,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0016 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2460,7 +2460,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0017 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140
@@ -2484,7 +2484,7 @@ return {
 		alias = {}
 	},
 	hero_king_towerBuff_0018 = {
-		a_name = "go_hero_denas-1.png",
+		a_name = "go_hero_denas-1.dds",
 		size = {
 			162,
 			140

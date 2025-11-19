@@ -2,7 +2,7 @@
 
 return {
 	bambi_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -34,7 +34,7 @@ return {
 		}
 	},
 	bambi_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -60,7 +60,7 @@ return {
 		}
 	},
 	bambi_0006 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -86,7 +86,7 @@ return {
 		}
 	},
 	bambi_0008 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -112,7 +112,7 @@ return {
 		}
 	},
 	bambi_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -146,7 +146,7 @@ return {
 		}
 	},
 	bambi_0012 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -174,7 +174,7 @@ return {
 		}
 	},
 	bambi_0020 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -202,7 +202,7 @@ return {
 		}
 	},
 	bambi_0028 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -228,7 +228,7 @@ return {
 		}
 	},
 	bambi_0030 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -254,7 +254,7 @@ return {
 		}
 	},
 	bambi_0032 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -280,7 +280,7 @@ return {
 		}
 	},
 	bambi_0034 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -306,7 +306,7 @@ return {
 		}
 	},
 	bambi_0036 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -332,7 +332,7 @@ return {
 		}
 	},
 	bambi_0038 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -358,7 +358,7 @@ return {
 		}
 	},
 	bambi_0040 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -384,7 +384,7 @@ return {
 		}
 	},
 	bambi_0042 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -410,7 +410,7 @@ return {
 		}
 	},
 	bambi_0044 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -436,7 +436,7 @@ return {
 		}
 	},
 	bambi_0046 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -464,7 +464,7 @@ return {
 		}
 	},
 	bambi_0050 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -491,7 +491,7 @@ return {
 		}
 	},
 	bambi_0053 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -517,7 +517,7 @@ return {
 		}
 	},
 	bambi_0055 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -543,7 +543,7 @@ return {
 		}
 	},
 	bambi_0057 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -569,7 +569,7 @@ return {
 		}
 	},
 	bambi_0059 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -595,7 +595,7 @@ return {
 		}
 	},
 	bambi_0061 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -621,7 +621,7 @@ return {
 		}
 	},
 	bambi_0063 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -647,7 +647,7 @@ return {
 		}
 	},
 	bambi_0065 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			56
@@ -674,7 +674,7 @@ return {
 		}
 	},
 	ewok_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -703,7 +703,7 @@ return {
 		}
 	},
 	ewok_0002 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -729,7 +729,7 @@ return {
 		}
 	},
 	ewok_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -755,7 +755,7 @@ return {
 		}
 	},
 	ewok_0006 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -781,7 +781,7 @@ return {
 		}
 	},
 	ewok_0008 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -807,7 +807,7 @@ return {
 		}
 	},
 	ewok_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -833,7 +833,7 @@ return {
 		}
 	},
 	ewok_0012 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -859,7 +859,7 @@ return {
 		}
 	},
 	ewok_0014 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -885,7 +885,7 @@ return {
 		}
 	},
 	ewok_0016 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -911,7 +911,7 @@ return {
 		}
 	},
 	ewok_0018 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -935,7 +935,7 @@ return {
 		alias = {}
 	},
 	ewok_0019 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -959,7 +959,7 @@ return {
 		alias = {}
 	},
 	ewok_0020 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -983,7 +983,7 @@ return {
 		alias = {}
 	},
 	ewok_0021 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1009,7 +1009,7 @@ return {
 		}
 	},
 	ewok_0023 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1035,7 +1035,7 @@ return {
 		}
 	},
 	ewok_0025 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1061,7 +1061,7 @@ return {
 		}
 	},
 	ewok_0027 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1087,7 +1087,7 @@ return {
 		}
 	},
 	ewok_0031 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1113,7 +1113,7 @@ return {
 		}
 	},
 	ewok_0033 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1139,7 +1139,7 @@ return {
 		}
 	},
 	ewok_0035 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1165,7 +1165,7 @@ return {
 		}
 	},
 	ewok_0037 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1191,7 +1191,7 @@ return {
 		}
 	},
 	ewok_0039 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1223,7 +1223,7 @@ return {
 		}
 	},
 	ewok_0043 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1249,7 +1249,7 @@ return {
 		}
 	},
 	ewok_0045 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1275,7 +1275,7 @@ return {
 		}
 	},
 	ewok_0047 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1301,7 +1301,7 @@ return {
 		}
 	},
 	ewok_0053 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1327,7 +1327,7 @@ return {
 		}
 	},
 	ewok_0056 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1351,7 +1351,7 @@ return {
 		alias = {}
 	},
 	ewok_0057 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1375,7 +1375,7 @@ return {
 		alias = {}
 	},
 	ewok_0058 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1399,7 +1399,7 @@ return {
 		alias = {}
 	},
 	ewok_0059 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1423,7 +1423,7 @@ return {
 		alias = {}
 	},
 	ewok_0060 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1447,7 +1447,7 @@ return {
 		alias = {}
 	},
 	ewok_0061 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1471,7 +1471,7 @@ return {
 		alias = {}
 	},
 	ewok_0062 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1495,7 +1495,7 @@ return {
 		alias = {}
 	},
 	ewok_0063 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1519,7 +1519,7 @@ return {
 		alias = {}
 	},
 	ewok_0064 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1543,7 +1543,7 @@ return {
 		alias = {}
 	},
 	ewok_0065 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1567,7 +1567,7 @@ return {
 		alias = {}
 	},
 	ewok_0066 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1593,7 +1593,7 @@ return {
 		}
 	},
 	ewok_0068 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1619,7 +1619,7 @@ return {
 		}
 	},
 	ewok_0070 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1645,7 +1645,7 @@ return {
 		}
 	},
 	ewok_0073 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1669,7 +1669,7 @@ return {
 		alias = {}
 	},
 	ewok_0074 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1693,7 +1693,7 @@ return {
 		alias = {}
 	},
 	ewok_0075 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1717,7 +1717,7 @@ return {
 		alias = {}
 	},
 	ewok_0076 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1741,7 +1741,7 @@ return {
 		alias = {}
 	},
 	ewok_0077 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1765,7 +1765,7 @@ return {
 		alias = {}
 	},
 	ewok_0078 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1789,7 +1789,7 @@ return {
 		alias = {}
 	},
 	ewok_0079 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1813,7 +1813,7 @@ return {
 		alias = {}
 	},
 	ewok_0080 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			113,
 			70
@@ -1837,7 +1837,7 @@ return {
 		alias = {}
 	},
 	ewok_hut_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -1861,7 +1861,7 @@ return {
 		alias = {}
 	},
 	ewok_hut_0002 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -1885,7 +1885,7 @@ return {
 		alias = {}
 	},
 	ewok_hut_0003 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -1911,7 +1911,7 @@ return {
 		}
 	},
 	ewok_hut_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -1935,7 +1935,7 @@ return {
 		alias = {}
 	},
 	ewok_hut_0005 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -1959,7 +1959,7 @@ return {
 		alias = {}
 	},
 	ewok_hut_0006 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -2002,7 +2002,7 @@ return {
 		}
 	},
 	ewok_hut_0025 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -2026,7 +2026,7 @@ return {
 		alias = {}
 	},
 	ewok_hut_0026 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			129,
 			115
@@ -2050,7 +2050,7 @@ return {
 		alias = {}
 	},
 	gryphon_guards_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			45
@@ -2076,7 +2076,7 @@ return {
 		}
 	},
 	gryphon_guards_0002 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			45
@@ -2100,7 +2100,7 @@ return {
 		alias = {}
 	},
 	gryphon_guards_0003 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			45
@@ -2124,7 +2124,7 @@ return {
 		alias = {}
 	},
 	gryphon_guards_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			45
@@ -2148,7 +2148,7 @@ return {
 		alias = {}
 	},
 	gryphon_guards_0005 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			45
@@ -2172,7 +2172,7 @@ return {
 		alias = {}
 	},
 	gryphon_guards_0006 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			45
@@ -2196,7 +2196,7 @@ return {
 		alias = {}
 	},
 	gryphon_guards_0007 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			45
@@ -2222,7 +2222,7 @@ return {
 		}
 	},
 	gryphon_guards_0009 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			45
@@ -2246,7 +2246,7 @@ return {
 		alias = {}
 	},
 	gryphon_guards_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			45
@@ -2272,7 +2272,7 @@ return {
 		}
 	},
 	gryphon_guards_0012 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			45
@@ -2296,7 +2296,7 @@ return {
 		alias = {}
 	},
 	gryphon_guards_0013 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			45
@@ -2320,7 +2320,7 @@ return {
 		alias = {}
 	},
 	gryphon_guards_0014 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			45
@@ -2346,7 +2346,7 @@ return {
 		}
 	},
 	gryphon_guards_0016 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			45
@@ -2373,7 +2373,7 @@ return {
 		}
 	},
 	gryphon_guards_0019 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			62,
 			45
@@ -2399,7 +2399,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2431,7 +2431,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2458,7 +2458,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0007 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2485,7 +2485,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2512,7 +2512,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0013 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2539,7 +2539,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0016 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2566,7 +2566,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0024 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2592,7 +2592,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0026 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2618,7 +2618,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0028 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2644,7 +2644,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0030 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2670,7 +2670,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0032 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2699,7 +2699,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0036 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2727,7 +2727,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0040 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2754,7 +2754,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0043 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2781,7 +2781,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0047 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2807,7 +2807,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0049 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2833,7 +2833,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0051 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2859,7 +2859,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0053 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2885,7 +2885,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0055 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2911,7 +2911,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0057 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2937,7 +2937,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0059 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2963,7 +2963,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0061 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -2989,7 +2989,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0063 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -3015,7 +3015,7 @@ return {
 		}
 	},
 	plant_magicBlosom_0065 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -3039,7 +3039,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3065,7 +3065,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0002 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3091,7 +3091,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0003 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3117,7 +3117,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3143,7 +3143,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0005 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3169,7 +3169,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0006 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3195,7 +3195,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0007 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3221,7 +3221,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0008 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3247,7 +3247,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0009 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3273,7 +3273,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3299,7 +3299,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0011 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3325,7 +3325,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0012 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3351,7 +3351,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0013 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3377,7 +3377,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0014 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3403,7 +3403,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0015 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3429,7 +3429,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0016 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3455,7 +3455,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0017 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3481,7 +3481,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded2_0018 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3505,7 +3505,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0019 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3529,7 +3529,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0020 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3553,7 +3553,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0021 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3577,7 +3577,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0022 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3601,7 +3601,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0023 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3625,7 +3625,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0024 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3649,7 +3649,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0025 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3673,7 +3673,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0026 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3697,7 +3697,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0027 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3721,7 +3721,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0028 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3745,7 +3745,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0029 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3769,7 +3769,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0030 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3793,7 +3793,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0031 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3817,7 +3817,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0032 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3841,7 +3841,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0033 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3865,7 +3865,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0034 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3889,7 +3889,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0035 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3913,7 +3913,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0036 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3937,7 +3937,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0037 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3961,7 +3961,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0038 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -3985,7 +3985,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0039 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4009,7 +4009,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0040 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4033,7 +4033,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0041 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4057,7 +4057,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0042 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4081,7 +4081,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0043 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4105,7 +4105,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0044 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4129,7 +4129,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0045 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4153,7 +4153,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0046 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4177,7 +4177,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0047 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4201,7 +4201,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded2_0048 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4225,7 +4225,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4252,7 +4252,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4279,7 +4279,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded_0007 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4306,7 +4306,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4333,7 +4333,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded_0013 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4359,7 +4359,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded_0015 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4383,7 +4383,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded_0016 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4409,7 +4409,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded_0018 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4433,7 +4433,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded_0019 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4459,7 +4459,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded_0021 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4483,7 +4483,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded_0022 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4509,7 +4509,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loaded_0024 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4533,7 +4533,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loaded_0025 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			65,
 			65
@@ -4559,7 +4559,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loading_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -4583,7 +4583,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loading_0002 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -4607,7 +4607,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loading_0003 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -4631,7 +4631,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loading_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -4655,7 +4655,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loading_0005 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -4679,7 +4679,7 @@ return {
 		alias = {}
 	},
 	plant_magicBlosom_loading_0006 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -4705,7 +4705,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loading_0008 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -4731,7 +4731,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loading_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -4758,7 +4758,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loading_0013 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -4784,7 +4784,7 @@ return {
 		}
 	},
 	plant_magicBlosom_loading_0015 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			110
@@ -4810,7 +4810,7 @@ return {
 		}
 	},
 	stage1_bird1_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			39,
 			31
@@ -4834,7 +4834,7 @@ return {
 		alias = {}
 	},
 	stage1_bird1_0002 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			39,
 			31
@@ -4860,7 +4860,7 @@ return {
 		}
 	},
 	stage1_bird1_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			39,
 			31
@@ -4884,7 +4884,7 @@ return {
 		alias = {}
 	},
 	stage1_bird1_0005 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			39,
 			31
@@ -4908,7 +4908,7 @@ return {
 		alias = {}
 	},
 	stage1_bird1_0006 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			39,
 			31
@@ -4932,7 +4932,7 @@ return {
 		alias = {}
 	},
 	stage1_bird1_0007 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			39,
 			31
@@ -4958,7 +4958,7 @@ return {
 		}
 	},
 	stage1_bird2_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			39,
 			30
@@ -4982,7 +4982,7 @@ return {
 		alias = {}
 	},
 	stage1_bird2_0002 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			39,
 			30
@@ -5008,7 +5008,7 @@ return {
 		}
 	},
 	stage1_bird2_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			39,
 			30
@@ -5032,7 +5032,7 @@ return {
 		alias = {}
 	},
 	stage1_bird2_0005 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			39,
 			30
@@ -5056,7 +5056,7 @@ return {
 		alias = {}
 	},
 	stage1_bird2_0006 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			39,
 			30
@@ -5080,7 +5080,7 @@ return {
 		alias = {}
 	},
 	stage1_bird2_0007 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			39,
 			30
@@ -5106,7 +5106,7 @@ return {
 		}
 	},
 	stage1_fish_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5130,7 +5130,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0002 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5154,7 +5154,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0003 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5178,7 +5178,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5202,7 +5202,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0005 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5226,7 +5226,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0006 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5250,7 +5250,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0007 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5274,7 +5274,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0008 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5298,7 +5298,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0009 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5322,7 +5322,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5346,7 +5346,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0011 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5370,7 +5370,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0012 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5394,7 +5394,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0013 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5418,7 +5418,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0014 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5442,7 +5442,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0015 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5466,7 +5466,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0016 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5490,7 +5490,7 @@ return {
 		alias = {}
 	},
 	stage1_fish_0017 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5516,7 +5516,7 @@ return {
 		}
 	},
 	stage1_fish_0019 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5542,7 +5542,7 @@ return {
 		}
 	},
 	stage1_fish_0021 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			68,
 			48
@@ -5568,7 +5568,7 @@ return {
 		}
 	},
 	stage1_rabbit_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5595,7 +5595,7 @@ return {
 		}
 	},
 	stage1_rabbit_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5621,7 +5621,7 @@ return {
 		}
 	},
 	stage1_rabbit_0006 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5647,7 +5647,7 @@ return {
 		}
 	},
 	stage1_rabbit_0008 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5673,7 +5673,7 @@ return {
 		}
 	},
 	stage1_rabbit_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5701,7 +5701,7 @@ return {
 		}
 	},
 	stage1_rabbit_0012 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5733,7 +5733,7 @@ return {
 		}
 	},
 	stage1_rabbit_0022 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5759,7 +5759,7 @@ return {
 		}
 	},
 	stage1_rabbit_0024 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5785,7 +5785,7 @@ return {
 		}
 	},
 	stage1_rabbit_0026 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5811,7 +5811,7 @@ return {
 		}
 	},
 	stage1_rabbit_0028 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5852,7 +5852,7 @@ return {
 		}
 	},
 	stage1_rabbit_0039 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5876,7 +5876,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0040 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5900,7 +5900,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0041 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5924,7 +5924,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0042 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5948,7 +5948,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0043 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5972,7 +5972,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0044 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -5996,7 +5996,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0045 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6020,7 +6020,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0046 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6044,7 +6044,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0047 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6068,7 +6068,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0048 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6092,7 +6092,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0049 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6123,7 +6123,7 @@ return {
 		}
 	},
 	stage1_rabbit_0056 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6147,7 +6147,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0057 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6171,7 +6171,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0058 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6195,7 +6195,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0059 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6219,7 +6219,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0060 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6243,7 +6243,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0061 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6267,7 +6267,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0062 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6291,7 +6291,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0063 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6315,7 +6315,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0064 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6339,7 +6339,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0065 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6363,7 +6363,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0066 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6392,7 +6392,7 @@ return {
 		}
 	},
 	stage1_rabbit_0071 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6421,7 +6421,7 @@ return {
 		}
 	},
 	stage1_rabbit_0075 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6447,7 +6447,7 @@ return {
 		}
 	},
 	stage1_rabbit_0077 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6473,7 +6473,7 @@ return {
 		}
 	},
 	stage1_rabbit_0079 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6499,7 +6499,7 @@ return {
 		}
 	},
 	stage1_rabbit_0081 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6525,7 +6525,7 @@ return {
 		}
 	},
 	stage1_rabbit_0083 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6551,7 +6551,7 @@ return {
 		}
 	},
 	stage1_rabbit_0085 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6577,7 +6577,7 @@ return {
 		}
 	},
 	stage1_rabbit_0088 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6603,7 +6603,7 @@ return {
 		}
 	},
 	stage1_rabbit_0090 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6629,7 +6629,7 @@ return {
 		}
 	},
 	stage1_rabbit_0092 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6655,7 +6655,7 @@ return {
 		}
 	},
 	stage1_rabbit_0094 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6681,7 +6681,7 @@ return {
 		}
 	},
 	stage1_rabbit_0096 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6707,7 +6707,7 @@ return {
 		}
 	},
 	stage1_rabbit_0098 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6734,7 +6734,7 @@ return {
 		}
 	},
 	stage1_rabbit_0101 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6758,7 +6758,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0102 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6782,7 +6782,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0103 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6806,7 +6806,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0104 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6830,7 +6830,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0105 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6854,7 +6854,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0106 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6878,7 +6878,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0107 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6902,7 +6902,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0108 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6926,7 +6926,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0109 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6950,7 +6950,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0110 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6974,7 +6974,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0111 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -6998,7 +6998,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0112 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7022,7 +7022,7 @@ return {
 		alias = {}
 	},
 	stage1_rabbit_0119 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7048,7 +7048,7 @@ return {
 		}
 	},
 	stage1_rabbit_0121 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7074,7 +7074,7 @@ return {
 		}
 	},
 	stage1_rabbit_0123 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7100,7 +7100,7 @@ return {
 		}
 	},
 	stage1_rabbit_0125 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7126,7 +7126,7 @@ return {
 		}
 	},
 	stage1_rabbit_0127 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7152,7 +7152,7 @@ return {
 		}
 	},
 	stage1_rabbit_0129 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7178,7 +7178,7 @@ return {
 		}
 	},
 	stage1_rabbit_0131 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7204,7 +7204,7 @@ return {
 		}
 	},
 	stage1_rabbit_0133 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7230,7 +7230,7 @@ return {
 		}
 	},
 	stage1_rabbit_0135 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7256,7 +7256,7 @@ return {
 		}
 	},
 	stage1_rabbit_0137 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7282,7 +7282,7 @@ return {
 		}
 	},
 	stage1_rabbit_0139 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7308,7 +7308,7 @@ return {
 		}
 	},
 	stage1_rabbit_0141 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7334,7 +7334,7 @@ return {
 		}
 	},
 	stage1_rabbit_0143 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7360,7 +7360,7 @@ return {
 		}
 	},
 	stage1_rabbit_0145 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7386,7 +7386,7 @@ return {
 		}
 	},
 	stage1_rabbit_0147 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7412,7 +7412,7 @@ return {
 		}
 	},
 	stage1_rabbit_0149 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7438,7 +7438,7 @@ return {
 		}
 	},
 	stage1_rabbit_0151 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7464,7 +7464,7 @@ return {
 		}
 	},
 	stage1_rabbit_0153 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7490,7 +7490,7 @@ return {
 		}
 	},
 	stage1_rabbit_0155 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7516,7 +7516,7 @@ return {
 		}
 	},
 	stage1_rabbit_0157 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7542,7 +7542,7 @@ return {
 		}
 	},
 	stage1_rabbit_0159 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7568,7 +7568,7 @@ return {
 		}
 	},
 	stage1_rabbit_0161 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7594,7 +7594,7 @@ return {
 		}
 	},
 	stage1_rabbit_0163 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7620,7 +7620,7 @@ return {
 		}
 	},
 	stage1_rabbit_0165 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7646,7 +7646,7 @@ return {
 		}
 	},
 	stage1_rabbit_0167 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7672,7 +7672,7 @@ return {
 		}
 	},
 	stage1_rabbit_0169 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7698,7 +7698,7 @@ return {
 		}
 	},
 	stage1_rabbit_0171 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7724,7 +7724,7 @@ return {
 		}
 	},
 	stage1_rabbit_0173 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7750,7 +7750,7 @@ return {
 		}
 	},
 	stage1_rabbit_0175 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7776,7 +7776,7 @@ return {
 		}
 	},
 	stage1_rabbit_0177 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7802,7 +7802,7 @@ return {
 		}
 	},
 	stage1_rabbit_0179 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7828,7 +7828,7 @@ return {
 		}
 	},
 	stage1_rabbit_0181 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7854,7 +7854,7 @@ return {
 		}
 	},
 	stage1_rabbit_0183 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			70,
 			70
@@ -7880,7 +7880,7 @@ return {
 		}
 	},
 	water_sparks_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			87,
 			59
@@ -7910,7 +7910,7 @@ return {
 		}
 	},
 	water_sparks_0007 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			87,
 			59
@@ -7946,7 +7946,7 @@ return {
 		}
 	},
 	water_sparks_0013 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			87,
 			59
@@ -7976,7 +7976,7 @@ return {
 		}
 	},
 	water_splash_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			37,
 			34
@@ -8003,7 +8003,7 @@ return {
 		}
 	},
 	water_splash_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			37,
 			34
@@ -8030,7 +8030,7 @@ return {
 		}
 	},
 	water_splash_0007 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			37,
 			34
@@ -8057,7 +8057,7 @@ return {
 		}
 	},
 	water_splash_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			37,
 			34
@@ -8084,7 +8084,7 @@ return {
 		}
 	},
 	water_splash_0013 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			37,
 			34
@@ -8111,7 +8111,7 @@ return {
 		}
 	},
 	water_splash_0016 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			37,
 			34
@@ -8138,7 +8138,7 @@ return {
 		}
 	},
 	water_splash_0019 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			37,
 			34
@@ -8165,7 +8165,7 @@ return {
 		}
 	},
 	water_splash_0022 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			37,
 			34
@@ -8192,7 +8192,7 @@ return {
 		}
 	},
 	water_splash_0025 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			37,
 			34
@@ -8219,7 +8219,7 @@ return {
 		}
 	},
 	water_splash_0028 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			37,
 			34
@@ -8246,7 +8246,7 @@ return {
 		}
 	},
 	water_waves2_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			76,
 			17
@@ -8273,7 +8273,7 @@ return {
 		}
 	},
 	water_waves2_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			76,
 			17
@@ -8300,7 +8300,7 @@ return {
 		}
 	},
 	water_waves2_0007 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			76,
 			17
@@ -8327,7 +8327,7 @@ return {
 		}
 	},
 	water_waves2_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			76,
 			17
@@ -8354,7 +8354,7 @@ return {
 		}
 	},
 	water_waves2_0013 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			76,
 			17
@@ -8381,7 +8381,7 @@ return {
 		}
 	},
 	water_waves3_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			51,
 			28
@@ -8408,7 +8408,7 @@ return {
 		}
 	},
 	water_waves3_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			51,
 			28
@@ -8435,7 +8435,7 @@ return {
 		}
 	},
 	water_waves3_0007 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			51,
 			28
@@ -8462,7 +8462,7 @@ return {
 		}
 	},
 	water_waves3_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			51,
 			28
@@ -8489,7 +8489,7 @@ return {
 		}
 	},
 	water_waves3_0013 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			51,
 			28
@@ -8516,7 +8516,7 @@ return {
 		}
 	},
 	water_waves3_0016 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			51,
 			28
@@ -8543,7 +8543,7 @@ return {
 		}
 	},
 	water_waves3_0019 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			51,
 			28
@@ -8570,7 +8570,7 @@ return {
 		}
 	},
 	water_waves4_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			87,
 			56
@@ -8600,7 +8600,7 @@ return {
 		}
 	},
 	water_waves4_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			87,
 			56
@@ -8630,7 +8630,7 @@ return {
 		}
 	},
 	water_waves4_0007 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			87,
 			56
@@ -8660,7 +8660,7 @@ return {
 		}
 	},
 	water_waves4_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			87,
 			56
@@ -8690,7 +8690,7 @@ return {
 		}
 	},
 	water_waves4_0013 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			87,
 			56
@@ -8717,7 +8717,7 @@ return {
 		}
 	},
 	water_waves4_0016 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			87,
 			56
@@ -8747,7 +8747,7 @@ return {
 		}
 	},
 	water_waves4_0019 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			87,
 			56
@@ -8777,7 +8777,7 @@ return {
 		}
 	},
 	water_waves4_0034 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			87,
 			56
@@ -8804,7 +8804,7 @@ return {
 		}
 	},
 	water_waves_0001 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			42,
 			31
@@ -8831,7 +8831,7 @@ return {
 		}
 	},
 	water_waves_0004 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			42,
 			31
@@ -8858,7 +8858,7 @@ return {
 		}
 	},
 	water_waves_0007 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			42,
 			31
@@ -8885,7 +8885,7 @@ return {
 		}
 	},
 	water_waves_0010 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			42,
 			31
@@ -8912,7 +8912,7 @@ return {
 		}
 	},
 	water_waves_0013 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			42,
 			31
@@ -8939,7 +8939,7 @@ return {
 		}
 	},
 	water_waves_0016 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			42,
 			31
@@ -8966,7 +8966,7 @@ return {
 		}
 	},
 	water_waves_0019 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			42,
 			31
@@ -8993,7 +8993,7 @@ return {
 		}
 	},
 	water_waves_0022 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			42,
 			31
@@ -9020,7 +9020,7 @@ return {
 		}
 	},
 	water_waves_0025 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			42,
 			31
@@ -9047,7 +9047,7 @@ return {
 		}
 	},
 	water_waves_0028 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			42,
 			31
@@ -9074,7 +9074,7 @@ return {
 		}
 	},
 	water_waves_0031 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			42,
 			31
@@ -9101,7 +9101,7 @@ return {
 		}
 	},
 	water_waves_0034 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			42,
 			31
@@ -9128,7 +9128,7 @@ return {
 		}
 	},
 	water_waves_0037 = {
-		a_name = "go_stages_elven_woods-1.png",
+		a_name = "go_stages_elven_woods-1.dds",
 		size = {
 			42,
 			31

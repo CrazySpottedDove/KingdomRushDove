@@ -2,7 +2,7 @@
 
 return {
 	Stage9_lavaShot = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			34,
 			34
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaShotFx_0001 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			48,
 			59
@@ -52,7 +52,7 @@ return {
 		}
 	},
 	Stage9_lavaShotFx_0003 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			48,
 			59
@@ -78,7 +78,7 @@ return {
 		}
 	},
 	Stage9_lavaShotFx_0005 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			48,
 			59
@@ -104,7 +104,7 @@ return {
 		}
 	},
 	Stage9_lavaShotFx_0007 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			48,
 			59
@@ -130,7 +130,7 @@ return {
 		}
 	},
 	Stage9_lavaShotFx_0009 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			48,
 			59
@@ -156,7 +156,7 @@ return {
 		}
 	},
 	Stage9_lavaShotFx_0011 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			48,
 			59
@@ -182,7 +182,7 @@ return {
 		}
 	},
 	Stage9_lavaShotFx_0013 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			48,
 			59
@@ -208,7 +208,7 @@ return {
 		}
 	},
 	Stage9_lavaShotFx_0015 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			48,
 			59
@@ -234,7 +234,7 @@ return {
 		}
 	},
 	Stage9_lavaShotParticle = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			23,
 			23
@@ -258,7 +258,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0001 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -290,7 +290,7 @@ return {
 		}
 	},
 	boss_godieth_0003 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -316,7 +316,7 @@ return {
 		}
 	},
 	boss_godieth_0005 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -342,7 +342,7 @@ return {
 		}
 	},
 	boss_godieth_0007 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -368,7 +368,7 @@ return {
 		}
 	},
 	boss_godieth_0009 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -394,7 +394,7 @@ return {
 		}
 	},
 	boss_godieth_0011 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -420,7 +420,7 @@ return {
 		}
 	},
 	boss_godieth_0013 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -446,7 +446,7 @@ return {
 		}
 	},
 	boss_godieth_0015 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -472,7 +472,7 @@ return {
 		}
 	},
 	boss_godieth_0017 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -498,7 +498,7 @@ return {
 		}
 	},
 	boss_godieth_0019 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -524,7 +524,7 @@ return {
 		}
 	},
 	boss_godieth_0021 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -550,7 +550,7 @@ return {
 		}
 	},
 	boss_godieth_0023 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -576,7 +576,7 @@ return {
 		}
 	},
 	boss_godieth_0025 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -602,7 +602,7 @@ return {
 		}
 	},
 	boss_godieth_0027 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -628,7 +628,7 @@ return {
 		}
 	},
 	boss_godieth_0029 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -654,7 +654,7 @@ return {
 		}
 	},
 	boss_godieth_0031 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -680,7 +680,7 @@ return {
 		}
 	},
 	boss_godieth_0033 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -706,7 +706,7 @@ return {
 		}
 	},
 	boss_godieth_0035 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -732,7 +732,7 @@ return {
 		}
 	},
 	boss_godieth_0037 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -758,7 +758,7 @@ return {
 		}
 	},
 	boss_godieth_0039 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -784,7 +784,7 @@ return {
 		}
 	},
 	boss_godieth_0041 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -810,7 +810,7 @@ return {
 		}
 	},
 	boss_godieth_0043 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -836,7 +836,7 @@ return {
 		}
 	},
 	boss_godieth_0045 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -862,7 +862,7 @@ return {
 		}
 	},
 	boss_godieth_0047 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -888,7 +888,7 @@ return {
 		}
 	},
 	boss_godieth_0049 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -914,7 +914,7 @@ return {
 		}
 	},
 	boss_godieth_0051 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -940,7 +940,7 @@ return {
 		}
 	},
 	boss_godieth_0053 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -966,7 +966,7 @@ return {
 		}
 	},
 	boss_godieth_0055 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -992,7 +992,7 @@ return {
 		}
 	},
 	boss_godieth_0057 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1018,7 +1018,7 @@ return {
 		}
 	},
 	boss_godieth_0059 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1044,7 +1044,7 @@ return {
 		}
 	},
 	boss_godieth_0061 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1070,7 +1070,7 @@ return {
 		}
 	},
 	boss_godieth_0063 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1096,7 +1096,7 @@ return {
 		}
 	},
 	boss_godieth_0065 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1122,7 +1122,7 @@ return {
 		}
 	},
 	boss_godieth_0067 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1148,7 +1148,7 @@ return {
 		}
 	},
 	boss_godieth_0069 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1174,7 +1174,7 @@ return {
 		}
 	},
 	boss_godieth_0071 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1200,7 +1200,7 @@ return {
 		}
 	},
 	boss_godieth_0075 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1226,7 +1226,7 @@ return {
 		}
 	},
 	boss_godieth_0077 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1252,7 +1252,7 @@ return {
 		}
 	},
 	boss_godieth_0079 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1276,7 +1276,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0080 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1302,7 +1302,7 @@ return {
 		}
 	},
 	boss_godieth_0082 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1328,7 +1328,7 @@ return {
 		}
 	},
 	boss_godieth_0084 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1354,7 +1354,7 @@ return {
 		}
 	},
 	boss_godieth_0086 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1378,7 +1378,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0087 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1402,7 +1402,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0088 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1426,7 +1426,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0089 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1450,7 +1450,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0090 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1474,7 +1474,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0091 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1498,7 +1498,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0092 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1522,7 +1522,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0093 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1546,7 +1546,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0094 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1570,7 +1570,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0095 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1594,7 +1594,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0096 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1620,7 +1620,7 @@ return {
 		}
 	},
 	boss_godieth_0098 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1646,7 +1646,7 @@ return {
 		}
 	},
 	boss_godieth_0100 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1672,7 +1672,7 @@ return {
 		}
 	},
 	boss_godieth_0102 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1698,7 +1698,7 @@ return {
 		}
 	},
 	boss_godieth_0106 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1724,7 +1724,7 @@ return {
 		}
 	},
 	boss_godieth_0108 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1752,7 +1752,7 @@ return {
 		}
 	},
 	boss_godieth_0110 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1776,7 +1776,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0111 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1802,7 +1802,7 @@ return {
 		}
 	},
 	boss_godieth_0113 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1828,7 +1828,7 @@ return {
 		}
 	},
 	boss_godieth_0115 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1854,7 +1854,7 @@ return {
 		}
 	},
 	boss_godieth_0117 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1880,7 +1880,7 @@ return {
 		}
 	},
 	boss_godieth_0119 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1906,7 +1906,7 @@ return {
 		}
 	},
 	boss_godieth_0121 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1932,7 +1932,7 @@ return {
 		}
 	},
 	boss_godieth_0123 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1958,7 +1958,7 @@ return {
 		}
 	},
 	boss_godieth_0125 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -1984,7 +1984,7 @@ return {
 		}
 	},
 	boss_godieth_0127 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2010,7 +2010,7 @@ return {
 		}
 	},
 	boss_godieth_0129 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2036,7 +2036,7 @@ return {
 		}
 	},
 	boss_godieth_0131 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2062,7 +2062,7 @@ return {
 		}
 	},
 	boss_godieth_0133 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2086,7 +2086,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0134 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2112,7 +2112,7 @@ return {
 		}
 	},
 	boss_godieth_0136 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2140,7 +2140,7 @@ return {
 		}
 	},
 	boss_godieth_0138 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2167,7 +2167,7 @@ return {
 		}
 	},
 	boss_godieth_0140 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2193,7 +2193,7 @@ return {
 		}
 	},
 	boss_godieth_0142 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2219,7 +2219,7 @@ return {
 		}
 	},
 	boss_godieth_0151 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2245,7 +2245,7 @@ return {
 		}
 	},
 	boss_godieth_0153 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2271,7 +2271,7 @@ return {
 		}
 	},
 	boss_godieth_0155 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2297,7 +2297,7 @@ return {
 		}
 	},
 	boss_godieth_0157 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2325,7 +2325,7 @@ return {
 		}
 	},
 	boss_godieth_0159 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2353,7 +2353,7 @@ return {
 		}
 	},
 	boss_godieth_0161 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2381,7 +2381,7 @@ return {
 		}
 	},
 	boss_godieth_0163 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2409,7 +2409,7 @@ return {
 		}
 	},
 	boss_godieth_0173 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2435,7 +2435,7 @@ return {
 		}
 	},
 	boss_godieth_0175 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2461,7 +2461,7 @@ return {
 		}
 	},
 	boss_godieth_0177 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2487,7 +2487,7 @@ return {
 		}
 	},
 	boss_godieth_0179 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2511,7 +2511,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0180 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2535,7 +2535,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0181 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2559,7 +2559,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0182 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2583,7 +2583,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0183 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2609,7 +2609,7 @@ return {
 		}
 	},
 	boss_godieth_0185 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2633,7 +2633,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0186 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2657,7 +2657,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_0187 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2683,7 +2683,7 @@ return {
 		}
 	},
 	boss_godieth_0189 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2709,7 +2709,7 @@ return {
 		}
 	},
 	boss_godieth_0191 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2735,7 +2735,7 @@ return {
 		}
 	},
 	boss_godieth_0193 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2761,7 +2761,7 @@ return {
 		}
 	},
 	boss_godieth_0195 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2787,7 +2787,7 @@ return {
 		}
 	},
 	boss_godieth_0197 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2813,7 +2813,7 @@ return {
 		}
 	},
 	boss_godieth_0199 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			281,
 			281
@@ -2837,7 +2837,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_0001 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			169,
 			155
@@ -2867,7 +2867,7 @@ return {
 		}
 	},
 	boss_godieth_acidPool_0007 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			169,
 			155
@@ -2904,7 +2904,7 @@ return {
 		}
 	},
 	boss_godieth_acidPool_0014 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			169,
 			155
@@ -2934,7 +2934,7 @@ return {
 		}
 	},
 	boss_godieth_acidPool_bubble_0001 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -2958,7 +2958,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0002 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -2982,7 +2982,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0003 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3006,7 +3006,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0004 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3030,7 +3030,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0005 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3054,7 +3054,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0006 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3078,7 +3078,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0007 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3102,7 +3102,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0008 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3126,7 +3126,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0009 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3150,7 +3150,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0010 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3174,7 +3174,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0011 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3198,7 +3198,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0012 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3222,7 +3222,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0013 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3246,7 +3246,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0014 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3270,7 +3270,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0015 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3294,7 +3294,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0016 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3318,7 +3318,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0017 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3342,7 +3342,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0018 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3366,7 +3366,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0019 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3390,7 +3390,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0020 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3414,7 +3414,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0021 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3438,7 +3438,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0022 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3462,7 +3462,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0023 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3486,7 +3486,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0024 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3510,7 +3510,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0025 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3534,7 +3534,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0026 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3558,7 +3558,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0027 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3582,7 +3582,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0028 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3606,7 +3606,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0029 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3630,7 +3630,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0030 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3654,7 +3654,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0031 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3678,7 +3678,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0032 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3702,7 +3702,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0033 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3726,7 +3726,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0034 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3750,7 +3750,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0035 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3774,7 +3774,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0036 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3798,7 +3798,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0037 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3822,7 +3822,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0038 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3846,7 +3846,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0039 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3870,7 +3870,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0040 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3894,7 +3894,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0041 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3918,7 +3918,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0042 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3942,7 +3942,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0043 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3966,7 +3966,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0044 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -3990,7 +3990,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0045 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -4014,7 +4014,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0046 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -4038,7 +4038,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0047 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -4062,7 +4062,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_bubble_0048 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			49,
 			27
@@ -4093,7 +4093,7 @@ return {
 		}
 	},
 	boss_godieth_acidPool_splash_0001 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			169,
 			155
@@ -4117,7 +4117,7 @@ return {
 		alias = {}
 	},
 	boss_godieth_acidPool_splash_0002 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			169,
 			155
@@ -4143,7 +4143,7 @@ return {
 		}
 	},
 	boss_godieth_acidPool_splash_0004 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			169,
 			155
@@ -4169,7 +4169,7 @@ return {
 		}
 	},
 	boss_godieth_acidPool_splash_0006 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			169,
 			155
@@ -4195,7 +4195,7 @@ return {
 		}
 	},
 	boss_godieth_acidPool_splash_0008 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			169,
 			155
@@ -4221,7 +4221,7 @@ return {
 		}
 	},
 	boss_godieth_acidPool_splash_0010 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			169,
 			155
@@ -4247,7 +4247,7 @@ return {
 		}
 	},
 	boss_godieth_acidPool_splash_0012 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			169,
 			155
@@ -4273,7 +4273,7 @@ return {
 		}
 	},
 	boss_godieth_acidPool_splash_0014 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			169,
 			155
@@ -4299,7 +4299,7 @@ return {
 		}
 	},
 	boss_godieth_acidPool_splash_0016 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			169,
 			155
@@ -4325,7 +4325,7 @@ return {
 		}
 	},
 	["boss_godieth_spit-f_0001"] = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			90,
 			48
@@ -4351,7 +4351,7 @@ return {
 		}
 	},
 	["boss_godieth_spit-f_0003"] = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			90,
 			48
@@ -4377,7 +4377,7 @@ return {
 		}
 	},
 	["boss_godieth_spit-f_0005"] = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			90,
 			48
@@ -4403,7 +4403,7 @@ return {
 		}
 	},
 	gargoyle = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			70,
 			122
@@ -4427,7 +4427,7 @@ return {
 		alias = {}
 	},
 	lava_hole_0001 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4453,7 +4453,7 @@ return {
 		}
 	},
 	lava_hole_0003 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4479,7 +4479,7 @@ return {
 		}
 	},
 	lava_hole_0005 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4505,7 +4505,7 @@ return {
 		}
 	},
 	lava_hole_0007 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4531,7 +4531,7 @@ return {
 		}
 	},
 	lava_hole_0009 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4559,7 +4559,7 @@ return {
 		}
 	},
 	lava_hole_0013 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4585,7 +4585,7 @@ return {
 		}
 	},
 	lava_hole_0015 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4611,7 +4611,7 @@ return {
 		}
 	},
 	lava_hole_0017 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4637,7 +4637,7 @@ return {
 		}
 	},
 	lava_hole_0019 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4664,7 +4664,7 @@ return {
 		}
 	},
 	lava_hole_0022 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4691,7 +4691,7 @@ return {
 		}
 	},
 	lava_hole_0025 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4718,7 +4718,7 @@ return {
 		}
 	},
 	lava_hole_0028 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4745,7 +4745,7 @@ return {
 		}
 	},
 	lava_hole_0031 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4771,7 +4771,7 @@ return {
 		}
 	},
 	lava_hole_0033 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4795,7 +4795,7 @@ return {
 		alias = {}
 	},
 	lava_hole_0034 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4819,7 +4819,7 @@ return {
 		alias = {}
 	},
 	lava_hole_0035 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4845,7 +4845,7 @@ return {
 		}
 	},
 	lava_hole_0037 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4872,7 +4872,7 @@ return {
 		}
 	},
 	lava_hole_0040 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4899,7 +4899,7 @@ return {
 		}
 	},
 	lava_hole_0043 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4926,7 +4926,7 @@ return {
 		}
 	},
 	lava_hole_0046 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4953,7 +4953,7 @@ return {
 		}
 	},
 	lava_hole_0049 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -4980,7 +4980,7 @@ return {
 		}
 	},
 	lava_hole_0052 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -5007,7 +5007,7 @@ return {
 		}
 	},
 	lava_hole_0055 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42
@@ -5034,7 +5034,7 @@ return {
 		}
 	},
 	lava_hole_0058 = {
-		a_name = "go_stage70-1.png",
+		a_name = "go_stage70-1.dds",
 		size = {
 			51,
 			42

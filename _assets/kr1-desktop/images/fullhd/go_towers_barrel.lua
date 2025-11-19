@@ -1,6 +1,6 @@
 return {
 	["barrel_tower_berserker_unit_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0017"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0018"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0019"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0020"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0021"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0022"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0023"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0024"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0025"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0026"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0027"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0028"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0029"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0030"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0031"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0032"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0033"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0034"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0035"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0036"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0037"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0038"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0039"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0040"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0041"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0042"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0043"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0044"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0045"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0046"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0047"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0048"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0049"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0050"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0051"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0052"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0053"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0054"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0055"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0056"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0057"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0058"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0059"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0060"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0061"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0062"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0063"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0064"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0065"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0066"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0067"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0068"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0069"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0070"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0071"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0072"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0073"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0074"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0075"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0076"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0077"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0078"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0079"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0080"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0081"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0082"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0083"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0084"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0085"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0086"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0087"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0088"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0089"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0090"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0091"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0092"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0093"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0094"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0095"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0096"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0097"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0098"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0099"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0100"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0101"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0102"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0103"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_0104"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			164,
 			181
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0017"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0018"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0019"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_decal_0020"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			99,
 			68
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_berserker_unit_hit_fx_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			113,
 			107
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_build"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			136,
 			90
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0017"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0018"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0019"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0020"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0021"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0022"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0023"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0024"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0025"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0026"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0027"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0028"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0029"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0030"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0031"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0032"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0033"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0034"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0035"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0036"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0037"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0038"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0039"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0040"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0041"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0042"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0043"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0044"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0045"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0046"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0047"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0048"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0049"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0050"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0051"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_0052"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			213
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0017"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0018"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0019"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0020"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0021"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0022"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0023"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0024"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0025"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0026"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0027"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0028"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0029"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0030"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0031"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0032"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0033"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0034"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0035"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0036"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0037"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0038"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0039"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0040"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0041"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0042"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0043"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0044"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0045"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0046"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0047"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0048"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0049"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0050"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0051"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0052"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0053"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0054"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0055"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0056"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0057"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0058"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0059"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0060"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0061"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0062"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0063"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0064"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0065"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0066"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0067"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0068"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0069"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0070"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0071"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0072"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0073"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0074"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0075"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0076"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0077"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0078"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0079"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_bubbles_fx_0080"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			124,
 			193
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0017"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0018"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0019"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0020"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0021"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0022"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0023"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0024"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_decal_0025"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			224,
 			161
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_projectile"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			76
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_projectile_decal"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			159,
 			82
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_projectile_particle_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			93,
 			82
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_projectile_particle_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			93,
 			82
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_projectile_particle_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			93,
 			82
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_projectile_particle_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			93,
 			82
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_projectile_particle_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			93,
 			82
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_projectile_particle_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			93,
 			82
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_projectile_particle_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			93,
 			82
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_projectile_particle_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			93,
 			82
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_projectile_particle_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			93,
 			82
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_bad_barrel_projectile_particle_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			93,
 			82
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0017"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0018"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0019"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0020"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0021"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0022"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0023"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0024"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0025"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0026"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0027"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0028"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0029"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0030"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0031"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0032"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0033"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0034"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0035"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0036"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0037"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0038"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0039"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_0040"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			261
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0017"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0018"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0019"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0020"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0021"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0022"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0023"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0024"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0025"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0026"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0027"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0028"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0029"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0030"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0031"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0032"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0033"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0034"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0035"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0036"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0037"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0038"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0039"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0040"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0041"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0042"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0043"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0044"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0045"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0046"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0047"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0048"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0049"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0050"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0051"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0052"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0053"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0054"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0055"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0056"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0057"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0058"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0059"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0060"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0061"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0062"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0063"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0064"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0065"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0066"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0067"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0068"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0069"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0070"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0071"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0072"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0073"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0074"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0075"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0076"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0077"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0078"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0079"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0080"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0081"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_0082"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			176,
 			88
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0017"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0018"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0019"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0020"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0021"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0022"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0023"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0024"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0025"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0026"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0027"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0028"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0029"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0030"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0031"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0032"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0033"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0034"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0035"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0036"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0037"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0038"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0039"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_berserker_spawn_fx_0040"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			207,
 			139
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_flow_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			79,
 			207
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_flow_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			79,
 			207
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_flow_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			79,
 			207
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_flow_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			79,
 			207
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_flow_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			79,
 			207
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_flow_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			79,
 			207
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_flow_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			79,
 			207
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_flow_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			79,
 			207
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_tower_tube"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			85,
 			230
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0017"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0018"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0019"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0020"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0021"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0022"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0023"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0024"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0025"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0026"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0027"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0028"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0029"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0030"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0031"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0032"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0033"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0034"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0035"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0036"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0037"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0038"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0039"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0040"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0041"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0042"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0043"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0044"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0045"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0046"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0047"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0048"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0049"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0050"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0051"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0052"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0053"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0054"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0055"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0056"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0057"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0058"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0059"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0060"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0061"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0062"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0063"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0064"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0065"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0066"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0067"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0068"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0069"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0070"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0071"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0072"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0073"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0074"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0075"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0076"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0077"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0078"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0079"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0080"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0081"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0082"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0083"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0084"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0085"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0086"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0087"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0088"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0089"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0090"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0091"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0092"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0093"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0094"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0095"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0096"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0097"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0098"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0099"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0100"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0101"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0102"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0103"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0104"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0105"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0106"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0107"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0108"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0109"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0110"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0111"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0112"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0113"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0114"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0115"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0116"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0117"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0118"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0119"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0120"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0121"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0122"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0123"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0124"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0125"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0126"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0127"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0128"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0129"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0130"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0131"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0132"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0133"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0134"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0135"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0136"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0137"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0138"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0139"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0140"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0141"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0142"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_lvl4_viking_0143"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			139,
 			235
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_preview"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			136,
 			153
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0017"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0018"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0019"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0020"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0021"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0022"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0023"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0024"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0025"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0026"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0027"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0028"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_0029"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			71,
 			68
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0017"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0018"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0019"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_0020"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			130,
 			88
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0017"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0018"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0019"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0020"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0021"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_hit_fx_decal_0022"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			110,
 			62
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0017"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0018"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0019"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -17160,7 +17160,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0020"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -17184,7 +17184,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0021"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -17208,7 +17208,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0022"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -17232,7 +17232,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0023"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -17256,7 +17256,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0024"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -17280,7 +17280,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0025"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -17304,7 +17304,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_0026"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			96,
 			119
@@ -17328,7 +17328,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0001"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17352,7 +17352,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0002"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17376,7 +17376,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0003"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17400,7 +17400,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0004"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17424,7 +17424,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0005"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17448,7 +17448,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0006"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17472,7 +17472,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0007"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17496,7 +17496,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0008"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17520,7 +17520,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0009"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17544,7 +17544,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0010"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17568,7 +17568,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0011"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17592,7 +17592,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0012"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17616,7 +17616,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0013"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17640,7 +17640,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0014"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17664,7 +17664,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0015"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17688,7 +17688,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0016"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17712,7 +17712,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0017"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17736,7 +17736,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0018"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17760,7 +17760,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0019"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17784,7 +17784,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0020"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17808,7 +17808,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0021"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17832,7 +17832,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0022"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17856,7 +17856,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0023"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17880,7 +17880,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0024"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17904,7 +17904,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0025"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17928,7 +17928,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_mod_big_0026"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			119,
 			144
@@ -17952,7 +17952,7 @@ return {
 		alias = {},
 	},
 	["barrel_tower_projectile_particle"] = {
-		a_name = "go_towers_barrel-1.png",
+		a_name = "go_towers_barrel-1.dds",
 		size = {
 			59,
 			59

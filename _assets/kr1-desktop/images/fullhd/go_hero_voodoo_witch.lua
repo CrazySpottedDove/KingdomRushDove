@@ -1,7 +1,7 @@
 -- chunkname: @./kr2-desktop/assets/images/fullhd/go_hero_voodoo_witch.lua
 return {
     voodoo_0001 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {34, 25, 45, 18},
         a_size = {1024, 1024},
@@ -9,7 +9,7 @@ return {
         alias = {}
     },
     voodoo_0002 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {34, 26, 44, 18},
         a_size = {1024, 1024},
@@ -17,7 +17,7 @@ return {
         alias = {}
     },
     voodoo_0003 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {34, 23, 44, 18},
         a_size = {1024, 1024},
@@ -25,7 +25,7 @@ return {
         alias = {}
     },
     voodoo_0004 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {34, 22, 44, 18},
         a_size = {1024, 1024},
@@ -33,7 +33,7 @@ return {
         alias = {}
     },
     voodoo_0005 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {34, 21, 44, 18},
         a_size = {1024, 1024},
@@ -41,7 +41,7 @@ return {
         alias = {}
     },
     voodoo_0006 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {34, 26, 44, 16},
         a_size = {1024, 1024},
@@ -49,7 +49,7 @@ return {
         alias = {}
     },
     voodoo_0007 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {34, 26, 44, 18},
         a_size = {1024, 1024},
@@ -57,7 +57,7 @@ return {
         alias = {"voodoo_0008"}
     },
     voodoo_0009 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {33, 27, 43, 17},
         a_size = {1024, 1024},
@@ -65,7 +65,7 @@ return {
         alias = {"voodoo_0010"}
     },
     voodoo_0011 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {32, 25, 44, 18},
         a_size = {1024, 1024},
@@ -73,7 +73,7 @@ return {
         alias = {"voodoo_0012"}
     },
     voodoo_0013 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {28, 23, 46, 18},
         a_size = {1024, 1024},
@@ -81,7 +81,7 @@ return {
         alias = {"voodoo_0014"}
     },
     voodoo_0015 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {28, 23, 46, 18},
         a_size = {1024, 1024},
@@ -89,7 +89,7 @@ return {
         alias = {"voodoo_0016", "voodoo_0017", "voodoo_0018", "voodoo_0019"}
     },
     voodoo_0020 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {37, 20, 20, 15},
         a_size = {1024, 1024},
@@ -97,7 +97,7 @@ return {
         alias = {"voodoo_0021"}
     },
     voodoo_0022 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 23, 19, 14},
         a_size = {1024, 1024},
@@ -105,7 +105,7 @@ return {
         alias = {"voodoo_0023"}
     },
     voodoo_0024 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 24, 18, 13},
         a_size = {1024, 1024},
@@ -113,7 +113,7 @@ return {
         alias = {"voodoo_0025"}
     },
     voodoo_0026 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 25, 30, 18},
         a_size = {1024, 1024},
@@ -121,7 +121,7 @@ return {
         alias = {"voodoo_0027"}
     },
     voodoo_0028 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {44, 25, 43, 18},
         a_size = {1024, 1024},
@@ -129,7 +129,7 @@ return {
         alias = {"voodoo_0029"}
     },
     voodoo_0030 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {34, 26, 44, 18},
         a_size = {1024, 1024},
@@ -137,7 +137,7 @@ return {
         alias = {"voodoo_0031", "voodoo_0054", "voodoo_0055", "voodoo_0115"}
     },
     voodoo_0032 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {16, 28, 43, 17},
         a_size = {1024, 1024},
@@ -145,7 +145,7 @@ return {
         alias = {"voodoo_0033"}
     },
     voodoo_0034 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {24, 25, 44, 18},
         a_size = {1024, 1024},
@@ -153,7 +153,7 @@ return {
         alias = {"voodoo_0035"}
     },
     voodoo_0036 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {36, 22, 45, 18},
         a_size = {1024, 1024},
@@ -161,7 +161,7 @@ return {
         alias = {"voodoo_0037"}
     },
     voodoo_0038 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {30, 20, 44, 18},
         a_size = {1024, 1024},
@@ -169,7 +169,7 @@ return {
         alias = {"voodoo_0039"}
     },
     voodoo_0040 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {40, 24, 44, 18},
         a_size = {1024, 1024},
@@ -177,7 +177,7 @@ return {
         alias = {"voodoo_0041"}
     },
     voodoo_0042 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {38, 24, 44, 18},
         a_size = {1024, 1024},
@@ -185,7 +185,7 @@ return {
         alias = {"voodoo_0043"}
     },
     voodoo_0044 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {31, 23, 46, 18},
         a_size = {1024, 1024},
@@ -193,7 +193,7 @@ return {
         alias = {"voodoo_0045"}
     },
     voodoo_0046 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {29, 23, 46, 18},
         a_size = {1024, 1024},
@@ -201,7 +201,7 @@ return {
         alias = {"voodoo_0047"}
     },
     voodoo_0048 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {33, 26, 44, 18},
         a_size = {1024, 1024},
@@ -209,7 +209,7 @@ return {
         alias = {"voodoo_0049"}
     },
     voodoo_0050 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {35, 26, 42, 18},
         a_size = {1024, 1024},
@@ -217,7 +217,7 @@ return {
         alias = {"voodoo_0051"}
     },
     voodoo_0052 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {32, 25, 44, 18},
         a_size = {1024, 1024},
@@ -225,7 +225,7 @@ return {
         alias = {"voodoo_0053"}
     },
     voodoo_0056 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {33, 28, 43, 17},
         a_size = {1024, 1024},
@@ -233,7 +233,7 @@ return {
         alias = {"voodoo_0057"}
     },
     voodoo_0058 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {32, 25, 44, 18},
         a_size = {1024, 1024},
@@ -241,7 +241,7 @@ return {
         alias = {}
     },
     voodoo_0059 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {32, 25, 44, 18},
         a_size = {1024, 1024},
@@ -249,7 +249,7 @@ return {
         alias = {}
     },
     voodoo_0060 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {34, 25, 45, 18},
         a_size = {1024, 1024},
@@ -257,7 +257,7 @@ return {
         alias = {}
     },
     voodoo_0061 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {27, 25, 45, 18},
         a_size = {1024, 1024},
@@ -265,7 +265,7 @@ return {
         alias = {}
     },
     voodoo_0062 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {27, 22, 44, 18},
         a_size = {1024, 1024},
@@ -273,7 +273,7 @@ return {
         alias = {}
     },
     voodoo_0063 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {23, 22, 44, 18},
         a_size = {1024, 1024},
@@ -281,7 +281,7 @@ return {
         alias = {}
     },
     voodoo_0064 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {23, 24, 44, 18},
         a_size = {1024, 1024},
@@ -289,7 +289,7 @@ return {
         alias = {}
     },
     voodoo_0065 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {21, 24, 44, 18},
         a_size = {1024, 1024},
@@ -297,7 +297,7 @@ return {
         alias = {}
     },
     voodoo_0066 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {21, 24, 40, 18},
         a_size = {1024, 1024},
@@ -305,7 +305,7 @@ return {
         alias = {}
     },
     voodoo_0067 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {21, 23, 40, 18},
         a_size = {1024, 1024},
@@ -313,7 +313,7 @@ return {
         alias = {}
     },
     voodoo_0068 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {21, 23, 35, 18},
         a_size = {1024, 1024},
@@ -321,7 +321,7 @@ return {
         alias = {}
     },
     voodoo_0069 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {21, 23, 35, 18},
         a_size = {1024, 1024},
@@ -329,7 +329,7 @@ return {
         alias = {}
     },
     voodoo_0070 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {21, 23, 35, 18},
         a_size = {1024, 1024},
@@ -337,7 +337,7 @@ return {
         alias = {}
     },
     voodoo_0071 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {22, 23, 35, 18},
         a_size = {1024, 1024},
@@ -345,7 +345,7 @@ return {
         alias = {}
     },
     voodoo_0072 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {22, 23, 36, 18},
         a_size = {1024, 1024},
@@ -353,7 +353,7 @@ return {
         alias = {}
     },
     voodoo_0073 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {27, 23, 36, 18},
         a_size = {1024, 1024},
@@ -361,7 +361,7 @@ return {
         alias = {"voodoo_0074"}
     },
     voodoo_0075 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {40, 23, 36, 18},
         a_size = {1024, 1024},
@@ -369,7 +369,7 @@ return {
         alias = {}
     },
     voodoo_0076 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {46, 25, 29, 18},
         a_size = {1024, 1024},
@@ -377,7 +377,7 @@ return {
         alias = {"voodoo_0077"}
     },
     voodoo_0078 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 25, 30, 18},
         a_size = {1024, 1024},
@@ -385,7 +385,7 @@ return {
         alias = {"voodoo_0079"}
     },
     voodoo_0080 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 25, 30, 18},
         a_size = {1024, 1024},
@@ -393,7 +393,7 @@ return {
         alias = {}
     },
     voodoo_0081 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 25, 30, 18},
         a_size = {1024, 1024},
@@ -401,7 +401,7 @@ return {
         alias = {}
     },
     voodoo_0082 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 25, 30, 18},
         a_size = {1024, 1024},
@@ -409,7 +409,7 @@ return {
         alias = {}
     },
     voodoo_0083 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 25, 30, 18},
         a_size = {1024, 1024},
@@ -417,7 +417,7 @@ return {
         alias = {}
     },
     voodoo_0084 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 25, 30, 18},
         a_size = {1024, 1024},
@@ -425,7 +425,7 @@ return {
         alias = {}
     },
     voodoo_0085 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 25, 30, 18},
         a_size = {1024, 1024},
@@ -433,7 +433,7 @@ return {
         alias = {}
     },
     voodoo_0086 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 25, 30, 18},
         a_size = {1024, 1024},
@@ -441,7 +441,7 @@ return {
         alias = {}
     },
     voodoo_0087 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 25, 30, 18},
         a_size = {1024, 1024},
@@ -449,7 +449,7 @@ return {
         alias = {}
     },
     voodoo_0088 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 25, 31, 18},
         a_size = {1024, 1024},
@@ -457,7 +457,7 @@ return {
         alias = {}
     },
     voodoo_0089 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 25, 32, 18},
         a_size = {1024, 1024},
@@ -465,7 +465,7 @@ return {
         alias = {"voodoo_0090", "voodoo_0091", "voodoo_0092", "voodoo_0093", "voodoo_0094", "voodoo_0095", "voodoo_0096"}
     },
     voodoo_0097 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {46, 25, 32, 18},
         a_size = {1024, 1024},
@@ -473,7 +473,7 @@ return {
         alias = {"voodoo_0098"}
     },
     voodoo_0099 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {34, 22, 36, 18},
         a_size = {1024, 1024},
@@ -481,7 +481,7 @@ return {
         alias = {"voodoo_0100"}
     },
     voodoo_0101 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {27, 25, 41, 18},
         a_size = {1024, 1024},
@@ -489,7 +489,7 @@ return {
         alias = {"voodoo_0102"}
     },
     voodoo_0103 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {23, 26, 44, 18},
         a_size = {1024, 1024},
@@ -497,7 +497,7 @@ return {
         alias = {"voodoo_0104"}
     },
     voodoo_0105 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {21, 25, 44, 18},
         a_size = {1024, 1024},
@@ -505,7 +505,7 @@ return {
         alias = {"voodoo_0106"}
     },
     voodoo_0107 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {21, 23, 44, 18},
         a_size = {1024, 1024},
@@ -513,7 +513,7 @@ return {
         alias = {"voodoo_0108"}
     },
     voodoo_0109 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {21, 24, 44, 18},
         a_size = {1024, 1024},
@@ -521,7 +521,7 @@ return {
         alias = {"voodoo_0110"}
     },
     voodoo_0111 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {22, 24, 44, 18},
         a_size = {1024, 1024},
@@ -529,7 +529,7 @@ return {
         alias = {"voodoo_0112"}
     },
     voodoo_0113 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {27, 24, 44, 18},
         a_size = {1024, 1024},
@@ -537,7 +537,7 @@ return {
         alias = {"voodoo_0114"}
     },
     voodoo_0116 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {20, 23, 56, 18},
         a_size = {1024, 1024},
@@ -545,7 +545,7 @@ return {
         alias = {"voodoo_0117"}
     },
     voodoo_0118 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {13, 23, 59, 18},
         a_size = {1024, 1024},
@@ -553,7 +553,7 @@ return {
         alias = {"voodoo_0119"}
     },
     voodoo_0120 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {10, 23, 63, 18},
         a_size = {1024, 1024},
@@ -561,7 +561,7 @@ return {
         alias = {"voodoo_0121"}
     },
     voodoo_0122 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {6, 34, 65, 18},
         a_size = {1024, 1024},
@@ -569,7 +569,7 @@ return {
         alias = {"voodoo_0123"}
     },
     voodoo_0124 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {6, 39, 61, 8},
         a_size = {1024, 1024},
@@ -577,7 +577,7 @@ return {
         alias = {"voodoo_0125"}
     },
     voodoo_0126 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {6, 37, 60, 8},
         a_size = {1024, 1024},
@@ -585,7 +585,7 @@ return {
         alias = {"voodoo_0127"}
     },
     voodoo_0128 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {7, 39, 62, 8},
         a_size = {1024, 1024},
@@ -593,7 +593,7 @@ return {
         alias = {"voodoo_0129"}
     },
     voodoo_0130 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {6, 39, 61, 8},
         a_size = {1024, 1024},
@@ -601,7 +601,7 @@ return {
         alias = {"voodoo_0131"}
     },
     voodoo_0132 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {6, 52, 61, 8},
         a_size = {1024, 1024},
@@ -609,7 +609,7 @@ return {
         alias = {"voodoo_0133"}
     },
     voodoo_0134 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {6, 52, 61, 1},
         a_size = {1024, 1024},
@@ -617,7 +617,7 @@ return {
         alias = {"voodoo_0135"}
     },
     voodoo_0136 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {6, 52, 61, 3},
         a_size = {1024, 1024},
@@ -625,7 +625,7 @@ return {
         alias = {"voodoo_0137"}
     },
     voodoo_0138 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {6, 52, 61, 0},
         a_size = {1024, 1024},
@@ -633,7 +633,7 @@ return {
         alias = {"voodoo_0139"}
     },
     voodoo_0140 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {34, 26, 44, 18},
         a_size = {1024, 1024},
@@ -641,7 +641,7 @@ return {
         alias = {"voodoo_0141"}
     },
     voodoo_0142 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {17, 28, 43, 17},
         a_size = {1024, 1024},
@@ -649,7 +649,7 @@ return {
         alias = {"voodoo_0143"}
     },
     voodoo_0144 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {26, 19, 42, 15},
         a_size = {1024, 1024},
@@ -657,7 +657,7 @@ return {
         alias = {}
     },
     voodoo_0145 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {26, 18, 43, 15},
         a_size = {1024, 1024},
@@ -665,7 +665,7 @@ return {
         alias = {}
     },
     voodoo_0146 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {37, 18, 43, 15},
         a_size = {1024, 1024},
@@ -673,7 +673,7 @@ return {
         alias = {}
     },
     voodoo_0147 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {37, 18, 43, 14},
         a_size = {1024, 1024},
@@ -681,7 +681,7 @@ return {
         alias = {}
     },
     voodoo_0148 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {31, 18, 43, 14},
         a_size = {1024, 1024},
@@ -689,7 +689,7 @@ return {
         alias = {}
     },
     voodoo_0149 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {31, 18, 42, 13},
         a_size = {1024, 1024},
@@ -697,7 +697,7 @@ return {
         alias = {}
     },
     voodoo_0150 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {37, 18, 41, 12},
         a_size = {1024, 1024},
@@ -705,7 +705,7 @@ return {
         alias = {}
     },
     voodoo_0151 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {36, 17, 40, 11},
         a_size = {1024, 1024},
@@ -713,7 +713,7 @@ return {
         alias = {}
     },
     voodoo_0152 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {36, 16, 39, 11},
         a_size = {1024, 1024},
@@ -721,7 +721,7 @@ return {
         alias = {}
     },
     voodoo_0153 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {36, 15, 39, 11},
         a_size = {1024, 1024},
@@ -729,7 +729,7 @@ return {
         alias = {}
     },
     voodoo_0154 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {36, 14, 39, 11},
         a_size = {1024, 1024},
@@ -737,7 +737,7 @@ return {
         alias = {}
     },
     voodoo_0155 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {36, 13, 39, 11},
         a_size = {1024, 1024},
@@ -745,7 +745,7 @@ return {
         alias = {}
     },
     voodoo_0156 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {35, 12, 39, 11},
         a_size = {1024, 1024},
@@ -753,7 +753,7 @@ return {
         alias = {}
     },
     voodoo_0157 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {35, 11, 39, 11},
         a_size = {1024, 1024},
@@ -761,7 +761,7 @@ return {
         alias = {}
     },
     voodoo_0158 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {33, 25, 44, 18},
         a_size = {1024, 1024},
@@ -769,7 +769,7 @@ return {
         alias = {"voodoo_0159"}
     },
     voodoo_aura_big = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {73, 25},
         trim = {3, 1, 2, 1},
         a_size = {1024, 1024},
@@ -777,7 +777,7 @@ return {
         alias = {}
     },
     voodoo_aura_small = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {48, 17},
         trim = {2, 1, 1, 0},
         a_size = {1024, 1024},
@@ -785,7 +785,7 @@ return {
         alias = {}
     },
     voodoo_buff_base_0001 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {4, 4, 3, 4},
         a_size = {1024, 1024},
@@ -793,7 +793,7 @@ return {
         alias = {"voodoo_buff_base_0002"}
     },
     voodoo_buff_base_0003 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {3, 4, 3, 2},
         a_size = {1024, 1024},
@@ -801,7 +801,7 @@ return {
         alias = {"voodoo_buff_base_0004"}
     },
     voodoo_buff_base_0005 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {4, 4, 4, 2},
         a_size = {1024, 1024},
@@ -809,7 +809,7 @@ return {
         alias = {"voodoo_buff_base_0006"}
     },
     voodoo_buff_base_0007 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {6, 5, 6, 1},
         a_size = {1024, 1024},
@@ -817,7 +817,7 @@ return {
         alias = {"voodoo_buff_base_0008"}
     },
     voodoo_buff_base_0009 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {8, 5, 8, 1},
         a_size = {1024, 1024},
@@ -825,7 +825,7 @@ return {
         alias = {"voodoo_buff_base_0010"}
     },
     voodoo_buff_base_0011 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {9, 4, 7, 1},
         a_size = {1024, 1024},
@@ -833,7 +833,7 @@ return {
         alias = {"voodoo_buff_base_0012"}
     },
     voodoo_buff_base_0013 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {8, 4, 8, 2},
         a_size = {1024, 1024},
@@ -841,7 +841,7 @@ return {
         alias = {"voodoo_buff_base_0014"}
     },
     voodoo_buff_base_0015 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {8, 4, 9, 3},
         a_size = {1024, 1024},
@@ -849,7 +849,7 @@ return {
         alias = {"voodoo_buff_base_0016"}
     },
     voodoo_buff_base_0017 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {9, 4, 7, 2},
         a_size = {1024, 1024},
@@ -857,7 +857,7 @@ return {
         alias = {"voodoo_buff_base_0018"}
     },
     voodoo_buff_base_0019 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {11, 4, 6, 2},
         a_size = {1024, 1024},
@@ -865,7 +865,7 @@ return {
         alias = {"voodoo_buff_base_0020"}
     },
     voodoo_buff_base_0021 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {8, 4, 5, 2},
         a_size = {1024, 1024},
@@ -873,7 +873,7 @@ return {
         alias = {"voodoo_buff_base_0022"}
     },
     voodoo_buff_base_0023 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {5, 4, 5, 2},
         a_size = {1024, 1024},
@@ -881,7 +881,7 @@ return {
         alias = {"voodoo_buff_base_0024"}
     },
     voodoo_buff_base_0025 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {3, 4, 5, 2},
         a_size = {1024, 1024},
@@ -889,7 +889,7 @@ return {
         alias = {"voodoo_buff_base_0026"}
     },
     voodoo_buff_base_0027 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {2, 4, 7, 3},
         a_size = {1024, 1024},
@@ -897,7 +897,7 @@ return {
         alias = {"voodoo_buff_base_0028"}
     },
     voodoo_buff_base_0029 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {1, 5, 7, 3},
         a_size = {1024, 1024},
@@ -905,7 +905,7 @@ return {
         alias = {"voodoo_buff_base_0030"}
     },
     voodoo_buff_base_0031 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {2, 5, 5, 3},
         a_size = {1024, 1024},
@@ -913,7 +913,7 @@ return {
         alias = {"voodoo_buff_base_0032"}
     },
     voodoo_buff_base_0033 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {4, 5, 4, 3},
         a_size = {1024, 1024},
@@ -921,7 +921,7 @@ return {
         alias = {"voodoo_buff_base_0034"}
     },
     voodoo_buff_base_0035 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {6, 5, 4, 4},
         a_size = {1024, 1024},
@@ -929,7 +929,7 @@ return {
         alias = {"voodoo_buff_base_0036"}
     },
     voodoo_buff_base_0037 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {5, 5, 5, 3},
         a_size = {1024, 1024},
@@ -937,7 +937,7 @@ return {
         alias = {"voodoo_buff_base_0038"}
     },
     voodoo_buff_base_0039 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {3, 6, 5, 2},
         a_size = {1024, 1024},
@@ -945,7 +945,7 @@ return {
         alias = {"voodoo_buff_base_0040"}
     },
     voodoo_buff_base_0041 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {3, 6, 4, 2},
         a_size = {1024, 1024},
@@ -953,7 +953,7 @@ return {
         alias = {"voodoo_buff_base_0042"}
     },
     voodoo_buff_base_0043 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {4, 5, 4, 2},
         a_size = {1024, 1024},
@@ -961,7 +961,7 @@ return {
         alias = {"voodoo_buff_base_0044"}
     },
     voodoo_buff_base_0045 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {5, 4, 4, 3},
         a_size = {1024, 1024},
@@ -969,7 +969,7 @@ return {
         alias = {"voodoo_buff_base_0046"}
     },
     voodoo_buff_base_0047 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {7, 3, 6, 3},
         a_size = {1024, 1024},
@@ -977,7 +977,7 @@ return {
         alias = {"voodoo_buff_base_0048"}
     },
     voodoo_buff_base_0049 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {7, 3, 8, 3},
         a_size = {1024, 1024},
@@ -985,7 +985,7 @@ return {
         alias = {"voodoo_buff_base_0050"}
     },
     voodoo_buff_base_0051 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {7, 3, 9, 2},
         a_size = {1024, 1024},
@@ -993,7 +993,7 @@ return {
         alias = {"voodoo_buff_base_0052"}
     },
     voodoo_buff_base_0053 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {8, 4, 8, 2},
         a_size = {1024, 1024},
@@ -1001,7 +1001,7 @@ return {
         alias = {"voodoo_buff_base_0054"}
     },
     voodoo_buff_base_0055 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {9, 4, 9, 2},
         a_size = {1024, 1024},
@@ -1009,7 +1009,7 @@ return {
         alias = {"voodoo_buff_base_0056"}
     },
     voodoo_buff_base_0057 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {7, 4, 9, 3},
         a_size = {1024, 1024},
@@ -1017,7 +1017,7 @@ return {
         alias = {"voodoo_buff_base_0058"}
     },
     voodoo_buff_base_0059 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {5, 4, 11, 2},
         a_size = {1024, 1024},
@@ -1025,7 +1025,7 @@ return {
         alias = {"voodoo_buff_base_0060"}
     },
     voodoo_buff_base_0061 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {5, 4, 8, 2},
         a_size = {1024, 1024},
@@ -1033,7 +1033,7 @@ return {
         alias = {"voodoo_buff_base_0062"}
     },
     voodoo_buff_base_0063 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {5, 4, 5, 2},
         a_size = {1024, 1024},
@@ -1041,7 +1041,7 @@ return {
         alias = {"voodoo_buff_base_0064"}
     },
     voodoo_buff_base_0065 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {6, 4, 3, 2},
         a_size = {1024, 1024},
@@ -1049,7 +1049,7 @@ return {
         alias = {"voodoo_buff_base_0066"}
     },
     voodoo_buff_base_0067 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {8, 5, 1, 3},
         a_size = {1024, 1024},
@@ -1057,7 +1057,7 @@ return {
         alias = {"voodoo_buff_base_0068"}
     },
     voodoo_buff_base_0069 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {6, 5, 1, 4},
         a_size = {1024, 1024},
@@ -1065,7 +1065,7 @@ return {
         alias = {"voodoo_buff_base_0070"}
     },
     voodoo_buff_base_0071 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {5, 5, 2, 4},
         a_size = {1024, 1024},
@@ -1073,7 +1073,7 @@ return {
         alias = {"voodoo_buff_base_0072"}
     },
     voodoo_buff_base_0073 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {5, 5, 4, 4},
         a_size = {1024, 1024},
@@ -1081,7 +1081,7 @@ return {
         alias = {"voodoo_buff_base_0074"}
     },
     voodoo_buff_base_0075 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {5, 5, 6, 4},
         a_size = {1024, 1024},
@@ -1089,7 +1089,7 @@ return {
         alias = {"voodoo_buff_base_0076"}
     },
     voodoo_buff_base_0077 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {6, 5, 4, 4},
         a_size = {1024, 1024},
@@ -1097,7 +1097,7 @@ return {
         alias = {"voodoo_buff_base_0078"}
     },
     voodoo_buff_base_0079 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 37},
         trim = {4, 4, 3, 4},
         a_size = {1024, 1024},
@@ -1105,7 +1105,7 @@ return {
         alias = {"voodoo_buff_base_0080"}
     },
     voodoo_buff_top = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {44, 50, 42, 15},
         a_size = {1024, 1024},
@@ -1113,7 +1113,7 @@ return {
         alias = {}
     },
     voodoo_explosion_0001 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 62},
         trim = {3, 12, 3, 4},
         a_size = {1024, 1024},
@@ -1121,7 +1121,7 @@ return {
         alias = {"voodoo_explosion_0002"}
     },
     voodoo_explosion_0003 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 62},
         trim = {1, 10, 1, 1},
         a_size = {1024, 1024},
@@ -1129,7 +1129,7 @@ return {
         alias = {"voodoo_explosion_0004"}
     },
     voodoo_explosion_0005 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 62},
         trim = {2, 11, 1, 6},
         a_size = {1024, 1024},
@@ -1137,7 +1137,7 @@ return {
         alias = {"voodoo_explosion_0006"}
     },
     voodoo_explosion_0007 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 62},
         trim = {3, 12, 1, 5},
         a_size = {1024, 1024},
@@ -1145,7 +1145,7 @@ return {
         alias = {"voodoo_explosion_0008"}
     },
     voodoo_explosion_0009 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 62},
         trim = {4, 11, 0, 4},
         a_size = {1024, 1024},
@@ -1153,7 +1153,7 @@ return {
         alias = {"voodoo_explosion_0010"}
     },
     voodoo_explosion_0011 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 62},
         trim = {3, 8, 1, 5},
         a_size = {1024, 1024},
@@ -1161,7 +1161,7 @@ return {
         alias = {"voodoo_explosion_0012"}
     },
     voodoo_explosion_0013 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 62},
         trim = {2, 5, 0, 5},
         a_size = {1024, 1024},
@@ -1169,7 +1169,7 @@ return {
         alias = {"voodoo_explosion_0014"}
     },
     voodoo_explosion_0015 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 62},
         trim = {1, 4, 0, 6},
         a_size = {1024, 1024},
@@ -1177,7 +1177,7 @@ return {
         alias = {}
     },
     voodoo_explosion_0016 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 62},
         trim = {3, 3, 0, 6},
         a_size = {1024, 1024},
@@ -1185,7 +1185,7 @@ return {
         alias = {}
     },
     voodoo_explosion_0017 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 62},
         trim = {4, 2, 2, 32},
         a_size = {1024, 1024},
@@ -1193,7 +1193,7 @@ return {
         alias = {}
     },
     voodoo_explosion_0018 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 62},
         trim = {4, 0, 1, 34},
         a_size = {1024, 1024},
@@ -1201,7 +1201,7 @@ return {
         alias = {}
     },
     voodoo_nail_0001 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {9, 9, 50, 51},
         a_size = {1024, 1024},
@@ -1209,7 +1209,7 @@ return {
         alias = {"voodoo_nail_0002"}
     },
     voodoo_nail_0003 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {9, 8, 50, 50},
         a_size = {1024, 1024},
@@ -1217,7 +1217,7 @@ return {
         alias = {"voodoo_nail_0004"}
     },
     voodoo_nail_0005 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {9, 8, 50, 50},
         a_size = {1024, 1024},
@@ -1225,7 +1225,7 @@ return {
         alias = {"voodoo_nail_0006"}
     },
     voodoo_nail_0007 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {9, 8, 50, 50},
         a_size = {1024, 1024},
@@ -1233,7 +1233,7 @@ return {
         alias = {}
     },
     voodoo_nail_0008 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {6, 5, 53, 53},
         a_size = {1024, 1024},
@@ -1241,7 +1241,7 @@ return {
         alias = {"voodoo_nail_0009"}
     },
     voodoo_nail_0010 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {2, 2, 56, 57},
         a_size = {1024, 1024},
@@ -1249,7 +1249,7 @@ return {
         alias = {"voodoo_nail_0011"}
     },
     voodoo_nail_0012 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {1, 1, 58, 58},
         a_size = {1024, 1024},
@@ -1257,7 +1257,7 @@ return {
         alias = {"voodoo_nail_0013"}
     },
     voodoo_nail_0014 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {9, 9, 50, 49},
         a_size = {1024, 1024},
@@ -1265,7 +1265,7 @@ return {
         alias = {"voodoo_nail_0015"}
     },
     voodoo_nail_0016 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {26, 27, 32, 30},
         a_size = {1024, 1024},
@@ -1273,7 +1273,7 @@ return {
         alias = {"voodoo_nail_0017"}
     },
     voodoo_nail_0018 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {26, 27, 30, 29},
         a_size = {1024, 1024},
@@ -1281,7 +1281,7 @@ return {
         alias = {"voodoo_nail_0019"}
     },
     voodoo_nail_0020 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {26, 27, 29, 27},
         a_size = {1024, 1024},
@@ -1289,7 +1289,7 @@ return {
         alias = {"voodoo_nail_0021"}
     },
     voodoo_nail_0022 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {26, 26, 27, 25},
         a_size = {1024, 1024},
@@ -1297,7 +1297,7 @@ return {
         alias = {"voodoo_nail_0023"}
     },
     voodoo_nail_0024 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {26, 27, 39, 39},
         a_size = {1024, 1024},
@@ -1305,7 +1305,7 @@ return {
         alias = {"voodoo_nail_0025"}
     },
     voodoo_nail_0026 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {26, 27, 39, 39},
         a_size = {1024, 1024},
@@ -1313,7 +1313,7 @@ return {
         alias = {"voodoo_nail_0027"}
     },
     voodoo_nail_0028 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {84, 84},
         trim = {27, 27, 39, 39},
         a_size = {1024, 1024},
@@ -1321,7 +1321,7 @@ return {
         alias = {"voodoo_nail_0029"}
     },
     voodoo_proy_0001 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {7, 8, 7, 8},
         a_size = {1024, 1024},
@@ -1329,7 +1329,7 @@ return {
         alias = {}
     },
     voodoo_proy_0002 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {7, 8, 7, 8},
         a_size = {1024, 1024},
@@ -1337,7 +1337,7 @@ return {
         alias = {}
     },
     voodoo_proy_0003 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {7, 8, 7, 7},
         a_size = {1024, 1024},
@@ -1345,7 +1345,7 @@ return {
         alias = {}
     },
     voodoo_proy_0004 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {7, 9, 7, 7},
         a_size = {1024, 1024},
@@ -1353,7 +1353,7 @@ return {
         alias = {}
     },
     voodoo_proy_0005 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {7, 9, 7, 7},
         a_size = {1024, 1024},
@@ -1361,7 +1361,7 @@ return {
         alias = {}
     },
     voodoo_proy_0006 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {7, 9, 7, 6},
         a_size = {1024, 1024},
@@ -1369,7 +1369,7 @@ return {
         alias = {}
     },
     voodoo_proy_0007 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {7, 9, 7, 6},
         a_size = {1024, 1024},
@@ -1377,7 +1377,7 @@ return {
         alias = {}
     },
     voodoo_proy_0008 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {7, 10, 7, 6},
         a_size = {1024, 1024},
@@ -1385,7 +1385,7 @@ return {
         alias = {"voodoo_proy_0010"}
     },
     voodoo_proy_0009 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {7, 10, 7, 5},
         a_size = {1024, 1024},
@@ -1393,7 +1393,7 @@ return {
         alias = {}
     },
     voodoo_proy_0011 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {7, 9, 7, 6},
         a_size = {1024, 1024},
@@ -1401,7 +1401,7 @@ return {
         alias = {}
     },
     voodoo_proy_0012 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {7, 9, 7, 6},
         a_size = {1024, 1024},
@@ -1409,7 +1409,7 @@ return {
         alias = {}
     },
     voodoo_proy_0013 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {7, 9, 7, 7},
         a_size = {1024, 1024},
@@ -1417,7 +1417,7 @@ return {
         alias = {}
     },
     voodoo_proy_0014 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {7, 9, 7, 7},
         a_size = {1024, 1024},
@@ -1425,7 +1425,7 @@ return {
         alias = {}
     },
     voodoo_proy_0015 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {7, 8, 7, 7},
         a_size = {1024, 1024},
@@ -1433,7 +1433,7 @@ return {
         alias = {}
     },
     voodoo_proy_0016 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {8, 9, 8, 8},
         a_size = {1024, 1024},
@@ -1441,7 +1441,7 @@ return {
         alias = {}
     },
     voodoo_proy_0017 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {4, 1, 1, 0},
         a_size = {1024, 1024},
@@ -1449,7 +1449,7 @@ return {
         alias = {"voodoo_proy_0018", "voodoo_proy_0019"}
     },
     voodoo_proy_0020 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {2, 1, 5, 2},
         a_size = {1024, 1024},
@@ -1457,7 +1457,7 @@ return {
         alias = {"voodoo_proy_0021"}
     },
     voodoo_proy_0022 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {2, 0, 4, 3},
         a_size = {1024, 1024},
@@ -1465,7 +1465,7 @@ return {
         alias = {"voodoo_proy_0023"}
     },
     voodoo_proy_0024 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {9, 7, 3, 3},
         a_size = {1024, 1024},
@@ -1473,7 +1473,7 @@ return {
         alias = {}
     },
     voodoo_proy_0025 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {37, 37},
         trim = {0, 0, 35, 35},
         a_size = {1024, 1024},
@@ -1481,7 +1481,7 @@ return {
         alias = {}
     },
     voodoo_proy_particle = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {31, 20},
         trim = {1, 1, 1, 0},
         a_size = {1024, 1024},
@@ -1489,7 +1489,7 @@ return {
         alias = {}
     },
     voodoo_shield = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {124, 93},
         trim = {47, 18, 29, 13},
         a_size = {1024, 1024},
@@ -1497,7 +1497,7 @@ return {
         alias = {}
     },
     voodoo_skull_0001 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {25, 25},
         trim = {0, 0, 1, 0},
         a_size = {1024, 1024},
@@ -1505,7 +1505,7 @@ return {
         alias = {"voodoo_skull_0016", "voodoo_skull_0017"}
     },
     voodoo_skull_0002 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {25, 25},
         trim = {0, 0, 1, 0},
         a_size = {1024, 1024},
@@ -1513,7 +1513,7 @@ return {
         alias = {"voodoo_skull_0003"}
     },
     voodoo_skull_0004 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {25, 25},
         trim = {0, 0, 1, 0},
         a_size = {1024, 1024},
@@ -1521,7 +1521,7 @@ return {
         alias = {"voodoo_skull_0005"}
     },
     voodoo_skull_0006 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {25, 25},
         trim = {0, 0, 1, 0},
         a_size = {1024, 1024},
@@ -1529,7 +1529,7 @@ return {
         alias = {"voodoo_skull_0007"}
     },
     voodoo_skull_0008 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {25, 25},
         trim = {0, 0, 1, 0},
         a_size = {1024, 1024},
@@ -1537,7 +1537,7 @@ return {
         alias = {"voodoo_skull_0009"}
     },
     voodoo_skull_0010 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {25, 25},
         trim = {0, 0, 1, 0},
         a_size = {1024, 1024},
@@ -1545,7 +1545,7 @@ return {
         alias = {"voodoo_skull_0011"}
     },
     voodoo_skull_0012 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {25, 25},
         trim = {0, 0, 1, 0},
         a_size = {1024, 1024},
@@ -1553,7 +1553,7 @@ return {
         alias = {"voodoo_skull_0013"}
     },
     voodoo_skull_0014 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {25, 25},
         trim = {0, 0, 1, 0},
         a_size = {1024, 1024},
@@ -1561,7 +1561,7 @@ return {
         alias = {"voodoo_skull_0015"}
     },
     voodoo_skull_exlposion_0001 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 42},
         trim = {11, 7, 12, 9},
         a_size = {1024, 1024},
@@ -1569,7 +1569,7 @@ return {
         alias = {"voodoo_skull_exlposion_0002"}
     },
     voodoo_skull_exlposion_0003 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 42},
         trim = {8, 7, 7, 7},
         a_size = {1024, 1024},
@@ -1577,7 +1577,7 @@ return {
         alias = {"voodoo_skull_exlposion_0004"}
     },
     voodoo_skull_exlposion_0005 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 42},
         trim = {5, 5, 3, 6},
         a_size = {1024, 1024},
@@ -1585,7 +1585,7 @@ return {
         alias = {"voodoo_skull_exlposion_0006"}
     },
     voodoo_skull_exlposion_0007 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 42},
         trim = {4, 3, 2, 5},
         a_size = {1024, 1024},
@@ -1593,7 +1593,7 @@ return {
         alias = {"voodoo_skull_exlposion_0008"}
     },
     voodoo_skull_exlposion_0009 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 42},
         trim = {3, 2, 1, 3},
         a_size = {1024, 1024},
@@ -1601,7 +1601,7 @@ return {
         alias = {"voodoo_skull_exlposion_0010"}
     },
     voodoo_skull_exlposion_0011 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 42},
         trim = {3, 2, 1, 4},
         a_size = {1024, 1024},
@@ -1609,7 +1609,7 @@ return {
         alias = {"voodoo_skull_exlposion_0012"}
     },
     voodoo_skull_exlposion_0013 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 42},
         trim = {4, 3, 1, 4},
         a_size = {1024, 1024},
@@ -1617,7 +1617,7 @@ return {
         alias = {"voodoo_skull_exlposion_0014"}
     },
     voodoo_skull_exlposion_0015 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {42, 42},
         trim = {8, 3, 2, 6},
         a_size = {1024, 1024},
@@ -1625,7 +1625,7 @@ return {
         alias = {"voodoo_skull_exlposion_0016"}
     },
     voodoo_skull_glow_0001 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {25, 25},
         trim = {2, 3, 3, 3},
         a_size = {1024, 1024},
@@ -1633,7 +1633,7 @@ return {
         alias = {"voodoo_skull_glow_0002"}
     },
     voodoo_skull_glow_0003 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {25, 25},
         trim = {2, 2, 2, 3},
         a_size = {1024, 1024},
@@ -1641,7 +1641,7 @@ return {
         alias = {"voodoo_skull_glow_0004"}
     },
     voodoo_skull_glow_0005 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {25, 25},
         trim = {1, 1, 1, 2},
         a_size = {1024, 1024},
@@ -1649,7 +1649,7 @@ return {
         alias = {"voodoo_skull_glow_0006"}
     },
     voodoo_skull_glow_0007 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {25, 25},
         trim = {0, 1, 0, 1},
         a_size = {1024, 1024},
@@ -1657,7 +1657,7 @@ return {
         alias = {}
     },
     voodoo_skull_particle_0001 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {23, 23},
         trim = {2, 1, 1, 1},
         a_size = {1024, 1024},
@@ -1665,7 +1665,7 @@ return {
         alias = {}
     },
     voodoo_skull_particle_0002 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {23, 23},
         trim = {2, 2, 1, 2},
         a_size = {1024, 1024},
@@ -1673,7 +1673,7 @@ return {
         alias = {}
     },
     voodoo_skull_particle_0003 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {23, 23},
         trim = {1, 1, 1, 0},
         a_size = {1024, 1024},
@@ -1681,7 +1681,7 @@ return {
         alias = {}
     },
     voodoo_skull_particle_0004 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {23, 23},
         trim = {1, 1, 1, 0},
         a_size = {1024, 1024},
@@ -1689,7 +1689,7 @@ return {
         alias = {}
     },
     voodoo_skull_particle_0005 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {23, 23},
         trim = {1, 0, 1, 0},
         a_size = {1024, 1024},
@@ -1697,7 +1697,7 @@ return {
         alias = {}
     },
     voodoo_skull_particle_0006 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {23, 23},
         trim = {1, 0, 1, 0},
         a_size = {1024, 1024},
@@ -1705,7 +1705,7 @@ return {
         alias = {}
     },
     voodoo_skull_particle_0007 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {23, 23},
         trim = {0, 0, 1, 0},
         a_size = {1024, 1024},
@@ -1713,7 +1713,7 @@ return {
         alias = {}
     },
     voodoo_skull_particle_0008 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {23, 23},
         trim = {0, 0, 1, 0},
         a_size = {1024, 1024},
@@ -1721,7 +1721,7 @@ return {
         alias = {}
     },
     voodoo_skull_rayHit_0001 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {34, 37},
         trim = {5, 1, 3, 4},
         a_size = {1024, 1024},
@@ -1729,7 +1729,7 @@ return {
         alias = {"voodoo_skull_rayHit_0002"}
     },
     voodoo_skull_rayHit_0003 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {34, 37},
         trim = {2, 2, 2, 0},
         a_size = {1024, 1024},
@@ -1737,7 +1737,7 @@ return {
         alias = {"voodoo_skull_rayHit_0004"}
     },
     voodoo_skull_ray_0001 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {121, 14},
         trim = {4, 3, 107, 2},
         a_size = {1024, 1024},
@@ -1745,7 +1745,7 @@ return {
         alias = {}
     },
     voodoo_skull_ray_0002 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {121, 14},
         trim = {3, 2, 74, 1},
         a_size = {1024, 1024},
@@ -1753,7 +1753,7 @@ return {
         alias = {}
     },
     voodoo_skull_ray_0003 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {121, 14},
         trim = {1, 2, 39, 1},
         a_size = {1024, 1024},
@@ -1761,7 +1761,7 @@ return {
         alias = {}
     },
     voodoo_skull_ray_0004 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {121, 14},
         trim = {4, 1, 2, 2},
         a_size = {1024, 1024},
@@ -1769,7 +1769,7 @@ return {
         alias = {}
     },
     voodoo_skull_ray_0005 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {121, 14},
         trim = {40, 1, 1, 2},
         a_size = {1024, 1024},
@@ -1777,7 +1777,7 @@ return {
         alias = {}
     },
     voodoo_skull_ray_0006 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {121, 14},
         trim = {76, 2, 0, 2},
         a_size = {1024, 1024},
@@ -1785,7 +1785,7 @@ return {
         alias = {}
     },
     voodoo_skull_ray_0007 = {
-        a_name = "go_hero_voodoo_witch-1.png",
+        a_name = "go_hero_voodoo_witch-1.dds",
         size = {121, 14},
         trim = {112, 2, 0, 2},
         a_size = {1024, 1024},

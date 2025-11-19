@@ -2,7 +2,7 @@
 
 return {
 	BossRotten_0001 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -30,7 +30,7 @@ return {
 		}
 	},
 	BossRotten_0003 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -58,7 +58,7 @@ return {
 		}
 	},
 	BossRotten_0005 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -86,7 +86,7 @@ return {
 		}
 	},
 	BossRotten_0007 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -114,7 +114,7 @@ return {
 		}
 	},
 	BossRotten_0009 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -142,7 +142,7 @@ return {
 		}
 	},
 	BossRotten_0011 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -170,7 +170,7 @@ return {
 		}
 	},
 	BossRotten_0013 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -198,7 +198,7 @@ return {
 		}
 	},
 	BossRotten_0015 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -226,7 +226,7 @@ return {
 		}
 	},
 	BossRotten_0017 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -252,7 +252,7 @@ return {
 		}
 	},
 	BossRotten_0019 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -278,7 +278,7 @@ return {
 		}
 	},
 	BossRotten_0021 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -304,7 +304,7 @@ return {
 		}
 	},
 	BossRotten_0023 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -330,7 +330,7 @@ return {
 		}
 	},
 	BossRotten_0025 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -356,7 +356,7 @@ return {
 		}
 	},
 	BossRotten_0027 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -382,7 +382,7 @@ return {
 		}
 	},
 	BossRotten_0029 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -408,7 +408,7 @@ return {
 		}
 	},
 	BossRotten_0031 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -434,7 +434,7 @@ return {
 		}
 	},
 	BossRotten_0033 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0034 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -498,7 +498,7 @@ return {
 		}
 	},
 	BossRotten_0036 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -524,7 +524,7 @@ return {
 		}
 	},
 	BossRotten_0038 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -550,7 +550,7 @@ return {
 		}
 	},
 	BossRotten_0040 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -577,7 +577,7 @@ return {
 		}
 	},
 	BossRotten_0043 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -603,7 +603,7 @@ return {
 		}
 	},
 	BossRotten_0045 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -627,7 +627,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0046 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -651,7 +651,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0047 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -675,7 +675,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0048 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -699,7 +699,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0049 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -726,7 +726,7 @@ return {
 		}
 	},
 	BossRotten_0052 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -752,7 +752,7 @@ return {
 		}
 	},
 	BossRotten_0057 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -778,7 +778,7 @@ return {
 		}
 	},
 	BossRotten_0059 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -804,7 +804,7 @@ return {
 		}
 	},
 	BossRotten_0061 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -830,7 +830,7 @@ return {
 		}
 	},
 	BossRotten_0063 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -858,7 +858,7 @@ return {
 		}
 	},
 	BossRotten_0067 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -882,7 +882,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0068 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -906,7 +906,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0069 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -930,7 +930,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0070 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -954,7 +954,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0071 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -980,7 +980,7 @@ return {
 		}
 	},
 	BossRotten_0073 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -1006,7 +1006,7 @@ return {
 		}
 	},
 	BossRotten_0075 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -1032,7 +1032,7 @@ return {
 		}
 	},
 	BossRotten_0088 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -1056,7 +1056,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0089 = {
-		a_name = "go_stage15-2.png",
+		a_name = "go_stage15-2.dds",
 		size = {
 			244,
 			232
@@ -1080,7 +1080,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0090 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -1104,7 +1104,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0091 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -1128,7 +1128,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0092 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -1152,7 +1152,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0093 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -1176,7 +1176,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0094 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -1200,7 +1200,7 @@ return {
 		alias = {}
 	},
 	BossRotten_0095 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -1226,7 +1226,7 @@ return {
 		}
 	},
 	BossRotten_0097 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			244,
 			232
@@ -1252,7 +1252,7 @@ return {
 		}
 	},
 	Proyectile_RottenBoss = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			38,
 			38
@@ -1276,7 +1276,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0001 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1302,7 +1302,7 @@ return {
 		}
 	},
 	stage15_bubble_0002 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1326,7 +1326,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0003 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1350,7 +1350,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0004 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1374,7 +1374,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0005 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1398,7 +1398,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0006 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1422,7 +1422,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0007 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1446,7 +1446,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0008 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1470,7 +1470,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0009 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1494,7 +1494,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0010 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1518,7 +1518,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0011 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1542,7 +1542,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0012 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1566,7 +1566,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0013 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1590,7 +1590,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0014 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1614,7 +1614,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0015 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1638,7 +1638,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0016 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1662,7 +1662,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0017 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1686,7 +1686,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0018 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1710,7 +1710,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0019 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1734,7 +1734,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0020 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1758,7 +1758,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0021 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1782,7 +1782,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0022 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1806,7 +1806,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0023 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1830,7 +1830,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0024 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1854,7 +1854,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0025 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1878,7 +1878,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0026 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1902,7 +1902,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0027 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1926,7 +1926,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0028 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1950,7 +1950,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0029 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1974,7 +1974,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0030 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -1998,7 +1998,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0031 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2022,7 +2022,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0032 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2046,7 +2046,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0033 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2070,7 +2070,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0034 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2094,7 +2094,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0035 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2118,7 +2118,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0036 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2142,7 +2142,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0037 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2166,7 +2166,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0038 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2190,7 +2190,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0039 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2214,7 +2214,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0040 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2238,7 +2238,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0041 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2262,7 +2262,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0042 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2286,7 +2286,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0043 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2310,7 +2310,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0044 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2334,7 +2334,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0045 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2358,7 +2358,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0046 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32
@@ -2382,7 +2382,7 @@ return {
 		alias = {}
 	},
 	stage15_bubble_0047 = {
-		a_name = "go_stage15-1.png",
+		a_name = "go_stage15-1.dds",
 		size = {
 			48,
 			32

@@ -2,7 +2,7 @@
 
 return {
 	loading_bar = {
-		a_name = "loading_common-1.png",
+		a_name = "loading_common-1.dds",
 		size = {
 			566,
 			30
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	loading_barBg_0001 = {
-		a_name = "loading_common-1.png",
+		a_name = "loading_common-1.dds",
 		size = {
 			1200,
 			202
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	loading_barBg_0002 = {
-		a_name = "loading_common-1.png",
+		a_name = "loading_common-1.dds",
 		size = {
 			1200,
 			202
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	loading_vignette_small = {
-		a_name = "loading_common-1.png",
+		a_name = "loading_common-1.dds",
 		size = {
 			400,
 			225

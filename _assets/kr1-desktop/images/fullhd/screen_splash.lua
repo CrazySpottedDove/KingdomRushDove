@@ -2,7 +2,7 @@
 
 return {
 	logo_image = {
-		a_name = "screen_splash-1.png",
+		a_name = "screen_splash-1.dds",
 		size = {
 			303,
 			282
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	logo_image_shine_0001 = {
-		a_name = "screen_splash-1.png",
+		a_name = "screen_splash-1.dds",
 		size = {
 			303,
 			282
@@ -52,7 +52,7 @@ return {
 		}
 	},
 	logo_image_shine_0003 = {
-		a_name = "screen_splash-1.png",
+		a_name = "screen_splash-1.dds",
 		size = {
 			303,
 			282
@@ -78,7 +78,7 @@ return {
 		}
 	},
 	logo_image_shine_0005 = {
-		a_name = "screen_splash-1.png",
+		a_name = "screen_splash-1.dds",
 		size = {
 			303,
 			282
@@ -104,7 +104,7 @@ return {
 		}
 	},
 	logo_image_shine_0007 = {
-		a_name = "screen_splash-1.png",
+		a_name = "screen_splash-1.dds",
 		size = {
 			303,
 			282
@@ -130,7 +130,7 @@ return {
 		}
 	},
 	logo_image_shine_0009 = {
-		a_name = "screen_splash-1.png",
+		a_name = "screen_splash-1.dds",
 		size = {
 			303,
 			282
@@ -156,7 +156,7 @@ return {
 		}
 	},
 	logo_image_shine_0011 = {
-		a_name = "screen_splash-1.png",
+		a_name = "screen_splash-1.dds",
 		size = {
 			303,
 			282
@@ -182,7 +182,7 @@ return {
 		}
 	},
 	logo_image_shine_0013 = {
-		a_name = "screen_splash-1.png",
+		a_name = "screen_splash-1.dds",
 		size = {
 			303,
 			282
@@ -208,7 +208,7 @@ return {
 		}
 	},
 	logo_image_shine_0015 = {
-		a_name = "screen_splash-1.png",
+		a_name = "screen_splash-1.dds",
 		size = {
 			303,
 			282
@@ -234,7 +234,7 @@ return {
 		}
 	},
 	logo_text = {
-		a_name = "screen_splash-1.png",
+		a_name = "screen_splash-1.dds",
 		size = {
 			627,
 			282

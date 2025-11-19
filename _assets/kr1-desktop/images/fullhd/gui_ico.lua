@@ -1,6 +1,6 @@
 return {
 	["glow_ico_main"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			90,
 			82
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["glow_ico_sell"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			64,
 			60
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["glow_ico_special"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			90,
 			86
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["glow_ico_sub"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			76,
 			74
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["ico_sell_0001"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			56,
 			50
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0001"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0002"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0003"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0004"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0005"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0006"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0007"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0008"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0009"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0010"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0011"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0012"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0013"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0014"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0002"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0001"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0003"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0004"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0005"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0006"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0007"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0008"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0009"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0010"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0011"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0012"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0013"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0014"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0015"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0016"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0017"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0018"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0019"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0020"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0021"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0022"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0023"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0024"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0025"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0026"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0027"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0028"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0001"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0002"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0003"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0004"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0005"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0006"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0007"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0008"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0009"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0010"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0011"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0012"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0013"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0014"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0015"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0016"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0017"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0018"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0019"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0020"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0021"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0022"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0023"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0001"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0002"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0003"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0004"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0005"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0006"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0007"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0008"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0009"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0010"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0011"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0012"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0013"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0014"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0015"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0016"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0017"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0018"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0019"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0020"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0021"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0022"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0023"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0024"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0025"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0026"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0027"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0028"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0029"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0030"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0031"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0032"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0033"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0034"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0035"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0036"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0037"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0038"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0039"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0040"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0041"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0042"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0043"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0044"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0045"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0046"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0047"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0048"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0049"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0050"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0051"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0052"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0053"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0054"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0055"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0056"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0057"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0058"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0059"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0060"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0061"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0062"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0063"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0064"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0065"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0066"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0067"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0068"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0069"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0070"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0071"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0072"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0073"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0074"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0075"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0076"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0077"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0078"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0001"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0002"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0003"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0004"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0006"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0007"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0008"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0009"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0010"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0011"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0012"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0013"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0016"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0017"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0018"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0030"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0031"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0032"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0033"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0034"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0035"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0036"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0037"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0038"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0039"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0040"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0041"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0042"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0043"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0044"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0045"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0046"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0047"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0048"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0049"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0050"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0105"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0001"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			64,
 			64
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0001_hover"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			64,
 			64
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0002"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			64,
 			64
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0004"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			64,
 			64
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0005"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			64,
 			64
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0006"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			64,
 			64
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0007"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			64,
 			64
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0008"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			64,
 			64
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_retreat_icons_tower_panda"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			60,
 			60
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0001"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0002"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0003"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0004"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0005"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0006"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0007"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0008"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0009"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0010"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0011"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0012"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0013"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0014"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0015"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0016"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0017"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0018"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0019"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0021"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0022"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0023"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0024"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0025"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0026"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0027"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0028"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0029"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0030"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0031"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0032"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0033"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0034"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0035"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0036"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0037"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0038"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0039"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0040"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0041"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0042"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0000"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0001"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0002"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0003"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0004"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0005"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0006"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0007"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0008"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0009"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0010"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0011"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0012"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0013"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0014"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0015"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0016"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0017"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0018"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0019"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0020"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0021"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0022"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0023"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0024"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0025"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0026"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0027"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0028"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0029"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0030"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0031"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0032"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0033"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0034"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0035"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0036"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0037"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0038"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0039"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			74
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0000"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0001"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0002"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0003"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0004"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0005"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0006"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0007"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0008"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0009"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0010"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0011"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0012"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0013"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0014"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0015"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0016"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0017"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0018"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0019"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0022"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0023"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0024"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0025"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0026"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0027"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0028"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0029"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0030"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0031"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0032"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0033"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0034"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0035"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0036"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0037"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0038"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0039"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0040"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0041"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0042"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0043"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0044"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0045"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0046"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0047"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0048"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0049"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			82,
 			76
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["sub_icons_0000"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			68,
 			68
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["sub_icons_0001"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			68,
 			68
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["sub_icons_0002"] = {
-		a_name = "gui_ico-1.png",
+		a_name = "gui_ico-1.dds",
 		size = {
 			68,
 			68

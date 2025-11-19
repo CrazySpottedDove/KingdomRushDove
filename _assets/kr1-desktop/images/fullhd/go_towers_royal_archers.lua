@@ -1,6 +1,6 @@
 return {
 	["royal_archer_tower_build"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			133,
 			102
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_arrow_0001"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			51,
 			34
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_arrow_0002"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			51,
 			34
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_arrow_armor_piercer_0001"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			68,
 			51
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_arrow_armor_piercer_0002"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			68,
 			51
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_arrow_armor_piercer_trail_particle_0001"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			34,
 			34
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_arrow_armor_piercer_trail_particle_0002"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			34,
 			34
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_arrow_armor_piercer_trail_particle_0003"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			34,
 			34
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_arrow_armor_piercer_trail_particle_0004"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			34,
 			34
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_arrow_armor_piercer_trail_particle_0005"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			34,
 			34
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_arrow_armor_piercer_trail_particle_0006"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			34,
 			34
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_arrow_armor_piercer_trail_particle_0007"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			34,
 			34
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_arrow_armor_piercer_trail_particle_0008"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			34,
 			34
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_arrow_armor_piercer_trail_particle_0009"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			34,
 			34
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_tower"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			139,
 			210
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_tower_front"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			102,
 			150
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_lvl4_tower_rapacious_hunter_base"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			164,
 			110
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_preview"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			133,
 			178
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0001"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0002"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0003"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0004"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0005"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0006"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0007"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0008"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0009"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0010"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0011"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0012"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0013"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0014"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0015"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0016"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0017"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0018"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0019"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0020"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0021"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0022"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0023"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0024"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0025"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0026"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0027"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0028"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0029"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0030"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0031"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0032"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0033"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0034"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0035"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0036"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0037"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0038"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0039"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0040"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0041"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0042"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0043"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0044"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0045"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0046"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0047"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0048"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0049"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0050"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0051"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0052"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0053"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0054"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0055"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0056"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0057"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0058"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0059"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0060"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0061"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0062"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0063"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0064"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0065"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0066"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0067"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0068"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0069"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0070"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0071"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0072"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0073"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0074"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0075"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0076"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0077"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0078"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0079"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0080"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0081"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0082"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0083"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0084"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0085"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0086"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0087"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0088"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0089"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0090"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0091"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0092"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0093"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0094"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0095"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0096"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0097"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0098"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0099"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0100"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0101"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0102"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0103"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0104"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0105"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0106"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0107"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_0108"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			136,
 			181
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_armor_breaker_hit_fx_0001"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			164,
 			153
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_armor_breaker_hit_fx_0002"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			164,
 			153
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_armor_breaker_hit_fx_0003"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			164,
 			153
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_armor_breaker_hit_fx_0004"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			164,
 			153
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_armor_breaker_hit_fx_0005"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			164,
 			153
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_armor_breaker_hit_fx_0006"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			164,
 			153
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0001"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0002"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0003"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0004"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0005"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0006"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0007"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0008"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0009"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0010"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0011"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0012"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0013"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0014"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0015"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0016"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0017"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0018"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0019"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0020"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0021"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0022"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0023"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0024"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0025"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0026"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0027"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0028"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0029"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0030"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0031"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0032"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_0033"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			76,
 			90
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_attack_particle"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			82,
 			79
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_hit_fx_0001"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			105,
 			96
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_hit_fx_0002"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			105,
 			96
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_hit_fx_0003"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			105,
 			96
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_hit_fx_0004"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			105,
 			96
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_hit_fx_0005"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			105,
 			96
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_hit_fx_0006"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			105,
 			96
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_eagle_hit_fx_0007"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			105,
 			96
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0001"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0002"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0003"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0004"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0005"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0006"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0007"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0008"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0009"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0010"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0011"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0012"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0013"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0014"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0015"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0016"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0017"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0018"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0019"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0020"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0021"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0022"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0023"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0024"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0025"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0026"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0027"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0028"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0029"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0030"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0031"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0032"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0033"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0034"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0035"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0036"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0037"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0038"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0039"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0040"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0041"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0042"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0043"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0044"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0045"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0046"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0047"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0048"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0049"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0050"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0051"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0052"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0053"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0054"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0055"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0056"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0057"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0058"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0059"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0060"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0061"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0062"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0063"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0064"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0065"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0066"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0067"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0068"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0069"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0070"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0071"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0072"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0073"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0074"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0075"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0076"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0077"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0078"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0079"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0080"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0081"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0082"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0083"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0084"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0085"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0086"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0087"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0088"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0089"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0090"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0091"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0092"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0093"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0094"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0095"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0096"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0097"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0098"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0099"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0100"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0101"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0102"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0103"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0104"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0105"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0106"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0107"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0108"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0109"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0110"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0111"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0112"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0113"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0114"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0115"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0116"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0117"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0118"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0119"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0120"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0121"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0122"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0123"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0124"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0125"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0126"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer_0127"] = {
-		a_name = "go_towers_royal_archers-1.png",
+		a_name = "go_towers_royal_archers-1.dds",
 		size = {
 			122,
 			142

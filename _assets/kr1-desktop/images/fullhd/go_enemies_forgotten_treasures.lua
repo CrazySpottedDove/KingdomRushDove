@@ -2,7 +2,7 @@
 
 return {
 	dark_spitters_0001 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -30,7 +30,7 @@ return {
 		}
 	},
 	dark_spitters_0002 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -56,7 +56,7 @@ return {
 		}
 	},
 	dark_spitters_0004 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -82,7 +82,7 @@ return {
 		}
 	},
 	dark_spitters_0006 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -108,7 +108,7 @@ return {
 		}
 	},
 	dark_spitters_0008 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -134,7 +134,7 @@ return {
 		}
 	},
 	dark_spitters_0010 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -160,7 +160,7 @@ return {
 		}
 	},
 	dark_spitters_0012 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -186,7 +186,7 @@ return {
 		}
 	},
 	dark_spitters_0014 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -212,7 +212,7 @@ return {
 		}
 	},
 	dark_spitters_0016 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -238,7 +238,7 @@ return {
 		}
 	},
 	dark_spitters_0018 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -264,7 +264,7 @@ return {
 		}
 	},
 	dark_spitters_0020 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -290,7 +290,7 @@ return {
 		}
 	},
 	dark_spitters_0022 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -316,7 +316,7 @@ return {
 		}
 	},
 	dark_spitters_0024 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -342,7 +342,7 @@ return {
 		}
 	},
 	dark_spitters_0026 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -368,7 +368,7 @@ return {
 		}
 	},
 	dark_spitters_0028 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -394,7 +394,7 @@ return {
 		}
 	},
 	dark_spitters_0030 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -420,7 +420,7 @@ return {
 		}
 	},
 	dark_spitters_0032 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -446,7 +446,7 @@ return {
 		}
 	},
 	dark_spitters_0034 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -472,7 +472,7 @@ return {
 		}
 	},
 	dark_spitters_0036 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -498,7 +498,7 @@ return {
 		}
 	},
 	dark_spitters_0038 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -524,7 +524,7 @@ return {
 		}
 	},
 	dark_spitters_0040 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -550,7 +550,7 @@ return {
 		}
 	},
 	dark_spitters_0042 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -576,7 +576,7 @@ return {
 		}
 	},
 	dark_spitters_0044 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -602,7 +602,7 @@ return {
 		}
 	},
 	dark_spitters_0046 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -628,7 +628,7 @@ return {
 		}
 	},
 	dark_spitters_0048 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -654,7 +654,7 @@ return {
 		}
 	},
 	dark_spitters_0050 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -680,7 +680,7 @@ return {
 		}
 	},
 	dark_spitters_0052 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -706,7 +706,7 @@ return {
 		}
 	},
 	dark_spitters_0054 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -732,7 +732,7 @@ return {
 		}
 	},
 	dark_spitters_0056 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -758,7 +758,7 @@ return {
 		}
 	},
 	dark_spitters_0058 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -784,7 +784,7 @@ return {
 		}
 	},
 	dark_spitters_0060 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -810,7 +810,7 @@ return {
 		}
 	},
 	dark_spitters_0062 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -836,7 +836,7 @@ return {
 		}
 	},
 	dark_spitters_0064 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -862,7 +862,7 @@ return {
 		}
 	},
 	dark_spitters_0066 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -888,7 +888,7 @@ return {
 		}
 	},
 	dark_spitters_0068 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -914,7 +914,7 @@ return {
 		}
 	},
 	dark_spitters_0070 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -940,7 +940,7 @@ return {
 		}
 	},
 	dark_spitters_0072 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -966,7 +966,7 @@ return {
 		}
 	},
 	dark_spitters_0074 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -992,7 +992,7 @@ return {
 		}
 	},
 	dark_spitters_0076 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1018,7 +1018,7 @@ return {
 		}
 	},
 	dark_spitters_0078 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1044,7 +1044,7 @@ return {
 		}
 	},
 	dark_spitters_0080 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1070,7 +1070,7 @@ return {
 		}
 	},
 	dark_spitters_0082 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1096,7 +1096,7 @@ return {
 		}
 	},
 	dark_spitters_0084 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1122,7 +1122,7 @@ return {
 		}
 	},
 	dark_spitters_0087 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1148,7 +1148,7 @@ return {
 		}
 	},
 	dark_spitters_0089 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1174,7 +1174,7 @@ return {
 		}
 	},
 	dark_spitters_0091 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1202,7 +1202,7 @@ return {
 		}
 	},
 	dark_spitters_0095 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1228,7 +1228,7 @@ return {
 		}
 	},
 	dark_spitters_0097 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1254,7 +1254,7 @@ return {
 		}
 	},
 	dark_spitters_0099 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1280,7 +1280,7 @@ return {
 		}
 	},
 	dark_spitters_0101 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1304,7 +1304,7 @@ return {
 		alias = {}
 	},
 	dark_spitters_0102 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1328,7 +1328,7 @@ return {
 		alias = {}
 	},
 	dark_spitters_0103 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1352,7 +1352,7 @@ return {
 		alias = {}
 	},
 	dark_spitters_0106 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1378,7 +1378,7 @@ return {
 		}
 	},
 	dark_spitters_0108 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1404,7 +1404,7 @@ return {
 		}
 	},
 	dark_spitters_0110 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1430,7 +1430,7 @@ return {
 		}
 	},
 	dark_spitters_0112 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1456,7 +1456,7 @@ return {
 		}
 	},
 	dark_spitters_0114 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1482,7 +1482,7 @@ return {
 		}
 	},
 	dark_spitters_0116 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1508,7 +1508,7 @@ return {
 		}
 	},
 	dark_spitters_0118 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1534,7 +1534,7 @@ return {
 		}
 	},
 	dark_spitters_0120 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1560,7 +1560,7 @@ return {
 		}
 	},
 	dark_spitters_0122 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1584,7 +1584,7 @@ return {
 		alias = {}
 	},
 	dark_spitters_0123 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1610,7 +1610,7 @@ return {
 		}
 	},
 	dark_spitters_0125 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1636,7 +1636,7 @@ return {
 		}
 	},
 	dark_spitters_0127 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1662,7 +1662,7 @@ return {
 		}
 	},
 	dark_spitters_0129 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1689,7 +1689,7 @@ return {
 		}
 	},
 	dark_spitters_0132 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1715,7 +1715,7 @@ return {
 		}
 	},
 	dark_spitters_0134 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1741,7 +1741,7 @@ return {
 		}
 	},
 	dark_spitters_0136 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1767,7 +1767,7 @@ return {
 		}
 	},
 	dark_spitters_0138 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1793,7 +1793,7 @@ return {
 		}
 	},
 	dark_spitters_0140 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1819,7 +1819,7 @@ return {
 		}
 	},
 	dark_spitters_0142 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1845,7 +1845,7 @@ return {
 		}
 	},
 	dark_spitters_0144 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1871,7 +1871,7 @@ return {
 		}
 	},
 	dark_spitters_0146 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1897,7 +1897,7 @@ return {
 		}
 	},
 	dark_spitters_0148 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			141,
 			98
@@ -1921,7 +1921,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0001 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -1956,7 +1956,7 @@ return {
 		}
 	},
 	grim_devourers_0002 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -1983,7 +1983,7 @@ return {
 		}
 	},
 	grim_devourers_0005 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2009,7 +2009,7 @@ return {
 		}
 	},
 	grim_devourers_0007 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2035,7 +2035,7 @@ return {
 		}
 	},
 	grim_devourers_0009 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2062,7 +2062,7 @@ return {
 		}
 	},
 	grim_devourers_0012 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2089,7 +2089,7 @@ return {
 		}
 	},
 	grim_devourers_0015 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2117,7 +2117,7 @@ return {
 		}
 	},
 	grim_devourers_0018 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2143,7 +2143,7 @@ return {
 		}
 	},
 	grim_devourers_0020 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2169,7 +2169,7 @@ return {
 		}
 	},
 	grim_devourers_0022 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2196,7 +2196,7 @@ return {
 		}
 	},
 	grim_devourers_0025 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2223,7 +2223,7 @@ return {
 		}
 	},
 	grim_devourers_0029 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2251,7 +2251,7 @@ return {
 		}
 	},
 	grim_devourers_0032 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2277,7 +2277,7 @@ return {
 		}
 	},
 	grim_devourers_0034 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2303,7 +2303,7 @@ return {
 		}
 	},
 	grim_devourers_0036 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2330,7 +2330,7 @@ return {
 		}
 	},
 	grim_devourers_0039 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2357,7 +2357,7 @@ return {
 		}
 	},
 	grim_devourers_0045 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2383,7 +2383,7 @@ return {
 		}
 	},
 	grim_devourers_0047 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2409,7 +2409,7 @@ return {
 		}
 	},
 	grim_devourers_0049 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2435,7 +2435,7 @@ return {
 		}
 	},
 	grim_devourers_0051 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2461,7 +2461,7 @@ return {
 		}
 	},
 	grim_devourers_0053 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2487,7 +2487,7 @@ return {
 		}
 	},
 	grim_devourers_0055 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2513,7 +2513,7 @@ return {
 		}
 	},
 	grim_devourers_0061 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2539,7 +2539,7 @@ return {
 		}
 	},
 	grim_devourers_0063 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2565,7 +2565,7 @@ return {
 		}
 	},
 	grim_devourers_0065 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2589,7 +2589,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0066 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2619,7 +2619,7 @@ return {
 		}
 	},
 	grim_devourers_0072 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2645,7 +2645,7 @@ return {
 		}
 	},
 	grim_devourers_0074 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2671,7 +2671,7 @@ return {
 		}
 	},
 	grim_devourers_0076 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2697,7 +2697,7 @@ return {
 		}
 	},
 	grim_devourers_0078 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2723,7 +2723,7 @@ return {
 		}
 	},
 	grim_devourers_0080 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2749,7 +2749,7 @@ return {
 		}
 	},
 	grim_devourers_0082 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2773,7 +2773,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0085 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2799,7 +2799,7 @@ return {
 		}
 	},
 	grim_devourers_0087 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2823,7 +2823,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0088 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2847,7 +2847,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0089 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2871,7 +2871,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0090 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2895,7 +2895,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0091 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2919,7 +2919,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0092 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2943,7 +2943,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0093 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2967,7 +2967,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0094 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -2991,7 +2991,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0095 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -3015,7 +3015,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0096 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -3039,7 +3039,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0097 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -3063,7 +3063,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0098 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -3087,7 +3087,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0099 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -3111,7 +3111,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0100 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -3135,7 +3135,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0101 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -3159,7 +3159,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0102 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -3183,7 +3183,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0103 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -3207,7 +3207,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0104 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -3231,7 +3231,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0105 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -3255,7 +3255,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0106 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -3279,7 +3279,7 @@ return {
 		alias = {}
 	},
 	grim_devourers_0107 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			93,
 			96
@@ -3303,7 +3303,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0001 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3327,7 +3327,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0002 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3353,7 +3353,7 @@ return {
 		}
 	},
 	shadow_champion_0004 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3377,7 +3377,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0005 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3403,7 +3403,7 @@ return {
 		}
 	},
 	shadow_champion_0007 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3427,7 +3427,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0008 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3451,7 +3451,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0009 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3475,7 +3475,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0010 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3499,7 +3499,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0011 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3525,7 +3525,7 @@ return {
 		}
 	},
 	shadow_champion_0013 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3549,7 +3549,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0014 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3573,7 +3573,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0015 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3597,7 +3597,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0016 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3621,7 +3621,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0017 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3647,7 +3647,7 @@ return {
 		}
 	},
 	shadow_champion_0019 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3671,7 +3671,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0020 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3695,7 +3695,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0021 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3719,7 +3719,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0022 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3743,7 +3743,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0023 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3767,7 +3767,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0024 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3791,7 +3791,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0025 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3815,7 +3815,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0026 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3839,7 +3839,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0027 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3865,7 +3865,7 @@ return {
 		}
 	},
 	shadow_champion_0029 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3889,7 +3889,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0030 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3915,7 +3915,7 @@ return {
 		}
 	},
 	shadow_champion_0032 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3939,7 +3939,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0033 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3963,7 +3963,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0034 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -3987,7 +3987,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0035 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4011,7 +4011,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0036 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4037,7 +4037,7 @@ return {
 		}
 	},
 	shadow_champion_0038 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4061,7 +4061,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0039 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4085,7 +4085,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0040 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4109,7 +4109,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0041 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4133,7 +4133,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0042 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4159,7 +4159,7 @@ return {
 		}
 	},
 	shadow_champion_0044 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4183,7 +4183,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0045 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4207,7 +4207,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0046 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4231,7 +4231,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0047 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4255,7 +4255,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0048 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4279,7 +4279,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0049 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4303,7 +4303,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0050 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4327,7 +4327,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0051 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4351,7 +4351,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0052 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4377,7 +4377,7 @@ return {
 		}
 	},
 	shadow_champion_0054 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4401,7 +4401,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0055 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4427,7 +4427,7 @@ return {
 		}
 	},
 	shadow_champion_0057 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4451,7 +4451,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0058 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4475,7 +4475,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0059 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4499,7 +4499,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0060 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4523,7 +4523,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0061 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4549,7 +4549,7 @@ return {
 		}
 	},
 	shadow_champion_0063 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4573,7 +4573,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0064 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4597,7 +4597,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0065 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4621,7 +4621,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0066 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4645,7 +4645,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0067 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4671,7 +4671,7 @@ return {
 		}
 	},
 	shadow_champion_0069 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4695,7 +4695,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0070 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4719,7 +4719,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0071 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4743,7 +4743,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0072 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4767,7 +4767,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0073 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4791,7 +4791,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0074 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4815,7 +4815,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0075 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4839,7 +4839,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0076 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4863,7 +4863,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0077 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4891,7 +4891,7 @@ return {
 		}
 	},
 	shadow_champion_0079 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4917,7 +4917,7 @@ return {
 		}
 	},
 	shadow_champion_0081 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4943,7 +4943,7 @@ return {
 		}
 	},
 	shadow_champion_0083 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4969,7 +4969,7 @@ return {
 		}
 	},
 	shadow_champion_0085 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -4995,7 +4995,7 @@ return {
 		}
 	},
 	shadow_champion_0087 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5021,7 +5021,7 @@ return {
 		}
 	},
 	shadow_champion_0089 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5047,7 +5047,7 @@ return {
 		}
 	},
 	shadow_champion_0091 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5073,7 +5073,7 @@ return {
 		}
 	},
 	shadow_champion_0093 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5099,7 +5099,7 @@ return {
 		}
 	},
 	shadow_champion_0095 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5128,7 +5128,7 @@ return {
 		}
 	},
 	shadow_champion_0102 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5154,7 +5154,7 @@ return {
 		}
 	},
 	shadow_champion_0104 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5180,7 +5180,7 @@ return {
 		}
 	},
 	shadow_champion_0106 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5206,7 +5206,7 @@ return {
 		}
 	},
 	shadow_champion_0108 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5232,7 +5232,7 @@ return {
 		}
 	},
 	shadow_champion_0110 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5258,7 +5258,7 @@ return {
 		}
 	},
 	shadow_champion_0112 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5284,7 +5284,7 @@ return {
 		}
 	},
 	shadow_champion_0114 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5310,7 +5310,7 @@ return {
 		}
 	},
 	shadow_champion_0116 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5336,7 +5336,7 @@ return {
 		}
 	},
 	shadow_champion_0118 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5360,7 +5360,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0119 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5384,7 +5384,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0120 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5408,7 +5408,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0121 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5432,7 +5432,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0122 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5456,7 +5456,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0123 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5480,7 +5480,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0124 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5506,7 +5506,7 @@ return {
 		}
 	},
 	shadow_champion_0126 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5532,7 +5532,7 @@ return {
 		}
 	},
 	shadow_champion_0128 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5558,7 +5558,7 @@ return {
 		}
 	},
 	shadow_champion_0130 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5584,7 +5584,7 @@ return {
 		}
 	},
 	shadow_champion_0132 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5608,7 +5608,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0133 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5632,7 +5632,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0134 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5656,7 +5656,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0135 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5680,7 +5680,7 @@ return {
 		alias = {}
 	},
 	shadow_champion_0136 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5706,7 +5706,7 @@ return {
 		}
 	},
 	shadow_champion_0138 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5732,7 +5732,7 @@ return {
 		}
 	},
 	shadow_champion_0140 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			180,
 			180
@@ -5756,7 +5756,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0001 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -5784,7 +5784,7 @@ return {
 		}
 	},
 	shadow_spawn_0002 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -5810,7 +5810,7 @@ return {
 		}
 	},
 	shadow_spawn_0004 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -5836,7 +5836,7 @@ return {
 		}
 	},
 	shadow_spawn_0006 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -5862,7 +5862,7 @@ return {
 		}
 	},
 	shadow_spawn_0008 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -5888,7 +5888,7 @@ return {
 		}
 	},
 	shadow_spawn_0010 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -5914,7 +5914,7 @@ return {
 		}
 	},
 	shadow_spawn_0012 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -5940,7 +5940,7 @@ return {
 		}
 	},
 	shadow_spawn_0014 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -5966,7 +5966,7 @@ return {
 		}
 	},
 	shadow_spawn_0016 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -5992,7 +5992,7 @@ return {
 		}
 	},
 	shadow_spawn_0018 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6018,7 +6018,7 @@ return {
 		}
 	},
 	shadow_spawn_0019 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6044,7 +6044,7 @@ return {
 		}
 	},
 	shadow_spawn_0021 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6070,7 +6070,7 @@ return {
 		}
 	},
 	shadow_spawn_0023 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6096,7 +6096,7 @@ return {
 		}
 	},
 	shadow_spawn_0025 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6122,7 +6122,7 @@ return {
 		}
 	},
 	shadow_spawn_0027 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6148,7 +6148,7 @@ return {
 		}
 	},
 	shadow_spawn_0029 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6174,7 +6174,7 @@ return {
 		}
 	},
 	shadow_spawn_0031 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6200,7 +6200,7 @@ return {
 		}
 	},
 	shadow_spawn_0034 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6226,7 +6226,7 @@ return {
 		}
 	},
 	shadow_spawn_0035 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6252,7 +6252,7 @@ return {
 		}
 	},
 	shadow_spawn_0037 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6278,7 +6278,7 @@ return {
 		}
 	},
 	shadow_spawn_0039 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6304,7 +6304,7 @@ return {
 		}
 	},
 	shadow_spawn_0041 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6330,7 +6330,7 @@ return {
 		}
 	},
 	shadow_spawn_0043 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6356,7 +6356,7 @@ return {
 		}
 	},
 	shadow_spawn_0045 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6382,7 +6382,7 @@ return {
 		}
 	},
 	shadow_spawn_0047 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6408,7 +6408,7 @@ return {
 		}
 	},
 	shadow_spawn_0051 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6436,7 +6436,7 @@ return {
 		}
 	},
 	shadow_spawn_0053 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6462,7 +6462,7 @@ return {
 		}
 	},
 	shadow_spawn_0055 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6490,7 +6490,7 @@ return {
 		}
 	},
 	shadow_spawn_0059 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6516,7 +6516,7 @@ return {
 		}
 	},
 	shadow_spawn_0061 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6542,7 +6542,7 @@ return {
 		}
 	},
 	shadow_spawn_0063 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6566,7 +6566,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0064 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6590,7 +6590,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0065 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6616,7 +6616,7 @@ return {
 		}
 	},
 	shadow_spawn_0070 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6642,7 +6642,7 @@ return {
 		}
 	},
 	shadow_spawn_0072 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6674,7 +6674,7 @@ return {
 		}
 	},
 	shadow_spawn_0074 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6700,7 +6700,7 @@ return {
 		}
 	},
 	shadow_spawn_0082 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6726,7 +6726,7 @@ return {
 		}
 	},
 	shadow_spawn_0084 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6752,7 +6752,7 @@ return {
 		}
 	},
 	shadow_spawn_0086 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6778,7 +6778,7 @@ return {
 		}
 	},
 	shadow_spawn_0088 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6804,7 +6804,7 @@ return {
 		}
 	},
 	shadow_spawn_0090 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6830,7 +6830,7 @@ return {
 		}
 	},
 	shadow_spawn_0092 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6856,7 +6856,7 @@ return {
 		}
 	},
 	shadow_spawn_0094 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6880,7 +6880,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0095 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6904,7 +6904,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0096 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6928,7 +6928,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0097 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6952,7 +6952,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0098 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -6976,7 +6976,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0099 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7000,7 +7000,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0100 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7024,7 +7024,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0101 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7048,7 +7048,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0102 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7072,7 +7072,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0103 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7096,7 +7096,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0104 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7120,7 +7120,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0105 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7144,7 +7144,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0106 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7168,7 +7168,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0107 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7192,7 +7192,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0108 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7216,7 +7216,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0109 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7240,7 +7240,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0110 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7264,7 +7264,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0111 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7288,7 +7288,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0112 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7312,7 +7312,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0113 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7336,7 +7336,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0114 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7360,7 +7360,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0115 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7384,7 +7384,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0116 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7408,7 +7408,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0117 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7432,7 +7432,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0118 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7456,7 +7456,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0119 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7480,7 +7480,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0120 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7504,7 +7504,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0121 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7528,7 +7528,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0122 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7552,7 +7552,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0123 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7576,7 +7576,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0124 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7600,7 +7600,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0125 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7624,7 +7624,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0126 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7648,7 +7648,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0127 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7672,7 +7672,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0128 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96
@@ -7696,7 +7696,7 @@ return {
 		alias = {}
 	},
 	shadow_spawn_0129 = {
-		a_name = "go_enemies_forgotten_treasures-1.png",
+		a_name = "go_enemies_forgotten_treasures-1.dds",
 		size = {
 			90,
 			96

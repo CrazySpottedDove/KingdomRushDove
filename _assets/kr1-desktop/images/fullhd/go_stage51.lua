@@ -2,7 +2,7 @@
 
 return {
 	Stage03_0002 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			1980,
 			1080
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0002 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0003 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0005 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0006 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0008 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0009 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0011 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0012 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0014 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0015 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0016 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -410,7 +410,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0017 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -434,7 +434,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0018 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0019 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -482,7 +482,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0020 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -506,7 +506,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0021 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0022 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -554,7 +554,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0023 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -578,7 +578,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0024 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -602,7 +602,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0025 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -626,7 +626,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0026 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -650,7 +650,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0027 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -674,7 +674,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0028 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -698,7 +698,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0029 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -722,7 +722,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0030 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -746,7 +746,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0031 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -770,7 +770,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0032 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -794,7 +794,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0033 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -820,7 +820,7 @@ return {
 		}
 	},
 	stage3_barrel_0035 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -844,7 +844,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0036 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -868,7 +868,7 @@ return {
 		alias = {}
 	},
 	stage3_barrel_0037 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -894,7 +894,7 @@ return {
 		}
 	},
 	stage3_barrel_0039 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -920,7 +920,7 @@ return {
 		}
 	},
 	stage3_barrel_0041 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			62
@@ -944,7 +944,7 @@ return {
 		alias = {}
 	},
 	stage3_bridge = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			233,
 			135
@@ -968,7 +968,7 @@ return {
 		alias = {}
 	},
 	stage3_cascade_1_1_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -995,7 +995,7 @@ return {
 		}
 	},
 	stage3_cascade_1_1_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -1022,7 +1022,7 @@ return {
 		}
 	},
 	stage3_cascade_1_1_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -1049,7 +1049,7 @@ return {
 		}
 	},
 	stage3_cascade_1_1_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -1076,7 +1076,7 @@ return {
 		}
 	},
 	stage3_cascade_1_1_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -1103,7 +1103,7 @@ return {
 		}
 	},
 	stage3_cascade_1_2_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -1130,7 +1130,7 @@ return {
 		}
 	},
 	stage3_cascade_1_2_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -1157,7 +1157,7 @@ return {
 		}
 	},
 	stage3_cascade_1_2_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -1184,7 +1184,7 @@ return {
 		}
 	},
 	stage3_cascade_1_2_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -1211,7 +1211,7 @@ return {
 		}
 	},
 	stage3_cascade_1_3_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -1238,7 +1238,7 @@ return {
 		}
 	},
 	stage3_cascade_1_3_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -1265,7 +1265,7 @@ return {
 		}
 	},
 	stage3_cascade_1_3_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -1292,7 +1292,7 @@ return {
 		}
 	},
 	stage3_cascade_1_4_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -1319,7 +1319,7 @@ return {
 		}
 	},
 	stage3_cascade_1_4_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -1346,7 +1346,7 @@ return {
 		}
 	},
 	stage3_cascade_1_4_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			197,
 			197
@@ -1373,7 +1373,7 @@ return {
 		}
 	},
 	stage3_cascade_1_bottom_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			152,
 			79
@@ -1400,7 +1400,7 @@ return {
 		}
 	},
 	stage3_cascade_1_bottom_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			152,
 			79
@@ -1427,7 +1427,7 @@ return {
 		}
 	},
 	stage3_cascade_1_bottom_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			152,
 			79
@@ -1454,7 +1454,7 @@ return {
 		}
 	},
 	stage3_cascade_2_1_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1481,7 +1481,7 @@ return {
 		}
 	},
 	stage3_cascade_2_1_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1508,7 +1508,7 @@ return {
 		}
 	},
 	stage3_cascade_2_1_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1535,7 +1535,7 @@ return {
 		}
 	},
 	stage3_cascade_2_1_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1562,7 +1562,7 @@ return {
 		}
 	},
 	stage3_cascade_2_1_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1589,7 +1589,7 @@ return {
 		}
 	},
 	stage3_cascade_2_2_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1616,7 +1616,7 @@ return {
 		}
 	},
 	stage3_cascade_2_2_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1643,7 +1643,7 @@ return {
 		}
 	},
 	stage3_cascade_2_2_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1670,7 +1670,7 @@ return {
 		}
 	},
 	stage3_cascade_2_2_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1697,7 +1697,7 @@ return {
 		}
 	},
 	stage3_cascade_2_3_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1724,7 +1724,7 @@ return {
 		}
 	},
 	stage3_cascade_2_3_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1751,7 +1751,7 @@ return {
 		}
 	},
 	stage3_cascade_2_3_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1778,7 +1778,7 @@ return {
 		}
 	},
 	stage3_cascade_2_4_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1805,7 +1805,7 @@ return {
 		}
 	},
 	stage3_cascade_2_4_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1832,7 +1832,7 @@ return {
 		}
 	},
 	stage3_cascade_2_4_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			149,
 			166
@@ -1859,7 +1859,7 @@ return {
 		}
 	},
 	stage3_cascade_2_bottom_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			132,
 			68
@@ -1886,7 +1886,7 @@ return {
 		}
 	},
 	stage3_cascade_2_bottom_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			132,
 			68
@@ -1913,7 +1913,7 @@ return {
 		}
 	},
 	stage3_cascade_2_bottom_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			132,
 			68
@@ -1940,7 +1940,7 @@ return {
 		}
 	},
 	stage3_cascade_3_1_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -1967,7 +1967,7 @@ return {
 		}
 	},
 	stage3_cascade_3_1_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -1994,7 +1994,7 @@ return {
 		}
 	},
 	stage3_cascade_3_1_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2021,7 +2021,7 @@ return {
 		}
 	},
 	stage3_cascade_3_1_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2048,7 +2048,7 @@ return {
 		}
 	},
 	stage3_cascade_3_1_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2075,7 +2075,7 @@ return {
 		}
 	},
 	stage3_cascade_3_2_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2102,7 +2102,7 @@ return {
 		}
 	},
 	stage3_cascade_3_2_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2129,7 +2129,7 @@ return {
 		}
 	},
 	stage3_cascade_3_2_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2156,7 +2156,7 @@ return {
 		}
 	},
 	stage3_cascade_3_2_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2183,7 +2183,7 @@ return {
 		}
 	},
 	stage3_cascade_3_3_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2210,7 +2210,7 @@ return {
 		}
 	},
 	stage3_cascade_3_3_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2237,7 +2237,7 @@ return {
 		}
 	},
 	stage3_cascade_3_3_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2264,7 +2264,7 @@ return {
 		}
 	},
 	stage3_cascade_3_4_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2291,7 +2291,7 @@ return {
 		}
 	},
 	stage3_cascade_3_4_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2318,7 +2318,7 @@ return {
 		}
 	},
 	stage3_cascade_3_4_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2345,7 +2345,7 @@ return {
 		}
 	},
 	stage3_cascade_3_5_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2372,7 +2372,7 @@ return {
 		}
 	},
 	stage3_cascade_3_5_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2399,7 +2399,7 @@ return {
 		}
 	},
 	stage3_cascade_3_5_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2426,7 +2426,7 @@ return {
 		}
 	},
 	stage3_cascade_3_6_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2453,7 +2453,7 @@ return {
 		}
 	},
 	stage3_cascade_3_6_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2480,7 +2480,7 @@ return {
 		}
 	},
 	stage3_cascade_3_6_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			135,
 			267
@@ -2507,7 +2507,7 @@ return {
 		}
 	},
 	stage3_cascade_3_bottom_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			37
@@ -2534,7 +2534,7 @@ return {
 		}
 	},
 	stage3_cascade_3_bottom_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			37
@@ -2561,7 +2561,7 @@ return {
 		}
 	},
 	stage3_cascade_3_bottom_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			37
@@ -2588,7 +2588,7 @@ return {
 		}
 	},
 	stage3_cascade_3_bottom_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			37
@@ -2615,7 +2615,7 @@ return {
 		}
 	},
 	stage3_cascade_3_bottom_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			37
@@ -2642,7 +2642,7 @@ return {
 		}
 	},
 	stage3_cascade_3_bottom_0016 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			37
@@ -2669,7 +2669,7 @@ return {
 		}
 	},
 	stage3_cascade_3_bottom_0019 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			62,
 			37
@@ -2696,7 +2696,7 @@ return {
 		}
 	},
 	stage3_chest_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -2720,7 +2720,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0002 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -2744,7 +2744,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0003 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -2768,7 +2768,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -2792,7 +2792,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0005 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -2816,7 +2816,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0006 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -2840,7 +2840,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -2864,7 +2864,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0008 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -2888,7 +2888,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0009 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -2912,7 +2912,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -2936,7 +2936,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0011 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -2960,7 +2960,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0012 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -2984,7 +2984,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3008,7 +3008,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0014 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3032,7 +3032,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0015 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3056,7 +3056,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0016 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3080,7 +3080,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0017 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3104,7 +3104,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0018 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3128,7 +3128,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0019 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3152,7 +3152,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0020 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3176,7 +3176,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0021 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3200,7 +3200,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0022 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3224,7 +3224,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0023 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3248,7 +3248,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0024 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3272,7 +3272,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0025 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3296,7 +3296,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0026 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3320,7 +3320,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0027 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3344,7 +3344,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0028 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3368,7 +3368,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0029 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3392,7 +3392,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0030 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3416,7 +3416,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0031 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3440,7 +3440,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0032 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3467,7 +3467,7 @@ return {
 		}
 	},
 	stage3_chest_0033 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3491,7 +3491,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0034 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3515,7 +3515,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0035 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3539,7 +3539,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0036 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3563,7 +3563,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0037 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3587,7 +3587,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0038 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3611,7 +3611,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0039 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3635,7 +3635,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0040 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3659,7 +3659,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0041 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3683,7 +3683,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0042 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3707,7 +3707,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0043 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3731,7 +3731,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0044 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3755,7 +3755,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0045 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3779,7 +3779,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0046 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3803,7 +3803,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0047 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3827,7 +3827,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0048 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3851,7 +3851,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0049 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3875,7 +3875,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0050 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3899,7 +3899,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0051 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3923,7 +3923,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0052 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3947,7 +3947,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0053 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3971,7 +3971,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0056 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -3995,7 +3995,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0057 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4019,7 +4019,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0058 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4045,7 +4045,7 @@ return {
 		}
 	},
 	stage3_chest_0060 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4071,7 +4071,7 @@ return {
 		}
 	},
 	stage3_chest_0062 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4095,7 +4095,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0063 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4119,7 +4119,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0064 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4145,7 +4145,7 @@ return {
 		}
 	},
 	stage3_chest_0066 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4171,7 +4171,7 @@ return {
 		}
 	},
 	stage3_chest_0068 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4195,7 +4195,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0069 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4219,7 +4219,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0070 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4243,7 +4243,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0071 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4267,7 +4267,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0072 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4291,7 +4291,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0073 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4315,7 +4315,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0074 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4339,7 +4339,7 @@ return {
 		alias = {}
 	},
 	stage3_chest_0075 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			70,
 			96
@@ -4363,7 +4363,7 @@ return {
 		alias = {}
 	},
 	stage3_craneFx_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4390,7 +4390,7 @@ return {
 		}
 	},
 	stage3_craneFx_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4417,7 +4417,7 @@ return {
 		}
 	},
 	stage3_craneFx_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4444,7 +4444,7 @@ return {
 		}
 	},
 	stage3_craneFx_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4471,7 +4471,7 @@ return {
 		}
 	},
 	stage3_craneFx_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4498,7 +4498,7 @@ return {
 		}
 	},
 	stage3_craneFx_0016 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4525,7 +4525,7 @@ return {
 		}
 	},
 	stage3_craneFx_0019 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4552,7 +4552,7 @@ return {
 		}
 	},
 	stage3_craneFx_0022 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4579,7 +4579,7 @@ return {
 		}
 	},
 	stage3_craneFx_0025 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4606,7 +4606,7 @@ return {
 		}
 	},
 	stage3_craneFx_0028 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4633,7 +4633,7 @@ return {
 		}
 	},
 	stage3_craneFx_0031 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4660,7 +4660,7 @@ return {
 		}
 	},
 	stage3_craneFx_0034 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4687,7 +4687,7 @@ return {
 		}
 	},
 	stage3_craneFx_0037 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4714,7 +4714,7 @@ return {
 		}
 	},
 	stage3_craneFx_0040 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4741,7 +4741,7 @@ return {
 		}
 	},
 	stage3_crane_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4776,7 +4776,7 @@ return {
 		}
 	},
 	stage3_crane_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4802,7 +4802,7 @@ return {
 		}
 	},
 	stage3_crane_0006 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4828,7 +4828,7 @@ return {
 		}
 	},
 	stage3_crane_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4852,7 +4852,7 @@ return {
 		alias = {}
 	},
 	stage3_crane_0014 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4876,7 +4876,7 @@ return {
 		alias = {}
 	},
 	stage3_crane_0015 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4900,7 +4900,7 @@ return {
 		alias = {}
 	},
 	stage3_crane_0016 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4924,7 +4924,7 @@ return {
 		alias = {}
 	},
 	stage3_crane_0017 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4948,7 +4948,7 @@ return {
 		alias = {}
 	},
 	stage3_crane_0018 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4972,7 +4972,7 @@ return {
 		alias = {}
 	},
 	stage3_crane_0019 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -4996,7 +4996,7 @@ return {
 		alias = {}
 	},
 	stage3_crane_0020 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5022,7 +5022,7 @@ return {
 		}
 	},
 	stage3_crane_0022 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5048,7 +5048,7 @@ return {
 		}
 	},
 	stage3_crane_0024 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5074,7 +5074,7 @@ return {
 		}
 	},
 	stage3_crane_0026 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5100,7 +5100,7 @@ return {
 		}
 	},
 	stage3_crane_0028 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5126,7 +5126,7 @@ return {
 		}
 	},
 	stage3_crane_0030 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5152,7 +5152,7 @@ return {
 		}
 	},
 	stage3_crane_0032 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5178,7 +5178,7 @@ return {
 		}
 	},
 	stage3_crane_0034 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5204,7 +5204,7 @@ return {
 		}
 	},
 	stage3_crane_0036 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5230,7 +5230,7 @@ return {
 		}
 	},
 	stage3_crane_0038 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5256,7 +5256,7 @@ return {
 		}
 	},
 	stage3_crane_0040 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5282,7 +5282,7 @@ return {
 		}
 	},
 	stage3_crane_0042 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5308,7 +5308,7 @@ return {
 		}
 	},
 	stage3_crane_0044 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5334,7 +5334,7 @@ return {
 		}
 	},
 	stage3_crane_0046 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5360,7 +5360,7 @@ return {
 		}
 	},
 	stage3_crane_0048 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5386,7 +5386,7 @@ return {
 		}
 	},
 	stage3_crane_0050 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5412,7 +5412,7 @@ return {
 		}
 	},
 	stage3_crane_0052 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5438,7 +5438,7 @@ return {
 		}
 	},
 	stage3_crane_0054 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5464,7 +5464,7 @@ return {
 		}
 	},
 	stage3_crane_0057 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5490,7 +5490,7 @@ return {
 		}
 	},
 	stage3_crane_0059 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5516,7 +5516,7 @@ return {
 		}
 	},
 	stage3_crane_0061 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5542,7 +5542,7 @@ return {
 		}
 	},
 	stage3_crane_0063 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5568,7 +5568,7 @@ return {
 		}
 	},
 	stage3_crane_0065 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5594,7 +5594,7 @@ return {
 		}
 	},
 	stage3_crane_0067 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5620,7 +5620,7 @@ return {
 		}
 	},
 	stage3_crane_0069 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5646,7 +5646,7 @@ return {
 		}
 	},
 	stage3_crane_0071 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5672,7 +5672,7 @@ return {
 		}
 	},
 	stage3_crane_0073 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5696,7 +5696,7 @@ return {
 		alias = {}
 	},
 	stage3_crane_0074 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5720,7 +5720,7 @@ return {
 		alias = {}
 	},
 	stage3_crane_0075 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5746,7 +5746,7 @@ return {
 		}
 	},
 	stage3_crane_0077 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5772,7 +5772,7 @@ return {
 		}
 	},
 	stage3_crane_0079 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5796,7 +5796,7 @@ return {
 		alias = {}
 	},
 	stage3_crane_0080 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5820,7 +5820,7 @@ return {
 		alias = {}
 	},
 	stage3_crane_0081 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5846,7 +5846,7 @@ return {
 		}
 	},
 	stage3_crane_0083 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5872,7 +5872,7 @@ return {
 		}
 	},
 	stage3_crane_0085 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5896,7 +5896,7 @@ return {
 		alias = {}
 	},
 	stage3_crane_0086 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5922,7 +5922,7 @@ return {
 		}
 	},
 	stage3_crane_0088 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5946,7 +5946,7 @@ return {
 		alias = {}
 	},
 	stage3_crane_0089 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -5973,7 +5973,7 @@ return {
 		}
 	},
 	stage3_crane_0092 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6000,7 +6000,7 @@ return {
 		}
 	},
 	stage3_crane_0095 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6027,7 +6027,7 @@ return {
 		}
 	},
 	stage3_crane_0098 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6054,7 +6054,7 @@ return {
 		}
 	},
 	stage3_crane_0101 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6081,7 +6081,7 @@ return {
 		}
 	},
 	stage3_crane_0104 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6108,7 +6108,7 @@ return {
 		}
 	},
 	stage3_crane_0107 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6135,7 +6135,7 @@ return {
 		}
 	},
 	stage3_crane_0110 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6159,7 +6159,7 @@ return {
 		alias = {}
 	},
 	stage3_crane_0112 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6185,7 +6185,7 @@ return {
 		}
 	},
 	stage3_crane_0114 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6211,7 +6211,7 @@ return {
 		}
 	},
 	stage3_crane_0116 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6237,7 +6237,7 @@ return {
 		}
 	},
 	stage3_crane_0118 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6263,7 +6263,7 @@ return {
 		}
 	},
 	stage3_crane_0120 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6289,7 +6289,7 @@ return {
 		}
 	},
 	stage3_crane_0122 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6315,7 +6315,7 @@ return {
 		}
 	},
 	stage3_crane_0124 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6341,7 +6341,7 @@ return {
 		}
 	},
 	stage3_crane_0126 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6367,7 +6367,7 @@ return {
 		}
 	},
 	stage3_crane_0128 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			172,
 			135
@@ -6393,7 +6393,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6417,7 +6417,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0002 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6441,7 +6441,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0003 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6465,7 +6465,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6489,7 +6489,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0005 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6513,7 +6513,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0006 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6537,7 +6537,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6561,7 +6561,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0008 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6585,7 +6585,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0009 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6609,7 +6609,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6633,7 +6633,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0011 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6657,7 +6657,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0012 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6681,7 +6681,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6705,7 +6705,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0014 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6729,7 +6729,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0015 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6753,7 +6753,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0016 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6777,7 +6777,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0017 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6801,7 +6801,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0018 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6825,7 +6825,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0019 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6849,7 +6849,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0020 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6873,7 +6873,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0021 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6897,7 +6897,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0022 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6921,7 +6921,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0023 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6945,7 +6945,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0024 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6969,7 +6969,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0025 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -6993,7 +6993,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0026 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7017,7 +7017,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0027 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7041,7 +7041,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0028 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7065,7 +7065,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0029 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7089,7 +7089,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0030 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7113,7 +7113,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0031 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7137,7 +7137,7 @@ return {
 		alias = {}
 	},
 	stage3_dwarfBarrel_0032 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7163,7 +7163,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0034 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7189,7 +7189,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0036 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7215,7 +7215,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0038 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7241,7 +7241,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0040 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7267,7 +7267,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0042 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7293,7 +7293,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0044 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7319,7 +7319,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0046 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7345,7 +7345,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0048 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7371,7 +7371,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0050 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7397,7 +7397,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0052 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7423,7 +7423,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0054 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7449,7 +7449,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0056 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7475,7 +7475,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0058 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7501,7 +7501,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0060 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7527,7 +7527,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0062 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7553,7 +7553,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0064 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7579,7 +7579,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0066 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7605,7 +7605,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0068 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7631,7 +7631,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0070 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7657,7 +7657,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0072 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7683,7 +7683,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0074 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7709,7 +7709,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0076 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7735,7 +7735,7 @@ return {
 		}
 	},
 	stage3_dwarfBarrel_0078 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			113,
 			155
@@ -7761,7 +7761,7 @@ return {
 		}
 	},
 	stage3_stones_water_1_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			211,
 			253
@@ -7788,7 +7788,7 @@ return {
 		}
 	},
 	stage3_stones_water_1_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			211,
 			253
@@ -7815,7 +7815,7 @@ return {
 		}
 	},
 	stage3_stones_water_1_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			211,
 			253
@@ -7842,7 +7842,7 @@ return {
 		}
 	},
 	stage3_stones_water_1_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			211,
 			253
@@ -7869,7 +7869,7 @@ return {
 		}
 	},
 	stage3_stones_water_1_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			211,
 			253
@@ -7896,7 +7896,7 @@ return {
 		}
 	},
 	stage3_stones_water_1_0016 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			211,
 			253
@@ -7923,7 +7923,7 @@ return {
 		}
 	},
 	stage3_stones_water_1_0019 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			211,
 			253
@@ -7950,7 +7950,7 @@ return {
 		}
 	},
 	stage3_stones_water_1_0022 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			211,
 			253
@@ -7977,7 +7977,7 @@ return {
 		}
 	},
 	stage3_stones_water_1_0025 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			211,
 			253
@@ -8004,7 +8004,7 @@ return {
 		}
 	},
 	stage3_stones_water_1_0028 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			211,
 			253
@@ -8031,7 +8031,7 @@ return {
 		}
 	},
 	stage3_stones_water_1_0031 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			211,
 			253
@@ -8058,7 +8058,7 @@ return {
 		}
 	},
 	stage3_stones_water_2_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			212,
 			288
@@ -8085,7 +8085,7 @@ return {
 		}
 	},
 	stage3_stones_water_2_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			212,
 			288
@@ -8112,7 +8112,7 @@ return {
 		}
 	},
 	stage3_stones_water_2_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			212,
 			288
@@ -8139,7 +8139,7 @@ return {
 		}
 	},
 	stage3_stones_water_2_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			212,
 			288
@@ -8166,7 +8166,7 @@ return {
 		}
 	},
 	stage3_stones_water_2_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			212,
 			288
@@ -8193,7 +8193,7 @@ return {
 		}
 	},
 	stage3_stones_water_2_0016 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			212,
 			288
@@ -8220,7 +8220,7 @@ return {
 		}
 	},
 	stage3_stones_water_2_0019 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			212,
 			288
@@ -8247,7 +8247,7 @@ return {
 		}
 	},
 	stage3_stones_water_2_0022 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			212,
 			288
@@ -8274,7 +8274,7 @@ return {
 		}
 	},
 	stage3_stones_water_2_0025 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			212,
 			288
@@ -8301,7 +8301,7 @@ return {
 		}
 	},
 	stage3_stones_water_2_0028 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			212,
 			288
@@ -8328,7 +8328,7 @@ return {
 		}
 	},
 	stage3_stones_water_2_0031 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			212,
 			288
@@ -8355,7 +8355,7 @@ return {
 		}
 	},
 	stage3_submarine_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8385,7 +8385,7 @@ return {
 		}
 	},
 	stage3_submarine_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8412,7 +8412,7 @@ return {
 		}
 	},
 	stage3_submarine_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8439,7 +8439,7 @@ return {
 		}
 	},
 	stage3_submarine_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8466,7 +8466,7 @@ return {
 		}
 	},
 	stage3_submarine_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8493,7 +8493,7 @@ return {
 		}
 	},
 	stage3_submarine_0016 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8517,7 +8517,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0017 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8541,7 +8541,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0018 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8567,7 +8567,7 @@ return {
 		}
 	},
 	stage3_submarine_0020 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8593,7 +8593,7 @@ return {
 		}
 	},
 	stage3_submarine_0022 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8617,7 +8617,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0023 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8641,7 +8641,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0024 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8665,7 +8665,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0025 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8689,7 +8689,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0026 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8713,7 +8713,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0027 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8737,7 +8737,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0028 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8761,7 +8761,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0029 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8785,7 +8785,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0030 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8809,7 +8809,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0031 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8833,7 +8833,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0032 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8857,7 +8857,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0033 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8881,7 +8881,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0034 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8905,7 +8905,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0035 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8929,7 +8929,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0036 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8953,7 +8953,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0037 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -8977,7 +8977,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0038 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9001,7 +9001,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0039 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9025,7 +9025,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0040 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9049,7 +9049,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0041 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9073,7 +9073,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0042 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9097,7 +9097,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0043 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9121,7 +9121,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0044 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9145,7 +9145,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0045 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9169,7 +9169,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0046 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9193,7 +9193,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0047 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9220,7 +9220,7 @@ return {
 		}
 	},
 	stage3_submarine_0050 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9246,7 +9246,7 @@ return {
 		}
 	},
 	stage3_submarine_0052 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9270,7 +9270,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0053 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9296,7 +9296,7 @@ return {
 		}
 	},
 	stage3_submarine_0055 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9320,7 +9320,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0059 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9346,7 +9346,7 @@ return {
 		}
 	},
 	stage3_submarine_0061 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9370,7 +9370,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0062 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9394,7 +9394,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0063 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9420,7 +9420,7 @@ return {
 		}
 	},
 	stage3_submarine_0065 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9446,7 +9446,7 @@ return {
 		}
 	},
 	stage3_submarine_0067 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9470,7 +9470,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0068 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9494,7 +9494,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0069 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9520,7 +9520,7 @@ return {
 		}
 	},
 	stage3_submarine_0071 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9546,7 +9546,7 @@ return {
 		}
 	},
 	stage3_submarine_0073 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9570,7 +9570,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0074 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9594,7 +9594,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0075 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9618,7 +9618,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0076 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9642,7 +9642,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0077 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9666,7 +9666,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0078 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9690,7 +9690,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0079 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9714,7 +9714,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0080 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9738,7 +9738,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0081 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9762,7 +9762,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0082 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9786,7 +9786,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0083 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9810,7 +9810,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0084 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9834,7 +9834,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0085 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9858,7 +9858,7 @@ return {
 		alias = {}
 	},
 	stage3_submarine_0086 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			90,
 			124
@@ -9882,7 +9882,7 @@ return {
 		alias = {}
 	},
 	stage3_watter1_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			155,
 			70
@@ -9912,7 +9912,7 @@ return {
 		}
 	},
 	stage3_watter1_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			155,
 			70
@@ -9942,7 +9942,7 @@ return {
 		}
 	},
 	stage3_watter1_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			155,
 			70
@@ -9972,7 +9972,7 @@ return {
 		}
 	},
 	stage3_watter1_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			155,
 			70
@@ -10002,7 +10002,7 @@ return {
 		}
 	},
 	stage3_watter1_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			155,
 			70
@@ -10032,7 +10032,7 @@ return {
 		}
 	},
 	stage3_watter1_0016 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			155,
 			70
@@ -10062,7 +10062,7 @@ return {
 		}
 	},
 	stage3_watter1_0019 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			155,
 			70
@@ -10089,7 +10089,7 @@ return {
 		}
 	},
 	stage3_watter1_0040 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			155,
 			70
@@ -10116,7 +10116,7 @@ return {
 		}
 	},
 	stage3_watter2_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			87,
 			56
@@ -10143,7 +10143,7 @@ return {
 		}
 	},
 	stage3_watter2_0004 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			87,
 			56
@@ -10170,7 +10170,7 @@ return {
 		}
 	},
 	stage3_watter2_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			87,
 			56
@@ -10197,7 +10197,7 @@ return {
 		}
 	},
 	stage3_watter2_0010 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			87,
 			56
@@ -10224,7 +10224,7 @@ return {
 		}
 	},
 	stage3_watter2_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			87,
 			56
@@ -10251,7 +10251,7 @@ return {
 		}
 	},
 	stage3_watter2_0016 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			87,
 			56
@@ -10278,7 +10278,7 @@ return {
 		}
 	},
 	stage3_watter2_0019 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			87,
 			56
@@ -10305,7 +10305,7 @@ return {
 		}
 	},
 	stage3_watter2_0022 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			87,
 			56
@@ -10332,7 +10332,7 @@ return {
 		}
 	},
 	stage3_watter2_0025 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			87,
 			56
@@ -10359,7 +10359,7 @@ return {
 		}
 	},
 	stage3_watter2_0028 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			87,
 			56
@@ -10386,7 +10386,7 @@ return {
 		}
 	},
 	stage3_watter2_0031 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			87,
 			56
@@ -10413,7 +10413,7 @@ return {
 		}
 	},
 	stage3_wilson_0001 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10439,7 +10439,7 @@ return {
 		}
 	},
 	stage3_wilson_0003 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10465,7 +10465,7 @@ return {
 		}
 	},
 	stage3_wilson_0005 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10489,7 +10489,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0006 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10513,7 +10513,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0007 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10539,7 +10539,7 @@ return {
 		}
 	},
 	stage3_wilson_0009 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10565,7 +10565,7 @@ return {
 		}
 	},
 	stage3_wilson_0011 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10589,7 +10589,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0012 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10613,7 +10613,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0013 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10639,7 +10639,7 @@ return {
 		}
 	},
 	stage3_wilson_0015 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10665,7 +10665,7 @@ return {
 		}
 	},
 	stage3_wilson_0017 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10689,7 +10689,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0018 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10713,7 +10713,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0019 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10739,7 +10739,7 @@ return {
 		}
 	},
 	stage3_wilson_0021 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10765,7 +10765,7 @@ return {
 		}
 	},
 	stage3_wilson_0023 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10789,7 +10789,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0024 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10813,7 +10813,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0025 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10839,7 +10839,7 @@ return {
 		}
 	},
 	stage3_wilson_0027 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10865,7 +10865,7 @@ return {
 		}
 	},
 	stage3_wilson_0029 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10889,7 +10889,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0030 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10913,7 +10913,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0031 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10937,7 +10937,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0032 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10961,7 +10961,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0033 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -10985,7 +10985,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0034 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11009,7 +11009,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0035 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11033,7 +11033,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0036 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11057,7 +11057,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0037 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11081,7 +11081,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0038 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11105,7 +11105,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0039 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11129,7 +11129,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0040 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11153,7 +11153,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0041 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11177,7 +11177,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0042 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11201,7 +11201,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0043 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11225,7 +11225,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0044 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11249,7 +11249,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0045 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11273,7 +11273,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0046 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11297,7 +11297,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0047 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11321,7 +11321,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0048 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11345,7 +11345,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0049 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11369,7 +11369,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0050 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11393,7 +11393,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0051 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11417,7 +11417,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0052 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11441,7 +11441,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0053 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11465,7 +11465,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0054 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11489,7 +11489,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0055 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11513,7 +11513,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0056 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11537,7 +11537,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0057 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11561,7 +11561,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0058 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11585,7 +11585,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0059 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11609,7 +11609,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0060 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11633,7 +11633,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0061 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11659,7 +11659,7 @@ return {
 		}
 	},
 	stage3_wilson_0063 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11683,7 +11683,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0064 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11707,7 +11707,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0065 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11733,7 +11733,7 @@ return {
 		}
 	},
 	stage3_wilson_0067 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11759,7 +11759,7 @@ return {
 		}
 	},
 	stage3_wilson_0069 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11783,7 +11783,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0070 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11807,7 +11807,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0071 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11833,7 +11833,7 @@ return {
 		}
 	},
 	stage3_wilson_0073 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11859,7 +11859,7 @@ return {
 		}
 	},
 	stage3_wilson_0075 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11885,7 +11885,7 @@ return {
 		}
 	},
 	stage3_wilson_0077 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11909,7 +11909,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0078 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11933,7 +11933,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0079 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11959,7 +11959,7 @@ return {
 		}
 	},
 	stage3_wilson_0081 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -11985,7 +11985,7 @@ return {
 		}
 	},
 	stage3_wilson_0083 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -12009,7 +12009,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0084 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -12033,7 +12033,7 @@ return {
 		alias = {}
 	},
 	stage3_wilson_0085 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101
@@ -12059,7 +12059,7 @@ return {
 		}
 	},
 	stage3_wilson_0087 = {
-		a_name = "go_stage51-1.png",
+		a_name = "go_stage51-1.dds",
 		size = {
 			84,
 			101

@@ -2,7 +2,7 @@
 
 return {
 	Halloween_stg19_house1 = {
-		a_name = "go_stage45-1.png",
+		a_name = "go_stage45-1.dds",
 		size = {
 			177,
 			155
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg19_house2 = {
-		a_name = "go_stage45-1.png",
+		a_name = "go_stage45-1.dds",
 		size = {
 			104,
 			113
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg19_house3 = {
-		a_name = "go_stage45-1.png",
+		a_name = "go_stage45-1.dds",
 		size = {
 			96,
 			82
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg19_light = {
-		a_name = "go_stage45-1.png",
+		a_name = "go_stage45-1.dds",
 		size = {
 			87,
 			113

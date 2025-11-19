@@ -2,7 +2,7 @@
 
 return {
 	Halloween_stg20_bubble_0001 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0003 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0005 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0007 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0009 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0011 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0013 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0015 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0017 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -236,7 +236,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0019 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -262,7 +262,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0021 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -288,7 +288,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0023 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -314,7 +314,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0025 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -340,7 +340,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0027 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -366,7 +366,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0029 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -392,7 +392,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0031 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -418,7 +418,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0033 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -444,7 +444,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0035 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -468,7 +468,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_bubble_0036 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -494,7 +494,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0038 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -520,7 +520,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0040 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -546,7 +546,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0042 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -572,7 +572,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0044 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -598,7 +598,7 @@ return {
 		}
 	},
 	Halloween_stg20_bubble_0046 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			48,
 			28
@@ -624,7 +624,7 @@ return {
 		}
 	},
 	Halloween_stg20_grid = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			115,
 			98
@@ -648,7 +648,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_house_0001 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			208,
 			177
@@ -672,7 +672,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_house_0002 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			208,
 			177
@@ -696,7 +696,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_roots = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			96,
 			70
@@ -720,7 +720,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg20_waterSparks_0001 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			73,
 			45
@@ -750,7 +750,7 @@ return {
 		}
 	},
 	Halloween_stg20_waterSparks_0007 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			73,
 			45
@@ -787,7 +787,7 @@ return {
 		}
 	},
 	Halloween_stg20_waterSparks_0014 = {
-		a_name = "go_stage46-1.png",
+		a_name = "go_stage46-1.dds",
 		size = {
 			73,
 			45

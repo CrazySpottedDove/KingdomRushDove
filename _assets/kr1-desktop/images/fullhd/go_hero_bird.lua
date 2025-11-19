@@ -1,6 +1,6 @@
 return {
 	["gryph_bulletskill_decal_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0011"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0012"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0013"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0014"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0015"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0016"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0017"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0018"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0019"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0020"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0021"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0022"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0023"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0024"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0025"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0026"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_decal_0027"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			150,
 			144
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0011"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0012"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0013"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0014"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0015"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["gryph_bulletskill_enemyhitfx_0016"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			88,
 			93
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0011"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0012"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0013"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0014"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0015"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0016"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0017"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0018"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0019"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0020"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0021"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0022"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0023"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0024"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0025"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0026"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0027"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0028"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0029"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0030"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0031"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0032"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0033"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0034"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0035"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0036"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0037"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0038"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0039"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0040"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0041"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0042"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0043"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0044"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0045"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0046"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0047"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0048"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0049"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0050"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0051"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0052"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0053"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0054"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0055"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0056"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0057"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0058"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0059"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0060"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0061"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0062"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0063"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0064"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0065"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0066"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0067"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0068"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0069"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0070"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0071"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0072"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0073"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0074"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0075"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0076"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0077"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0078"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0079"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0080"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0081"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0082"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0083"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0084"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0085"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0086"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0087"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0088"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0089"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0090"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0091"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0092"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0093"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0094"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0095"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0096"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0097"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0098"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0099"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0100"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0101"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0102"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0103"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0104"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0105"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0106"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0107"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0108"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0109"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0110"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0111"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0112"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0113"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0114"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0115"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0116"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0117"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0118"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0119"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0120"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0121"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0122"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0123"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0124"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0125"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0126"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0127"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0128"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0129"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0130"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0131"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0132"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0133"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0134"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0135"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0136"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0137"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0138"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0139"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0140"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0141"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0142"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0143"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0144"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0145"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0146"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0147"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0148"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0149"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0150"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0151"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0152"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0153"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0154"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0155"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0156"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0157"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0158"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0159"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0160"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0161"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0162"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0163"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0164"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0165"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0166"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0167"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0168"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0169"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0170"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0171"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0172"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0173"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0174"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0175"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0176"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0177"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0178"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0179"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0180"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0181"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0182"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0183"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0184"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0185"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0186"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0187"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0188"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0189"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0190"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0191"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0192"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0193"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0194"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0195"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0196"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0197"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0198"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0199"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0200"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0201"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0202"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0203"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0204"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0205"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0206"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0207"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0208"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0209"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0210"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0211"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0212"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0213"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0214"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0215"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0216"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0217"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0218"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0219"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0220"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0221"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0222"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0223"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0224"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0225"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0226"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0227"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0228"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0229"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0230"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0231"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0232"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0233"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0234"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0235"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0236"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0237"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0238"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0239"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0240"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0241"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0242"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0243"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0244"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0245"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0246"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0247"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0248"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0249"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0250"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0251"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0252"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0253"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0254"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0255"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0256"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0257"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0258"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0259"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0260"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0261"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0262"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0263"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0264"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0265"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0266"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0267"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0268"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0269"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0270"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0271"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0272"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0273"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0274"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0275"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0276"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0277"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0278"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0279"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0280"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0281"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0282"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0283"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0284"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0285"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0286"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0287"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0288"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0289"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0290"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0291"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0292"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0293"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0294"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0295"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0296"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0297"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0298"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0299"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0300"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0301"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0302"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0303"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0304"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0305"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0306"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0307"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0308"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0309"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0310"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0311"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0312"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0313"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0314"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0315"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0316"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0317"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0318"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0319"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0320"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0321"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0322"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0323"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0324"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0325"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0326"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0327"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0328"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0329"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0330"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0331"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0332"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0333"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0334"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0335"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0336"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0337"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0338"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0339"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0340"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0341"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0342"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0343"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0344"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0345"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0346"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0347"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0348"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0349"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["gryph_character_0350"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			286,
 			355
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0011"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0012"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0013"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0014"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0015"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0016"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0017"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0018"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0019"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0020"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0021"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0022"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0023"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0024"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0025"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0026"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0027"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0028"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0029"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0030"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0031"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0032"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0033"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0034"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0035"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0036"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0037"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0038"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0039"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0040"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0041"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0042"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0043"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0044"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0045"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0046"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0047"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0048"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0049"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0050"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0051"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0052"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0053"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0054"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0055"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_0056"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			292,
 			548
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_hit_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			110,
 			110
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_hit_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			110,
 			110
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_hit_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			110,
 			110
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_hit_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			110,
 			110
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_hit_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			110,
 			110
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_hit_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			110,
 			110
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_hit_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			110,
 			110
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["gryph_child_hit_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			110,
 			110
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0011"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0012"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0013"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0014"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0015"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0016"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0017"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["gryph_deaththing_0018"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			124,
 			144
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			45,
 			45
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_decal"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			170,
 			88
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0011"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0012"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0013"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0014"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0015"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0016"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["gryph_proy_explosion_0017"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			275,
 			275
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["gryph_shadow"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			76,
 			39
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			56,
 			56
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			73,
 			76
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			73,
 			76
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			73,
 			76
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			73,
 			76
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			73,
 			76
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			73,
 			76
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			73,
 			76
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			73,
 			76
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			73,
 			76
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			73,
 			76
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_0011"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			73,
 			76
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_0012"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			73,
 			76
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_0013"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			73,
 			76
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_0014"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			73,
 			76
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0011"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0012"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0013"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0014"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0015"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0016"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_explosion_0017"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			193,
 			187
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0011"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0012"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0013"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0014"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0015"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0016"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0017"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0018"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0019"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0020"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0021"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0022"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0023"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0024"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0025"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0026"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0027"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fire_0028"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			133,
 			113
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0011"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0012"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0013"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0014"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0015"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0016"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0017"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0018"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0019"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0020"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0021"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0022"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0023"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0024"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0025"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0026"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0027"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_fireparticles_0028"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			178
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			68
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0011"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0012"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0013"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0014"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0015"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0016"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0017"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0018"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0019"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0020"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0021"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0022"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0023"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0024"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0025"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0026"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0027"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			142,
 			198
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0028"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			173
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0029"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			173
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0030"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			173
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0031"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			173
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_part_explosion_0032"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			127,
 			173
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_trail_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			107,
 			122
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_trail_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			107,
 			122
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_trail_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			107,
 			122
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_trail_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			107,
 			122
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_trail_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			107,
 			122
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_trail_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			107,
 			122
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_trail_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			107,
 			122
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_trail_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			107,
 			122
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_trail_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			107,
 			122
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_trail_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			107,
 			122
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_trail_0011"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			107,
 			122
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_trail_0012"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			107,
 			122
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillproy_trail_0013"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			107,
 			122
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			639,
 			105
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			639,
 			105
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			639,
 			105
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			639,
 			105
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			639,
 			105
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_part_trail_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			65
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_part_trail_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			65
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_part_trail_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			65
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_part_trail_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			65
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_part_trail_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			65
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_part_trail_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			65
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_part_trail_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			65
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_part_trail_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			65
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_part_trail_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			65
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_part_trail_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			65
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_part_trail_0011"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			65
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_part_trail_0012"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			65
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_part_trail_0013"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			65
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["gryph_skillshot_part_trail_0014"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			68,
 			65
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["gryph_slow_mod_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			93,
 			136
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["gryph_slow_mod_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			93,
 			136
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["gryph_slow_mod_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			93,
 			136
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["gryph_slow_mod_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			93,
 			136
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["gryph_slow_mod_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			93,
 			136
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["gryph_slow_mod_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			93,
 			136
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["gryph_slow_mod_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			93,
 			136
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["gryph_slow_mod_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			93,
 			136
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["gryph_slow_mod_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			93,
 			136
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["gryph_slow_mod_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			93,
 			136
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0001"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0002"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0003"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0004"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0005"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0006"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0007"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0008"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0009"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0010"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0011"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0012"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0013"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0014"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0015"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0016"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0017"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0018"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0019"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0020"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0021"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0022"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["gryph_stunskill_decal_0023"] = {
-		a_name = "go_hero_bird-1.png",
+		a_name = "go_hero_bird-1.dds",
 		size = {
 			417,
 			170

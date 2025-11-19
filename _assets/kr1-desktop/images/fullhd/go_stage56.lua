@@ -2,7 +2,7 @@
 
 return {
 	stage10_gretel_0001 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			25,
 			37
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	stage10_gretel_0002 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			25,
 			37
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	stage10_gretel_0003 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			25,
 			37
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	stage10_gretel_0004 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			25,
 			37
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	stage10_gretel_0005 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			25,
 			37
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	stage10_hansel_0001 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			23,
 			34
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	stage10_hansel_0002 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			23,
 			34
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	stage10_hansel_0003 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			23,
 			34
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	stage10_hansel_0004 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			23,
 			34
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	stage10_hansel_0005 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			23,
 			34
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer1_0001 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -268,7 +268,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0002 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -294,7 +294,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0004 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -320,7 +320,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0006 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -346,7 +346,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0008 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -372,7 +372,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0011 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -398,7 +398,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0013 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -424,7 +424,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0015 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -450,7 +450,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0017 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -476,7 +476,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0019 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -502,7 +502,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0021 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -528,7 +528,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0023 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -552,7 +552,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer1_0024 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -578,7 +578,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0026 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -602,7 +602,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer1_0027 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -628,7 +628,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0029 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -652,7 +652,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer1_0030 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -676,7 +676,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer1_0031 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -702,7 +702,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0033 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -726,7 +726,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer1_0034 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -752,7 +752,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0036 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -778,7 +778,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0038 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -804,7 +804,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0040 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -830,7 +830,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0042 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -856,7 +856,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0044 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -882,7 +882,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0046 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -922,7 +922,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0048 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -962,7 +962,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0050 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -1002,7 +1002,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0094 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -1176,7 +1176,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0198 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -1202,7 +1202,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0200 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -1228,7 +1228,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer1_0202 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -1252,7 +1252,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer2_0001 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2046,7 +2046,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer2_0040 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2075,7 +2075,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer2_0041 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2103,7 +2103,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer2_0042 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2131,7 +2131,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer2_0043 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2159,7 +2159,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer2_0044 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2191,7 +2191,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer2_0046 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2218,7 +2218,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer2_0047 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2245,7 +2245,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer2_0048 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2272,7 +2272,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer2_0049 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2299,7 +2299,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer2_0050 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2329,7 +2329,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer2_0052 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2359,7 +2359,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer2_0089 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2383,7 +2383,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer2_0090 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2407,7 +2407,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer2_0091 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2431,7 +2431,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer3_0040 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2461,7 +2461,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer3_0041 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2495,7 +2495,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer3_0043 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2528,7 +2528,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer3_0045 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2560,7 +2560,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer3_0047 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2592,7 +2592,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer3_0049 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2624,7 +2624,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer3_0089 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2648,7 +2648,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer3_0090 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2672,7 +2672,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer3_0091 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2696,7 +2696,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0112 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2722,7 +2722,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer4_0114 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2748,7 +2748,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer4_0116 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2786,7 +2786,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer4_0130 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2810,7 +2810,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0131 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2836,7 +2836,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer4_0133 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2862,7 +2862,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer4_0135 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2888,7 +2888,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer4_0137 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2914,7 +2914,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer4_0139 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2940,7 +2940,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer4_0141 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2964,7 +2964,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0142 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -2988,7 +2988,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0143 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3012,7 +3012,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0144 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3036,7 +3036,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0145 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3060,7 +3060,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0146 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3084,7 +3084,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0147 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3108,7 +3108,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0148 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3132,7 +3132,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0149 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3156,7 +3156,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0150 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3180,7 +3180,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0151 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3204,7 +3204,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0152 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3228,7 +3228,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0153 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3252,7 +3252,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0154 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3276,7 +3276,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0155 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3300,7 +3300,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0156 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3324,7 +3324,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0157 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3348,7 +3348,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0158 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3372,7 +3372,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0159 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3396,7 +3396,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0160 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3420,7 +3420,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0161 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3444,7 +3444,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0162 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3468,7 +3468,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0163 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3492,7 +3492,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0164 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3516,7 +3516,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0165 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3540,7 +3540,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0166 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3564,7 +3564,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0167 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3588,7 +3588,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0168 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3612,7 +3612,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0169 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3636,7 +3636,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0170 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3660,7 +3660,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0171 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3684,7 +3684,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0172 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3708,7 +3708,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0173 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3732,7 +3732,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0174 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3756,7 +3756,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0175 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3780,7 +3780,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0176 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3804,7 +3804,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0177 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3828,7 +3828,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0178 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3852,7 +3852,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer4_0179 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3876,7 +3876,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer5_0191 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3900,7 +3900,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer5_0192 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3924,7 +3924,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer5_0193 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3948,7 +3948,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer5_0194 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3972,7 +3972,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer5_0195 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -3996,7 +3996,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer5_0196 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4020,7 +4020,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer5_0197 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4044,7 +4044,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer5_0198 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4070,7 +4070,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer5_0200 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4096,7 +4096,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer5_0202 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4122,7 +4122,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer5_0204 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4148,7 +4148,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer5_0206 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4180,7 +4180,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer5_0208 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4212,7 +4212,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer5_0210 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4242,7 +4242,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer5_0212 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4272,7 +4272,7 @@ return {
 		}
 	},
 	stage10_magicBeans_layer5_0234 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4296,7 +4296,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer5_0235 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4320,7 +4320,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer5_0236 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4344,7 +4344,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer5_0237 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4368,7 +4368,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer5_0238 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4392,7 +4392,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer5_0239 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4416,7 +4416,7 @@ return {
 		alias = {}
 	},
 	stage10_magicBeans_layer5_0240 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			163,
 			183
@@ -4440,7 +4440,7 @@ return {
 		alias = {}
 	},
 	stage10_pork_0001 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4466,7 +4466,7 @@ return {
 		}
 	},
 	stage10_pork_0002 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4492,7 +4492,7 @@ return {
 		}
 	},
 	stage10_pork_0004 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4518,7 +4518,7 @@ return {
 		}
 	},
 	stage10_pork_0006 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4544,7 +4544,7 @@ return {
 		}
 	},
 	stage10_pork_0008 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4571,7 +4571,7 @@ return {
 		}
 	},
 	stage10_pork_0011 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4598,7 +4598,7 @@ return {
 		}
 	},
 	stage10_pork_0014 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4625,7 +4625,7 @@ return {
 		}
 	},
 	stage10_pork_0017 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4651,7 +4651,7 @@ return {
 		}
 	},
 	stage10_pork_0019 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4677,7 +4677,7 @@ return {
 		}
 	},
 	stage10_pork_0021 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4701,7 +4701,7 @@ return {
 		alias = {}
 	},
 	stage10_pork_0022 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4737,7 +4737,7 @@ return {
 		}
 	},
 	stage10_pork_0034 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4772,7 +4772,7 @@ return {
 		}
 	},
 	stage10_pork_0036 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4802,7 +4802,7 @@ return {
 		}
 	},
 	stage10_pork_0038 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4828,7 +4828,7 @@ return {
 		}
 	},
 	stage10_pork_0040 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4854,7 +4854,7 @@ return {
 		}
 	},
 	stage10_pork_0042 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4882,7 +4882,7 @@ return {
 		}
 	},
 	stage10_pork_0046 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4910,7 +4910,7 @@ return {
 		}
 	},
 	stage10_pork_0048 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4938,7 +4938,7 @@ return {
 		}
 	},
 	stage10_pork_0067 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4964,7 +4964,7 @@ return {
 		}
 	},
 	stage10_pork_0069 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -4991,7 +4991,7 @@ return {
 		}
 	},
 	stage10_pork_0072 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -5017,7 +5017,7 @@ return {
 		}
 	},
 	stage10_pork_0074 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -5043,7 +5043,7 @@ return {
 		}
 	},
 	stage10_pork_0076 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -5069,7 +5069,7 @@ return {
 		}
 	},
 	stage10_pork_0078 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -5095,7 +5095,7 @@ return {
 		}
 	},
 	stage10_pork_0081 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -5121,7 +5121,7 @@ return {
 		}
 	},
 	stage10_pork_0082 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -5148,7 +5148,7 @@ return {
 		}
 	},
 	stage10_pork_0085 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -5174,7 +5174,7 @@ return {
 		}
 	},
 	stage10_pork_0087 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -5200,7 +5200,7 @@ return {
 		}
 	},
 	stage10_pork_0089 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -5227,7 +5227,7 @@ return {
 		}
 	},
 	stage10_pork_0092 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			45,
 			42
@@ -5253,7 +5253,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0001 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5279,7 +5279,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0003 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5305,7 +5305,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0005 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5331,7 +5331,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0007 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5359,7 +5359,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0009 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5385,7 +5385,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0011 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5411,7 +5411,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0013 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5437,7 +5437,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0015 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5465,7 +5465,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0017 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5493,7 +5493,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0021 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5519,7 +5519,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0023 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5545,7 +5545,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0025 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5571,7 +5571,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0027 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5597,7 +5597,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0029 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5625,7 +5625,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0033 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5653,7 +5653,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0035 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5679,7 +5679,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0037 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5705,7 +5705,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0039 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5731,7 +5731,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0041 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5757,7 +5757,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0043 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5784,7 +5784,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0046 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5810,7 +5810,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0048 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5836,7 +5836,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0050 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5862,7 +5862,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0052 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5888,7 +5888,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0056 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5914,7 +5914,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0058 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5940,7 +5940,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0060 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5966,7 +5966,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0062 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -5992,7 +5992,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0064 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -6018,7 +6018,7 @@ return {
 		}
 	},
 	stage10_redRidingHood_0066 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			79,
 			37
@@ -6044,7 +6044,7 @@ return {
 		}
 	},
 	stage10_witchHouse_layer1_0001 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			211,
 			183
@@ -6068,7 +6068,7 @@ return {
 		alias = {}
 	},
 	stage10_witchHouse_layer2_0001 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			211,
 			183
@@ -6095,7 +6095,7 @@ return {
 		}
 	},
 	stage10_witchHouse_layer2_0003 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			211,
 			183
@@ -6123,7 +6123,7 @@ return {
 		}
 	},
 	stage10_witchHouse_layer2_0005 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			211,
 			183
@@ -6151,7 +6151,7 @@ return {
 		}
 	},
 	stage10_witchHouse_layer2_0007 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			211,
 			183
@@ -6179,7 +6179,7 @@ return {
 		}
 	},
 	stage10_witchHouse_layer2_0009 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			211,
 			183
@@ -6205,7 +6205,7 @@ return {
 		}
 	},
 	stage10_witchHouse_layer2_0013 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			211,
 			183
@@ -6231,7 +6231,7 @@ return {
 		}
 	},
 	stage10_witch_0001 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6257,7 +6257,7 @@ return {
 		}
 	},
 	stage10_witch_0002 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6283,7 +6283,7 @@ return {
 		}
 	},
 	stage10_witch_0004 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6309,7 +6309,7 @@ return {
 		}
 	},
 	stage10_witch_0006 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6335,7 +6335,7 @@ return {
 		}
 	},
 	stage10_witch_0008 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6361,7 +6361,7 @@ return {
 		}
 	},
 	stage10_witch_0010 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6387,7 +6387,7 @@ return {
 		}
 	},
 	stage10_witch_0012 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6413,7 +6413,7 @@ return {
 		}
 	},
 	stage10_witch_0014 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6443,7 +6443,7 @@ return {
 		}
 	},
 	stage10_witch_0017 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6473,7 +6473,7 @@ return {
 		}
 	},
 	stage10_witch_0026 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6499,7 +6499,7 @@ return {
 		}
 	},
 	stage10_witch_0028 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6525,7 +6525,7 @@ return {
 		}
 	},
 	stage10_witch_0030 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6551,7 +6551,7 @@ return {
 		}
 	},
 	stage10_witch_0032 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6577,7 +6577,7 @@ return {
 		}
 	},
 	stage10_witch_0034 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6601,7 +6601,7 @@ return {
 		alias = {}
 	},
 	stage10_witch_0035 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6625,7 +6625,7 @@ return {
 		alias = {}
 	},
 	stage10_witch_0036 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6651,7 +6651,7 @@ return {
 		}
 	},
 	stage10_witch_0038 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6677,7 +6677,7 @@ return {
 		}
 	},
 	stage10_witch_0040 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6703,7 +6703,7 @@ return {
 		}
 	},
 	stage10_witch_0042 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6729,7 +6729,7 @@ return {
 		}
 	},
 	stage10_witch_0044 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6753,7 +6753,7 @@ return {
 		alias = {}
 	},
 	stage10_witch_0045 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6777,7 +6777,7 @@ return {
 		alias = {}
 	},
 	stage10_witch_0046 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6803,7 +6803,7 @@ return {
 		}
 	},
 	stage10_witch_0048 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6829,7 +6829,7 @@ return {
 		}
 	},
 	stage10_witch_0050 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6855,7 +6855,7 @@ return {
 		}
 	},
 	stage10_witch_0052 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6881,7 +6881,7 @@ return {
 		}
 	},
 	stage10_witch_0054 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6907,7 +6907,7 @@ return {
 		}
 	},
 	stage10_witch_0056 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			70,
 			76
@@ -6933,7 +6933,7 @@ return {
 		}
 	},
 	stage10_wolf_0001 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			84,
 			76
@@ -6957,7 +6957,7 @@ return {
 		alias = {}
 	},
 	stage10_wolf_0002 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			84,
 			76
@@ -6983,7 +6983,7 @@ return {
 		}
 	},
 	stage10_wolf_0004 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			84,
 			76
@@ -7009,7 +7009,7 @@ return {
 		}
 	},
 	stage10_wolf_0006 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			84,
 			76
@@ -7044,7 +7044,7 @@ return {
 		}
 	},
 	stage10_wolf_0015 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			84,
 			76
@@ -7070,7 +7070,7 @@ return {
 		}
 	},
 	stage10_wolf_0017 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			84,
 			76
@@ -7098,7 +7098,7 @@ return {
 		}
 	},
 	stage10_wolf_0019 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			84,
 			76
@@ -7126,7 +7126,7 @@ return {
 		}
 	},
 	stage10_wolf_0023 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			84,
 			76
@@ -7152,7 +7152,7 @@ return {
 		}
 	},
 	stage10_wolf_0025 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			84,
 			76
@@ -7178,7 +7178,7 @@ return {
 		}
 	},
 	stage10_wolf_0027 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			84,
 			76
@@ -7206,7 +7206,7 @@ return {
 		}
 	},
 	stage10_wolf_0029 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			84,
 			76
@@ -7232,7 +7232,7 @@ return {
 		}
 	},
 	stage10_wolf_0031 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			84,
 			76
@@ -7259,7 +7259,7 @@ return {
 		}
 	},
 	stage10_wolf_0034 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			84,
 			76
@@ -7288,7 +7288,7 @@ return {
 		}
 	},
 	stage10_wolf_0041 = {
-		a_name = "go_stage56-1.png",
+		a_name = "go_stage56-1.dds",
 		size = {
 			84,
 			76

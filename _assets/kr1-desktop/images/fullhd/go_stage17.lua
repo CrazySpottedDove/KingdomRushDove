@@ -2,7 +2,7 @@
 
 return {
 	BossBandit_0001 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -31,7 +31,7 @@ return {
 		}
 	},
 	BossBandit_0004 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -58,7 +58,7 @@ return {
 		}
 	},
 	BossBandit_0007 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -85,7 +85,7 @@ return {
 		}
 	},
 	BossBandit_0010 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -112,7 +112,7 @@ return {
 		}
 	},
 	BossBandit_0013 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -139,7 +139,7 @@ return {
 		}
 	},
 	BossBandit_0016 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -166,7 +166,7 @@ return {
 		}
 	},
 	BossBandit_0019 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -193,7 +193,7 @@ return {
 		}
 	},
 	BossBandit_0022 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -220,7 +220,7 @@ return {
 		}
 	},
 	BossBandit_0027 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -244,7 +244,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0028 = {
-		a_name = "go_stage17-3.png",
+		a_name = "go_stage17-3.dds",
 		size = {
 			218,
 			204
@@ -268,7 +268,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0029 = {
-		a_name = "go_stage17-3.png",
+		a_name = "go_stage17-3.dds",
 		size = {
 			218,
 			204
@@ -292,7 +292,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0030 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -316,7 +316,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0031 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -340,7 +340,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0032 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -364,7 +364,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0033 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -388,7 +388,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0034 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -412,7 +412,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0035 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -436,7 +436,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0036 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -460,7 +460,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0037 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -484,7 +484,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0038 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -508,7 +508,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0039 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -532,7 +532,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0040 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -556,7 +556,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0041 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -580,7 +580,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0042 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -610,7 +610,7 @@ return {
 		}
 	},
 	BossBandit_0044 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -636,7 +636,7 @@ return {
 		}
 	},
 	BossBandit_0046 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -662,7 +662,7 @@ return {
 		}
 	},
 	BossBandit_0048 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -688,7 +688,7 @@ return {
 		}
 	},
 	BossBandit_0050 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -714,7 +714,7 @@ return {
 		}
 	},
 	BossBandit_0052 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -740,7 +740,7 @@ return {
 		}
 	},
 	BossBandit_0054 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -766,7 +766,7 @@ return {
 		}
 	},
 	BossBandit_0056 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -792,7 +792,7 @@ return {
 		}
 	},
 	BossBandit_0058 = {
-		a_name = "go_stage17-3.png",
+		a_name = "go_stage17-3.dds",
 		size = {
 			218,
 			204
@@ -816,7 +816,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0059 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -840,7 +840,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0060 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -864,7 +864,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0061 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -888,7 +888,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0062 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -912,7 +912,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0063 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -942,7 +942,7 @@ return {
 		}
 	},
 	BossBandit_0065 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -972,7 +972,7 @@ return {
 		}
 	},
 	BossBandit_0067 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -1000,7 +1000,7 @@ return {
 		}
 	},
 	BossBandit_0069 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -1028,7 +1028,7 @@ return {
 		}
 	},
 	BossBandit_0083 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -1054,7 +1054,7 @@ return {
 		}
 	},
 	BossBandit_0088 = {
-		a_name = "go_stage17-3.png",
+		a_name = "go_stage17-3.dds",
 		size = {
 			218,
 			204
@@ -1080,7 +1080,7 @@ return {
 		}
 	},
 	BossBandit_0090 = {
-		a_name = "go_stage17-3.png",
+		a_name = "go_stage17-3.dds",
 		size = {
 			218,
 			204
@@ -1106,7 +1106,7 @@ return {
 		}
 	},
 	BossBandit_0092 = {
-		a_name = "go_stage17-3.png",
+		a_name = "go_stage17-3.dds",
 		size = {
 			218,
 			204
@@ -1130,7 +1130,7 @@ return {
 		alias = {}
 	},
 	BossBandit_0093 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -1156,7 +1156,7 @@ return {
 		}
 	},
 	BossBandit_0095 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -1182,7 +1182,7 @@ return {
 		}
 	},
 	BossBandit_0097 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -1208,7 +1208,7 @@ return {
 		}
 	},
 	BossBandit_0099 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -1234,7 +1234,7 @@ return {
 		}
 	},
 	BossBandit_0101 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -1260,7 +1260,7 @@ return {
 		}
 	},
 	BossBandit_0103 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -1286,7 +1286,7 @@ return {
 		}
 	},
 	BossBandit_0105 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -1312,7 +1312,7 @@ return {
 		}
 	},
 	BossBandit_0107 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			218,
 			204
@@ -1338,7 +1338,7 @@ return {
 		}
 	},
 	BossBandit_0109 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -1364,7 +1364,7 @@ return {
 		}
 	},
 	BossBandit_0111 = {
-		a_name = "go_stage17-2.png",
+		a_name = "go_stage17-2.dds",
 		size = {
 			218,
 			204
@@ -1390,7 +1390,7 @@ return {
 		}
 	},
 	stage17_barricade_0001 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			114,
 			88
@@ -1414,7 +1414,7 @@ return {
 		alias = {}
 	},
 	stage17_barricade_0002 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			114,
 			88
@@ -1440,7 +1440,7 @@ return {
 		}
 	},
 	stage17_barricade_0004 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			114,
 			88
@@ -1466,7 +1466,7 @@ return {
 		}
 	},
 	stage17_barricade_0006 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			114,
 			88
@@ -1492,7 +1492,7 @@ return {
 		}
 	},
 	stage17_barricade_0008 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			114,
 			88
@@ -1518,7 +1518,7 @@ return {
 		}
 	},
 	stage17_barricade_0010 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			114,
 			88
@@ -1542,7 +1542,7 @@ return {
 		alias = {}
 	},
 	stage17_flag_0001 = {
-		a_name = "go_stage17-3.png",
+		a_name = "go_stage17-3.dds",
 		size = {
 			108,
 			136
@@ -1569,7 +1569,7 @@ return {
 		}
 	},
 	stage17_flag_0004 = {
-		a_name = "go_stage17-3.png",
+		a_name = "go_stage17-3.dds",
 		size = {
 			108,
 			136
@@ -1596,7 +1596,7 @@ return {
 		}
 	},
 	stage17_flag_0007 = {
-		a_name = "go_stage17-3.png",
+		a_name = "go_stage17-3.dds",
 		size = {
 			108,
 			136
@@ -1623,7 +1623,7 @@ return {
 		}
 	},
 	stage17_flag_0010 = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			108,
 			136
@@ -1650,7 +1650,7 @@ return {
 		}
 	},
 	stage17_flag_0013 = {
-		a_name = "go_stage17-3.png",
+		a_name = "go_stage17-3.dds",
 		size = {
 			108,
 			136
@@ -1677,7 +1677,7 @@ return {
 		}
 	},
 	stage17_wall_bottom_ = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			126,
 			122
@@ -1701,7 +1701,7 @@ return {
 		alias = {}
 	},
 	stage17_wall_top = {
-		a_name = "go_stage17-1.png",
+		a_name = "go_stage17-1.dds",
 		size = {
 			154,
 			110

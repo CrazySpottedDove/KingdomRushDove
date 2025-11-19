@@ -2,7 +2,7 @@
 
 return {
 	Inferno_Stg20_LavaFall_0001 = {
-		a_name = "go_stage20-1.png",
+		a_name = "go_stage20-1.dds",
 		size = {
 			100,
 			230
@@ -29,7 +29,7 @@ return {
 		}
 	},
 	Inferno_Stg20_LavaFall_0004 = {
-		a_name = "go_stage20-1.png",
+		a_name = "go_stage20-1.dds",
 		size = {
 			100,
 			230
@@ -56,7 +56,7 @@ return {
 		}
 	},
 	Inferno_Stg20_LavaFall_0007 = {
-		a_name = "go_stage20-1.png",
+		a_name = "go_stage20-1.dds",
 		size = {
 			100,
 			230
@@ -83,7 +83,7 @@ return {
 		}
 	},
 	Inferno_Stg20_LavaFall_0010 = {
-		a_name = "go_stage20-1.png",
+		a_name = "go_stage20-1.dds",
 		size = {
 			100,
 			230
@@ -110,7 +110,7 @@ return {
 		}
 	},
 	Inferno_Stg20_LavaFall_0013 = {
-		a_name = "go_stage20-1.png",
+		a_name = "go_stage20-1.dds",
 		size = {
 			100,
 			230
@@ -137,7 +137,7 @@ return {
 		}
 	},
 	Inferno_Stg20_LavaFall_0016 = {
-		a_name = "go_stage20-1.png",
+		a_name = "go_stage20-1.dds",
 		size = {
 			100,
 			230
@@ -164,7 +164,7 @@ return {
 		}
 	},
 	Inferno_Stg20_LavaFall_0019 = {
-		a_name = "go_stage20-1.png",
+		a_name = "go_stage20-1.dds",
 		size = {
 			100,
 			230

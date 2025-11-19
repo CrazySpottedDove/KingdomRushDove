@@ -1,6 +1,6 @@
 return {
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0001"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0002"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0003"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0004"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0005"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0006"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0007"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0008"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0009"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0010"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0011"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0012"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0013"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0014"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0015"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0016"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0017"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0018"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0019"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0020"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0021"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_0022"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			323,
 			292
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_explosion_decal"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			252,
 			153
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0001"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0002"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0003"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0004"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0005"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0006"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0007"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0008"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0009"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0010"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0011"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0012"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0013"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0014"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0015"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0016"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0017"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_path_fx_0018"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			133,
 			159
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0001"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0002"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0003"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0004"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0005"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0006"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0007"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0008"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0009"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0010"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0011"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0012"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0013"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0014"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0015"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0016"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0017"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0018"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0019"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_0020"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			76
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_particle_0001"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			48,
 			51
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_particle_0002"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			48,
 			51
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_particle_0003"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			48,
 			51
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_particle_0004"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			48,
 			51
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_particle_0005"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			48,
 			51
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_particle_0006"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			48,
 			51
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_particle_0007"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			48,
 			51
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_blazing_trail_projectile_particle_0008"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			48,
 			51
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_build"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			127,
 			110
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_0001"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			85,
 			93
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_0002"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			85,
 			93
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_0003"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			85,
 			93
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_0004"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			85,
 			93
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_0005"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			85,
 			93
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_0006"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			85,
 			93
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_0007"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			85,
 			93
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_0008"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			85,
 			93
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_0009"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			85,
 			93
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_0010"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			85,
 			93
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_big_0001"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			113,
 			127
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_big_0002"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			113,
 			127
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_big_0003"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			113,
 			127
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_big_0004"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			113,
 			127
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_big_0005"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			113,
 			127
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_big_0006"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			113,
 			127
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_big_0007"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			113,
 			127
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_big_0008"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			113,
 			127
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_big_0009"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			113,
 			127
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_burn_big_0010"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			113,
 			127
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0001"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0002"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0003"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0004"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0005"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0006"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0007"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0008"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0009"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0010"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0011"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0012"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0013"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0014"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0015"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0016"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0017"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0018"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0019"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0020"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0021"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0022"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0023"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0024"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0025"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0026"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0027"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0028"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0029"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0030"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0031"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0032"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0033"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0034"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0035"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0036"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0037"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0038"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0039"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0040"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_flamethrower_fx_0041"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			1050,
 			471
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0001"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0002"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0003"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0004"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0005"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0006"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0007"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0008"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0009"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0010"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0011"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0012"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0013"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0014"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0015"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0016"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0017"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0018"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0019"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0020"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0021"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0022"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0023"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0024"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0025"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0026"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0027"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0028"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0029"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0030"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0031"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0032"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0033"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0034"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0035"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0036"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0037"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0038"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0039"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0040"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0041"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0042"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0043"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0044"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0045"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0046"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0047"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0048"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0049"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0050"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0051"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0052"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0053"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0054"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0055"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0056"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0057"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0058"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0059"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0060"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0061"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0062"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0063"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0064"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0065"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0066"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0067"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0068"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0069"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0070"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0071"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0072"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0073"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0074"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0075"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0076"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0077"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0078"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0079"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0080"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0081"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0082"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0083"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0084"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0085"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0086"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0087"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0088"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0089"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0090"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0091"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0092"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0093"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0094"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0095"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0096"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0097"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0098"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0099"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0100"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0101"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0102"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0103"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0104"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0105"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0106"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0107"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0108"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0109"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0110"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0111"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0112"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0113"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0114"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0115"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0116"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0117"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0118"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0119"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0120"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0121"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0122"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0123"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0124"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0125"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0126"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0127"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0128"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0129"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0130"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0131"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0132"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0133"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0134"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0135"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0136"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0137"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0138"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0139"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0140"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0141"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0142"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0143"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0144"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0145"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0146"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0147"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0148"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0149"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0150"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0151"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0152"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0153"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0154"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0155"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0156"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0157"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0158"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0159"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0160"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0161"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0162"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0163"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0164"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0165"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0166"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0167"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0168"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0169"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0170"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0171"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0172"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0173"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0174"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0175"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0176"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0177"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0178"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0179"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0180"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0181"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0182"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0183"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0184"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0185"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0186"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0187"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0188"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0189"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0190"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0191"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0192"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0193"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0194"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0195"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0196"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0197"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0198"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0199"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0200"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0201"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0202"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0203"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0204"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0205"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0206"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0207"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0208"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0209"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0210"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0211"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0212"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0213"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0214"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0215"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0216"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0217"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0218"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0219"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0220"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0221"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0222"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0223"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0224"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0225"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0226"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0227"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0228"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0229"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_cannon_0230"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			244,
 			394
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0001"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0002"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0003"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0004"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0005"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0006"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0007"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0008"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0009"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0010"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0011"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0012"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0013"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0014"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0015"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0016"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0017"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0018"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0019"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0020"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0021"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0022"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0023"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0024"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0025"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0026"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0027"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0028"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0029"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0030"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0031"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0032"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0033"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0034"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0035"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0036"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0037"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0038"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0039"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0040"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0041"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0042"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0043"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0044"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0045"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0046"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0047"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0048"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0049"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0050"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0051"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0052"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0053"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0054"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0055"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0056"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0057"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0058"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0059"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0060"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0061"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0062"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0063"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0064"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0065"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0066"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0067"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0068"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0069"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0070"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0071"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0072"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0073"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0074"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0075"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0076"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0077"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0078"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0079"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0080"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0081"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0082"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0083"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0084"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0085"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0086"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0087"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0088"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0089"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0090"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0091"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0092"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0093"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0094"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0095"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0096"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0097"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0098"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0099"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0100"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0101"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0102"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0103"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0104"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0105"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0106"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0107"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0108"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0109"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0110"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0111"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0112"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0113"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0114"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0115"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0116"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0117"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0118"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0119"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0120"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0121"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0122"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0123"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0124"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0125"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0126"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0127"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0128"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0129"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0130"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0131"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0132"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0133"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0134"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0135"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0136"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0137"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0138"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0139"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0140"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0141"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0142"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0143"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0144"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0145"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0146"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0147"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0148"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0149"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0150"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0151"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0152"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0153"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0154"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0155"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0156"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0157"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0158"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0159"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0160"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0161"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0162"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0163"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0164"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0165"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0166"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0167"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0168"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0169"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0170"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0171"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0172"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0173"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0174"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0175"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0176"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0177"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0178"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0179"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0180"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0181"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0182"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0183"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0184"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0185"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0186"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0187"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0188"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0189"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0190"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0191"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0192"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0193"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0194"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0195"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0196"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0197"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0198"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0199"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0200"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0201"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0202"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0203"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0204"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0205"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0206"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0207"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0208"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0209"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0210"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0211"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0212"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0213"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0214"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0215"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0216"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0217"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0218"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0219"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0220"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0221"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0222"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0223"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0224"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0225"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0226"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0227"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0228"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0229"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_dude_0230"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			113
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0001"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0002"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0003"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0004"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0005"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0006"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0007"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0008"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0009"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0010"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0011"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0012"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0013"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0014"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0015"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0016"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0017"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0018"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0019"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0020"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0021"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0022"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0023"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0024"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0025"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0026"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0027"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0028"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0029"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0030"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0031"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0032"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0033"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0034"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0035"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0036"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0037"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0038"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0039"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0040"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0041"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0042"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0043"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0044"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0045"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0046"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0047"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0048"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0049"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0050"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0051"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0052"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0053"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0054"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0055"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0056"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0057"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0058"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0059"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0060"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0061"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0062"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0063"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0064"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0065"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0066"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0067"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0068"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0069"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0070"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0071"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0072"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0073"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0074"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0075"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0076"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0077"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0078"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0079"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0080"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0081"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0082"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0083"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0084"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0085"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0086"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0087"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0088"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0089"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0090"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0091"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0092"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0093"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0094"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0095"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0096"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0097"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0098"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0099"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0100"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0101"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0102"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill1_0103"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			150,
 			96
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0001"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0002"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0003"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0004"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0005"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0006"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0007"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0008"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0009"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0010"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0011"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0012"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0013"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0014"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0015"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0016"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0017"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0018"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0019"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0020"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0021"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17160,7 +17160,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0022"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17184,7 +17184,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0023"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17208,7 +17208,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0024"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17232,7 +17232,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0025"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17256,7 +17256,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0026"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17280,7 +17280,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0027"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17304,7 +17304,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0028"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17328,7 +17328,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0029"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17352,7 +17352,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0030"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17376,7 +17376,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0031"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17400,7 +17400,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0032"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17424,7 +17424,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0033"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17448,7 +17448,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0034"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17472,7 +17472,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0035"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17496,7 +17496,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0036"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17520,7 +17520,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0037"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17544,7 +17544,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0038"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17568,7 +17568,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0039"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17592,7 +17592,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0040"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17616,7 +17616,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0041"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17640,7 +17640,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0042"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17664,7 +17664,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0043"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17688,7 +17688,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0044"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17712,7 +17712,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0045"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17736,7 +17736,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0046"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17760,7 +17760,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0047"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17784,7 +17784,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0048"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17808,7 +17808,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0049"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17832,7 +17832,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0050"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17856,7 +17856,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0051"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17880,7 +17880,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0052"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17904,7 +17904,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0053"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17928,7 +17928,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0054"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17952,7 +17952,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0055"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -17976,7 +17976,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0056"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18000,7 +18000,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0057"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18024,7 +18024,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0058"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18048,7 +18048,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0059"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18072,7 +18072,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0060"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18096,7 +18096,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0061"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18120,7 +18120,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0062"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18144,7 +18144,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0063"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18168,7 +18168,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0064"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18192,7 +18192,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0065"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18216,7 +18216,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0066"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18240,7 +18240,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0067"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18264,7 +18264,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0068"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18288,7 +18288,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0069"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18312,7 +18312,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0070"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18336,7 +18336,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0071"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18360,7 +18360,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0072"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18384,7 +18384,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0073"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18408,7 +18408,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0074"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18432,7 +18432,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0075"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18456,7 +18456,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0076"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18480,7 +18480,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0077"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18504,7 +18504,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0078"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18528,7 +18528,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0079"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18552,7 +18552,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0080"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18576,7 +18576,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0081"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18600,7 +18600,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0082"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18624,7 +18624,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_skill2_0083"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			215,
 			181
@@ -18648,7 +18648,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0001"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -18672,7 +18672,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0002"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -18696,7 +18696,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0003"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -18720,7 +18720,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0004"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -18744,7 +18744,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0005"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -18768,7 +18768,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0006"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -18792,7 +18792,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0007"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -18816,7 +18816,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0008"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -18840,7 +18840,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0009"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -18864,7 +18864,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0010"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -18888,7 +18888,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0011"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -18912,7 +18912,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0012"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -18936,7 +18936,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0013"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -18960,7 +18960,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0014"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -18984,7 +18984,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0015"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19008,7 +19008,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0016"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19032,7 +19032,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0017"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19056,7 +19056,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0018"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19080,7 +19080,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0019"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19104,7 +19104,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0020"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19128,7 +19128,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0021"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19152,7 +19152,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0022"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19176,7 +19176,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0023"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19200,7 +19200,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0024"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19224,7 +19224,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0025"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19248,7 +19248,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0026"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19272,7 +19272,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0027"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19296,7 +19296,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0028"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19320,7 +19320,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0029"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19344,7 +19344,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0030"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19368,7 +19368,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0031"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19392,7 +19392,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0032"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19416,7 +19416,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0033"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19440,7 +19440,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0034"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19464,7 +19464,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0035"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19488,7 +19488,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0036"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19512,7 +19512,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0037"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19536,7 +19536,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0038"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19560,7 +19560,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0039"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19584,7 +19584,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0040"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19608,7 +19608,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0041"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19632,7 +19632,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0042"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19656,7 +19656,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0043"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19680,7 +19680,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0044"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19704,7 +19704,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0045"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19728,7 +19728,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0046"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19752,7 +19752,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0047"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19776,7 +19776,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0048"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19800,7 +19800,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0049"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19824,7 +19824,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0050"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19848,7 +19848,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0051"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19872,7 +19872,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0052"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19896,7 +19896,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0053"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19920,7 +19920,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0054"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19944,7 +19944,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0055"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19968,7 +19968,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0056"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -19992,7 +19992,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0057"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20016,7 +20016,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0058"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20040,7 +20040,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0059"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20064,7 +20064,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0060"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20088,7 +20088,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0061"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20112,7 +20112,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0062"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20136,7 +20136,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0063"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20160,7 +20160,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0064"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20184,7 +20184,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0065"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20208,7 +20208,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0066"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20232,7 +20232,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0067"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20256,7 +20256,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0068"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20280,7 +20280,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0069"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20304,7 +20304,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0070"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20328,7 +20328,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0071"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20352,7 +20352,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0072"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20376,7 +20376,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0073"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20400,7 +20400,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0074"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20424,7 +20424,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0075"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20448,7 +20448,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0076"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20472,7 +20472,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0077"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20496,7 +20496,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0078"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20520,7 +20520,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0079"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20544,7 +20544,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0080"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20568,7 +20568,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0081"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20592,7 +20592,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0082"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20616,7 +20616,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0083"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20640,7 +20640,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0084"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20664,7 +20664,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0085"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20688,7 +20688,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0086"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20712,7 +20712,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0087"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20736,7 +20736,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0088"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20760,7 +20760,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0089"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20784,7 +20784,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0090"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20808,7 +20808,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0091"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20832,7 +20832,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0092"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20856,7 +20856,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0093"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20880,7 +20880,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0094"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20904,7 +20904,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0095"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20928,7 +20928,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0096"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20952,7 +20952,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0097"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -20976,7 +20976,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0098"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21000,7 +21000,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0099"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21024,7 +21024,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0100"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21048,7 +21048,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0101"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21072,7 +21072,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0102"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21096,7 +21096,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0103"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21120,7 +21120,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0104"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21144,7 +21144,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0105"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21168,7 +21168,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0106"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21192,7 +21192,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0107"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21216,7 +21216,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0108"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21240,7 +21240,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0109"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21264,7 +21264,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0110"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21288,7 +21288,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0111"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21312,7 +21312,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0112"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21336,7 +21336,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0113"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21360,7 +21360,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0114"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21384,7 +21384,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0115"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21408,7 +21408,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0116"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21432,7 +21432,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0117"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21456,7 +21456,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0118"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21480,7 +21480,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0119"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21504,7 +21504,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0120"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21528,7 +21528,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0121"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21552,7 +21552,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0122"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21576,7 +21576,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0123"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21600,7 +21600,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0124"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21624,7 +21624,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0125"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21648,7 +21648,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0126"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21672,7 +21672,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0127"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21696,7 +21696,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0128"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21720,7 +21720,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0129"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21744,7 +21744,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0130"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21768,7 +21768,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0131"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21792,7 +21792,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0132"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21816,7 +21816,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0133"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21840,7 +21840,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0134"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21864,7 +21864,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0135"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21888,7 +21888,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0136"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21912,7 +21912,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0137"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21936,7 +21936,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0138"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21960,7 +21960,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0139"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -21984,7 +21984,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0140"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22008,7 +22008,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0141"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22032,7 +22032,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0142"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22056,7 +22056,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0143"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22080,7 +22080,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0144"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22104,7 +22104,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0145"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22128,7 +22128,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0146"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22152,7 +22152,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0147"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22176,7 +22176,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0148"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22200,7 +22200,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0149"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22224,7 +22224,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0150"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22248,7 +22248,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0151"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22272,7 +22272,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0152"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22296,7 +22296,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0153"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22320,7 +22320,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0154"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22344,7 +22344,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0155"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22368,7 +22368,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0156"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22392,7 +22392,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0157"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22416,7 +22416,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_stove_fire_fx_0158"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			147
@@ -22440,7 +22440,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_lvl4_tower"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			153,
 			144
@@ -22464,7 +22464,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_preview"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			116,
 			190
@@ -22488,7 +22488,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0001"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22512,7 +22512,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0002"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22536,7 +22536,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0003"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22560,7 +22560,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0004"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22584,7 +22584,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0005"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22608,7 +22608,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0006"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22632,7 +22632,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0007"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22656,7 +22656,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0008"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22680,7 +22680,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0009"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22704,7 +22704,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0010"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22728,7 +22728,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0011"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22752,7 +22752,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0012"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22776,7 +22776,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0013"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22800,7 +22800,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0014"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22824,7 +22824,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0015"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22848,7 +22848,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0016"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22872,7 +22872,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0017"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22896,7 +22896,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0018"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22920,7 +22920,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0019"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22944,7 +22944,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0020"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22968,7 +22968,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0021"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -22992,7 +22992,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0022"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23016,7 +23016,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0023"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23040,7 +23040,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0024"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23064,7 +23064,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0025"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23088,7 +23088,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0026"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23112,7 +23112,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0027"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23136,7 +23136,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0028"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23160,7 +23160,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0029"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23184,7 +23184,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0030"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23208,7 +23208,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0031"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23232,7 +23232,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0032"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23256,7 +23256,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0033"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23280,7 +23280,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0034"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23304,7 +23304,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0035"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23328,7 +23328,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_fx_0036"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			124,
 			769
@@ -23352,7 +23352,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_particle_0001"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			65
@@ -23376,7 +23376,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_particle_0002"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			65
@@ -23400,7 +23400,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_particle_0003"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			65
@@ -23424,7 +23424,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_particle_0004"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			65
@@ -23448,7 +23448,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_particle_0005"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			65
@@ -23472,7 +23472,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_particle_0006"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			65
@@ -23496,7 +23496,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_particle_0007"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			65
@@ -23520,7 +23520,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_particle_0008"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			65
@@ -23544,7 +23544,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_particle_0009"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			65
@@ -23568,7 +23568,7 @@ return {
 		alias = {},
 	},
 	["dwarven_flamespitter_tower_scorching_torches_particle_0010"] = {
-		a_name = "go_towers_flamespitter-1.png",
+		a_name = "go_towers_flamespitter-1.dds",
 		size = {
 			99,
 			65

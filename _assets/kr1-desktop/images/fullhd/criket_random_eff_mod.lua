@@ -1,6 +1,6 @@
 return {
 	["criket_random_eff_mod_protection_0001"] = {
-		a_name = "criket_random_eff_mod.png",
+		a_name = "criket_random_eff_mod.dds",
 		size = {
 			54,
 			45
@@ -25,7 +25,7 @@ return {
 		textureRotated = false
 	},
 	["criket_random_eff_mod_attack_0001"] = {
-		a_name = "criket_random_eff_mod.png",
+		a_name = "criket_random_eff_mod.dds",
 		size = {
 			48,
 			69
@@ -50,7 +50,7 @@ return {
 		textureRotated = false
 	},
 	["criket_random_eff_mod_faster_0001"] = {
-		a_name = "criket_random_eff_mod.png",
+		a_name = "criket_random_eff_mod.dds",
 		size = {
 			48,
 			36

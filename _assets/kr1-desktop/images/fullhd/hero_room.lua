@@ -1,6 +1,6 @@
 return {
 	["hero_room_portraits_lock"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["hero_room_portraits_name_0000"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			665,
 			596
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_0000"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_select_0000"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_select_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["hero_room_thumbs_select_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["heroroom_bg"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			920,
 			752
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["heroroom_btnDone_large_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			143,
 			71
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["heroroom_btnDone_large_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			143,
 			71
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["heroroom_buttons"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			16,
 			30
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["heroroom_descriptionBox"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			748,
 			227
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["heroroom_selectBtn_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			150,
 			72
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["heroroom_selectBtn_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			150,
 			72
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["heroroom_selectBtn_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			150,
 			72
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["heroroom_selectBtn_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			150,
 			72
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["heroroom_tooltip_coin"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			15,
 			15
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["heroroom_unlock"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			240,
 			80
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0014"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0015"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0016"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0017"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_room_thumbs_0018"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0014"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0015"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0016"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0017"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["kr2_mapButtons_portrait_hero_0018"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0014"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0015"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["kr2_portrait_notxt_0016"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0014"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0015"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0016"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_room_thumbs_0019"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0014"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0015"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0016"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["kr3_mapButtons_portrait_hero_0019"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0014"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0015"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["kr3_portrait_notxt_0016"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0014"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0015"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0016"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_room_thumbs_0017"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0014"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0015"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0016"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["kr4_mapButtons_portrait_hero_0017"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0014"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0015"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0016"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["kr4_portrait_notxt_0017"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0014"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0015"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0016"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0017"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_room_thumbs_0018"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			84,
 			84
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0014"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0015"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0016"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0017"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["kr5_mapButtons_portrait_hero_0018"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0014"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0015"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0016"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0017"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["kr5_portrait_notxt_0018"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_0000"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			226,
 			184
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["mapButtons_portrait_hero_points"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			52,
 			48
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["portrait_notxt_0001"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["portrait_notxt_0002"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["portrait_notxt_0003"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["portrait_notxt_0004"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["portrait_notxt_0005"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["portrait_notxt_0006"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["portrait_notxt_0007"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["portrait_notxt_0008"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["portrait_notxt_0009"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["portrait_notxt_0010"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["portrait_notxt_0011"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["portrait_notxt_0012"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["portrait_notxt_0013"] = {
-		a_name = "hero_room-1.png",
+		a_name = "hero_room-1.dds",
 		size = {
 			274,
 			386

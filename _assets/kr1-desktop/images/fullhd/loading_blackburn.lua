@@ -2,7 +2,7 @@
 
 return {
 	loading_blackburn = {
-		a_name = "loading_blackburn-1.png",
+		a_name = "loading_blackburn-1.dds",
 		size = {
 			1920,
 			1080
