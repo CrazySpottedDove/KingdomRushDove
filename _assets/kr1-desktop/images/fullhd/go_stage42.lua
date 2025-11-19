@@ -2,7 +2,7 @@
 
 return {
 	Stage16_0002 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			1980,
 			1080
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0001 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -62,7 +62,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0013 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -86,7 +86,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0014 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -110,7 +110,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0015 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -134,7 +134,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0016 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -158,7 +158,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0017 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -182,7 +182,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0018 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -206,7 +206,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0019 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -230,7 +230,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0020 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -254,7 +254,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0021 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -278,7 +278,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0022 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -302,7 +302,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0023 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -326,7 +326,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0024 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -350,7 +350,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0025 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -374,7 +374,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0026 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -398,7 +398,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0027 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -422,7 +422,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0028 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -446,7 +446,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0029 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -472,7 +472,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0031 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -498,7 +498,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0033 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -562,7 +562,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0073 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -588,7 +588,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0075 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -614,7 +614,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0077 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -638,7 +638,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0078 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -662,7 +662,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0079 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -686,7 +686,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0080 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -710,7 +710,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0081 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -734,7 +734,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0082 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -758,7 +758,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0083 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -782,7 +782,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0084 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -806,7 +806,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0085 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -830,7 +830,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0086 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -854,7 +854,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0087 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -878,7 +878,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0088 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -902,7 +902,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0089 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -926,7 +926,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0090 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -950,7 +950,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0091 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -974,7 +974,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0092 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -998,7 +998,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0093 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1022,7 +1022,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0094 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1046,7 +1046,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0095 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1070,7 +1070,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0096 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1094,7 +1094,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0097 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1118,7 +1118,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0098 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1142,7 +1142,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0099 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1166,7 +1166,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0100 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1190,7 +1190,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0101 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1214,7 +1214,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0102 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1238,7 +1238,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0103 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1262,7 +1262,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0104 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1286,7 +1286,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0105 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1310,7 +1310,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0106 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1334,7 +1334,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer1_0107 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1360,7 +1360,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0109 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1386,7 +1386,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0111 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1412,7 +1412,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0113 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1438,7 +1438,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0115 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1464,7 +1464,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0117 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1490,7 +1490,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0119 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1516,7 +1516,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0121 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1542,7 +1542,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0123 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1568,7 +1568,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0125 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1594,7 +1594,7 @@ return {
 		}
 	},
 	waterCannon_layer1_0127 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1620,7 +1620,7 @@ return {
 		}
 	},
 	waterCannon_layer2_0001 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1646,7 +1646,7 @@ return {
 		}
 	},
 	waterCannon_layer2_0003 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1672,7 +1672,7 @@ return {
 		}
 	},
 	waterCannon_layer2_0005 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1698,7 +1698,7 @@ return {
 		}
 	},
 	waterCannon_layer2_0007 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1724,7 +1724,7 @@ return {
 		}
 	},
 	waterCannon_layer2_0009 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1750,7 +1750,7 @@ return {
 		}
 	},
 	waterCannon_layer2_0011 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1776,7 +1776,7 @@ return {
 		}
 	},
 	waterCannon_layer2_0013 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1802,7 +1802,7 @@ return {
 		}
 	},
 	waterCannon_layer2_0015 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -1828,7 +1828,7 @@ return {
 		}
 	},
 	waterCannon_layer2_0017 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2006,7 +2006,7 @@ return {
 		}
 	},
 	waterCannon_layer3_0001 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2046,7 +2046,7 @@ return {
 		}
 	},
 	waterCannon_layer3_0005 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2087,7 +2087,7 @@ return {
 		}
 	},
 	waterCannon_layer3_0009 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2127,7 +2127,7 @@ return {
 		}
 	},
 	waterCannon_layer3_0013 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2162,7 +2162,7 @@ return {
 		}
 	},
 	waterCannon_layer3_0016 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2186,7 +2186,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer3_0017 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2210,7 +2210,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer3_0018 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2234,7 +2234,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer3_0019 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2258,7 +2258,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer3_0020 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2282,7 +2282,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer3_0021 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2306,7 +2306,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer3_0022 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2330,7 +2330,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer3_0023 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2354,7 +2354,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer3_0024 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2380,7 +2380,7 @@ return {
 		}
 	},
 	waterCannon_layer3_0026 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2404,7 +2404,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer3_0027 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2428,7 +2428,7 @@ return {
 		alias = {}
 	},
 	waterCannon_layer3_0115 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2455,7 +2455,7 @@ return {
 		}
 	},
 	waterCannon_layer3_0118 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2482,7 +2482,7 @@ return {
 		}
 	},
 	waterCannon_layer3_0121 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2509,7 +2509,7 @@ return {
 		}
 	},
 	waterCannon_layer3_0124 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2536,7 +2536,7 @@ return {
 		}
 	},
 	waterCannon_layer3_0127 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			208,
 			211
@@ -2562,7 +2562,7 @@ return {
 		}
 	},
 	waterCannon_particle_0001 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			20,
 			17
@@ -2586,7 +2586,7 @@ return {
 		alias = {}
 	},
 	waterCannon_particle_0002 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			20,
 			17
@@ -2610,7 +2610,7 @@ return {
 		alias = {}
 	},
 	waterCannon_particle_0003 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			20,
 			17
@@ -2634,7 +2634,7 @@ return {
 		alias = {}
 	},
 	waterCannon_particle_0004 = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			20,
 			17
@@ -2658,7 +2658,7 @@ return {
 		alias = {}
 	},
 	waterCannon_proy = {
-		a_name = "go_stage42-1.png",
+		a_name = "go_stage42-1.dds",
 		size = {
 			25,
 			11

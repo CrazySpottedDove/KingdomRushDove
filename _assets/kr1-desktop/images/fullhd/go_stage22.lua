@@ -2,7 +2,7 @@
 
 return {
 	mushroomBossCloud_0001 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0003 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			298,
 			142
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0005 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0007 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			298,
 			142
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0009 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0011 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0013 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0015 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0017 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -236,7 +236,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0019 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -262,7 +262,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0021 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -288,7 +288,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0023 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -314,7 +314,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0025 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	mushroomBossCloud_0026 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	mushroomBossCloud_0027 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	mushroomBossCloud_0028 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -410,7 +410,7 @@ return {
 		alias = {}
 	},
 	mushroomBossCloud_0029 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			298,
 			142
@@ -434,7 +434,7 @@ return {
 		alias = {}
 	},
 	mushroomBossCloud_0030 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	mushroomBossCloud_0031 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -482,7 +482,7 @@ return {
 		alias = {}
 	},
 	mushroomBossCloud_0032 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -506,7 +506,7 @@ return {
 		alias = {}
 	},
 	mushroomBossCloud_0033 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	mushroomBossCloud_0034 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -554,7 +554,7 @@ return {
 		alias = {}
 	},
 	mushroomBossCloud_0035 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -580,7 +580,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0037 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -606,7 +606,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0039 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -632,7 +632,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0041 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -658,7 +658,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0043 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -684,7 +684,7 @@ return {
 		}
 	},
 	mushroomBossCloud_0045 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			298,
 			142
@@ -710,7 +710,7 @@ return {
 		}
 	},
 	mushroomBoss_0001 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -734,7 +734,7 @@ return {
 		alias = {}
 	},
 	mushroomBoss_0002 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -760,7 +760,7 @@ return {
 		}
 	},
 	mushroomBoss_0004 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -786,7 +786,7 @@ return {
 		}
 	},
 	mushroomBoss_0006 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -812,7 +812,7 @@ return {
 		}
 	},
 	mushroomBoss_0008 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -838,7 +838,7 @@ return {
 		}
 	},
 	mushroomBoss_0010 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -864,7 +864,7 @@ return {
 		}
 	},
 	mushroomBoss_0012 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -890,7 +890,7 @@ return {
 		}
 	},
 	mushroomBoss_0014 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -916,7 +916,7 @@ return {
 		}
 	},
 	mushroomBoss_0016 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -942,7 +942,7 @@ return {
 		}
 	},
 	mushroomBoss_0018 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -968,7 +968,7 @@ return {
 		}
 	},
 	mushroomBoss_0020 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -994,7 +994,7 @@ return {
 		}
 	},
 	mushroomBoss_0022 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -1020,7 +1020,7 @@ return {
 		}
 	},
 	mushroomBoss_0024 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1046,7 +1046,7 @@ return {
 		}
 	},
 	mushroomBoss_0026 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -1072,7 +1072,7 @@ return {
 		}
 	},
 	mushroomBoss_0028 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -1098,7 +1098,7 @@ return {
 		}
 	},
 	mushroomBoss_0030 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1124,7 +1124,7 @@ return {
 		}
 	},
 	mushroomBoss_0032 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1150,7 +1150,7 @@ return {
 		}
 	},
 	mushroomBoss_0034 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -1176,7 +1176,7 @@ return {
 		}
 	},
 	mushroomBoss_0036 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1202,7 +1202,7 @@ return {
 		}
 	},
 	mushroomBoss_0038 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1228,7 +1228,7 @@ return {
 		}
 	},
 	mushroomBoss_0040 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1254,7 +1254,7 @@ return {
 		}
 	},
 	mushroomBoss_0042 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -1280,7 +1280,7 @@ return {
 		}
 	},
 	mushroomBoss_0044 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1306,7 +1306,7 @@ return {
 		}
 	},
 	mushroomBoss_0046 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -1332,7 +1332,7 @@ return {
 		}
 	},
 	mushroomBoss_0048 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1358,7 +1358,7 @@ return {
 		}
 	},
 	mushroomBoss_0050 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1387,7 +1387,7 @@ return {
 		}
 	},
 	mushroomBoss_0052 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1413,7 +1413,7 @@ return {
 		}
 	},
 	mushroomBoss_0054 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1439,7 +1439,7 @@ return {
 		}
 	},
 	mushroomBoss_0056 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1465,7 +1465,7 @@ return {
 		}
 	},
 	mushroomBoss_0058 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -1491,7 +1491,7 @@ return {
 		}
 	},
 	mushroomBoss_0060 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -1517,7 +1517,7 @@ return {
 		}
 	},
 	mushroomBoss_0062 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -1543,7 +1543,7 @@ return {
 		}
 	},
 	mushroomBoss_0064 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1569,7 +1569,7 @@ return {
 		}
 	},
 	mushroomBoss_0066 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1595,7 +1595,7 @@ return {
 		}
 	},
 	mushroomBoss_0068 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1621,7 +1621,7 @@ return {
 		}
 	},
 	mushroomBoss_0070 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1647,7 +1647,7 @@ return {
 		}
 	},
 	mushroomBoss_0072 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1673,7 +1673,7 @@ return {
 		}
 	},
 	mushroomBoss_0077 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1699,7 +1699,7 @@ return {
 		}
 	},
 	mushroomBoss_0079 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1725,7 +1725,7 @@ return {
 		}
 	},
 	mushroomBoss_0081 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1751,7 +1751,7 @@ return {
 		}
 	},
 	mushroomBoss_0083 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1777,7 +1777,7 @@ return {
 		}
 	},
 	mushroomBoss_0085 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1803,7 +1803,7 @@ return {
 		}
 	},
 	mushroomBoss_0087 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1829,7 +1829,7 @@ return {
 		}
 	},
 	mushroomBoss_0089 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1855,7 +1855,7 @@ return {
 		}
 	},
 	mushroomBoss_0091 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -1881,7 +1881,7 @@ return {
 		}
 	},
 	mushroomBoss_0093 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -1907,7 +1907,7 @@ return {
 		}
 	},
 	mushroomBoss_0095 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -1933,7 +1933,7 @@ return {
 		}
 	},
 	mushroomBoss_0097 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -1959,7 +1959,7 @@ return {
 		}
 	},
 	mushroomBoss_0099 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -1985,7 +1985,7 @@ return {
 		}
 	},
 	mushroomBoss_0101 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -2011,7 +2011,7 @@ return {
 		}
 	},
 	mushroomBoss_0103 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -2035,7 +2035,7 @@ return {
 		alias = {}
 	},
 	mushroomBoss_0104 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -2059,7 +2059,7 @@ return {
 		alias = {}
 	},
 	mushroomBoss_0105 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2085,7 +2085,7 @@ return {
 		}
 	},
 	mushroomBoss_0107 = {
-		a_name = "go_stage22-3.png",
+		a_name = "go_stage22-3.dds",
 		size = {
 			246,
 			198
@@ -2111,7 +2111,7 @@ return {
 		}
 	},
 	mushroomBoss_0109 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2137,7 +2137,7 @@ return {
 		}
 	},
 	mushroomBoss_0111 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2182,7 +2182,7 @@ return {
 		}
 	},
 	mushroomBoss_0132 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2208,7 +2208,7 @@ return {
 		}
 	},
 	mushroomBoss_0134 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2234,7 +2234,7 @@ return {
 		}
 	},
 	mushroomBoss_0136 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2260,7 +2260,7 @@ return {
 		}
 	},
 	mushroomBoss_0138 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2286,7 +2286,7 @@ return {
 		}
 	},
 	mushroomBoss_0140 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2310,7 +2310,7 @@ return {
 		alias = {}
 	},
 	mushroomBoss_0141 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2334,7 +2334,7 @@ return {
 		alias = {}
 	},
 	mushroomBoss_0142 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2358,7 +2358,7 @@ return {
 		alias = {}
 	},
 	mushroomBoss_0143 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2382,7 +2382,7 @@ return {
 		alias = {}
 	},
 	mushroomBoss_0144 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2406,7 +2406,7 @@ return {
 		alias = {}
 	},
 	mushroomBoss_0145 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2430,7 +2430,7 @@ return {
 		alias = {}
 	},
 	mushroomBoss_0146 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2454,7 +2454,7 @@ return {
 		alias = {}
 	},
 	mushroomBoss_0147 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2478,7 +2478,7 @@ return {
 		alias = {}
 	},
 	mushroomBoss_0148 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2502,7 +2502,7 @@ return {
 		alias = {}
 	},
 	mushroomBoss_0149 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2526,7 +2526,7 @@ return {
 		alias = {}
 	},
 	mushroomBoss_0150 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2552,7 +2552,7 @@ return {
 		}
 	},
 	mushroomBoss_0152 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2578,7 +2578,7 @@ return {
 		}
 	},
 	mushroomBoss_0154 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			246,
 			198
@@ -2604,7 +2604,7 @@ return {
 		}
 	},
 	mushroomBoss_0156 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			246,
 			198
@@ -2630,7 +2630,7 @@ return {
 		}
 	},
 	mushroomBoss_0158 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			246,
 			198
@@ -2656,7 +2656,7 @@ return {
 		}
 	},
 	mushroomBoss_0160 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			246,
 			198
@@ -2682,7 +2682,7 @@ return {
 		}
 	},
 	mushroomBoss_0162 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			246,
 			198
@@ -2708,7 +2708,7 @@ return {
 		}
 	},
 	mushroomBoss_0164 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			246,
 			198
@@ -2734,7 +2734,7 @@ return {
 		}
 	},
 	mushroomBoss_0166 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			246,
 			198
@@ -2760,7 +2760,7 @@ return {
 		}
 	},
 	mushroomBoss_0168 = {
-		a_name = "go_stage22-2.png",
+		a_name = "go_stage22-2.dds",
 		size = {
 			246,
 			198
@@ -2786,7 +2786,7 @@ return {
 		}
 	},
 	mushroomBoss_0170 = {
-		a_name = "go_stage22-1.png",
+		a_name = "go_stage22-1.dds",
 		size = {
 			246,
 			198

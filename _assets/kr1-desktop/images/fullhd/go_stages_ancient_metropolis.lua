@@ -2,7 +2,7 @@
 
 return {
 	ancientNecropolisTeleport_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0003 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0007 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0009 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0011 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0013 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0015 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0017 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -236,7 +236,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0019 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -262,7 +262,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0021 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -288,7 +288,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0023 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -314,7 +314,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0025 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -340,7 +340,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0027 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -366,7 +366,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0029 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -392,7 +392,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0031 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -418,7 +418,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0033 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -444,7 +444,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0035 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -470,7 +470,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0037 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -496,7 +496,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0039 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -522,7 +522,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_0041 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			168,
 			149
@@ -546,7 +546,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_creepFx_big_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			68,
 			68
@@ -572,7 +572,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_creepFx_big_0003 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			68,
 			68
@@ -598,7 +598,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_creepFx_big_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			68,
 			68
@@ -624,7 +624,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_creepFx_big_0007 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			68,
 			68
@@ -650,7 +650,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_creepFx_big_0009 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			68,
 			68
@@ -676,7 +676,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_creepFx_big_0011 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			68,
 			68
@@ -702,7 +702,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_creepFx_big_0013 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			68,
 			68
@@ -728,7 +728,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_creepFx_big_0015 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			68,
 			68
@@ -754,7 +754,7 @@ return {
 		}
 	},
 	ancientNecropolisTeleport_creepFx_big_0017 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			68,
 			68
@@ -778,7 +778,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_creepFx_big_0018 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			68,
 			68
@@ -802,7 +802,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_creepFx_big_0019 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			68,
 			68
@@ -826,7 +826,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_creepFx_big_0020 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			68,
 			68
@@ -850,7 +850,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -874,7 +874,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0002 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -898,7 +898,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0003 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -922,7 +922,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0004 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -946,7 +946,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -970,7 +970,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0006 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -994,7 +994,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0007 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1018,7 +1018,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0008 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1042,7 +1042,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0009 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1066,7 +1066,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0010 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1090,7 +1090,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0011 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1114,7 +1114,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0012 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1138,7 +1138,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0013 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1162,7 +1162,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0014 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1186,7 +1186,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0015 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1210,7 +1210,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0016 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1234,7 +1234,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0017 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1258,7 +1258,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0018 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1282,7 +1282,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0019 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1306,7 +1306,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0020 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1330,7 +1330,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0021 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1354,7 +1354,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0022 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1378,7 +1378,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0023 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1402,7 +1402,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0024 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1426,7 +1426,7 @@ return {
 		alias = {}
 	},
 	ancientNecropolisTeleport_decalFx_0025 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			76,
 			98
@@ -1450,7 +1450,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_groundFreeze1_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			149,
 			113
@@ -1476,7 +1476,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze1_0003 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			149,
 			113
@@ -1502,7 +1502,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze1_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			149,
 			113
@@ -1533,7 +1533,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze2_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			155,
 			113
@@ -1559,7 +1559,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze2_0003 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			155,
 			113
@@ -1585,7 +1585,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze2_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			155,
 			113
@@ -1616,7 +1616,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_base = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			253,
 			163
@@ -1640,7 +1640,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_groundFreeze_fx_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -1666,7 +1666,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0003 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -1692,7 +1692,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -1718,7 +1718,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0007 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -1744,7 +1744,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0009 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -1770,7 +1770,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0011 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -1796,7 +1796,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0013 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -1822,7 +1822,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0015 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -1848,7 +1848,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0017 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -1874,7 +1874,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0019 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -1900,7 +1900,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0021 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -1926,7 +1926,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0023 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -1952,7 +1952,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0025 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -1978,7 +1978,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0027 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2004,7 +2004,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0029 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2030,7 +2030,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0031 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2056,7 +2056,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0033 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2082,7 +2082,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0035 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2108,7 +2108,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0037 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2134,7 +2134,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0039 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2160,7 +2160,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0041 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2186,7 +2186,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0043 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2212,7 +2212,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0045 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2238,7 +2238,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0047 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2264,7 +2264,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0049 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2290,7 +2290,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0051 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2316,7 +2316,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0053 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2342,7 +2342,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0055 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2368,7 +2368,7 @@ return {
 		}
 	},
 	crystalArcane_groundFreeze_fx_0057 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			73
@@ -2394,7 +2394,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3534,7 +3534,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0187 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3560,7 +3560,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0189 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3586,7 +3586,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0191 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3612,7 +3612,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0193 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3638,7 +3638,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0195 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3664,7 +3664,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0197 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3690,7 +3690,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0199 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3716,7 +3716,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0201 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3742,7 +3742,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0203 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3768,7 +3768,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0205 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3794,7 +3794,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0207 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3820,7 +3820,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0209 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3846,7 +3846,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0211 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3872,7 +3872,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0264 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3898,7 +3898,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0266 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3924,7 +3924,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0268 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3950,7 +3950,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0270 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -3976,7 +3976,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0272 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4002,7 +4002,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0274 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4028,7 +4028,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0276 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4054,7 +4054,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0278 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4080,7 +4080,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0280 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4106,7 +4106,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0282 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4132,7 +4132,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0284 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4158,7 +4158,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0286 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4184,7 +4184,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0288 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4210,7 +4210,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0290 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4236,7 +4236,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0292 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4262,7 +4262,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0294 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4288,7 +4288,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0296 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4314,7 +4314,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0298 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4340,7 +4340,7 @@ return {
 		}
 	},
 	crystalArcane_layer10_0300 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4364,7 +4364,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer11_0262 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4390,7 +4390,7 @@ return {
 		}
 	},
 	crystalArcane_layer11_0264 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4416,7 +4416,7 @@ return {
 		}
 	},
 	crystalArcane_layer11_0266 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4473,7 +4473,7 @@ return {
 		}
 	},
 	crystalArcane_layer11_0299 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4499,7 +4499,7 @@ return {
 		}
 	},
 	crystalArcane_layer11_0301 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4525,7 +4525,7 @@ return {
 		}
 	},
 	crystalArcane_layer11_0303 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4551,7 +4551,7 @@ return {
 		}
 	},
 	crystalArcane_layer11_0305 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4577,7 +4577,7 @@ return {
 		}
 	},
 	crystalArcane_layer1_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -4920,7 +4920,7 @@ return {
 		}
 	},
 	crystalArcane_layer2_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5263,7 +5263,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5287,7 +5287,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer3_0002 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5313,7 +5313,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0004 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5339,7 +5339,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0006 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5365,7 +5365,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0008 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5393,7 +5393,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0010 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5419,7 +5419,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0012 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5445,7 +5445,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0014 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5471,7 +5471,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0016 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5497,7 +5497,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0018 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5523,7 +5523,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0020 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5549,7 +5549,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0022 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5575,7 +5575,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0024 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5601,7 +5601,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0026 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5627,7 +5627,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0028 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5653,7 +5653,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0030 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5679,7 +5679,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0032 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5705,7 +5705,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0036 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5731,7 +5731,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0038 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5757,7 +5757,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0040 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5783,7 +5783,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0042 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5809,7 +5809,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0044 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5835,7 +5835,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0046 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5861,7 +5861,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0048 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5893,7 +5893,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0056 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5919,7 +5919,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0058 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5945,7 +5945,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0060 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5971,7 +5971,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0062 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -5997,7 +5997,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0064 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6023,7 +6023,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0066 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6161,7 +6161,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0176 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6215,7 +6215,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0206 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6241,7 +6241,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0208 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6269,7 +6269,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0210 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6297,7 +6297,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0212 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6325,7 +6325,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0214 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6351,7 +6351,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0217 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6377,7 +6377,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0219 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6403,7 +6403,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0221 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6429,7 +6429,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0223 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6455,7 +6455,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0225 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6481,7 +6481,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0227 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6507,7 +6507,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0229 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6533,7 +6533,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0231 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6559,7 +6559,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0233 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6585,7 +6585,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0235 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6611,7 +6611,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0237 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6637,7 +6637,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0239 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6663,7 +6663,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0241 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6689,7 +6689,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0252 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6715,7 +6715,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0254 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6741,7 +6741,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0256 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6767,7 +6767,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0258 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6793,7 +6793,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0260 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6819,7 +6819,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0262 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6845,7 +6845,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0264 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6871,7 +6871,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0266 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6897,7 +6897,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0268 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6923,7 +6923,7 @@ return {
 		}
 	},
 	crystalArcane_layer3_0270 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -6997,7 +6997,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7021,7 +7021,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer4_0002 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7047,7 +7047,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0004 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7073,7 +7073,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0006 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7099,7 +7099,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0008 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7127,7 +7127,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0010 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7153,7 +7153,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0012 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7179,7 +7179,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0014 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7205,7 +7205,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0016 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7231,7 +7231,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0018 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7257,7 +7257,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0020 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7283,7 +7283,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0022 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7309,7 +7309,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0024 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7335,7 +7335,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0026 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7361,7 +7361,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0028 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7387,7 +7387,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0030 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7413,7 +7413,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0032 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7439,7 +7439,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0036 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7465,7 +7465,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0038 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7491,7 +7491,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0040 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7517,7 +7517,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0042 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7543,7 +7543,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0044 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7569,7 +7569,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0046 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7595,7 +7595,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0048 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7631,7 +7631,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0060 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7657,7 +7657,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0062 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7683,7 +7683,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0064 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7709,7 +7709,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0066 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7735,7 +7735,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0068 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7761,7 +7761,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0070 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7895,7 +7895,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0206 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7921,7 +7921,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0208 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7949,7 +7949,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0210 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -7977,7 +7977,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0212 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8005,7 +8005,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0214 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8031,7 +8031,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0217 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8057,7 +8057,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0219 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8083,7 +8083,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0221 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8109,7 +8109,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0223 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8135,7 +8135,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0225 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8161,7 +8161,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0227 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8187,7 +8187,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0229 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8213,7 +8213,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0231 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8239,7 +8239,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0233 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8265,7 +8265,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0235 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8291,7 +8291,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0237 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8317,7 +8317,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0239 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8343,7 +8343,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0241 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8369,7 +8369,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0252 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8395,7 +8395,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0254 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8421,7 +8421,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0256 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8447,7 +8447,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0258 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8473,7 +8473,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0260 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8499,7 +8499,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0262 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8525,7 +8525,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0264 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8551,7 +8551,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0266 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8577,7 +8577,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0268 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8603,7 +8603,7 @@ return {
 		}
 	},
 	crystalArcane_layer4_0270 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8677,7 +8677,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8701,7 +8701,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer5_0002 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8727,7 +8727,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0004 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8753,7 +8753,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0006 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8779,7 +8779,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0008 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8807,7 +8807,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0010 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8833,7 +8833,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0012 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8859,7 +8859,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0014 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8885,7 +8885,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0016 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8911,7 +8911,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0018 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8937,7 +8937,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0020 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8963,7 +8963,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0022 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -8989,7 +8989,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0024 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9015,7 +9015,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0026 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9041,7 +9041,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0028 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9067,7 +9067,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0030 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9093,7 +9093,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0032 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9119,7 +9119,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0036 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9145,7 +9145,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0038 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9171,7 +9171,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0040 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9197,7 +9197,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0042 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9223,7 +9223,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0044 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9249,7 +9249,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0046 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9275,7 +9275,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0048 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9301,7 +9301,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0050 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9327,7 +9327,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0052 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9353,7 +9353,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0054 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9379,7 +9379,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0056 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9405,7 +9405,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0058 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9431,7 +9431,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0060 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9457,7 +9457,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0062 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9599,7 +9599,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0206 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9625,7 +9625,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0208 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9651,7 +9651,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0210 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9679,7 +9679,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0212 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9707,7 +9707,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0214 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9733,7 +9733,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0217 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9759,7 +9759,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0219 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9787,7 +9787,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0221 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9813,7 +9813,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0225 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9839,7 +9839,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0227 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9865,7 +9865,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0229 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9891,7 +9891,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0231 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9917,7 +9917,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0233 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9943,7 +9943,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0235 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9969,7 +9969,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0237 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -9995,7 +9995,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0239 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10021,7 +10021,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0241 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10047,7 +10047,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0243 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10073,7 +10073,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0252 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10099,7 +10099,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0254 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10125,7 +10125,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0256 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10151,7 +10151,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0258 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10177,7 +10177,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0260 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10203,7 +10203,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0262 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10229,7 +10229,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0264 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10255,7 +10255,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0266 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10281,7 +10281,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0268 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10307,7 +10307,7 @@ return {
 		}
 	},
 	crystalArcane_layer5_0270 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10381,7 +10381,7 @@ return {
 		}
 	},
 	crystalArcane_layer6_0176 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10405,7 +10405,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0177 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10431,7 +10431,7 @@ return {
 		}
 	},
 	crystalArcane_layer6_0179 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10455,7 +10455,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0180 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10479,7 +10479,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0181 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10503,7 +10503,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0182 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10527,7 +10527,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0183 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10551,7 +10551,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0184 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10575,7 +10575,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0185 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10599,7 +10599,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0186 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10623,7 +10623,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0187 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10647,7 +10647,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0188 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10671,7 +10671,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0189 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10695,7 +10695,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0190 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10719,7 +10719,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0191 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10743,7 +10743,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0192 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10767,7 +10767,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0193 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10791,7 +10791,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0194 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10815,7 +10815,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0195 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10839,7 +10839,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0196 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10863,7 +10863,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0197 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10887,7 +10887,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0198 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10911,7 +10911,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0199 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10935,7 +10935,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0200 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10959,7 +10959,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0201 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -10983,7 +10983,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0202 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11007,7 +11007,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0203 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11031,7 +11031,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0204 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11055,7 +11055,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0205 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11079,7 +11079,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0206 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11103,7 +11103,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer6_0207 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11127,7 +11127,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer7_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11151,7 +11151,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer7_0002 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11177,7 +11177,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0004 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11203,7 +11203,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0006 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11229,7 +11229,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0008 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11257,7 +11257,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0010 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11283,7 +11283,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0012 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11309,7 +11309,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0014 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11335,7 +11335,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0016 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11361,7 +11361,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0018 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11387,7 +11387,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0020 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11413,7 +11413,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0022 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11441,7 +11441,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0024 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11467,7 +11467,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0026 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11493,7 +11493,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0028 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11519,7 +11519,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0030 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11545,7 +11545,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0032 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11571,7 +11571,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0036 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11597,7 +11597,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0038 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11623,7 +11623,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0040 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11649,7 +11649,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0042 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11675,7 +11675,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0044 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11701,7 +11701,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0046 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11727,7 +11727,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0048 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11759,7 +11759,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0058 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11785,7 +11785,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0060 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11811,7 +11811,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0062 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11837,7 +11837,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0064 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11863,7 +11863,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0066 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11889,7 +11889,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0068 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -11915,7 +11915,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0070 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12043,7 +12043,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0170 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12069,7 +12069,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0172 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12095,7 +12095,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0174 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12121,7 +12121,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0176 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12147,7 +12147,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0178 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12173,7 +12173,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0180 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12199,7 +12199,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0182 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12225,7 +12225,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0184 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12251,7 +12251,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0186 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12277,7 +12277,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0188 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12303,7 +12303,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0190 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12329,7 +12329,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0192 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12357,7 +12357,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0196 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12385,7 +12385,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0198 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12413,7 +12413,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0200 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12445,7 +12445,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0208 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12473,7 +12473,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0210 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12501,7 +12501,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0212 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12529,7 +12529,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0214 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12605,7 +12605,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0217 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12631,7 +12631,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0219 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12657,7 +12657,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0221 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12683,7 +12683,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0223 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12709,7 +12709,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0225 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12735,7 +12735,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0227 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12761,7 +12761,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0229 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12787,7 +12787,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0231 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12813,7 +12813,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0233 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12839,7 +12839,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0237 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12865,7 +12865,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0239 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12891,7 +12891,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0252 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12917,7 +12917,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0254 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12943,7 +12943,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0256 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12969,7 +12969,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0258 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -12995,7 +12995,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0260 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13021,7 +13021,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0262 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13047,7 +13047,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0264 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13073,7 +13073,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0266 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13099,7 +13099,7 @@ return {
 		}
 	},
 	crystalArcane_layer7_0268 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13125,7 +13125,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0067 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13151,7 +13151,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0069 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13177,7 +13177,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0071 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13203,7 +13203,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0073 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13229,7 +13229,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0075 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13255,7 +13255,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0077 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13281,7 +13281,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0085 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13307,7 +13307,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0087 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13333,7 +13333,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0089 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13359,7 +13359,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0091 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13385,7 +13385,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0093 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13411,7 +13411,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0095 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13437,7 +13437,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0122 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13463,7 +13463,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0124 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13489,7 +13489,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0126 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13515,7 +13515,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0128 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13541,7 +13541,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0130 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13567,7 +13567,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0132 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13593,7 +13593,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0168 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13619,7 +13619,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0170 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13645,7 +13645,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0172 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13671,7 +13671,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0174 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13697,7 +13697,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0176 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13723,7 +13723,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0178 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13749,7 +13749,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0215 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13775,7 +13775,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0217 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13801,7 +13801,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0219 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13827,7 +13827,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0221 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13853,7 +13853,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0223 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13879,7 +13879,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0225 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13905,7 +13905,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0227 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13931,7 +13931,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0229 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13957,7 +13957,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0231 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -13983,7 +13983,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0233 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14009,7 +14009,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0250 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14035,7 +14035,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0252 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14061,7 +14061,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0254 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14087,7 +14087,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0256 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14113,7 +14113,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0258 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14139,7 +14139,7 @@ return {
 		}
 	},
 	crystalArcane_layer8_0260 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14165,7 +14165,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14425,7 +14425,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0074 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14451,7 +14451,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0076 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14477,7 +14477,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0078 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14503,7 +14503,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0080 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14529,7 +14529,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0082 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14555,7 +14555,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0084 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14581,7 +14581,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0086 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14607,7 +14607,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0088 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14633,7 +14633,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0124 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14659,7 +14659,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0126 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14685,7 +14685,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0128 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14711,7 +14711,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0130 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14737,7 +14737,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0132 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14763,7 +14763,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0134 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14789,7 +14789,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0136 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14815,7 +14815,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0138 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14839,7 +14839,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer9_0139 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14863,7 +14863,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer9_0140 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14887,7 +14887,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_layer9_0141 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14913,7 +14913,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0143 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14939,7 +14939,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0145 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14965,7 +14965,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0147 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -14991,7 +14991,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0149 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15017,7 +15017,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0151 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15043,7 +15043,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0153 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15069,7 +15069,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0168 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15095,7 +15095,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0170 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15121,7 +15121,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0172 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15147,7 +15147,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0174 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15173,7 +15173,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0176 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15199,7 +15199,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0178 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15225,7 +15225,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0180 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15251,7 +15251,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0182 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15277,7 +15277,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0215 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15303,7 +15303,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0217 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15329,7 +15329,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0219 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15355,7 +15355,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0221 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15381,7 +15381,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0223 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15407,7 +15407,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0225 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15433,7 +15433,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0227 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15459,7 +15459,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0229 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15485,7 +15485,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0231 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15511,7 +15511,7 @@ return {
 		}
 	},
 	crystalArcane_layer9_0233 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			214,
 			146
@@ -15537,7 +15537,7 @@ return {
 		}
 	},
 	crystalArcane_ray_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			129,
 			37
@@ -15563,7 +15563,7 @@ return {
 		}
 	},
 	crystalArcane_ray_0003 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			129,
 			37
@@ -15589,7 +15589,7 @@ return {
 		}
 	},
 	crystalArcane_ray_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			129,
 			37
@@ -15615,7 +15615,7 @@ return {
 		}
 	},
 	crystalArcane_ray_0007 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			129,
 			37
@@ -15641,7 +15641,7 @@ return {
 		}
 	},
 	crystalArcane_ray_0009 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			129,
 			37
@@ -15667,7 +15667,7 @@ return {
 		}
 	},
 	crystalArcane_ray_0011 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			129,
 			37
@@ -15693,7 +15693,7 @@ return {
 		}
 	},
 	crystalArcane_ray_0013 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			129,
 			37
@@ -15719,7 +15719,7 @@ return {
 		}
 	},
 	crystalArcane_ray_0015 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			129,
 			37
@@ -15745,7 +15745,7 @@ return {
 		}
 	},
 	crystalArcane_ray_0017 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			129,
 			37
@@ -15771,7 +15771,7 @@ return {
 		}
 	},
 	crystalArcane_ray_0019 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			129,
 			37
@@ -15797,7 +15797,7 @@ return {
 		}
 	},
 	crystalArcane_ray_0021 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			129,
 			37
@@ -15823,7 +15823,7 @@ return {
 		}
 	},
 	crystalArcane_ray_0023 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			129,
 			37
@@ -15849,7 +15849,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_base = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			169,
 			169
@@ -15873,7 +15873,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_towerBuff_bubbles_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			28,
 			56
@@ -15899,7 +15899,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_bubbles_0003 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			28,
 			56
@@ -15925,7 +15925,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_bubbles_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			28,
 			56
@@ -15951,7 +15951,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_bubbles_0007 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			28,
 			56
@@ -15977,7 +15977,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_bubbles_0009 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			28,
 			56
@@ -16003,7 +16003,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_bubbles_0011 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			28,
 			56
@@ -16029,7 +16029,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_bubbles_0013 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			28,
 			56
@@ -16055,7 +16055,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_bubbles_0015 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			28,
 			56
@@ -16081,7 +16081,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_bubbles_0017 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			28,
 			56
@@ -16107,7 +16107,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_bubbles_0019 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			28,
 			56
@@ -16131,7 +16131,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_towerBuff_fx_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			146,
 			90
@@ -16155,7 +16155,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_towerBuff_fx_0002 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			146,
 			90
@@ -16179,7 +16179,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_towerBuff_soldiersBase_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16205,7 +16205,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBase_0003 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16231,7 +16231,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBase_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16257,7 +16257,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBase_0007 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16283,7 +16283,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBase_0009 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16309,7 +16309,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBase_0011 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16335,7 +16335,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBase_0013 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16361,7 +16361,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBase_0015 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16387,7 +16387,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBase_0017 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16413,7 +16413,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBase_0019 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16439,7 +16439,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBase_0021 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16465,7 +16465,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBase_0023 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16491,7 +16491,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBase_0025 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16517,7 +16517,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBase_0027 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16543,7 +16543,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBase_0029 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16569,7 +16569,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16595,7 +16595,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0003 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16621,7 +16621,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16647,7 +16647,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0007 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16673,7 +16673,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0009 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16699,7 +16699,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0011 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16725,7 +16725,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0013 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16751,7 +16751,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0015 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16777,7 +16777,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0017 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16803,7 +16803,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersBubbles_0019 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16827,7 +16827,7 @@ return {
 		alias = {}
 	},
 	crystalArcane_towerBuff_soldiersFx_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16853,7 +16853,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersFx_0003 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16879,7 +16879,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersFx_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16905,7 +16905,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersFx_0007 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16931,7 +16931,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersFx_0009 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16957,7 +16957,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersFx_0011 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -16983,7 +16983,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersFx_0013 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -17009,7 +17009,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersFx_0015 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -17035,7 +17035,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersFx_0017 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -17061,7 +17061,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersFx_0019 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -17087,7 +17087,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersFx_0021 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -17113,7 +17113,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersFx_0023 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -17139,7 +17139,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersFx_0025 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -17165,7 +17165,7 @@ return {
 		}
 	},
 	crystalArcane_towerBuff_soldiersFx_0027 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			56,
 			48
@@ -17191,7 +17191,7 @@ return {
 		}
 	},
 	spiderEgg_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17215,7 +17215,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0002 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17239,7 +17239,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0003 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17263,7 +17263,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0004 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17287,7 +17287,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17311,7 +17311,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0006 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17335,7 +17335,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0007 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17359,7 +17359,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0008 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17383,7 +17383,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0009 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17407,7 +17407,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0010 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17431,7 +17431,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0011 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17455,7 +17455,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0012 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17479,7 +17479,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0013 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17503,7 +17503,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0014 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17527,7 +17527,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0015 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17551,7 +17551,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0016 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17575,7 +17575,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0017 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17599,7 +17599,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0018 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17623,7 +17623,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0019 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17647,7 +17647,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0020 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17671,7 +17671,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0021 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17695,7 +17695,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0022 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17746,7 +17746,7 @@ return {
 		}
 	},
 	spiderEgg_0036 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17772,7 +17772,7 @@ return {
 		}
 	},
 	spiderEgg_0037 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17798,7 +17798,7 @@ return {
 		}
 	},
 	spiderEgg_0038 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17824,7 +17824,7 @@ return {
 		}
 	},
 	spiderEgg_0039 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17850,7 +17850,7 @@ return {
 		}
 	},
 	spiderEgg_0040 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17874,7 +17874,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0046 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17898,7 +17898,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0047 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17922,7 +17922,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0048 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17946,7 +17946,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0061 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17972,7 +17972,7 @@ return {
 		}
 	},
 	spiderEgg_0063 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -17996,7 +17996,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0064 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -18020,7 +18020,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0065 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -18044,7 +18044,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0066 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -18068,7 +18068,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0067 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -18092,7 +18092,7 @@ return {
 		alias = {}
 	},
 	spiderEgg_0068 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -18118,7 +18118,7 @@ return {
 		}
 	},
 	spiderEgg_0070 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -18144,7 +18144,7 @@ return {
 		}
 	},
 	spiderEgg_0072 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -18170,7 +18170,7 @@ return {
 		}
 	},
 	spiderEgg_0074 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -18196,7 +18196,7 @@ return {
 		}
 	},
 	spiderEgg_0076 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			70,
 			56
@@ -18231,7 +18231,7 @@ return {
 		}
 	},
 	terrain3_ducks_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			42,
 			31
@@ -18255,7 +18255,7 @@ return {
 		alias = {}
 	},
 	terrain3_ducks_0002 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			42,
 			31
@@ -18281,7 +18281,7 @@ return {
 		}
 	},
 	terrain3_ducks_0004 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			42,
 			31
@@ -18305,7 +18305,7 @@ return {
 		alias = {}
 	},
 	terrain3_ducks_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			42,
 			31
@@ -18329,7 +18329,7 @@ return {
 		alias = {}
 	},
 	terrain3_ducks_0006 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			42,
 			31
@@ -18353,7 +18353,7 @@ return {
 		alias = {}
 	},
 	terrain3_ducks_0007 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			42,
 			31
@@ -18379,7 +18379,7 @@ return {
 		}
 	},
 	terrain3_eggs_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			84,
 			48
@@ -18403,7 +18403,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0002 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			84,
 			48
@@ -18427,7 +18427,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0003 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			84,
 			48
@@ -18451,7 +18451,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0004 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			84,
 			48
@@ -18475,7 +18475,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			84,
 			48
@@ -18499,7 +18499,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0006 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			84,
 			48
@@ -18523,7 +18523,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0007 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			84,
 			48
@@ -18547,7 +18547,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0008 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			84,
 			48
@@ -18571,7 +18571,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0009 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			84,
 			48
@@ -18595,7 +18595,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0010 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			84,
 			48
@@ -18619,7 +18619,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0011 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			84,
 			48
@@ -18643,7 +18643,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0012 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			84,
 			48
@@ -18667,7 +18667,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0013 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			84,
 			48
@@ -18691,7 +18691,7 @@ return {
 		alias = {}
 	},
 	terrain3_pajarombriz_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			65,
 			42
@@ -18715,7 +18715,7 @@ return {
 		alias = {}
 	},
 	terrain3_pajarombriz_0002 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			65,
 			42
@@ -18741,7 +18741,7 @@ return {
 		}
 	},
 	terrain3_pajarombriz_0004 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			65,
 			42
@@ -18765,7 +18765,7 @@ return {
 		alias = {}
 	},
 	terrain3_pajarombriz_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			65,
 			42
@@ -18789,7 +18789,7 @@ return {
 		alias = {}
 	},
 	terrain3_pajarombriz_0006 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			65,
 			42
@@ -18813,7 +18813,7 @@ return {
 		alias = {}
 	},
 	terrain3_pajarombriz_0007 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			65,
 			42
@@ -18839,7 +18839,7 @@ return {
 		}
 	},
 	terrain3_spiders_0001 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			17,
 			14
@@ -18865,7 +18865,7 @@ return {
 		}
 	},
 	terrain3_spiders_0003 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			17,
 			14
@@ -18891,7 +18891,7 @@ return {
 		}
 	},
 	terrain3_spiders_0005 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			17,
 			14
@@ -18917,7 +18917,7 @@ return {
 		}
 	},
 	terrain3_spiders_0007 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			17,
 			14
@@ -18943,7 +18943,7 @@ return {
 		}
 	},
 	terrain3_spiders_0009 = {
-		a_name = "go_stages_ancient_metropolis-1.png",
+		a_name = "go_stages_ancient_metropolis-1.dds",
 		size = {
 			17,
 			14

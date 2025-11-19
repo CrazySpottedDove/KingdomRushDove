@@ -1,6 +1,6 @@
 return {
 	["hermit_toad_tower_bubbles2_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0015"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0016"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0017"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0018"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0019"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0020"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0021"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0022"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0023"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0024"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0025"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles2_0026"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			36,
 			48
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0015"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0016"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0017"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0018"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0019"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0020"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0021"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0022"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0023"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0024"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0025"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_0026"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			45,
 			45
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0015"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0016"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0017"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0018"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0019"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0020"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0021"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0022"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0023"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0024"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0025"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0026"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0027"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0028"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0029"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0030"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0031"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0032"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0033"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0034"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0035"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0036"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0037"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0038"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0039"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0040"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0041"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0042"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0043"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0044"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0045"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0046"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0047"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0048"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0049"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0050"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0051"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0052"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0053"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0054"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0055"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0056"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0057"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0058"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0059"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0060"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0061"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0062"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0063"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0064"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0065"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0066"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0067"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0068"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0069"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0070"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0071"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0072"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0073"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0074"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0075"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0076"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0077"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0078"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_blue_0079"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			51
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0015"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0016"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0017"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0018"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0019"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0020"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0021"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0022"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0023"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0024"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0025"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0026"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0027"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0028"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0029"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0030"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0031"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0032"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0033"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0034"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0035"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0036"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0037"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0038"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0039"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0040"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0041"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0042"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0043"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0044"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0045"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0046"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0047"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0048"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0049"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0050"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0051"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0052"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0053"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0054"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0055"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0056"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0057"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0058"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0059"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0060"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0061"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0062"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0063"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0064"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0065"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0066"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0067"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0068"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0069"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0070"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0071"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0072"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0073"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0074"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0075"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0076"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0077"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0078"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_bubbles_frog_pruple_0079"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			122,
 			65
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_construction"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			156,
 			153
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_decal2_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			284,
 			153
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_decal2_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			284,
 			153
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_decal2_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			284,
 			153
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_decal2_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			284,
 			153
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_decal2_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			284,
 			153
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_decal2_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			284,
 			153
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_decal2_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			284,
 			153
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0015"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0016"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0017"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0018"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0019"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_explosion2_0020"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			130,
 			144
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0015"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0016"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0017"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0018"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0019"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0020"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0021"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0022"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0023"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0024"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0025"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0026"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0027"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0028"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0029"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0030"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0031"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0032"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0033"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0034"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0035"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0036"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0037"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0038"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0039"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0040"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0041"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0042"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0043"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0044"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0045"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0046"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0047"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0048"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0049"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0050"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0051"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0052"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0053"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0054"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0055"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0056"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0057"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0058"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0059"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0060"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0061"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0062"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0063"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0064"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0065"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0066"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0067"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0068"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0069"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0070"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0071"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0072"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0073"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0074"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0075"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0076"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0077"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0078"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0079"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0080"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0081"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0082"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0083"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0084"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0085"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0086"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0087"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0088"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0089"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0090"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0091"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0092"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0093"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0094"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0095"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0096"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0097"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0098"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0099"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0100"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0101"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0102"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0103"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0104"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0105"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0106"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0107"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0108"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0109"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0110"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0111"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0112"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0113"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0114"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0115"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0116"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0117"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0118"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0119"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0120"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0121"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0122"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0123"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0124"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0125"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0126"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0127"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0128"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0129"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0130"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0131"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0132"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0133"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0134"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0135"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0136"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0137"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0138"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0139"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0140"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0141"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0142"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0143"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0144"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0145"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0146"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0147"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0148"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0149"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0150"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0151"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0152"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0153"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0154"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0155"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0156"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0157"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0158"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0159"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0160"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0161"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0162"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0163"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0164"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0165"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0166"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0167"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0168"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0169"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0170"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0171"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0172"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0173"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0174"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0175"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0176"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0177"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0178"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0179"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0180"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0181"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0182"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0183"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0184"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0185"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0186"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0187"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0188"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0189"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0190"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0191"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0192"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0193"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0194"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0195"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0196"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0197"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0198"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0199"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0200"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0201"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0202"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0203"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0204"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0205"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0206"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0207"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0208"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0209"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0210"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0211"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0212"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0213"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0214"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0215"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0216"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0217"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0218"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0219"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0220"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0221"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0222"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0223"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0224"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0225"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0226"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0227"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0228"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0229"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0230"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0231"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0232"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0233"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0234"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0235"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0236"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0237"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0238"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0239"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0240"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0241"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0242"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0243"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0244"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0245"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0246"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0247"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0248"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0249"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0250"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0251"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0252"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0253"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0254"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0255"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0256"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0257"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0258"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0259"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0260"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0261"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0262"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0263"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0264"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0265"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0266"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0267"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0268"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0269"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0270"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0271"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0272"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0273"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0274"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog1_0275"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			230,
 			261
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0015"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0016"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0017"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0018"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0019"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0020"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0021"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0022"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0023"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0024"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0025"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0026"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0027"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0028"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0029"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0030"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0031"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0032"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0033"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0034"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0035"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0036"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0037"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0038"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0039"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0040"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0041"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0042"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0043"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0044"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0045"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0046"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0047"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0048"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0049"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0050"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0051"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0052"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0053"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0054"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0055"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0056"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0057"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0058"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0059"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0060"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0061"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0062"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0063"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0064"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0065"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0066"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0067"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0068"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0069"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0070"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0071"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0072"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0073"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0074"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0075"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0076"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0077"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0078"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0079"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0080"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0081"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0082"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0083"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0084"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0085"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0086"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0087"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0088"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0089"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0090"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0091"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0092"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0093"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0094"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0095"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0096"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0097"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0098"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0099"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0100"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0101"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0102"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0103"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0104"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0105"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0106"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0107"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0108"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0109"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0110"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0111"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0112"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0113"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0114"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0115"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0116"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0117"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0118"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0119"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0120"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0121"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0122"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0123"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0124"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0125"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0126"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0127"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0128"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0129"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0130"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0131"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0132"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0133"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0134"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0135"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0136"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0137"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0138"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0139"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0140"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0141"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0142"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0143"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0144"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0145"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0146"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0147"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0148"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0149"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0150"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0151"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0152"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0153"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0154"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0155"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0156"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0157"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0158"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0159"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0160"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0161"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0162"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0163"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0164"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0165"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0166"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0167"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0168"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0169"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0170"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0171"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0172"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0173"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0174"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0175"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0176"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0177"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0178"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0179"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0180"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0181"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0182"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0183"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0184"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0185"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0186"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0187"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0188"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0189"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0190"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0191"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0192"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0193"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0194"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0195"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0196"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0197"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0198"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0199"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0200"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0201"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0202"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17160,7 +17160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0203"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17184,7 +17184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0204"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17208,7 +17208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0205"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17232,7 +17232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0206"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17256,7 +17256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0207"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17280,7 +17280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0208"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17304,7 +17304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0209"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17328,7 +17328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0210"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17352,7 +17352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0211"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17376,7 +17376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0212"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17400,7 +17400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0213"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17424,7 +17424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0214"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17448,7 +17448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0215"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17472,7 +17472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0216"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17496,7 +17496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0217"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17520,7 +17520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0218"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17544,7 +17544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0219"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17568,7 +17568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0220"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17592,7 +17592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0221"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17616,7 +17616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0222"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17640,7 +17640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0223"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17664,7 +17664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0224"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17688,7 +17688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0225"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17712,7 +17712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0226"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17736,7 +17736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0227"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17760,7 +17760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0228"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17784,7 +17784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0229"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17808,7 +17808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0230"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17832,7 +17832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0231"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17856,7 +17856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0232"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17880,7 +17880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0233"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17904,7 +17904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0234"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17928,7 +17928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0235"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17952,7 +17952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0236"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -17976,7 +17976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0237"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18000,7 +18000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0238"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18024,7 +18024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0239"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18048,7 +18048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0240"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18072,7 +18072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0241"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18096,7 +18096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0242"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18120,7 +18120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0243"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18144,7 +18144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0244"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18168,7 +18168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0245"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18192,7 +18192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0246"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18216,7 +18216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0247"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18240,7 +18240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0248"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18264,7 +18264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0249"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18288,7 +18288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0250"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18312,7 +18312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0251"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18336,7 +18336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0252"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18360,7 +18360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0253"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18384,7 +18384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0254"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18408,7 +18408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0255"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18432,7 +18432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0256"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18456,7 +18456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0257"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18480,7 +18480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0258"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18504,7 +18504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0259"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18528,7 +18528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0260"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18552,7 +18552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0261"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18576,7 +18576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0262"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18600,7 +18600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0263"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18624,7 +18624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0264"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18648,7 +18648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0265"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18672,7 +18672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0266"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18696,7 +18696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0267"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18720,7 +18720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0268"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18744,7 +18744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0269"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18768,7 +18768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0270"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18792,7 +18792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0271"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18816,7 +18816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0272"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18840,7 +18840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0273"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18864,7 +18864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0274"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18888,7 +18888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog2_0275"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			258,
 			269
@@ -18912,7 +18912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -18936,7 +18936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -18960,7 +18960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -18984,7 +18984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19008,7 +19008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19032,7 +19032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19056,7 +19056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19080,7 +19080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19104,7 +19104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19128,7 +19128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19152,7 +19152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19176,7 +19176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19200,7 +19200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19224,7 +19224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19248,7 +19248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0015"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19272,7 +19272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0016"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19296,7 +19296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0017"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19320,7 +19320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0018"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19344,7 +19344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0019"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19368,7 +19368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0020"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19392,7 +19392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0021"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19416,7 +19416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0022"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19440,7 +19440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0023"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19464,7 +19464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0024"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19488,7 +19488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0025"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19512,7 +19512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0026"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19536,7 +19536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0027"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19560,7 +19560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0028"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19584,7 +19584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0029"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19608,7 +19608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0030"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19632,7 +19632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0031"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19656,7 +19656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0032"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19680,7 +19680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0033"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19704,7 +19704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0034"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19728,7 +19728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0035"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19752,7 +19752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0036"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19776,7 +19776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0037"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19800,7 +19800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0038"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19824,7 +19824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0039"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19848,7 +19848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0040"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19872,7 +19872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0041"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19896,7 +19896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0042"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19920,7 +19920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0043"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19944,7 +19944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0044"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19968,7 +19968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0045"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -19992,7 +19992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0046"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20016,7 +20016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0047"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20040,7 +20040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0048"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20064,7 +20064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0049"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20088,7 +20088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0050"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20112,7 +20112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0051"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20136,7 +20136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0052"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20160,7 +20160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0053"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20184,7 +20184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0054"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20208,7 +20208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0055"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20232,7 +20232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0056"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20256,7 +20256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0057"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20280,7 +20280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0058"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20304,7 +20304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0059"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20328,7 +20328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0060"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20352,7 +20352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0061"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20376,7 +20376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0062"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20400,7 +20400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0063"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20424,7 +20424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0064"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20448,7 +20448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0065"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20472,7 +20472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0066"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20496,7 +20496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0067"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20520,7 +20520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0068"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20544,7 +20544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0069"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20568,7 +20568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0070"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20592,7 +20592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0071"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20616,7 +20616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0072"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20640,7 +20640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0073"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20664,7 +20664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0074"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20688,7 +20688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0075"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20712,7 +20712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0076"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20736,7 +20736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0077"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20760,7 +20760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0078"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20784,7 +20784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0079"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20808,7 +20808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0080"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20832,7 +20832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0081"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20856,7 +20856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0082"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20880,7 +20880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0083"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20904,7 +20904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0084"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20928,7 +20928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0085"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20952,7 +20952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0086"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -20976,7 +20976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0087"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21000,7 +21000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0088"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21024,7 +21024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0089"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21048,7 +21048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0090"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21072,7 +21072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0091"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21096,7 +21096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0092"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21120,7 +21120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0093"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21144,7 +21144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0094"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21168,7 +21168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0095"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21192,7 +21192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0096"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21216,7 +21216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0097"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21240,7 +21240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0098"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21264,7 +21264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0099"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21288,7 +21288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0100"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21312,7 +21312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0101"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21336,7 +21336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0102"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21360,7 +21360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0103"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21384,7 +21384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0104"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21408,7 +21408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0105"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21432,7 +21432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0106"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21456,7 +21456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0107"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21480,7 +21480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0108"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21504,7 +21504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0109"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21528,7 +21528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0110"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21552,7 +21552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0111"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21576,7 +21576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0112"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21600,7 +21600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0113"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21624,7 +21624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0114"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21648,7 +21648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0115"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21672,7 +21672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0116"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21696,7 +21696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0117"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21720,7 +21720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0118"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21744,7 +21744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0119"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21768,7 +21768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0120"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21792,7 +21792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0121"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21816,7 +21816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0122"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21840,7 +21840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0123"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21864,7 +21864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0124"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21888,7 +21888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0125"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21912,7 +21912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0126"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21936,7 +21936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0127"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21960,7 +21960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0128"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -21984,7 +21984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0129"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22008,7 +22008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0130"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22032,7 +22032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0131"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22056,7 +22056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0132"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22080,7 +22080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0133"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22104,7 +22104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0134"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22128,7 +22128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0135"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22152,7 +22152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0136"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22176,7 +22176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0137"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22200,7 +22200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0138"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22224,7 +22224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0139"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22248,7 +22248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0140"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22272,7 +22272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0141"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22296,7 +22296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0142"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22320,7 +22320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0143"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22344,7 +22344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0144"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22368,7 +22368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0145"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22392,7 +22392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0146"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22416,7 +22416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0147"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22440,7 +22440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0148"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22464,7 +22464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0149"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22488,7 +22488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0150"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22512,7 +22512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0151"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22536,7 +22536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0152"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22560,7 +22560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0153"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22584,7 +22584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0154"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22608,7 +22608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0155"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22632,7 +22632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0156"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22656,7 +22656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0157"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22680,7 +22680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0158"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22704,7 +22704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0159"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22728,7 +22728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0160"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22752,7 +22752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0161"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22776,7 +22776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0162"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22800,7 +22800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0163"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22824,7 +22824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0164"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22848,7 +22848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0165"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22872,7 +22872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0166"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22896,7 +22896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0167"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22920,7 +22920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0168"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22944,7 +22944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0169"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22968,7 +22968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0170"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -22992,7 +22992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0171"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23016,7 +23016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0172"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23040,7 +23040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0173"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23064,7 +23064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0174"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23088,7 +23088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0175"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23112,7 +23112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0176"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23136,7 +23136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0177"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23160,7 +23160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0178"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23184,7 +23184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0179"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23208,7 +23208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0180"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23232,7 +23232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0181"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23256,7 +23256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0182"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23280,7 +23280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0183"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23304,7 +23304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0184"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23328,7 +23328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0185"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23352,7 +23352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0186"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23376,7 +23376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0187"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23400,7 +23400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0188"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23424,7 +23424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0189"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23448,7 +23448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0190"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23472,7 +23472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0191"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23496,7 +23496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0192"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23520,7 +23520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0193"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23544,7 +23544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0194"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23568,7 +23568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0195"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23592,7 +23592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0196"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23616,7 +23616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0197"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23640,7 +23640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0198"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23664,7 +23664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0199"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23688,7 +23688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0200"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23712,7 +23712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0201"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23736,7 +23736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0202"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23760,7 +23760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0203"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23784,7 +23784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0204"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23808,7 +23808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0205"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23832,7 +23832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0206"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23856,7 +23856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0207"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23880,7 +23880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0208"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23904,7 +23904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0209"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23928,7 +23928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0210"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23952,7 +23952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0211"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -23976,7 +23976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0212"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24000,7 +24000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0213"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24024,7 +24024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0214"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24048,7 +24048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0215"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24072,7 +24072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0216"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24096,7 +24096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0217"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24120,7 +24120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0218"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24144,7 +24144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0219"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24168,7 +24168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0220"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24192,7 +24192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0221"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24216,7 +24216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0222"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24240,7 +24240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0223"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24264,7 +24264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0224"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24288,7 +24288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0225"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24312,7 +24312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0226"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24336,7 +24336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0227"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24360,7 +24360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0228"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24384,7 +24384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0229"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24408,7 +24408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0230"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24432,7 +24432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0231"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24456,7 +24456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0232"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24480,7 +24480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0233"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24504,7 +24504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0234"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24528,7 +24528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0235"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24552,7 +24552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0236"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24576,7 +24576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0237"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24600,7 +24600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0238"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24624,7 +24624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0239"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24648,7 +24648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0240"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24672,7 +24672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0241"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24696,7 +24696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0242"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24720,7 +24720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0243"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24744,7 +24744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0244"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24768,7 +24768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0245"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24792,7 +24792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0246"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24816,7 +24816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0247"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24840,7 +24840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0248"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24864,7 +24864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0249"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24888,7 +24888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0250"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24912,7 +24912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0251"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24936,7 +24936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0252"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24960,7 +24960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0253"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -24984,7 +24984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0254"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25008,7 +25008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0255"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25032,7 +25032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0256"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25056,7 +25056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0257"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25080,7 +25080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0258"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25104,7 +25104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0259"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25128,7 +25128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0260"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25152,7 +25152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0261"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25176,7 +25176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0262"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25200,7 +25200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0263"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25224,7 +25224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0264"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25248,7 +25248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0265"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25272,7 +25272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0266"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25296,7 +25296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0267"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25320,7 +25320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0268"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25344,7 +25344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0269"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25368,7 +25368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0270"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25392,7 +25392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0271"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25416,7 +25416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0272"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25440,7 +25440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0273"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25464,7 +25464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0274"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25488,7 +25488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog3_0275"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			261,
 			286
@@ -25512,7 +25512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25536,7 +25536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25560,7 +25560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25584,7 +25584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25608,7 +25608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25632,7 +25632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25656,7 +25656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25680,7 +25680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25704,7 +25704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25728,7 +25728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25752,7 +25752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25776,7 +25776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25800,7 +25800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25824,7 +25824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25848,7 +25848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0015"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25872,7 +25872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0016"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25896,7 +25896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0017"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25920,7 +25920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0018"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25944,7 +25944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0019"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25968,7 +25968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0020"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -25992,7 +25992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0021"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26016,7 +26016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0022"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26040,7 +26040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0023"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26064,7 +26064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0024"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26088,7 +26088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0025"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26112,7 +26112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0026"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26136,7 +26136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0027"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26160,7 +26160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0028"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26184,7 +26184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0029"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26208,7 +26208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0030"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26232,7 +26232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0031"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26256,7 +26256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0032"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26280,7 +26280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0033"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26304,7 +26304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0034"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26328,7 +26328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0035"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26352,7 +26352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0036"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26376,7 +26376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0037"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26400,7 +26400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0038"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26424,7 +26424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0039"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26448,7 +26448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0040"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26472,7 +26472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0041"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26496,7 +26496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0042"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26520,7 +26520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0043"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26544,7 +26544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0044"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26568,7 +26568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0045"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26592,7 +26592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0046"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26616,7 +26616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0047"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26640,7 +26640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0048"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26664,7 +26664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0049"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26688,7 +26688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0050"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26712,7 +26712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0051"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26736,7 +26736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0052"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26760,7 +26760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0053"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26784,7 +26784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0054"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26808,7 +26808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0055"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26832,7 +26832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0056"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26856,7 +26856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0057"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26880,7 +26880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0058"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26904,7 +26904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0059"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26928,7 +26928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0060"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26952,7 +26952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0061"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -26976,7 +26976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0062"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27000,7 +27000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0063"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27024,7 +27024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0064"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27048,7 +27048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0065"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27072,7 +27072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0066"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27096,7 +27096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0067"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27120,7 +27120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0068"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27144,7 +27144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0069"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27168,7 +27168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0070"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27192,7 +27192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0071"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27216,7 +27216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0072"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27240,7 +27240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0073"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27264,7 +27264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0074"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27288,7 +27288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0075"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27312,7 +27312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0076"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27336,7 +27336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0077"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27360,7 +27360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0078"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27384,7 +27384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0079"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27408,7 +27408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0080"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27432,7 +27432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0081"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27456,7 +27456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0082"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27480,7 +27480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0083"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27504,7 +27504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0084"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27528,7 +27528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0085"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27552,7 +27552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0086"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27576,7 +27576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0087"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27600,7 +27600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0088"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27624,7 +27624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0089"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27648,7 +27648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0090"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27672,7 +27672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0091"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27696,7 +27696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0092"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27720,7 +27720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0093"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27744,7 +27744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0094"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27768,7 +27768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0095"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27792,7 +27792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0096"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27816,7 +27816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0097"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27840,7 +27840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0098"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27864,7 +27864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0099"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27888,7 +27888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0100"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27912,7 +27912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0101"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27936,7 +27936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0102"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27960,7 +27960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0103"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -27984,7 +27984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0104"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28008,7 +28008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0105"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28032,7 +28032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0106"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28056,7 +28056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0107"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28080,7 +28080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0108"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28104,7 +28104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0109"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28128,7 +28128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0110"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28152,7 +28152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0111"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28176,7 +28176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0112"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28200,7 +28200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0113"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28224,7 +28224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0114"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28248,7 +28248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0115"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28272,7 +28272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0116"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28296,7 +28296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0117"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28320,7 +28320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0118"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28344,7 +28344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0119"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28368,7 +28368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0120"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28392,7 +28392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0121"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28416,7 +28416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0122"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28440,7 +28440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0123"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28464,7 +28464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0124"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28488,7 +28488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0125"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28512,7 +28512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0126"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28536,7 +28536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0127"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28560,7 +28560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0128"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28584,7 +28584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0129"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28608,7 +28608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0130"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28632,7 +28632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0131"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28656,7 +28656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0132"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28680,7 +28680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0133"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28704,7 +28704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0134"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28728,7 +28728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0135"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28752,7 +28752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0136"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28776,7 +28776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0137"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28800,7 +28800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0138"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28824,7 +28824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0139"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28848,7 +28848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0140"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28872,7 +28872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0141"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28896,7 +28896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0142"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28920,7 +28920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0143"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28944,7 +28944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0144"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28968,7 +28968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0145"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -28992,7 +28992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0146"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29016,7 +29016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0147"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29040,7 +29040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0148"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29064,7 +29064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0149"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29088,7 +29088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0150"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29112,7 +29112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0151"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29136,7 +29136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0152"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29160,7 +29160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0153"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29184,7 +29184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0154"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29208,7 +29208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0155"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29232,7 +29232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0156"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29256,7 +29256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0157"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29280,7 +29280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0158"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29304,7 +29304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0159"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29328,7 +29328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0160"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29352,7 +29352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0161"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29376,7 +29376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0162"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29400,7 +29400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0163"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29424,7 +29424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0164"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29448,7 +29448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0165"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29472,7 +29472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0166"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29496,7 +29496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0167"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29520,7 +29520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0168"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29544,7 +29544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0169"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29568,7 +29568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0170"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29592,7 +29592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0171"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29616,7 +29616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0172"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29640,7 +29640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0173"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29664,7 +29664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0174"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29688,7 +29688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0175"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29712,7 +29712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0176"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29736,7 +29736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0177"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29760,7 +29760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0178"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29784,7 +29784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0179"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29808,7 +29808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0180"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29832,7 +29832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0181"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29856,7 +29856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0182"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29880,7 +29880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0183"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29904,7 +29904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0184"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29928,7 +29928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0185"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29952,7 +29952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0186"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -29976,7 +29976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0187"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30000,7 +30000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0188"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30024,7 +30024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0189"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30048,7 +30048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0190"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30072,7 +30072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0191"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30096,7 +30096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0192"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30120,7 +30120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0193"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30144,7 +30144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0194"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30168,7 +30168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0195"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30192,7 +30192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0196"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30216,7 +30216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0197"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30240,7 +30240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0198"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30264,7 +30264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0199"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30288,7 +30288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0200"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30312,7 +30312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0201"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30336,7 +30336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0202"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30360,7 +30360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0203"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30384,7 +30384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0204"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30408,7 +30408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0205"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30432,7 +30432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0206"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30456,7 +30456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0207"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30480,7 +30480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0208"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30504,7 +30504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0209"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30528,7 +30528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0210"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30552,7 +30552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0211"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30576,7 +30576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0212"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30600,7 +30600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0213"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30624,7 +30624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0214"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30648,7 +30648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0215"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30672,7 +30672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0216"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30696,7 +30696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0217"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30720,7 +30720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0218"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30744,7 +30744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0219"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30768,7 +30768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0220"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30792,7 +30792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0221"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30816,7 +30816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0222"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30840,7 +30840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0223"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30864,7 +30864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0224"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30888,7 +30888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0225"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30912,7 +30912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0226"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30936,7 +30936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0227"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30960,7 +30960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0228"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -30984,7 +30984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0229"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31008,7 +31008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0230"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31032,7 +31032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0231"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31056,7 +31056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0232"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31080,7 +31080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0233"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31104,7 +31104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0234"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31128,7 +31128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0235"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31152,7 +31152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0236"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31176,7 +31176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0237"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31200,7 +31200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0238"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31224,7 +31224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0239"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31248,7 +31248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0240"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31272,7 +31272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0241"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31296,7 +31296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0242"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31320,7 +31320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0243"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31344,7 +31344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0244"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31368,7 +31368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0245"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31392,7 +31392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0246"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31416,7 +31416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0247"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31440,7 +31440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0248"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31464,7 +31464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0249"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31488,7 +31488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0250"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31512,7 +31512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0251"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31536,7 +31536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0252"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31560,7 +31560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0253"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31584,7 +31584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0254"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31608,7 +31608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0255"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31632,7 +31632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0256"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31656,7 +31656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0257"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31680,7 +31680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0258"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31704,7 +31704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0259"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31728,7 +31728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0260"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31752,7 +31752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0261"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31776,7 +31776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0262"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31800,7 +31800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0263"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31824,7 +31824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0264"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31848,7 +31848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0265"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31872,7 +31872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0266"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31896,7 +31896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0267"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31920,7 +31920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0268"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31944,7 +31944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0269"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31968,7 +31968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0270"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -31992,7 +31992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0271"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32016,7 +32016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0272"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32040,7 +32040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0273"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32064,7 +32064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0274"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32088,7 +32088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0275"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32112,7 +32112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0276"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32136,7 +32136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0277"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32160,7 +32160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0278"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32184,7 +32184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0279"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32208,7 +32208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0280"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32232,7 +32232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0281"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32256,7 +32256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0282"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32280,7 +32280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0283"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32304,7 +32304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0284"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32328,7 +32328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0285"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32352,7 +32352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0286"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32376,7 +32376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0287"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32400,7 +32400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0288"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32424,7 +32424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0289"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32448,7 +32448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0290"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32472,7 +32472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0291"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32496,7 +32496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0292"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32520,7 +32520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0293"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32544,7 +32544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0294"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32568,7 +32568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0295"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32592,7 +32592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0296"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32616,7 +32616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0297"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32640,7 +32640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0298"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32664,7 +32664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0299"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32688,7 +32688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0300"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32712,7 +32712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0301"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32736,7 +32736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0302"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32760,7 +32760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0303"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32784,7 +32784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0304"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32808,7 +32808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0305"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32832,7 +32832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0306"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32856,7 +32856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0307"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32880,7 +32880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0308"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32904,7 +32904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0309"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32928,7 +32928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0310"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32952,7 +32952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0311"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -32976,7 +32976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0312"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33000,7 +33000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0313"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33024,7 +33024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0314"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33048,7 +33048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0315"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33072,7 +33072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0316"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33096,7 +33096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0317"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33120,7 +33120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0318"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33144,7 +33144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0319"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33168,7 +33168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0320"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33192,7 +33192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0321"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33216,7 +33216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0322"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33240,7 +33240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0323"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33264,7 +33264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0324"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33288,7 +33288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0325"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33312,7 +33312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0326"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33336,7 +33336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0327"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33360,7 +33360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0328"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33384,7 +33384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0329"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33408,7 +33408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0330"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33432,7 +33432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0331"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33456,7 +33456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0332"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33480,7 +33480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0333"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33504,7 +33504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0334"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33528,7 +33528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0335"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33552,7 +33552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0336"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33576,7 +33576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0337"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33600,7 +33600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0338"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33624,7 +33624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0339"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33648,7 +33648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0340"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33672,7 +33672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0341"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33696,7 +33696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0342"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33720,7 +33720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0343"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33744,7 +33744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0344"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33768,7 +33768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0345"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33792,7 +33792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0346"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33816,7 +33816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0347"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33840,7 +33840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0348"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33864,7 +33864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0349"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33888,7 +33888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0350"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33912,7 +33912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0351"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33936,7 +33936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0352"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33960,7 +33960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0353"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -33984,7 +33984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0354"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34008,7 +34008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0355"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34032,7 +34032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0356"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34056,7 +34056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0357"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34080,7 +34080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0358"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34104,7 +34104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0359"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34128,7 +34128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0360"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34152,7 +34152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0361"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34176,7 +34176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0362"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34200,7 +34200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0363"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34224,7 +34224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0364"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34248,7 +34248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0365"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34272,7 +34272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0366"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34296,7 +34296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0367"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34320,7 +34320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0368"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34344,7 +34344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0369"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34368,7 +34368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0370"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34392,7 +34392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0371"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34416,7 +34416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0372"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34440,7 +34440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0373"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34464,7 +34464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0374"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34488,7 +34488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0375"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34512,7 +34512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0376"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34536,7 +34536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0377"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34560,7 +34560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0378"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34584,7 +34584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0379"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34608,7 +34608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0380"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34632,7 +34632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0381"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34656,7 +34656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0382"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34680,7 +34680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0383"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34704,7 +34704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0384"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34728,7 +34728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0385"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34752,7 +34752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0386"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34776,7 +34776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0387"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34800,7 +34800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0388"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34824,7 +34824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0389"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34848,7 +34848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0390"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34872,7 +34872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0391"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34896,7 +34896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0392"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34920,7 +34920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0393"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34944,7 +34944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0394"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34968,7 +34968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0395"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -34992,7 +34992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0396"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35016,7 +35016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0397"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35040,7 +35040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0398"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35064,7 +35064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0399"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35088,7 +35088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0400"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35112,7 +35112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0401"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35136,7 +35136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0402"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35160,7 +35160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0403"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35184,7 +35184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0404"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35208,7 +35208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0405"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35232,7 +35232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0406"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35256,7 +35256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0407"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35280,7 +35280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0408"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35304,7 +35304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0409"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35328,7 +35328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0410"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35352,7 +35352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0411"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35376,7 +35376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0412"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35400,7 +35400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0413"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35424,7 +35424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0414"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35448,7 +35448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0415"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35472,7 +35472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0416"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35496,7 +35496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0417"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35520,7 +35520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0418"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35544,7 +35544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0419"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35568,7 +35568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0420"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35592,7 +35592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0421"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35616,7 +35616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0422"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35640,7 +35640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0423"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35664,7 +35664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0424"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35688,7 +35688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0425"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35712,7 +35712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0426"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35736,7 +35736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0427"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35760,7 +35760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0428"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35784,7 +35784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0429"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35808,7 +35808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0430"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35832,7 +35832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0431"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35856,7 +35856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0432"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35880,7 +35880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0433"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35904,7 +35904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0434"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35928,7 +35928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0435"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35952,7 +35952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0436"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -35976,7 +35976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0437"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36000,7 +36000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0438"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36024,7 +36024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0439"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36048,7 +36048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0440"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36072,7 +36072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0441"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36096,7 +36096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0442"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36120,7 +36120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0443"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36144,7 +36144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0444"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36168,7 +36168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0445"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36192,7 +36192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0446"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36216,7 +36216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0447"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36240,7 +36240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0448"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36264,7 +36264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0449"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36288,7 +36288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0450"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36312,7 +36312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0451"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36336,7 +36336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0452"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36360,7 +36360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0453"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36384,7 +36384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0454"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36408,7 +36408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0455"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36432,7 +36432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0456"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36456,7 +36456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0457"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36480,7 +36480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0458"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36504,7 +36504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0459"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36528,7 +36528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0460"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36552,7 +36552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0461"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36576,7 +36576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0462"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36600,7 +36600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0463"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36624,7 +36624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0464"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36648,7 +36648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0465"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36672,7 +36672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0466"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36696,7 +36696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0467"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36720,7 +36720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0468"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36744,7 +36744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0469"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36768,7 +36768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0470"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36792,7 +36792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0471"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36816,7 +36816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0472"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36840,7 +36840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0473"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36864,7 +36864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0474"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36888,7 +36888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0475"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36912,7 +36912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0476"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36936,7 +36936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0477"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36960,7 +36960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0478"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -36984,7 +36984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0479"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37008,7 +37008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0480"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37032,7 +37032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0481"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37056,7 +37056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0482"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37080,7 +37080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0483"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37104,7 +37104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0484"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37128,7 +37128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0485"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37152,7 +37152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0486"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37176,7 +37176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0487"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37200,7 +37200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0488"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37224,7 +37224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0489"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37248,7 +37248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0490"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37272,7 +37272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0491"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37296,7 +37296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0492"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37320,7 +37320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0493"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37344,7 +37344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0494"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37368,7 +37368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0495"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37392,7 +37392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0496"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37416,7 +37416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0497"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37440,7 +37440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0498"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37464,7 +37464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0499"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37488,7 +37488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0500"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37512,7 +37512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0501"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37536,7 +37536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0502"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37560,7 +37560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0503"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37584,7 +37584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0504"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37608,7 +37608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0505"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37632,7 +37632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0506"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37656,7 +37656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0507"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37680,7 +37680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0508"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37704,7 +37704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0509"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37728,7 +37728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0510"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37752,7 +37752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0511"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37776,7 +37776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0512"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37800,7 +37800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0513"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37824,7 +37824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0514"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37848,7 +37848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0515"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37872,7 +37872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0516"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37896,7 +37896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0517"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37920,7 +37920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0518"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37944,7 +37944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0519"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37968,7 +37968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0520"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -37992,7 +37992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0521"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -38016,7 +38016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0522"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -38040,7 +38040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0523"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -38064,7 +38064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0524"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -38088,7 +38088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0525"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -38112,7 +38112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_frog4_0526"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			264,
 			471
@@ -38136,7 +38136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hit2_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -38160,7 +38160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hit2_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -38184,7 +38184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hit2_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -38208,7 +38208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hit2_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -38232,7 +38232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hit2_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -38256,7 +38256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hit2_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -38280,7 +38280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hit2_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -38304,7 +38304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hit2_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -38328,7 +38328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hit2_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -38352,7 +38352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hit2_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -38376,7 +38376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hit2_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -38400,7 +38400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hit2_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -38424,7 +38424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38448,7 +38448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38472,7 +38472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38496,7 +38496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38520,7 +38520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38544,7 +38544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38568,7 +38568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38592,7 +38592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38616,7 +38616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38640,7 +38640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38664,7 +38664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38688,7 +38688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38712,7 +38712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38736,7 +38736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38760,7 +38760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0015"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38784,7 +38784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0016"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38808,7 +38808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0017"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38832,7 +38832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0018"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38856,7 +38856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0019"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38880,7 +38880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0020"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38904,7 +38904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0021"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38928,7 +38928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0022"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38952,7 +38952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_hitfx_0023"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			150,
 			147
@@ -38976,7 +38976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_jumpdecal"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			323,
 			156
@@ -39000,7 +39000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39024,7 +39024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39048,7 +39048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39072,7 +39072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39096,7 +39096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39120,7 +39120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39144,7 +39144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39168,7 +39168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39192,7 +39192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39216,7 +39216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39240,7 +39240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39264,7 +39264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39288,7 +39288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39312,7 +39312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39336,7 +39336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0015"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39360,7 +39360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0016"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39384,7 +39384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0017"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39408,7 +39408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0018"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39432,7 +39432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0019"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39456,7 +39456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0020"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39480,7 +39480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0021"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39504,7 +39504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0022"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39528,7 +39528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0023"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39552,7 +39552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0024"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39576,7 +39576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0025"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39600,7 +39600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0026"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39624,7 +39624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0027"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39648,7 +39648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0028"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39672,7 +39672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0029"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39696,7 +39696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0030"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39720,7 +39720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0031"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39744,7 +39744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0032"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39768,7 +39768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0033"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39792,7 +39792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0034"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39816,7 +39816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0035"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39840,7 +39840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0036"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39864,7 +39864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0037"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39888,7 +39888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0038"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39912,7 +39912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0039"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39936,7 +39936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0040"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39960,7 +39960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0041"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -39984,7 +39984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0042"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40008,7 +40008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0043"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40032,7 +40032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0044"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40056,7 +40056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0045"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40080,7 +40080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0046"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40104,7 +40104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0047"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40128,7 +40128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0048"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40152,7 +40152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0049"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40176,7 +40176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0050"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40200,7 +40200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0051"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40224,7 +40224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0052"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40248,7 +40248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0053"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40272,7 +40272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0054"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40296,7 +40296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0055"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40320,7 +40320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0056"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40344,7 +40344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0057"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40368,7 +40368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0058"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40392,7 +40392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0059"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40416,7 +40416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0060"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40440,7 +40440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0061"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40464,7 +40464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0062"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40488,7 +40488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0063"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40512,7 +40512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0064"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40536,7 +40536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0065"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40560,7 +40560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0066"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40584,7 +40584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0067"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40608,7 +40608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0068"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40632,7 +40632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0069"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40656,7 +40656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0070"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40680,7 +40680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0071"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40704,7 +40704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0072"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40728,7 +40728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0073"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40752,7 +40752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0074"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40776,7 +40776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0075"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40800,7 +40800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0076"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40824,7 +40824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0077"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40848,7 +40848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0078"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40872,7 +40872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0079"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40896,7 +40896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0080"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40920,7 +40920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0081"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40944,7 +40944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0082"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40968,7 +40968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0083"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -40992,7 +40992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0084"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41016,7 +41016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0085"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41040,7 +41040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0086"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41064,7 +41064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0087"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41088,7 +41088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0088"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41112,7 +41112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0089"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41136,7 +41136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0090"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41160,7 +41160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0091"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41184,7 +41184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0092"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41208,7 +41208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0093"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41232,7 +41232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0094"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41256,7 +41256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0095"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41280,7 +41280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0096"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41304,7 +41304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0097"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41328,7 +41328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0098"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41352,7 +41352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0099"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41376,7 +41376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0100"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41400,7 +41400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0101"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41424,7 +41424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0102"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41448,7 +41448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0103"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41472,7 +41472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0104"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41496,7 +41496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0105"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41520,7 +41520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0106"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41544,7 +41544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0107"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41568,7 +41568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves2_0108"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41592,7 +41592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41616,7 +41616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41640,7 +41640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41664,7 +41664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41688,7 +41688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41712,7 +41712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41736,7 +41736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41760,7 +41760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41784,7 +41784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41808,7 +41808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41832,7 +41832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41856,7 +41856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41880,7 +41880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41904,7 +41904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41928,7 +41928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0015"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41952,7 +41952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0016"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -41976,7 +41976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0017"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42000,7 +42000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0018"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42024,7 +42024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0019"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42048,7 +42048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0020"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42072,7 +42072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0021"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42096,7 +42096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0022"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42120,7 +42120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0023"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42144,7 +42144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0024"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42168,7 +42168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0025"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42192,7 +42192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0026"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42216,7 +42216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0027"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42240,7 +42240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0028"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42264,7 +42264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0029"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42288,7 +42288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0030"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42312,7 +42312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0031"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42336,7 +42336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0032"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42360,7 +42360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0033"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42384,7 +42384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0034"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42408,7 +42408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0035"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42432,7 +42432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0036"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42456,7 +42456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0037"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42480,7 +42480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0038"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42504,7 +42504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0039"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42528,7 +42528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0040"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42552,7 +42552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0041"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42576,7 +42576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0042"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42600,7 +42600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0043"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42624,7 +42624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0044"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42648,7 +42648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0045"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42672,7 +42672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0046"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42696,7 +42696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0047"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42720,7 +42720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0048"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42744,7 +42744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0049"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42768,7 +42768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0050"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42792,7 +42792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0051"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42816,7 +42816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0052"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42840,7 +42840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0053"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42864,7 +42864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0054"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42888,7 +42888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0055"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42912,7 +42912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0056"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42936,7 +42936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0057"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42960,7 +42960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0058"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -42984,7 +42984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0059"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43008,7 +43008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0060"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43032,7 +43032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0061"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43056,7 +43056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0062"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43080,7 +43080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0063"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43104,7 +43104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0064"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43128,7 +43128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0065"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43152,7 +43152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0066"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43176,7 +43176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0067"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43200,7 +43200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0068"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43224,7 +43224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0069"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43248,7 +43248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0070"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43272,7 +43272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0071"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43296,7 +43296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0072"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43320,7 +43320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0073"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43344,7 +43344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0074"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43368,7 +43368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0075"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43392,7 +43392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0076"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43416,7 +43416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0077"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43440,7 +43440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0078"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43464,7 +43464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0079"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43488,7 +43488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0080"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43512,7 +43512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0081"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43536,7 +43536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0082"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43560,7 +43560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0083"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43584,7 +43584,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0084"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43608,7 +43608,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0085"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43632,7 +43632,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0086"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43656,7 +43656,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0087"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43680,7 +43680,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0088"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43704,7 +43704,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0089"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43728,7 +43728,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0090"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43752,7 +43752,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0091"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43776,7 +43776,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0092"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43800,7 +43800,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0093"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43824,7 +43824,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0094"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43848,7 +43848,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0095"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43872,7 +43872,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0096"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43896,7 +43896,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0097"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43920,7 +43920,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0098"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43944,7 +43944,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0099"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43968,7 +43968,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0100"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -43992,7 +43992,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0101"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -44016,7 +44016,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0102"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -44040,7 +44040,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0103"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -44064,7 +44064,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0104"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -44088,7 +44088,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0105"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -44112,7 +44112,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0106"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -44136,7 +44136,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0107"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -44160,7 +44160,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_leaves_0108"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			215,
 			164
@@ -44184,7 +44184,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_pond_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			178,
 			122
@@ -44208,7 +44208,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_pond_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			178,
 			122
@@ -44232,7 +44232,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_preview"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			178,
 			150
@@ -44256,7 +44256,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile2_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			96,
 			96
@@ -44280,7 +44280,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile2_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			96,
 			96
@@ -44304,7 +44304,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile2_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			96,
 			96
@@ -44328,7 +44328,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile2_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			96,
 			96
@@ -44352,7 +44352,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile2_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			96,
 			96
@@ -44376,7 +44376,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile2_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			96,
 			96
@@ -44400,7 +44400,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile2_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			96,
 			96
@@ -44424,7 +44424,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile2_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			96,
 			96
@@ -44448,7 +44448,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile2_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			96,
 			96
@@ -44472,7 +44472,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			127,
 			99
@@ -44496,7 +44496,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			127,
 			99
@@ -44520,7 +44520,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			127,
 			99
@@ -44544,7 +44544,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			127,
 			99
@@ -44568,7 +44568,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			127,
 			99
@@ -44592,7 +44592,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			127,
 			99
@@ -44616,7 +44616,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			127,
 			99
@@ -44640,7 +44640,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			127,
 			99
@@ -44664,7 +44664,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			127,
 			99
@@ -44688,7 +44688,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			127,
 			99
@@ -44712,7 +44712,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			127,
 			99
@@ -44736,7 +44736,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_projectile_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			127,
 			99
@@ -44760,7 +44760,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_shadow"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			110,
 			45
@@ -44784,7 +44784,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -44808,7 +44808,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -44832,7 +44832,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -44856,7 +44856,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -44880,7 +44880,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -44904,7 +44904,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -44928,7 +44928,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -44952,7 +44952,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -44976,7 +44976,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -45000,7 +45000,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -45024,7 +45024,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -45048,7 +45048,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -45072,7 +45072,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -45096,7 +45096,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -45120,7 +45120,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0015"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -45144,7 +45144,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0016"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -45168,7 +45168,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0017"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -45192,7 +45192,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0018"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -45216,7 +45216,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_splash_0019"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			318,
 			221
@@ -45240,7 +45240,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tongue_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			468,
 			90
@@ -45264,7 +45264,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tongue_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			468,
 			90
@@ -45288,7 +45288,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tongue_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			468,
 			90
@@ -45312,7 +45312,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tongue_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			468,
 			90
@@ -45336,7 +45336,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tongue_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			468,
 			90
@@ -45360,7 +45360,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tongue_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			468,
 			90
@@ -45384,7 +45384,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tongue_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			468,
 			90
@@ -45408,7 +45408,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tongue_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			468,
 			90
@@ -45432,7 +45432,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tongue_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			468,
 			90
@@ -45456,7 +45456,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tongue_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			468,
 			90
@@ -45480,7 +45480,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tongue_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			468,
 			90
@@ -45504,7 +45504,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tongue_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			468,
 			90
@@ -45528,7 +45528,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tonguehit_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -45552,7 +45552,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tonguehit_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -45576,7 +45576,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tonguehit_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -45600,7 +45600,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tonguehit_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -45624,7 +45624,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tonguehit_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -45648,7 +45648,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tonguehit_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -45672,7 +45672,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tonguehit_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -45696,7 +45696,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tonguehit_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -45720,7 +45720,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tonguehit_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -45744,7 +45744,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tonguehit_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -45768,7 +45768,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tonguehit_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -45792,7 +45792,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_tonguehit_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			105,
 			124
@@ -45816,7 +45816,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail2_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			90,
 			82
@@ -45840,7 +45840,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail2_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			90,
 			82
@@ -45864,7 +45864,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail2_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			90,
 			82
@@ -45888,7 +45888,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail2_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			90,
 			82
@@ -45912,7 +45912,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail2_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			90,
 			82
@@ -45936,7 +45936,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail2_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			90,
 			82
@@ -45960,7 +45960,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail2_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			90,
 			82
@@ -45984,7 +45984,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail2_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			90,
 			82
@@ -46008,7 +46008,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail2_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			90,
 			82
@@ -46032,7 +46032,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail2_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			90,
 			82
@@ -46056,7 +46056,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail2_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			90,
 			82
@@ -46080,7 +46080,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail2_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			90,
 			82
@@ -46104,7 +46104,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail2_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			90,
 			82
@@ -46128,7 +46128,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail2_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			90,
 			82
@@ -46152,7 +46152,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0001"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46176,7 +46176,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0002"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46200,7 +46200,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0003"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46224,7 +46224,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0004"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46248,7 +46248,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0005"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46272,7 +46272,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0006"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46296,7 +46296,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0007"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46320,7 +46320,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0008"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46344,7 +46344,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0009"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46368,7 +46368,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0010"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46392,7 +46392,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0011"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46416,7 +46416,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0012"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46440,7 +46440,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0013"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46464,7 +46464,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0014"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46488,7 +46488,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0015"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46512,7 +46512,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0016"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46536,7 +46536,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0017"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79
@@ -46560,7 +46560,7 @@ return {
 		alias = {},
 	},
 	["hermit_toad_tower_trail_0018"] = {
-		a_name = "go_towers_hermit_toad-1.png",
+		a_name = "go_towers_hermit_toad-1.dds",
 		size = {
 			99,
 			79

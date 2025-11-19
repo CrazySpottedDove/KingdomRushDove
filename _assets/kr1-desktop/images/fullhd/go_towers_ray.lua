@@ -1,6 +1,6 @@
 return {
 	["channeler_tower_build"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			139,
 			90
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_full_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			93,
 			107
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_full_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			93,
 			107
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_full_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			93,
 			107
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_full_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			93,
 			107
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_full_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			93,
 			107
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_full_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			93,
 			107
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0017"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0018"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0019"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0020"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_crystal_union_fx_0021"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			136,
 			113
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0017"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0018"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_a_0019"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			332
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0017"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0018"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_b_0019"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			298
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0017"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0018"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_c_0019"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			301
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0017"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0018"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_d_0019"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			133,
 			289
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0017"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0018"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_e_0019"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			301
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0017"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0018"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_f_0019"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			315
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0017"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0018"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_g_0019"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			318
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0017"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0018"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_crystal_h_0019"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			96,
 			306
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_a_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			153,
 			213
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_b_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			213
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_c_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			105
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_idle_shock_fx_d_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			159,
 			107
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0017"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0018"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0019"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0020"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0021"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0022"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0023"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0024"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0025"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0026"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0027"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0028"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0029"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0030"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0031"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0032"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0033"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0034"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0035"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0036"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0037"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0038"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0039"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0040"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0041"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0042"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0043"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0044"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0045"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0046"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0047"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0048"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0049"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0050"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0051"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0052"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0053"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0054"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0055"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0056"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0057"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0058"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0059"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0060"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0061"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0062"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0063"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0064"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0065"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0066"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0067"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0068"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0069"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0070"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0071"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0072"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0073"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0074"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0075"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0076"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0077"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0078"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0079"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0080"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0081"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0082"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0083"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0084"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0085"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0086"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0087"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0088"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0089"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0090"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0091"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0092"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0093"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0094"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0095"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0096"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0097"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0098"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0099"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0100"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0101"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0102"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0103"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0104"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0105"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0106"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0107"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0108"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0109"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0110"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0111"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0112"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0113"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0114"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0115"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0116"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0117"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0118"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0119"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0120"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0121"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0122"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0123"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0124"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0125"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0126"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0127"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0128"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0129"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0130"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0131"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0132"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0133"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0134"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0135"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0136"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0137"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0138"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0139"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0140"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0141"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0142"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0143"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0144"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0145"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0146"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0147"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0148"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0149"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0150"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0151"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0152"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0153"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0154"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0155"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0156"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0157"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0158"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0159"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_mage_0160"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			275
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_a_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			88,
 			116
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_a_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			88,
 			116
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_a_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			88,
 			116
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_a_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			88,
 			116
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_a_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			88,
 			116
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_a_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			88,
 			116
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_a_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			88,
 			116
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_a_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			88,
 			116
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_a_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			88,
 			116
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_a_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			88,
 			116
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_a_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			88,
 			116
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_b_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			150,
 			156
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_b_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			150,
 			156
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_b_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			150,
 			156
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_b_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			150,
 			156
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_b_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			150,
 			156
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_b_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			150,
 			156
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_b_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			150,
 			156
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_b_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			150,
 			156
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_b_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			150,
 			156
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_b_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			150,
 			156
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_b_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			150,
 			156
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_c_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			161,
 			170
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_c_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			161,
 			170
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_c_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			161,
 			170
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_c_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			161,
 			170
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_c_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			161,
 			170
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_c_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			161,
 			170
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_c_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			161,
 			170
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_c_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			161,
 			170
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_c_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			161,
 			170
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_c_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			161,
 			170
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_c_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			161,
 			170
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_core"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			107,
 			150
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_d"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			105,
 			187
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_rock_e"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			82,
 			198
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_stone_a"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			187
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_stone_b"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			170,
 			136
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_stone_c"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			178,
 			144
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_stone_d"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			173,
 			193
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_stone_e"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			144,
 			207
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_stone_f"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			167,
 			116
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_stone_g"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			150,
 			79
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_stone_h"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			119,
 			53
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_stone_i"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			116,
 			65
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_stone_j"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			124,
 			68
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_stone_k"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			90,
 			59
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_stone_l"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			42
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_attack_fx_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			303,
 			391
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_lvl4_tower_shadow"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			56
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			201,
 			195
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_fx_big_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			306,
 			298
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_projectile_particle_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			85,
 			85
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_projectile_particle_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			85,
 			85
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_projectile_particle_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			85,
 			85
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_projectile_particle_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			85,
 			85
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_projectile_particle_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			85,
 			85
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_projectile_particle_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			85,
 			85
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_projectile_particle_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			85,
 			85
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_projectile_particle_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			85,
 			85
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0017"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0018"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0019"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0020"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_mutation_tower_fx_0021"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			110,
 			119
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_preview"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			178,
 			215
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0017"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0018"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_0019"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			514,
 			110
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_end_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			227,
 			164
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_end_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			227,
 			164
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_end_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			227,
 			164
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_end_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			227,
 			164
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_end_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			227,
 			164
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_end_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			227,
 			164
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_end_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			227,
 			164
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_end_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			227,
 			164
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_end_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			227,
 			164
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_end_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			227,
 			164
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_end_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			227,
 			164
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_end_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			227,
 			164
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_start_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			142,
 			122
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_start_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			142,
 			122
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_start_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			142,
 			122
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_start_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			142,
 			122
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_start_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			142,
 			122
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_start_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			142,
 			122
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_start_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			142,
 			122
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_start_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			142,
 			122
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_start_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			142,
 			122
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_start_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			142,
 			122
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_start_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			142,
 			122
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_ray_start_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			142,
 			122
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0017"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0018"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0019"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0020"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0021"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0022"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0023"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0024"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0025"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0026"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0027"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0028"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0029"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0030"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0031"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0032"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0033"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0034"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0035"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0036"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0037"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0038"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0039"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0040"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0041"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0042"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0043"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0044"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0045"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0046"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0047"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0048"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_0049"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			99,
 			107
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0001"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0002"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0003"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0004"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0005"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0006"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0007"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0008"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0009"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0010"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0011"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0012"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0013"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0014"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0015"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0016"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0017"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0018"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0019"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0020"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0021"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0022"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0023"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0024"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0025"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0026"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0027"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0028"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0029"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0030"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0031"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0032"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0033"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0034"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0035"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0036"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0037"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0038"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0039"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0040"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0041"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0042"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0043"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0044"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0045"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0046"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0047"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0048"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0049"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0050"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0051"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0052"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0053"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0054"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0055"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0056"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0057"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0058"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0059"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0060"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0061"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0062"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0063"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0064"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0065"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0066"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0067"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0068"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0069"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0070"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0071"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0072"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0073"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0074"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0075"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_0076"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			122,
 			136
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_sheep_flying_shadow"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			53,
 			34
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["channeler_tower_towers_decal"] = {
-		a_name = "go_towers_ray-1.png",
+		a_name = "go_towers_ray-1.dds",
 		size = {
 			178,
 			142

@@ -2,7 +2,7 @@
 
 return {
 	boss_veznan_0001 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	boss_veznan_0003 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	boss_veznan_0005 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -81,7 +81,7 @@ return {
 		}
 	},
 	boss_veznan_0008 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -107,7 +107,7 @@ return {
 		}
 	},
 	boss_veznan_0010 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -133,7 +133,7 @@ return {
 		}
 	},
 	boss_veznan_0012 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -160,7 +160,7 @@ return {
 		}
 	},
 	boss_veznan_0015 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -186,7 +186,7 @@ return {
 		}
 	},
 	boss_veznan_0017 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -212,7 +212,7 @@ return {
 		}
 	},
 	boss_veznan_0019 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -239,7 +239,7 @@ return {
 		}
 	},
 	boss_veznan_0022 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -265,7 +265,7 @@ return {
 		}
 	},
 	boss_veznan_0024 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -291,7 +291,7 @@ return {
 		}
 	},
 	boss_veznan_0026 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -318,7 +318,7 @@ return {
 		}
 	},
 	boss_veznan_0029 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -344,7 +344,7 @@ return {
 		}
 	},
 	boss_veznan_0031 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -370,7 +370,7 @@ return {
 		}
 	},
 	boss_veznan_0033 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -397,7 +397,7 @@ return {
 		}
 	},
 	boss_veznan_0036 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -423,7 +423,7 @@ return {
 		}
 	},
 	boss_veznan_0038 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -449,7 +449,7 @@ return {
 		}
 	},
 	boss_veznan_0040 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -476,7 +476,7 @@ return {
 		}
 	},
 	boss_veznan_0043 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -502,7 +502,7 @@ return {
 		}
 	},
 	boss_veznan_0045 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -528,7 +528,7 @@ return {
 		}
 	},
 	boss_veznan_0047 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -555,7 +555,7 @@ return {
 		}
 	},
 	boss_veznan_0050 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -581,7 +581,7 @@ return {
 		}
 	},
 	boss_veznan_0052 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -607,7 +607,7 @@ return {
 		}
 	},
 	boss_veznan_0054 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -634,7 +634,7 @@ return {
 		}
 	},
 	boss_veznan_0057 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -660,7 +660,7 @@ return {
 		}
 	},
 	boss_veznan_0059 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -686,7 +686,7 @@ return {
 		}
 	},
 	boss_veznan_0061 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -713,7 +713,7 @@ return {
 		}
 	},
 	boss_veznan_0064 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -739,7 +739,7 @@ return {
 		}
 	},
 	boss_veznan_0066 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -765,7 +765,7 @@ return {
 		}
 	},
 	boss_veznan_0068 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -792,7 +792,7 @@ return {
 		}
 	},
 	boss_veznan_0071 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -818,7 +818,7 @@ return {
 		}
 	},
 	boss_veznan_0073 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -844,7 +844,7 @@ return {
 		}
 	},
 	boss_veznan_0075 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -871,7 +871,7 @@ return {
 		}
 	},
 	boss_veznan_0078 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -897,7 +897,7 @@ return {
 		}
 	},
 	boss_veznan_0080 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -923,7 +923,7 @@ return {
 		}
 	},
 	boss_veznan_0082 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -950,7 +950,7 @@ return {
 		}
 	},
 	boss_veznan_0085 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -986,7 +986,7 @@ return {
 		}
 	},
 	boss_veznan_0086 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			120,
 			106
@@ -1013,7 +1013,7 @@ return {
 		}
 	},
 	boss_veznan_0089 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1039,7 +1039,7 @@ return {
 		}
 	},
 	boss_veznan_0091 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1065,7 +1065,7 @@ return {
 		}
 	},
 	boss_veznan_0093 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1091,7 +1091,7 @@ return {
 		}
 	},
 	boss_veznan_0095 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1117,7 +1117,7 @@ return {
 		}
 	},
 	boss_veznan_0097 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1143,7 +1143,7 @@ return {
 		}
 	},
 	boss_veznan_0099 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1171,7 +1171,7 @@ return {
 		}
 	},
 	boss_veznan_0103 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			120,
 			106
@@ -1197,7 +1197,7 @@ return {
 		}
 	},
 	boss_veznan_0105 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1223,7 +1223,7 @@ return {
 		}
 	},
 	boss_veznan_0107 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1249,7 +1249,7 @@ return {
 		}
 	},
 	boss_veznan_0109 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			120,
 			106
@@ -1275,7 +1275,7 @@ return {
 		}
 	},
 	boss_veznan_0111 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1301,7 +1301,7 @@ return {
 		}
 	},
 	boss_veznan_0113 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			120,
 			106
@@ -1327,7 +1327,7 @@ return {
 		}
 	},
 	boss_veznan_0115 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1358,7 +1358,7 @@ return {
 		}
 	},
 	boss_veznan_0122 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1384,7 +1384,7 @@ return {
 		}
 	},
 	boss_veznan_0127 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1412,7 +1412,7 @@ return {
 		}
 	},
 	boss_veznan_0129 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1440,7 +1440,7 @@ return {
 		}
 	},
 	boss_veznan_0131 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1468,7 +1468,7 @@ return {
 		}
 	},
 	boss_veznan_0133 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1494,7 +1494,7 @@ return {
 		}
 	},
 	boss_veznan_0135 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			120,
 			106
@@ -1522,7 +1522,7 @@ return {
 		}
 	},
 	boss_veznan_0137 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1548,7 +1548,7 @@ return {
 		}
 	},
 	boss_veznan_0139 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1574,7 +1574,7 @@ return {
 		}
 	},
 	boss_veznan_0141 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			120,
 			106
@@ -1604,7 +1604,7 @@ return {
 		}
 	},
 	boss_veznan_0144 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1630,7 +1630,7 @@ return {
 		}
 	},
 	boss_veznan_0146 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1656,7 +1656,7 @@ return {
 		}
 	},
 	boss_veznan_0151 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1682,7 +1682,7 @@ return {
 		}
 	},
 	boss_veznan_0153 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1708,7 +1708,7 @@ return {
 		}
 	},
 	boss_veznan_0158 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1734,7 +1734,7 @@ return {
 		}
 	},
 	boss_veznan_0160 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1760,7 +1760,7 @@ return {
 		}
 	},
 	boss_veznan_0162 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1787,7 +1787,7 @@ return {
 		}
 	},
 	boss_veznan_0165 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1813,7 +1813,7 @@ return {
 		}
 	},
 	boss_veznan_0167 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1839,7 +1839,7 @@ return {
 		}
 	},
 	boss_veznan_0169 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1865,7 +1865,7 @@ return {
 		}
 	},
 	boss_veznan_0171 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1893,7 +1893,7 @@ return {
 		}
 	},
 	boss_veznan_0173 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1921,7 +1921,7 @@ return {
 		}
 	},
 	boss_veznan_0176 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			120,
 			106
@@ -1947,7 +1947,7 @@ return {
 		}
 	},
 	boss_veznan_0181 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1973,7 +1973,7 @@ return {
 		}
 	},
 	boss_veznan_0183 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -1999,7 +1999,7 @@ return {
 		}
 	},
 	boss_veznan_0185 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			120,
 			106
@@ -2023,7 +2023,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0188 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -2049,7 +2049,7 @@ return {
 		}
 	},
 	boss_veznan_0190 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -2075,7 +2075,7 @@ return {
 		}
 	},
 	boss_veznan_0192 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -2101,7 +2101,7 @@ return {
 		}
 	},
 	boss_veznan_0194 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -2127,7 +2127,7 @@ return {
 		}
 	},
 	boss_veznan_0196 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			120,
 			106
@@ -2154,7 +2154,7 @@ return {
 		}
 	},
 	boss_veznan_0199 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -2182,7 +2182,7 @@ return {
 		}
 	},
 	boss_veznan_0201 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -2209,7 +2209,7 @@ return {
 		}
 	},
 	boss_veznan_0204 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			120,
 			106
@@ -2236,7 +2236,7 @@ return {
 		}
 	},
 	boss_veznan_0209 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -2262,7 +2262,7 @@ return {
 		}
 	},
 	boss_veznan_0220 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -2288,7 +2288,7 @@ return {
 		}
 	},
 	boss_veznan_0224 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -2312,7 +2312,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0225 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -2336,7 +2336,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0226 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2362,7 +2362,7 @@ return {
 		}
 	},
 	boss_veznan_0228 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2390,7 +2390,7 @@ return {
 		}
 	},
 	boss_veznan_0230 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2418,7 +2418,7 @@ return {
 		}
 	},
 	boss_veznan_0232 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2444,7 +2444,7 @@ return {
 		}
 	},
 	boss_veznan_0234 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2470,7 +2470,7 @@ return {
 		}
 	},
 	boss_veznan_0236 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2496,7 +2496,7 @@ return {
 		}
 	},
 	boss_veznan_0238 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2522,7 +2522,7 @@ return {
 		}
 	},
 	boss_veznan_0240 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2548,7 +2548,7 @@ return {
 		}
 	},
 	boss_veznan_0242 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2574,7 +2574,7 @@ return {
 		}
 	},
 	boss_veznan_0244 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2601,7 +2601,7 @@ return {
 		}
 	},
 	boss_veznan_0247 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2627,7 +2627,7 @@ return {
 		}
 	},
 	boss_veznan_0249 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2653,7 +2653,7 @@ return {
 		}
 	},
 	boss_veznan_0251 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2679,7 +2679,7 @@ return {
 		}
 	},
 	boss_veznan_0253 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2705,7 +2705,7 @@ return {
 		}
 	},
 	boss_veznan_0255 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2731,7 +2731,7 @@ return {
 		}
 	},
 	boss_veznan_0257 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2757,7 +2757,7 @@ return {
 		}
 	},
 	boss_veznan_0259 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2783,7 +2783,7 @@ return {
 		}
 	},
 	boss_veznan_0261 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2809,7 +2809,7 @@ return {
 		}
 	},
 	boss_veznan_0263 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2835,7 +2835,7 @@ return {
 		}
 	},
 	boss_veznan_0265 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2861,7 +2861,7 @@ return {
 		}
 	},
 	boss_veznan_0267 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2887,7 +2887,7 @@ return {
 		}
 	},
 	boss_veznan_0269 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2913,7 +2913,7 @@ return {
 		}
 	},
 	boss_veznan_0271 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2939,7 +2939,7 @@ return {
 		}
 	},
 	boss_veznan_0273 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2965,7 +2965,7 @@ return {
 		}
 	},
 	boss_veznan_0275 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -2991,7 +2991,7 @@ return {
 		}
 	},
 	boss_veznan_0277 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3017,7 +3017,7 @@ return {
 		}
 	},
 	boss_veznan_0279 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3043,7 +3043,7 @@ return {
 		}
 	},
 	boss_veznan_0281 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3069,7 +3069,7 @@ return {
 		}
 	},
 	boss_veznan_0283 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3095,7 +3095,7 @@ return {
 		}
 	},
 	boss_veznan_0285 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3121,7 +3121,7 @@ return {
 		}
 	},
 	boss_veznan_0287 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3147,7 +3147,7 @@ return {
 		}
 	},
 	boss_veznan_0289 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3173,7 +3173,7 @@ return {
 		}
 	},
 	boss_veznan_0291 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3199,7 +3199,7 @@ return {
 		}
 	},
 	boss_veznan_0293 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3225,7 +3225,7 @@ return {
 		}
 	},
 	boss_veznan_0295 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3249,7 +3249,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0296 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3278,7 +3278,7 @@ return {
 		}
 	},
 	boss_veznan_0298 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3305,7 +3305,7 @@ return {
 		}
 	},
 	boss_veznan_0301 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3332,7 +3332,7 @@ return {
 		}
 	},
 	boss_veznan_0304 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3359,7 +3359,7 @@ return {
 		}
 	},
 	boss_veznan_0307 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3385,7 +3385,7 @@ return {
 		}
 	},
 	boss_veznan_0309 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3414,7 +3414,7 @@ return {
 		}
 	},
 	boss_veznan_0314 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3440,7 +3440,7 @@ return {
 		}
 	},
 	boss_veznan_0316 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3476,7 +3476,7 @@ return {
 		}
 	},
 	boss_veznan_0318 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3510,7 +3510,7 @@ return {
 		}
 	},
 	boss_veznan_0338 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -3536,7 +3536,7 @@ return {
 		}
 	},
 	boss_veznan_0343 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3562,7 +3562,7 @@ return {
 		}
 	},
 	boss_veznan_0345 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3588,7 +3588,7 @@ return {
 		}
 	},
 	boss_veznan_0347 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3614,7 +3614,7 @@ return {
 		}
 	},
 	boss_veznan_0349 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3638,7 +3638,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0350 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3662,7 +3662,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0351 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3686,7 +3686,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0352 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3710,7 +3710,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0353 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3734,7 +3734,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0354 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3758,7 +3758,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0355 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3784,7 +3784,7 @@ return {
 		}
 	},
 	boss_veznan_0357 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3810,7 +3810,7 @@ return {
 		}
 	},
 	boss_veznan_0359 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3836,7 +3836,7 @@ return {
 		}
 	},
 	boss_veznan_0361 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3862,7 +3862,7 @@ return {
 		}
 	},
 	boss_veznan_0363 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3886,7 +3886,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0364 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3910,7 +3910,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0365 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3934,7 +3934,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0366 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3958,7 +3958,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0367 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -3982,7 +3982,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0368 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -4006,7 +4006,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0369 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -4032,7 +4032,7 @@ return {
 		}
 	},
 	boss_veznan_0371 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -4058,7 +4058,7 @@ return {
 		}
 	},
 	boss_veznan_0373 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -4084,7 +4084,7 @@ return {
 		}
 	},
 	boss_veznan_0375 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -4110,7 +4110,7 @@ return {
 		}
 	},
 	boss_veznan_0377 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -4134,7 +4134,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0378 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -4158,7 +4158,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0379 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			120,
 			106
@@ -4186,7 +4186,7 @@ return {
 		}
 	},
 	boss_veznan_0383 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			120,
 			106
@@ -4213,7 +4213,7 @@ return {
 		}
 	},
 	boss_veznan_0386 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -4239,7 +4239,7 @@ return {
 		}
 	},
 	boss_veznan_0392 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -4265,7 +4265,7 @@ return {
 		}
 	},
 	boss_veznan_0394 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -4291,7 +4291,7 @@ return {
 		}
 	},
 	boss_veznan_0396 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -4317,7 +4317,7 @@ return {
 		}
 	},
 	boss_veznan_0398 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -4343,7 +4343,7 @@ return {
 		}
 	},
 	boss_veznan_0400 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -4369,7 +4369,7 @@ return {
 		}
 	},
 	boss_veznan_0402 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4395,7 +4395,7 @@ return {
 		}
 	},
 	boss_veznan_0404 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4419,7 +4419,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0405 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4443,7 +4443,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0406 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4467,7 +4467,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0407 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4491,7 +4491,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0408 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4515,7 +4515,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0409 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -4541,7 +4541,7 @@ return {
 		}
 	},
 	boss_veznan_0411 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4567,7 +4567,7 @@ return {
 		}
 	},
 	boss_veznan_0413 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4593,7 +4593,7 @@ return {
 		}
 	},
 	boss_veznan_0415 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4619,7 +4619,7 @@ return {
 		}
 	},
 	boss_veznan_0417 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4645,7 +4645,7 @@ return {
 		}
 	},
 	boss_veznan_0419 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4671,7 +4671,7 @@ return {
 		}
 	},
 	boss_veznan_0421 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4718,7 +4718,7 @@ return {
 		}
 	},
 	boss_veznan_0444 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4742,7 +4742,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0445 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4768,7 +4768,7 @@ return {
 		}
 	},
 	boss_veznan_0447 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4792,7 +4792,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0448 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4818,7 +4818,7 @@ return {
 		}
 	},
 	boss_veznan_0450 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4844,7 +4844,7 @@ return {
 		}
 	},
 	boss_veznan_0452 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4870,7 +4870,7 @@ return {
 		}
 	},
 	boss_veznan_0454 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4896,7 +4896,7 @@ return {
 		}
 	},
 	boss_veznan_0456 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4922,7 +4922,7 @@ return {
 		}
 	},
 	boss_veznan_0458 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4948,7 +4948,7 @@ return {
 		}
 	},
 	boss_veznan_0460 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -4974,7 +4974,7 @@ return {
 		}
 	},
 	boss_veznan_0462 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5000,7 +5000,7 @@ return {
 		}
 	},
 	boss_veznan_0464 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5026,7 +5026,7 @@ return {
 		}
 	},
 	boss_veznan_0466 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5052,7 +5052,7 @@ return {
 		}
 	},
 	boss_veznan_0468 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5078,7 +5078,7 @@ return {
 		}
 	},
 	boss_veznan_0470 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5104,7 +5104,7 @@ return {
 		}
 	},
 	boss_veznan_0472 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5130,7 +5130,7 @@ return {
 		}
 	},
 	boss_veznan_0474 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5156,7 +5156,7 @@ return {
 		}
 	},
 	boss_veznan_0476 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5182,7 +5182,7 @@ return {
 		}
 	},
 	boss_veznan_0478 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5208,7 +5208,7 @@ return {
 		}
 	},
 	boss_veznan_0480 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5234,7 +5234,7 @@ return {
 		}
 	},
 	boss_veznan_0482 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5260,7 +5260,7 @@ return {
 		}
 	},
 	boss_veznan_0484 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5286,7 +5286,7 @@ return {
 		}
 	},
 	boss_veznan_0486 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5312,7 +5312,7 @@ return {
 		}
 	},
 	boss_veznan_0488 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5338,7 +5338,7 @@ return {
 		}
 	},
 	boss_veznan_0490 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5364,7 +5364,7 @@ return {
 		}
 	},
 	boss_veznan_0492 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5390,7 +5390,7 @@ return {
 		}
 	},
 	boss_veznan_0494 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5416,7 +5416,7 @@ return {
 		}
 	},
 	boss_veznan_0496 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5442,7 +5442,7 @@ return {
 		}
 	},
 	boss_veznan_0498 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5468,7 +5468,7 @@ return {
 		}
 	},
 	boss_veznan_0500 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5494,7 +5494,7 @@ return {
 		}
 	},
 	boss_veznan_0502 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5520,7 +5520,7 @@ return {
 		}
 	},
 	boss_veznan_0504 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5546,7 +5546,7 @@ return {
 		}
 	},
 	boss_veznan_0506 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5572,7 +5572,7 @@ return {
 		}
 	},
 	boss_veznan_0508 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5598,7 +5598,7 @@ return {
 		}
 	},
 	boss_veznan_0510 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5624,7 +5624,7 @@ return {
 		}
 	},
 	boss_veznan_0512 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5650,7 +5650,7 @@ return {
 		}
 	},
 	boss_veznan_0514 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5676,7 +5676,7 @@ return {
 		}
 	},
 	boss_veznan_0516 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5702,7 +5702,7 @@ return {
 		}
 	},
 	boss_veznan_0518 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5728,7 +5728,7 @@ return {
 		}
 	},
 	boss_veznan_0520 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			320,
 			274
@@ -5754,7 +5754,7 @@ return {
 		}
 	},
 	boss_veznan_0522 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5780,7 +5780,7 @@ return {
 		}
 	},
 	boss_veznan_0524 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5806,7 +5806,7 @@ return {
 		}
 	},
 	boss_veznan_0526 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5832,7 +5832,7 @@ return {
 		}
 	},
 	boss_veznan_0528 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5858,7 +5858,7 @@ return {
 		}
 	},
 	boss_veznan_0530 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5884,7 +5884,7 @@ return {
 		}
 	},
 	boss_veznan_0532 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5910,7 +5910,7 @@ return {
 		}
 	},
 	boss_veznan_0534 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5936,7 +5936,7 @@ return {
 		}
 	},
 	boss_veznan_0536 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5960,7 +5960,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0537 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -5984,7 +5984,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0538 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -6013,7 +6013,7 @@ return {
 		}
 	},
 	boss_veznan_0541 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -6037,7 +6037,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_0542 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			320,
 			274
@@ -6063,7 +6063,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0001 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6089,7 +6089,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0003 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			314,
 			314
@@ -6115,7 +6115,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0005 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			314,
 			314
@@ -6141,7 +6141,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0007 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			314,
 			314
@@ -6167,7 +6167,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0009 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6193,7 +6193,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0011 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			314,
 			314
@@ -6219,7 +6219,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0013 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			314,
 			314
@@ -6245,7 +6245,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0015 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6271,7 +6271,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0017 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6297,7 +6297,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0019 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6323,7 +6323,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0021 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6349,7 +6349,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0023 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6375,7 +6375,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0025 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6401,7 +6401,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0027 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6427,7 +6427,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0029 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6453,7 +6453,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0031 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6479,7 +6479,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0033 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6505,7 +6505,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0035 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6531,7 +6531,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0037 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6557,7 +6557,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0039 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6583,7 +6583,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0041 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6607,7 +6607,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_deathExplotion_0042 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6631,7 +6631,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_deathExplotion_0043 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6655,7 +6655,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_deathExplotion_0044 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6679,7 +6679,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_deathExplotion_0045 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6708,7 +6708,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0046 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6737,7 +6737,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0047 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6766,7 +6766,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0048 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6794,7 +6794,7 @@ return {
 		}
 	},
 	boss_veznan_deathExplotion_0064 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6818,7 +6818,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_deathExplotion_0065 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			314,
 			314
@@ -6842,7 +6842,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_demonFire_0001 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			142,
 			142
@@ -6870,7 +6870,7 @@ return {
 		}
 	},
 	boss_veznan_demonFire_0003 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			142,
 			142
@@ -6898,7 +6898,7 @@ return {
 		}
 	},
 	boss_veznan_demonFire_0005 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			142,
 			142
@@ -6926,7 +6926,7 @@ return {
 		}
 	},
 	boss_veznan_demonFire_0007 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			142,
 			142
@@ -6954,7 +6954,7 @@ return {
 		}
 	},
 	boss_veznan_demonFire_0009 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			142,
 			142
@@ -6982,7 +6982,7 @@ return {
 		}
 	},
 	boss_veznan_demonFire_0011 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			142,
 			142
@@ -7008,7 +7008,7 @@ return {
 		}
 	},
 	boss_veznan_demonFire_0023 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			142,
 			142
@@ -7034,7 +7034,7 @@ return {
 		}
 	},
 	boss_veznan_demonFire_0025 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			142,
 			142
@@ -7058,7 +7058,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_demonFire_0026 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			142,
 			142
@@ -7082,7 +7082,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_infernalPortal_0001 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			136,
 			96
@@ -7110,7 +7110,7 @@ return {
 		}
 	},
 	boss_veznan_infernalPortal_0002 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			136,
 			96
@@ -7138,7 +7138,7 @@ return {
 		}
 	},
 	boss_veznan_infernalPortal_0004 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			136,
 			96
@@ -7166,7 +7166,7 @@ return {
 		}
 	},
 	boss_veznan_infernalPortal_0006 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			136,
 			96
@@ -7194,7 +7194,7 @@ return {
 		}
 	},
 	boss_veznan_infernalPortal_0008 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			136,
 			96
@@ -7222,7 +7222,7 @@ return {
 		}
 	},
 	boss_veznan_infernalPortal_0010 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			136,
 			96
@@ -7253,7 +7253,7 @@ return {
 		}
 	},
 	boss_veznan_infernalPortal_0012 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			136,
 			96
@@ -7283,7 +7283,7 @@ return {
 		}
 	},
 	boss_veznan_infernalPortal_0014 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			136,
 			96
@@ -7313,7 +7313,7 @@ return {
 		}
 	},
 	boss_veznan_infernalPortal_0016 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			136,
 			96
@@ -7343,7 +7343,7 @@ return {
 		}
 	},
 	boss_veznan_infernalPortal_0018 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			136,
 			96
@@ -7373,7 +7373,7 @@ return {
 		}
 	},
 	boss_veznan_infernalPortal_0020 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			136,
 			96
@@ -7403,7 +7403,7 @@ return {
 		}
 	},
 	boss_veznan_soul_0001 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			44,
 			34
@@ -7429,7 +7429,7 @@ return {
 		}
 	},
 	boss_veznan_soul_0003 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			44,
 			34
@@ -7455,7 +7455,7 @@ return {
 		}
 	},
 	boss_veznan_soul_0005 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			44,
 			34
@@ -7481,7 +7481,7 @@ return {
 		}
 	},
 	boss_veznan_soul_0007 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			44,
 			34
@@ -7507,7 +7507,7 @@ return {
 		}
 	},
 	boss_veznan_soul_0009 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			44,
 			34
@@ -7533,7 +7533,7 @@ return {
 		}
 	},
 	boss_veznan_soul_0011 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			44,
 			34
@@ -7559,7 +7559,7 @@ return {
 		}
 	},
 	boss_veznan_soul_0013 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			44,
 			34
@@ -7585,7 +7585,7 @@ return {
 		}
 	},
 	boss_veznan_soul_0015 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			44,
 			34
@@ -7609,7 +7609,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_soul_0016 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			44,
 			34
@@ -7633,7 +7633,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_soul_0017 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			44,
 			34
@@ -7660,7 +7660,7 @@ return {
 		}
 	},
 	boss_veznan_soul_0020 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			44,
 			34
@@ -7686,7 +7686,7 @@ return {
 		}
 	},
 	boss_veznan_soul_0022 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			44,
 			34
@@ -7712,7 +7712,7 @@ return {
 		}
 	},
 	boss_veznan_soul_0024 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			44,
 			34
@@ -7738,7 +7738,7 @@ return {
 		}
 	},
 	boss_veznan_soul_particle = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			10,
 			10
@@ -7762,7 +7762,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_tap_0001 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			92,
 			124
@@ -7788,7 +7788,7 @@ return {
 		}
 	},
 	boss_veznan_tap_0003 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			92,
 			124
@@ -7812,7 +7812,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_tap_0004 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			92,
 			124
@@ -7838,7 +7838,7 @@ return {
 		}
 	},
 	boss_veznan_tap_0006 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			92,
 			124
@@ -7864,7 +7864,7 @@ return {
 		}
 	},
 	boss_veznan_taunts_love_0001 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			548,
 			197
@@ -7888,7 +7888,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_taunts_love_0002 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			548,
 			197
@@ -7912,7 +7912,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0001 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -7938,7 +7938,7 @@ return {
 		}
 	},
 	boss_veznan_towerHold_0003 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -7962,7 +7962,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0004 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -7986,7 +7986,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0005 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8010,7 +8010,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0006 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8034,7 +8034,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0007 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8058,7 +8058,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0008 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8082,7 +8082,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0009 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8106,7 +8106,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0010 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8130,7 +8130,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0011 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8154,7 +8154,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0012 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8178,7 +8178,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0013 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8202,7 +8202,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0014 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8226,7 +8226,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0015 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8250,7 +8250,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0016 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8274,7 +8274,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0017 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8298,7 +8298,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0018 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8322,7 +8322,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0019 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8346,7 +8346,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0020 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8370,7 +8370,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0021 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8394,7 +8394,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0022 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8418,7 +8418,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0023 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8442,7 +8442,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0024 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8466,7 +8466,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0025 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8490,7 +8490,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0026 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8514,7 +8514,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0027 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			164,
 			158
@@ -8538,7 +8538,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0028 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			164,
 			158
@@ -8562,7 +8562,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0029 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			164,
 			158
@@ -8586,7 +8586,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0030 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			164,
 			158
@@ -8610,7 +8610,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0031 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			164,
 			158
@@ -8634,7 +8634,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0032 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8658,7 +8658,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0033 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8682,7 +8682,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0034 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			164,
 			158
@@ -8706,7 +8706,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0035 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			164,
 			158
@@ -8730,7 +8730,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0036 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8754,7 +8754,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0037 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8778,7 +8778,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0038 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			164,
 			158
@@ -8802,7 +8802,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0039 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			164,
 			158
@@ -8826,7 +8826,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0040 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			164,
 			158
@@ -8850,7 +8850,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0041 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8874,7 +8874,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0042 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8898,7 +8898,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0043 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8922,7 +8922,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0044 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8950,7 +8950,7 @@ return {
 		}
 	},
 	boss_veznan_towerHold_0048 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8974,7 +8974,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0049 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -8998,7 +8998,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0050 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -9022,7 +9022,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0051 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -9046,7 +9046,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0052 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -9070,7 +9070,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0053 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -9094,7 +9094,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0054 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -9118,7 +9118,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0055 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -9142,7 +9142,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_towerHold_0056 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			164,
 			158
@@ -9168,7 +9168,7 @@ return {
 		}
 	},
 	boss_veznan_towerHold_0058 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			164,
 			158
@@ -9194,7 +9194,7 @@ return {
 		}
 	},
 	boss_veznan_towerHold_0060 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			164,
 			158
@@ -9220,7 +9220,7 @@ return {
 		}
 	},
 	boss_veznan_towerHold_0062 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -9246,7 +9246,7 @@ return {
 		}
 	},
 	boss_veznan_towerHold_0064 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			164,
 			158
@@ -9270,7 +9270,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_unholystrike_0001 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			254,
 			128
@@ -9296,7 +9296,7 @@ return {
 		}
 	},
 	boss_veznan_unholystrike_0003 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			254,
 			128
@@ -9322,7 +9322,7 @@ return {
 		}
 	},
 	boss_veznan_unholystrike_0005 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			254,
 			128
@@ -9348,7 +9348,7 @@ return {
 		}
 	},
 	boss_veznan_unholystrike_0007 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			254,
 			128
@@ -9374,7 +9374,7 @@ return {
 		}
 	},
 	boss_veznan_unholystrike_0009 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			254,
 			128
@@ -9398,7 +9398,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_unholystrike_0010 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			254,
 			128
@@ -9422,7 +9422,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_unholystrike_0011 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			254,
 			128
@@ -9446,7 +9446,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_unholystrike_0012 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			254,
 			128
@@ -9470,7 +9470,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_unholystrike_0013 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			254,
 			128
@@ -9494,7 +9494,7 @@ return {
 		alias = {}
 	},
 	boss_veznan_unholystrike_0014 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			254,
 			128
@@ -9518,7 +9518,7 @@ return {
 		alias = {}
 	},
 	stage12_burnerBig_0001 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			66,
 			74
@@ -9544,7 +9544,7 @@ return {
 		}
 	},
 	stage12_burnerBig_0002 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			66,
 			74
@@ -9570,7 +9570,7 @@ return {
 		}
 	},
 	stage12_burnerBig_0004 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			66,
 			74
@@ -9596,7 +9596,7 @@ return {
 		}
 	},
 	stage12_burnerBig_0006 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			66,
 			74
@@ -9622,7 +9622,7 @@ return {
 		}
 	},
 	stage12_burnerBig_0008 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			66,
 			74
@@ -9648,7 +9648,7 @@ return {
 		}
 	},
 	stage12_burnerBig_0010 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			66,
 			74
@@ -9674,7 +9674,7 @@ return {
 		}
 	},
 	stage12_burnerSmall_0001 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			58,
 			62
@@ -9700,7 +9700,7 @@ return {
 		}
 	},
 	stage12_burnerSmall_0003 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			58,
 			62
@@ -9726,7 +9726,7 @@ return {
 		}
 	},
 	stage12_burnerSmall_0005 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			58,
 			62
@@ -9752,7 +9752,7 @@ return {
 		}
 	},
 	stage12_burnerSmall_0007 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			58,
 			62
@@ -9778,7 +9778,7 @@ return {
 		}
 	},
 	stage12_burnerSmall_0009 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			58,
 			62
@@ -9804,7 +9804,7 @@ return {
 		}
 	},
 	stage12_burnerSmall_0011 = {
-		a_name = "go_stage12-2.png",
+		a_name = "go_stage12-2.dds",
 		size = {
 			58,
 			62
@@ -9830,7 +9830,7 @@ return {
 		}
 	},
 	stage12_forsale = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			58,
 			54
@@ -9854,7 +9854,7 @@ return {
 		alias = {}
 	},
 	stage_12_0002 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			1920,
 			1080
@@ -9878,7 +9878,7 @@ return {
 		alias = {}
 	},
 	stage_12_0003 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			1920,
 			1080
@@ -9902,7 +9902,7 @@ return {
 		alias = {}
 	},
 	stage_12_0004 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			1920,
 			1080
@@ -9926,7 +9926,7 @@ return {
 		alias = {}
 	},
 	stage_12_0005 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			1920,
 			1080
@@ -9950,7 +9950,7 @@ return {
 		alias = {}
 	},
 	stage_12_0006 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			1920,
 			1080
@@ -9974,7 +9974,7 @@ return {
 		alias = {}
 	},
 	stage_12_0007 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			1920,
 			1080
@@ -9998,7 +9998,7 @@ return {
 		alias = {}
 	},
 	stage_12_0008 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			1920,
 			1080
@@ -10022,7 +10022,7 @@ return {
 		alias = {}
 	},
 	stage_12_0009 = {
-		a_name = "go_stage12-1.png",
+		a_name = "go_stage12-1.dds",
 		size = {
 			1920,
 			1080

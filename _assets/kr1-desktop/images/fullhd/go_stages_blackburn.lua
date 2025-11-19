@@ -2,7 +2,7 @@
 
 return {
 	Bat_0001 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			34,
 			23
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	Bat_0003 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			34,
 			23
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	Bat_0005 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			34,
 			23
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	Bat_0007 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			34,
 			23
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	CB_bubble_0001 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -130,7 +130,7 @@ return {
 		alias = {}
 	},
 	CB_bubble_0002 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -156,7 +156,7 @@ return {
 		}
 	},
 	CB_bubble_0004 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -182,7 +182,7 @@ return {
 		}
 	},
 	CB_bubble_0006 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -208,7 +208,7 @@ return {
 		}
 	},
 	CB_bubble_0008 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -234,7 +234,7 @@ return {
 		}
 	},
 	CB_bubble_0010 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -260,7 +260,7 @@ return {
 		}
 	},
 	CB_bubble_0012 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -286,7 +286,7 @@ return {
 		}
 	},
 	CB_bubble_0014 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -312,7 +312,7 @@ return {
 		}
 	},
 	CB_bubble_0016 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -338,7 +338,7 @@ return {
 		}
 	},
 	CB_bubble_0018 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -364,7 +364,7 @@ return {
 		}
 	},
 	CB_bubble_0020 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -390,7 +390,7 @@ return {
 		}
 	},
 	CB_bubble_0022 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -416,7 +416,7 @@ return {
 		}
 	},
 	CB_bubble_0024 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -442,7 +442,7 @@ return {
 		}
 	},
 	CB_bubble_0026 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -468,7 +468,7 @@ return {
 		}
 	},
 	CB_bubble_0028 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -494,7 +494,7 @@ return {
 		}
 	},
 	CB_bubble_0030 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -520,7 +520,7 @@ return {
 		}
 	},
 	CB_bubble_0032 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -546,7 +546,7 @@ return {
 		}
 	},
 	CB_bubble_0034 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -570,7 +570,7 @@ return {
 		alias = {}
 	},
 	CB_bubble_0035 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -596,7 +596,7 @@ return {
 		}
 	},
 	CB_bubble_0037 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -622,7 +622,7 @@ return {
 		}
 	},
 	CB_bubble_0039 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -648,7 +648,7 @@ return {
 		}
 	},
 	CB_bubble_0041 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -674,7 +674,7 @@ return {
 		}
 	},
 	CB_bubble_0043 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -700,7 +700,7 @@ return {
 		}
 	},
 	CB_bubble_0045 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			30,
 			20
@@ -726,7 +726,7 @@ return {
 		}
 	},
 	CB_smoke_0001 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			80
@@ -753,7 +753,7 @@ return {
 		}
 	},
 	CB_smoke_0004 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			80
@@ -780,7 +780,7 @@ return {
 		}
 	},
 	CB_smoke_0007 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			80
@@ -807,7 +807,7 @@ return {
 		}
 	},
 	CB_smoke_0010 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			80
@@ -834,7 +834,7 @@ return {
 		}
 	},
 	CB_smoke_0013 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			80
@@ -861,7 +861,7 @@ return {
 		}
 	},
 	CB_smoke_0016 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			80
@@ -888,7 +888,7 @@ return {
 		}
 	},
 	CB_smoke_0019 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			80
@@ -915,7 +915,7 @@ return {
 		}
 	},
 	CB_tree = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			106,
 			102
@@ -939,7 +939,7 @@ return {
 		alias = {}
 	},
 	CB_water_wave_0001 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			20
@@ -966,7 +966,7 @@ return {
 		}
 	},
 	CB_water_wave_0004 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			20
@@ -993,7 +993,7 @@ return {
 		}
 	},
 	CB_water_wave_0007 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			20
@@ -1020,7 +1020,7 @@ return {
 		}
 	},
 	CB_water_wave_0010 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			20
@@ -1047,7 +1047,7 @@ return {
 		}
 	},
 	CB_water_wave_0013 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			20
@@ -1074,7 +1074,7 @@ return {
 		}
 	},
 	CB_water_wave_0016 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			20
@@ -1101,7 +1101,7 @@ return {
 		}
 	},
 	CB_water_wave_0019 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			20
@@ -1128,7 +1128,7 @@ return {
 		}
 	},
 	CB_water_wave_0022 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			44,
 			20
@@ -1155,7 +1155,7 @@ return {
 		}
 	},
 	CB_yuyo_0001 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1181,7 +1181,7 @@ return {
 		}
 	},
 	CB_yuyo_0003 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1207,7 +1207,7 @@ return {
 		}
 	},
 	CB_yuyo_0005 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1233,7 +1233,7 @@ return {
 		}
 	},
 	CB_yuyo_0007 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1259,7 +1259,7 @@ return {
 		}
 	},
 	CB_yuyo_0009 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1285,7 +1285,7 @@ return {
 		}
 	},
 	CB_yuyo_0011 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1311,7 +1311,7 @@ return {
 		}
 	},
 	CB_yuyo_0013 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1337,7 +1337,7 @@ return {
 		}
 	},
 	CB_yuyo_0015 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1363,7 +1363,7 @@ return {
 		}
 	},
 	CB_yuyo_0017 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1389,7 +1389,7 @@ return {
 		}
 	},
 	CB_yuyo_0019 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1415,7 +1415,7 @@ return {
 		}
 	},
 	CB_yuyo_0021 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1441,7 +1441,7 @@ return {
 		}
 	},
 	CB_yuyo_0023 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1467,7 +1467,7 @@ return {
 		}
 	},
 	CB_yuyo_0025 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1493,7 +1493,7 @@ return {
 		}
 	},
 	CB_yuyo_0027 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1519,7 +1519,7 @@ return {
 		}
 	},
 	CB_yuyo_0029 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1545,7 +1545,7 @@ return {
 		}
 	},
 	CB_yuyo_0031 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1571,7 +1571,7 @@ return {
 		}
 	},
 	CB_yuyo_0033 = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			24,
 			34
@@ -1597,7 +1597,7 @@ return {
 		}
 	},
 	blue_flag = {
-		a_name = "go_stages_blackburn-1.png",
+		a_name = "go_stages_blackburn-1.dds",
 		size = {
 			50,
 			64

@@ -2,7 +2,7 @@
 
 return {
 	["Stage1.5_BolsoChicken_0001"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			25,
 			25
@@ -30,7 +30,7 @@ return {
 		}
 	},
 	["Stage1.5_BolsoChicken_0004"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			25,
 			25
@@ -56,7 +56,7 @@ return {
 		}
 	},
 	["Stage1.5_BolsoChicken_0006"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			25,
 			25
@@ -82,7 +82,7 @@ return {
 		}
 	},
 	["Stage1.5_BolsoChicken_0008"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			25,
 			25
@@ -108,7 +108,7 @@ return {
 		}
 	},
 	["Stage1.5_BolsoChicken_0010"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			25,
 			25
@@ -134,7 +134,7 @@ return {
 		}
 	},
 	["Stage1.5_BolsoChicken_0012"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			25,
 			25
@@ -160,7 +160,7 @@ return {
 		}
 	},
 	["Stage1.5_BolsoChicken_0014"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			25,
 			25
@@ -186,7 +186,7 @@ return {
 		}
 	},
 	["Stage1.5_BolsoChicken_0016"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			25,
 			25
@@ -212,7 +212,7 @@ return {
 		}
 	},
 	["Stage1.5_StargateOver"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -236,7 +236,7 @@ return {
 		alias = {}
 	},
 	["Stage1.5_Stargate_0001"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -262,7 +262,7 @@ return {
 		}
 	},
 	["Stage1.5_Stargate_0003"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -286,7 +286,7 @@ return {
 		alias = {}
 	},
 	["Stage1.5_Stargate_0004"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -317,7 +317,7 @@ return {
 		}
 	},
 	["Stage1.5_Stargate_0011"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -341,7 +341,7 @@ return {
 		alias = {}
 	},
 	["Stage1.5_Stargate_0012"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -372,7 +372,7 @@ return {
 		}
 	},
 	["Stage1.5_Stargate_0019"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -404,7 +404,7 @@ return {
 		}
 	},
 	["Stage1.5_Stargate_0027"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -436,7 +436,7 @@ return {
 		}
 	},
 	["Stage1.5_Stargate_0035"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -468,7 +468,7 @@ return {
 		}
 	},
 	["Stage1.5_Stargate_0043"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -514,7 +514,7 @@ return {
 		}
 	},
 	["Stage1.5_Stargate_0063"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -544,7 +544,7 @@ return {
 		}
 	},
 	["Stage1.5_Stargate_0066"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -571,7 +571,7 @@ return {
 		}
 	},
 	["Stage1.5_Stargate_0072"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -597,7 +597,7 @@ return {
 		}
 	},
 	["Stage1.5_Stargate_0074"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -624,7 +624,7 @@ return {
 		}
 	},
 	["Stage1.5_Stargate_0079"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -648,7 +648,7 @@ return {
 		alias = {}
 	},
 	["Stage1.5_Stargate_0080"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -672,7 +672,7 @@ return {
 		alias = {}
 	},
 	["Stage1.5_Stargate_0081"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -698,7 +698,7 @@ return {
 		}
 	},
 	["Stage1.5_Stargate_0083"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -724,7 +724,7 @@ return {
 		}
 	},
 	["Stage1.5_Stargate_0085"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152
@@ -748,7 +748,7 @@ return {
 		alias = {}
 	},
 	["Stage1.5_Stargate_0086"] = {
-		a_name = "go_stage28-1.png",
+		a_name = "go_stage28-1.dds",
 		size = {
 			200,
 			152

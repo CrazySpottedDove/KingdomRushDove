@@ -1,6 +1,6 @@
 return {
 	["ghost_tower_buff_skill_back_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_back_0016"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			213
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_buff_skill_front_0016"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			82
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_build"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			178,
 			139
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_hit_fx_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			107,
 			102
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_hit_fx_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			107,
 			102
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_hit_fx_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			107,
 			102
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_hit_fx_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			107,
 			102
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_hit_fx_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			107,
 			102
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_hit_fx_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			107,
 			102
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			247
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0016"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0017"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0018"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0019"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0020"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0021"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0022"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0023"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0024"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0025"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0026"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0027"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0028"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0029"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0030"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0031"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0032"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0033"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0034"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0035"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_shadow_fx_0036"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			201,
 			144
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_tower_spawn_fx_0016"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			85,
 			178
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0016"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0017"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0018"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0019"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0020"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0021"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0022"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0023"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0024"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0025"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0026"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0027"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0028"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0029"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0030"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0031"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0032"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0033"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0034"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0035"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0036"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0037"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0038"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0039"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0040"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0041"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0042"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0043"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0044"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0045"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0046"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0047"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0048"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0049"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0050"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0051"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0052"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0053"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0054"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0055"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0056"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0057"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0058"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0059"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0060"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0061"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0062"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0063"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0064"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0065"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0066"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0067"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0068"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0069"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0070"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0071"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0072"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0073"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0074"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0075"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0076"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0077"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0078"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0079"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0080"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0081"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0082"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0083"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0084"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0085"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0086"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0087"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0088"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0089"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0090"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0091"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0092"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0093"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0094"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0095"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0096"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0097"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0098"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0099"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0100"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0101"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0102"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0103"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0104"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0105"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0106"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0107"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0108"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0109"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0110"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0111"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0112"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0113"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0114"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0115"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0116"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0117"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0118"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0119"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0120"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0121"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0122"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0123"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0124"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0125"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0126"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0127"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0128"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0129"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0130"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0131"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0132"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0133"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0134"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0135"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0136"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0137"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0138"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0139"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0140"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0141"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0142"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0143"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0144"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_lvl4_unit_0145"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			156,
 			195
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_preview"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			181,
 			170
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0016"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0017"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_0018"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			93,
 			272
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0016"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0017"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0018"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0019"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0020"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0021"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0022"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0023"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0024"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0025"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0026"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0027"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_0028"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			99,
 			88
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0016"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0017"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0018"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0019"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0020"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0021"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0022"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0023"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0024"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0025"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0026"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0027"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_big_0028"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			130,
 			96
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0016"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0017"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0018"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0019"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0020"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0021"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0022"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0023"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0024"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0025"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0026"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0027"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_enemy_fx_bigger_0028"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			150,
 			82
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_hit_fx_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			96,
 			102
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_hit_fx_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			96,
 			102
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_hit_fx_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			96,
 			102
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_hit_fx_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			96,
 			102
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_hit_fx_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			96,
 			102
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_hit_fx_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			96,
 			102
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_hit_fx_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			96,
 			102
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_hit_fx_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			96,
 			102
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_hit_fx_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			96,
 			102
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_hit_fx_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			96,
 			102
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_projectile"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			53,
 			48
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_projectile_particle_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			56,
 			51
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_projectile_particle_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			56,
 			51
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_projectile_particle_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			56,
 			51
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_projectile_particle_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			56,
 			51
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_projectile_particle_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			56,
 			51
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_projectile_particle_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			56,
 			51
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_projectile_particle_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			56,
 			51
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_projectile_particle_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			56,
 			51
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_projectile_particle_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			56,
 			51
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_projectile_particle_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			56,
 			51
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_projectile_particle_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			56,
 			51
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_projectile_particle_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			56,
 			51
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_soul_skill_projectile_particle_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			56,
 			51
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_spawn_trail_particle_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			73,
 			68
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_back"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			161,
 			105
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_front"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			161,
 			110
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0016"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0017"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0018"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0019"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0020"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0021"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0022"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0023"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0024"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0025"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0026"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0027"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_fx_0028"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			190,
 			122
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0016"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0017"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0018"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0019"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0020"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0021"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0022"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0023"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0024"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0025"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0026"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0027"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0028"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0029"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_swap_indicator_particles_0030"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			164,
 			161
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0016"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0017"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0018"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0019"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_in_0020"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			281,
 			272
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0016"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0017"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0018"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0019"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_teleport_fx_out_0020"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			295,
 			272
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0001"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0002"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0003"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0004"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0005"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0006"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0007"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0008"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0009"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0010"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0011"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0012"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0013"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0014"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0015"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0016"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0017"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0018"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0019"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0020"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0021"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0022"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0023"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["ghost_tower_unit_spawn_fx_0024"] = {
-		a_name = "go_towers_ghost-1.png",
+		a_name = "go_towers_ghost-1.dds",
 		size = {
 			144,
 			161

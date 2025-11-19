@@ -2,7 +2,7 @@
 
 return {
 	boss_GulThak_0001 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0002 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0003 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0004 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0005 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0006 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0007 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0008 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0009 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0010 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0011 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0012 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0013 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0014 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0015 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0016 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0017 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -410,7 +410,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0018 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -434,7 +434,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0019 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0020 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -482,7 +482,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0021 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -506,7 +506,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0022 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0023 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -554,7 +554,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0024 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -578,7 +578,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0025 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -602,7 +602,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0026 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -626,7 +626,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0027 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -650,7 +650,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0028 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -674,7 +674,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0029 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -698,7 +698,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0030 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -722,7 +722,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0031 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -746,7 +746,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0032 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -770,7 +770,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0033 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -794,7 +794,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0034 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -818,7 +818,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0035 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -853,7 +853,7 @@ return {
 		}
 	},
 	boss_GulThak_0038 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -879,7 +879,7 @@ return {
 		}
 	},
 	boss_GulThak_0040 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -905,7 +905,7 @@ return {
 		}
 	},
 	boss_GulThak_0042 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -932,7 +932,7 @@ return {
 		}
 	},
 	boss_GulThak_0045 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -958,7 +958,7 @@ return {
 		}
 	},
 	boss_GulThak_0047 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -984,7 +984,7 @@ return {
 		}
 	},
 	boss_GulThak_0049 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1010,7 +1010,7 @@ return {
 		}
 	},
 	boss_GulThak_0051 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1036,7 +1036,7 @@ return {
 		}
 	},
 	boss_GulThak_0058 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1062,7 +1062,7 @@ return {
 		}
 	},
 	boss_GulThak_0060 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1088,7 +1088,7 @@ return {
 		}
 	},
 	boss_GulThak_0062 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -1116,7 +1116,7 @@ return {
 		}
 	},
 	boss_GulThak_0066 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1140,7 +1140,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0067 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1164,7 +1164,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0068 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1188,7 +1188,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0069 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1212,7 +1212,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0070 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1236,7 +1236,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0071 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1260,7 +1260,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0072 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1284,7 +1284,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0073 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1308,7 +1308,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0074 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1332,7 +1332,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0075 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1356,7 +1356,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0076 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1380,7 +1380,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0077 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1404,7 +1404,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0078 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1428,7 +1428,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0079 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1452,7 +1452,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0080 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1476,7 +1476,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0081 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1500,7 +1500,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0082 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1524,7 +1524,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0083 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1548,7 +1548,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0084 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1572,7 +1572,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0085 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1596,7 +1596,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0086 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			340,
 			196
@@ -1620,7 +1620,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0090 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -1644,7 +1644,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0091 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			340,
 			196
@@ -1670,7 +1670,7 @@ return {
 		}
 	},
 	boss_GulThak_0093 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1694,7 +1694,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0094 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1718,7 +1718,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0095 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1742,7 +1742,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0096 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1766,7 +1766,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0097 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1790,7 +1790,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0098 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1814,7 +1814,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0099 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1840,7 +1840,7 @@ return {
 		}
 	},
 	boss_GulThak_0101 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1866,7 +1866,7 @@ return {
 		}
 	},
 	boss_GulThak_0103 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1892,7 +1892,7 @@ return {
 		}
 	},
 	boss_GulThak_0105 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1916,7 +1916,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0106 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1942,7 +1942,7 @@ return {
 		}
 	},
 	boss_GulThak_0108 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1966,7 +1966,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0109 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -1990,7 +1990,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0110 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -2014,7 +2014,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0111 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -2038,7 +2038,7 @@ return {
 		alias = {}
 	},
 	boss_GulThak_0112 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -2064,7 +2064,7 @@ return {
 		}
 	},
 	boss_GulThak_0114 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -2090,7 +2090,7 @@ return {
 		}
 	},
 	boss_GulThak_0116 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -2116,7 +2116,7 @@ return {
 		}
 	},
 	boss_GulThak_0118 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			340,
 			196
@@ -2146,7 +2146,7 @@ return {
 		}
 	},
 	orc_burner_0001 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			46,
 			52
@@ -2176,7 +2176,7 @@ return {
 		}
 	},
 	orc_burner_0003 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			46,
 			52
@@ -2204,7 +2204,7 @@ return {
 		}
 	},
 	orc_burner_0005 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			46,
 			52
@@ -2232,7 +2232,7 @@ return {
 		}
 	},
 	orc_burner_0007 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			46,
 			52
@@ -2260,7 +2260,7 @@ return {
 		}
 	},
 	orc_burner_0009 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			46,
 			52
@@ -2288,7 +2288,7 @@ return {
 		}
 	},
 	orc_burner_0011 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			46,
 			52
@@ -2314,7 +2314,7 @@ return {
 		}
 	},
 	orc_flag_0001 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			62,
 			126
@@ -2340,7 +2340,7 @@ return {
 		}
 	},
 	orc_flag_0003 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			62,
 			126
@@ -2366,7 +2366,7 @@ return {
 		}
 	},
 	orc_flag_0005 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			62,
 			126
@@ -2393,7 +2393,7 @@ return {
 		}
 	},
 	orc_flag_0008 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			62,
 			126
@@ -2419,7 +2419,7 @@ return {
 		}
 	},
 	orc_flag_0010 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			62,
 			126
@@ -2446,7 +2446,7 @@ return {
 		}
 	},
 	orc_flag_0013 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			62,
 			126
@@ -2472,7 +2472,7 @@ return {
 		}
 	},
 	orc_flag_0015 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			62,
 			126
@@ -2499,7 +2499,7 @@ return {
 		}
 	},
 	orc_ruins_0001 = {
-		a_name = "go_stage14-2.png",
+		a_name = "go_stage14-2.dds",
 		size = {
 			88,
 			96
@@ -2525,7 +2525,7 @@ return {
 		}
 	},
 	orc_ruins_0002 = {
-		a_name = "go_stage14-1.png",
+		a_name = "go_stage14-1.dds",
 		size = {
 			88,
 			96
@@ -2551,7 +2551,7 @@ return {
 		}
 	},
 	stage14_flag_0001 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			62,
 			126
@@ -2577,7 +2577,7 @@ return {
 		}
 	},
 	stage14_flag_0003 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			62,
 			126
@@ -2603,7 +2603,7 @@ return {
 		}
 	},
 	stage14_flag_0005 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			62,
 			126
@@ -2630,7 +2630,7 @@ return {
 		}
 	},
 	stage14_flag_0008 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			62,
 			126
@@ -2656,7 +2656,7 @@ return {
 		}
 	},
 	stage14_flag_0010 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			62,
 			126
@@ -2683,7 +2683,7 @@ return {
 		}
 	},
 	stage14_flag_0013 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			62,
 			126
@@ -2709,7 +2709,7 @@ return {
 		}
 	},
 	stage14_flag_0015 = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			62,
 			126
@@ -2736,7 +2736,7 @@ return {
 		}
 	},
 	stage14_wall = {
-		a_name = "go_stage14-3.png",
+		a_name = "go_stage14-3.dds",
 		size = {
 			142,
 			230

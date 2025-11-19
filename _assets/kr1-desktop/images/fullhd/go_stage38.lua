@@ -2,7 +2,7 @@
 
 return {
 	Stage12_0002 = {
-		a_name = "go_stage38-1.png",
+		a_name = "go_stage38-1.dds",
 		size = {
 			1980,
 			1080
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	Stage12_0003 = {
-		a_name = "go_stage38-1.png",
+		a_name = "go_stage38-1.dds",
 		size = {
 			1980,
 			1080
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	Stage12_0004 = {
-		a_name = "go_stage38-1.png",
+		a_name = "go_stage38-1.dds",
 		size = {
 			1980,
 			1080
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	Stage12_0005 = {
-		a_name = "go_stage38-1.png",
+		a_name = "go_stage38-1.dds",
 		size = {
 			1980,
 			1080
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	Stage12_0006 = {
-		a_name = "go_stage38-1.png",
+		a_name = "go_stage38-1.dds",
 		size = {
 			1980,
 			1080

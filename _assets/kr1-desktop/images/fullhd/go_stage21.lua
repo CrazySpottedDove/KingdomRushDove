@@ -2,7 +2,7 @@
 
 return {
 	InfernoGroundPortal_0001 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			192,
 			106
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	InfernoGroundPortal_0003 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			192,
 			106
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	InfernoGroundPortal_0005 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			192,
 			106
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	InfernoGroundPortal_0007 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			192,
 			106
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	InfernoGroundPortal_0009 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			192,
 			106
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	InfernoGroundPortal_0011 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			192,
 			106
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	InfernoGroundPortal_0013 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			192,
 			106
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	InfernoGroundPortal_0015 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			192,
 			106
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	InfernoPortal_0001 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			174,
 			190
@@ -237,7 +237,7 @@ return {
 		}
 	},
 	InfernoPortal_0004 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			174,
 			190
@@ -264,7 +264,7 @@ return {
 		}
 	},
 	InfernoPortal_0007 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			174,
 			190
@@ -291,7 +291,7 @@ return {
 		}
 	},
 	InfernoPortal_0010 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			174,
 			190
@@ -318,7 +318,7 @@ return {
 		}
 	},
 	InfernoPortal_0013 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			174,
 			190
@@ -345,7 +345,7 @@ return {
 		}
 	},
 	InfernoPortal_0016 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			174,
 			190
@@ -372,7 +372,7 @@ return {
 		}
 	},
 	InfernoPortal_0019 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			174,
 			190
@@ -399,7 +399,7 @@ return {
 		}
 	},
 	InfernoPortal_0022 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			174,
 			190
@@ -426,7 +426,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0001 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -452,7 +452,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0003 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -478,7 +478,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0005 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -504,7 +504,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0007 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -530,7 +530,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0009 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -556,7 +556,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0011 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -582,7 +582,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0013 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -608,7 +608,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0015 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -634,7 +634,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0017 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -660,7 +660,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0019 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -686,7 +686,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0021 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -712,7 +712,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0023 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -738,7 +738,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0025 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -764,7 +764,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0027 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -790,7 +790,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0029 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -816,7 +816,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0031 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -842,7 +842,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0033 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -868,7 +868,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0035 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -894,7 +894,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0037 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -920,7 +920,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0039 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -946,7 +946,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0041 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -972,7 +972,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0043 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -998,7 +998,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0045 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -1024,7 +1024,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0047 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -1050,7 +1050,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0049 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -1076,7 +1076,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0051 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -1102,7 +1102,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0053 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -1128,7 +1128,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0055 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -1154,7 +1154,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0057 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -1180,7 +1180,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0059 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -1206,7 +1206,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0061 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -1232,7 +1232,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0063 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -1258,7 +1258,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0065 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1284,7 +1284,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0067 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1308,7 +1308,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0068 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1332,7 +1332,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0069 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1356,7 +1356,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0070 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1380,7 +1380,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0071 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1404,7 +1404,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0072 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1428,7 +1428,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0073 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -1454,7 +1454,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0075 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -1480,7 +1480,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0077 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			282,
 			282
@@ -1506,7 +1506,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0079 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1535,7 +1535,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0084 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1561,7 +1561,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0086 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1587,7 +1587,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0088 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1613,7 +1613,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0090 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1639,7 +1639,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0092 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -1665,7 +1665,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0094 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1691,7 +1691,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0096 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1715,7 +1715,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0097 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -1741,7 +1741,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0099 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -1765,7 +1765,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0100 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -1789,7 +1789,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0101 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1815,7 +1815,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0103 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -1841,7 +1841,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0105 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1867,7 +1867,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0107 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1893,7 +1893,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0109 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1917,7 +1917,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0110 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1943,7 +1943,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0112 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1969,7 +1969,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0114 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -1995,7 +1995,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0116 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -2019,7 +2019,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0117 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -2043,7 +2043,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0118 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -2067,7 +2067,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0119 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -2091,7 +2091,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0120 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -2115,7 +2115,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0121 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -2139,7 +2139,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0122 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -2163,7 +2163,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0123 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -2187,7 +2187,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0124 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2213,7 +2213,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0126 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2239,7 +2239,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0128 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2263,7 +2263,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0129 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2287,7 +2287,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0130 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2311,7 +2311,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0131 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2335,7 +2335,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0132 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2361,7 +2361,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0134 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2387,7 +2387,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0136 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2411,7 +2411,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0137 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2435,7 +2435,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0138 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2459,7 +2459,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0139 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2483,7 +2483,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0140 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2507,7 +2507,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0141 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2531,7 +2531,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0142 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2555,7 +2555,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0143 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2579,7 +2579,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0144 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2605,7 +2605,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0146 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -2631,7 +2631,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0148 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -2657,7 +2657,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0150 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -2683,7 +2683,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0152 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -2707,7 +2707,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0153 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			282,
 			282
@@ -2733,7 +2733,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0155 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -2759,7 +2759,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0157 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -2785,7 +2785,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0159 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -2811,7 +2811,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0161 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -2835,7 +2835,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0162 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -2859,7 +2859,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0163 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -2885,7 +2885,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0165 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -2911,7 +2911,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0167 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -2935,7 +2935,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0168 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -2959,7 +2959,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0169 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -2985,7 +2985,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0171 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -3011,7 +3011,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0173 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -3035,7 +3035,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0174 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -3059,7 +3059,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0175 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -3085,7 +3085,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0177 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -3111,7 +3111,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0179 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -3135,7 +3135,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0180 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -3159,7 +3159,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0181 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -3185,7 +3185,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0183 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -3211,7 +3211,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0185 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -3235,7 +3235,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0186 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -3259,7 +3259,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0187 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -3285,7 +3285,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0189 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -3311,7 +3311,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0191 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -3335,7 +3335,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0192 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -3359,7 +3359,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0193 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -3385,7 +3385,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0195 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -3411,7 +3411,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0197 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -3435,7 +3435,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0198 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -3459,7 +3459,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0199 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3485,7 +3485,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0201 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			282,
 			282
@@ -3511,7 +3511,7 @@ return {
 		}
 	},
 	Inferno_Moloch_0203 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -3535,7 +3535,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0204 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -3559,7 +3559,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0205 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3583,7 +3583,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0206 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3607,7 +3607,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0207 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -3631,7 +3631,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0208 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			282,
 			282
@@ -3655,7 +3655,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0209 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3679,7 +3679,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0210 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3703,7 +3703,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0211 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -3727,7 +3727,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0212 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -3751,7 +3751,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0213 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3775,7 +3775,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0214 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3799,7 +3799,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0215 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3823,7 +3823,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0216 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3847,7 +3847,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0217 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3871,7 +3871,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0218 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3895,7 +3895,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0219 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3919,7 +3919,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0220 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3943,7 +3943,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0221 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3967,7 +3967,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0222 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -3991,7 +3991,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0223 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -4015,7 +4015,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0224 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -4039,7 +4039,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0225 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -4063,7 +4063,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0226 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -4087,7 +4087,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0227 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -4111,7 +4111,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0228 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -4135,7 +4135,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0229 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -4159,7 +4159,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0230 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -4183,7 +4183,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0231 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			282,
 			282
@@ -4207,7 +4207,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_0232 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			282,
 			282
@@ -4231,7 +4231,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Ring_0001 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			170,
 			88
@@ -4255,7 +4255,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Ring_0002 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			170,
 			88
@@ -4279,7 +4279,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Ring_0003 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			170,
 			88
@@ -4303,7 +4303,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Ring_0004 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			170,
 			88
@@ -4327,7 +4327,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Ring_0005 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			170,
 			88
@@ -4351,7 +4351,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Ring_0006 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			170,
 			88
@@ -4375,7 +4375,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Ring_0007 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			170,
 			88
@@ -4399,7 +4399,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Ring_0008 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			170,
 			88
@@ -4423,7 +4423,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Ring_0009 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			170,
 			88
@@ -4447,7 +4447,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Ring_0010 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			170,
 			88
@@ -4471,7 +4471,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Ring_0011 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			170,
 			88
@@ -4495,7 +4495,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Rocks_0001 = {
-		a_name = "go_stage21-1.png",
+		a_name = "go_stage21-1.dds",
 		size = {
 			100,
 			94
@@ -4519,7 +4519,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Rocks_0002 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			100,
 			94
@@ -4543,7 +4543,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Rocks_0003 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			100,
 			94
@@ -4569,7 +4569,7 @@ return {
 		}
 	},
 	Inferno_Moloch_Rocks_0005 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			100,
 			94
@@ -4595,7 +4595,7 @@ return {
 		}
 	},
 	Inferno_Moloch_Rocks_0007 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			100,
 			94
@@ -4621,7 +4621,7 @@ return {
 		}
 	},
 	Inferno_Moloch_Rocks_0009 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			100,
 			94
@@ -4647,7 +4647,7 @@ return {
 		}
 	},
 	Inferno_Moloch_Rocks_0011 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			100,
 			94
@@ -4671,7 +4671,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Rocks_0012 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			100,
 			94
@@ -4695,7 +4695,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Rocks_0013 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			100,
 			94
@@ -4719,7 +4719,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Rocks_0014 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			100,
 			94
@@ -4743,7 +4743,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Rocks_0015 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			100,
 			94
@@ -4767,7 +4767,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Rocks_0016 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			100,
 			94
@@ -4791,7 +4791,7 @@ return {
 		alias = {}
 	},
 	Inferno_Moloch_Rocks_0017 = {
-		a_name = "go_stage21-3.png",
+		a_name = "go_stage21-3.dds",
 		size = {
 			100,
 			94
@@ -4815,7 +4815,7 @@ return {
 		alias = {}
 	},
 	Inferno_Stg21_HellBoy_0001 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			116,
 			58
@@ -4841,7 +4841,7 @@ return {
 		}
 	},
 	Inferno_Stg21_HellBoy_0003 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			116,
 			58
@@ -4867,7 +4867,7 @@ return {
 		}
 	},
 	Inferno_Stg21_HellBoy_0005 = {
-		a_name = "go_stage21-4.png",
+		a_name = "go_stage21-4.dds",
 		size = {
 			116,
 			58
@@ -4893,7 +4893,7 @@ return {
 		}
 	},
 	Inferno_Stg21_HellBoy_0007 = {
-		a_name = "go_stage21-5.png",
+		a_name = "go_stage21-5.dds",
 		size = {
 			116,
 			58
@@ -4919,7 +4919,7 @@ return {
 		}
 	},
 	Inferno_Stg21_Veznan_0001 = {
-		a_name = "go_stage21-6.png",
+		a_name = "go_stage21-6.dds",
 		size = {
 			156,
 			254
@@ -4943,7 +4943,7 @@ return {
 		alias = {}
 	},
 	Inferno_Stg21_Veznan_0002 = {
-		a_name = "go_stage21-2.png",
+		a_name = "go_stage21-2.dds",
 		size = {
 			156,
 			254

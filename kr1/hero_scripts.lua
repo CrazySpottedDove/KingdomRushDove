@@ -7657,6 +7657,7 @@ scripts.hero_monk = {
 
                         d.source_id = this.id
                         d.target_id = target.id
+                        d.damage_type = a.damage_type
                         d.value = (math.random(a.damage_min, a.damage_max) + this.damage_buff) * this.unit.damage_factor
 
                         queue_damage(store, d)

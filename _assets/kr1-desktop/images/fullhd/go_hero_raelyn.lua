@@ -1,6 +1,6 @@
 return {
 	["hero_raelyn_brutal_slash_decal"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			119,
 			68
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0001"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0002"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0003"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0004"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0005"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0006"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0007"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0008"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0009"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0010"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0011"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0012"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0013"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0014"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0015"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0016"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0017"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0018"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0019"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0020"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0021"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0022"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0023"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0024"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0025"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0026"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0027"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0028"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0029"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0030"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0031"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0032"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0033"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0034"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0035"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0036"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0037"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0038"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0039"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0040"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0041"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0042"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0043"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0044"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0045"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0046"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0047"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0048"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0049"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0050"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0051"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0052"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0053"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0054"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0055"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0056"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0057"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0058"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0059"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0060"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0061"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0062"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0063"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0064"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0065"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0066"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0067"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0068"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0069"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0070"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0071"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0072"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0073"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0074"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0075"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0076"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0077"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0078"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0079"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0080"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0081"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0082"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0083"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0084"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0085"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0086"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0087"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0088"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0089"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0090"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0091"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0092"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0093"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0094"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0095"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0096"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0097"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0098"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0099"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0100"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0101"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0102"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0103"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0104"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0105"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0106"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0107"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0108"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0109"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0110"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0111"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0112"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0113"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0114"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0115"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0116"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0117"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0118"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0119"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0120"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0121"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0122"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0123"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0124"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0125"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0126"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0127"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0128"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0129"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0130"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0131"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_dark_knight_0132"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			224,
 			261
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_hit_fx_0001"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			150,
 			142
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_hit_fx_0002"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			150,
 			142
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_hit_fx_0003"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			150,
 			142
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_hit_fx_0004"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			150,
 			142
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_hit_fx_0005"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			150,
 			142
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_hit_fx_0006"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			150,
 			142
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0001"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0002"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0003"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0004"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0005"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0006"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0007"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0008"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0009"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0010"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0011"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0012"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0013"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0014"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0015"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0016"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0017"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0018"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0019"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0020"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_command_orders_spawn_fx_0021"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			167,
 			284
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0001"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0002"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0003"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0004"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0005"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0006"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0007"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0008"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0009"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0010"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0011"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0012"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0013"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0014"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0015"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0016"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0017"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0018"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0019"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0020"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0021"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0022"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0023"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0024"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0025"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0026"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0027"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0028"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0029"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0030"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0031"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0032"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0033"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0034"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0035"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0036"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0037"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0038"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0039"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0040"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0041"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0042"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0043"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0044"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0045"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0046"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0047"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0048"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0049"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0050"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0051"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0052"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0053"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0054"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0055"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0056"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0057"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0058"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0059"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0060"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0061"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0062"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0063"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0064"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0065"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0066"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0067"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0068"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0069"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0070"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0071"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0072"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0073"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0074"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0075"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0076"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0077"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0078"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0079"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0080"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0081"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0082"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0083"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0084"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0085"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0086"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0087"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0088"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0089"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0090"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0091"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0092"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0093"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0094"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0095"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0096"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0097"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0098"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0099"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0100"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0101"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0102"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0103"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0104"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0105"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0106"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0107"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0108"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0109"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0110"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0111"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0112"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0113"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0114"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0115"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0116"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0117"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0118"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0119"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0120"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0121"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0122"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0123"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0124"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0125"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0126"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0127"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0128"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0129"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0130"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0131"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0132"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0133"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0134"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0135"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0136"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0137"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0138"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0139"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0140"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0141"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0142"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0143"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0144"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0145"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0146"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0147"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0148"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0149"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0150"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0151"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0152"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0153"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0154"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0155"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0156"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0157"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0158"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0159"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0160"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0161"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0162"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0163"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0164"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0165"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0166"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0167"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0168"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0169"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0170"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0171"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0172"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0173"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0174"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0175"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0176"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0177"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0178"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0179"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0180"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0181"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0182"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0183"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0184"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0185"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0186"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0187"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0188"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0189"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0190"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0191"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0192"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0193"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0194"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0195"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0196"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0197"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0198"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0199"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0200"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0201"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0202"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0203"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0204"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0205"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0206"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0207"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0208"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0209"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0210"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0211"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0212"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0213"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0214"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0215"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0216"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0217"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0218"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0219"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0220"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0221"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0222"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0223"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0224"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0225"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0226"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0227"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0228"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0229"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0230"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0231"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0232"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0233"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0234"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0235"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0236"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0237"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0238"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0239"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0240"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0241"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0242"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0243"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0244"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0245"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0246"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0247"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0248"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0249"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0250"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0251"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0252"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0253"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0254"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0255"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0256"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0257"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0258"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0259"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0260"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0261"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0262"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0263"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0264"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0265"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0266"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0267"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0268"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0269"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0270"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0271"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0272"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0273"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0274"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0275"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0276"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0277"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0278"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0279"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0280"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0281"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0282"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0283"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0284"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0285"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0286"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0287"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0288"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0289"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0290"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0291"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0292"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0293"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0294"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0295"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0296"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0297"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0298"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0299"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0300"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_hero_0301"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			272,
 			221
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0001"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0002"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0003"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0004"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0005"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0006"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0007"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0008"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0009"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0010"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0011"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0012"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0013"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0014"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0015"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0016"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0017"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0018"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0019"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0020"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0021"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0022"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0023"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0024"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0025"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0026"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0027"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0028"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0029"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0030"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0031"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_0032"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			124,
 			167
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0001"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0002"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0003"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0004"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0005"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0006"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0007"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0008"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0009"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0010"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0011"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0012"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0013"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0014"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0015"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_decal_head_0016"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			119
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0001"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0002"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0003"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0004"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0005"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0006"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0007"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0008"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0009"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0010"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0011"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0012"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0013"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0014"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0015"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0016"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0017"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0018"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0019"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0020"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0021"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0022"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0023"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0024"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0025"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0026"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0027"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0028"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0029"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0030"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_inspire_fear_fx_area_0031"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			190,
 			116
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_melee_attack_hit_0001"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			105
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_melee_attack_hit_0002"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			105
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_melee_attack_hit_0003"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			105
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_melee_attack_hit_0004"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			105
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_melee_attack_hit_0005"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			105
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_melee_attack_hit_0006"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			110,
 			105
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_onslaught_fx_0001"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			210,
 			130
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_onslaught_fx_0002"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			210,
 			130
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_onslaught_fx_0003"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			210,
 			130
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_onslaught_fx_0004"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			210,
 			130
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_onslaught_fx_0005"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			210,
 			130
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_onslaught_fx_0006"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			210,
 			130
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_onslaught_fx_0007"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			210,
 			130
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_onslaught_fx_0008"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			210,
 			130
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_onslaught_fx_0009"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			210,
 			130
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_onslaught_fx_0010"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			210,
 			130
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_onslaught_fx_0011"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			210,
 			130
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_onslaught_fx_0012"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			210,
 			130
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_onslaught_fx_0013"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			210,
 			130
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0001"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0002"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0003"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0004"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0005"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0006"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0007"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0008"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0009"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0010"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0011"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0012"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0013"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0014"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0015"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_fx_0016"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			204,
 			130
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_floor_glow"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			82,
 			53
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0001"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0002"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0003"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0004"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -13920,7 +13920,7 @@ return {
 		alias = {"hero_raelyn_unbreakable_shield_lvl1_0005"},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0006"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0007"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0008"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0009"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0010"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0011"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0012"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0013"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0014"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0015"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0016"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0017"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0018"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0019"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0020"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0021"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0022"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0023"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0024"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0025"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0026"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0027"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0028"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0029"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0030"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0031"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0032"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0033"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0034"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0035"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0036"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0037"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0038"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0039"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0040"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0041"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl1_0042"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			133,
 			164
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0001"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0002"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0003"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0004"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0005"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0006"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0007"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0008"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0009"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0010"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0011"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0012"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0013"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0014"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0015"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0016"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0017"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0018"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0019"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0020"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0021"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0022"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0023"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0024"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0025"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0026"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0027"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0028"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0029"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0030"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0031"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0032"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0033"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0034"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0035"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0036"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0037"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0038"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0039"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0040"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0041"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl2_0042"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			122,
 			153
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0001"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0002"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0003"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0004"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0005"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0006"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0007"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0008"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0009"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0010"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0011"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0012"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0013"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0014"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0015"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0016"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0017"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0018"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0019"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0020"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0021"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0022"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0023"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0024"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0025"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0026"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0027"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0028"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0029"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0030"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0031"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0032"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0033"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0034"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0035"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0036"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0037"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0038"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0039"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0040"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0041"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["hero_raelyn_unbreakable_shield_lvl3_0042"] = {
-		a_name = "go_hero_raelyn-1.png",
+		a_name = "go_hero_raelyn-1.dds",
 		size = {
 			130,
 			159

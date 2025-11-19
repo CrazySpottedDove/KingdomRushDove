@@ -2,7 +2,7 @@
 
 return {
 	DefenseFlag_water_0001 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -29,7 +29,7 @@ return {
 		}
 	},
 	DefenseFlag_water_0004 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -56,7 +56,7 @@ return {
 		}
 	},
 	DefenseFlag_water_0007 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -83,7 +83,7 @@ return {
 		}
 	},
 	DefenseFlag_water_0010 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -110,7 +110,7 @@ return {
 		}
 	},
 	DefenseFlag_water_0013 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -137,7 +137,7 @@ return {
 		}
 	},
 	DefenseFlag_water_0016 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -164,7 +164,7 @@ return {
 		}
 	},
 	DefenseFlag_water_0019 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -191,7 +191,7 @@ return {
 		}
 	},
 	DefenseFlag_water_0022 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -218,7 +218,7 @@ return {
 		}
 	},
 	DefenseFlag_water_0025 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -245,7 +245,7 @@ return {
 		}
 	},
 	DefenseFlag_water_0028 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -272,7 +272,7 @@ return {
 		}
 	},
 	DefenseFlag_water_0031 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -299,7 +299,7 @@ return {
 		}
 	},
 	DefenseFlag_water_0034 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -326,7 +326,7 @@ return {
 		}
 	},
 	DefenseFlag_water_0037 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -353,7 +353,7 @@ return {
 		}
 	},
 	DefenseFlag_water_0040 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -380,7 +380,7 @@ return {
 		}
 	},
 	DefenseFlag_water_0043 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			42,
 			76
@@ -407,7 +407,7 @@ return {
 		}
 	},
 	Stage18_0002 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			1980,
 			1080
@@ -431,7 +431,7 @@ return {
 		alias = {}
 	},
 	Stage18_barricade_0001 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			281,
 			225
@@ -455,7 +455,7 @@ return {
 		alias = {}
 	},
 	Stage18_barricade_0002 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			281,
 			225
@@ -481,7 +481,7 @@ return {
 		}
 	},
 	Stage18_barricade_0004 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			281,
 			225
@@ -507,7 +507,7 @@ return {
 		}
 	},
 	Stage18_barricade_0006 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			281,
 			225
@@ -533,7 +533,7 @@ return {
 		}
 	},
 	Stage18_barricade_0008 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			281,
 			225
@@ -559,7 +559,7 @@ return {
 		}
 	},
 	Stage18_barricade_0010 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			281,
 			225
@@ -585,7 +585,7 @@ return {
 		}
 	},
 	Stage18_barricade_0012 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			281,
 			225
@@ -611,7 +611,7 @@ return {
 		}
 	},
 	Stage18_barricade_0014 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			281,
 			225
@@ -637,7 +637,7 @@ return {
 		}
 	},
 	Stage18_barricade_0016 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			281,
 			225
@@ -663,7 +663,7 @@ return {
 		}
 	},
 	Stage18_barricade_0018 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			281,
 			225
@@ -689,7 +689,7 @@ return {
 		}
 	},
 	Stage18_barricade_0020 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			281,
 			225
@@ -715,7 +715,7 @@ return {
 		}
 	},
 	Stage18_barricade_0022 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			281,
 			225
@@ -741,7 +741,7 @@ return {
 		}
 	},
 	Stage18_barricade_0024 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			281,
 			225
@@ -767,7 +767,7 @@ return {
 		}
 	},
 	leviathan_0001 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -791,7 +791,7 @@ return {
 		alias = {}
 	},
 	leviathan_0002 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -817,7 +817,7 @@ return {
 		}
 	},
 	leviathan_0004 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -843,7 +843,7 @@ return {
 		}
 	},
 	leviathan_0006 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -869,7 +869,7 @@ return {
 		}
 	},
 	leviathan_0008 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -895,7 +895,7 @@ return {
 		}
 	},
 	leviathan_0010 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -921,7 +921,7 @@ return {
 		}
 	},
 	leviathan_0012 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -947,7 +947,7 @@ return {
 		}
 	},
 	leviathan_0014 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -973,7 +973,7 @@ return {
 		}
 	},
 	leviathan_0016 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -999,7 +999,7 @@ return {
 		}
 	},
 	leviathan_0018 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1025,7 +1025,7 @@ return {
 		}
 	},
 	leviathan_0020 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1051,7 +1051,7 @@ return {
 		}
 	},
 	leviathan_0022 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1077,7 +1077,7 @@ return {
 		}
 	},
 	leviathan_0024 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1103,7 +1103,7 @@ return {
 		}
 	},
 	leviathan_0026 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1127,7 +1127,7 @@ return {
 		alias = {}
 	},
 	leviathan_0027 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1151,7 +1151,7 @@ return {
 		alias = {}
 	},
 	leviathan_0028 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1177,7 +1177,7 @@ return {
 		}
 	},
 	leviathan_0030 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1203,7 +1203,7 @@ return {
 		}
 	},
 	leviathan_0032 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1229,7 +1229,7 @@ return {
 		}
 	},
 	leviathan_0034 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1255,7 +1255,7 @@ return {
 		}
 	},
 	leviathan_0036 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1281,7 +1281,7 @@ return {
 		}
 	},
 	leviathan_0038 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1307,7 +1307,7 @@ return {
 		}
 	},
 	leviathan_0040 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1333,7 +1333,7 @@ return {
 		}
 	},
 	leviathan_0042 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1359,7 +1359,7 @@ return {
 		}
 	},
 	leviathan_0044 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1385,7 +1385,7 @@ return {
 		}
 	},
 	leviathan_0046 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1411,7 +1411,7 @@ return {
 		}
 	},
 	leviathan_0048 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1438,7 +1438,7 @@ return {
 		}
 	},
 	leviathan_0051 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1465,7 +1465,7 @@ return {
 		}
 	},
 	leviathan_0054 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1492,7 +1492,7 @@ return {
 		}
 	},
 	leviathan_0057 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1519,7 +1519,7 @@ return {
 		}
 	},
 	leviathan_0060 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1546,7 +1546,7 @@ return {
 		}
 	},
 	leviathan_0063 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1573,7 +1573,7 @@ return {
 		}
 	},
 	leviathan_0066 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1600,7 +1600,7 @@ return {
 		}
 	},
 	leviathan_0069 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1627,7 +1627,7 @@ return {
 		}
 	},
 	leviathan_0072 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1653,7 +1653,7 @@ return {
 		}
 	},
 	leviathan_0074 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1679,7 +1679,7 @@ return {
 		}
 	},
 	leviathan_0076 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1705,7 +1705,7 @@ return {
 		}
 	},
 	leviathan_0078 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1731,7 +1731,7 @@ return {
 		}
 	},
 	leviathan_0080 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1757,7 +1757,7 @@ return {
 		}
 	},
 	leviathan_0082 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1783,7 +1783,7 @@ return {
 		}
 	},
 	leviathan_0084 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1809,7 +1809,7 @@ return {
 		}
 	},
 	leviathan_0086 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1835,7 +1835,7 @@ return {
 		}
 	},
 	leviathan_0088 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1861,7 +1861,7 @@ return {
 		}
 	},
 	leviathan_0090 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1887,7 +1887,7 @@ return {
 		}
 	},
 	leviathan_0092 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1913,7 +1913,7 @@ return {
 		}
 	},
 	leviathan_0094 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1939,7 +1939,7 @@ return {
 		}
 	},
 	leviathan_0096 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1965,7 +1965,7 @@ return {
 		}
 	},
 	leviathan_0098 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -1991,7 +1991,7 @@ return {
 		}
 	},
 	leviathan_0100 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2017,7 +2017,7 @@ return {
 		}
 	},
 	leviathan_0102 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2041,7 +2041,7 @@ return {
 		alias = {}
 	},
 	leviathan_0103 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2065,7 +2065,7 @@ return {
 		alias = {}
 	},
 	leviathan_0104 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2089,7 +2089,7 @@ return {
 		alias = {}
 	},
 	leviathan_0105 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2113,7 +2113,7 @@ return {
 		alias = {}
 	},
 	leviathan_0106 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2137,7 +2137,7 @@ return {
 		alias = {}
 	},
 	leviathan_0107 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2161,7 +2161,7 @@ return {
 		alias = {}
 	},
 	leviathan_0108 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2185,7 +2185,7 @@ return {
 		alias = {}
 	},
 	leviathan_0109 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2209,7 +2209,7 @@ return {
 		alias = {}
 	},
 	leviathan_0110 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2233,7 +2233,7 @@ return {
 		alias = {}
 	},
 	leviathan_0111 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2257,7 +2257,7 @@ return {
 		alias = {}
 	},
 	leviathan_0112 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2281,7 +2281,7 @@ return {
 		alias = {}
 	},
 	leviathan_0113 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2305,7 +2305,7 @@ return {
 		alias = {}
 	},
 	leviathan_0114 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2329,7 +2329,7 @@ return {
 		alias = {}
 	},
 	leviathan_0115 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2353,7 +2353,7 @@ return {
 		alias = {}
 	},
 	leviathan_0116 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2379,7 +2379,7 @@ return {
 		}
 	},
 	leviathan_0118 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2403,7 +2403,7 @@ return {
 		alias = {}
 	},
 	leviathan_0119 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2429,7 +2429,7 @@ return {
 		}
 	},
 	leviathan_0121 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2455,7 +2455,7 @@ return {
 		}
 	},
 	leviathan_0123 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2481,7 +2481,7 @@ return {
 		}
 	},
 	leviathan_0125 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2507,7 +2507,7 @@ return {
 		}
 	},
 	leviathan_0127 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2533,7 +2533,7 @@ return {
 		}
 	},
 	leviathan_0129 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2559,7 +2559,7 @@ return {
 		}
 	},
 	leviathan_0131 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2585,7 +2585,7 @@ return {
 		}
 	},
 	leviathan_0133 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2611,7 +2611,7 @@ return {
 		}
 	},
 	leviathan_0135 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2637,7 +2637,7 @@ return {
 		}
 	},
 	leviathan_0137 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2663,7 +2663,7 @@ return {
 		}
 	},
 	leviathan_0139 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2689,7 +2689,7 @@ return {
 		}
 	},
 	leviathan_0141 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2715,7 +2715,7 @@ return {
 		}
 	},
 	leviathan_0143 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2741,7 +2741,7 @@ return {
 		}
 	},
 	leviathan_0145 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2771,7 +2771,7 @@ return {
 		}
 	},
 	leviathan_0146 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2795,7 +2795,7 @@ return {
 		alias = {}
 	},
 	leviathan_0147 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2821,7 +2821,7 @@ return {
 		}
 	},
 	leviathan_0149 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2845,7 +2845,7 @@ return {
 		alias = {}
 	},
 	leviathan_0150 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2874,7 +2874,7 @@ return {
 		}
 	},
 	leviathan_0151 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2898,7 +2898,7 @@ return {
 		alias = {}
 	},
 	leviathan_0152 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2922,7 +2922,7 @@ return {
 		alias = {}
 	},
 	leviathan_0153 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2954,7 +2954,7 @@ return {
 		}
 	},
 	leviathan_0170 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -2981,7 +2981,7 @@ return {
 		}
 	},
 	leviathan_0173 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3008,7 +3008,7 @@ return {
 		}
 	},
 	leviathan_0176 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3035,7 +3035,7 @@ return {
 		}
 	},
 	leviathan_0179 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3062,7 +3062,7 @@ return {
 		}
 	},
 	leviathan_0182 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3089,7 +3089,7 @@ return {
 		}
 	},
 	leviathan_0185 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3116,7 +3116,7 @@ return {
 		}
 	},
 	leviathan_0188 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3143,7 +3143,7 @@ return {
 		}
 	},
 	leviathan_0191 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3169,7 +3169,7 @@ return {
 		}
 	},
 	leviathan_0193 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3195,7 +3195,7 @@ return {
 		}
 	},
 	leviathan_0195 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3221,7 +3221,7 @@ return {
 		}
 	},
 	leviathan_0197 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3247,7 +3247,7 @@ return {
 		}
 	},
 	leviathan_0199 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3273,7 +3273,7 @@ return {
 		}
 	},
 	leviathan_0201 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3299,7 +3299,7 @@ return {
 		}
 	},
 	leviathan_0203 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3325,7 +3325,7 @@ return {
 		}
 	},
 	leviathan_0205 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3351,7 +3351,7 @@ return {
 		}
 	},
 	leviathan_0207 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3377,7 +3377,7 @@ return {
 		}
 	},
 	leviathan_0209 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3403,7 +3403,7 @@ return {
 		}
 	},
 	leviathan_bubbles_0001 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3429,7 +3429,7 @@ return {
 		}
 	},
 	leviathan_bubbles_0003 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3455,7 +3455,7 @@ return {
 		}
 	},
 	leviathan_bubbles_0005 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3481,7 +3481,7 @@ return {
 		}
 	},
 	leviathan_idleWater_0001 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3509,7 +3509,7 @@ return {
 		}
 	},
 	leviathan_idleWater_0005 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3537,7 +3537,7 @@ return {
 		}
 	},
 	leviathan_idleWater_0009 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			233,
 			166
@@ -3565,7 +3565,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0001 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3591,7 +3591,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0003 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3615,7 +3615,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0004 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3639,7 +3639,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0005 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3663,7 +3663,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0006 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3687,7 +3687,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0007 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3711,7 +3711,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0008 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3735,7 +3735,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0009 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3759,7 +3759,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0010 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3783,7 +3783,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0011 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3807,7 +3807,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0012 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3831,7 +3831,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0013 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3855,7 +3855,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0014 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3879,7 +3879,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0015 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3903,7 +3903,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0016 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3929,7 +3929,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0018 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3953,7 +3953,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0019 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -3981,7 +3981,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0023 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4009,7 +4009,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0027 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4037,7 +4037,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0031 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4065,7 +4065,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0035 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4093,7 +4093,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0039 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4121,7 +4121,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0041 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4149,7 +4149,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0043 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4177,7 +4177,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0045 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4205,7 +4205,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0047 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4233,7 +4233,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0049 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4261,7 +4261,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0051 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4289,7 +4289,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0053 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4317,7 +4317,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0055 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4345,7 +4345,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0057 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4373,7 +4373,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0059 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4401,7 +4401,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0061 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4429,7 +4429,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0063 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4456,7 +4456,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0064 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4483,7 +4483,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0067 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4510,7 +4510,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0070 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4537,7 +4537,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0073 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4564,7 +4564,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0076 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4591,7 +4591,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0079 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4618,7 +4618,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0082 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4645,7 +4645,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0085 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4672,7 +4672,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0088 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4698,7 +4698,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0116 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4722,7 +4722,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0117 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4746,7 +4746,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0118 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4772,7 +4772,7 @@ return {
 		}
 	},
 	leviathan_tentacle_0120 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4796,7 +4796,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0121 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4820,7 +4820,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0122 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4844,7 +4844,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0123 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4868,7 +4868,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0124 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4892,7 +4892,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0125 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110
@@ -4916,7 +4916,7 @@ return {
 		alias = {}
 	},
 	leviathan_tentacle_0126 = {
-		a_name = "go_stage44-1.png",
+		a_name = "go_stage44-1.dds",
 		size = {
 			450,
 			110

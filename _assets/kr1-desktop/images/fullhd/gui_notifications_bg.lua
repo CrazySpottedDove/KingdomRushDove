@@ -1,6 +1,6 @@
 return {
 	["notifications_newenemy"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			900,
 			420
@@ -24,7 +24,7 @@ return {
 		alias = {}
 	},
 	["notifications_tips_slides_notxt_0001"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			720,
 			557
@@ -48,7 +48,7 @@ return {
 		alias = {}
 	},
 	["notifications_tips_slides_notxt_0002"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			720,
 			557
@@ -72,7 +72,7 @@ return {
 		alias = {}
 	},
 	["notifications_tips_slides_notxt_0003"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			720,
 			557
@@ -96,7 +96,7 @@ return {
 		alias = {}
 	},
 	["notifications_tips_slides_notxt_0004"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			720,
 			557
@@ -120,7 +120,7 @@ return {
 		alias = {}
 	},
 	["notifications_tips_slides_notxt_0005"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			720,
 			557
@@ -144,7 +144,7 @@ return {
 		alias = {}
 	},
 	["notifications_tips_slides_notxt_0006"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			720,
 			557
@@ -168,7 +168,7 @@ return {
 		alias = {}
 	},
 	["notifications_tips_slides_notxt_0007"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			720,
 			557
@@ -192,7 +192,7 @@ return {
 		alias = {}
 	},
 	["notifications_tips_slides_notxt_0008"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			720,
 			557
@@ -216,7 +216,7 @@ return {
 		alias = {}
 	},
 	["tutorial_but_gotcha_bg_0001"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			240,
 			84
@@ -240,7 +240,7 @@ return {
 		alias = {}
 	},
 	["tutorial_but_gotcha_bg_0002"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			240,
 			84
@@ -264,7 +264,7 @@ return {
 		alias = {}
 	},
 	["tutorial_but_gotcha_bg_long_0001"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			340,
 			84
@@ -288,7 +288,7 @@ return {
 		alias = {}
 	},
 	["tutorial_but_gotcha_bg_long_0002"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			340,
 			84
@@ -312,7 +312,7 @@ return {
 		alias = {}
 	},
 	["tutorial_powers_polaroids_0001"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			260,
 			250
@@ -336,7 +336,7 @@ return {
 		alias = {}
 	},
 	["tutorial_powers_polaroids_0002"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			260,
 			250
@@ -360,7 +360,7 @@ return {
 		alias = {}
 	},
 	["tutorial_slide1_notxt"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			680,
 			500
@@ -384,7 +384,7 @@ return {
 		alias = {}
 	},
 	["tutorial_slide2_notxt"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			660,
 			440
@@ -408,7 +408,7 @@ return {
 		alias = {}
 	},
 	["tutorial_slide3_notxt"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			836,
 			420
@@ -432,7 +432,7 @@ return {
 		alias = {}
 	},
 	["tutorial_tit_instructions_bg"] = {
-		a_name = "gui_notifications_bg-1.png",
+		a_name = "gui_notifications_bg-1.dds",
 		size = {
 			360,
 			110

@@ -1,6 +1,6 @@
 return {
 	map_configBtn_0001 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			130,
 			130
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	map_configBtn_0002 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			130,
 			130
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	map_configBtn_0003 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			130,
 			130
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	mapButtons_notxt_0001 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			226,
 			184
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	mapButtons_notxt_0002 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			226,
 			184
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	mapButtons_notxt_0003 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			226,
 			184
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	mapButtons_notxt_0004 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			226,
 			184
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	mapButtons_notxt_0005 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			226,
 			184
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	mapButtones_notxt_0006 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			226,
 			184
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	mapButtons_notxt_0007 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			226,
 			184
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	mapButtons_notxt_0008 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			226,
 			184
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	mapButtons_notxt_0009 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			226,
 			184
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	mapButtons_notxt_0010 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			226,
 			184
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	mapButtons_notxt_0011 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			226,
 			184
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	mapButtons_notxt_0012 = {
-		a_name = "screen_map_buttons-1.png",
+		a_name = "screen_map_buttons-1.dds",
 		size = {
 			226,
 			184

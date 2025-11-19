@@ -28101,7 +28101,7 @@ return {
 		alias = {}
 	},
 	ma_metro_diamond_0109 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28125,7 +28125,7 @@ return {
 		alias = {}
 	},
 	ma_metro_diamond_0110 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28149,7 +28149,7 @@ return {
 		alias = {}
 	},
 	ma_metro_diamond_0111 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28173,7 +28173,7 @@ return {
 		alias = {}
 	},
 	ma_metro_diamond_0112 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28197,7 +28197,7 @@ return {
 		alias = {}
 	},
 	ma_metro_diamond_0113 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28221,7 +28221,7 @@ return {
 		alias = {}
 	},
 	ma_metro_diamond_0114 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28245,7 +28245,7 @@ return {
 		alias = {}
 	},
 	ma_metro_diamond_0115 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28269,7 +28269,7 @@ return {
 		alias = {}
 	},
 	ma_metro_diamond_0116 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28293,7 +28293,7 @@ return {
 		alias = {}
 	},
 	ma_metro_diamond_0117 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28319,7 +28319,7 @@ return {
 		}
 	},
 	ma_metro_diamond_0119 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28343,7 +28343,7 @@ return {
 		alias = {}
 	},
 	ma_metro_diamond_0120 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28367,7 +28367,7 @@ return {
 		alias = {}
 	},
 	ma_metro_diamond_0121 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28393,7 +28393,7 @@ return {
 		}
 	},
 	ma_metro_diamond_0123 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28419,7 +28419,7 @@ return {
 		}
 	},
 	ma_metro_diamond_0125 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28445,7 +28445,7 @@ return {
 		}
 	},
 	ma_metro_diamond_0127 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28471,7 +28471,7 @@ return {
 		}
 	},
 	ma_metro_diamond_0129 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28497,7 +28497,7 @@ return {
 		}
 	},
 	ma_metro_diamond_0131 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28521,7 +28521,7 @@ return {
 		alias = {}
 	},
 	ma_metro_diamond_0132 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28547,7 +28547,7 @@ return {
 		}
 	},
 	ma_metro_diamond_0134 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28573,7 +28573,7 @@ return {
 		}
 	},
 	ma_metro_diamond_0136 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28600,7 +28600,7 @@ return {
 		}
 	},
 	ma_metro_diamond_0139 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28627,7 +28627,7 @@ return {
 		}
 	},
 	ma_metro_diamond_0142 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28655,7 +28655,7 @@ return {
 		}
 	},
 	ma_metro_diamond_0146 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			38
@@ -28681,7 +28681,7 @@ return {
 		}
 	},
 	ma_metro_ducks_0001 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			60,
 			45
@@ -28705,7 +28705,7 @@ return {
 		alias = {}
 	},
 	ma_metro_ducks_0002 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			60,
 			45
@@ -28729,7 +28729,7 @@ return {
 		alias = {}
 	},
 	ma_metro_ducks_0003 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			60,
 			45
@@ -28753,7 +28753,7 @@ return {
 		alias = {}
 	},
 	ma_metro_ducks_0004 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			60,
 			45
@@ -28777,7 +28777,7 @@ return {
 		alias = {}
 	},
 	ma_metro_ducks_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			60,
 			45
@@ -28801,7 +28801,7 @@ return {
 		alias = {}
 	},
 	ma_metro_ducks_0006 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			60,
 			45
@@ -28825,7 +28825,7 @@ return {
 		alias = {}
 	},
 	ma_metro_ducks_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			60,
 			45
@@ -28849,7 +28849,7 @@ return {
 		alias = {}
 	},
 	ma_metro_ducks_0008 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			60,
 			45
@@ -28873,7 +28873,7 @@ return {
 		alias = {}
 	},
 	ma_metro_spider_1_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			52,
 			55
@@ -28899,7 +28899,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0003 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			52,
 			55
@@ -28925,7 +28925,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			52,
 			55
@@ -28951,7 +28951,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0007 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			52,
 			55
@@ -28977,7 +28977,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0009 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			52,
 			55
@@ -29003,7 +29003,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0011 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			52,
 			55
@@ -29029,7 +29029,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0013 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			52,
 			55
@@ -29055,7 +29055,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			52,
 			55
@@ -29081,7 +29081,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			52,
 			55
@@ -29107,7 +29107,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0019 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			52,
 			55
@@ -29133,7 +29133,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0021 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			52,
 			55
@@ -29159,7 +29159,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0023 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			52,
 			55
@@ -29185,7 +29185,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0025 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			52,
 			55
@@ -29211,7 +29211,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0027 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			52,
 			55
@@ -29237,7 +29237,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0029 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			52,
 			55
@@ -29263,7 +29263,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0031 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			52,
 			55
@@ -29289,7 +29289,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0033 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			52,
 			55
@@ -29315,7 +29315,7 @@ return {
 		}
 	},
 	ma_metro_spider_1_0035 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			52,
 			55
@@ -29339,7 +29339,7 @@ return {
 		alias = {}
 	},
 	ma_metro_spider_2_0001 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			78,
 			66
@@ -29367,7 +29367,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0003 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			78,
 			66
@@ -29393,7 +29393,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0005 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			78,
 			66
@@ -29419,7 +29419,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			78,
 			66
@@ -29445,7 +29445,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			78,
 			66
@@ -29471,7 +29471,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			78,
 			66
@@ -29497,7 +29497,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0013 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			78,
 			66
@@ -29523,7 +29523,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0015 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			78,
 			66
@@ -29549,7 +29549,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0017 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			78,
 			66
@@ -29575,7 +29575,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0019 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			78,
 			66
@@ -29601,7 +29601,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0021 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			78,
 			66
@@ -29627,7 +29627,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0023 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			78,
 			66
@@ -29651,7 +29651,7 @@ return {
 		alias = {}
 	},
 	ma_metro_spider_2_0024 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			78,
 			66
@@ -29675,7 +29675,7 @@ return {
 		alias = {}
 	},
 	ma_metro_spider_2_0025 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			78,
 			66
@@ -29701,7 +29701,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0027 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			78,
 			66
@@ -29727,7 +29727,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0029 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			78,
 			66
@@ -29753,7 +29753,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0031 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			78,
 			66
@@ -29779,7 +29779,7 @@ return {
 		}
 	},
 	ma_metro_spider_2_0033 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			78,
 			66
@@ -29805,7 +29805,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0001 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			33,
 			80
@@ -29831,7 +29831,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0003 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			33,
 			80
@@ -29857,7 +29857,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			33,
 			80
@@ -29883,7 +29883,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			33,
 			80
@@ -29909,7 +29909,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0009 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			33,
 			80
@@ -29935,7 +29935,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0011 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			33,
 			80
@@ -29961,7 +29961,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0013 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			33,
 			80
@@ -29987,7 +29987,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			33,
 			80
@@ -30013,7 +30013,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			33,
 			80
@@ -30039,7 +30039,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			33,
 			80
@@ -30065,7 +30065,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			33,
 			80
@@ -30091,7 +30091,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0023 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			33,
 			80
@@ -30117,7 +30117,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0025 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			33,
 			80
@@ -30143,7 +30143,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0027 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			33,
 			80
@@ -30169,7 +30169,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0029 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			33,
 			80
@@ -30195,7 +30195,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0031 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			33,
 			80
@@ -30221,7 +30221,7 @@ return {
 		}
 	},
 	ma_metro_spider_3_0033 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			33,
 			80
@@ -30247,7 +30247,7 @@ return {
 		}
 	},
 	ma_pixie_1_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			18,
 			15
@@ -30273,7 +30273,7 @@ return {
 		}
 	},
 	ma_pixie_1_0003 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			18,
 			15
@@ -30299,7 +30299,7 @@ return {
 		}
 	},
 	ma_pixie_1_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			18,
 			15
@@ -30326,7 +30326,7 @@ return {
 		}
 	},
 	ma_pixie_1_0008 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			18,
 			15
@@ -30353,7 +30353,7 @@ return {
 		}
 	},
 	ma_pixie_1_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			18,
 			15
@@ -30379,7 +30379,7 @@ return {
 		}
 	},
 	ma_pixie_1_0013 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			18,
 			15
@@ -30405,7 +30405,7 @@ return {
 		}
 	},
 	ma_pixie_1_0015 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			18,
 			15
@@ -30432,7 +30432,7 @@ return {
 		}
 	},
 	ma_pixie_1_0018 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			18,
 			15
@@ -30460,7 +30460,7 @@ return {
 		}
 	},
 	ma_pixie_2_0001 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			28,
 			19
@@ -30488,7 +30488,7 @@ return {
 		}
 	},
 	ma_pixie_2_0003 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			28,
 			19
@@ -30514,7 +30514,7 @@ return {
 		}
 	},
 	ma_pixie_2_0005 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			28,
 			19
@@ -30544,7 +30544,7 @@ return {
 		}
 	},
 	ma_pixie_2_0007 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			28,
 			19
@@ -30574,7 +30574,7 @@ return {
 		}
 	},
 	ma_pixie_2_0017 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			28,
 			19
@@ -30600,7 +30600,7 @@ return {
 		}
 	},
 	ma_pixie_2_0019 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -30627,7 +30627,7 @@ return {
 		}
 	},
 	ma_pixie_2_0022 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			28,
 			19
@@ -30653,7 +30653,7 @@ return {
 		}
 	},
 	ma_pixie_2_0024 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -30679,7 +30679,7 @@ return {
 		}
 	},
 	ma_pixie_2_0026 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -30705,7 +30705,7 @@ return {
 		}
 	},
 	ma_pixie_2_0028 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -30739,7 +30739,7 @@ return {
 		}
 	},
 	ma_pixie_2_0034 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -30765,7 +30765,7 @@ return {
 		}
 	},
 	ma_pixie_2_0036 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -30791,7 +30791,7 @@ return {
 		}
 	},
 	ma_pixie_2_0038 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -30817,7 +30817,7 @@ return {
 		}
 	},
 	ma_pixie_2_0040 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -30843,7 +30843,7 @@ return {
 		}
 	},
 	ma_pixie_2_0042 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -30869,7 +30869,7 @@ return {
 		}
 	},
 	ma_pixie_2_0044 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -30895,7 +30895,7 @@ return {
 		}
 	},
 	ma_pixie_2_0050 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -30921,7 +30921,7 @@ return {
 		}
 	},
 	ma_pixie_2_0052 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -30947,7 +30947,7 @@ return {
 		}
 	},
 	ma_pixie_2_0054 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -30973,7 +30973,7 @@ return {
 		}
 	},
 	ma_pixie_2_0056 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -30999,7 +30999,7 @@ return {
 		}
 	},
 	ma_pixie_2_0058 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -31026,7 +31026,7 @@ return {
 		}
 	},
 	ma_pixie_2_0061 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			28,
 			19
@@ -31050,7 +31050,7 @@ return {
 		alias = {}
 	},
 	ma_pixie_2_0062 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			28,
 			19
@@ -31078,7 +31078,7 @@ return {
 		}
 	},
 	ma_pixie_2_0066 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			28,
 			19
@@ -31104,7 +31104,7 @@ return {
 		}
 	},
 	ma_pixie_2_0068 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -31130,7 +31130,7 @@ return {
 		}
 	},
 	ma_pixie_2_0070 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -31156,7 +31156,7 @@ return {
 		}
 	},
 	ma_pixie_2_0072 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			28,
 			19
@@ -31182,7 +31182,7 @@ return {
 		}
 	},
 	ma_pixie_2_0074 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			28,
 			19
@@ -31208,7 +31208,7 @@ return {
 		}
 	},
 	ma_river_ne_1_0001 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			178,
 			90
@@ -31234,7 +31234,7 @@ return {
 		}
 	},
 	ma_river_ne_1_0003 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			178,
 			90
@@ -31260,7 +31260,7 @@ return {
 		}
 	},
 	ma_river_ne_1_0005 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			178,
 			90
@@ -31286,7 +31286,7 @@ return {
 		}
 	},
 	ma_river_ne_1_0007 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			178,
 			90
@@ -31312,7 +31312,7 @@ return {
 		}
 	},
 	ma_river_ne_1_0009 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			178,
 			90
@@ -31338,7 +31338,7 @@ return {
 		}
 	},
 	ma_river_ne_1_0011 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			178,
 			90
@@ -31364,7 +31364,7 @@ return {
 		}
 	},
 	ma_river_ne_1_0013 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			178,
 			90
@@ -31390,7 +31390,7 @@ return {
 		}
 	},
 	ma_river_ne_1_0015 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			178,
 			90
@@ -31416,7 +31416,7 @@ return {
 		}
 	},
 	ma_river_ne_1_0017 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			178,
 			90
@@ -31442,7 +31442,7 @@ return {
 		}
 	},
 	ma_river_ne_1_0019 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			178,
 			90
@@ -31468,7 +31468,7 @@ return {
 		}
 	},
 	ma_river_ne_2_0001 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			50
@@ -31494,7 +31494,7 @@ return {
 		}
 	},
 	ma_river_ne_2_0003 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			50
@@ -31520,7 +31520,7 @@ return {
 		}
 	},
 	ma_river_ne_2_0005 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			50
@@ -31546,7 +31546,7 @@ return {
 		}
 	},
 	ma_river_ne_2_0007 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			50
@@ -31572,7 +31572,7 @@ return {
 		}
 	},
 	ma_river_ne_2_0009 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			50
@@ -31598,7 +31598,7 @@ return {
 		}
 	},
 	ma_river_ne_2_0011 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			50
@@ -31624,7 +31624,7 @@ return {
 		}
 	},
 	ma_river_ne_2_0013 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			50
@@ -31650,7 +31650,7 @@ return {
 		}
 	},
 	ma_river_ne_2_0015 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			50
@@ -31676,7 +31676,7 @@ return {
 		}
 	},
 	ma_river_ne_2_0017 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			50
@@ -31702,7 +31702,7 @@ return {
 		}
 	},
 	ma_river_ne_2_0019 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			50
@@ -31728,7 +31728,7 @@ return {
 		}
 	},
 	ma_river_ne_3_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			141,
 			54
@@ -31754,7 +31754,7 @@ return {
 		}
 	},
 	ma_river_ne_3_0003 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			141,
 			54
@@ -31780,7 +31780,7 @@ return {
 		}
 	},
 	ma_river_ne_3_0005 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			141,
 			54
@@ -31806,7 +31806,7 @@ return {
 		}
 	},
 	ma_river_ne_3_0007 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			141,
 			54
@@ -31832,7 +31832,7 @@ return {
 		}
 	},
 	ma_river_ne_3_0009 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			141,
 			54
@@ -31858,7 +31858,7 @@ return {
 		}
 	},
 	ma_river_ne_3_0011 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			141,
 			54
@@ -31884,7 +31884,7 @@ return {
 		}
 	},
 	ma_river_ne_3_0013 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			141,
 			54
@@ -31910,7 +31910,7 @@ return {
 		}
 	},
 	ma_river_ne_3_0015 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			141,
 			54
@@ -31936,7 +31936,7 @@ return {
 		}
 	},
 	ma_river_ne_3_0017 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			141,
 			54
@@ -31962,7 +31962,7 @@ return {
 		}
 	},
 	ma_river_ne_3_0019 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			141,
 			54
@@ -31988,7 +31988,7 @@ return {
 		}
 	},
 	ma_river_ne_4_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			113,
 			96
@@ -32014,7 +32014,7 @@ return {
 		}
 	},
 	ma_river_ne_4_0003 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			113,
 			96
@@ -32040,7 +32040,7 @@ return {
 		}
 	},
 	ma_river_ne_4_0005 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			113,
 			96
@@ -32066,7 +32066,7 @@ return {
 		}
 	},
 	ma_river_ne_4_0007 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			113,
 			96
@@ -32092,7 +32092,7 @@ return {
 		}
 	},
 	ma_river_ne_4_0009 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			113,
 			96
@@ -32118,7 +32118,7 @@ return {
 		}
 	},
 	ma_river_ne_4_0011 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			113,
 			96
@@ -32144,7 +32144,7 @@ return {
 		}
 	},
 	ma_river_ne_4_0013 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			113,
 			96
@@ -32170,7 +32170,7 @@ return {
 		}
 	},
 	ma_river_ne_4_0015 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			113,
 			96
@@ -32196,7 +32196,7 @@ return {
 		}
 	},
 	ma_river_ne_4_0017 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			113,
 			96
@@ -32222,7 +32222,7 @@ return {
 		}
 	},
 	ma_river_ne_4_0019 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			113,
 			96
@@ -32248,7 +32248,7 @@ return {
 		}
 	},
 	ma_river_nw_1_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			117,
 			60
@@ -32274,7 +32274,7 @@ return {
 		}
 	},
 	ma_river_nw_1_0003 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			117,
 			60
@@ -32300,7 +32300,7 @@ return {
 		}
 	},
 	ma_river_nw_1_0005 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			117,
 			60
@@ -32326,7 +32326,7 @@ return {
 		}
 	},
 	ma_river_nw_1_0007 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			117,
 			60
@@ -32352,7 +32352,7 @@ return {
 		}
 	},
 	ma_river_nw_1_0009 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			117,
 			60
@@ -32378,7 +32378,7 @@ return {
 		}
 	},
 	ma_river_nw_1_0011 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			117,
 			60
@@ -32404,7 +32404,7 @@ return {
 		}
 	},
 	ma_river_nw_1_0013 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			117,
 			60
@@ -32430,7 +32430,7 @@ return {
 		}
 	},
 	ma_river_nw_1_0015 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			117,
 			60
@@ -32456,7 +32456,7 @@ return {
 		}
 	},
 	ma_river_nw_1_0017 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			117,
 			60
@@ -32482,7 +32482,7 @@ return {
 		}
 	},
 	ma_river_nw_1_0019 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			117,
 			60
@@ -32508,7 +32508,7 @@ return {
 		}
 	},
 	ma_river_nw_2_0001 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			76,
 			163
@@ -32534,7 +32534,7 @@ return {
 		}
 	},
 	ma_river_nw_2_0003 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			76,
 			163
@@ -32560,7 +32560,7 @@ return {
 		}
 	},
 	ma_river_nw_2_0005 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			76,
 			163
@@ -32586,7 +32586,7 @@ return {
 		}
 	},
 	ma_river_nw_2_0007 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			76,
 			163
@@ -32612,7 +32612,7 @@ return {
 		}
 	},
 	ma_river_nw_2_0009 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			76,
 			163
@@ -32638,7 +32638,7 @@ return {
 		}
 	},
 	ma_river_nw_2_0011 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			76,
 			163
@@ -32664,7 +32664,7 @@ return {
 		}
 	},
 	ma_river_nw_2_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			76,
 			163
@@ -32690,7 +32690,7 @@ return {
 		}
 	},
 	ma_river_nw_2_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			76,
 			163
@@ -32716,7 +32716,7 @@ return {
 		}
 	},
 	ma_river_nw_2_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			76,
 			163
@@ -32742,7 +32742,7 @@ return {
 		}
 	},
 	ma_river_nw_2_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			76,
 			163
@@ -32768,7 +32768,7 @@ return {
 		}
 	},
 	ma_river_s_1_0001 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			46,
 			109
@@ -32794,7 +32794,7 @@ return {
 		}
 	},
 	ma_river_s_1_0003 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			46,
 			109
@@ -32820,7 +32820,7 @@ return {
 		}
 	},
 	ma_river_s_1_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			46,
 			109
@@ -32846,7 +32846,7 @@ return {
 		}
 	},
 	ma_river_s_1_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			46,
 			109
@@ -32872,7 +32872,7 @@ return {
 		}
 	},
 	ma_river_s_1_0009 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			46,
 			109
@@ -32898,7 +32898,7 @@ return {
 		}
 	},
 	ma_river_s_1_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			46,
 			109
@@ -32924,7 +32924,7 @@ return {
 		}
 	},
 	ma_river_s_1_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			46,
 			109
@@ -32950,7 +32950,7 @@ return {
 		}
 	},
 	ma_river_s_1_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			46,
 			109
@@ -32976,7 +32976,7 @@ return {
 		}
 	},
 	ma_river_s_1_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			46,
 			109
@@ -33002,7 +33002,7 @@ return {
 		}
 	},
 	ma_river_s_1_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			46,
 			109
@@ -33028,7 +33028,7 @@ return {
 		}
 	},
 	ma_river_s_2_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			89,
 			192
@@ -33054,7 +33054,7 @@ return {
 		}
 	},
 	ma_river_s_2_0003 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			89,
 			192
@@ -33080,7 +33080,7 @@ return {
 		}
 	},
 	ma_river_s_2_0005 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			89,
 			192
@@ -33106,7 +33106,7 @@ return {
 		}
 	},
 	ma_river_s_2_0007 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			89,
 			192
@@ -33132,7 +33132,7 @@ return {
 		}
 	},
 	ma_river_s_2_0009 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			89,
 			192
@@ -33158,7 +33158,7 @@ return {
 		}
 	},
 	ma_river_s_2_0011 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			89,
 			192
@@ -33184,7 +33184,7 @@ return {
 		}
 	},
 	ma_river_s_2_0013 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			89,
 			192
@@ -33210,7 +33210,7 @@ return {
 		}
 	},
 	ma_river_s_2_0015 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			89,
 			192
@@ -33236,7 +33236,7 @@ return {
 		}
 	},
 	ma_river_s_2_0017 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			89,
 			192
@@ -33262,7 +33262,7 @@ return {
 		}
 	},
 	ma_river_s_2_0019 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			89,
 			192
@@ -33288,7 +33288,7 @@ return {
 		}
 	},
 	ma_river_s_3_0001 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			62,
 			208
@@ -33314,7 +33314,7 @@ return {
 		}
 	},
 	ma_river_s_3_0003 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			62,
 			208
@@ -33340,7 +33340,7 @@ return {
 		}
 	},
 	ma_river_s_3_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			62,
 			208
@@ -33366,7 +33366,7 @@ return {
 		}
 	},
 	ma_river_s_3_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			62,
 			208
@@ -33392,7 +33392,7 @@ return {
 		}
 	},
 	ma_river_s_3_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			62,
 			208
@@ -33418,7 +33418,7 @@ return {
 		}
 	},
 	ma_river_s_3_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			62,
 			208
@@ -33444,7 +33444,7 @@ return {
 		}
 	},
 	ma_river_s_3_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			62,
 			208
@@ -33470,7 +33470,7 @@ return {
 		}
 	},
 	ma_river_s_3_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			62,
 			208
@@ -33496,7 +33496,7 @@ return {
 		}
 	},
 	ma_river_s_3_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			62,
 			208
@@ -33522,7 +33522,7 @@ return {
 		}
 	},
 	ma_river_s_3_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			62,
 			208
@@ -33548,7 +33548,7 @@ return {
 		}
 	},
 	ma_sea_bounce_0_0001 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -33572,7 +33572,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0002 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -33596,7 +33596,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0003 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -33620,7 +33620,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0004 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -33644,7 +33644,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0005 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -33668,7 +33668,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0006 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -33692,7 +33692,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0007 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -33716,7 +33716,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0008 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -33740,7 +33740,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0009 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -33764,7 +33764,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0010 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -33788,7 +33788,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0011 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -33812,7 +33812,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0012 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -33836,7 +33836,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0013 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -33860,7 +33860,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0014 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -33884,7 +33884,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0015 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -33908,7 +33908,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0016 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -33932,7 +33932,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0017 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -33956,7 +33956,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0018 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -33980,7 +33980,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0019 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -34004,7 +34004,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0020 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -34028,7 +34028,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0021 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -34052,7 +34052,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0022 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -34076,7 +34076,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0023 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -34100,7 +34100,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0024 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34124,7 +34124,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0025 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34148,7 +34148,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0026 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34172,7 +34172,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0027 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -34196,7 +34196,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0028 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34220,7 +34220,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0029 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34244,7 +34244,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0030 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34268,7 +34268,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0031 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34292,7 +34292,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0032 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34316,7 +34316,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0033 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34340,7 +34340,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0034 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34364,7 +34364,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0035 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34388,7 +34388,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0036 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34412,7 +34412,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0037 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34436,7 +34436,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0038 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34460,7 +34460,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0039 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34484,7 +34484,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0040 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34508,7 +34508,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0041 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34532,7 +34532,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0042 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34556,7 +34556,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0043 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34580,7 +34580,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0044 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34604,7 +34604,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0045 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34628,7 +34628,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0046 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34652,7 +34652,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0047 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34676,7 +34676,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0048 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34700,7 +34700,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0049 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34724,7 +34724,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0050 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34748,7 +34748,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0051 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34772,7 +34772,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0052 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34796,7 +34796,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0053 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34820,7 +34820,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0054 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34844,7 +34844,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0055 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34868,7 +34868,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0056 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34892,7 +34892,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0057 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34916,7 +34916,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0058 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34940,7 +34940,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0059 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34964,7 +34964,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0060 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -34988,7 +34988,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0061 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35012,7 +35012,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0062 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35036,7 +35036,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0063 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35060,7 +35060,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0064 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35084,7 +35084,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0065 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35108,7 +35108,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0066 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35132,7 +35132,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0067 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35156,7 +35156,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0068 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35180,7 +35180,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0069 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35204,7 +35204,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0070 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35228,7 +35228,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0071 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35252,7 +35252,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0072 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35276,7 +35276,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0073 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35300,7 +35300,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0074 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35324,7 +35324,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0075 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35348,7 +35348,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0076 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35372,7 +35372,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0077 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35396,7 +35396,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0078 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35420,7 +35420,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0079 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35444,7 +35444,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0080 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35468,7 +35468,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0081 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -35492,7 +35492,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0082 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -35516,7 +35516,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0083 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -35540,7 +35540,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0084 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -35564,7 +35564,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0085 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -35588,7 +35588,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0086 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -35612,7 +35612,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0087 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -35636,7 +35636,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0088 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -35660,7 +35660,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0089 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -35684,7 +35684,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0090 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -35708,7 +35708,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0091 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -35732,7 +35732,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0092 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35756,7 +35756,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0093 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35780,7 +35780,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0094 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35804,7 +35804,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0095 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35828,7 +35828,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0096 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35852,7 +35852,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0097 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35876,7 +35876,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0098 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35900,7 +35900,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0099 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -35924,7 +35924,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0100 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -35948,7 +35948,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0101 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -35972,7 +35972,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0102 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -35996,7 +35996,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0103 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36020,7 +36020,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0104 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36044,7 +36044,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0105 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36068,7 +36068,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0106 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36092,7 +36092,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0107 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36116,7 +36116,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0108 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36140,7 +36140,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0109 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36164,7 +36164,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0110 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36188,7 +36188,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0111 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36212,7 +36212,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0112 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36236,7 +36236,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0113 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36260,7 +36260,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0114 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36284,7 +36284,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0115 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36308,7 +36308,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0116 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36332,7 +36332,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0117 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36356,7 +36356,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0118 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36380,7 +36380,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0119 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36404,7 +36404,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0120 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36428,7 +36428,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0121 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36452,7 +36452,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0122 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36476,7 +36476,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0123 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36500,7 +36500,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0124 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36524,7 +36524,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0125 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36548,7 +36548,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0126 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -36572,7 +36572,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0127 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -36596,7 +36596,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0128 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -36620,7 +36620,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0129 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -36644,7 +36644,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0130 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			109,
 			76
@@ -36668,7 +36668,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0131 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36692,7 +36692,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0132 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36716,7 +36716,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0133 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36740,7 +36740,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0134 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			109,
 			76
@@ -36764,7 +36764,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0135 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36788,7 +36788,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0136 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36812,7 +36812,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0137 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36836,7 +36836,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0138 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			109,
 			76
@@ -36860,7 +36860,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_0_0139 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			109,
 			76
@@ -36889,7 +36889,7 @@ return {
 		}
 	},
 	ma_sea_bounce_10_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -36913,7 +36913,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0002 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -36937,7 +36937,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0003 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -36961,7 +36961,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0004 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -36985,7 +36985,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37009,7 +37009,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0006 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37033,7 +37033,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37057,7 +37057,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0008 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37081,7 +37081,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37105,7 +37105,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0010 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37129,7 +37129,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37153,7 +37153,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0012 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37177,7 +37177,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37201,7 +37201,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0014 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37225,7 +37225,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37249,7 +37249,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0016 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37273,7 +37273,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37297,7 +37297,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0018 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37321,7 +37321,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37345,7 +37345,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0020 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37369,7 +37369,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37393,7 +37393,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0022 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37417,7 +37417,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0023 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37441,7 +37441,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0024 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37465,7 +37465,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0025 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37489,7 +37489,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0026 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -37513,7 +37513,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0027 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -37537,7 +37537,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0028 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -37561,7 +37561,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0029 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -37585,7 +37585,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0030 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -37609,7 +37609,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0031 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -37633,7 +37633,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0032 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -37657,7 +37657,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0033 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -37681,7 +37681,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0034 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -37705,7 +37705,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0035 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -37729,7 +37729,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0036 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -37753,7 +37753,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0037 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -37777,7 +37777,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0038 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -37801,7 +37801,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0039 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -37825,7 +37825,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0040 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -37849,7 +37849,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0041 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -37873,7 +37873,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0042 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -37897,7 +37897,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0043 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -37921,7 +37921,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0044 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -37945,7 +37945,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0045 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -37969,7 +37969,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0046 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -37993,7 +37993,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0047 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -38017,7 +38017,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0048 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -38041,7 +38041,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0049 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -38065,7 +38065,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0050 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -38089,7 +38089,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0051 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -38113,7 +38113,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0052 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -38137,7 +38137,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0053 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -38161,7 +38161,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0054 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -38185,7 +38185,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0055 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -38209,7 +38209,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0056 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -38233,7 +38233,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0057 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			150,
 			126
@@ -38257,7 +38257,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0058 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38281,7 +38281,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0059 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38305,7 +38305,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0060 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38329,7 +38329,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0061 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38353,7 +38353,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0062 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38377,7 +38377,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0063 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38401,7 +38401,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0064 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38425,7 +38425,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0065 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38449,7 +38449,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0066 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38473,7 +38473,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0067 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38497,7 +38497,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0068 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38521,7 +38521,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0069 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38545,7 +38545,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0070 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38569,7 +38569,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0071 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38593,7 +38593,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0072 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38617,7 +38617,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0073 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38641,7 +38641,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0074 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38665,7 +38665,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0075 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38689,7 +38689,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0076 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38713,7 +38713,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0077 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38737,7 +38737,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0078 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -38761,7 +38761,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0079 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -38785,7 +38785,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0080 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -38809,7 +38809,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0081 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -38833,7 +38833,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0082 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -38857,7 +38857,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0083 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -38881,7 +38881,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0084 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -38905,7 +38905,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0085 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -38929,7 +38929,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0086 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -38953,7 +38953,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0087 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -38977,7 +38977,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0088 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39001,7 +39001,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0089 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39025,7 +39025,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0090 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39049,7 +39049,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0091 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39073,7 +39073,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0092 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39097,7 +39097,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0093 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39121,7 +39121,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0094 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39145,7 +39145,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0095 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39169,7 +39169,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0096 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39193,7 +39193,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0097 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39217,7 +39217,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0098 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39241,7 +39241,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0099 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39265,7 +39265,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0100 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39289,7 +39289,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0101 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39313,7 +39313,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0102 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39337,7 +39337,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0103 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39361,7 +39361,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0104 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39385,7 +39385,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0105 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39409,7 +39409,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0106 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39433,7 +39433,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0107 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39457,7 +39457,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0108 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39481,7 +39481,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0109 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39505,7 +39505,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0110 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39529,7 +39529,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0111 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -39553,7 +39553,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0112 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39577,7 +39577,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0113 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39601,7 +39601,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0114 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39625,7 +39625,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0115 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39649,7 +39649,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0116 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39673,7 +39673,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0117 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39697,7 +39697,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0118 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39721,7 +39721,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0119 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39745,7 +39745,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0120 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39769,7 +39769,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0121 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39793,7 +39793,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0122 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39817,7 +39817,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0123 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39841,7 +39841,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0124 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39865,7 +39865,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0125 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39889,7 +39889,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0126 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39913,7 +39913,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0127 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39937,7 +39937,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0128 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39961,7 +39961,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0129 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -39985,7 +39985,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0130 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -40009,7 +40009,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0131 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -40033,7 +40033,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0132 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			150,
 			126
@@ -40057,7 +40057,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0133 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -40081,7 +40081,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0134 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -40105,7 +40105,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0135 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -40129,7 +40129,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0136 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -40153,7 +40153,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0137 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -40177,7 +40177,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0138 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			150,
 			126
@@ -40201,7 +40201,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0139 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -40225,7 +40225,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_10_0140 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			150,
 			126
@@ -40249,7 +40249,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -40273,7 +40273,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0002 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -40297,7 +40297,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0003 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -40321,7 +40321,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0004 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -40345,7 +40345,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0005 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -40369,7 +40369,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0006 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			123,
 			105
@@ -40393,7 +40393,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40417,7 +40417,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0008 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40441,7 +40441,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40465,7 +40465,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0010 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40489,7 +40489,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40513,7 +40513,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0012 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40537,7 +40537,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40561,7 +40561,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0014 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40585,7 +40585,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40609,7 +40609,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0016 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40633,7 +40633,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40657,7 +40657,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0018 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40681,7 +40681,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40705,7 +40705,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0020 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40729,7 +40729,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40753,7 +40753,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0022 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40777,7 +40777,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0023 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40801,7 +40801,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0024 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40825,7 +40825,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0025 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40849,7 +40849,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0026 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40873,7 +40873,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0027 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40897,7 +40897,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0028 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40921,7 +40921,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0029 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -40945,7 +40945,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0030 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40969,7 +40969,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0031 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -40993,7 +40993,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0032 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -41017,7 +41017,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0033 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -41041,7 +41041,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0034 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -41065,7 +41065,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0035 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -41089,7 +41089,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0036 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -41113,7 +41113,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0037 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -41137,7 +41137,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0038 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -41161,7 +41161,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0039 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -41185,7 +41185,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0040 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41209,7 +41209,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0041 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41233,7 +41233,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0042 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41257,7 +41257,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0043 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41281,7 +41281,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0044 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41305,7 +41305,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0045 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41329,7 +41329,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0046 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41353,7 +41353,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0047 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41377,7 +41377,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0048 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41401,7 +41401,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0049 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41425,7 +41425,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0050 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41449,7 +41449,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0051 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41473,7 +41473,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0052 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41497,7 +41497,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0053 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41521,7 +41521,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0054 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41545,7 +41545,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0055 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41569,7 +41569,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0056 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41593,7 +41593,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0057 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41617,7 +41617,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0058 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41641,7 +41641,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0059 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41665,7 +41665,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0060 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41689,7 +41689,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0061 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41713,7 +41713,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0062 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41737,7 +41737,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0063 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41761,7 +41761,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0064 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41785,7 +41785,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0065 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41809,7 +41809,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0066 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41833,7 +41833,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0067 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41857,7 +41857,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0068 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41881,7 +41881,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0069 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41905,7 +41905,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0070 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41929,7 +41929,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0071 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -41953,7 +41953,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0072 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			123,
 			105
@@ -41977,7 +41977,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0073 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -42001,7 +42001,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0074 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -42025,7 +42025,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0075 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -42049,7 +42049,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0076 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -42073,7 +42073,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0077 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -42097,7 +42097,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0078 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -42121,7 +42121,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0079 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42145,7 +42145,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0080 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -42169,7 +42169,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0081 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -42193,7 +42193,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0082 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -42217,7 +42217,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0083 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -42241,7 +42241,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0084 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -42265,7 +42265,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0085 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -42289,7 +42289,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0086 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -42313,7 +42313,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0087 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -42337,7 +42337,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0088 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -42361,7 +42361,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0089 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -42385,7 +42385,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0090 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42409,7 +42409,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0091 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42433,7 +42433,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0092 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42457,7 +42457,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0093 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42481,7 +42481,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0094 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42505,7 +42505,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0095 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42529,7 +42529,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0096 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42553,7 +42553,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0097 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42577,7 +42577,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0098 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42601,7 +42601,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0099 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42625,7 +42625,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0100 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42649,7 +42649,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0101 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42673,7 +42673,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0102 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42697,7 +42697,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0103 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			123,
 			105
@@ -42721,7 +42721,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0104 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42745,7 +42745,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0105 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42769,7 +42769,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0106 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42793,7 +42793,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0107 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -42817,7 +42817,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0108 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42841,7 +42841,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0109 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42865,7 +42865,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0110 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42889,7 +42889,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0111 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42913,7 +42913,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0112 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -42937,7 +42937,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0113 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -42961,7 +42961,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0114 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -42985,7 +42985,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0115 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -43009,7 +43009,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0116 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -43033,7 +43033,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0117 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			123,
 			105
@@ -43057,7 +43057,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0118 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -43081,7 +43081,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0119 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -43105,7 +43105,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_11_0120 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			123,
 			105
@@ -43129,7 +43129,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0001 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43155,7 +43155,7 @@ return {
 		}
 	},
 	ma_sea_bounce_12_0002 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			100,
 			155
@@ -43179,7 +43179,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0003 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			100,
 			155
@@ -43203,7 +43203,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0004 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			100,
 			155
@@ -43227,7 +43227,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0005 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -43251,7 +43251,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0006 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			100,
 			155
@@ -43275,7 +43275,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43299,7 +43299,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0008 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43323,7 +43323,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43347,7 +43347,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0010 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43371,7 +43371,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43395,7 +43395,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0012 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43419,7 +43419,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43443,7 +43443,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0014 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43467,7 +43467,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43491,7 +43491,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0016 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43515,7 +43515,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43539,7 +43539,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0018 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43563,7 +43563,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43587,7 +43587,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0020 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43611,7 +43611,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43635,7 +43635,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0022 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43659,7 +43659,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0023 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43683,7 +43683,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0024 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			100,
 			155
@@ -43707,7 +43707,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0025 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			100,
 			155
@@ -43731,7 +43731,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0026 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43755,7 +43755,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0027 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43779,7 +43779,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0028 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43803,7 +43803,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0029 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43827,7 +43827,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0030 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43851,7 +43851,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0031 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43875,7 +43875,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0032 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43899,7 +43899,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0033 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43923,7 +43923,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0034 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -43947,7 +43947,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0035 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -43971,7 +43971,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0036 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -43995,7 +43995,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0037 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44019,7 +44019,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0038 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44043,7 +44043,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0039 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44067,7 +44067,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0040 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44091,7 +44091,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0041 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44115,7 +44115,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0042 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44139,7 +44139,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0043 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44163,7 +44163,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0044 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44187,7 +44187,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0045 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44211,7 +44211,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0046 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44235,7 +44235,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0047 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44259,7 +44259,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0048 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44283,7 +44283,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0049 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44307,7 +44307,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0050 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44331,7 +44331,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0051 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44355,7 +44355,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0052 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44379,7 +44379,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0053 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44403,7 +44403,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0054 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44427,7 +44427,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0055 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44451,7 +44451,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0056 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44475,7 +44475,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0057 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44499,7 +44499,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0058 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44523,7 +44523,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0059 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44547,7 +44547,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0060 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44571,7 +44571,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0061 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44595,7 +44595,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0062 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44619,7 +44619,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0063 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44643,7 +44643,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0064 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44667,7 +44667,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0065 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44691,7 +44691,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0066 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44715,7 +44715,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0067 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44739,7 +44739,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0068 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44763,7 +44763,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0069 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44787,7 +44787,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0070 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44811,7 +44811,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0071 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44835,7 +44835,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0072 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44859,7 +44859,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0073 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44883,7 +44883,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0074 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44907,7 +44907,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0075 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -44931,7 +44931,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0076 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			100,
 			155
@@ -44955,7 +44955,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0077 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			100,
 			155
@@ -44979,7 +44979,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0078 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			100,
 			155
@@ -45003,7 +45003,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0079 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45027,7 +45027,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0080 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45051,7 +45051,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0081 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45075,7 +45075,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0082 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			100,
 			155
@@ -45099,7 +45099,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0083 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45123,7 +45123,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0084 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45147,7 +45147,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0085 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			100,
 			155
@@ -45171,7 +45171,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0086 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			100,
 			155
@@ -45195,7 +45195,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0087 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45219,7 +45219,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0088 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			100,
 			155
@@ -45243,7 +45243,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0089 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			100,
 			155
@@ -45267,7 +45267,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0090 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			100,
 			155
@@ -45291,7 +45291,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0091 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45315,7 +45315,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0092 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45339,7 +45339,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0093 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45363,7 +45363,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0094 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45387,7 +45387,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0095 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45411,7 +45411,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0096 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45435,7 +45435,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0097 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45459,7 +45459,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0098 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45483,7 +45483,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0099 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45507,7 +45507,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0100 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45531,7 +45531,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0101 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45555,7 +45555,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0102 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45579,7 +45579,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0103 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45603,7 +45603,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0104 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45627,7 +45627,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0105 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45651,7 +45651,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0106 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45675,7 +45675,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0107 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45699,7 +45699,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0108 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45723,7 +45723,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0109 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45747,7 +45747,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0110 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45771,7 +45771,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0111 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45795,7 +45795,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0112 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45819,7 +45819,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0113 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45843,7 +45843,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0114 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45867,7 +45867,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0115 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -45891,7 +45891,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0116 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45915,7 +45915,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0117 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			100,
 			155
@@ -45939,7 +45939,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0118 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			100,
 			155
@@ -45963,7 +45963,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0119 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			100,
 			155
@@ -45987,7 +45987,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_12_0120 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			100,
 			155
@@ -46011,7 +46011,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0001 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46035,7 +46035,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0002 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46059,7 +46059,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0003 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46083,7 +46083,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0004 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46107,7 +46107,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0005 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46131,7 +46131,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0006 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46155,7 +46155,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0007 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46179,7 +46179,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0008 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46203,7 +46203,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0009 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46227,7 +46227,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0010 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46251,7 +46251,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0011 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46275,7 +46275,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0012 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46299,7 +46299,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0013 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46323,7 +46323,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0014 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46347,7 +46347,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0015 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46371,7 +46371,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0016 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46395,7 +46395,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0017 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46419,7 +46419,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0018 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46443,7 +46443,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0019 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46467,7 +46467,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0020 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46491,7 +46491,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0021 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46515,7 +46515,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0022 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46539,7 +46539,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0023 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46563,7 +46563,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0024 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46587,7 +46587,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0025 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46611,7 +46611,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0026 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46635,7 +46635,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0027 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46659,7 +46659,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0028 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46683,7 +46683,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0029 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46707,7 +46707,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0030 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46731,7 +46731,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0031 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46755,7 +46755,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0032 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46779,7 +46779,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0033 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46803,7 +46803,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0034 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46827,7 +46827,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0035 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46851,7 +46851,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0036 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46875,7 +46875,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0037 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -46899,7 +46899,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0038 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -46923,7 +46923,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0039 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -46947,7 +46947,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0040 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -46971,7 +46971,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0041 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -46995,7 +46995,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0042 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47019,7 +47019,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0043 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47043,7 +47043,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0044 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47067,7 +47067,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0045 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47091,7 +47091,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0046 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47115,7 +47115,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0047 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47139,7 +47139,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0048 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47163,7 +47163,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0049 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47187,7 +47187,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0050 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47211,7 +47211,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0051 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47235,7 +47235,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0052 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47259,7 +47259,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0053 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47283,7 +47283,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0054 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47307,7 +47307,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0055 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47331,7 +47331,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0056 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47355,7 +47355,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0057 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47379,7 +47379,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0058 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47403,7 +47403,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0059 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47427,7 +47427,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0060 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47451,7 +47451,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0061 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47475,7 +47475,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0062 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47499,7 +47499,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0063 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47523,7 +47523,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0064 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47547,7 +47547,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0065 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47571,7 +47571,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0066 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47595,7 +47595,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0067 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47619,7 +47619,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0068 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47643,7 +47643,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0069 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47667,7 +47667,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0070 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47691,7 +47691,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0071 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47715,7 +47715,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0072 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47739,7 +47739,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0073 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47763,7 +47763,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0074 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47787,7 +47787,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0075 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47811,7 +47811,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0076 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47835,7 +47835,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0077 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47859,7 +47859,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0078 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47883,7 +47883,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0079 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47907,7 +47907,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0080 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47931,7 +47931,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0081 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47955,7 +47955,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0082 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -47979,7 +47979,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0083 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48003,7 +48003,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0084 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48027,7 +48027,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0085 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48051,7 +48051,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0086 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48075,7 +48075,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0087 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48099,7 +48099,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0088 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48123,7 +48123,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0089 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48147,7 +48147,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0090 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48171,7 +48171,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0091 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48195,7 +48195,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0092 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48219,7 +48219,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0093 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48243,7 +48243,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0094 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48267,7 +48267,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0095 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48291,7 +48291,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0096 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48315,7 +48315,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0097 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48339,7 +48339,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0098 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48363,7 +48363,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0099 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48387,7 +48387,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0100 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48411,7 +48411,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0101 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48435,7 +48435,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0102 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48459,7 +48459,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0103 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48483,7 +48483,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0104 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48507,7 +48507,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0105 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48531,7 +48531,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0106 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48555,7 +48555,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0107 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48579,7 +48579,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0108 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48603,7 +48603,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0109 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48627,7 +48627,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0110 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48651,7 +48651,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0111 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48675,7 +48675,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0112 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48699,7 +48699,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0113 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48723,7 +48723,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0114 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48747,7 +48747,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0115 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -48771,7 +48771,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0116 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -48795,7 +48795,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0117 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -48819,7 +48819,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0118 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -48843,7 +48843,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0119 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -48867,7 +48867,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0120 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -48891,7 +48891,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0121 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -48915,7 +48915,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0122 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -48939,7 +48939,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0123 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -48963,7 +48963,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0124 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -48987,7 +48987,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0125 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -49011,7 +49011,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0126 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -49035,7 +49035,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0127 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -49059,7 +49059,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0128 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -49083,7 +49083,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0129 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -49107,7 +49107,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0130 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -49131,7 +49131,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0131 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -49155,7 +49155,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0132 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -49179,7 +49179,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0133 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -49203,7 +49203,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0134 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -49227,7 +49227,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0135 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -49251,7 +49251,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0136 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -49275,7 +49275,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0137 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			111,
 			55
@@ -49299,7 +49299,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0138 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			111,
 			55
@@ -49323,7 +49323,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0139 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			111,
 			55
@@ -49347,7 +49347,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0140 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			111,
 			55
@@ -49371,7 +49371,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0141 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			111,
 			55
@@ -49395,7 +49395,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0142 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			111,
 			55
@@ -49419,7 +49419,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0143 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			111,
 			55
@@ -49443,7 +49443,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0144 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			111,
 			55
@@ -49467,7 +49467,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0145 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			111,
 			55
@@ -49491,7 +49491,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0146 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			111,
 			55
@@ -49515,7 +49515,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0147 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -49539,7 +49539,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0148 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			111,
 			55
@@ -49563,7 +49563,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0149 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -49587,7 +49587,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0150 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -49611,7 +49611,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0151 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -49635,7 +49635,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0152 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			111,
 			55
@@ -49659,7 +49659,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_13_0153 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			111,
 			55
@@ -49688,7 +49688,7 @@ return {
 		}
 	},
 	ma_sea_bounce_1_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			244,
 			108
@@ -49712,7 +49712,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0002 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			244,
 			108
@@ -49736,7 +49736,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0003 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			244,
 			108
@@ -49760,7 +49760,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0004 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			244,
 			108
@@ -49784,7 +49784,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0005 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -49808,7 +49808,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0006 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -49832,7 +49832,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0007 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -49856,7 +49856,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0008 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -49880,7 +49880,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0009 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -49904,7 +49904,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0010 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -49928,7 +49928,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0011 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -49952,7 +49952,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0012 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -49976,7 +49976,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0013 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50000,7 +50000,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0014 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50024,7 +50024,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0015 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50048,7 +50048,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0016 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50072,7 +50072,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0017 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50096,7 +50096,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0018 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50120,7 +50120,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0019 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50144,7 +50144,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0020 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50168,7 +50168,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0021 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50192,7 +50192,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0022 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50216,7 +50216,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0023 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50240,7 +50240,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0024 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50264,7 +50264,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0025 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50288,7 +50288,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0026 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50312,7 +50312,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0027 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50336,7 +50336,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0028 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50360,7 +50360,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0029 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50384,7 +50384,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0030 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50408,7 +50408,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0031 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50432,7 +50432,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0032 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50456,7 +50456,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0033 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50480,7 +50480,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0034 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50504,7 +50504,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0035 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50528,7 +50528,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0036 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50552,7 +50552,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0037 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50576,7 +50576,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0038 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50600,7 +50600,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0039 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50624,7 +50624,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0040 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50648,7 +50648,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0041 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50672,7 +50672,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0042 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50696,7 +50696,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0043 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50720,7 +50720,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0044 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50744,7 +50744,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0045 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50768,7 +50768,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0046 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50792,7 +50792,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0047 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50816,7 +50816,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0048 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50840,7 +50840,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0049 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50864,7 +50864,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0050 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50888,7 +50888,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0051 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50912,7 +50912,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0052 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50936,7 +50936,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0053 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50960,7 +50960,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0054 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -50984,7 +50984,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0055 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51008,7 +51008,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0056 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51032,7 +51032,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0057 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51056,7 +51056,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0058 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51080,7 +51080,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0059 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51104,7 +51104,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0060 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51128,7 +51128,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0061 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51152,7 +51152,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0062 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51176,7 +51176,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0063 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51200,7 +51200,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0064 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51224,7 +51224,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0065 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51248,7 +51248,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0066 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51272,7 +51272,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0067 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51296,7 +51296,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0068 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51320,7 +51320,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0069 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51344,7 +51344,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0070 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51368,7 +51368,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0071 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51392,7 +51392,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0072 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51416,7 +51416,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0073 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51440,7 +51440,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0074 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51464,7 +51464,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0075 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51488,7 +51488,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0076 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51512,7 +51512,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0077 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51536,7 +51536,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0078 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51560,7 +51560,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0079 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51584,7 +51584,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0080 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51608,7 +51608,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0081 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51632,7 +51632,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0082 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51656,7 +51656,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0083 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51680,7 +51680,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0084 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51704,7 +51704,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0085 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51728,7 +51728,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0086 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51752,7 +51752,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0087 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51776,7 +51776,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0088 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51800,7 +51800,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0089 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51824,7 +51824,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0090 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51848,7 +51848,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0091 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51872,7 +51872,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0092 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51896,7 +51896,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0093 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51920,7 +51920,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0094 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51944,7 +51944,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0095 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51968,7 +51968,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0096 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -51992,7 +51992,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0097 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52016,7 +52016,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0098 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52040,7 +52040,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0099 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52064,7 +52064,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0100 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52088,7 +52088,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0101 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52112,7 +52112,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0102 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52136,7 +52136,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0103 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52160,7 +52160,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0104 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52184,7 +52184,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0105 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52208,7 +52208,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0106 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52232,7 +52232,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0107 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52256,7 +52256,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0108 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52280,7 +52280,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0109 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52304,7 +52304,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0110 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52328,7 +52328,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0111 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52352,7 +52352,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0112 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52376,7 +52376,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0113 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52400,7 +52400,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0114 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52424,7 +52424,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0115 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52448,7 +52448,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0116 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52472,7 +52472,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0117 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52496,7 +52496,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0118 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52520,7 +52520,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0119 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52544,7 +52544,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0120 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52568,7 +52568,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0121 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			244,
 			108
@@ -52592,7 +52592,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0122 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52616,7 +52616,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_1_0123 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			244,
 			108
@@ -52651,7 +52651,7 @@ return {
 		}
 	},
 	ma_sea_bounce_2_0001 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			132,
 			145
@@ -52675,7 +52675,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0002 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			132,
 			145
@@ -52699,7 +52699,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0003 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			132,
 			145
@@ -52723,7 +52723,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0004 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			132,
 			145
@@ -52747,7 +52747,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0005 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			132,
 			145
@@ -52771,7 +52771,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0006 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			132,
 			145
@@ -52795,7 +52795,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0007 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			132,
 			145
@@ -52819,7 +52819,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0008 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			132,
 			145
@@ -52843,7 +52843,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0009 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			132,
 			145
@@ -52867,7 +52867,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0010 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			132,
 			145
@@ -52891,7 +52891,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -52915,7 +52915,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0012 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -52939,7 +52939,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -52963,7 +52963,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0014 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -52987,7 +52987,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53011,7 +53011,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0016 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53035,7 +53035,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53059,7 +53059,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0018 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53083,7 +53083,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53107,7 +53107,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0020 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53131,7 +53131,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53155,7 +53155,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0022 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53179,7 +53179,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0023 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53203,7 +53203,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0024 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53227,7 +53227,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0025 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53251,7 +53251,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0026 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53275,7 +53275,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0027 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53299,7 +53299,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0028 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53323,7 +53323,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0029 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53347,7 +53347,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0030 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53371,7 +53371,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0031 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53395,7 +53395,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0032 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53419,7 +53419,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0033 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53443,7 +53443,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0034 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53467,7 +53467,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0035 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53491,7 +53491,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0036 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53515,7 +53515,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0037 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53539,7 +53539,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0038 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53563,7 +53563,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0039 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53587,7 +53587,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0040 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53611,7 +53611,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0041 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53635,7 +53635,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0042 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53659,7 +53659,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0043 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53683,7 +53683,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0044 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53707,7 +53707,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0045 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53731,7 +53731,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0046 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53755,7 +53755,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0047 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53779,7 +53779,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0048 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53803,7 +53803,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0049 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53827,7 +53827,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0050 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53851,7 +53851,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0051 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53875,7 +53875,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0052 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53899,7 +53899,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0053 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53923,7 +53923,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0054 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53947,7 +53947,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0055 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53971,7 +53971,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0056 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -53995,7 +53995,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0057 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54019,7 +54019,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0058 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54043,7 +54043,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0059 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54067,7 +54067,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0060 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			132,
 			145
@@ -54091,7 +54091,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0061 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54115,7 +54115,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0062 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54139,7 +54139,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0063 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54163,7 +54163,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0064 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54187,7 +54187,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0065 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54211,7 +54211,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0066 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54235,7 +54235,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0067 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54259,7 +54259,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0068 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54283,7 +54283,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0069 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54307,7 +54307,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0070 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54331,7 +54331,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0071 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54355,7 +54355,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0072 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54379,7 +54379,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0073 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54403,7 +54403,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0074 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54427,7 +54427,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0075 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54451,7 +54451,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0076 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54475,7 +54475,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0077 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54499,7 +54499,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0078 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54523,7 +54523,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0079 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54547,7 +54547,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0080 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54571,7 +54571,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0081 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54595,7 +54595,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0082 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54619,7 +54619,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0083 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54643,7 +54643,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0084 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54667,7 +54667,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0085 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54691,7 +54691,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0086 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54715,7 +54715,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0087 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54739,7 +54739,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0088 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54763,7 +54763,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0089 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54787,7 +54787,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0090 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54811,7 +54811,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0091 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54835,7 +54835,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0092 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54859,7 +54859,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0093 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54883,7 +54883,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0094 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54907,7 +54907,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0095 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54931,7 +54931,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0096 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -54955,7 +54955,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0097 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			132,
 			145
@@ -54979,7 +54979,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0098 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55003,7 +55003,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0099 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55027,7 +55027,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0100 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55051,7 +55051,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0101 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55075,7 +55075,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0102 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55099,7 +55099,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0103 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			132,
 			145
@@ -55123,7 +55123,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0104 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			132,
 			145
@@ -55147,7 +55147,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0105 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55171,7 +55171,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0106 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55195,7 +55195,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0107 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55219,7 +55219,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0108 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55243,7 +55243,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0109 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55267,7 +55267,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0110 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55291,7 +55291,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0111 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55315,7 +55315,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0112 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55339,7 +55339,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0113 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			132,
 			145
@@ -55363,7 +55363,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0114 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55387,7 +55387,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0115 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55411,7 +55411,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0116 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			132,
 			145
@@ -55435,7 +55435,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0117 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55459,7 +55459,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0118 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55483,7 +55483,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0119 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55507,7 +55507,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0120 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55531,7 +55531,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0121 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			132,
 			145
@@ -55555,7 +55555,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0122 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55579,7 +55579,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0123 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55603,7 +55603,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0124 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55627,7 +55627,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0125 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55651,7 +55651,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0126 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55675,7 +55675,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0127 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55699,7 +55699,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0128 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55723,7 +55723,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0129 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55747,7 +55747,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0130 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55771,7 +55771,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0131 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55795,7 +55795,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0132 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55819,7 +55819,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0133 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55843,7 +55843,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0134 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55867,7 +55867,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0135 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55891,7 +55891,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0136 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			132,
 			145
@@ -55915,7 +55915,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_2_0137 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			132,
 			145
@@ -55939,7 +55939,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -55963,7 +55963,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0002 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -55987,7 +55987,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0003 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56011,7 +56011,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0004 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56035,7 +56035,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0005 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56059,7 +56059,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0006 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56083,7 +56083,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0007 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56107,7 +56107,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0008 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56131,7 +56131,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0009 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56155,7 +56155,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0010 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56179,7 +56179,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0011 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56203,7 +56203,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0012 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56227,7 +56227,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0013 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56251,7 +56251,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0014 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56275,7 +56275,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0015 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56299,7 +56299,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0016 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56323,7 +56323,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0017 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56347,7 +56347,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0018 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56371,7 +56371,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0019 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56395,7 +56395,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0020 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56419,7 +56419,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0021 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56443,7 +56443,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0022 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56467,7 +56467,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0023 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56491,7 +56491,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0024 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56515,7 +56515,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0025 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56539,7 +56539,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0026 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56563,7 +56563,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0027 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56587,7 +56587,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0028 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -56611,7 +56611,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0029 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56635,7 +56635,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0030 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56659,7 +56659,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0031 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56683,7 +56683,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0032 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56707,7 +56707,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0033 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56731,7 +56731,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0034 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56755,7 +56755,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0035 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56779,7 +56779,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0036 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56803,7 +56803,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0037 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56827,7 +56827,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0038 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56851,7 +56851,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0039 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56875,7 +56875,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0040 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56899,7 +56899,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0041 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56923,7 +56923,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0042 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56947,7 +56947,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0043 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56971,7 +56971,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0044 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -56995,7 +56995,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0045 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57019,7 +57019,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0046 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57043,7 +57043,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0047 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57067,7 +57067,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0048 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57091,7 +57091,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0049 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57115,7 +57115,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0050 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57139,7 +57139,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0051 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57163,7 +57163,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0052 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57187,7 +57187,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0053 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57211,7 +57211,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0054 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57235,7 +57235,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0055 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57259,7 +57259,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0056 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57283,7 +57283,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0057 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57307,7 +57307,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0058 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57331,7 +57331,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0059 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57355,7 +57355,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0060 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57379,7 +57379,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0061 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57403,7 +57403,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0062 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57427,7 +57427,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0063 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57451,7 +57451,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0064 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57475,7 +57475,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0065 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			188,
 			105
@@ -57499,7 +57499,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0066 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57523,7 +57523,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0067 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57547,7 +57547,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0068 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57571,7 +57571,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0069 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57595,7 +57595,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0070 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57619,7 +57619,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0071 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57643,7 +57643,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0072 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57667,7 +57667,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0073 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57691,7 +57691,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0074 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57715,7 +57715,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0075 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57739,7 +57739,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0076 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57763,7 +57763,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0077 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57787,7 +57787,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0078 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57811,7 +57811,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0079 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57835,7 +57835,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0080 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57859,7 +57859,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0081 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57883,7 +57883,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0082 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57907,7 +57907,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0083 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57931,7 +57931,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0084 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			188,
 			105
@@ -57955,7 +57955,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0085 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -57979,7 +57979,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0086 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58003,7 +58003,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0087 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58027,7 +58027,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0088 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58051,7 +58051,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0089 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58075,7 +58075,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0090 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58099,7 +58099,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0091 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58123,7 +58123,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0092 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58147,7 +58147,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0093 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58171,7 +58171,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0094 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58195,7 +58195,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0095 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58219,7 +58219,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0096 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58243,7 +58243,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0097 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58267,7 +58267,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0098 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58291,7 +58291,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0099 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58315,7 +58315,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0100 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58339,7 +58339,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0101 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58363,7 +58363,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0102 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58387,7 +58387,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0103 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58411,7 +58411,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0104 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58435,7 +58435,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0105 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58459,7 +58459,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0106 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			188,
 			105
@@ -58483,7 +58483,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0107 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			188,
 			105
@@ -58507,7 +58507,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0108 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			188,
 			105
@@ -58531,7 +58531,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0109 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			188,
 			105
@@ -58555,7 +58555,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0110 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			188,
 			105
@@ -58579,7 +58579,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0111 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			188,
 			105
@@ -58603,7 +58603,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0112 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			188,
 			105
@@ -58627,7 +58627,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0113 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			188,
 			105
@@ -58651,7 +58651,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0114 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			188,
 			105
@@ -58675,7 +58675,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0115 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			188,
 			105
@@ -58699,7 +58699,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0116 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			188,
 			105
@@ -58723,7 +58723,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0117 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			188,
 			105
@@ -58747,7 +58747,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0118 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			188,
 			105
@@ -58771,7 +58771,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0119 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			188,
 			105
@@ -58795,7 +58795,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_3_0120 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			188,
 			105
@@ -58819,7 +58819,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0001 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -58854,7 +58854,7 @@ return {
 		}
 	},
 	ma_sea_bounce_4_0010 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -58878,7 +58878,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0011 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -58902,7 +58902,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0012 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -58926,7 +58926,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0013 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -58950,7 +58950,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0014 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -58974,7 +58974,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0015 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -58998,7 +58998,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0016 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -59022,7 +59022,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0017 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -59046,7 +59046,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0018 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -59070,7 +59070,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0019 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -59094,7 +59094,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0020 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -59118,7 +59118,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0021 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -59142,7 +59142,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0022 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -59166,7 +59166,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0023 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -59190,7 +59190,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0024 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59214,7 +59214,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0025 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59238,7 +59238,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0026 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59262,7 +59262,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0027 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59286,7 +59286,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0028 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59310,7 +59310,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0029 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59334,7 +59334,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0030 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59358,7 +59358,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0031 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59382,7 +59382,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0032 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59406,7 +59406,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0033 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59430,7 +59430,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0034 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59454,7 +59454,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0035 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59478,7 +59478,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0036 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59502,7 +59502,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0037 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59526,7 +59526,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0038 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59550,7 +59550,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0039 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59574,7 +59574,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0040 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59598,7 +59598,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0041 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59622,7 +59622,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0042 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59646,7 +59646,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0043 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59670,7 +59670,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0044 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59694,7 +59694,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0045 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59718,7 +59718,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0046 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59742,7 +59742,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0047 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59766,7 +59766,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0048 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59790,7 +59790,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0049 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59814,7 +59814,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0050 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59838,7 +59838,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0051 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -59862,7 +59862,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0052 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -59886,7 +59886,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0053 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -59910,7 +59910,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0054 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -59934,7 +59934,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0055 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -59958,7 +59958,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0056 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -59982,7 +59982,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0057 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -60006,7 +60006,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0058 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -60030,7 +60030,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0059 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -60054,7 +60054,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0060 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -60078,7 +60078,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0061 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -60102,7 +60102,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0062 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -60126,7 +60126,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0063 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -60150,7 +60150,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0064 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -60174,7 +60174,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0065 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -60198,7 +60198,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0066 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -60222,7 +60222,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0067 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -60246,7 +60246,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0068 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -60270,7 +60270,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0069 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -60294,7 +60294,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0070 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60318,7 +60318,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0071 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -60342,7 +60342,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0072 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60366,7 +60366,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0073 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60390,7 +60390,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0074 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60414,7 +60414,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0075 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60438,7 +60438,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0076 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60462,7 +60462,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0077 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60486,7 +60486,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0078 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60510,7 +60510,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0079 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60534,7 +60534,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0080 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60558,7 +60558,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0081 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60582,7 +60582,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0082 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60606,7 +60606,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0083 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60630,7 +60630,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0084 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60654,7 +60654,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0085 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60678,7 +60678,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0086 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60702,7 +60702,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0087 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60726,7 +60726,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0088 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60750,7 +60750,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0089 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60774,7 +60774,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0090 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60798,7 +60798,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0091 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60822,7 +60822,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0092 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60846,7 +60846,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0093 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60870,7 +60870,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0094 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60894,7 +60894,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0095 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60918,7 +60918,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0096 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60942,7 +60942,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0097 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60966,7 +60966,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0098 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -60990,7 +60990,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0099 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -61014,7 +61014,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0100 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -61038,7 +61038,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0101 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -61062,7 +61062,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0102 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -61086,7 +61086,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0103 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -61110,7 +61110,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0104 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -61134,7 +61134,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0105 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -61158,7 +61158,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0106 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -61182,7 +61182,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0107 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -61206,7 +61206,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0108 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -61230,7 +61230,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0109 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -61254,7 +61254,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0110 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			199,
 			138
@@ -61278,7 +61278,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0111 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			199,
 			138
@@ -61302,7 +61302,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0112 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			199,
 			138
@@ -61326,7 +61326,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0113 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			199,
 			138
@@ -61350,7 +61350,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0114 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			199,
 			138
@@ -61374,7 +61374,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0115 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			199,
 			138
@@ -61398,7 +61398,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0116 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -61422,7 +61422,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0117 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -61446,7 +61446,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0118 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -61470,7 +61470,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0119 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			199,
 			138
@@ -61494,7 +61494,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0120 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -61518,7 +61518,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0121 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -61542,7 +61542,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0122 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -61566,7 +61566,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0123 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -61590,7 +61590,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0124 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -61614,7 +61614,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0125 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			199,
 			138
@@ -61638,7 +61638,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0126 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			199,
 			138
@@ -61662,7 +61662,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0127 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			199,
 			138
@@ -61686,7 +61686,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0128 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			199,
 			138
@@ -61710,7 +61710,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0129 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			199,
 			138
@@ -61734,7 +61734,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0130 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			199,
 			138
@@ -61758,7 +61758,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0131 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -61782,7 +61782,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0132 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -61806,7 +61806,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0133 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -61830,7 +61830,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0134 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			199,
 			138
@@ -61854,7 +61854,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0135 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -61878,7 +61878,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0136 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -61902,7 +61902,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0137 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			199,
 			138
@@ -61926,7 +61926,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_4_0138 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			199,
 			138
@@ -61950,7 +61950,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0001 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -61974,7 +61974,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0002 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -61998,7 +61998,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0003 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62022,7 +62022,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0004 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62046,7 +62046,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0005 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62070,7 +62070,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0006 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62094,7 +62094,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0007 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62118,7 +62118,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0008 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62142,7 +62142,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0009 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62166,7 +62166,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0010 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62190,7 +62190,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0011 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62214,7 +62214,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0012 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62238,7 +62238,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0013 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62262,7 +62262,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0014 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62286,7 +62286,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0015 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62310,7 +62310,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0016 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62334,7 +62334,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0017 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62358,7 +62358,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0018 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62382,7 +62382,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0019 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -62406,7 +62406,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0020 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			186,
 			64
@@ -62430,7 +62430,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0021 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			186,
 			64
@@ -62454,7 +62454,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0022 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			186,
 			64
@@ -62478,7 +62478,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0023 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			186,
 			64
@@ -62502,7 +62502,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0024 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			186,
 			64
@@ -62526,7 +62526,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0025 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			186,
 			64
@@ -62550,7 +62550,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0026 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62574,7 +62574,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0027 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62598,7 +62598,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0028 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62622,7 +62622,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0029 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62646,7 +62646,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0030 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62670,7 +62670,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0031 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62694,7 +62694,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0032 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62718,7 +62718,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0033 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62742,7 +62742,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0034 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62766,7 +62766,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0035 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62790,7 +62790,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0036 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62814,7 +62814,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0037 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62838,7 +62838,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0038 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62862,7 +62862,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0039 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62886,7 +62886,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0040 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62910,7 +62910,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0041 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62934,7 +62934,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0042 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62958,7 +62958,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0043 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -62982,7 +62982,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0044 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63006,7 +63006,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0045 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63030,7 +63030,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0046 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63054,7 +63054,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0047 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63078,7 +63078,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0048 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63102,7 +63102,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0049 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63126,7 +63126,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0050 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63150,7 +63150,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0051 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63174,7 +63174,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0052 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63198,7 +63198,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0053 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63222,7 +63222,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0054 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63246,7 +63246,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0055 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63270,7 +63270,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0056 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63294,7 +63294,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0057 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63318,7 +63318,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0058 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63342,7 +63342,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0059 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63366,7 +63366,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0060 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63390,7 +63390,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0061 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63414,7 +63414,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0062 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63438,7 +63438,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0063 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63462,7 +63462,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0064 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63486,7 +63486,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0065 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63510,7 +63510,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0066 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -63534,7 +63534,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0067 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63558,7 +63558,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0068 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63582,7 +63582,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0069 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63606,7 +63606,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0070 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63630,7 +63630,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0071 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63654,7 +63654,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0072 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63678,7 +63678,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0073 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63702,7 +63702,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0074 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63726,7 +63726,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0075 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63750,7 +63750,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0076 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63774,7 +63774,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0077 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63798,7 +63798,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0078 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63822,7 +63822,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0079 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63846,7 +63846,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0080 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63870,7 +63870,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0081 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63894,7 +63894,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0082 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63918,7 +63918,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0083 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63942,7 +63942,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0084 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63966,7 +63966,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0085 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -63990,7 +63990,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0086 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64014,7 +64014,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0087 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64038,7 +64038,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0088 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64062,7 +64062,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0089 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64086,7 +64086,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0090 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64110,7 +64110,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0091 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64134,7 +64134,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0092 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64158,7 +64158,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0093 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64182,7 +64182,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0094 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64206,7 +64206,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0095 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -64230,7 +64230,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0096 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64254,7 +64254,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0097 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64278,7 +64278,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0098 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64302,7 +64302,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0099 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64326,7 +64326,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0100 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64350,7 +64350,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0101 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64374,7 +64374,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0102 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64398,7 +64398,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0103 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			186,
 			64
@@ -64422,7 +64422,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0104 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			186,
 			64
@@ -64446,7 +64446,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0105 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			186,
 			64
@@ -64470,7 +64470,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0106 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			186,
 			64
@@ -64494,7 +64494,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0107 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -64518,7 +64518,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0108 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -64542,7 +64542,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0109 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			186,
 			64
@@ -64566,7 +64566,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0110 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64590,7 +64590,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0111 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			186,
 			64
@@ -64614,7 +64614,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0112 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			186,
 			64
@@ -64638,7 +64638,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0113 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			186,
 			64
@@ -64662,7 +64662,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0114 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -64686,7 +64686,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0115 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -64710,7 +64710,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_5_0116 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			186,
 			64
@@ -64739,7 +64739,7 @@ return {
 		}
 	},
 	ma_sea_bounce_6_0001 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			156,
 			99
@@ -64763,7 +64763,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0002 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			156,
 			99
@@ -64787,7 +64787,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0003 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			156,
 			99
@@ -64811,7 +64811,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0004 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			156,
 			99
@@ -64835,7 +64835,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0005 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			156,
 			99
@@ -64859,7 +64859,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0006 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			156,
 			99
@@ -64883,7 +64883,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0007 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -64907,7 +64907,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0008 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -64931,7 +64931,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -64955,7 +64955,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0010 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -64979,7 +64979,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -65003,7 +65003,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0012 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -65027,7 +65027,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0013 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -65051,7 +65051,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0014 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -65075,7 +65075,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0015 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -65099,7 +65099,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0016 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -65123,7 +65123,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0017 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65147,7 +65147,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0018 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65171,7 +65171,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0019 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65195,7 +65195,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0020 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65219,7 +65219,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0021 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65243,7 +65243,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0022 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65267,7 +65267,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0023 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65291,7 +65291,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0024 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65315,7 +65315,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0025 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65339,7 +65339,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0026 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65363,7 +65363,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0027 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65387,7 +65387,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0028 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65411,7 +65411,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0029 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65435,7 +65435,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0030 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65459,7 +65459,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0031 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65483,7 +65483,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0032 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65507,7 +65507,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0033 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65531,7 +65531,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0034 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65555,7 +65555,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0035 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65579,7 +65579,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0036 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65603,7 +65603,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0037 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65627,7 +65627,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0038 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65651,7 +65651,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0039 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65675,7 +65675,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0040 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65699,7 +65699,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0041 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65723,7 +65723,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0042 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65747,7 +65747,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0043 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65771,7 +65771,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0044 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65795,7 +65795,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0045 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65819,7 +65819,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0046 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65843,7 +65843,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0047 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65867,7 +65867,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0048 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65891,7 +65891,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0049 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65915,7 +65915,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0050 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65939,7 +65939,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0051 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -65963,7 +65963,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0052 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -65987,7 +65987,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0053 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66011,7 +66011,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0054 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66035,7 +66035,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0055 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66059,7 +66059,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0056 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66083,7 +66083,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0057 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66107,7 +66107,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0058 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66131,7 +66131,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0059 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66155,7 +66155,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0060 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66179,7 +66179,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0061 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66203,7 +66203,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0062 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66227,7 +66227,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0063 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66251,7 +66251,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0064 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66275,7 +66275,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0065 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66299,7 +66299,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0066 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66323,7 +66323,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0067 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66347,7 +66347,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0068 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66371,7 +66371,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0069 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66395,7 +66395,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0070 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66419,7 +66419,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0071 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66443,7 +66443,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0072 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66467,7 +66467,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0073 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66491,7 +66491,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0074 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66515,7 +66515,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0075 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66539,7 +66539,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0076 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -66563,7 +66563,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0077 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -66587,7 +66587,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0078 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -66611,7 +66611,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0079 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -66635,7 +66635,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0080 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -66659,7 +66659,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0081 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -66683,7 +66683,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0082 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -66707,7 +66707,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0083 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -66731,7 +66731,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0084 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -66755,7 +66755,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0085 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -66779,7 +66779,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0086 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -66803,7 +66803,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0087 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66827,7 +66827,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0088 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66851,7 +66851,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0089 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66875,7 +66875,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0090 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			156,
 			99
@@ -66899,7 +66899,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0091 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -66923,7 +66923,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0092 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			156,
 			99
@@ -66947,7 +66947,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0093 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			156,
 			99
@@ -66971,7 +66971,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0094 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -66995,7 +66995,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0095 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67019,7 +67019,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0096 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67043,7 +67043,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0097 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			156,
 			99
@@ -67067,7 +67067,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0098 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67091,7 +67091,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0099 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67115,7 +67115,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0100 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67139,7 +67139,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0101 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67163,7 +67163,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0102 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67187,7 +67187,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0103 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67211,7 +67211,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0104 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67235,7 +67235,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0105 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67259,7 +67259,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0106 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67283,7 +67283,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0107 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67307,7 +67307,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0108 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67331,7 +67331,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0109 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67355,7 +67355,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0110 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67379,7 +67379,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0111 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67403,7 +67403,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0112 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67427,7 +67427,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0113 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67451,7 +67451,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0114 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67475,7 +67475,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0115 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67499,7 +67499,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0116 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67523,7 +67523,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0117 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67547,7 +67547,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0118 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67571,7 +67571,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0119 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67595,7 +67595,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0120 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67619,7 +67619,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0121 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67643,7 +67643,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0122 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67667,7 +67667,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0123 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67691,7 +67691,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0124 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67715,7 +67715,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0125 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67739,7 +67739,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0126 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67763,7 +67763,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0127 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67787,7 +67787,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0128 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67811,7 +67811,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0129 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67835,7 +67835,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0130 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67859,7 +67859,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0131 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			156,
 			99
@@ -67883,7 +67883,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0132 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			156,
 			99
@@ -67907,7 +67907,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0133 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			156,
 			99
@@ -67931,7 +67931,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_6_0134 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			156,
 			99
@@ -67963,7 +67963,7 @@ return {
 		}
 	},
 	ma_sea_bounce_7_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -67987,7 +67987,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0002 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -68011,7 +68011,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0003 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -68035,7 +68035,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0004 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -68059,7 +68059,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0005 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -68083,7 +68083,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0006 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -68107,7 +68107,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0007 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68131,7 +68131,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0008 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68155,7 +68155,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0009 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68179,7 +68179,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0010 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68203,7 +68203,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0011 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68227,7 +68227,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0012 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68251,7 +68251,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0013 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68275,7 +68275,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0014 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68299,7 +68299,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -68323,7 +68323,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0016 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68347,7 +68347,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0017 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68371,7 +68371,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0018 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68395,7 +68395,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0019 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -68419,7 +68419,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0020 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68443,7 +68443,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0021 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68467,7 +68467,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0022 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68491,7 +68491,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0023 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68515,7 +68515,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0024 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68539,7 +68539,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0025 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68563,7 +68563,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0026 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68587,7 +68587,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0027 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68611,7 +68611,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0028 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68635,7 +68635,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0029 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68659,7 +68659,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0030 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68683,7 +68683,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0031 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68707,7 +68707,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0032 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68731,7 +68731,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0033 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68755,7 +68755,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0034 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68779,7 +68779,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0035 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68803,7 +68803,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0036 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68827,7 +68827,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0037 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			144,
 			66
@@ -68851,7 +68851,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0038 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -68875,7 +68875,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0039 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -68899,7 +68899,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0040 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -68923,7 +68923,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0041 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -68947,7 +68947,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0042 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -68971,7 +68971,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0043 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -68995,7 +68995,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0044 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69019,7 +69019,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0045 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69043,7 +69043,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0046 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69067,7 +69067,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0047 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69091,7 +69091,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0048 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69115,7 +69115,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0049 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69139,7 +69139,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0050 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69163,7 +69163,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0051 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69187,7 +69187,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0052 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69211,7 +69211,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0053 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69235,7 +69235,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0054 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69259,7 +69259,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0055 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69283,7 +69283,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0056 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69307,7 +69307,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0057 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69331,7 +69331,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0058 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69355,7 +69355,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0059 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69379,7 +69379,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0060 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69403,7 +69403,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0061 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69427,7 +69427,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0062 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69451,7 +69451,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0063 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69475,7 +69475,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0064 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69499,7 +69499,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0065 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69523,7 +69523,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0066 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69547,7 +69547,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0067 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69571,7 +69571,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0068 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69595,7 +69595,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0069 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69619,7 +69619,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0070 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69643,7 +69643,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0071 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69667,7 +69667,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0072 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69691,7 +69691,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0073 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69715,7 +69715,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0074 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69739,7 +69739,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0075 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69763,7 +69763,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0076 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69787,7 +69787,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0077 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -69811,7 +69811,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0078 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69835,7 +69835,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0079 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -69859,7 +69859,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0080 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -69883,7 +69883,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0081 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -69907,7 +69907,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0082 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -69931,7 +69931,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0083 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -69955,7 +69955,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0084 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -69979,7 +69979,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0085 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -70003,7 +70003,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0086 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -70027,7 +70027,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0087 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -70051,7 +70051,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0088 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -70075,7 +70075,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0089 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -70099,7 +70099,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0090 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -70123,7 +70123,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0091 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -70147,7 +70147,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0092 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -70171,7 +70171,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0093 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -70195,7 +70195,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0094 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -70219,7 +70219,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0095 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -70243,7 +70243,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0096 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70267,7 +70267,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0097 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70291,7 +70291,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0098 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70315,7 +70315,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0099 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70339,7 +70339,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0100 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70363,7 +70363,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0101 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70387,7 +70387,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0102 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70411,7 +70411,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0103 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70435,7 +70435,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0104 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70459,7 +70459,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0105 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70483,7 +70483,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0106 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70507,7 +70507,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0107 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70531,7 +70531,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0108 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70555,7 +70555,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0109 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70579,7 +70579,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0110 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70603,7 +70603,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0111 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -70627,7 +70627,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0112 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70651,7 +70651,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0113 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70675,7 +70675,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0114 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70699,7 +70699,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0115 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -70723,7 +70723,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0116 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -70747,7 +70747,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0117 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			144,
 			66
@@ -70771,7 +70771,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0118 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -70795,7 +70795,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0119 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			144,
 			66
@@ -70819,7 +70819,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_7_0120 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			144,
 			66
@@ -70843,7 +70843,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -70867,7 +70867,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0002 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -70891,7 +70891,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0003 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -70915,7 +70915,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0004 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -70939,7 +70939,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0005 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -70963,7 +70963,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0006 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -70987,7 +70987,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0007 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71011,7 +71011,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0008 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71035,7 +71035,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0009 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71059,7 +71059,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0010 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71083,7 +71083,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0011 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71107,7 +71107,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0012 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71131,7 +71131,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0013 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71155,7 +71155,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0014 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71179,7 +71179,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0015 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71203,7 +71203,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0016 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71227,7 +71227,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0017 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71251,7 +71251,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0018 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71275,7 +71275,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0019 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71299,7 +71299,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0020 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71323,7 +71323,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0021 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71347,7 +71347,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0022 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71371,7 +71371,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0023 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71395,7 +71395,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0024 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71419,7 +71419,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0025 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71443,7 +71443,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0026 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71467,7 +71467,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0027 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71491,7 +71491,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0028 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71515,7 +71515,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0029 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71539,7 +71539,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0030 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71563,7 +71563,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0031 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71587,7 +71587,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0032 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71611,7 +71611,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0033 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71635,7 +71635,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0034 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71659,7 +71659,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0035 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71683,7 +71683,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0036 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71707,7 +71707,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0037 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71731,7 +71731,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0038 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71755,7 +71755,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0039 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -71779,7 +71779,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0040 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71803,7 +71803,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0041 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71827,7 +71827,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0042 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71851,7 +71851,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0043 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71875,7 +71875,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0044 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71899,7 +71899,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0045 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71923,7 +71923,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0046 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71947,7 +71947,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0047 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71971,7 +71971,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0048 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -71995,7 +71995,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0049 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72019,7 +72019,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0050 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72043,7 +72043,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0051 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72067,7 +72067,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0052 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72091,7 +72091,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0053 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72115,7 +72115,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0054 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72139,7 +72139,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0055 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72163,7 +72163,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0056 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72187,7 +72187,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0057 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72211,7 +72211,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0058 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72235,7 +72235,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0059 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72259,7 +72259,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0060 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72283,7 +72283,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0061 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72307,7 +72307,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0062 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72331,7 +72331,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0063 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72355,7 +72355,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0064 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72379,7 +72379,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0065 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72403,7 +72403,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0066 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72427,7 +72427,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0067 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72451,7 +72451,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0068 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72475,7 +72475,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0069 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72499,7 +72499,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0070 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72523,7 +72523,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0071 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72547,7 +72547,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0072 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72571,7 +72571,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0073 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72595,7 +72595,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0074 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72619,7 +72619,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0075 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72643,7 +72643,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0076 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72667,7 +72667,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0077 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72691,7 +72691,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0078 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72715,7 +72715,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0079 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -72739,7 +72739,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0080 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -72763,7 +72763,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0081 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -72787,7 +72787,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0082 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -72811,7 +72811,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0083 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -72835,7 +72835,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0084 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -72859,7 +72859,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0085 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -72883,7 +72883,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0086 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -72907,7 +72907,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0087 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -72931,7 +72931,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0088 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -72955,7 +72955,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0089 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -72979,7 +72979,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0090 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73003,7 +73003,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0091 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73027,7 +73027,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0092 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73051,7 +73051,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0093 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73075,7 +73075,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0094 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73099,7 +73099,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0095 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73123,7 +73123,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0096 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73147,7 +73147,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0097 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73171,7 +73171,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0098 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73195,7 +73195,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0099 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73219,7 +73219,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0100 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73243,7 +73243,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0101 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73267,7 +73267,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0102 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73291,7 +73291,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0103 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73315,7 +73315,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0104 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73339,7 +73339,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0105 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73363,7 +73363,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0106 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73387,7 +73387,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0107 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73411,7 +73411,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0108 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -73435,7 +73435,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0109 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73459,7 +73459,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0110 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73483,7 +73483,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0111 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73507,7 +73507,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0112 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73531,7 +73531,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0113 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73555,7 +73555,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0114 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -73579,7 +73579,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0115 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73603,7 +73603,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0116 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -73627,7 +73627,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0117 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -73651,7 +73651,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0118 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -73675,7 +73675,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0119 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -73699,7 +73699,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0120 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73723,7 +73723,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0121 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73747,7 +73747,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0122 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73771,7 +73771,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0123 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -73795,7 +73795,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0124 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			173,
 			108
@@ -73819,7 +73819,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0125 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			173,
 			108
@@ -73843,7 +73843,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0126 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -73867,7 +73867,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0127 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -73891,7 +73891,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0128 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -73915,7 +73915,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0129 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -73939,7 +73939,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0130 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -73963,7 +73963,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0131 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -73987,7 +73987,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0132 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -74011,7 +74011,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0133 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -74035,7 +74035,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0134 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			173,
 			108
@@ -74059,7 +74059,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0135 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -74083,7 +74083,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0136 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -74107,7 +74107,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_8_0137 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			173,
 			108
@@ -74131,7 +74131,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0001 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			85,
 			143
@@ -74157,7 +74157,7 @@ return {
 		}
 	},
 	ma_sea_bounce_9_0003 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -74181,7 +74181,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0004 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -74205,7 +74205,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -74229,7 +74229,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0006 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -74253,7 +74253,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -74277,7 +74277,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0008 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -74301,7 +74301,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -74325,7 +74325,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0010 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -74349,7 +74349,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -74373,7 +74373,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0012 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -74397,7 +74397,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -74421,7 +74421,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0014 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -74445,7 +74445,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -74469,7 +74469,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0016 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -74493,7 +74493,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0017 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74517,7 +74517,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0018 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74541,7 +74541,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0019 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74565,7 +74565,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0020 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74589,7 +74589,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0021 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74613,7 +74613,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0022 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74637,7 +74637,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0023 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74661,7 +74661,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0024 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74685,7 +74685,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0025 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74709,7 +74709,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0026 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74733,7 +74733,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0027 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74757,7 +74757,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0028 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74781,7 +74781,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0029 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74805,7 +74805,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0030 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74829,7 +74829,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0031 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74853,7 +74853,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0032 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74877,7 +74877,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0033 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74901,7 +74901,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0034 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74925,7 +74925,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0035 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74949,7 +74949,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0036 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74973,7 +74973,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0037 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -74997,7 +74997,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0038 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75021,7 +75021,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0039 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75045,7 +75045,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0040 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75069,7 +75069,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0041 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75093,7 +75093,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0042 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75117,7 +75117,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0043 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75141,7 +75141,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0044 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75165,7 +75165,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0045 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75189,7 +75189,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0046 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75213,7 +75213,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0047 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75237,7 +75237,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0048 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75261,7 +75261,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0049 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75285,7 +75285,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0050 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75309,7 +75309,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0051 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75333,7 +75333,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0052 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75357,7 +75357,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0053 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75381,7 +75381,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0054 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75405,7 +75405,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0055 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75429,7 +75429,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0056 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75453,7 +75453,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0057 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75477,7 +75477,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0058 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -75501,7 +75501,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0059 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -75525,7 +75525,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0060 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -75549,7 +75549,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0061 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -75573,7 +75573,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0062 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75597,7 +75597,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0063 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75621,7 +75621,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0064 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75645,7 +75645,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0065 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75669,7 +75669,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0066 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75693,7 +75693,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0067 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75717,7 +75717,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0068 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75741,7 +75741,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0069 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75765,7 +75765,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0070 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75789,7 +75789,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0071 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75813,7 +75813,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0072 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75837,7 +75837,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0073 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75861,7 +75861,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0074 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75885,7 +75885,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0075 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75909,7 +75909,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0076 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75933,7 +75933,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0077 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75957,7 +75957,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0078 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -75981,7 +75981,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0079 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76005,7 +76005,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0080 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76029,7 +76029,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0081 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76053,7 +76053,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0082 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76077,7 +76077,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0083 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76101,7 +76101,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0084 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76125,7 +76125,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0085 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76149,7 +76149,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0086 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76173,7 +76173,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0087 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76197,7 +76197,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0088 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76221,7 +76221,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0089 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76245,7 +76245,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0090 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76269,7 +76269,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0091 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76293,7 +76293,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0092 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76317,7 +76317,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0093 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76341,7 +76341,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0094 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76365,7 +76365,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0095 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76389,7 +76389,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0096 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76413,7 +76413,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0097 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76437,7 +76437,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0098 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76461,7 +76461,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0099 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76485,7 +76485,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0100 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76509,7 +76509,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0101 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76533,7 +76533,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0102 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76557,7 +76557,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0103 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76581,7 +76581,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0104 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76605,7 +76605,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0105 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76629,7 +76629,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0106 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76653,7 +76653,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0107 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76677,7 +76677,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0108 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76701,7 +76701,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0109 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76725,7 +76725,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0110 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76749,7 +76749,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0111 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76773,7 +76773,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0112 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -76797,7 +76797,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0113 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -76821,7 +76821,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0114 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -76845,7 +76845,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0115 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -76869,7 +76869,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0116 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -76893,7 +76893,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0117 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -76917,7 +76917,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0118 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -76941,7 +76941,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0119 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -76965,7 +76965,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0120 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -76989,7 +76989,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0121 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77013,7 +77013,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0122 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77037,7 +77037,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0123 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77061,7 +77061,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0124 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77085,7 +77085,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0125 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77109,7 +77109,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0126 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77133,7 +77133,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0127 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77157,7 +77157,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0128 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77181,7 +77181,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0129 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77205,7 +77205,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0130 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77229,7 +77229,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0131 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77253,7 +77253,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0132 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77277,7 +77277,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0133 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77301,7 +77301,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0134 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77325,7 +77325,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0135 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77349,7 +77349,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0136 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77373,7 +77373,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0137 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -77397,7 +77397,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0138 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77421,7 +77421,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0139 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77445,7 +77445,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0140 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77469,7 +77469,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0141 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77493,7 +77493,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0142 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77517,7 +77517,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0143 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77541,7 +77541,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0144 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			85,
 			143
@@ -77565,7 +77565,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0145 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77589,7 +77589,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0146 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77613,7 +77613,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0147 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77637,7 +77637,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0148 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77661,7 +77661,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0149 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77685,7 +77685,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0150 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77709,7 +77709,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0151 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			85,
 			143
@@ -77733,7 +77733,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0152 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77757,7 +77757,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0153 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77781,7 +77781,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0154 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77805,7 +77805,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0155 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77829,7 +77829,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0156 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77853,7 +77853,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0157 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77877,7 +77877,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0158 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -77901,7 +77901,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0159 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			85,
 			143
@@ -77925,7 +77925,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0160 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			85,
 			143
@@ -77949,7 +77949,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0161 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			85,
 			143
@@ -77973,7 +77973,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0162 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			85,
 			143
@@ -77997,7 +77997,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0163 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			85,
 			143
@@ -78021,7 +78021,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0164 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -78045,7 +78045,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0165 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -78069,7 +78069,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0166 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			85,
 			143
@@ -78093,7 +78093,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0167 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			85,
 			143
@@ -78117,7 +78117,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0168 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -78141,7 +78141,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0169 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -78165,7 +78165,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0170 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -78189,7 +78189,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0171 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -78213,7 +78213,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0172 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			85,
 			143
@@ -78237,7 +78237,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0173 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			85,
 			143
@@ -78261,7 +78261,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0174 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			85,
 			143
@@ -78285,7 +78285,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0175 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			85,
 			143
@@ -78309,7 +78309,7 @@ return {
 		alias = {}
 	},
 	ma_sea_bounce_9_0176 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			85,
 			143
@@ -78351,7 +78351,7 @@ return {
 		}
 	},
 	ma_sea_sparks_1_0001 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			41,
 			27
@@ -78381,7 +78381,7 @@ return {
 		}
 	},
 	ma_sea_sparks_1_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			41,
 			27
@@ -78417,7 +78417,7 @@ return {
 		}
 	},
 	ma_sea_sparks_1_0013 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			41,
 			27
@@ -78447,7 +78447,7 @@ return {
 		}
 	},
 	ma_ship_in_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78471,7 +78471,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0002 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78495,7 +78495,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0003 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78519,7 +78519,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0004 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78543,7 +78543,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0005 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78567,7 +78567,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0006 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78591,7 +78591,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0007 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78615,7 +78615,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0008 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78639,7 +78639,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0009 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78663,7 +78663,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0010 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78687,7 +78687,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0011 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78711,7 +78711,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0012 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78735,7 +78735,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0013 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78759,7 +78759,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0014 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78783,7 +78783,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0015 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78807,7 +78807,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0016 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78831,7 +78831,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0017 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78855,7 +78855,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0018 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78879,7 +78879,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0019 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78903,7 +78903,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0020 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78927,7 +78927,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0021 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78951,7 +78951,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0022 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78975,7 +78975,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0023 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -78999,7 +78999,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0024 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -79023,7 +79023,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0025 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -79047,7 +79047,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0026 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -79071,7 +79071,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0027 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -79095,7 +79095,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0028 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -79119,7 +79119,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0029 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79143,7 +79143,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0030 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79167,7 +79167,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0031 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79191,7 +79191,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0032 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79215,7 +79215,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0033 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79239,7 +79239,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0034 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79263,7 +79263,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0035 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79287,7 +79287,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0036 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79311,7 +79311,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0037 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79335,7 +79335,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0038 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79359,7 +79359,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0039 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79383,7 +79383,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0040 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79407,7 +79407,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0041 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -79431,7 +79431,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0042 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -79455,7 +79455,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0043 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -79479,7 +79479,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0044 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -79503,7 +79503,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0045 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -79527,7 +79527,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0046 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79551,7 +79551,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0047 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79575,7 +79575,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0048 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79599,7 +79599,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0049 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79623,7 +79623,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0050 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79647,7 +79647,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0051 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79671,7 +79671,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0052 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79695,7 +79695,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0053 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79719,7 +79719,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0054 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79743,7 +79743,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0055 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79767,7 +79767,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0056 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -79791,7 +79791,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0057 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79815,7 +79815,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0058 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79839,7 +79839,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0059 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79863,7 +79863,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0060 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -79887,7 +79887,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0061 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79911,7 +79911,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0062 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79935,7 +79935,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0063 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79959,7 +79959,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0064 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -79983,7 +79983,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0065 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80007,7 +80007,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0066 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80031,7 +80031,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0067 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80055,7 +80055,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0068 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80079,7 +80079,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0069 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -80103,7 +80103,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0070 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80127,7 +80127,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0071 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80151,7 +80151,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0072 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80175,7 +80175,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0073 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80199,7 +80199,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0074 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80223,7 +80223,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0075 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80247,7 +80247,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0076 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80271,7 +80271,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0077 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80295,7 +80295,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0078 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80319,7 +80319,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0079 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80343,7 +80343,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0080 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80367,7 +80367,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0081 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80391,7 +80391,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0082 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80415,7 +80415,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0083 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80439,7 +80439,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0084 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80463,7 +80463,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0085 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80487,7 +80487,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0086 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -80511,7 +80511,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0087 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80535,7 +80535,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0088 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80559,7 +80559,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0089 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80583,7 +80583,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0090 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80607,7 +80607,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0091 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80631,7 +80631,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0092 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80655,7 +80655,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0093 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80679,7 +80679,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0094 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80703,7 +80703,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0095 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80727,7 +80727,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0096 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80751,7 +80751,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0097 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80778,7 +80778,7 @@ return {
 		}
 	},
 	ma_ship_in_0100 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80802,7 +80802,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0101 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80826,7 +80826,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0102 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80850,7 +80850,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0103 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80874,7 +80874,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0104 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80900,7 +80900,7 @@ return {
 		}
 	},
 	ma_ship_in_0106 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80924,7 +80924,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0107 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80948,7 +80948,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0108 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80972,7 +80972,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0109 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -80996,7 +80996,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0110 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -81020,7 +81020,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0111 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -81044,7 +81044,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0112 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -81068,7 +81068,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0113 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -81092,7 +81092,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0114 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -81116,7 +81116,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0115 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			98,
 			69
@@ -81140,7 +81140,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0116 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -81164,7 +81164,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0117 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -81188,7 +81188,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0118 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -81212,7 +81212,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0119 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -81236,7 +81236,7 @@ return {
 		alias = {}
 	},
 	ma_ship_in_0120 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			98,
 			69
@@ -81260,7 +81260,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0001 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81284,7 +81284,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0002 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81308,7 +81308,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0003 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81332,7 +81332,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0004 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81356,7 +81356,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0005 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81380,7 +81380,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0006 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81404,7 +81404,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0007 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81428,7 +81428,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0008 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81452,7 +81452,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0009 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81476,7 +81476,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0010 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81500,7 +81500,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0011 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81524,7 +81524,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0012 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81548,7 +81548,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0013 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81572,7 +81572,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0014 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81596,7 +81596,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0015 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81620,7 +81620,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0016 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81644,7 +81644,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0017 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81668,7 +81668,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0018 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81692,7 +81692,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0019 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81716,7 +81716,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0020 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81740,7 +81740,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0021 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81764,7 +81764,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0022 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81788,7 +81788,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0023 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81812,7 +81812,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0024 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81836,7 +81836,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0025 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81860,7 +81860,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0026 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81884,7 +81884,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0027 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81908,7 +81908,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0028 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81932,7 +81932,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0029 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81956,7 +81956,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0030 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -81980,7 +81980,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0031 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82004,7 +82004,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0032 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82028,7 +82028,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0033 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82052,7 +82052,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0034 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82076,7 +82076,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0035 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82100,7 +82100,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0036 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82124,7 +82124,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0037 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82148,7 +82148,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0038 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82172,7 +82172,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0039 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82196,7 +82196,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0040 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82220,7 +82220,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0041 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82244,7 +82244,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0042 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82268,7 +82268,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0043 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82292,7 +82292,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0044 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82316,7 +82316,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0045 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82340,7 +82340,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0046 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82364,7 +82364,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0047 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82388,7 +82388,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0048 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82412,7 +82412,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0049 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82436,7 +82436,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0050 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82460,7 +82460,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0051 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82484,7 +82484,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0052 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82508,7 +82508,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0053 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82532,7 +82532,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0054 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82556,7 +82556,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0055 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82580,7 +82580,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0056 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82604,7 +82604,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0057 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82628,7 +82628,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0058 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82652,7 +82652,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0059 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82676,7 +82676,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0060 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82700,7 +82700,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0061 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82724,7 +82724,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0062 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82748,7 +82748,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0063 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82772,7 +82772,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0064 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82796,7 +82796,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0065 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82820,7 +82820,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0066 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82844,7 +82844,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0067 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82868,7 +82868,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0068 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82892,7 +82892,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0069 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82916,7 +82916,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0070 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82940,7 +82940,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0071 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82964,7 +82964,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0072 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -82988,7 +82988,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0073 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83012,7 +83012,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0074 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83036,7 +83036,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0075 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83060,7 +83060,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0076 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83084,7 +83084,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0077 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83108,7 +83108,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0078 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83132,7 +83132,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0079 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83156,7 +83156,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0080 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83180,7 +83180,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0081 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83204,7 +83204,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0082 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83228,7 +83228,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0083 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83252,7 +83252,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0084 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83276,7 +83276,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0085 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83300,7 +83300,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0086 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83324,7 +83324,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0087 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83348,7 +83348,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0088 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			84,
 			75
@@ -83372,7 +83372,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0089 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83396,7 +83396,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0090 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83420,7 +83420,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0091 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83444,7 +83444,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0092 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83468,7 +83468,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0093 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83492,7 +83492,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0094 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83516,7 +83516,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0095 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83540,7 +83540,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0096 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83564,7 +83564,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0097 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83588,7 +83588,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0098 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83612,7 +83612,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0099 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83636,7 +83636,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0100 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83660,7 +83660,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0101 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83684,7 +83684,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0102 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83708,7 +83708,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0103 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83732,7 +83732,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0104 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83756,7 +83756,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0105 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83780,7 +83780,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0106 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83804,7 +83804,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0107 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83828,7 +83828,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0108 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83852,7 +83852,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0109 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83876,7 +83876,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0110 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83900,7 +83900,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0111 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83924,7 +83924,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0112 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83948,7 +83948,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0113 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83972,7 +83972,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0114 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -83996,7 +83996,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0115 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -84020,7 +84020,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0116 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -84044,7 +84044,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0117 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -84068,7 +84068,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0118 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -84092,7 +84092,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0119 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -84116,7 +84116,7 @@ return {
 		alias = {}
 	},
 	ma_ship_out_0120 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			75
@@ -84140,7 +84140,7 @@ return {
 		alias = {}
 	},
 	ma_ship_trail_in_0001 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			74,
 			53
@@ -84169,7 +84169,7 @@ return {
 		}
 	},
 	ma_ship_trail_in_0006 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			74,
 			53
@@ -84198,7 +84198,7 @@ return {
 		}
 	},
 	ma_ship_trail_in_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			74,
 			53
@@ -84227,7 +84227,7 @@ return {
 		}
 	},
 	ma_ship_trail_in_0016 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			74,
 			53
@@ -84256,7 +84256,7 @@ return {
 		}
 	},
 	ma_ship_trail_in_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			74,
 			53
@@ -84285,7 +84285,7 @@ return {
 		}
 	},
 	ma_ship_trail_in_0026 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			74,
 			53
@@ -84314,7 +84314,7 @@ return {
 		}
 	},
 	ma_ship_trail_in_0031 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			74,
 			53
@@ -84343,7 +84343,7 @@ return {
 		}
 	},
 	ma_ship_trail_in_0036 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			74,
 			53
@@ -84372,7 +84372,7 @@ return {
 		}
 	},
 	ma_ship_trail_in_0041 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			74,
 			53
@@ -84401,7 +84401,7 @@ return {
 		}
 	},
 	ma_ship_trail_out_0001 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			74,
 			52
@@ -84430,7 +84430,7 @@ return {
 		}
 	},
 	ma_ship_trail_out_0006 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			74,
 			52
@@ -84459,7 +84459,7 @@ return {
 		}
 	},
 	ma_ship_trail_out_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			74,
 			52
@@ -84488,7 +84488,7 @@ return {
 		}
 	},
 	ma_ship_trail_out_0016 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			74,
 			52
@@ -84517,7 +84517,7 @@ return {
 		}
 	},
 	ma_ship_trail_out_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			74,
 			52
@@ -84546,7 +84546,7 @@ return {
 		}
 	},
 	ma_ship_trail_out_0026 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			74,
 			52
@@ -84575,7 +84575,7 @@ return {
 		}
 	},
 	ma_ship_trail_out_0031 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			74,
 			52
@@ -84604,7 +84604,7 @@ return {
 		}
 	},
 	ma_ship_trail_out_0036 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			74,
 			52
@@ -84633,7 +84633,7 @@ return {
 		}
 	},
 	ma_ship_trail_out_0041 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			74,
 			52
@@ -84662,7 +84662,7 @@ return {
 		}
 	},
 	ma_venom_vine_0001 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -84688,7 +84688,7 @@ return {
 		}
 	},
 	ma_venom_vine_0002 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -84712,7 +84712,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0003 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -84736,7 +84736,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0004 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -84760,7 +84760,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -84784,7 +84784,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0006 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -84808,7 +84808,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -84832,7 +84832,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0008 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -84856,7 +84856,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -84880,7 +84880,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0010 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -84904,7 +84904,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -84928,7 +84928,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0012 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -84952,7 +84952,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -84976,7 +84976,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0014 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85000,7 +85000,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85024,7 +85024,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0016 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85048,7 +85048,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85072,7 +85072,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0018 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85096,7 +85096,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85120,7 +85120,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0020 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85144,7 +85144,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85168,7 +85168,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0022 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85192,7 +85192,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0023 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85216,7 +85216,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0024 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85240,7 +85240,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0025 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85264,7 +85264,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0026 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85288,7 +85288,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0027 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			84,
 			52
@@ -85312,7 +85312,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0028 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85336,7 +85336,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0029 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85360,7 +85360,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0030 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85384,7 +85384,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0031 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85408,7 +85408,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0032 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85432,7 +85432,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0033 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85456,7 +85456,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0034 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85480,7 +85480,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0035 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85504,7 +85504,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0036 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85528,7 +85528,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0037 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85552,7 +85552,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0038 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85576,7 +85576,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0039 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85600,7 +85600,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0040 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85624,7 +85624,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0041 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85648,7 +85648,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0042 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85672,7 +85672,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0043 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85696,7 +85696,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0044 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85720,7 +85720,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0045 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85744,7 +85744,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0046 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85768,7 +85768,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0047 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85792,7 +85792,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0048 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85816,7 +85816,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0050 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85840,7 +85840,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0051 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85864,7 +85864,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0052 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85888,7 +85888,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0053 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85912,7 +85912,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0054 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85936,7 +85936,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0055 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85960,7 +85960,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0056 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -85984,7 +85984,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0057 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -86008,7 +86008,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0058 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -86032,7 +86032,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0059 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -86056,7 +86056,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0060 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -86080,7 +86080,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0061 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -86104,7 +86104,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0062 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			52
@@ -86130,7 +86130,7 @@ return {
 		}
 	},
 	ma_venom_vine_0064 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			52
@@ -86156,7 +86156,7 @@ return {
 		}
 	},
 	ma_venom_vine_0066 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			52
@@ -86182,7 +86182,7 @@ return {
 		}
 	},
 	ma_venom_vine_0068 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			84,
 			52
@@ -86208,7 +86208,7 @@ return {
 		}
 	},
 	ma_venom_vine_0070 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			84,
 			52
@@ -86234,7 +86234,7 @@ return {
 		}
 	},
 	ma_venom_vine_0072 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			52
@@ -86260,7 +86260,7 @@ return {
 		}
 	},
 	ma_venom_vine_0074 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			52
@@ -86286,7 +86286,7 @@ return {
 		}
 	},
 	ma_venom_vine_0076 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			84,
 			52
@@ -86312,7 +86312,7 @@ return {
 		}
 	},
 	ma_venom_vine_0078 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -86336,7 +86336,7 @@ return {
 		alias = {}
 	},
 	ma_venom_vine_0079 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			84,
 			52
@@ -86360,7 +86360,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			43,
 			45
@@ -86384,7 +86384,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0002 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			43,
 			45
@@ -86408,7 +86408,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0003 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			43,
 			45
@@ -86432,7 +86432,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0004 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			43,
 			45
@@ -86456,7 +86456,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -86480,7 +86480,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0006 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -86504,7 +86504,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0007 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			43,
 			45
@@ -86528,7 +86528,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0008 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -86552,7 +86552,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -86576,7 +86576,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0010 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			43,
 			45
@@ -86600,7 +86600,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0011 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			43,
 			45
@@ -86624,7 +86624,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0012 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			43,
 			45
@@ -86648,7 +86648,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0013 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			43,
 			45
@@ -86672,7 +86672,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0014 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			43,
 			45
@@ -86696,7 +86696,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0015 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			43,
 			45
@@ -86720,7 +86720,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0016 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -86744,7 +86744,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -86768,7 +86768,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0018 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -86792,7 +86792,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -86816,7 +86816,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0020 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -86840,7 +86840,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0021 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			43,
 			45
@@ -86864,7 +86864,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0022 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			43,
 			45
@@ -86888,7 +86888,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0023 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -86912,7 +86912,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0024 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -86936,7 +86936,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0025 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -86960,7 +86960,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0026 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -86984,7 +86984,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0027 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87008,7 +87008,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0028 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87032,7 +87032,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0029 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87056,7 +87056,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0030 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87080,7 +87080,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0031 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87104,7 +87104,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0032 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87130,7 +87130,7 @@ return {
 		}
 	},
 	ma_waterfall1_barrel_0034 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87156,7 +87156,7 @@ return {
 		}
 	},
 	ma_waterfall1_barrel_0036 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			43,
 			45
@@ -87182,7 +87182,7 @@ return {
 		}
 	},
 	ma_waterfall1_barrel_0038 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			43,
 			45
@@ -87208,7 +87208,7 @@ return {
 		}
 	},
 	ma_waterfall1_barrel_0040 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			43,
 			45
@@ -87253,7 +87253,7 @@ return {
 		}
 	},
 	ma_waterfall1_barrel_0061 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			43,
 			45
@@ -87277,7 +87277,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0062 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87301,7 +87301,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0063 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87325,7 +87325,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0064 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87349,7 +87349,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0065 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87373,7 +87373,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0066 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87397,7 +87397,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0067 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87421,7 +87421,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0068 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87445,7 +87445,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0069 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87469,7 +87469,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0070 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87493,7 +87493,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0071 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87517,7 +87517,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0072 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87541,7 +87541,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0073 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87565,7 +87565,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_barrel_0074 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87591,7 +87591,7 @@ return {
 		}
 	},
 	ma_waterfall1_barrel_0076 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87617,7 +87617,7 @@ return {
 		}
 	},
 	ma_waterfall1_barrel_0078 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			45
@@ -87644,7 +87644,7 @@ return {
 		}
 	},
 	ma_waterfall1_foam_0001 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			38,
 			55
@@ -87670,7 +87670,7 @@ return {
 		}
 	},
 	ma_waterfall1_foam_0003 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			55
@@ -87696,7 +87696,7 @@ return {
 		}
 	},
 	ma_waterfall1_foam_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			55
@@ -87722,7 +87722,7 @@ return {
 		}
 	},
 	ma_waterfall1_foam_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			55
@@ -87748,7 +87748,7 @@ return {
 		}
 	},
 	ma_waterfall1_foam_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			55
@@ -87774,7 +87774,7 @@ return {
 		}
 	},
 	ma_waterfall1_foam_0011 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			38,
 			55
@@ -87800,7 +87800,7 @@ return {
 		}
 	},
 	ma_waterfall1_foam_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			55
@@ -87826,7 +87826,7 @@ return {
 		}
 	},
 	ma_waterfall1_foam_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			55
@@ -87852,7 +87852,7 @@ return {
 		}
 	},
 	ma_waterfall1_foam_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			55
@@ -87878,7 +87878,7 @@ return {
 		}
 	},
 	ma_waterfall1_foam_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			55
@@ -87904,7 +87904,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_0001 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			82,
 			136
@@ -87930,7 +87930,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_0003 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			82,
 			136
@@ -87956,7 +87956,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			82,
 			136
@@ -87980,7 +87980,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_sparks_0006 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			82,
 			136
@@ -88004,7 +88004,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_sparks_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			82,
 			136
@@ -88030,7 +88030,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			82,
 			136
@@ -88056,7 +88056,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			82,
 			136
@@ -88082,7 +88082,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			82,
 			136
@@ -88108,7 +88108,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			82,
 			136
@@ -88132,7 +88132,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_sparks_0016 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			82,
 			136
@@ -88156,7 +88156,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall1_sparks_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			82,
 			136
@@ -88182,7 +88182,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			82,
 			136
@@ -88208,7 +88208,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_top_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			91,
 			32
@@ -88234,7 +88234,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_top_0003 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			91,
 			32
@@ -88260,7 +88260,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_top_0005 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			91,
 			32
@@ -88286,7 +88286,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_top_0007 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			91,
 			32
@@ -88312,7 +88312,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_top_0009 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			91,
 			32
@@ -88338,7 +88338,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_top_0011 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			91,
 			32
@@ -88364,7 +88364,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_top_0013 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			91,
 			32
@@ -88390,7 +88390,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_top_0015 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			91,
 			32
@@ -88416,7 +88416,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_top_0017 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			91,
 			32
@@ -88442,7 +88442,7 @@ return {
 		}
 	},
 	ma_waterfall1_sparks_top_0019 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			91,
 			32
@@ -88468,7 +88468,7 @@ return {
 		}
 	},
 	ma_waterfall2_foam_0001 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			48,
 			23
@@ -88496,7 +88496,7 @@ return {
 		}
 	},
 	ma_waterfall2_foam_0005 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			48,
 			23
@@ -88524,7 +88524,7 @@ return {
 		}
 	},
 	ma_waterfall2_foam_0009 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			48,
 			23
@@ -88552,7 +88552,7 @@ return {
 		}
 	},
 	ma_waterfall2_foam_0013 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			48,
 			23
@@ -88580,7 +88580,7 @@ return {
 		}
 	},
 	ma_waterfall2_foam_0017 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			48,
 			23
@@ -88608,7 +88608,7 @@ return {
 		}
 	},
 	ma_waterfall2_sparks_0001 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			116
@@ -88634,7 +88634,7 @@ return {
 		}
 	},
 	ma_waterfall2_sparks_0003 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			116
@@ -88660,7 +88660,7 @@ return {
 		}
 	},
 	ma_waterfall2_sparks_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			116
@@ -88684,7 +88684,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall2_sparks_0006 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			116
@@ -88708,7 +88708,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall2_sparks_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			116
@@ -88734,7 +88734,7 @@ return {
 		}
 	},
 	ma_waterfall2_sparks_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			116
@@ -88760,7 +88760,7 @@ return {
 		}
 	},
 	ma_waterfall2_sparks_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			116
@@ -88786,7 +88786,7 @@ return {
 		}
 	},
 	ma_waterfall2_sparks_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			116
@@ -88812,7 +88812,7 @@ return {
 		}
 	},
 	ma_waterfall2_sparks_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			116
@@ -88836,7 +88836,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall2_sparks_0016 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			116
@@ -88860,7 +88860,7 @@ return {
 		alias = {}
 	},
 	ma_waterfall2_sparks_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			116
@@ -88886,7 +88886,7 @@ return {
 		}
 	},
 	ma_waterfall2_sparks_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			38,
 			116
@@ -88912,7 +88912,7 @@ return {
 		}
 	},
 	ma_wolf_0001 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			27,
 			29
@@ -88936,7 +88936,7 @@ return {
 		alias = {}
 	},
 	ma_wolf_0002 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			27,
 			29
@@ -88962,7 +88962,7 @@ return {
 		}
 	},
 	ma_wolf_0004 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			27,
 			29
@@ -88988,7 +88988,7 @@ return {
 		}
 	},
 	ma_wolf_0006 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			27,
 			29
@@ -89024,7 +89024,7 @@ return {
 		}
 	},
 	ma_wolf_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			27,
 			29
@@ -89050,7 +89050,7 @@ return {
 		}
 	},
 	ma_wolf_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			27,
 			29
@@ -89076,7 +89076,7 @@ return {
 		}
 	},
 	ma_wolf_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			27,
 			29
@@ -89102,7 +89102,7 @@ return {
 		}
 	},
 	ma_wolf_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			27,
 			29
@@ -89128,7 +89128,7 @@ return {
 		}
 	},
 	ma_wolf_0023 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			27,
 			29
@@ -89154,7 +89154,7 @@ return {
 		}
 	},
 	ma_wolf_0025 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			27,
 			29
@@ -89180,7 +89180,7 @@ return {
 		}
 	},
 	ma_wolf_0027 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			27,
 			29
@@ -89206,7 +89206,7 @@ return {
 		}
 	},
 	ma_wolf_0029 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			27,
 			29
@@ -89232,7 +89232,7 @@ return {
 		}
 	},
 	ma_wolf_0031 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			27,
 			29
@@ -89258,7 +89258,7 @@ return {
 		}
 	},
 	ma_wolf_0033 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			27,
 			29
@@ -89284,7 +89284,7 @@ return {
 		}
 	},
 	ma_wolf_0038 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			27,
 			29
@@ -89310,7 +89310,7 @@ return {
 		}
 	},
 	ma_wolf_0040 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			27,
 			29
@@ -89336,7 +89336,7 @@ return {
 		}
 	},
 	ma_wolf_0042 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			27,
 			29
@@ -89363,7 +89363,7 @@ return {
 		}
 	},
 	ma_wolf_0045 = {
-		a_name = "kr3_screen_map_animations-1.png",
+		a_name = "kr3_screen_map_animations-1.dds",
 		size = {
 			27,
 			29
@@ -89387,7 +89387,7 @@ return {
 		alias = {}
 	},
 	wisps_10_0001 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			162,
 			40
@@ -89413,7 +89413,7 @@ return {
 		}
 	},
 	wisps_10_0003 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			162,
 			40
@@ -89439,7 +89439,7 @@ return {
 		}
 	},
 	wisps_10_0005 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			162,
 			40
@@ -89465,7 +89465,7 @@ return {
 		}
 	},
 	wisps_10_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			162,
 			40
@@ -89491,7 +89491,7 @@ return {
 		}
 	},
 	wisps_10_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			162,
 			40
@@ -89517,7 +89517,7 @@ return {
 		}
 	},
 	wisps_10_0011 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			162,
 			40
@@ -89543,7 +89543,7 @@ return {
 		}
 	},
 	wisps_10_0013 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			162,
 			40
@@ -89569,7 +89569,7 @@ return {
 		}
 	},
 	wisps_10_0015 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			162,
 			40
@@ -89595,7 +89595,7 @@ return {
 		}
 	},
 	wisps_10_0017 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			162,
 			40
@@ -89621,7 +89621,7 @@ return {
 		}
 	},
 	wisps_10_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			162,
 			40
@@ -89647,7 +89647,7 @@ return {
 		}
 	},
 	wisps_10_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			162,
 			40
@@ -89673,7 +89673,7 @@ return {
 		}
 	},
 	wisps_10_0023 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			162,
 			40
@@ -89699,7 +89699,7 @@ return {
 		}
 	},
 	wisps_1_0001 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -89727,7 +89727,7 @@ return {
 		}
 	},
 	wisps_1_0003 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -89753,7 +89753,7 @@ return {
 		}
 	},
 	wisps_1_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -89779,7 +89779,7 @@ return {
 		}
 	},
 	wisps_1_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -89805,7 +89805,7 @@ return {
 		}
 	},
 	wisps_1_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -89831,7 +89831,7 @@ return {
 		}
 	},
 	wisps_1_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -89857,7 +89857,7 @@ return {
 		}
 	},
 	wisps_1_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -89883,7 +89883,7 @@ return {
 		}
 	},
 	wisps_1_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -89909,7 +89909,7 @@ return {
 		}
 	},
 	wisps_1_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -89935,7 +89935,7 @@ return {
 		}
 	},
 	wisps_1_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -89961,7 +89961,7 @@ return {
 		}
 	},
 	wisps_1_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -89987,7 +89987,7 @@ return {
 		}
 	},
 	wisps_1_0023 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90013,7 +90013,7 @@ return {
 		}
 	},
 	wisps_1_0025 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90039,7 +90039,7 @@ return {
 		}
 	},
 	wisps_1_0027 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90065,7 +90065,7 @@ return {
 		}
 	},
 	wisps_1_0029 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90091,7 +90091,7 @@ return {
 		}
 	},
 	wisps_1_0031 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90117,7 +90117,7 @@ return {
 		}
 	},
 	wisps_1_0033 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90143,7 +90143,7 @@ return {
 		}
 	},
 	wisps_1_0035 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90169,7 +90169,7 @@ return {
 		}
 	},
 	wisps_1_0037 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90195,7 +90195,7 @@ return {
 		}
 	},
 	wisps_1_0039 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90221,7 +90221,7 @@ return {
 		}
 	},
 	wisps_1_0041 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90247,7 +90247,7 @@ return {
 		}
 	},
 	wisps_1_0043 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90273,7 +90273,7 @@ return {
 		}
 	},
 	wisps_1_0045 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90299,7 +90299,7 @@ return {
 		}
 	},
 	wisps_1_0047 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90325,7 +90325,7 @@ return {
 		}
 	},
 	wisps_1_0049 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90351,7 +90351,7 @@ return {
 		}
 	},
 	wisps_1_0051 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90377,7 +90377,7 @@ return {
 		}
 	},
 	wisps_1_0053 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90403,7 +90403,7 @@ return {
 		}
 	},
 	wisps_1_0055 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90429,7 +90429,7 @@ return {
 		}
 	},
 	wisps_1_0057 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90455,7 +90455,7 @@ return {
 		}
 	},
 	wisps_1_0059 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90481,7 +90481,7 @@ return {
 		}
 	},
 	wisps_1_0061 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90507,7 +90507,7 @@ return {
 		}
 	},
 	wisps_1_0063 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90533,7 +90533,7 @@ return {
 		}
 	},
 	wisps_1_0065 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90559,7 +90559,7 @@ return {
 		}
 	},
 	wisps_1_0067 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90585,7 +90585,7 @@ return {
 		}
 	},
 	wisps_1_0069 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90611,7 +90611,7 @@ return {
 		}
 	},
 	wisps_1_0071 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90637,7 +90637,7 @@ return {
 		}
 	},
 	wisps_1_0073 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90663,7 +90663,7 @@ return {
 		}
 	},
 	wisps_1_0075 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90689,7 +90689,7 @@ return {
 		}
 	},
 	wisps_1_0077 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90715,7 +90715,7 @@ return {
 		}
 	},
 	wisps_1_0079 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90741,7 +90741,7 @@ return {
 		}
 	},
 	wisps_1_0081 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			53,
 			53
@@ -90767,7 +90767,7 @@ return {
 		}
 	},
 	wisps_2_0001 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -90803,7 +90803,7 @@ return {
 		}
 	},
 	wisps_2_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -90831,7 +90831,7 @@ return {
 		}
 	},
 	wisps_2_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -90857,7 +90857,7 @@ return {
 		}
 	},
 	wisps_2_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -90883,7 +90883,7 @@ return {
 		}
 	},
 	wisps_2_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -90909,7 +90909,7 @@ return {
 		}
 	},
 	wisps_2_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -90935,7 +90935,7 @@ return {
 		}
 	},
 	wisps_2_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -90961,7 +90961,7 @@ return {
 		}
 	},
 	wisps_2_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -90987,7 +90987,7 @@ return {
 		}
 	},
 	wisps_2_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91013,7 +91013,7 @@ return {
 		}
 	},
 	wisps_2_0023 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91039,7 +91039,7 @@ return {
 		}
 	},
 	wisps_2_0025 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91067,7 +91067,7 @@ return {
 		}
 	},
 	wisps_2_0029 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91093,7 +91093,7 @@ return {
 		}
 	},
 	wisps_2_0031 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91119,7 +91119,7 @@ return {
 		}
 	},
 	wisps_2_0033 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91145,7 +91145,7 @@ return {
 		}
 	},
 	wisps_2_0035 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91171,7 +91171,7 @@ return {
 		}
 	},
 	wisps_2_0037 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91197,7 +91197,7 @@ return {
 		}
 	},
 	wisps_2_0039 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91225,7 +91225,7 @@ return {
 		}
 	},
 	wisps_2_0043 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91251,7 +91251,7 @@ return {
 		}
 	},
 	wisps_2_0045 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91277,7 +91277,7 @@ return {
 		}
 	},
 	wisps_2_0047 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91303,7 +91303,7 @@ return {
 		}
 	},
 	wisps_2_0049 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91331,7 +91331,7 @@ return {
 		}
 	},
 	wisps_2_0053 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91357,7 +91357,7 @@ return {
 		}
 	},
 	wisps_2_0055 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91383,7 +91383,7 @@ return {
 		}
 	},
 	wisps_2_0057 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91409,7 +91409,7 @@ return {
 		}
 	},
 	wisps_2_0059 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91435,7 +91435,7 @@ return {
 		}
 	},
 	wisps_2_0061 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91465,7 +91465,7 @@ return {
 		}
 	},
 	wisps_2_0067 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91491,7 +91491,7 @@ return {
 		}
 	},
 	wisps_2_0069 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91517,7 +91517,7 @@ return {
 		}
 	},
 	wisps_2_0071 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91543,7 +91543,7 @@ return {
 		}
 	},
 	wisps_2_0073 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91569,7 +91569,7 @@ return {
 		}
 	},
 	wisps_2_0075 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			42
@@ -91595,7 +91595,7 @@ return {
 		}
 	},
 	wisps_3_0001 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -91621,7 +91621,7 @@ return {
 		}
 	},
 	wisps_3_0003 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -91649,7 +91649,7 @@ return {
 		}
 	},
 	wisps_3_0007 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			79,
 			58
@@ -91677,7 +91677,7 @@ return {
 		}
 	},
 	wisps_3_0011 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -91703,7 +91703,7 @@ return {
 		}
 	},
 	wisps_3_0013 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -91729,7 +91729,7 @@ return {
 		}
 	},
 	wisps_3_0015 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -91755,7 +91755,7 @@ return {
 		}
 	},
 	wisps_3_0017 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -91781,7 +91781,7 @@ return {
 		}
 	},
 	wisps_3_0019 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -91807,7 +91807,7 @@ return {
 		}
 	},
 	wisps_3_0021 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -91833,7 +91833,7 @@ return {
 		}
 	},
 	wisps_3_0023 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -91859,7 +91859,7 @@ return {
 		}
 	},
 	wisps_3_0025 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -91885,7 +91885,7 @@ return {
 		}
 	},
 	wisps_3_0027 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -91911,7 +91911,7 @@ return {
 		}
 	},
 	wisps_3_0029 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -91939,7 +91939,7 @@ return {
 		}
 	},
 	wisps_3_0033 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -91965,7 +91965,7 @@ return {
 		}
 	},
 	wisps_3_0035 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -91991,7 +91991,7 @@ return {
 		}
 	},
 	wisps_3_0037 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92017,7 +92017,7 @@ return {
 		}
 	},
 	wisps_3_0039 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92043,7 +92043,7 @@ return {
 		}
 	},
 	wisps_3_0041 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92069,7 +92069,7 @@ return {
 		}
 	},
 	wisps_3_0043 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92095,7 +92095,7 @@ return {
 		}
 	},
 	wisps_3_0045 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92121,7 +92121,7 @@ return {
 		}
 	},
 	wisps_3_0047 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92151,7 +92151,7 @@ return {
 		}
 	},
 	wisps_3_0053 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92177,7 +92177,7 @@ return {
 		}
 	},
 	wisps_3_0055 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92203,7 +92203,7 @@ return {
 		}
 	},
 	wisps_3_0057 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92229,7 +92229,7 @@ return {
 		}
 	},
 	wisps_3_0059 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92255,7 +92255,7 @@ return {
 		}
 	},
 	wisps_3_0061 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92281,7 +92281,7 @@ return {
 		}
 	},
 	wisps_3_0063 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92307,7 +92307,7 @@ return {
 		}
 	},
 	wisps_3_0065 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92333,7 +92333,7 @@ return {
 		}
 	},
 	wisps_3_0067 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92359,7 +92359,7 @@ return {
 		}
 	},
 	wisps_3_0069 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92385,7 +92385,7 @@ return {
 		}
 	},
 	wisps_3_0071 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92411,7 +92411,7 @@ return {
 		}
 	},
 	wisps_3_0073 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92437,7 +92437,7 @@ return {
 		}
 	},
 	wisps_3_0075 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92463,7 +92463,7 @@ return {
 		}
 	},
 	wisps_3_0077 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92489,7 +92489,7 @@ return {
 		}
 	},
 	wisps_3_0079 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92515,7 +92515,7 @@ return {
 		}
 	},
 	wisps_3_0081 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92541,7 +92541,7 @@ return {
 		}
 	},
 	wisps_3_0083 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			79,
 			58
@@ -92567,7 +92567,7 @@ return {
 		}
 	},
 	wisps_4_0001 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92603,7 +92603,7 @@ return {
 		}
 	},
 	wisps_4_0003 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92631,7 +92631,7 @@ return {
 		}
 	},
 	wisps_4_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92657,7 +92657,7 @@ return {
 		}
 	},
 	wisps_4_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92683,7 +92683,7 @@ return {
 		}
 	},
 	wisps_4_0011 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92709,7 +92709,7 @@ return {
 		}
 	},
 	wisps_4_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92735,7 +92735,7 @@ return {
 		}
 	},
 	wisps_4_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92761,7 +92761,7 @@ return {
 		}
 	},
 	wisps_4_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92787,7 +92787,7 @@ return {
 		}
 	},
 	wisps_4_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92813,7 +92813,7 @@ return {
 		}
 	},
 	wisps_4_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92839,7 +92839,7 @@ return {
 		}
 	},
 	wisps_4_0023 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92865,7 +92865,7 @@ return {
 		}
 	},
 	wisps_4_0025 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92891,7 +92891,7 @@ return {
 		}
 	},
 	wisps_4_0027 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92917,7 +92917,7 @@ return {
 		}
 	},
 	wisps_4_0029 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92943,7 +92943,7 @@ return {
 		}
 	},
 	wisps_4_0031 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92969,7 +92969,7 @@ return {
 		}
 	},
 	wisps_4_0033 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -92997,7 +92997,7 @@ return {
 		}
 	},
 	wisps_4_0037 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -93025,7 +93025,7 @@ return {
 		}
 	},
 	wisps_4_0041 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -93055,7 +93055,7 @@ return {
 		}
 	},
 	wisps_4_0047 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -93081,7 +93081,7 @@ return {
 		}
 	},
 	wisps_4_0049 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -93107,7 +93107,7 @@ return {
 		}
 	},
 	wisps_4_0051 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -93133,7 +93133,7 @@ return {
 		}
 	},
 	wisps_4_0053 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -93159,7 +93159,7 @@ return {
 		}
 	},
 	wisps_4_0055 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -93185,7 +93185,7 @@ return {
 		}
 	},
 	wisps_4_0057 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -93211,7 +93211,7 @@ return {
 		}
 	},
 	wisps_4_0059 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -93237,7 +93237,7 @@ return {
 		}
 	},
 	wisps_4_0061 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -93263,7 +93263,7 @@ return {
 		}
 	},
 	wisps_4_0063 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -93291,7 +93291,7 @@ return {
 		}
 	},
 	wisps_4_0067 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -93317,7 +93317,7 @@ return {
 		}
 	},
 	wisps_4_0069 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -93343,7 +93343,7 @@ return {
 		}
 	},
 	wisps_4_0071 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			43,
 			34
@@ -93371,7 +93371,7 @@ return {
 		}
 	},
 	wisps_5_0001 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			22,
 			39
@@ -93397,7 +93397,7 @@ return {
 		}
 	},
 	wisps_5_0003 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93423,7 +93423,7 @@ return {
 		}
 	},
 	wisps_5_0005 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93449,7 +93449,7 @@ return {
 		}
 	},
 	wisps_5_0007 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93475,7 +93475,7 @@ return {
 		}
 	},
 	wisps_5_0009 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93501,7 +93501,7 @@ return {
 		}
 	},
 	wisps_5_0011 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93527,7 +93527,7 @@ return {
 		}
 	},
 	wisps_5_0013 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93553,7 +93553,7 @@ return {
 		}
 	},
 	wisps_5_0015 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93579,7 +93579,7 @@ return {
 		}
 	},
 	wisps_5_0017 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93605,7 +93605,7 @@ return {
 		}
 	},
 	wisps_5_0019 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93633,7 +93633,7 @@ return {
 		}
 	},
 	wisps_5_0021 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93659,7 +93659,7 @@ return {
 		}
 	},
 	wisps_5_0023 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93685,7 +93685,7 @@ return {
 		}
 	},
 	wisps_5_0025 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93711,7 +93711,7 @@ return {
 		}
 	},
 	wisps_5_0027 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93737,7 +93737,7 @@ return {
 		}
 	},
 	wisps_5_0029 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93765,7 +93765,7 @@ return {
 		}
 	},
 	wisps_5_0031 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93791,7 +93791,7 @@ return {
 		}
 	},
 	wisps_5_0035 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93817,7 +93817,7 @@ return {
 		}
 	},
 	wisps_5_0037 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93843,7 +93843,7 @@ return {
 		}
 	},
 	wisps_5_0039 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93869,7 +93869,7 @@ return {
 		}
 	},
 	wisps_5_0043 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93895,7 +93895,7 @@ return {
 		}
 	},
 	wisps_5_0045 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93921,7 +93921,7 @@ return {
 		}
 	},
 	wisps_5_0047 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93947,7 +93947,7 @@ return {
 		}
 	},
 	wisps_5_0049 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -93973,7 +93973,7 @@ return {
 		}
 	},
 	wisps_5_0051 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			22,
 			39
@@ -93999,7 +93999,7 @@ return {
 		}
 	},
 	wisps_5_0053 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -94025,7 +94025,7 @@ return {
 		}
 	},
 	wisps_5_0055 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			22,
 			39
@@ -94051,7 +94051,7 @@ return {
 		}
 	},
 	wisps_5_0057 = {
-		a_name = "kr3_screen_map_animations-2.png",
+		a_name = "kr3_screen_map_animations-2.dds",
 		size = {
 			22,
 			39
@@ -94077,7 +94077,7 @@ return {
 		}
 	},
 	wisps_6_0001 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			48,
 			44
@@ -94103,7 +94103,7 @@ return {
 		}
 	},
 	wisps_6_0003 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			48,
 			44
@@ -94129,7 +94129,7 @@ return {
 		}
 	},
 	wisps_6_0005 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			48,
 			44
@@ -94155,7 +94155,7 @@ return {
 		}
 	},
 	wisps_6_0007 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			48,
 			44
@@ -94181,7 +94181,7 @@ return {
 		}
 	},
 	wisps_6_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			48,
 			44
@@ -94207,7 +94207,7 @@ return {
 		}
 	},
 	wisps_6_0011 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			48,
 			44
@@ -94233,7 +94233,7 @@ return {
 		}
 	},
 	wisps_6_0013 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			48,
 			44
@@ -94259,7 +94259,7 @@ return {
 		}
 	},
 	wisps_6_0015 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			48,
 			44
@@ -94285,7 +94285,7 @@ return {
 		}
 	},
 	wisps_6_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			48,
 			44
@@ -94311,7 +94311,7 @@ return {
 		}
 	},
 	wisps_6_0019 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			48,
 			44
@@ -94337,7 +94337,7 @@ return {
 		}
 	},
 	wisps_6_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			48,
 			44
@@ -94363,7 +94363,7 @@ return {
 		}
 	},
 	wisps_6_0023 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			48,
 			44
@@ -94389,7 +94389,7 @@ return {
 		}
 	},
 	wisps_6_0025 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			48,
 			44
@@ -94415,7 +94415,7 @@ return {
 		}
 	},
 	wisps_7_0001 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94441,7 +94441,7 @@ return {
 		}
 	},
 	wisps_7_0003 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94467,7 +94467,7 @@ return {
 		}
 	},
 	wisps_7_0005 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94493,7 +94493,7 @@ return {
 		}
 	},
 	wisps_7_0007 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94519,7 +94519,7 @@ return {
 		}
 	},
 	wisps_7_0009 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94545,7 +94545,7 @@ return {
 		}
 	},
 	wisps_7_0011 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94571,7 +94571,7 @@ return {
 		}
 	},
 	wisps_7_0013 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94597,7 +94597,7 @@ return {
 		}
 	},
 	wisps_7_0015 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94623,7 +94623,7 @@ return {
 		}
 	},
 	wisps_7_0017 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94649,7 +94649,7 @@ return {
 		}
 	},
 	wisps_7_0019 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94675,7 +94675,7 @@ return {
 		}
 	},
 	wisps_7_0021 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94701,7 +94701,7 @@ return {
 		}
 	},
 	wisps_7_0023 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94727,7 +94727,7 @@ return {
 		}
 	},
 	wisps_7_0025 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94753,7 +94753,7 @@ return {
 		}
 	},
 	wisps_7_0027 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94779,7 +94779,7 @@ return {
 		}
 	},
 	wisps_7_0029 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94805,7 +94805,7 @@ return {
 		}
 	},
 	wisps_7_0031 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94831,7 +94831,7 @@ return {
 		}
 	},
 	wisps_7_0033 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94857,7 +94857,7 @@ return {
 		}
 	},
 	wisps_7_0035 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			36,
 			43
@@ -94883,7 +94883,7 @@ return {
 		}
 	},
 	wisps_7_0037 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			36,
 			43
@@ -94909,7 +94909,7 @@ return {
 		}
 	},
 	wisps_7_0039 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			36,
 			43
@@ -94935,7 +94935,7 @@ return {
 		}
 	},
 	wisps_8_0001 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			51,
 			47
@@ -94961,7 +94961,7 @@ return {
 		}
 	},
 	wisps_8_0003 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			51,
 			47
@@ -94987,7 +94987,7 @@ return {
 		}
 	},
 	wisps_8_0005 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			51,
 			47
@@ -95013,7 +95013,7 @@ return {
 		}
 	},
 	wisps_8_0007 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			51,
 			47
@@ -95039,7 +95039,7 @@ return {
 		}
 	},
 	wisps_8_0009 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			51,
 			47
@@ -95065,7 +95065,7 @@ return {
 		}
 	},
 	wisps_8_0011 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			51,
 			47
@@ -95091,7 +95091,7 @@ return {
 		}
 	},
 	wisps_8_0013 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			47
@@ -95117,7 +95117,7 @@ return {
 		}
 	},
 	wisps_8_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			47
@@ -95143,7 +95143,7 @@ return {
 		}
 	},
 	wisps_8_0017 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			47
@@ -95169,7 +95169,7 @@ return {
 		}
 	},
 	wisps_8_0019 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			51,
 			47
@@ -95195,7 +95195,7 @@ return {
 		}
 	},
 	wisps_8_0021 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			51,
 			47
@@ -95221,7 +95221,7 @@ return {
 		}
 	},
 	wisps_8_0023 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			51,
 			47
@@ -95247,7 +95247,7 @@ return {
 		}
 	},
 	wisps_8_0025 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			51,
 			47
@@ -95273,7 +95273,7 @@ return {
 		}
 	},
 	wisps_9_0001 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			96,
 			104
@@ -95299,7 +95299,7 @@ return {
 		}
 	},
 	wisps_9_0003 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			96,
 			104
@@ -95325,7 +95325,7 @@ return {
 		}
 	},
 	wisps_9_0005 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			96,
 			104
@@ -95351,7 +95351,7 @@ return {
 		}
 	},
 	wisps_9_0007 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			96,
 			104
@@ -95377,7 +95377,7 @@ return {
 		}
 	},
 	wisps_9_0009 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			96,
 			104
@@ -95403,7 +95403,7 @@ return {
 		}
 	},
 	wisps_9_0011 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			96,
 			104
@@ -95429,7 +95429,7 @@ return {
 		}
 	},
 	wisps_9_0013 = {
-		a_name = "kr3_screen_map_animations-5.png",
+		a_name = "kr3_screen_map_animations-5.dds",
 		size = {
 			96,
 			104
@@ -95455,7 +95455,7 @@ return {
 		}
 	},
 	wisps_9_0015 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			96,
 			104
@@ -95481,7 +95481,7 @@ return {
 		}
 	},
 	wisps_9_0017 = {
-		a_name = "kr3_screen_map_animations-3.png",
+		a_name = "kr3_screen_map_animations-3.dds",
 		size = {
 			96,
 			104
@@ -95507,7 +95507,7 @@ return {
 		}
 	},
 	wisps_9_0019 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			96,
 			104
@@ -95533,7 +95533,7 @@ return {
 		}
 	},
 	wisps_9_0021 = {
-		a_name = "kr3_screen_map_animations-4.png",
+		a_name = "kr3_screen_map_animations-4.dds",
 		size = {
 			96,
 			104

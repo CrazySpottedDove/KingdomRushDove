@@ -5306,6 +5306,7 @@ tt.timed_attacks.list[2].hit_times = {fts(3), fts(3), fts(3), fts(3)}
 tt.timed_attacks.list[2].particle_pos = {vec_2(20, 14), vec_2(24, 22), vec_2(18, 14), vec_2(21, 18)}
 tt.timed_attacks.list[2].vis_bans = bor(F_FLYING, F_BOSS, F_WATER, F_CLIFF)
 tt.timed_attacks.list[2].vis_flags = bor(F_STUN, F_RANGED)
+tt.timed_attacks.list[2].damage_typp = DAMAGE_PHYSICAL
 tt.timed_attacks.list[2].loops = nil
 tt.timed_attacks.list[2].range = 100
 tt.timed_attacks.list[2].xp_from_skill = "leopardstyle"

@@ -1,6 +1,6 @@
 return {
 	["hero_onagro_attack_1_cannon_particle_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0011"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0012"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0013"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0014"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0015"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0016"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0017"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0018"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0019"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0020"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_cannon_particle_0021"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			124,
 			184
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0011"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0012"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0013"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0014"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0015"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0016"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0017"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_1_hit_0018"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			96
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0011"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0012"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0013"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0014"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0015"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0016"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0017"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0018"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0019"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0020"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_cannon_particle_0021"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			207,
 			193
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_hit_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			105,
 			96
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_hit_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			105,
 			96
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_hit_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			105,
 			96
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_hit_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			105,
 			96
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_hit_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			105,
 			96
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_2_hit_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			105,
 			96
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_particle_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			42,
 			39
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_particle_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			42,
 			39
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_particle_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			42,
 			39
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_particle_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			42,
 			39
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_particle_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			42,
 			39
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_particle_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			42,
 			39
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_particle_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			42,
 			39
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_particle_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			42,
 			39
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_particle_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			42,
 			39
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_projectile_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			45
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_projectile_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			45
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_attack_projectile_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			45
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0011"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0012"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0013"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0014"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0015"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0016"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0017"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0018"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0019"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0020"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0021"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0022"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0023"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0024"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0025"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0026"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0027"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0028"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0029"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0030"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0031"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0032"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0033"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0034"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_back_smoke_particle_0035"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0011"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0012"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0013"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0014"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0015"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0016"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0017"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0018"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0019"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0020"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0021"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0022"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0023"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0024"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0025"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0026"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0027"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0028"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0029"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0030"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0031"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0032"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0033"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0034"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0035"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0036"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0037"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0038"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0039"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0040"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0041"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0042"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0043"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0044"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0045"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0046"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0047"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0048"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0049"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0050"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0051"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0052"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0053"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0054"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0055"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0056"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0057"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0058"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0059"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0060"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0061"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0062"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0063"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0064"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0065"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0066"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0067"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0068"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0069"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0070"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0071"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0072"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0073"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0074"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0075"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0076"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0077"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0078"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0079"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0080"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0081"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0082"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0083"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0084"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0085"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0086"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0087"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0088"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0089"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0090"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0091"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0092"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0093"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0094"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0095"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0096"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0097"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0098"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0099"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0100"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0101"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0102"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0103"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0104"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0105"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0106"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0107"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0108"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0109"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0110"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0111"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0112"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0113"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0114"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0115"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0116"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0117"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0118"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0119"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0120"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0121"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0122"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0123"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0124"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0125"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0126"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0127"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0128"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0129"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0130"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0131"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0132"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0133"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0134"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0135"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0136"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0137"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0138"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0139"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0140"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0141"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0142"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0143"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0144"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0145"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0146"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0147"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0148"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0149"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0150"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0151"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0152"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0153"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0154"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0155"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0156"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0157"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0158"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0159"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0160"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0161"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0162"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0163"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0164"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0165"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0166"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0167"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0168"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0169"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0170"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0171"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0172"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0173"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0174"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0175"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0176"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0177"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0178"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0179"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0180"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0181"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0182"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0183"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0184"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0185"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0186"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0187"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0188"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0189"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0190"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0191"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0192"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0193"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0194"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0195"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0196"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0197"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0198"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0199"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0200"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0201"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0202"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0203"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0204"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0205"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0206"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0207"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0208"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0209"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0210"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0211"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0212"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0213"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0214"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0215"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0216"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0217"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0218"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0219"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0220"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0221"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0222"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0223"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0224"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0225"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0226"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0227"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0228"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0229"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0230"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0231"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0232"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0233"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0234"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0235"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0236"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0237"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0238"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0239"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0240"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0241"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0242"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0243"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0244"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0245"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0246"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0247"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0248"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0249"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0250"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0251"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0252"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0253"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0254"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0255"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0256"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0257"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0258"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0259"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0260"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0261"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0262"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0263"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0264"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0265"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0266"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0267"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0268"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0269"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0270"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0271"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0272"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0273"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0274"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0275"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0276"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0277"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0278"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0279"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0280"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0281"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0282"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0283"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0284"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0285"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0286"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0287"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0288"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0289"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0290"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0291"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0292"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0293"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0294"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0295"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0296"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0297"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0298"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0299"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0300"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0301"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0302"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0303"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0304"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0305"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0306"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0307"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0308"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0309"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0310"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0311"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0312"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0313"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0314"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0315"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0316"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0317"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0318"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0319"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0320"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0321"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0322"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0323"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0324"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0325"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0326"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0327"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0328"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0329"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0330"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0331"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0332"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0333"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0334"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0335"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0336"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0337"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0338"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0339"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0340"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0341"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0342"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0343"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0344"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0345"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0346"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0347"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0348"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0349"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0350"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0351"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0352"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0353"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0354"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0355"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0356"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0357"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0358"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0359"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0360"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0361"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0362"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0363"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0364"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0365"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0366"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0367"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0368"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0369"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0370"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0371"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0372"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0373"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0374"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0375"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0376"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0377"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0378"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0379"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_hero_0380"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			218,
 			275
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0011"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0012"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0013"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0014"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0015"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0016"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0017"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0018"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0019"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0020"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0021"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0022"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0023"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_0024"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			127,
 			116
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_hit_fx_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			102
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_hit_fx_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			102
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_hit_fx_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			102
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_hit_fx_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			102
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_hit_fx_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			102
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_hit_fx_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			102
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_hit_fx_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			102
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_hit_fx_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			102
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_1_drone_hit_fx_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			102,
 			102
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_decal_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			167,
 			99
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_decal_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			167,
 			99
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_decal_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			167,
 			99
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_decal_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			167,
 			99
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_hit_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			159,
 			124
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_hit_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			159,
 			124
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_hit_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			159,
 			124
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_hit_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			159,
 			124
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_hit_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			159,
 			124
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_hit_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			159,
 			124
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_hit_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			159,
 			124
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_hit_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			159,
 			124
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_hit_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			159,
 			124
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_hit_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			159,
 			124
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_projectile_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_projectile_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_projectile_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_projectile_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_projectile_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_projectile_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_projectile_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_2_projectile_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			56,
 			56
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0011"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0012"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0013"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0014"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0015"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0016"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0017"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0018"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0019"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0020"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0021"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0022"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0023"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0024"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0025"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0026"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0027"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0028"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0029"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0030"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0031"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0032"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0033"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0034"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0035"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0036"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0037"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0038"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0039"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0040"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0041"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0042"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0043"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0044"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0045"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0046"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0047"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0048"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0049"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0050"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0051"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0052"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0053"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0054"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0055"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0056"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0057"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0058"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0059"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_0060"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			88,
 			68
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0011"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0012"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0013"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0014"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0015"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0016"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0017"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0018"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0019"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0020"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_explosion_0021"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_skill_4_mine_projectile"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			59,
 			48
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_decal"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			122,
 			93
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0011"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0012"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0013"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0014"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0015"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0016"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0017"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0018"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0019"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0020"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_hit_0021"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			116,
 			227
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0011"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0012"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0013"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0014"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0015"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0016"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0017"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0018"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0019"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0020"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0021"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0022"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0023"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer1_0024"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0011"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0012"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0013"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0014"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0015"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0016"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0017"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0018"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0019"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0020"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0021"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0022"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0023"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer2_0024"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0011"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0012"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0013"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0014"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0015"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17160,7 +17160,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0016"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17184,7 +17184,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0017"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17208,7 +17208,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0018"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17232,7 +17232,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0019"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17256,7 +17256,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0020"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17280,7 +17280,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0021"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17304,7 +17304,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0022"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17328,7 +17328,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0023"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17352,7 +17352,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer3_0024"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17376,7 +17376,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17400,7 +17400,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17424,7 +17424,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17448,7 +17448,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17472,7 +17472,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17496,7 +17496,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17520,7 +17520,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17544,7 +17544,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17568,7 +17568,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17592,7 +17592,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17616,7 +17616,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0011"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17640,7 +17640,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0012"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17664,7 +17664,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0013"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17688,7 +17688,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0014"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17712,7 +17712,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0015"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17736,7 +17736,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0016"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17760,7 +17760,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0017"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17784,7 +17784,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0018"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17808,7 +17808,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0019"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17832,7 +17832,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0020"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17856,7 +17856,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0021"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17880,7 +17880,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0022"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17904,7 +17904,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0023"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17928,7 +17928,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer4_0024"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17952,7 +17952,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0001"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -17976,7 +17976,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0002"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18000,7 +18000,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0003"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18024,7 +18024,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0004"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18048,7 +18048,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0005"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18072,7 +18072,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0006"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18096,7 +18096,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0007"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18120,7 +18120,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0008"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18144,7 +18144,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0009"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18168,7 +18168,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0010"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18192,7 +18192,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0011"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18216,7 +18216,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0012"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18240,7 +18240,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0013"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18264,7 +18264,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0014"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18288,7 +18288,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0015"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18312,7 +18312,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0016"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18336,7 +18336,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0017"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18360,7 +18360,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0018"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18384,7 +18384,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0019"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18408,7 +18408,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0020"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18432,7 +18432,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0021"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18456,7 +18456,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0022"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18480,7 +18480,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0023"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18504,7 +18504,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_layer5_0024"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			178,
 			477
@@ -18528,7 +18528,7 @@ return {
 		alias = {},
 	},
 	["hero_onagro_ultimate_projectile"] = {
-		a_name = "go_hero_mecha-1.png",
+		a_name = "go_hero_mecha-1.dds",
 		size = {
 			59,
 			53

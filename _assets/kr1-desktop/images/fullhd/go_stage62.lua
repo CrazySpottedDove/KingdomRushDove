@@ -2,7 +2,7 @@
 
 return {
 	Stage14_0002 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1980,
 			1080
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	Stage14_0005 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1980,
 			1080
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	Stage14_0006 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1980,
 			1080
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	Stage14_0007 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1980,
 			1080
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	Stage14_0008 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1980,
 			1080
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	Stage14_0009 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1980,
 			1080
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	Stage14_0010 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1980,
 			1080
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	Stage14_0011 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1980,
 			1080
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0001 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0002 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0003 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0004 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0005 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0006 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0007 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0008 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0009 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201
@@ -410,7 +410,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0010 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201
@@ -434,7 +434,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0011 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0012 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201
@@ -482,7 +482,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0013 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201
@@ -506,7 +506,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0014 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	stage14_floatingStones_0015 = {
-		a_name = "go_stage62-1.png",
+		a_name = "go_stage62-1.dds",
 		size = {
 			1440,
 			1201

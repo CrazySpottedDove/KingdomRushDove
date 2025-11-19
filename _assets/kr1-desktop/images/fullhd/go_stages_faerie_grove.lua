@@ -2,7 +2,7 @@
 
 return {
 	fairy_crystals_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			37,
 			31
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	fairy_crystals_0002 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			37,
 			31
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	fairy_crystals_fx_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			37,
 			37
@@ -76,7 +76,7 @@ return {
 		}
 	},
 	fairy_crystals_fx_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			37,
 			37
@@ -102,7 +102,7 @@ return {
 		}
 	},
 	fairy_crystals_fx_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			37,
 			37
@@ -128,7 +128,7 @@ return {
 		}
 	},
 	fairy_crystals_fx_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			37,
 			37
@@ -154,7 +154,7 @@ return {
 		}
 	},
 	fairy_crystals_fx_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			37,
 			37
@@ -180,7 +180,7 @@ return {
 		}
 	},
 	fairy_crystals_fx_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			37,
 			37
@@ -206,7 +206,7 @@ return {
 		}
 	},
 	fairy_crystals_fx_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			37,
 			37
@@ -232,7 +232,7 @@ return {
 		}
 	},
 	fairy_crystals_fx_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			37,
 			37
@@ -258,7 +258,7 @@ return {
 		}
 	},
 	fairy_crystals_fx_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			37,
 			37
@@ -284,7 +284,7 @@ return {
 		}
 	},
 	fairy_crystals_fx_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			37,
 			37
@@ -310,7 +310,7 @@ return {
 		}
 	},
 	fairy_crystals_fx_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			37,
 			37
@@ -336,7 +336,7 @@ return {
 		}
 	},
 	fairy_crystals_fx_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			37,
 			37
@@ -362,7 +362,7 @@ return {
 		}
 	},
 	plant_venom_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -394,7 +394,7 @@ return {
 		}
 	},
 	plant_venom_0002 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -420,7 +420,7 @@ return {
 		}
 	},
 	plant_venom_0004 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -446,7 +446,7 @@ return {
 		}
 	},
 	plant_venom_0006 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -472,7 +472,7 @@ return {
 		}
 	},
 	plant_venom_0008 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -498,7 +498,7 @@ return {
 		}
 	},
 	plant_venom_0010 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -524,7 +524,7 @@ return {
 		}
 	},
 	plant_venom_0012 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -550,7 +550,7 @@ return {
 		}
 	},
 	plant_venom_0014 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -576,7 +576,7 @@ return {
 		}
 	},
 	plant_venom_0016 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -602,7 +602,7 @@ return {
 		}
 	},
 	plant_venom_0018 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -628,7 +628,7 @@ return {
 		}
 	},
 	plant_venom_0020 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -654,7 +654,7 @@ return {
 		}
 	},
 	plant_venom_0022 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -680,7 +680,7 @@ return {
 		}
 	},
 	plant_venom_0024 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -706,7 +706,7 @@ return {
 		}
 	},
 	plant_venom_0026 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -732,7 +732,7 @@ return {
 		}
 	},
 	plant_venom_0028 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -758,7 +758,7 @@ return {
 		}
 	},
 	plant_venom_0030 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -784,7 +784,7 @@ return {
 		}
 	},
 	plant_venom_0032 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -810,7 +810,7 @@ return {
 		}
 	},
 	plant_venom_0034 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -836,7 +836,7 @@ return {
 		}
 	},
 	plant_venom_0036 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -866,7 +866,7 @@ return {
 		}
 	},
 	plant_venom_0038 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -896,7 +896,7 @@ return {
 		}
 	},
 	plant_venom_0048 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -922,7 +922,7 @@ return {
 		}
 	},
 	plant_venom_0052 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -948,7 +948,7 @@ return {
 		}
 	},
 	plant_venom_0057 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -976,7 +976,7 @@ return {
 		}
 	},
 	plant_venom_0059 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -1002,7 +1002,7 @@ return {
 		}
 	},
 	plant_venom_0061 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -1028,7 +1028,7 @@ return {
 		}
 	},
 	plant_venom_0063 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -1054,7 +1054,7 @@ return {
 		}
 	},
 	plant_venom_0065 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -1080,7 +1080,7 @@ return {
 		}
 	},
 	plant_venom_0067 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -1106,7 +1106,7 @@ return {
 		}
 	},
 	plant_venom_0069 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -1132,7 +1132,7 @@ return {
 		}
 	},
 	plant_venom_0071 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -1158,7 +1158,7 @@ return {
 		}
 	},
 	plant_venom_0073 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -1184,7 +1184,7 @@ return {
 		}
 	},
 	plant_venom_0079 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -1212,7 +1212,7 @@ return {
 		}
 	},
 	plant_venom_0081 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -1240,7 +1240,7 @@ return {
 		}
 	},
 	plant_venom_0083 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -1268,7 +1268,7 @@ return {
 		}
 	},
 	plant_venom_0085 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			124,
 			107
@@ -1294,7 +1294,7 @@ return {
 		}
 	},
 	plant_venom_particles_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			28
@@ -1320,7 +1320,7 @@ return {
 		}
 	},
 	plant_venom_particles_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			28
@@ -1346,7 +1346,7 @@ return {
 		}
 	},
 	plant_venom_particles_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			28
@@ -1372,7 +1372,7 @@ return {
 		}
 	},
 	plant_venom_particles_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			28
@@ -1398,7 +1398,7 @@ return {
 		}
 	},
 	plant_venom_particles_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			28
@@ -1424,7 +1424,7 @@ return {
 		}
 	},
 	plant_venom_particles_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			28
@@ -1450,7 +1450,7 @@ return {
 		}
 	},
 	plant_venom_particles_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			28
@@ -1476,7 +1476,7 @@ return {
 		}
 	},
 	plant_venom_particles_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			28
@@ -1502,7 +1502,7 @@ return {
 		}
 	},
 	plant_venom_particles_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			28
@@ -1528,7 +1528,7 @@ return {
 		}
 	},
 	plant_venom_particles_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			28
@@ -1554,7 +1554,7 @@ return {
 		}
 	},
 	plant_venom_particles_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			28
@@ -1580,7 +1580,7 @@ return {
 		}
 	},
 	plant_venom_particles_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			28
@@ -1606,7 +1606,7 @@ return {
 		}
 	},
 	plant_venom_smoke_down_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1630,7 +1630,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_down_0002 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1654,7 +1654,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_down_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1678,7 +1678,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_down_0004 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1702,7 +1702,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_down_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1726,7 +1726,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_down_0006 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1750,7 +1750,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_down_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1774,7 +1774,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_down_0008 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1798,7 +1798,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_down_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1822,7 +1822,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_down_0010 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1846,7 +1846,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_down_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1870,7 +1870,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_down_0012 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1894,7 +1894,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_down_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1918,7 +1918,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_down_0014 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1942,7 +1942,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_down_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1968,7 +1968,7 @@ return {
 		}
 	},
 	plant_venom_smoke_down_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -1994,7 +1994,7 @@ return {
 		}
 	},
 	plant_venom_smoke_down_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -2020,7 +2020,7 @@ return {
 		}
 	},
 	plant_venom_smoke_down_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -2046,7 +2046,7 @@ return {
 		}
 	},
 	plant_venom_smoke_down_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -2072,7 +2072,7 @@ return {
 		}
 	},
 	plant_venom_smoke_down_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -2098,7 +2098,7 @@ return {
 		}
 	},
 	plant_venom_smoke_down_0027 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -2124,7 +2124,7 @@ return {
 		}
 	},
 	plant_venom_smoke_down_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -2150,7 +2150,7 @@ return {
 		}
 	},
 	plant_venom_smoke_down_0031 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -2176,7 +2176,7 @@ return {
 		}
 	},
 	plant_venom_smoke_down_0033 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -2202,7 +2202,7 @@ return {
 		}
 	},
 	plant_venom_smoke_down_0035 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -2228,7 +2228,7 @@ return {
 		}
 	},
 	plant_venom_smoke_down_0037 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -2254,7 +2254,7 @@ return {
 		}
 	},
 	plant_venom_smoke_down_0039 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -2280,7 +2280,7 @@ return {
 		}
 	},
 	plant_venom_smoke_down_0041 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			121,
 			101
@@ -2306,7 +2306,7 @@ return {
 		}
 	},
 	plant_venom_smoke_fill = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			101,
 			73
@@ -2330,7 +2330,7 @@ return {
 		alias = {}
 	},
 	plant_venom_smoke_left_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2356,7 +2356,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2382,7 +2382,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2408,7 +2408,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2434,7 +2434,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2460,7 +2460,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2486,7 +2486,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2512,7 +2512,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2538,7 +2538,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2564,7 +2564,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2590,7 +2590,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2616,7 +2616,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2642,7 +2642,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2668,7 +2668,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0027 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2694,7 +2694,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2720,7 +2720,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0031 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2746,7 +2746,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0033 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2772,7 +2772,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0035 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2798,7 +2798,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0037 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2824,7 +2824,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0039 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2850,7 +2850,7 @@ return {
 		}
 	},
 	plant_venom_smoke_left_0041 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			135,
 			110
@@ -2876,7 +2876,7 @@ return {
 		}
 	},
 	water_sparks_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			87,
 			59
@@ -2906,7 +2906,7 @@ return {
 		}
 	},
 	water_sparks_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			87,
 			59
@@ -2942,7 +2942,7 @@ return {
 		}
 	},
 	water_sparks_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			87,
 			59
@@ -2972,7 +2972,7 @@ return {
 		}
 	},
 	water_waves2_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			76,
 			17
@@ -2999,7 +2999,7 @@ return {
 		}
 	},
 	water_waves2_0004 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			76,
 			17
@@ -3026,7 +3026,7 @@ return {
 		}
 	},
 	water_waves2_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			76,
 			17
@@ -3053,7 +3053,7 @@ return {
 		}
 	},
 	water_waves2_0010 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			76,
 			17
@@ -3080,7 +3080,7 @@ return {
 		}
 	},
 	water_waves2_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			76,
 			17
@@ -3107,7 +3107,7 @@ return {
 		}
 	},
 	wisps_10_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			211,
 			39
@@ -3133,7 +3133,7 @@ return {
 		}
 	},
 	wisps_10_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			211,
 			39
@@ -3159,7 +3159,7 @@ return {
 		}
 	},
 	wisps_10_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			211,
 			39
@@ -3185,7 +3185,7 @@ return {
 		}
 	},
 	wisps_10_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			211,
 			39
@@ -3211,7 +3211,7 @@ return {
 		}
 	},
 	wisps_10_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			211,
 			39
@@ -3237,7 +3237,7 @@ return {
 		}
 	},
 	wisps_10_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			211,
 			39
@@ -3263,7 +3263,7 @@ return {
 		}
 	},
 	wisps_10_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			211,
 			39
@@ -3289,7 +3289,7 @@ return {
 		}
 	},
 	wisps_10_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			211,
 			39
@@ -3315,7 +3315,7 @@ return {
 		}
 	},
 	wisps_10_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			211,
 			39
@@ -3341,7 +3341,7 @@ return {
 		}
 	},
 	wisps_10_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			211,
 			39
@@ -3367,7 +3367,7 @@ return {
 		}
 	},
 	wisps_10_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			211,
 			39
@@ -3393,7 +3393,7 @@ return {
 		}
 	},
 	wisps_10_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			211,
 			39
@@ -3419,7 +3419,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3451,7 +3451,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3483,7 +3483,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3511,7 +3511,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3539,7 +3539,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3565,7 +3565,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3593,7 +3593,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3621,7 +3621,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3647,7 +3647,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3675,7 +3675,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3701,7 +3701,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3727,7 +3727,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0027 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3755,7 +3755,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3783,7 +3783,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0031 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3811,7 +3811,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0033 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3839,7 +3839,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0035 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3867,7 +3867,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0037 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3899,7 +3899,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0041 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3929,7 +3929,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0061 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3955,7 +3955,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0063 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -3981,7 +3981,7 @@ return {
 		}
 	},
 	wisps_1_layer1_0069 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4007,7 +4007,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4041,7 +4041,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4069,7 +4069,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4097,7 +4097,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4123,7 +4123,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4149,7 +4149,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4175,7 +4175,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4201,7 +4201,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4227,7 +4227,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4253,7 +4253,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4279,7 +4279,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4305,7 +4305,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4331,7 +4331,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0027 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4357,7 +4357,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4383,7 +4383,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0031 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4409,7 +4409,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0033 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4435,7 +4435,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0039 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4461,7 +4461,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0043 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4487,7 +4487,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0045 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4515,7 +4515,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0047 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4543,7 +4543,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0049 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4571,7 +4571,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0051 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4599,7 +4599,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0053 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4625,7 +4625,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0055 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4651,7 +4651,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0057 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4677,7 +4677,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0059 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4705,7 +4705,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0061 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4733,7 +4733,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0067 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4759,7 +4759,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0069 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4785,7 +4785,7 @@ return {
 		}
 	},
 	wisps_1_layer2_0071 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4811,7 +4811,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4839,7 +4839,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4865,7 +4865,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4891,7 +4891,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4917,7 +4917,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4943,7 +4943,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4969,7 +4969,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -4995,7 +4995,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5021,7 +5021,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5047,7 +5047,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5073,7 +5073,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5099,7 +5099,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5125,7 +5125,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5151,7 +5151,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0027 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5177,7 +5177,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5203,7 +5203,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0031 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5229,7 +5229,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0033 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5255,7 +5255,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0035 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5281,7 +5281,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0037 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5307,7 +5307,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0039 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5333,7 +5333,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0041 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5359,7 +5359,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0043 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5385,7 +5385,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0045 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5411,7 +5411,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0047 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5437,7 +5437,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0049 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5463,7 +5463,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0051 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5489,7 +5489,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0053 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5515,7 +5515,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0055 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5541,7 +5541,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0057 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5567,7 +5567,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0059 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5593,7 +5593,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0061 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5619,7 +5619,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0063 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5645,7 +5645,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0065 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5671,7 +5671,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0067 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5697,7 +5697,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0069 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5723,7 +5723,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0071 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5749,7 +5749,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0073 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5775,7 +5775,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0075 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5801,7 +5801,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0077 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5827,7 +5827,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0079 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5853,7 +5853,7 @@ return {
 		}
 	},
 	wisps_1_layer3_0081 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			70,
 			70
@@ -5879,7 +5879,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -5913,7 +5913,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -5941,7 +5941,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -5969,7 +5969,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -5997,7 +5997,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6025,7 +6025,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6057,7 +6057,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6083,7 +6083,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0033 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6113,7 +6113,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0035 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6141,7 +6141,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0037 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6167,7 +6167,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0039 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6195,7 +6195,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0041 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6223,7 +6223,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0043 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6249,7 +6249,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0045 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6279,7 +6279,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0049 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6309,7 +6309,7 @@ return {
 		}
 	},
 	wisps_2_layer1_0053 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6347,7 +6347,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6385,7 +6385,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6419,7 +6419,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6451,7 +6451,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6479,7 +6479,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6507,7 +6507,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6535,7 +6535,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6563,7 +6563,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6591,7 +6591,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6617,7 +6617,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0027 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6645,7 +6645,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6673,7 +6673,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0031 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6699,7 +6699,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0033 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6729,7 +6729,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0037 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6761,7 +6761,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0051 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6787,7 +6787,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0057 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6813,7 +6813,7 @@ return {
 		}
 	},
 	wisps_2_layer2_0065 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6839,7 +6839,7 @@ return {
 		}
 	},
 	wisps_2_layer3_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6885,7 +6885,7 @@ return {
 		}
 	},
 	wisps_2_layer3_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6917,7 +6917,7 @@ return {
 		}
 	},
 	wisps_2_layer3_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6943,7 +6943,7 @@ return {
 		}
 	},
 	wisps_2_layer3_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -6977,7 +6977,7 @@ return {
 		}
 	},
 	wisps_2_layer3_0033 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7007,7 +7007,7 @@ return {
 		}
 	},
 	wisps_2_layer3_0037 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7039,7 +7039,7 @@ return {
 		}
 	},
 	wisps_2_layer3_0043 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7081,7 +7081,7 @@ return {
 		}
 	},
 	wisps_2_layer3_0061 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7107,7 +7107,7 @@ return {
 		}
 	},
 	wisps_2_layer3_0065 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7139,7 +7139,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7177,7 +7177,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7213,7 +7213,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7245,7 +7245,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7273,7 +7273,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7303,7 +7303,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7331,7 +7331,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7359,7 +7359,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7387,7 +7387,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7415,7 +7415,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0027 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7441,7 +7441,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7469,7 +7469,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0031 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7497,7 +7497,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0033 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7527,7 +7527,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0039 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7557,7 +7557,7 @@ return {
 		}
 	},
 	wisps_2_layer4_0055 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			53
@@ -7583,7 +7583,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -7615,7 +7615,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -7647,7 +7647,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -7679,7 +7679,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -7707,7 +7707,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -7735,7 +7735,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -7763,7 +7763,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0027 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -7791,7 +7791,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -7817,7 +7817,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0031 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -7845,7 +7845,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0033 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -7873,7 +7873,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0035 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -7901,7 +7901,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0037 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -7929,7 +7929,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0039 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -7957,7 +7957,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0041 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -7989,7 +7989,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0045 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8025,7 +8025,7 @@ return {
 		}
 	},
 	wisps_3_layer1_0071 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8051,7 +8051,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8083,7 +8083,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8115,7 +8115,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8145,7 +8145,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8183,7 +8183,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8211,7 +8211,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8239,7 +8239,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8267,7 +8267,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8299,7 +8299,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8327,7 +8327,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0037 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8357,7 +8357,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0061 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8383,7 +8383,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0063 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8409,7 +8409,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0065 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8435,7 +8435,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0067 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8463,7 +8463,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0069 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8493,7 +8493,7 @@ return {
 		}
 	},
 	wisps_3_layer2_0077 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8519,7 +8519,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8547,7 +8547,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8579,7 +8579,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8611,7 +8611,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8641,7 +8641,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8667,7 +8667,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8695,7 +8695,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0027 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8723,7 +8723,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8749,7 +8749,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0031 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8777,7 +8777,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0033 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8803,7 +8803,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0035 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8831,7 +8831,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0037 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8859,7 +8859,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0039 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8887,7 +8887,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0041 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8915,7 +8915,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0043 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8943,7 +8943,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0045 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -8969,7 +8969,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0047 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9003,7 +9003,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0067 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9029,7 +9029,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0071 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9055,7 +9055,7 @@ return {
 		}
 	},
 	wisps_3_layer3_0077 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9083,7 +9083,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9109,7 +9109,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9135,7 +9135,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9161,7 +9161,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9187,7 +9187,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9213,7 +9213,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9239,7 +9239,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9265,7 +9265,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9291,7 +9291,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9317,7 +9317,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9343,7 +9343,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9369,7 +9369,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9395,7 +9395,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9423,7 +9423,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9449,7 +9449,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0031 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9475,7 +9475,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0033 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9501,7 +9501,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0035 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9527,7 +9527,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0037 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9553,7 +9553,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0039 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9579,7 +9579,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0041 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9605,7 +9605,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0043 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9631,7 +9631,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0045 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9659,7 +9659,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0049 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9685,7 +9685,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0051 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9711,7 +9711,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0053 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9737,7 +9737,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0055 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9763,7 +9763,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0057 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9789,7 +9789,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0059 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9815,7 +9815,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0061 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9841,7 +9841,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0063 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9867,7 +9867,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0065 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9893,7 +9893,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0067 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9919,7 +9919,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0069 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9945,7 +9945,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0071 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9971,7 +9971,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0073 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -9997,7 +9997,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0075 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -10023,7 +10023,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0077 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -10049,7 +10049,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0079 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -10075,7 +10075,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0081 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -10101,7 +10101,7 @@ return {
 		}
 	},
 	wisps_3_layer4_0083 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			107,
 			76
@@ -10127,7 +10127,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10162,7 +10162,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10190,7 +10190,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10216,7 +10216,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10244,7 +10244,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10270,7 +10270,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10298,7 +10298,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10328,7 +10328,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10356,7 +10356,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10388,7 +10388,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0031 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10420,7 +10420,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0033 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10448,7 +10448,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0035 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10478,7 +10478,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0037 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10506,7 +10506,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0039 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10536,7 +10536,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0043 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10566,7 +10566,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0057 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10592,7 +10592,7 @@ return {
 		}
 	},
 	wisps_4_layer1_0061 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10620,7 +10620,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10653,7 +10653,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10687,7 +10687,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10715,7 +10715,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10743,7 +10743,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10771,7 +10771,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10799,7 +10799,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10827,7 +10827,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10853,7 +10853,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10879,7 +10879,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10907,7 +10907,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10935,7 +10935,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0027 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10967,7 +10967,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0031 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -10997,7 +10997,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0041 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -11025,7 +11025,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0047 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -11051,7 +11051,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0051 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -11077,7 +11077,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0053 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -11103,7 +11103,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0055 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -11129,7 +11129,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0057 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -11155,7 +11155,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0061 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -11181,7 +11181,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0065 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -11207,7 +11207,7 @@ return {
 		}
 	},
 	wisps_4_layer2_0069 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			56,
 			45
@@ -11233,7 +11233,7 @@ return {
 		}
 	},
 	wisps_5_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11259,7 +11259,7 @@ return {
 		}
 	},
 	wisps_5_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11285,7 +11285,7 @@ return {
 		}
 	},
 	wisps_5_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11311,7 +11311,7 @@ return {
 		}
 	},
 	wisps_5_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11337,7 +11337,7 @@ return {
 		}
 	},
 	wisps_5_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11363,7 +11363,7 @@ return {
 		}
 	},
 	wisps_5_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11389,7 +11389,7 @@ return {
 		}
 	},
 	wisps_5_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11415,7 +11415,7 @@ return {
 		}
 	},
 	wisps_5_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11441,7 +11441,7 @@ return {
 		}
 	},
 	wisps_5_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11467,7 +11467,7 @@ return {
 		}
 	},
 	wisps_5_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11493,7 +11493,7 @@ return {
 		}
 	},
 	wisps_5_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11519,7 +11519,7 @@ return {
 		}
 	},
 	wisps_5_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11545,7 +11545,7 @@ return {
 		}
 	},
 	wisps_5_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11571,7 +11571,7 @@ return {
 		}
 	},
 	wisps_5_0027 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11597,7 +11597,7 @@ return {
 		}
 	},
 	wisps_5_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11625,7 +11625,7 @@ return {
 		}
 	},
 	wisps_5_0031 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11651,7 +11651,7 @@ return {
 		}
 	},
 	wisps_5_0035 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11677,7 +11677,7 @@ return {
 		}
 	},
 	wisps_5_0037 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11703,7 +11703,7 @@ return {
 		}
 	},
 	wisps_5_0039 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11729,7 +11729,7 @@ return {
 		}
 	},
 	wisps_5_0041 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11755,7 +11755,7 @@ return {
 		}
 	},
 	wisps_5_0043 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11781,7 +11781,7 @@ return {
 		}
 	},
 	wisps_5_0045 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11807,7 +11807,7 @@ return {
 		}
 	},
 	wisps_5_0047 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11833,7 +11833,7 @@ return {
 		}
 	},
 	wisps_5_0049 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11859,7 +11859,7 @@ return {
 		}
 	},
 	wisps_5_0051 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11885,7 +11885,7 @@ return {
 		}
 	},
 	wisps_5_0053 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11911,7 +11911,7 @@ return {
 		}
 	},
 	wisps_5_0055 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11937,7 +11937,7 @@ return {
 		}
 	},
 	wisps_5_0057 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			23,
 			48
@@ -11963,7 +11963,7 @@ return {
 		}
 	},
 	wisps_6_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			59,
 			56
@@ -11989,7 +11989,7 @@ return {
 		}
 	},
 	wisps_6_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			59,
 			56
@@ -12015,7 +12015,7 @@ return {
 		}
 	},
 	wisps_6_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			59,
 			56
@@ -12041,7 +12041,7 @@ return {
 		}
 	},
 	wisps_6_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			59,
 			56
@@ -12067,7 +12067,7 @@ return {
 		}
 	},
 	wisps_6_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			59,
 			56
@@ -12093,7 +12093,7 @@ return {
 		}
 	},
 	wisps_6_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			59,
 			56
@@ -12119,7 +12119,7 @@ return {
 		}
 	},
 	wisps_6_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			59,
 			56
@@ -12145,7 +12145,7 @@ return {
 		}
 	},
 	wisps_6_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			59,
 			56
@@ -12171,7 +12171,7 @@ return {
 		}
 	},
 	wisps_6_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			59,
 			56
@@ -12197,7 +12197,7 @@ return {
 		}
 	},
 	wisps_6_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			59,
 			56
@@ -12223,7 +12223,7 @@ return {
 		}
 	},
 	wisps_6_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			59,
 			56
@@ -12249,7 +12249,7 @@ return {
 		}
 	},
 	wisps_6_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			59,
 			56
@@ -12275,7 +12275,7 @@ return {
 		}
 	},
 	wisps_6_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			59,
 			56
@@ -12301,7 +12301,7 @@ return {
 		}
 	},
 	wisps_7_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12327,7 +12327,7 @@ return {
 		}
 	},
 	wisps_7_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12353,7 +12353,7 @@ return {
 		}
 	},
 	wisps_7_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12379,7 +12379,7 @@ return {
 		}
 	},
 	wisps_7_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12405,7 +12405,7 @@ return {
 		}
 	},
 	wisps_7_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12431,7 +12431,7 @@ return {
 		}
 	},
 	wisps_7_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12457,7 +12457,7 @@ return {
 		}
 	},
 	wisps_7_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12483,7 +12483,7 @@ return {
 		}
 	},
 	wisps_7_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12509,7 +12509,7 @@ return {
 		}
 	},
 	wisps_7_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12535,7 +12535,7 @@ return {
 		}
 	},
 	wisps_7_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12561,7 +12561,7 @@ return {
 		}
 	},
 	wisps_7_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12587,7 +12587,7 @@ return {
 		}
 	},
 	wisps_7_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12613,7 +12613,7 @@ return {
 		}
 	},
 	wisps_7_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12639,7 +12639,7 @@ return {
 		}
 	},
 	wisps_7_0027 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12665,7 +12665,7 @@ return {
 		}
 	},
 	wisps_7_0029 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12691,7 +12691,7 @@ return {
 		}
 	},
 	wisps_7_0031 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12717,7 +12717,7 @@ return {
 		}
 	},
 	wisps_7_0033 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12743,7 +12743,7 @@ return {
 		}
 	},
 	wisps_7_0035 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12769,7 +12769,7 @@ return {
 		}
 	},
 	wisps_7_0037 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12795,7 +12795,7 @@ return {
 		}
 	},
 	wisps_7_0039 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			45,
 			59
@@ -12821,7 +12821,7 @@ return {
 		}
 	},
 	wisps_8_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			65
@@ -12847,7 +12847,7 @@ return {
 		}
 	},
 	wisps_8_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			65
@@ -12873,7 +12873,7 @@ return {
 		}
 	},
 	wisps_8_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			65
@@ -12899,7 +12899,7 @@ return {
 		}
 	},
 	wisps_8_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			65
@@ -12925,7 +12925,7 @@ return {
 		}
 	},
 	wisps_8_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			65
@@ -12951,7 +12951,7 @@ return {
 		}
 	},
 	wisps_8_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			65
@@ -12977,7 +12977,7 @@ return {
 		}
 	},
 	wisps_8_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			65
@@ -13003,7 +13003,7 @@ return {
 		}
 	},
 	wisps_8_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			65
@@ -13029,7 +13029,7 @@ return {
 		}
 	},
 	wisps_8_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			65
@@ -13055,7 +13055,7 @@ return {
 		}
 	},
 	wisps_8_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			65
@@ -13081,7 +13081,7 @@ return {
 		}
 	},
 	wisps_8_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			65
@@ -13107,7 +13107,7 @@ return {
 		}
 	},
 	wisps_8_0023 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			65
@@ -13133,7 +13133,7 @@ return {
 		}
 	},
 	wisps_8_0025 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			65,
 			65
@@ -13159,7 +13159,7 @@ return {
 		}
 	},
 	wisps_9_0001 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			118,
 			132
@@ -13185,7 +13185,7 @@ return {
 		}
 	},
 	wisps_9_0003 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			118,
 			132
@@ -13211,7 +13211,7 @@ return {
 		}
 	},
 	wisps_9_0005 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			118,
 			132
@@ -13237,7 +13237,7 @@ return {
 		}
 	},
 	wisps_9_0007 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			118,
 			132
@@ -13263,7 +13263,7 @@ return {
 		}
 	},
 	wisps_9_0009 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			118,
 			132
@@ -13289,7 +13289,7 @@ return {
 		}
 	},
 	wisps_9_0011 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			118,
 			132
@@ -13315,7 +13315,7 @@ return {
 		}
 	},
 	wisps_9_0013 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			118,
 			132
@@ -13341,7 +13341,7 @@ return {
 		}
 	},
 	wisps_9_0015 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			118,
 			132
@@ -13367,7 +13367,7 @@ return {
 		}
 	},
 	wisps_9_0017 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			118,
 			132
@@ -13393,7 +13393,7 @@ return {
 		}
 	},
 	wisps_9_0019 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			118,
 			132
@@ -13419,7 +13419,7 @@ return {
 		}
 	},
 	wisps_9_0021 = {
-		a_name = "go_stages_faerie_grove-1.png",
+		a_name = "go_stages_faerie_grove-1.dds",
 		size = {
 			118,
 			132

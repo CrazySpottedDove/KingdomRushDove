@@ -2,7 +2,7 @@
 
 return {
 	CB_Stg24_beatlejuice = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			58,
 			74
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	CB_Stg24_bigHouse = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			142,
 			130
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	CB_Stg24_bigHouse2 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			154,
 			164
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	CB_Stg24_grating = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			130,
 			102
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	CB_Stg24_stones_0001 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			72,
 			78
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	CB_Stg24_stones_0002 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			72,
 			78
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	CB_Stg24_stones_0003 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			72,
 			78
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	CB_Stg24_stones_0004 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			72,
 			78
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	CB_Stg24_stones_0005 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			72,
 			78
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	CB_Stg24_stones_0006 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			72,
 			78
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	CB_Stg24_stones_0007 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			72,
 			78
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	neverMore_0001 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	neverMore_0002 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -316,7 +316,7 @@ return {
 		}
 	},
 	neverMore_0004 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -342,7 +342,7 @@ return {
 		}
 	},
 	neverMore_0006 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -368,7 +368,7 @@ return {
 		}
 	},
 	neverMore_0008 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -410,7 +410,7 @@ return {
 		}
 	},
 	neverMore_0010 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -436,7 +436,7 @@ return {
 		}
 	},
 	neverMore_0012 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -462,7 +462,7 @@ return {
 		}
 	},
 	neverMore_0014 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -488,7 +488,7 @@ return {
 		}
 	},
 	neverMore_0016 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -514,7 +514,7 @@ return {
 		}
 	},
 	neverMore_0018 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -545,7 +545,7 @@ return {
 		}
 	},
 	neverMore_0025 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -571,7 +571,7 @@ return {
 		}
 	},
 	neverMore_0027 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -597,7 +597,7 @@ return {
 		}
 	},
 	neverMore_0029 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -623,7 +623,7 @@ return {
 		}
 	},
 	neverMore_0047 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -649,7 +649,7 @@ return {
 		}
 	},
 	neverMore_0049 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -675,7 +675,7 @@ return {
 		}
 	},
 	neverMore_0051 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -701,7 +701,7 @@ return {
 		}
 	},
 	neverMore_0053 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
@@ -727,7 +727,7 @@ return {
 		}
 	},
 	neverMore_0055 = {
-		a_name = "go_stage24-1.png",
+		a_name = "go_stage24-1.dds",
 		size = {
 			100,
 			114
