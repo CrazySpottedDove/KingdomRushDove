@@ -8,7 +8,8 @@ local damage_type_map = {
     [DAMAGE_RUDE] = "残暴伤害",
     [DAMAGE_STAB] = "穿刺伤害",
     [DAMAGE_MAGICAL_EXPLOSION] = "法术爆炸伤害",
-    [DAMAGE_ELECTRICAL] = "雷电伤害"
+    [DAMAGE_ELECTRICAL] = "雷电伤害",
+    [DAMAGE_MIXED] = "物法混合伤害"
 }
 local bit = require("bit")
 local band = bit.band
@@ -75,6 +76,14 @@ end
 --- 当前技能拥有 .cooldown(table) 字段时，获取该字段的最大等级冷却时间，存入 cooldown 变量
 local function get_cooldown()
     cooldown = s.cooldown[max_lvl]
+end
+
+local function set_damage_value(value, i)
+    if not i then
+        i = 1
+    end
+    d[i].damage_max = value
+    d[i].damage_min = value
 end
 
 -- 从拥有 damage_min, damage_max, damage_type 字段的表中获取伤害信息，存入 d 列表
@@ -875,11 +884,41 @@ d[1].damage_max = s.damage[max_lvl]
 map["鹤形拳"] = str("库绍有",rate_str(chance),"闪避敌人的攻击并以鹤形拳反击，造成",damage_str(),"。该技能有",cooldown,"秒冷却时间。")
 map["诸武精通"] = str("库绍的普攻可触发三种随机效果：降低敌人10%护甲；减少蛇形拳和虎型拳1秒冷却；减少豹形拳和龙形拳一秒冷却。持续战斗时，库绍的普攻、虎型拳、蛇形拳的冷却逐渐减少，最多减少40%。")
 set_hero("hero_monkey_god")
-map["狼牙风暴"] = str()
-map["旋风棍法"] = str()
-map["猴掌"] = str()
-map["神怒"] = str()
-map["神性"] = str()
+set_skill(h.hero.skills.spinningpole)
+count = s.loops[max_lvl]
+get_damage(h.melee.attacks[3])
+radius = h.melee.attacks[3].damage_radius
+cooldown = h.melee.attacks[3].cooldown
+set_damage_value(s.damage[max_lvl])
+map["狼牙风暴"] = str(cooldown_str(),"赛塔姆挥舞狼牙棒，对",radius,"范围内敌人造成",count,"段伤害，每段造成",damage_str(),"。")
+set_skill(h.hero.skills.tetsubostorm)
+get_damage(h.melee.attacks[4])
+set_damage_value(s.damage[max_lvl])
+cooldown = h.melee.attacks[4].cooldown
+count = h.melee.attacks[4].loops * #h.melee.attacks[4].hit_times
+map["旋风棍法"] = str(cooldown_str(),"赛塔姆挥棒如旋风，对敌人进行",count,"段攻击，每段造成",damage_str(),"。")
+set_skill(h.hero.skills.monkeypalm)
+get_damage(h.melee.attacks[5])
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+duration = s.stun_duration[max_lvl]
+duration_2 = s.silence_duration[max_lvl]
+cooldown = h.melee.attacks[5].cooldown
+map["猴掌"] = str(cooldown_str(),"赛塔姆凝聚精神拍出一掌，对非BOSS敌人造成",damage_str(),"，并使敌人眩晕",duration,"秒，沉默",duration_2,"秒，且使神怒的冷却减少4秒。")
+set_skill(h.hero.skills.angrygod)
+factor = s.received_damage_factor[max_lvl]
+duration = h.timed_attacks.list[1].loops * 17 / 30
+cooldown = h.timed_attacks.list[1].cooldown
+e = E:get_template("mod_monkey_god_fire")
+get_damage(e.dps)
+set_damage_value(e.dps.damage_min + max_lvl * e.dps.damage_inc)
+cycle_time = e.dps.damage_every
+map["神怒"] = str(cooldown_str(),"赛塔姆进入无敌状态，刷新狼牙风暴、旋风棍法和猴掌的冷却，并释放心中的怒火，持续",duration,"秒，期间所有敌人受到的伤害乘以",factor,"，并每隔",cycle_time,"秒受到",damage_str(),"。该技能被手动打断时，恢复等比例冷却时间。")
+speed = h.cloudwalk.extra_speed
+e = E:get_template("aura_monkey_god_divinenature")
+cycle_time = e.hps.heal_every
+amount = e.hps.heal_min
+map["神性"] = str("远距离移动时，赛塔姆乘坐祥云，移速提升",speed,"点。每隔",cycle_time,"秒，赛塔姆恢复",amount,"点生命值。")
 
 set_hero("hero_giant")
 map["巨石投掷"] = str()

@@ -6277,7 +6277,7 @@ tt.hero.skills.spinningpole.xp_level_steps = {
     [8] = 3
 }
 tt.hero.skills.tetsubostorm = CC("hero_skill")
-tt.hero.skills.tetsubostorm.damage = {45, 90, 135}
+tt.hero.skills.tetsubostorm.damage = {35, 70, 105}
 tt.hero.skills.tetsubostorm.xp_gain_factor = 60
 tt.hero.skills.tetsubostorm.xp_level_steps = {
     [2] = 1,
@@ -6388,7 +6388,7 @@ tt.melee.attacks[4].damage_min = nil
 tt.melee.attacks[4].disabled = true
 tt.melee.attacks[4].hit_times = {fts(1), fts(4), fts(9)}
 tt.melee.attacks[4].loopable = true
-tt.melee.attacks[4].loops = 1
+tt.melee.attacks[4].loops = 2
 tt.melee.attacks[4].vis_bans = bor(F_FLYING, F_CLIFF)
 tt.melee.attacks[4].vis_flags = F_BLOCK
 tt.melee.attacks[4].xp_from_skill = "tetsubostorm"
