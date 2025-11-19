@@ -13,7 +13,6 @@ fi
 
 mkdir -p ".versions"
 ARCHIVE_DIR=".versions/KingdomRushDove-Windows-v${current_id}.zip"
-LOVE_FILE=".versions/KingdomRushDove-Windows-v${current_id}.love"
 
 # 依赖检查
 if ! command -v zip >/dev/null 2>&1; then
@@ -23,11 +22,8 @@ fi
 
 echo "Creating archive-> $ARCHIVE_DIR"
 # 先打包项目中除 png 和 .versions 的文件（避免把 archive 自己打进去）
-zip -r "$ARCHIVE_DIR" . -x ".versions/*" -x "tmp/*" -x "*.exe" -x ".git/*" -x "KingdomRushDoveUpdater" -x "client.log" -x "update.lua" -q
-
-# 生成 .love 文件（复制以保留 zip 备份）
-mv "$ARCHIVE_DIR" "$LOVE_FILE"
+zip -r "$ARCHIVE_DIR" . -x ".versions/*" -x "tmp/*" -x ".git/*" -x "KingdomRushDoveUpdater" -x "client.log" -x "update.lua" -q
 
 # echo "Packed -> $ARCHIVE_DIR"
 # echo "Also copied to -> $LOVE_FILE"
-scp -P 60001 "$LOVE_FILE" root@10.112.99.5:/srv/files/王国保卫战Dove版-Windows端/
+# scp -P 60001 "$LOVE_FILE" root@10.112.99.5:/srv/files/王国保卫战Dove版-Windows端/
