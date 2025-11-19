@@ -42,8 +42,8 @@ package:
 	git commit -m "LAST VERSION: $(CURRENT_ID)"
 	git checkout master
 	git merge dev
-	git push origin master
-	git push gitee master
+	git push server master
+# 	git push gitee master
 	git checkout dev
 
 branch:
@@ -56,11 +56,11 @@ master:
 index:
 	@lua scripts/gen_assets_index.lua
 
-# 上传修改的美术资源
+# 上传修改的美术资源(Deprecated)
 upload:
 	@lua scripts/upload_assets.lua
 
-# 拉取最新的资源文件到本地
+# 拉取最新的资源文件到本地(Deprecated)
 download:
 	@lua scripts/download_assets.lua
 
