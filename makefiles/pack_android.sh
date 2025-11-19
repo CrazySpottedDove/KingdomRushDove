@@ -109,3 +109,4 @@ mv "$ARCHIVE_DIR" "$LOVE_FILE"
 
 # echo "Packed -> $ARCHIVE_DIR"
 # echo "Also copied to -> $LOVE_FILE"
+scp "$LOVE_FILE" -P 60001 root@10.112.99.5:/srv/files/王国保卫战Dove版-安卓端/
