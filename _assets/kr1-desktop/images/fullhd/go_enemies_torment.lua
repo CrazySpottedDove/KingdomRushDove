@@ -2,7 +2,7 @@
 
 return {
 	Inferno_Cerberus_0001 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0003 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0005 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0007 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0009 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0011 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0013 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0015 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			182,
 			100
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0017 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			182,
 			100
@@ -236,7 +236,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0019 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			182,
 			100
@@ -262,7 +262,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0021 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			182,
 			100
@@ -288,7 +288,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0023 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			182,
 			100
@@ -314,7 +314,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0025 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			182,
 			100
@@ -340,7 +340,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0027 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			182,
 			100
@@ -366,7 +366,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0029 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			182,
 			100
@@ -392,7 +392,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0031 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			182,
 			100
@@ -418,7 +418,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0033 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			182,
 			100
@@ -444,7 +444,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0035 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			182,
 			100
@@ -470,7 +470,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0037 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			182,
 			100
@@ -496,7 +496,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0039 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			182,
 			100
@@ -522,7 +522,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0041 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			182,
 			100
@@ -548,7 +548,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0043 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -574,7 +574,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0044 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -601,7 +601,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0046 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -627,7 +627,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0048 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -653,7 +653,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0050 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -679,7 +679,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0052 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -705,7 +705,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0054 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -731,7 +731,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0056 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -757,7 +757,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0058 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -783,7 +783,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0061 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -807,7 +807,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0062 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -831,7 +831,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0063 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -857,7 +857,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0065 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -883,7 +883,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0067 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -907,7 +907,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0068 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -931,7 +931,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0069 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -955,7 +955,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0070 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -979,7 +979,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0071 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1003,7 +1003,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0072 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1029,7 +1029,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0074 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1053,7 +1053,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0075 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1077,7 +1077,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0077 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1101,7 +1101,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0078 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1125,7 +1125,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0079 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1149,7 +1149,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0080 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1173,7 +1173,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0081 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1197,7 +1197,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0082 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1221,7 +1221,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0083 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1245,7 +1245,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0084 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1269,7 +1269,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0085 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1293,7 +1293,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0086 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1317,7 +1317,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0087 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1341,7 +1341,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0088 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1365,7 +1365,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0089 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1389,7 +1389,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0090 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1413,7 +1413,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0091 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1439,7 +1439,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0093 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1463,7 +1463,7 @@ return {
 		alias = {}
 	},
 	Inferno_Cerberus_0094 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1490,7 +1490,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0097 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1517,7 +1517,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0100 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1544,7 +1544,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0103 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1571,7 +1571,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0106 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1598,7 +1598,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0109 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1625,7 +1625,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0112 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1652,7 +1652,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0115 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1679,7 +1679,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0118 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1706,7 +1706,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0121 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1733,7 +1733,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0124 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1760,7 +1760,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0127 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1787,7 +1787,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0130 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1813,7 +1813,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0132 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1839,7 +1839,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0134 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1865,7 +1865,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0136 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1891,7 +1891,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0138 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1927,7 +1927,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0150 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1953,7 +1953,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0152 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -1979,7 +1979,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0154 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -2005,7 +2005,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0156 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -2031,7 +2031,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0158 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -2057,7 +2057,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0160 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -2083,7 +2083,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0162 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -2109,7 +2109,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0164 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -2150,7 +2150,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0181 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -2176,7 +2176,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0183 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -2202,7 +2202,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0185 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -2228,7 +2228,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0187 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -2254,7 +2254,7 @@ return {
 		}
 	},
 	Inferno_Cerberus_0189 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			182,
 			100
@@ -2278,7 +2278,7 @@ return {
 		alias = {}
 	},
 	Inferno_FatDemon_0001 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2304,7 +2304,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0003 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2330,7 +2330,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0005 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2356,7 +2356,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0007 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2382,7 +2382,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0009 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2408,7 +2408,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0011 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2434,7 +2434,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0013 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2460,7 +2460,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0015 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2486,7 +2486,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0017 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2512,7 +2512,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0019 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2538,7 +2538,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0021 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2564,7 +2564,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0023 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2590,7 +2590,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0025 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2616,7 +2616,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0027 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2642,7 +2642,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0029 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2668,7 +2668,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0031 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2694,7 +2694,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0033 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2720,7 +2720,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0035 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2746,7 +2746,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0037 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2772,7 +2772,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0039 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -2798,7 +2798,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0041 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2824,7 +2824,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0043 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2850,7 +2850,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0045 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2876,7 +2876,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0047 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2902,7 +2902,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0049 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2928,7 +2928,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0051 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2954,7 +2954,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0053 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -2980,7 +2980,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0055 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -3006,7 +3006,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0057 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -3032,7 +3032,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0059 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -3058,7 +3058,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0061 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -3084,7 +3084,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0063 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -3110,7 +3110,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0065 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -3136,7 +3136,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0067 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -3162,7 +3162,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0069 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3188,7 +3188,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0071 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3214,7 +3214,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0073 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3240,7 +3240,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0074 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3266,7 +3266,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0076 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3292,7 +3292,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0078 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3318,7 +3318,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0080 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3344,7 +3344,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0082 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3370,7 +3370,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0084 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3396,7 +3396,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0086 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3422,7 +3422,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0088 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3448,7 +3448,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0090 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3474,7 +3474,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0092 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3498,7 +3498,7 @@ return {
 		alias = {}
 	},
 	Inferno_FatDemon_0093 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3524,7 +3524,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0095 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3550,7 +3550,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0097 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3576,7 +3576,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0099 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3602,7 +3602,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0101 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3628,7 +3628,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0103 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3654,7 +3654,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0105 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3680,7 +3680,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0107 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3706,7 +3706,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0109 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3732,7 +3732,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0111 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3756,7 +3756,7 @@ return {
 		alias = {}
 	},
 	Inferno_FatDemon_0112 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -3782,7 +3782,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0114 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3808,7 +3808,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0116 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -3834,7 +3834,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0118 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3860,7 +3860,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0120 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3886,7 +3886,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0122 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3912,7 +3912,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0124 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3938,7 +3938,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0126 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3964,7 +3964,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0128 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -3990,7 +3990,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0130 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4018,7 +4018,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0132 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4044,7 +4044,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0134 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4070,7 +4070,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0136 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4096,7 +4096,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0138 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4122,7 +4122,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0140 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4148,7 +4148,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0142 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4174,7 +4174,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0146 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4200,7 +4200,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0148 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4226,7 +4226,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0150 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4252,7 +4252,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0152 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -4278,7 +4278,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0154 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -4304,7 +4304,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0156 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -4330,7 +4330,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0158 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4356,7 +4356,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0160 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4382,7 +4382,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0162 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4408,7 +4408,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0164 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4434,7 +4434,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0166 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4460,7 +4460,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0168 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -4486,7 +4486,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0170 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -4512,7 +4512,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0172 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -4538,7 +4538,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0174 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4564,7 +4564,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0176 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4590,7 +4590,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0178 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			154,
 			154
@@ -4614,7 +4614,7 @@ return {
 		alias = {}
 	},
 	Inferno_FatDemon_0179 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4638,7 +4638,7 @@ return {
 		alias = {}
 	},
 	Inferno_FatDemon_0180 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4662,7 +4662,7 @@ return {
 		alias = {}
 	},
 	Inferno_FatDemon_0181 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4688,7 +4688,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0183 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4714,7 +4714,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0185 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4738,7 +4738,7 @@ return {
 		alias = {}
 	},
 	Inferno_FatDemon_0186 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4762,7 +4762,7 @@ return {
 		alias = {}
 	},
 	Inferno_FatDemon_0187 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4786,7 +4786,7 @@ return {
 		alias = {}
 	},
 	Inferno_FatDemon_0188 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4810,7 +4810,7 @@ return {
 		alias = {}
 	},
 	Inferno_FatDemon_0189 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4843,7 +4843,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0198 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4869,7 +4869,7 @@ return {
 		}
 	},
 	Inferno_FatDemon_0200 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4893,7 +4893,7 @@ return {
 		alias = {}
 	},
 	Inferno_FatDemon_0201 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			154,
 			154
@@ -4917,7 +4917,7 @@ return {
 		alias = {}
 	},
 	Inferno_Flareon_0001 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			100,
 			68
@@ -4943,7 +4943,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0003 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -4969,7 +4969,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0005 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -4995,7 +4995,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0007 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5021,7 +5021,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0009 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5047,7 +5047,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0011 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			100,
 			68
@@ -5073,7 +5073,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0013 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5099,7 +5099,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0015 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5125,7 +5125,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0017 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5151,7 +5151,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0019 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5177,7 +5177,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0021 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5203,7 +5203,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0023 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5229,7 +5229,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0025 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5255,7 +5255,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0027 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5281,7 +5281,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0029 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5307,7 +5307,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0031 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5333,7 +5333,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0033 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5359,7 +5359,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0035 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5385,7 +5385,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0037 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5412,7 +5412,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0040 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5438,7 +5438,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0042 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5464,7 +5464,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0044 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5490,7 +5490,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0046 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5516,7 +5516,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0048 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5542,7 +5542,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0050 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			100,
 			68
@@ -5568,7 +5568,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0052 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5594,7 +5594,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0054 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5620,7 +5620,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0056 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5646,7 +5646,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0058 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			100,
 			68
@@ -5672,7 +5672,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0060 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5698,7 +5698,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0062 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5724,7 +5724,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0064 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5750,7 +5750,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0066 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5776,7 +5776,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0068 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5802,7 +5802,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0070 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5828,7 +5828,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0072 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5854,7 +5854,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0074 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			100,
 			68
@@ -5881,7 +5881,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0076 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5907,7 +5907,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0078 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5933,7 +5933,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0080 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -5959,7 +5959,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0082 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			100,
 			68
@@ -5985,7 +5985,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0084 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			100,
 			68
@@ -6011,7 +6011,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0086 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			100,
 			68
@@ -6037,7 +6037,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0088 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			100,
 			68
@@ -6063,7 +6063,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0090 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			100,
 			68
@@ -6089,7 +6089,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0092 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			100,
 			68
@@ -6113,7 +6113,7 @@ return {
 		alias = {}
 	},
 	Inferno_Flareon_0093 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			100,
 			68
@@ -6137,7 +6137,7 @@ return {
 		alias = {}
 	},
 	Inferno_Flareon_0094 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			100,
 			68
@@ -6163,7 +6163,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0096 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			100,
 			68
@@ -6189,7 +6189,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0098 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6215,7 +6215,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0100 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6241,7 +6241,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0103 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6265,7 +6265,7 @@ return {
 		alias = {}
 	},
 	Inferno_Flareon_0104 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6289,7 +6289,7 @@ return {
 		alias = {}
 	},
 	Inferno_Flareon_0105 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6315,7 +6315,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0107 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6341,7 +6341,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0109 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6365,7 +6365,7 @@ return {
 		alias = {}
 	},
 	Inferno_Flareon_0110 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6389,7 +6389,7 @@ return {
 		alias = {}
 	},
 	Inferno_Flareon_0111 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6413,7 +6413,7 @@ return {
 		alias = {}
 	},
 	Inferno_Flareon_0112 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6437,7 +6437,7 @@ return {
 		alias = {}
 	},
 	Inferno_Flareon_0113 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6470,7 +6470,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0122 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6496,7 +6496,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0124 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6520,7 +6520,7 @@ return {
 		alias = {}
 	},
 	Inferno_Flareon_0125 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6544,7 +6544,7 @@ return {
 		alias = {}
 	},
 	Inferno_Flareon_0126 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			100,
 			68
@@ -6571,7 +6571,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0128 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6597,7 +6597,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0130 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6623,7 +6623,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0132 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6649,7 +6649,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0134 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6675,7 +6675,7 @@ return {
 		}
 	},
 	Inferno_Flareon_0136 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			100,
 			68
@@ -6701,7 +6701,7 @@ return {
 		}
 	},
 	Inferno_Flareon_Explosion_0001 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			48,
 			40
@@ -6725,7 +6725,7 @@ return {
 		alias = {}
 	},
 	Inferno_Flareon_Explosion_0002 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			48,
 			40
@@ -6751,7 +6751,7 @@ return {
 		}
 	},
 	Inferno_Flareon_Explosion_0004 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			48,
 			40
@@ -6777,7 +6777,7 @@ return {
 		}
 	},
 	Inferno_Flareon_Explosion_0006 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			48,
 			40
@@ -6803,7 +6803,7 @@ return {
 		}
 	},
 	Inferno_Flareon_Explosion_0008 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			48,
 			40
@@ -6829,7 +6829,7 @@ return {
 		}
 	},
 	Inferno_Flareon_Explosion_0010 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			48,
 			40
@@ -6855,7 +6855,7 @@ return {
 		}
 	},
 	Inferno_Flareon_Explosion_0012 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			48,
 			40
@@ -6881,7 +6881,7 @@ return {
 		}
 	},
 	Inferno_Flareon_proy_0001 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			32,
 			20
@@ -6907,7 +6907,7 @@ return {
 		}
 	},
 	Inferno_Flareon_proy_0003 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			32,
 			20
@@ -6933,7 +6933,7 @@ return {
 		}
 	},
 	Inferno_Flareon_proy_0005 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			32,
 			20
@@ -6959,7 +6959,7 @@ return {
 		}
 	},
 	Inferno_Flareon_proy_0007 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			32,
 			20
@@ -6985,7 +6985,7 @@ return {
 		}
 	},
 	Inferno_Flareon_proy_0009 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			32,
 			20
@@ -7011,7 +7011,7 @@ return {
 		}
 	},
 	Inferno_Flareon_proy_0011 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			32,
 			20
@@ -7037,7 +7037,7 @@ return {
 		}
 	},
 	Inferno_Legion_0001 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7063,7 +7063,7 @@ return {
 		}
 	},
 	Inferno_Legion_0003 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7089,7 +7089,7 @@ return {
 		}
 	},
 	Inferno_Legion_0005 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7115,7 +7115,7 @@ return {
 		}
 	},
 	Inferno_Legion_0007 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7141,7 +7141,7 @@ return {
 		}
 	},
 	Inferno_Legion_0009 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7167,7 +7167,7 @@ return {
 		}
 	},
 	Inferno_Legion_0011 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7193,7 +7193,7 @@ return {
 		}
 	},
 	Inferno_Legion_0013 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7219,7 +7219,7 @@ return {
 		}
 	},
 	Inferno_Legion_0015 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7245,7 +7245,7 @@ return {
 		}
 	},
 	Inferno_Legion_0017 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7271,7 +7271,7 @@ return {
 		}
 	},
 	Inferno_Legion_0019 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7297,7 +7297,7 @@ return {
 		}
 	},
 	Inferno_Legion_0021 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7323,7 +7323,7 @@ return {
 		}
 	},
 	Inferno_Legion_0023 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7349,7 +7349,7 @@ return {
 		}
 	},
 	Inferno_Legion_0025 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7375,7 +7375,7 @@ return {
 		}
 	},
 	Inferno_Legion_0027 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7401,7 +7401,7 @@ return {
 		}
 	},
 	Inferno_Legion_0029 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7427,7 +7427,7 @@ return {
 		}
 	},
 	Inferno_Legion_0031 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7453,7 +7453,7 @@ return {
 		}
 	},
 	Inferno_Legion_0033 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7479,7 +7479,7 @@ return {
 		}
 	},
 	Inferno_Legion_0035 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7505,7 +7505,7 @@ return {
 		}
 	},
 	Inferno_Legion_0037 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -7531,7 +7531,7 @@ return {
 		}
 	},
 	Inferno_Legion_0039 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7557,7 +7557,7 @@ return {
 		}
 	},
 	Inferno_Legion_0041 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -7583,7 +7583,7 @@ return {
 		}
 	},
 	Inferno_Legion_0043 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -7609,7 +7609,7 @@ return {
 		}
 	},
 	Inferno_Legion_0045 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7635,7 +7635,7 @@ return {
 		}
 	},
 	Inferno_Legion_0047 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -7661,7 +7661,7 @@ return {
 		}
 	},
 	Inferno_Legion_0049 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -7687,7 +7687,7 @@ return {
 		}
 	},
 	Inferno_Legion_0051 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -7713,7 +7713,7 @@ return {
 		}
 	},
 	Inferno_Legion_0053 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7739,7 +7739,7 @@ return {
 		}
 	},
 	Inferno_Legion_0055 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -7765,7 +7765,7 @@ return {
 		}
 	},
 	Inferno_Legion_0057 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7791,7 +7791,7 @@ return {
 		}
 	},
 	Inferno_Legion_0059 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -7817,7 +7817,7 @@ return {
 		}
 	},
 	Inferno_Legion_0061 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -7843,7 +7843,7 @@ return {
 		}
 	},
 	Inferno_Legion_0063 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -7869,7 +7869,7 @@ return {
 		}
 	},
 	Inferno_Legion_0065 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -7895,7 +7895,7 @@ return {
 		}
 	},
 	Inferno_Legion_0067 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -7921,7 +7921,7 @@ return {
 		}
 	},
 	Inferno_Legion_0069 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7947,7 +7947,7 @@ return {
 		}
 	},
 	Inferno_Legion_0071 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7973,7 +7973,7 @@ return {
 		}
 	},
 	Inferno_Legion_0073 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -7999,7 +7999,7 @@ return {
 		}
 	},
 	Inferno_Legion_0075 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8025,7 +8025,7 @@ return {
 		}
 	},
 	Inferno_Legion_0077 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8051,7 +8051,7 @@ return {
 		}
 	},
 	Inferno_Legion_0079 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8077,7 +8077,7 @@ return {
 		}
 	},
 	Inferno_Legion_0081 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8103,7 +8103,7 @@ return {
 		}
 	},
 	Inferno_Legion_0083 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8129,7 +8129,7 @@ return {
 		}
 	},
 	Inferno_Legion_0085 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8155,7 +8155,7 @@ return {
 		}
 	},
 	Inferno_Legion_0087 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8181,7 +8181,7 @@ return {
 		}
 	},
 	Inferno_Legion_0089 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8207,7 +8207,7 @@ return {
 		}
 	},
 	Inferno_Legion_0091 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8233,7 +8233,7 @@ return {
 		}
 	},
 	Inferno_Legion_0093 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8259,7 +8259,7 @@ return {
 		}
 	},
 	Inferno_Legion_0095 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8283,7 +8283,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0096 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8309,7 +8309,7 @@ return {
 		}
 	},
 	Inferno_Legion_0098 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -8335,7 +8335,7 @@ return {
 		}
 	},
 	Inferno_Legion_0100 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -8361,7 +8361,7 @@ return {
 		}
 	},
 	Inferno_Legion_0102 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -8387,7 +8387,7 @@ return {
 		}
 	},
 	Inferno_Legion_0104 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -8413,7 +8413,7 @@ return {
 		}
 	},
 	Inferno_Legion_0106 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -8439,7 +8439,7 @@ return {
 		}
 	},
 	Inferno_Legion_0108 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -8465,7 +8465,7 @@ return {
 		}
 	},
 	Inferno_Legion_0110 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -8491,7 +8491,7 @@ return {
 		}
 	},
 	Inferno_Legion_0112 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -8517,7 +8517,7 @@ return {
 		}
 	},
 	Inferno_Legion_0114 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -8543,7 +8543,7 @@ return {
 		}
 	},
 	Inferno_Legion_0116 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -8569,7 +8569,7 @@ return {
 		}
 	},
 	Inferno_Legion_0118 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -8595,7 +8595,7 @@ return {
 		}
 	},
 	Inferno_Legion_0120 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -8621,7 +8621,7 @@ return {
 		}
 	},
 	Inferno_Legion_0122 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8647,7 +8647,7 @@ return {
 		}
 	},
 	Inferno_Legion_0124 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8675,7 +8675,7 @@ return {
 		}
 	},
 	Inferno_Legion_0126 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8701,7 +8701,7 @@ return {
 		}
 	},
 	Inferno_Legion_0128 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8725,7 +8725,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0129 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8749,7 +8749,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0130 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8773,7 +8773,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0131 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8797,7 +8797,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0132 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8821,7 +8821,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0133 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8845,7 +8845,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0134 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8869,7 +8869,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0135 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8893,7 +8893,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0136 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8917,7 +8917,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0137 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -8943,7 +8943,7 @@ return {
 		}
 	},
 	Inferno_Legion_0139 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -8969,7 +8969,7 @@ return {
 		}
 	},
 	Inferno_Legion_0141 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -8995,7 +8995,7 @@ return {
 		}
 	},
 	Inferno_Legion_0143 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -9021,7 +9021,7 @@ return {
 		}
 	},
 	Inferno_Legion_0145 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -9047,7 +9047,7 @@ return {
 		}
 	},
 	Inferno_Legion_0147 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -9073,7 +9073,7 @@ return {
 		}
 	},
 	Inferno_Legion_0149 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -9099,7 +9099,7 @@ return {
 		}
 	},
 	Inferno_Legion_0151 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -9125,7 +9125,7 @@ return {
 		}
 	},
 	Inferno_Legion_0153 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -9151,7 +9151,7 @@ return {
 		}
 	},
 	Inferno_Legion_0155 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -9177,7 +9177,7 @@ return {
 		}
 	},
 	Inferno_Legion_0157 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -9201,7 +9201,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0158 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9225,7 +9225,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0159 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9249,7 +9249,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0162 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9273,7 +9273,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0163 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -9299,7 +9299,7 @@ return {
 		}
 	},
 	Inferno_Legion_0165 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -9323,7 +9323,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0166 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -9347,7 +9347,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0167 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -9371,7 +9371,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0168 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -9395,7 +9395,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0169 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -9419,7 +9419,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0170 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -9443,7 +9443,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0171 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -9469,7 +9469,7 @@ return {
 		}
 	},
 	Inferno_Legion_0173 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -9495,7 +9495,7 @@ return {
 		}
 	},
 	Inferno_Legion_0175 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -9521,7 +9521,7 @@ return {
 		}
 	},
 	Inferno_Legion_0177 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -9547,7 +9547,7 @@ return {
 		}
 	},
 	Inferno_Legion_0179 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -9573,7 +9573,7 @@ return {
 		}
 	},
 	Inferno_Legion_0181 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -9599,7 +9599,7 @@ return {
 		}
 	},
 	Inferno_Legion_0183 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -9625,7 +9625,7 @@ return {
 		}
 	},
 	Inferno_Legion_0185 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9651,7 +9651,7 @@ return {
 		}
 	},
 	Inferno_Legion_0187 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9677,7 +9677,7 @@ return {
 		}
 	},
 	Inferno_Legion_0189 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9703,7 +9703,7 @@ return {
 		}
 	},
 	Inferno_Legion_0191 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9729,7 +9729,7 @@ return {
 		}
 	},
 	Inferno_Legion_0193 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9755,7 +9755,7 @@ return {
 		}
 	},
 	Inferno_Legion_0195 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9779,7 +9779,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0196 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9803,7 +9803,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0197 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9829,7 +9829,7 @@ return {
 		}
 	},
 	Inferno_Legion_0199 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9855,7 +9855,7 @@ return {
 		}
 	},
 	Inferno_Legion_0201 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9879,7 +9879,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0202 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9903,7 +9903,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0203 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9927,7 +9927,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0204 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9951,7 +9951,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0205 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -9984,7 +9984,7 @@ return {
 		}
 	},
 	Inferno_Legion_0214 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -10008,7 +10008,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0215 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -10032,7 +10032,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0216 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -10056,7 +10056,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0217 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -10083,7 +10083,7 @@ return {
 		}
 	},
 	Inferno_Legion_0220 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -10109,7 +10109,7 @@ return {
 		}
 	},
 	Inferno_Legion_0222 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -10133,7 +10133,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0223 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			150,
 			122
@@ -10157,7 +10157,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0224 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -10181,7 +10181,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0225 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -10205,7 +10205,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0226 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -10229,7 +10229,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0227 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -10253,7 +10253,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0228 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -10277,7 +10277,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0229 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -10301,7 +10301,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0230 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -10325,7 +10325,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0231 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -10349,7 +10349,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0232 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -10373,7 +10373,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0233 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -10397,7 +10397,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0234 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -10421,7 +10421,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0235 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			150,
 			122
@@ -10445,7 +10445,7 @@ return {
 		alias = {}
 	},
 	Inferno_Legion_0236 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			150,
 			122
@@ -10471,7 +10471,7 @@ return {
 		}
 	},
 	Stage9_lavaShotParticle = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			23,
 			23
@@ -10495,7 +10495,7 @@ return {
 		alias = {}
 	},
 	fire_big_0001 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			56,
 			64
@@ -10521,7 +10521,7 @@ return {
 		}
 	},
 	fire_big_0003 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			56,
 			64
@@ -10547,7 +10547,7 @@ return {
 		}
 	},
 	fire_big_0005 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			56,
 			64
@@ -10573,7 +10573,7 @@ return {
 		}
 	},
 	fire_big_0007 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			56,
 			64
@@ -10599,7 +10599,7 @@ return {
 		}
 	},
 	fire_big_0009 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			56,
 			64
@@ -10625,7 +10625,7 @@ return {
 		}
 	},
 	fire_boss_type1_0001 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			84,
 			101
@@ -10651,7 +10651,7 @@ return {
 		}
 	},
 	fire_boss_type1_0003 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			84,
 			101
@@ -10677,7 +10677,7 @@ return {
 		}
 	},
 	fire_boss_type1_0005 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			84,
 			101
@@ -10703,7 +10703,7 @@ return {
 		}
 	},
 	fire_boss_type1_0007 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			84,
 			101
@@ -10729,7 +10729,7 @@ return {
 		}
 	},
 	fire_boss_type1_0009 = {
-		a_name = "go_enemies_torment-3.png",
+		a_name = "go_enemies_torment-3.dds",
 		size = {
 			84,
 			101
@@ -10755,7 +10755,7 @@ return {
 		}
 	},
 	fire_small_0001 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			58,
 			46
@@ -10781,7 +10781,7 @@ return {
 		}
 	},
 	fire_small_0003 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			58,
 			46
@@ -10807,7 +10807,7 @@ return {
 		}
 	},
 	fire_small_0005 = {
-		a_name = "go_enemies_torment-2.png",
+		a_name = "go_enemies_torment-2.dds",
 		size = {
 			58,
 			46
@@ -10833,7 +10833,7 @@ return {
 		}
 	},
 	fire_small_0007 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			58,
 			46
@@ -10859,7 +10859,7 @@ return {
 		}
 	},
 	fire_small_0009 = {
-		a_name = "go_enemies_torment-1.png",
+		a_name = "go_enemies_torment-1.dds",
 		size = {
 			58,
 			46

@@ -2,7 +2,7 @@
 
 return {
 	DwarfChampion_0001 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	DwarfChampion_0002 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -52,7 +52,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0003 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -76,7 +76,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0004 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -100,7 +100,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0005 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -124,7 +124,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0006 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -148,7 +148,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0007 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -174,7 +174,7 @@ return {
 		}
 	},
 	DwarfChampion_0009 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -200,7 +200,7 @@ return {
 		}
 	},
 	DwarfChampion_0011 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -226,7 +226,7 @@ return {
 		}
 	},
 	DwarfChampion_0013 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -253,7 +253,7 @@ return {
 		}
 	},
 	DwarfChampion_0016 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -279,7 +279,7 @@ return {
 		}
 	},
 	DwarfChampion_0018 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -303,7 +303,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0019 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -327,7 +327,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0020 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -351,7 +351,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0021 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -379,7 +379,7 @@ return {
 		}
 	},
 	DwarfChampion_0025 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -407,7 +407,7 @@ return {
 		}
 	},
 	DwarfChampion_0027 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -433,7 +433,7 @@ return {
 		}
 	},
 	DwarfChampion_0029 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -459,7 +459,7 @@ return {
 		}
 	},
 	DwarfChampion_0031 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -485,7 +485,7 @@ return {
 		}
 	},
 	DwarfChampion_0033 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -511,7 +511,7 @@ return {
 		}
 	},
 	DwarfChampion_0035 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -537,7 +537,7 @@ return {
 		}
 	},
 	DwarfChampion_0037 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -563,7 +563,7 @@ return {
 		}
 	},
 	DwarfChampion_0039 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -589,7 +589,7 @@ return {
 		}
 	},
 	DwarfChampion_0041 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -615,7 +615,7 @@ return {
 		}
 	},
 	DwarfChampion_0043 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -641,7 +641,7 @@ return {
 		}
 	},
 	DwarfChampion_0045 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -667,7 +667,7 @@ return {
 		}
 	},
 	DwarfChampion_0047 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -693,7 +693,7 @@ return {
 		}
 	},
 	DwarfChampion_0049 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -721,7 +721,7 @@ return {
 		}
 	},
 	DwarfChampion_0053 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -747,7 +747,7 @@ return {
 		}
 	},
 	DwarfChampion_0055 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -773,7 +773,7 @@ return {
 		}
 	},
 	DwarfChampion_0057 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -799,7 +799,7 @@ return {
 		}
 	},
 	DwarfChampion_0059 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -825,7 +825,7 @@ return {
 		}
 	},
 	DwarfChampion_0061 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -851,7 +851,7 @@ return {
 		}
 	},
 	DwarfChampion_0063 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -877,7 +877,7 @@ return {
 		}
 	},
 	DwarfChampion_0065 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -903,7 +903,7 @@ return {
 		}
 	},
 	DwarfChampion_0067 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -929,7 +929,7 @@ return {
 		}
 	},
 	DwarfChampion_0069 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -955,7 +955,7 @@ return {
 		}
 	},
 	DwarfChampion_0073 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -979,7 +979,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0074 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1003,7 +1003,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0075 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1027,7 +1027,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0076 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1051,7 +1051,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0077 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1075,7 +1075,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0078 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1099,7 +1099,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0079 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1123,7 +1123,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0080 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1147,7 +1147,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0081 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1171,7 +1171,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0082 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1195,7 +1195,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0083 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1219,7 +1219,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0084 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1243,7 +1243,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0085 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1267,7 +1267,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0086 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1294,7 +1294,7 @@ return {
 		}
 	},
 	DwarfChampion_0090 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1318,7 +1318,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0091 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1342,7 +1342,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0092 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1366,7 +1366,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0093 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1390,7 +1390,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_0094 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1416,7 +1416,7 @@ return {
 		}
 	},
 	DwarfChampion_0096 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			135,
 			132
@@ -1440,7 +1440,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_Ring_0001 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			169,
 			87
@@ -1464,7 +1464,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_Ring_0002 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			169,
 			87
@@ -1488,7 +1488,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_Ring_0003 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			169,
 			87
@@ -1512,7 +1512,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_Ring_0004 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			169,
 			87
@@ -1536,7 +1536,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_Ring_0005 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			169,
 			87
@@ -1560,7 +1560,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_Ring_0006 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			169,
 			87
@@ -1584,7 +1584,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_Ring_0007 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			169,
 			87
@@ -1608,7 +1608,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_Ring_0008 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			169,
 			87
@@ -1632,7 +1632,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_Ring_0009 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			169,
 			87
@@ -1656,7 +1656,7 @@ return {
 		alias = {}
 	},
 	DwarfChampion_Ring_0010 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			169,
 			87
@@ -1680,7 +1680,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_0001 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -1706,7 +1706,7 @@ return {
 		}
 	},
 	Stage13_TunnelOpen_0003 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -1732,7 +1732,7 @@ return {
 		}
 	},
 	Stage13_TunnelOpen_0005 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -1758,7 +1758,7 @@ return {
 		}
 	},
 	Stage13_TunnelOpen_0007 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -1784,7 +1784,7 @@ return {
 		}
 	},
 	Stage13_TunnelOpen_0009 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -1810,7 +1810,7 @@ return {
 		}
 	},
 	Stage13_TunnelOpen_0011 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -1836,7 +1836,7 @@ return {
 		}
 	},
 	Stage13_TunnelOpen_0013 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -1862,7 +1862,7 @@ return {
 		}
 	},
 	Stage13_TunnelOpen_0015 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -1888,7 +1888,7 @@ return {
 		}
 	},
 	Stage13_TunnelOpen_0017 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -1914,7 +1914,7 @@ return {
 		}
 	},
 	Stage13_TunnelOpen_0019 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -1940,7 +1940,7 @@ return {
 		}
 	},
 	Stage13_TunnelOpen_Stones_0001 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -1964,7 +1964,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0002 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -1988,7 +1988,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0003 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2012,7 +2012,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0004 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2036,7 +2036,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0005 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2060,7 +2060,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0006 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2084,7 +2084,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0007 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2108,7 +2108,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0008 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2132,7 +2132,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0009 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2156,7 +2156,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0010 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2180,7 +2180,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0011 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2204,7 +2204,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0012 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2228,7 +2228,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0013 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2252,7 +2252,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0014 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2276,7 +2276,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0015 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2300,7 +2300,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0016 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2324,7 +2324,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0017 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2348,7 +2348,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0018 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2372,7 +2372,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0019 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2396,7 +2396,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0020 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2420,7 +2420,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0021 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2444,7 +2444,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0022 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2468,7 +2468,7 @@ return {
 		alias = {}
 	},
 	Stage13_TunnelOpen_Stones_0023 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			307,
 			248
@@ -2503,7 +2503,7 @@ return {
 		}
 	},
 	Stage14_0002 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			1980,
 			1080
@@ -2527,7 +2527,7 @@ return {
 		alias = {}
 	},
 	Stage14_0003 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			1980,
 			1080
@@ -2551,7 +2551,7 @@ return {
 		alias = {}
 	},
 	Stage14_0004 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			1980,
 			1080
@@ -2575,7 +2575,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0001 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			100,
 			94
@@ -2599,7 +2599,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0002 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			100,
 			94
@@ -2623,7 +2623,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0003 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			100,
 			94
@@ -2649,7 +2649,7 @@ return {
 		}
 	},
 	hero_reinforce_rocks_0005 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			100,
 			94
@@ -2675,7 +2675,7 @@ return {
 		}
 	},
 	hero_reinforce_rocks_0007 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			100,
 			94
@@ -2701,7 +2701,7 @@ return {
 		}
 	},
 	hero_reinforce_rocks_0009 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			100,
 			94
@@ -2727,7 +2727,7 @@ return {
 		}
 	},
 	hero_reinforce_rocks_0011 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			100,
 			94
@@ -2751,7 +2751,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0012 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			100,
 			94
@@ -2775,7 +2775,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0013 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			100,
 			94
@@ -2799,7 +2799,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0014 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			100,
 			94
@@ -2823,7 +2823,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0015 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			100,
 			94
@@ -2847,7 +2847,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0016 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			100,
 			94
@@ -2871,7 +2871,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0017 = {
-		a_name = "go_stage40-1.png",
+		a_name = "go_stage40-1.dds",
 		size = {
 			100,
 			94

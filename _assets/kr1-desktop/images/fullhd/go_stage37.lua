@@ -2,7 +2,7 @@
 
 return {
 	CanibalBoos_0001 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	CanibalBoos_0003 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	CanibalBoos_0005 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	CanibalBoos_0007 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	CanibalBoos_0009 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	CanibalBoos_0011 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	CanibalBoos_0013 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	CanibalBoos_0015 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	CanibalBoos_0017 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -236,7 +236,7 @@ return {
 		}
 	},
 	CanibalBoos_0019 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -262,7 +262,7 @@ return {
 		}
 	},
 	CanibalBoos_0021 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -288,7 +288,7 @@ return {
 		}
 	},
 	CanibalBoos_0023 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -314,7 +314,7 @@ return {
 		}
 	},
 	CanibalBoos_0025 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -340,7 +340,7 @@ return {
 		}
 	},
 	CanibalBoos_0027 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -366,7 +366,7 @@ return {
 		}
 	},
 	CanibalBoos_0029 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -392,7 +392,7 @@ return {
 		}
 	},
 	CanibalBoos_0031 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -418,7 +418,7 @@ return {
 		}
 	},
 	CanibalBoos_0033 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -444,7 +444,7 @@ return {
 		}
 	},
 	CanibalBoos_0035 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -468,7 +468,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_0036 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -495,7 +495,7 @@ return {
 		}
 	},
 	CanibalBoos_0039 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -521,7 +521,7 @@ return {
 		}
 	},
 	CanibalBoos_0041 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -548,7 +548,7 @@ return {
 		}
 	},
 	CanibalBoos_0044 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -574,7 +574,7 @@ return {
 		}
 	},
 	CanibalBoos_0046 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -601,7 +601,7 @@ return {
 		}
 	},
 	CanibalBoos_0049 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -627,7 +627,7 @@ return {
 		}
 	},
 	CanibalBoos_0051 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -651,7 +651,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_0052 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -678,7 +678,7 @@ return {
 		}
 	},
 	CanibalBoos_0055 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -704,7 +704,7 @@ return {
 		}
 	},
 	CanibalBoos_0057 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -731,7 +731,7 @@ return {
 		}
 	},
 	CanibalBoos_0060 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -757,7 +757,7 @@ return {
 		}
 	},
 	CanibalBoos_0062 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -784,7 +784,7 @@ return {
 		}
 	},
 	CanibalBoos_0065 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -813,7 +813,7 @@ return {
 		}
 	},
 	CanibalBoos_0068 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -837,7 +837,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_0069 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -861,7 +861,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_0070 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -885,7 +885,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_0071 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -911,7 +911,7 @@ return {
 		}
 	},
 	CanibalBoos_0073 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -937,7 +937,7 @@ return {
 		}
 	},
 	CanibalBoos_0075 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -963,7 +963,7 @@ return {
 		}
 	},
 	CanibalBoos_0077 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -991,7 +991,7 @@ return {
 		}
 	},
 	CanibalBoos_0081 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1017,7 +1017,7 @@ return {
 		}
 	},
 	CanibalBoos_0083 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1043,7 +1043,7 @@ return {
 		}
 	},
 	CanibalBoos_0085 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1069,7 +1069,7 @@ return {
 		}
 	},
 	CanibalBoos_0087 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1095,7 +1095,7 @@ return {
 		}
 	},
 	CanibalBoos_0089 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1121,7 +1121,7 @@ return {
 		}
 	},
 	CanibalBoos_0091 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1148,7 +1148,7 @@ return {
 		}
 	},
 	CanibalBoos_0094 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1174,7 +1174,7 @@ return {
 		}
 	},
 	CanibalBoos_0096 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1198,7 +1198,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_0097 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1225,7 +1225,7 @@ return {
 		}
 	},
 	CanibalBoos_0099 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1251,7 +1251,7 @@ return {
 		}
 	},
 	CanibalBoos_0101 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1281,7 +1281,7 @@ return {
 		}
 	},
 	CanibalBoos_0103 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1311,7 +1311,7 @@ return {
 		}
 	},
 	CanibalBoos_0105 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1341,7 +1341,7 @@ return {
 		}
 	},
 	CanibalBoos_0107 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1371,7 +1371,7 @@ return {
 		}
 	},
 	CanibalBoos_0109 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1401,7 +1401,7 @@ return {
 		}
 	},
 	CanibalBoos_0111 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1431,7 +1431,7 @@ return {
 		}
 	},
 	CanibalBoos_0113 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1461,7 +1461,7 @@ return {
 		}
 	},
 	CanibalBoos_0143 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1487,7 +1487,7 @@ return {
 		}
 	},
 	CanibalBoos_0146 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1527,7 +1527,7 @@ return {
 		}
 	},
 	CanibalBoos_0148 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1553,7 +1553,7 @@ return {
 		}
 	},
 	CanibalBoos_0150 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1579,7 +1579,7 @@ return {
 		}
 	},
 	CanibalBoos_0152 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1606,7 +1606,7 @@ return {
 		}
 	},
 	CanibalBoos_0155 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1632,7 +1632,7 @@ return {
 		}
 	},
 	CanibalBoos_0157 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1658,7 +1658,7 @@ return {
 		}
 	},
 	CanibalBoos_0159 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1684,7 +1684,7 @@ return {
 		}
 	},
 	CanibalBoos_0161 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1710,7 +1710,7 @@ return {
 		}
 	},
 	CanibalBoos_0163 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1741,7 +1741,7 @@ return {
 		}
 	},
 	CanibalBoos_0184 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1767,7 +1767,7 @@ return {
 		}
 	},
 	CanibalBoos_0186 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1793,7 +1793,7 @@ return {
 		}
 	},
 	CanibalBoos_0188 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1819,7 +1819,7 @@ return {
 		}
 	},
 	CanibalBoos_0190 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1845,7 +1845,7 @@ return {
 		}
 	},
 	CanibalBoos_0192 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1871,7 +1871,7 @@ return {
 		}
 	},
 	CanibalBoos_0194 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1897,7 +1897,7 @@ return {
 		}
 	},
 	CanibalBoos_0196 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1921,7 +1921,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_0197 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -1945,7 +1945,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_0198 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1971,7 +1971,7 @@ return {
 		}
 	},
 	CanibalBoos_0200 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -1997,7 +1997,7 @@ return {
 		}
 	},
 	CanibalBoos_0202 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2023,7 +2023,7 @@ return {
 		}
 	},
 	CanibalBoos_0204 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2054,7 +2054,7 @@ return {
 		}
 	},
 	CanibalBoos_0206 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -2080,7 +2080,7 @@ return {
 		}
 	},
 	CanibalBoos_0208 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -2106,7 +2106,7 @@ return {
 		}
 	},
 	CanibalBoos_0210 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -2132,7 +2132,7 @@ return {
 		}
 	},
 	CanibalBoos_0212 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -2158,7 +2158,7 @@ return {
 		}
 	},
 	CanibalBoos_0214 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2184,7 +2184,7 @@ return {
 		}
 	},
 	CanibalBoos_0216 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -2210,7 +2210,7 @@ return {
 		}
 	},
 	CanibalBoos_0222 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -2236,7 +2236,7 @@ return {
 		}
 	},
 	CanibalBoos_0224 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -2262,7 +2262,7 @@ return {
 		}
 	},
 	CanibalBoos_0226 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -2288,7 +2288,7 @@ return {
 		}
 	},
 	CanibalBoos_0228 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2314,7 +2314,7 @@ return {
 		}
 	},
 	CanibalBoos_0230 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2340,7 +2340,7 @@ return {
 		}
 	},
 	CanibalBoos_0232 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2367,7 +2367,7 @@ return {
 		}
 	},
 	CanibalBoos_0235 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2393,7 +2393,7 @@ return {
 		}
 	},
 	CanibalBoos_0238 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2419,7 +2419,7 @@ return {
 		}
 	},
 	CanibalBoos_0240 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2445,7 +2445,7 @@ return {
 		}
 	},
 	CanibalBoos_0242 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -2471,7 +2471,7 @@ return {
 		}
 	},
 	CanibalBoos_0244 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2497,7 +2497,7 @@ return {
 		}
 	},
 	CanibalBoos_0246 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2523,7 +2523,7 @@ return {
 		}
 	},
 	CanibalBoos_0248 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2549,7 +2549,7 @@ return {
 		}
 	},
 	CanibalBoos_0250 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2573,7 +2573,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_0251 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2599,7 +2599,7 @@ return {
 		}
 	},
 	CanibalBoos_0255 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2626,7 +2626,7 @@ return {
 		}
 	},
 	CanibalBoos_0258 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2652,7 +2652,7 @@ return {
 		}
 	},
 	CanibalBoos_0260 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2676,7 +2676,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_0261 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2702,7 +2702,7 @@ return {
 		}
 	},
 	CanibalBoos_0263 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2728,7 +2728,7 @@ return {
 		}
 	},
 	CanibalBoos_0265 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2763,7 +2763,7 @@ return {
 		}
 	},
 	CanibalBoos_0276 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2789,7 +2789,7 @@ return {
 		}
 	},
 	CanibalBoos_0278 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2815,7 +2815,7 @@ return {
 		}
 	},
 	CanibalBoos_0280 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2841,7 +2841,7 @@ return {
 		}
 	},
 	CanibalBoos_0282 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2867,7 +2867,7 @@ return {
 		}
 	},
 	CanibalBoos_0284 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2893,7 +2893,7 @@ return {
 		}
 	},
 	CanibalBoos_0286 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2919,7 +2919,7 @@ return {
 		}
 	},
 	CanibalBoos_0288 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2945,7 +2945,7 @@ return {
 		}
 	},
 	CanibalBoos_0290 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2969,7 +2969,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_0291 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -2995,7 +2995,7 @@ return {
 		}
 	},
 	CanibalBoos_0293 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -3021,7 +3021,7 @@ return {
 		}
 	},
 	CanibalBoos_0295 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -3047,7 +3047,7 @@ return {
 		}
 	},
 	CanibalBoos_0297 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -3073,7 +3073,7 @@ return {
 		}
 	},
 	CanibalBoos_0299 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -3103,7 +3103,7 @@ return {
 		}
 	},
 	CanibalBoos_Healing_0001 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -3136,7 +3136,7 @@ return {
 		}
 	},
 	CanibalBoos_Healing_0010 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -3160,7 +3160,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0011 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -3184,7 +3184,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0012 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -3208,7 +3208,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0013 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3232,7 +3232,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0014 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3256,7 +3256,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0015 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -3280,7 +3280,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0016 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3304,7 +3304,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0017 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3328,7 +3328,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0018 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3352,7 +3352,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0019 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3376,7 +3376,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0020 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3400,7 +3400,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0021 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3424,7 +3424,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0022 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3448,7 +3448,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0023 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3472,7 +3472,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0024 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3496,7 +3496,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0025 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3520,7 +3520,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0026 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3544,7 +3544,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0027 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3568,7 +3568,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0028 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3592,7 +3592,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0029 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3616,7 +3616,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0030 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3640,7 +3640,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0031 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3664,7 +3664,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0032 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3688,7 +3688,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0033 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			360,
 			242
@@ -3712,7 +3712,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0034 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -3736,7 +3736,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0035 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -3760,7 +3760,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0036 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -3784,7 +3784,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Healing_0037 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			360,
 			242
@@ -3808,7 +3808,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_OffspringVine_0001 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			411,
 			270
@@ -3834,7 +3834,7 @@ return {
 		}
 	},
 	CanibalBoos_OffspringVine_0003 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			411,
 			270
@@ -3860,7 +3860,7 @@ return {
 		}
 	},
 	CanibalBoos_OffspringVine_0005 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			411,
 			270
@@ -3886,7 +3886,7 @@ return {
 		}
 	},
 	CanibalBoos_OffspringVine_0007 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			411,
 			270
@@ -3912,7 +3912,7 @@ return {
 		}
 	},
 	CanibalBoos_OffspringVine_0009 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			411,
 			270
@@ -3938,7 +3938,7 @@ return {
 		}
 	},
 	CanibalBoos_OffspringVine_0011 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			411,
 			270
@@ -3964,7 +3964,7 @@ return {
 		}
 	},
 	CanibalBoos_OffspringVine_0013 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			411,
 			270
@@ -3990,7 +3990,7 @@ return {
 		}
 	},
 	CanibalBoos_OffspringVine_0015 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			411,
 			270
@@ -4016,7 +4016,7 @@ return {
 		}
 	},
 	CanibalBoos_OffspringVine_0017 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			411,
 			270
@@ -4042,7 +4042,7 @@ return {
 		}
 	},
 	CanibalBoos_OffspringVine_0019 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			411,
 			270
@@ -4068,7 +4068,7 @@ return {
 		}
 	},
 	CanibalBoos_OffspringVine_0021 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			411,
 			270
@@ -4094,7 +4094,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0001 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4120,7 +4120,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0003 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4146,7 +4146,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0005 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4172,7 +4172,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0007 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4198,7 +4198,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0009 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4224,7 +4224,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0011 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4250,7 +4250,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0013 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4276,7 +4276,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0015 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4302,7 +4302,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0017 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4328,7 +4328,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0019 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4354,7 +4354,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0021 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4380,7 +4380,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0023 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4406,7 +4406,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0025 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4432,7 +4432,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0027 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4458,7 +4458,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0029 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4488,7 +4488,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0030 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4512,7 +4512,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Offspring_0031 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4538,7 +4538,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0033 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4564,7 +4564,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0038 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4590,7 +4590,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0040 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4616,7 +4616,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0042 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4642,7 +4642,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0044 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			132,
 			96
@@ -4668,7 +4668,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0046 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4694,7 +4694,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0048 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4718,7 +4718,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Offspring_0049 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4742,7 +4742,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Offspring_0050 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4766,7 +4766,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Offspring_0051 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4790,7 +4790,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Offspring_0052 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4814,7 +4814,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Offspring_0053 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4841,7 +4841,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0056 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4867,7 +4867,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0060 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4893,7 +4893,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0062 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4919,7 +4919,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0064 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			132,
 			96
@@ -4945,7 +4945,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0066 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4971,7 +4971,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0068 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -4997,7 +4997,7 @@ return {
 		}
 	},
 	CanibalBoos_Offspring_0070 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			132,
 			96
@@ -5021,7 +5021,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Proy = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			48,
 			48
@@ -5045,7 +5045,7 @@ return {
 		alias = {}
 	},
 	CanibalBoos_Smoke_0001 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			110,
 			152
@@ -5071,7 +5071,7 @@ return {
 		}
 	},
 	CanibalBoos_Smoke_0003 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			110,
 			152
@@ -5097,7 +5097,7 @@ return {
 		}
 	},
 	CanibalBoos_Smoke_0005 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			110,
 			152
@@ -5123,7 +5123,7 @@ return {
 		}
 	},
 	CanibalBoos_Smoke_0007 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			110,
 			152
@@ -5149,7 +5149,7 @@ return {
 		}
 	},
 	CanibalBoos_Smoke_0009 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			110,
 			152
@@ -5175,7 +5175,7 @@ return {
 		}
 	},
 	CanibalBoos_Smoke_0011 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			110,
 			152
@@ -5201,7 +5201,7 @@ return {
 		}
 	},
 	CanibalBoos_Smoke_0013 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			110,
 			152
@@ -5227,7 +5227,7 @@ return {
 		}
 	},
 	CanibalBoos_Smoke_0015 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			110,
 			152
@@ -5253,7 +5253,7 @@ return {
 		}
 	},
 	CanibalBoos_Smoke_0017 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			110,
 			152
@@ -5279,7 +5279,7 @@ return {
 		}
 	},
 	Stage10_Fire_0001 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			31,
 			31
@@ -5305,7 +5305,7 @@ return {
 		}
 	},
 	Stage10_Fire_0003 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			31,
 			31
@@ -5331,7 +5331,7 @@ return {
 		}
 	},
 	Stage10_Fire_0005 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			31,
 			31
@@ -5357,7 +5357,7 @@ return {
 		}
 	},
 	Stage10_Fire_0007 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			31,
 			31
@@ -5383,7 +5383,7 @@ return {
 		}
 	},
 	Stage10_Fire_0009 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			31,
 			31
@@ -5409,7 +5409,7 @@ return {
 		}
 	},
 	Stage10_Fire_0011 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			31,
 			31
@@ -5435,7 +5435,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0001 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5461,7 +5461,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0002 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5485,7 +5485,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0003 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5509,7 +5509,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0004 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5535,7 +5535,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0005 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5561,7 +5561,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0006 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5587,7 +5587,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0007 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5613,7 +5613,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0008 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5637,7 +5637,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0013 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5661,7 +5661,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0014 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5685,7 +5685,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0015 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5709,7 +5709,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0016 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5733,7 +5733,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0017 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5757,7 +5757,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0018 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5781,7 +5781,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0019 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5805,7 +5805,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0020 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5829,7 +5829,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0021 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5853,7 +5853,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0023 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5877,7 +5877,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0024 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5901,7 +5901,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0025 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5927,7 +5927,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0026 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5951,7 +5951,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0027 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -5975,7 +5975,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0028 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6001,7 +6001,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0029 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6027,7 +6027,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0030 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6053,7 +6053,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0031 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6079,7 +6079,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0032 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6103,7 +6103,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0037 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6127,7 +6127,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0038 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6151,7 +6151,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0039 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6175,7 +6175,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0040 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6199,7 +6199,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0041 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6223,7 +6223,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0042 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6247,7 +6247,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0043 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6271,7 +6271,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0044 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6295,7 +6295,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0045 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6319,7 +6319,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0047 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6343,7 +6343,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0048 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6367,7 +6367,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0049 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6393,7 +6393,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0050 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6417,7 +6417,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0051 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6441,7 +6441,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0052 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6467,7 +6467,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0053 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6493,7 +6493,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0054 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6519,7 +6519,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0055 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6545,7 +6545,7 @@ return {
 		}
 	},
 	Stage10_IndianaButtons_0056 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6569,7 +6569,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0061 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6593,7 +6593,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0062 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6617,7 +6617,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0063 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6641,7 +6641,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0064 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6665,7 +6665,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0065 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6689,7 +6689,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0066 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6713,7 +6713,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0067 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6737,7 +6737,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0068 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6761,7 +6761,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0069 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6785,7 +6785,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0071 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6809,7 +6809,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaButtons_0072 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			62
@@ -6833,7 +6833,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaConfused_0001 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			70,
 			45
@@ -6859,7 +6859,7 @@ return {
 		}
 	},
 	Stage10_IndianaConfused_0003 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			70,
 			45
@@ -6887,7 +6887,7 @@ return {
 		}
 	},
 	Stage10_IndianaConfused_0005 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			70,
 			45
@@ -6913,7 +6913,7 @@ return {
 		}
 	},
 	Stage10_IndianaDoor1_0001 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			62
@@ -6937,7 +6937,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0002 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			62
@@ -6961,7 +6961,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0003 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			62
@@ -6985,7 +6985,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0004 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			62
@@ -7009,7 +7009,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0005 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			62
@@ -7033,7 +7033,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0006 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			62
@@ -7057,7 +7057,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0007 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			62
@@ -7081,7 +7081,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0008 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			62
@@ -7105,7 +7105,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0009 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			62
@@ -7129,7 +7129,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0010 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			62
@@ -7153,7 +7153,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0011 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			62
@@ -7177,7 +7177,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0012 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			62
@@ -7201,7 +7201,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0013 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			62
@@ -7225,7 +7225,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0014 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			62
@@ -7249,7 +7249,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0015 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			62
@@ -7273,7 +7273,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0016 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			62
@@ -7297,7 +7297,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0017 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			62
@@ -7321,7 +7321,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0018 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			62
@@ -7345,7 +7345,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0019 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			62
@@ -7369,7 +7369,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0020 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			62
@@ -7393,7 +7393,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0021 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			62
@@ -7417,7 +7417,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0022 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			62
@@ -7441,7 +7441,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0023 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			62
@@ -7465,7 +7465,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor1_0024 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			62
@@ -7492,7 +7492,7 @@ return {
 		}
 	},
 	Stage10_IndianaDoor2_0001 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7516,7 +7516,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0002 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7540,7 +7540,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0003 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7564,7 +7564,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0004 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7588,7 +7588,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0005 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7612,7 +7612,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0006 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7636,7 +7636,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0007 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7660,7 +7660,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0008 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7684,7 +7684,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0009 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7708,7 +7708,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0010 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7732,7 +7732,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0011 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7756,7 +7756,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0012 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7780,7 +7780,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0013 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7804,7 +7804,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0014 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7828,7 +7828,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0015 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7852,7 +7852,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0016 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7876,7 +7876,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0017 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7900,7 +7900,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0018 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7924,7 +7924,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0019 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7948,7 +7948,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0020 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7972,7 +7972,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0021 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -7996,7 +7996,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0022 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -8020,7 +8020,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0023 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -8044,7 +8044,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0024 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -8068,7 +8068,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0025 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -8092,7 +8092,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0026 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -8116,7 +8116,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0027 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -8140,7 +8140,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0028 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -8164,7 +8164,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0029 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -8188,7 +8188,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0030 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -8212,7 +8212,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0031 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -8236,7 +8236,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0032 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -8260,7 +8260,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0033 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -8284,7 +8284,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaDoor2_0034 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			56,
 			121
@@ -8308,7 +8308,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0001 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8332,7 +8332,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0002 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8356,7 +8356,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0003 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8380,7 +8380,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0004 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8404,7 +8404,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0005 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8428,7 +8428,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0006 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8452,7 +8452,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0007 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8476,7 +8476,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0008 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8500,7 +8500,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0009 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8524,7 +8524,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0010 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8548,7 +8548,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0011 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8572,7 +8572,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0012 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8596,7 +8596,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0013 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8620,7 +8620,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0014 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8644,7 +8644,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0015 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8668,7 +8668,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0016 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8692,7 +8692,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0017 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8716,7 +8716,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0018 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8740,7 +8740,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0019 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8764,7 +8764,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0020 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8788,7 +8788,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0021 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8812,7 +8812,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0022 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8836,7 +8836,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0023 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8860,7 +8860,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0024 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8884,7 +8884,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0025 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8908,7 +8908,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0026 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8932,7 +8932,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0027 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8956,7 +8956,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0028 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -8980,7 +8980,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0029 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9004,7 +9004,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0030 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9028,7 +9028,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0031 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9052,7 +9052,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0032 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9076,7 +9076,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0033 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9100,7 +9100,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0034 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -9124,7 +9124,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0035 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9148,7 +9148,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0036 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9172,7 +9172,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0037 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -9196,7 +9196,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0038 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9220,7 +9220,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0039 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9244,7 +9244,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0040 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9268,7 +9268,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0041 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9292,7 +9292,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0042 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9316,7 +9316,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0043 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9340,7 +9340,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0044 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9364,7 +9364,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0045 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9388,7 +9388,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0046 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9412,7 +9412,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0047 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -9436,7 +9436,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0048 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -9460,7 +9460,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0049 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -9484,7 +9484,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0050 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -9508,7 +9508,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0051 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -9532,7 +9532,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0052 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -9556,7 +9556,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0053 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -9580,7 +9580,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0054 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -9604,7 +9604,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0055 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -9628,7 +9628,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0056 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -9652,7 +9652,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0057 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9676,7 +9676,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0058 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9700,7 +9700,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0059 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9724,7 +9724,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0060 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9748,7 +9748,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0061 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9772,7 +9772,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0062 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9796,7 +9796,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0063 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9820,7 +9820,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0064 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9844,7 +9844,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0065 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9868,7 +9868,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0066 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9892,7 +9892,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0067 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9916,7 +9916,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0068 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -9940,7 +9940,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0069 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9964,7 +9964,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0070 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -9988,7 +9988,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0071 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10012,7 +10012,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0072 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10036,7 +10036,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0073 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10060,7 +10060,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0074 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10084,7 +10084,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0075 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10108,7 +10108,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0076 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10132,7 +10132,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0077 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10156,7 +10156,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0078 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10180,7 +10180,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0079 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10204,7 +10204,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0080 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10228,7 +10228,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0081 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10252,7 +10252,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0082 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10276,7 +10276,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0083 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10300,7 +10300,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0084 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10324,7 +10324,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0085 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10348,7 +10348,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0086 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10372,7 +10372,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0087 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10396,7 +10396,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0088 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10420,7 +10420,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0089 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10444,7 +10444,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0090 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10468,7 +10468,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0091 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10492,7 +10492,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0092 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10516,7 +10516,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0093 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10540,7 +10540,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0094 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10564,7 +10564,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0095 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10588,7 +10588,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0096 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10612,7 +10612,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0097 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10636,7 +10636,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0098 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10660,7 +10660,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0099 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10684,7 +10684,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0100 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10708,7 +10708,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0101 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10732,7 +10732,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0102 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10756,7 +10756,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0103 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10780,7 +10780,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0104 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10804,7 +10804,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0105 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10828,7 +10828,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0106 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10852,7 +10852,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0107 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10876,7 +10876,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0108 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10900,7 +10900,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0109 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10924,7 +10924,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0110 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -10948,7 +10948,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0111 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -10972,7 +10972,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0112 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -10996,7 +10996,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0113 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -11020,7 +11020,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0114 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -11044,7 +11044,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0115 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -11068,7 +11068,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0116 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11092,7 +11092,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0117 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11116,7 +11116,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0118 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11140,7 +11140,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0119 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -11164,7 +11164,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0120 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11190,7 +11190,7 @@ return {
 		}
 	},
 	Stage10_IndianaRun_0122 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11216,7 +11216,7 @@ return {
 		}
 	},
 	Stage10_IndianaRun_0124 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11242,7 +11242,7 @@ return {
 		}
 	},
 	Stage10_IndianaRun_0126 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11268,7 +11268,7 @@ return {
 		}
 	},
 	Stage10_IndianaRun_0128 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11294,7 +11294,7 @@ return {
 		}
 	},
 	Stage10_IndianaRun_0130 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11320,7 +11320,7 @@ return {
 		}
 	},
 	Stage10_IndianaRun_0132 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11344,7 +11344,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0133 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11368,7 +11368,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0134 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -11392,7 +11392,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0135 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -11416,7 +11416,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0136 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -11440,7 +11440,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0137 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -11464,7 +11464,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0138 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11488,7 +11488,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0139 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11512,7 +11512,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0140 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11536,7 +11536,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0141 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11560,7 +11560,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0142 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11584,7 +11584,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0143 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11608,7 +11608,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0144 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11632,7 +11632,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0145 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -11661,7 +11661,7 @@ return {
 		}
 	},
 	Stage10_IndianaRun_0147 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			563,
 			295
@@ -11687,7 +11687,7 @@ return {
 		}
 	},
 	Stage10_IndianaRun_0149 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11711,7 +11711,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0153 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11735,7 +11735,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0154 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11759,7 +11759,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0155 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11783,7 +11783,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0156 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11807,7 +11807,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0157 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11831,7 +11831,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0158 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11855,7 +11855,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0159 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11879,7 +11879,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0160 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11903,7 +11903,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaRun_0161 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			563,
 			295
@@ -11930,7 +11930,7 @@ return {
 		}
 	},
 	Stage10_IndianaStone_0001 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -11954,7 +11954,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0002 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -11978,7 +11978,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0003 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12002,7 +12002,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0004 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12026,7 +12026,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0005 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			115
@@ -12050,7 +12050,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0006 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12074,7 +12074,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0007 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			115
@@ -12098,7 +12098,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0008 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12122,7 +12122,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0009 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12146,7 +12146,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0010 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			115
@@ -12170,7 +12170,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0011 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12194,7 +12194,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0012 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12218,7 +12218,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0013 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12242,7 +12242,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0014 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12266,7 +12266,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0015 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12290,7 +12290,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0016 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12314,7 +12314,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0017 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12338,7 +12338,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0018 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12362,7 +12362,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0019 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12386,7 +12386,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0020 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12410,7 +12410,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0021 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12434,7 +12434,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0022 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12458,7 +12458,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0023 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			127,
 			115
@@ -12482,7 +12482,7 @@ return {
 		alias = {}
 	},
 	Stage10_IndianaStone_0024 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			127,
 			115
@@ -12506,7 +12506,7 @@ return {
 		alias = {}
 	},
 	Stage10_Tower_0001 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			149,
 			281
@@ -12533,7 +12533,7 @@ return {
 		}
 	},
 	Stage10_Tower_0004 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			149,
 			281
@@ -12560,7 +12560,7 @@ return {
 		}
 	},
 	Stage10_Tower_0007 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			149,
 			281
@@ -12587,7 +12587,7 @@ return {
 		}
 	},
 	Stage10_Tower_0010 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			149,
 			281
@@ -12614,7 +12614,7 @@ return {
 		}
 	},
 	Stage10_Tower_0013 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			149,
 			281
@@ -12641,7 +12641,7 @@ return {
 		}
 	},
 	Stage10_Tower_0016 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			149,
 			281
@@ -12668,7 +12668,7 @@ return {
 		}
 	},
 	Stage10_Tower_0019 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			149,
 			281
@@ -12695,7 +12695,7 @@ return {
 		}
 	},
 	Stage10_Tower_0022 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			149,
 			281
@@ -12722,7 +12722,7 @@ return {
 		}
 	},
 	Stage10_Tower_0025 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			149,
 			281
@@ -12749,7 +12749,7 @@ return {
 		}
 	},
 	Stage10_Tower_0028 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			149,
 			281
@@ -12776,7 +12776,7 @@ return {
 		}
 	},
 	Stage10_Tower_0031 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			149,
 			281
@@ -12804,7 +12804,7 @@ return {
 		}
 	},
 	Stage11_0002 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			1980,
 			1080
@@ -12828,7 +12828,7 @@ return {
 		alias = {}
 	},
 	Stage11_0003 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			1980,
 			1080
@@ -12852,7 +12852,7 @@ return {
 		alias = {}
 	},
 	Stage11_0004 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			1980,
 			1080
@@ -12876,7 +12876,7 @@ return {
 		alias = {}
 	},
 	boss_corps_monkey1_0001 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			51,
 			51
@@ -12902,7 +12902,7 @@ return {
 		}
 	},
 	boss_corps_monkey1_0003 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			51,
 			51
@@ -12928,7 +12928,7 @@ return {
 		}
 	},
 	boss_corps_monkey1_0005 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			51,
 			51
@@ -12954,7 +12954,7 @@ return {
 		}
 	},
 	boss_corps_monkey1_0007 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			51,
 			51
@@ -12980,7 +12980,7 @@ return {
 		}
 	},
 	boss_corps_monkey1_0009 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			51,
 			51
@@ -13006,7 +13006,7 @@ return {
 		}
 	},
 	boss_corps_monkey1_0011 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			51,
 			51
@@ -13032,7 +13032,7 @@ return {
 		}
 	},
 	boss_corps_monkey1_0013 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			51,
 			51
@@ -13058,7 +13058,7 @@ return {
 		}
 	},
 	boss_corps_monkey1_0015 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			51,
 			51
@@ -13084,7 +13084,7 @@ return {
 		}
 	},
 	boss_corps_monkey1_0017 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			51,
 			51
@@ -13110,7 +13110,7 @@ return {
 		}
 	},
 	boss_corps_monkey1_0019 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			51,
 			51
@@ -13136,7 +13136,7 @@ return {
 		}
 	},
 	boss_corps_monkey2_0001 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			84,
 			68
@@ -13162,7 +13162,7 @@ return {
 		}
 	},
 	boss_corps_monkey2_0003 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			84,
 			68
@@ -13188,7 +13188,7 @@ return {
 		}
 	},
 	boss_corps_monkey2_0005 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			84,
 			68
@@ -13214,7 +13214,7 @@ return {
 		}
 	},
 	boss_corps_monkey2_0007 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			84,
 			68
@@ -13240,7 +13240,7 @@ return {
 		}
 	},
 	boss_corps_monkey2_0009 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			84,
 			68
@@ -13266,7 +13266,7 @@ return {
 		}
 	},
 	boss_corps_monkey2_0011 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			84,
 			68
@@ -13292,7 +13292,7 @@ return {
 		}
 	},
 	boss_corps_monkey2_0013 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			84,
 			68
@@ -13318,7 +13318,7 @@ return {
 		}
 	},
 	boss_corps_monkey2_0015 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			84,
 			68
@@ -13344,7 +13344,7 @@ return {
 		}
 	},
 	boss_corps_monkey2_0017 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			84,
 			68
@@ -13370,7 +13370,7 @@ return {
 		}
 	},
 	boss_corps_monkey2_0019 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			84,
 			68
@@ -13396,7 +13396,7 @@ return {
 		}
 	},
 	boss_corps_monkey2_0021 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			84,
 			68
@@ -13422,7 +13422,7 @@ return {
 		}
 	},
 	boss_corps_monkey2_0023 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			84,
 			68
@@ -13448,7 +13448,7 @@ return {
 		}
 	},
 	boss_corps_monkey3_0001 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			62,
 			84
@@ -13472,7 +13472,7 @@ return {
 		alias = {}
 	},
 	boss_corps_monkey3_0002 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			84
@@ -13498,7 +13498,7 @@ return {
 		}
 	},
 	boss_corps_monkey3_0004 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			84
@@ -13524,7 +13524,7 @@ return {
 		}
 	},
 	boss_corps_monkey3_0006 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			84
@@ -13550,7 +13550,7 @@ return {
 		}
 	},
 	boss_corps_monkey3_0008 = {
-		a_name = "go_stage37-2.png",
+		a_name = "go_stage37-2.dds",
 		size = {
 			62,
 			84
@@ -13576,7 +13576,7 @@ return {
 		}
 	},
 	boss_corps_monkey3_0010 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			62,
 			84
@@ -13602,7 +13602,7 @@ return {
 		}
 	},
 	boss_corps_monkey3_0012 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			62,
 			84
@@ -13628,7 +13628,7 @@ return {
 		}
 	},
 	boss_corps_monkey3_0014 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			62,
 			84
@@ -13654,7 +13654,7 @@ return {
 		}
 	},
 	boss_corps_monkey3_0016 = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			62,
 			84
@@ -13680,7 +13680,7 @@ return {
 		}
 	},
 	boss_corps_monkeyCrown = {
-		a_name = "go_stage37-1.png",
+		a_name = "go_stage37-1.dds",
 		size = {
 			37,
 			23

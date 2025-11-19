@@ -1,6 +1,6 @@
 return {
 	["kr4_encyclopedia_creep_thumbs_0001"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0002"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0003"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0004"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0005"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0006"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0007"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0008"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0009"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0010"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0011"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0012"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0013"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0014"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0015"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0016"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0017"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0018"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0019"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0020"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0021"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0022"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0023"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0024"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0025"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0026"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0027"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0028"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0029"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0030"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0031"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0032"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0033"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0034"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0035"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0036"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0037"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0038"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0039"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0040"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0041"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0042"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0043"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0044"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0045"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0046"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0047"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0048"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0049"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0050"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0051"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0052"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0053"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0054"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0055"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0056"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0059"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0060"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0061"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0062"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0063"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0064"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0065"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0066"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0067"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0068"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0069"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0070"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0071"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0072"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0073"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0074"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0075"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0076"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0077"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0078"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0079"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0080"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0081"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0082"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0083"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0084"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0085"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0101"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0102"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0103"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0104"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0105"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0106"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0107"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0108"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0109"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0110"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0111"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0112"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0113"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0114"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0115"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0121"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0122"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0123"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0124"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0125"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0126"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0127"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0128"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0129"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0130"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0131"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0132"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0133"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0134"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0135"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0140"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0141"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0142"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0143"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0144"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0145"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0146"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0147"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0148"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0149"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0150"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0151"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0152"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0153"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0154"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0155"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0156"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0157"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0158"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0159"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0160"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_creep_thumbs_0161"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0001"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0002"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0003"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0004"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0005"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0006"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0007"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0008"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0009"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0010"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0011"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0012"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0013"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0014"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0015"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0016"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0017"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0018"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0019"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0020"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0021"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0022"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0023"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0024"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0025"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0026"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0027"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0028"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0029"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0030"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0031"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0032"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0033"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0034"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0035"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0036"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0037"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0038"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0039"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0040"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0041"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0042"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0043"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0044"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0045"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0046"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0047"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0048"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0049"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0050"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0051"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0052"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0053"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0054"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0055"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0056"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0057"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0058"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0059"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0060"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0061"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0062"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0063"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0064"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0065"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0066"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0067"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0068"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0069"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0070"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0071"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0072"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0073"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0074"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0075"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0076"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0077"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0078"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0079"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0080"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0081"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0082"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0083"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0084"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0085"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0086"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0087"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0088"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0089"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0090"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0091"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0092"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0093"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0094"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0095"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0096"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0097"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0098"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0099"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0100"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0101"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0102"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0103"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0104"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0105"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0106"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0107"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0108"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0109"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0110"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0111"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_creep_thumbs_0112"] = {
-		a_name = "kr4_kr5_encyclopedia-1.png",
+		a_name = "kr4_kr5_encyclopedia-1.dds",
 		size = {
 			64,
 			62

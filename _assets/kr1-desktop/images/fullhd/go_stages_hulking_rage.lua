@@ -2,7 +2,7 @@
 
 return {
 	crystalUnstable_healAura_bubbles_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0002 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0003 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0004 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0005 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0006 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0007 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0008 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0009 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0010 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0011 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0012 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0013 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0014 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0015 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0016 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0017 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -410,7 +410,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0018 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -434,7 +434,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0019 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0020 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -482,7 +482,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0021 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -506,7 +506,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0022 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0023 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -554,7 +554,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0024 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -578,7 +578,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_bubbles_0025 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			28,
 			37
@@ -602,7 +602,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_glow = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			169,
 			98
@@ -626,7 +626,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healAura_ring = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			169,
 			98
@@ -650,7 +650,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -674,7 +674,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0002 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -698,7 +698,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0003 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -722,7 +722,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0004 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -746,7 +746,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0005 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -770,7 +770,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0006 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -794,7 +794,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0007 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -818,7 +818,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0008 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -842,7 +842,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0009 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -866,7 +866,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0010 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -890,7 +890,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0011 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -914,7 +914,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0012 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -938,7 +938,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0013 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -962,7 +962,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0014 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -986,7 +986,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0015 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -1010,7 +1010,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0016 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -1034,7 +1034,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0017 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -1058,7 +1058,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0018 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -1082,7 +1082,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0019 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -1106,7 +1106,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0020 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -1130,7 +1130,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0021 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -1154,7 +1154,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0022 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -1178,7 +1178,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0023 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -1202,7 +1202,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0024 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -1226,7 +1226,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_healFx_0025 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -1250,7 +1250,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_layer1_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1454,7 +1454,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1482,7 +1482,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0003 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1510,7 +1510,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0005 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1538,7 +1538,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0007 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1566,7 +1566,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0009 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1594,7 +1594,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0011 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1622,7 +1622,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0013 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1650,7 +1650,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0015 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1678,7 +1678,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0017 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1706,7 +1706,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0019 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1734,7 +1734,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0021 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1762,7 +1762,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0023 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1790,7 +1790,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0025 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1818,7 +1818,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0027 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1846,7 +1846,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0029 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1874,7 +1874,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0061 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1900,7 +1900,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0063 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1926,7 +1926,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0065 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1952,7 +1952,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0067 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -1978,7 +1978,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0069 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2004,7 +2004,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0071 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2030,7 +2030,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0073 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2054,7 +2054,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_layer2_0074 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2080,7 +2080,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0076 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2106,7 +2106,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0078 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2133,7 +2133,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0080 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2181,7 +2181,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0105 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2209,7 +2209,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0107 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2237,7 +2237,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0109 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2265,7 +2265,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0111 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2293,7 +2293,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0113 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2321,7 +2321,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0115 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2349,7 +2349,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0117 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2377,7 +2377,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0119 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2405,7 +2405,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0121 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2433,7 +2433,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0123 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2461,7 +2461,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0125 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2491,7 +2491,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0128 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2519,7 +2519,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0130 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2545,7 +2545,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0131 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2573,7 +2573,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0133 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2599,7 +2599,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0134 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2625,7 +2625,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0135 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2651,7 +2651,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0136 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2677,7 +2677,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0137 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2705,7 +2705,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0139 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2733,7 +2733,7 @@ return {
 		}
 	},
 	crystalUnstable_layer2_0141 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -2761,7 +2761,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3042,7 +3042,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0031 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3068,7 +3068,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0033 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3094,7 +3094,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0035 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3120,7 +3120,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0037 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3146,7 +3146,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0039 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3172,7 +3172,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0041 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3198,7 +3198,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0043 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3224,7 +3224,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0045 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3250,7 +3250,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0047 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3276,7 +3276,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0080 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3306,7 +3306,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0082 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3336,7 +3336,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0084 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3366,7 +3366,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0086 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3396,7 +3396,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0088 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3426,7 +3426,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0090 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3456,7 +3456,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0092 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3486,7 +3486,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0094 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3516,7 +3516,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0096 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3546,7 +3546,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0098 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3576,7 +3576,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0100 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3606,7 +3606,7 @@ return {
 		}
 	},
 	crystalUnstable_layer3_0102 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3636,7 +3636,7 @@ return {
 		}
 	},
 	crystalUnstable_layer4_0167 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3660,7 +3660,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_layer4_0168 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3684,7 +3684,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_layer4_0169 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3708,7 +3708,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_layer4_0170 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3732,7 +3732,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_layer4_0171 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3756,7 +3756,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_layer4_0172 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3780,7 +3780,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_layer4_0173 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3804,7 +3804,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_layer4_0174 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3828,7 +3828,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_layer4_0175 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3852,7 +3852,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_layer4_0176 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3876,7 +3876,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_layer4_0177 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3900,7 +3900,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_layer4_0178 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3924,7 +3924,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_layer4_0179 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			107,
 			115
@@ -3948,7 +3948,7 @@ return {
 		alias = {}
 	},
 	crystalUnstable_teleportIn_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -3974,7 +3974,7 @@ return {
 		}
 	},
 	crystalUnstable_teleportIn_0003 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -4000,7 +4000,7 @@ return {
 		}
 	},
 	crystalUnstable_teleportIn_0005 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -4026,7 +4026,7 @@ return {
 		}
 	},
 	crystalUnstable_teleportIn_0007 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -4052,7 +4052,7 @@ return {
 		}
 	},
 	crystalUnstable_teleportIn_0009 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -4078,7 +4078,7 @@ return {
 		}
 	},
 	crystalUnstable_teleportIn_0011 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			73
@@ -4104,7 +4104,7 @@ return {
 		}
 	},
 	crystalUnstable_teleportOut_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			70
@@ -4130,7 +4130,7 @@ return {
 		}
 	},
 	crystalUnstable_teleportOut_0003 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			70
@@ -4156,7 +4156,7 @@ return {
 		}
 	},
 	crystalUnstable_teleportOut_0005 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			70
@@ -4182,7 +4182,7 @@ return {
 		}
 	},
 	crystalUnstable_teleportOut_0007 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			70
@@ -4208,7 +4208,7 @@ return {
 		}
 	},
 	crystalUnstable_teleportOut_0009 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			70
@@ -4234,7 +4234,7 @@ return {
 		}
 	},
 	crystalUnstable_teleportOut_0011 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			70
@@ -4260,7 +4260,7 @@ return {
 		}
 	},
 	crystalUnstable_teleportOut_0013 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			70
@@ -4286,7 +4286,7 @@ return {
 		}
 	},
 	crystalUnstable_teleportOut_0015 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			70
@@ -4312,7 +4312,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4349,7 +4349,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0013 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4375,7 +4375,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0015 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4401,7 +4401,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0017 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4427,7 +4427,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0019 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4453,7 +4453,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0021 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4479,7 +4479,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0023 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4505,7 +4505,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0025 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4531,7 +4531,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0027 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4557,7 +4557,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0029 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4583,7 +4583,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0031 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4609,7 +4609,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0033 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4635,7 +4635,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0035 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4661,7 +4661,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0037 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4695,7 +4695,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0047 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4721,7 +4721,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0049 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4747,7 +4747,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0051 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4773,7 +4773,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer1_0054 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4801,7 +4801,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer2_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4872,7 +4872,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer2_0047 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4898,7 +4898,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer2_0049 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4924,7 +4924,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer2_0051 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -4950,7 +4950,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer2_0053_over = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			325,
 			249
@@ -4974,7 +4974,7 @@ return {
 		alias = {}
 	},
 	galahadriansBastion_layer2_0054_over = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			325,
 			249
@@ -4998,7 +4998,7 @@ return {
 		alias = {}
 	},
 	galahadriansBastion_layer3_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5035,7 +5035,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0013 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5061,7 +5061,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0015 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5087,7 +5087,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0017 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5113,7 +5113,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0019 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5139,7 +5139,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0021 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5165,7 +5165,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0023 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5191,7 +5191,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0025 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5217,7 +5217,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0027 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5243,7 +5243,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0029 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5269,7 +5269,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0031 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5295,7 +5295,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0033 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5321,7 +5321,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0035 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5347,7 +5347,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0037 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5381,7 +5381,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0047 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5407,7 +5407,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0049 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5433,7 +5433,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer3_0051 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5459,7 +5459,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5485,7 +5485,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0003 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5511,7 +5511,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0005 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5537,7 +5537,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0007 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5563,7 +5563,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0009 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5589,7 +5589,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0011 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5615,7 +5615,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0013 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5641,7 +5641,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0015 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5667,7 +5667,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0017 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5693,7 +5693,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0019 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5719,7 +5719,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0021 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5745,7 +5745,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0023 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5771,7 +5771,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0025 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5797,7 +5797,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0027 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5823,7 +5823,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0029 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5849,7 +5849,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0031 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5875,7 +5875,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0033 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5901,7 +5901,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0035 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5927,7 +5927,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0037 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5953,7 +5953,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0039 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -5977,7 +5977,7 @@ return {
 		alias = {}
 	},
 	galahadriansBastion_layer4_0040 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -6001,7 +6001,7 @@ return {
 		alias = {}
 	},
 	galahadriansBastion_layer4_0041 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -6025,7 +6025,7 @@ return {
 		alias = {}
 	},
 	galahadriansBastion_layer4_0042 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -6049,7 +6049,7 @@ return {
 		alias = {}
 	},
 	galahadriansBastion_layer4_0043 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -6073,7 +6073,7 @@ return {
 		alias = {}
 	},
 	galahadriansBastion_layer4_0044 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -6097,7 +6097,7 @@ return {
 		alias = {}
 	},
 	galahadriansBastion_layer4_0045 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -6121,7 +6121,7 @@ return {
 		alias = {}
 	},
 	galahadriansBastion_layer4_0046 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -6145,7 +6145,7 @@ return {
 		alias = {}
 	},
 	galahadriansBastion_layer4_0047 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -6171,7 +6171,7 @@ return {
 		}
 	},
 	galahadriansBastion_layer4_0049 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			239,
 			183
@@ -6200,7 +6200,7 @@ return {
 		}
 	},
 	galahadriansBastion_proy_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			141,
 			98
@@ -6224,7 +6224,7 @@ return {
 		alias = {}
 	},
 	galahadriansBastion_proy_0002 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			141,
 			98
@@ -6248,7 +6248,7 @@ return {
 		alias = {}
 	},
 	galahadriansBastion_proy_0003 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			141,
 			98
@@ -6272,7 +6272,7 @@ return {
 		alias = {}
 	},
 	galahadriansBastion_proy_0004 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			141,
 			98
@@ -6296,7 +6296,7 @@ return {
 		alias = {}
 	},
 	galahadriansBastion_proy_particle_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			84,
 			70
@@ -6322,7 +6322,7 @@ return {
 		}
 	},
 	galahadriansBastion_proy_particle_0003 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			84,
 			70
@@ -6348,7 +6348,7 @@ return {
 		}
 	},
 	galahadriansBastion_proy_particle_0005 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			84,
 			70
@@ -6374,7 +6374,7 @@ return {
 		}
 	},
 	galahadriansBastion_proy_particle_0007 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			84,
 			70
@@ -6400,7 +6400,7 @@ return {
 		}
 	},
 	galahadriansBastion_proy_particle_0009 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			84,
 			70
@@ -6426,7 +6426,7 @@ return {
 		}
 	},
 	galahadriansBastion_proy_particle_0011 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			84,
 			70
@@ -6452,7 +6452,7 @@ return {
 		}
 	},
 	galahadriansBastion_proy_particle_0013 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			84,
 			70
@@ -6478,7 +6478,7 @@ return {
 		}
 	},
 	galahadriansBastion_proy_particle_0015 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			84,
 			70
@@ -6504,7 +6504,7 @@ return {
 		}
 	},
 	gnollBush_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6531,7 +6531,7 @@ return {
 		}
 	},
 	gnollBush_0002 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6559,7 +6559,7 @@ return {
 		}
 	},
 	gnollBush_0004 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6587,7 +6587,7 @@ return {
 		}
 	},
 	gnollBush_0006 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6613,7 +6613,7 @@ return {
 		}
 	},
 	gnollBush_0007 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6639,7 +6639,7 @@ return {
 		}
 	},
 	gnollBush_0008 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6665,7 +6665,7 @@ return {
 		}
 	},
 	gnollBush_0009 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6691,7 +6691,7 @@ return {
 		}
 	},
 	gnollBush_0010 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6717,7 +6717,7 @@ return {
 		}
 	},
 	gnollBush_0011 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6743,7 +6743,7 @@ return {
 		}
 	},
 	gnollBush_0012 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6769,7 +6769,7 @@ return {
 		}
 	},
 	gnollBush_0013 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6795,7 +6795,7 @@ return {
 		}
 	},
 	gnollBush_0028 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6819,7 +6819,7 @@ return {
 		alias = {}
 	},
 	gnollBush_0029 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6843,7 +6843,7 @@ return {
 		alias = {}
 	},
 	gnollBush_0030 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6869,7 +6869,7 @@ return {
 		}
 	},
 	gnollBush_0032 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6895,7 +6895,7 @@ return {
 		}
 	},
 	gnollBush_0034 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6921,7 +6921,7 @@ return {
 		}
 	},
 	gnollBush_0036 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6947,7 +6947,7 @@ return {
 		}
 	},
 	gnollBush_0038 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6973,7 +6973,7 @@ return {
 		}
 	},
 	gnollBush_0040 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -6999,7 +6999,7 @@ return {
 		}
 	},
 	gnollBush_0042 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -7025,7 +7025,7 @@ return {
 		}
 	},
 	gnollBush_0044 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -7051,7 +7051,7 @@ return {
 		}
 	},
 	gnollBush_0046 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -7077,7 +7077,7 @@ return {
 		}
 	},
 	gnollBush_0048 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			98,
 			87
@@ -7103,7 +7103,7 @@ return {
 		}
 	},
 	groundArchers = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			169,
 			98
@@ -7127,7 +7127,7 @@ return {
 		alias = {}
 	},
 	groundArchers_shooter_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			62,
 			45
@@ -7153,7 +7153,7 @@ return {
 		}
 	},
 	groundArchers_shooter_0003 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			62,
 			45
@@ -7177,7 +7177,7 @@ return {
 		alias = {}
 	},
 	groundArchers_shooter_0004 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			62,
 			45
@@ -7203,7 +7203,7 @@ return {
 		}
 	},
 	groundArchers_shooter_0006 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			62,
 			45
@@ -7227,7 +7227,7 @@ return {
 		alias = {}
 	},
 	groundArchers_shooter_0007 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			62,
 			45
@@ -7251,7 +7251,7 @@ return {
 		alias = {}
 	},
 	groundArchers_shooter_0008 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			62,
 			45
@@ -7277,7 +7277,7 @@ return {
 		}
 	},
 	groundArchers_shooter_0010 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			62,
 			45
@@ -7304,7 +7304,7 @@ return {
 		}
 	},
 	groundArchers_shooter_0013 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			62,
 			45
@@ -7330,7 +7330,7 @@ return {
 		}
 	},
 	groundArchers_shooter_0015 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			62,
 			45
@@ -7354,7 +7354,7 @@ return {
 		alias = {}
 	},
 	stage16_bushGnollBurner = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			56,
 			51
@@ -7378,7 +7378,7 @@ return {
 		alias = {}
 	},
 	stage16_bushHolders = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			138,
 			98
@@ -7402,7 +7402,7 @@ return {
 		alias = {}
 	},
 	stage16_bushSpawner = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			93,
 			84
@@ -7426,7 +7426,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0001 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7453,7 +7453,7 @@ return {
 		}
 	},
 	stage16_skull_0003 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7477,7 +7477,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0004 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7501,7 +7501,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0005 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7525,7 +7525,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0006 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7549,7 +7549,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0007 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7573,7 +7573,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0008 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7597,7 +7597,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0009 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7621,7 +7621,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0010 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7645,7 +7645,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0011 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7669,7 +7669,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0012 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7693,7 +7693,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0013 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7717,7 +7717,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0014 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7741,7 +7741,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0015 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7765,7 +7765,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0016 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7789,7 +7789,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0017 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7813,7 +7813,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0018 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7837,7 +7837,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0019 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7861,7 +7861,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0020 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7885,7 +7885,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0021 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7909,7 +7909,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0022 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7933,7 +7933,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0023 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7957,7 +7957,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0024 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -7981,7 +7981,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0025 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8005,7 +8005,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0026 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8029,7 +8029,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0027 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8053,7 +8053,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0028 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8077,7 +8077,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0029 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8101,7 +8101,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0030 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8125,7 +8125,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0031 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8149,7 +8149,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0032 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8173,7 +8173,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0034 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8197,7 +8197,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0035 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8221,7 +8221,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0036 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8245,7 +8245,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0037 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8269,7 +8269,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0038 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8293,7 +8293,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0039 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8317,7 +8317,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0040 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8341,7 +8341,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0041 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8365,7 +8365,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0042 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8389,7 +8389,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0043 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8413,7 +8413,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0044 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8437,7 +8437,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0045 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8461,7 +8461,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0046 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8485,7 +8485,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0047 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8509,7 +8509,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0048 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8533,7 +8533,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0049 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8559,7 +8559,7 @@ return {
 		}
 	},
 	stage16_skull_0051 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8583,7 +8583,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0052 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8607,7 +8607,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0053 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8631,7 +8631,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0054 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8655,7 +8655,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0055 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8679,7 +8679,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0056 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8703,7 +8703,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0057 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8727,7 +8727,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0058 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8751,7 +8751,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0059 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8775,7 +8775,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0060 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8799,7 +8799,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0061 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8823,7 +8823,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0062 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8847,7 +8847,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0063 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8871,7 +8871,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0064 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8895,7 +8895,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0065 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8919,7 +8919,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0066 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8943,7 +8943,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0067 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8967,7 +8967,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0068 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -8991,7 +8991,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0069 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -9015,7 +9015,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0070 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -9039,7 +9039,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0071 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -9063,7 +9063,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0072 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -9087,7 +9087,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0073 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -9111,7 +9111,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0074 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65
@@ -9135,7 +9135,7 @@ return {
 		alias = {}
 	},
 	stage16_skull_0075 = {
-		a_name = "go_stages_hulking_rage-1.png",
+		a_name = "go_stages_hulking_rage-1.dds",
 		size = {
 			68,
 			65

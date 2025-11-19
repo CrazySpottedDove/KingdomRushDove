@@ -2,7 +2,7 @@
 
 return {
 	xin_hero_0001 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -39,7 +39,7 @@ return {
 		}
 	},
 	xin_hero_0002 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -65,7 +65,7 @@ return {
 		}
 	},
 	xin_hero_0004 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -91,7 +91,7 @@ return {
 		}
 	},
 	xin_hero_0006 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -117,7 +117,7 @@ return {
 		}
 	},
 	xin_hero_0008 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -141,7 +141,7 @@ return {
 		alias = {}
 	},
 	xin_hero_0009 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -167,7 +167,7 @@ return {
 		}
 	},
 	xin_hero_0011 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -193,7 +193,7 @@ return {
 		}
 	},
 	xin_hero_0013 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -219,7 +219,7 @@ return {
 		}
 	},
 	xin_hero_0015 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -245,7 +245,7 @@ return {
 		}
 	},
 	xin_hero_0017 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -271,7 +271,7 @@ return {
 		}
 	},
 	xin_hero_0019 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -295,7 +295,7 @@ return {
 		alias = {}
 	},
 	xin_hero_0020 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -321,7 +321,7 @@ return {
 		}
 	},
 	xin_hero_0022 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -347,7 +347,7 @@ return {
 		}
 	},
 	xin_hero_0024 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -373,7 +373,7 @@ return {
 		}
 	},
 	xin_hero_0026 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -399,7 +399,7 @@ return {
 		}
 	},
 	xin_hero_0028 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -425,7 +425,7 @@ return {
 		}
 	},
 	xin_hero_0030 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -451,7 +451,7 @@ return {
 		}
 	},
 	xin_hero_0032 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -479,7 +479,7 @@ return {
 		}
 	},
 	xin_hero_0036 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -505,7 +505,7 @@ return {
 		}
 	},
 	xin_hero_0038 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -531,7 +531,7 @@ return {
 		}
 	},
 	xin_hero_0040 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -557,7 +557,7 @@ return {
 		}
 	},
 	xin_hero_0042 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -583,7 +583,7 @@ return {
 		}
 	},
 	xin_hero_0044 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -611,7 +611,7 @@ return {
 		}
 	},
 	xin_hero_0048 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -635,7 +635,7 @@ return {
 		alias = {}
 	},
 	xin_hero_0049 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -661,7 +661,7 @@ return {
 		}
 	},
 	xin_hero_0051 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -687,7 +687,7 @@ return {
 		}
 	},
 	xin_hero_0053 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -713,7 +713,7 @@ return {
 		}
 	},
 	xin_hero_0055 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -739,7 +739,7 @@ return {
 		}
 	},
 	xin_hero_0057 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -765,7 +765,7 @@ return {
 		}
 	},
 	xin_hero_0059 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -791,7 +791,7 @@ return {
 		}
 	},
 	xin_hero_0061 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -817,7 +817,7 @@ return {
 		}
 	},
 	xin_hero_0063 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -843,7 +843,7 @@ return {
 		}
 	},
 	xin_hero_0065 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -869,7 +869,7 @@ return {
 		}
 	},
 	xin_hero_0067 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -895,7 +895,7 @@ return {
 		}
 	},
 	xin_hero_0069 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -921,7 +921,7 @@ return {
 		}
 	},
 	xin_hero_0071 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -947,7 +947,7 @@ return {
 		}
 	},
 	xin_hero_0073 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -973,7 +973,7 @@ return {
 		}
 	},
 	xin_hero_0075 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -999,7 +999,7 @@ return {
 		}
 	},
 	xin_hero_0077 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1025,7 +1025,7 @@ return {
 		}
 	},
 	xin_hero_0079 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1051,7 +1051,7 @@ return {
 		}
 	},
 	xin_hero_0081 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1077,7 +1077,7 @@ return {
 		}
 	},
 	xin_hero_0083 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1103,7 +1103,7 @@ return {
 		}
 	},
 	xin_hero_0085 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1129,7 +1129,7 @@ return {
 		}
 	},
 	xin_hero_0087 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1157,7 +1157,7 @@ return {
 		}
 	},
 	xin_hero_0090 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1183,7 +1183,7 @@ return {
 		}
 	},
 	xin_hero_0092 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1209,7 +1209,7 @@ return {
 		}
 	},
 	xin_hero_0094 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1235,7 +1235,7 @@ return {
 		}
 	},
 	xin_hero_0096 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1261,7 +1261,7 @@ return {
 		}
 	},
 	xin_hero_0098 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1287,7 +1287,7 @@ return {
 		}
 	},
 	xin_hero_0100 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1313,7 +1313,7 @@ return {
 		}
 	},
 	xin_hero_0102 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1339,7 +1339,7 @@ return {
 		}
 	},
 	xin_hero_0104 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1365,7 +1365,7 @@ return {
 		}
 	},
 	xin_hero_0106 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1391,7 +1391,7 @@ return {
 		}
 	},
 	xin_hero_0108 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1417,7 +1417,7 @@ return {
 		}
 	},
 	xin_hero_0110 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1443,7 +1443,7 @@ return {
 		}
 	},
 	xin_hero_0112 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1469,7 +1469,7 @@ return {
 		}
 	},
 	xin_hero_0114 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1495,7 +1495,7 @@ return {
 		}
 	},
 	xin_hero_0118 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1522,7 +1522,7 @@ return {
 		}
 	},
 	xin_hero_0119 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1548,7 +1548,7 @@ return {
 		}
 	},
 	xin_hero_0121 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1574,7 +1574,7 @@ return {
 		}
 	},
 	xin_hero_0123 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1600,7 +1600,7 @@ return {
 		}
 	},
 	xin_hero_0125 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1626,7 +1626,7 @@ return {
 		}
 	},
 	xin_hero_0127 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1652,7 +1652,7 @@ return {
 		}
 	},
 	xin_hero_0129 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1678,7 +1678,7 @@ return {
 		}
 	},
 	xin_hero_0131 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1704,7 +1704,7 @@ return {
 		}
 	},
 	xin_hero_0133 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1730,7 +1730,7 @@ return {
 		}
 	},
 	xin_hero_0135 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1756,7 +1756,7 @@ return {
 		}
 	},
 	xin_hero_0137 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1782,7 +1782,7 @@ return {
 		}
 	},
 	xin_hero_0139 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1808,7 +1808,7 @@ return {
 		}
 	},
 	xin_hero_0141 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1834,7 +1834,7 @@ return {
 		}
 	},
 	xin_hero_0143 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1860,7 +1860,7 @@ return {
 		}
 	},
 	xin_hero_0145 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1886,7 +1886,7 @@ return {
 		}
 	},
 	xin_hero_0147 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1912,7 +1912,7 @@ return {
 		}
 	},
 	xin_hero_0149 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1938,7 +1938,7 @@ return {
 		}
 	},
 	xin_hero_0151 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1964,7 +1964,7 @@ return {
 		}
 	},
 	xin_hero_0156 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -1990,7 +1990,7 @@ return {
 		}
 	},
 	xin_hero_0158 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2016,7 +2016,7 @@ return {
 		}
 	},
 	xin_hero_0160 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2042,7 +2042,7 @@ return {
 		}
 	},
 	xin_hero_0162 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2068,7 +2068,7 @@ return {
 		}
 	},
 	xin_hero_0164 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2094,7 +2094,7 @@ return {
 		}
 	},
 	xin_hero_0166 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2120,7 +2120,7 @@ return {
 		}
 	},
 	xin_hero_0168 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2146,7 +2146,7 @@ return {
 		}
 	},
 	xin_hero_0170 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2172,7 +2172,7 @@ return {
 		}
 	},
 	xin_hero_0172 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2198,7 +2198,7 @@ return {
 		}
 	},
 	xin_hero_0174 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2224,7 +2224,7 @@ return {
 		}
 	},
 	xin_hero_0176 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2250,7 +2250,7 @@ return {
 		}
 	},
 	xin_hero_0178 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2276,7 +2276,7 @@ return {
 		}
 	},
 	xin_hero_0180 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2302,7 +2302,7 @@ return {
 		}
 	},
 	xin_hero_0182 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2328,7 +2328,7 @@ return {
 		}
 	},
 	xin_hero_0184 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2354,7 +2354,7 @@ return {
 		}
 	},
 	xin_hero_0186 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2380,7 +2380,7 @@ return {
 		}
 	},
 	xin_hero_0188 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2406,7 +2406,7 @@ return {
 		}
 	},
 	xin_hero_0190 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2432,7 +2432,7 @@ return {
 		}
 	},
 	xin_hero_0192 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2458,7 +2458,7 @@ return {
 		}
 	},
 	xin_hero_0194 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2484,7 +2484,7 @@ return {
 		}
 	},
 	xin_hero_0196 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2510,7 +2510,7 @@ return {
 		}
 	},
 	xin_hero_0201 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2536,7 +2536,7 @@ return {
 		}
 	},
 	xin_hero_0203 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2562,7 +2562,7 @@ return {
 		}
 	},
 	xin_hero_0205 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2588,7 +2588,7 @@ return {
 		}
 	},
 	xin_hero_0207 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2614,7 +2614,7 @@ return {
 		}
 	},
 	xin_hero_0209 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2640,7 +2640,7 @@ return {
 		}
 	},
 	xin_hero_0211 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2666,7 +2666,7 @@ return {
 		}
 	},
 	xin_hero_0213 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2692,7 +2692,7 @@ return {
 		}
 	},
 	xin_hero_0215 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2718,7 +2718,7 @@ return {
 		}
 	},
 	xin_hero_0217 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2744,7 +2744,7 @@ return {
 		}
 	},
 	xin_hero_0219 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2770,7 +2770,7 @@ return {
 		}
 	},
 	xin_hero_0221 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2796,7 +2796,7 @@ return {
 		}
 	},
 	xin_hero_0223 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2822,7 +2822,7 @@ return {
 		}
 	},
 	xin_hero_0225 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2848,7 +2848,7 @@ return {
 		}
 	},
 	xin_hero_0227 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2874,7 +2874,7 @@ return {
 		}
 	},
 	xin_hero_0229 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2900,7 +2900,7 @@ return {
 		}
 	},
 	xin_hero_0231 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2926,7 +2926,7 @@ return {
 		}
 	},
 	xin_hero_0233 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2952,7 +2952,7 @@ return {
 		}
 	},
 	xin_hero_0235 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -2978,7 +2978,7 @@ return {
 		}
 	},
 	xin_hero_0237 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3004,7 +3004,7 @@ return {
 		}
 	},
 	xin_hero_0239 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3030,7 +3030,7 @@ return {
 		}
 	},
 	xin_hero_0241 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3056,7 +3056,7 @@ return {
 		}
 	},
 	xin_hero_0243 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3082,7 +3082,7 @@ return {
 		}
 	},
 	xin_hero_0248 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3108,7 +3108,7 @@ return {
 		}
 	},
 	xin_hero_0250 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3134,7 +3134,7 @@ return {
 		}
 	},
 	xin_hero_0252 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3160,7 +3160,7 @@ return {
 		}
 	},
 	xin_hero_0254 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3184,7 +3184,7 @@ return {
 		alias = {}
 	},
 	xin_hero_0255 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3208,7 +3208,7 @@ return {
 		alias = {}
 	},
 	xin_hero_0256 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3234,7 +3234,7 @@ return {
 		}
 	},
 	xin_hero_0258 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3260,7 +3260,7 @@ return {
 		}
 	},
 	xin_hero_0260 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3286,7 +3286,7 @@ return {
 		}
 	},
 	xin_hero_0262 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3312,7 +3312,7 @@ return {
 		}
 	},
 	xin_hero_0264 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3338,7 +3338,7 @@ return {
 		}
 	},
 	xin_hero_0266 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3364,7 +3364,7 @@ return {
 		}
 	},
 	xin_hero_0268 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3390,7 +3390,7 @@ return {
 		}
 	},
 	xin_hero_0270 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3416,7 +3416,7 @@ return {
 		}
 	},
 	xin_hero_0272 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3442,7 +3442,7 @@ return {
 		}
 	},
 	xin_hero_0274 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3468,7 +3468,7 @@ return {
 		}
 	},
 	xin_hero_0276 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3494,7 +3494,7 @@ return {
 		}
 	},
 	xin_hero_0278 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3520,7 +3520,7 @@ return {
 		}
 	},
 	xin_hero_0280 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3546,7 +3546,7 @@ return {
 		}
 	},
 	xin_hero_0282 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3572,7 +3572,7 @@ return {
 		}
 	},
 	xin_hero_0284 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3598,7 +3598,7 @@ return {
 		}
 	},
 	xin_hero_0286 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3624,7 +3624,7 @@ return {
 		}
 	},
 	xin_hero_0288 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3650,7 +3650,7 @@ return {
 		}
 	},
 	xin_hero_0290 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3676,7 +3676,7 @@ return {
 		}
 	},
 	xin_hero_0292 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3702,7 +3702,7 @@ return {
 		}
 	},
 	xin_hero_0295 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3728,7 +3728,7 @@ return {
 		}
 	},
 	xin_hero_0297 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3754,7 +3754,7 @@ return {
 		}
 	},
 	xin_hero_0299 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3780,7 +3780,7 @@ return {
 		}
 	},
 	xin_hero_0301 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3806,7 +3806,7 @@ return {
 		}
 	},
 	xin_hero_0303 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3832,7 +3832,7 @@ return {
 		}
 	},
 	xin_hero_0305 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3858,7 +3858,7 @@ return {
 		}
 	},
 	xin_hero_0307 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3884,7 +3884,7 @@ return {
 		}
 	},
 	xin_hero_0309 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3910,7 +3910,7 @@ return {
 		}
 	},
 	xin_hero_0311 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3936,7 +3936,7 @@ return {
 		}
 	},
 	xin_hero_0313 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3962,7 +3962,7 @@ return {
 		}
 	},
 	xin_hero_0315 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -3988,7 +3988,7 @@ return {
 		}
 	},
 	xin_hero_0320 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4014,7 +4014,7 @@ return {
 		}
 	},
 	xin_hero_0322 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4040,7 +4040,7 @@ return {
 		}
 	},
 	xin_hero_0324 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4066,7 +4066,7 @@ return {
 		}
 	},
 	xin_hero_0326 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4092,7 +4092,7 @@ return {
 		}
 	},
 	xin_hero_0328 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4121,7 +4121,7 @@ return {
 		}
 	},
 	xin_hero_0333 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4147,7 +4147,7 @@ return {
 		}
 	},
 	xin_hero_0335 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4173,7 +4173,7 @@ return {
 		}
 	},
 	xin_hero_0337 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4199,7 +4199,7 @@ return {
 		}
 	},
 	xin_hero_0339 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4289,7 +4289,7 @@ return {
 		}
 	},
 	xin_hero_0355 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4317,7 +4317,7 @@ return {
 		}
 	},
 	xin_hero_0357 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4345,7 +4345,7 @@ return {
 		}
 	},
 	xin_hero_0359 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4371,7 +4371,7 @@ return {
 		}
 	},
 	xin_hero_0361 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4397,7 +4397,7 @@ return {
 		}
 	},
 	xin_hero_0363 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4423,7 +4423,7 @@ return {
 		}
 	},
 	xin_hero_0365 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4449,7 +4449,7 @@ return {
 		}
 	},
 	xin_hero_0367 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4475,7 +4475,7 @@ return {
 		}
 	},
 	xin_hero_0369 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4501,7 +4501,7 @@ return {
 		}
 	},
 	xin_hero_0371 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4525,7 +4525,7 @@ return {
 		alias = {}
 	},
 	xin_hero_0372 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4549,7 +4549,7 @@ return {
 		alias = {}
 	},
 	xin_hero_0373 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4573,7 +4573,7 @@ return {
 		alias = {}
 	},
 	xin_hero_0374 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4597,7 +4597,7 @@ return {
 		alias = {}
 	},
 	xin_hero_0375 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4621,7 +4621,7 @@ return {
 		alias = {}
 	},
 	xin_hero_0376 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4645,7 +4645,7 @@ return {
 		alias = {}
 	},
 	xin_hero_0377 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4669,7 +4669,7 @@ return {
 		alias = {}
 	},
 	xin_hero_0378 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4693,7 +4693,7 @@ return {
 		alias = {}
 	},
 	xin_hero_0379 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4719,7 +4719,7 @@ return {
 		}
 	},
 	xin_hero_0381 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4745,7 +4745,7 @@ return {
 		}
 	},
 	xin_hero_0383 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4771,7 +4771,7 @@ return {
 		}
 	},
 	xin_hero_0385 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4797,7 +4797,7 @@ return {
 		}
 	},
 	xin_hero_0387 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4823,7 +4823,7 @@ return {
 		}
 	},
 	xin_hero_0389 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4849,7 +4849,7 @@ return {
 		}
 	},
 	xin_hero_0391 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4875,7 +4875,7 @@ return {
 		}
 	},
 	xin_hero_0393 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4901,7 +4901,7 @@ return {
 		}
 	},
 	xin_hero_0395 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4927,7 +4927,7 @@ return {
 		}
 	},
 	xin_hero_0397 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4953,7 +4953,7 @@ return {
 		}
 	},
 	xin_hero_0399 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -4979,7 +4979,7 @@ return {
 		}
 	},
 	xin_hero_0405 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5005,7 +5005,7 @@ return {
 		}
 	},
 	xin_hero_0407 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5031,7 +5031,7 @@ return {
 		}
 	},
 	xin_hero_0409 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5057,7 +5057,7 @@ return {
 		}
 	},
 	xin_hero_0411 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5083,7 +5083,7 @@ return {
 		}
 	},
 	xin_hero_0413 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5109,7 +5109,7 @@ return {
 		}
 	},
 	xin_hero_0415 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5135,7 +5135,7 @@ return {
 		}
 	},
 	xin_hero_0417 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5161,7 +5161,7 @@ return {
 		}
 	},
 	xin_hero_0419 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5187,7 +5187,7 @@ return {
 		}
 	},
 	xin_hero_0421 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5213,7 +5213,7 @@ return {
 		}
 	},
 	xin_hero_0423 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5239,7 +5239,7 @@ return {
 		}
 	},
 	xin_hero_0425 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5265,7 +5265,7 @@ return {
 		}
 	},
 	xin_hero_0427 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5291,7 +5291,7 @@ return {
 		}
 	},
 	xin_hero_0429 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5317,7 +5317,7 @@ return {
 		}
 	},
 	xin_hero_buttStrike_smoke_0001 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			197,
 			141
@@ -5343,7 +5343,7 @@ return {
 		}
 	},
 	xin_hero_buttStrike_smoke_0003 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			197,
 			141
@@ -5369,7 +5369,7 @@ return {
 		}
 	},
 	xin_hero_buttStrike_smoke_0005 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			197,
 			141
@@ -5395,7 +5395,7 @@ return {
 		}
 	},
 	xin_hero_buttStrike_smoke_0007 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			197,
 			141
@@ -5421,7 +5421,7 @@ return {
 		}
 	},
 	xin_hero_buttStrike_smoke_0009 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			197,
 			141
@@ -5447,7 +5447,7 @@ return {
 		}
 	},
 	xin_hero_buttStrike_smoke_0011 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			197,
 			141
@@ -5473,7 +5473,7 @@ return {
 		}
 	},
 	xin_hero_buttStrike_smoke_0013 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			197,
 			141
@@ -5499,7 +5499,7 @@ return {
 		}
 	},
 	xin_hero_buttStrike_smoke_0015 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			197,
 			141
@@ -5525,7 +5525,7 @@ return {
 		}
 	},
 	xin_hero_buttStrike_smoke_0017 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			197,
 			141
@@ -5551,7 +5551,7 @@ return {
 		}
 	},
 	xin_hero_death_staff_0001 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5577,7 +5577,7 @@ return {
 		}
 	},
 	xin_hero_death_staff_0003 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5603,7 +5603,7 @@ return {
 		}
 	},
 	xin_hero_death_staff_0005 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5629,7 +5629,7 @@ return {
 		}
 	},
 	xin_hero_death_staff_0007 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5655,7 +5655,7 @@ return {
 		}
 	},
 	xin_hero_death_staff_0009 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5681,7 +5681,7 @@ return {
 		}
 	},
 	xin_hero_death_staff_0011 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5707,7 +5707,7 @@ return {
 		}
 	},
 	xin_hero_death_staff_0013 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5733,7 +5733,7 @@ return {
 		}
 	},
 	xin_hero_death_staff_0015 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5759,7 +5759,7 @@ return {
 		}
 	},
 	xin_hero_death_staff_0017 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5785,7 +5785,7 @@ return {
 		}
 	},
 	xin_hero_death_staff_0019 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5811,7 +5811,7 @@ return {
 		}
 	},
 	xin_hero_death_staff_0021 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5837,7 +5837,7 @@ return {
 		}
 	},
 	xin_hero_death_staff_0023 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5861,7 +5861,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0001 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5885,7 +5885,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0002 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5909,7 +5909,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0003 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5933,7 +5933,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0004 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5957,7 +5957,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0005 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -5981,7 +5981,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0006 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6005,7 +6005,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0007 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6029,7 +6029,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0008 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6053,7 +6053,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0009 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6077,7 +6077,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0010 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6101,7 +6101,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0011 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6125,7 +6125,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0012 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6149,7 +6149,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0013 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6173,7 +6173,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0014 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6197,7 +6197,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0015 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6221,7 +6221,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0016 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6245,7 +6245,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0017 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6269,7 +6269,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0018 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6293,7 +6293,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0019 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6317,7 +6317,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0020 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6341,7 +6341,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0021 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6365,7 +6365,7 @@ return {
 		alias = {}
 	},
 	xin_hero_drink_bubbles_0022 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -6389,7 +6389,7 @@ return {
 		alias = {}
 	},
 	xin_hero_shadow_0001 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6415,7 +6415,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0003 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6441,7 +6441,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0005 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6467,7 +6467,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0007 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6493,7 +6493,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0009 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6519,7 +6519,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0011 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6549,7 +6549,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0013 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6575,7 +6575,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0015 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6601,7 +6601,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0017 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6627,7 +6627,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0019 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6653,7 +6653,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0021 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6679,7 +6679,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0023 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6705,7 +6705,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0025 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6731,7 +6731,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0027 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6757,7 +6757,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0029 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6783,7 +6783,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0031 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6809,7 +6809,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0035 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6835,7 +6835,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0037 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6861,7 +6861,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0039 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6887,7 +6887,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0041 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6913,7 +6913,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0045 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6939,7 +6939,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0047 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6965,7 +6965,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0049 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -6991,7 +6991,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0051 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7015,7 +7015,7 @@ return {
 		alias = {}
 	},
 	xin_hero_shadow_0052 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7042,7 +7042,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0055 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7068,7 +7068,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0057 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7094,7 +7094,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0059 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7120,7 +7120,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0061 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7146,7 +7146,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0063 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7172,7 +7172,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0065 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7198,7 +7198,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0067 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7224,7 +7224,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0069 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7250,7 +7250,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0071 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7276,7 +7276,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0073 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7302,7 +7302,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0075 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7328,7 +7328,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0077 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7354,7 +7354,7 @@ return {
 		}
 	},
 	xin_hero_shadow_0079 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7378,7 +7378,7 @@ return {
 		alias = {}
 	},
 	xin_hero_shadow_0080 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7402,7 +7402,7 @@ return {
 		alias = {}
 	},
 	xin_hero_shadow_0081 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			188,
 			90
@@ -7428,7 +7428,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0015 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7454,7 +7454,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0017 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7480,7 +7480,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0019 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7506,7 +7506,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0021 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7532,7 +7532,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0023 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7558,7 +7558,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0025 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7584,7 +7584,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0027 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7610,7 +7610,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0029 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7636,7 +7636,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0031 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7662,7 +7662,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0033 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7688,7 +7688,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0035 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7714,7 +7714,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0037 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7742,7 +7742,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0039 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7770,7 +7770,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0041 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7798,7 +7798,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0043 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7824,7 +7824,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0045 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7850,7 +7850,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0047 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7876,7 +7876,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0049 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7902,7 +7902,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0051 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7928,7 +7928,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0053 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7954,7 +7954,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0055 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -7982,7 +7982,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0089 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -8008,7 +8008,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0091 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -8034,7 +8034,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0093 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -8060,7 +8060,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0095 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -8086,7 +8086,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0097 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152
@@ -8112,7 +8112,7 @@ return {
 		}
 	},
 	xin_hero_teleport_smoke_0099 = {
-		a_name = "go_hero_xin-1.png",
+		a_name = "go_hero_xin-1.dds",
 		size = {
 			270,
 			152

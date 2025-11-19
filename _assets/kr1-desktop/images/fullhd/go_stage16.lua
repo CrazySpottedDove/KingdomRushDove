@@ -2,7 +2,7 @@
 
 return {
 	stage_16_0002 = {
-		a_name = "go_stage16-1.png",
+		a_name = "go_stage16-1.dds",
 		size = {
 			1920,
 			1080
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	stage_16_0003 = {
-		a_name = "go_stage16-1.png",
+		a_name = "go_stage16-1.dds",
 		size = {
 			1920,
 			1080

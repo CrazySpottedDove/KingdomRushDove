@@ -2,7 +2,7 @@
 
 return {
 	Stage12_0002 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	Stage12_0005 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	Stage12_0006 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	Stage12_0007 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	Stage12_0008 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	Stage12_0009 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	Stage12_0010 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	Stage12_0011 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	Stage12_0012 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	Stage12_0013 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	Stage12_0014 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	Stage12_0015 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	Stage12_0016 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	Stage12_0017 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	Stage12_0018 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	Stage12_0019 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	Stage12_0020 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -410,7 +410,7 @@ return {
 		alias = {}
 	},
 	Stage12_0021 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			1980,
 			1080
@@ -434,7 +434,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0001 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			84,
 			48
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0002 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			84,
 			48
@@ -482,7 +482,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0003 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			84,
 			48
@@ -506,7 +506,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0004 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			84,
 			48
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0005 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			84,
 			48
@@ -554,7 +554,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0006 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			84,
 			48
@@ -578,7 +578,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0007 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			84,
 			48
@@ -602,7 +602,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0008 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			84,
 			48
@@ -626,7 +626,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0009 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			84,
 			48
@@ -650,7 +650,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0010 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			84,
 			48
@@ -674,7 +674,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0011 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			84,
 			48
@@ -698,7 +698,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0012 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			84,
 			48
@@ -722,7 +722,7 @@ return {
 		alias = {}
 	},
 	terrain3_eggs_0013 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			84,
 			48
@@ -746,7 +746,7 @@ return {
 		alias = {}
 	},
 	terrain3_lemur_0001 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -770,7 +770,7 @@ return {
 		alias = {}
 	},
 	terrain3_lemur_0002 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -796,7 +796,7 @@ return {
 		}
 	},
 	terrain3_lemur_0003 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -820,7 +820,7 @@ return {
 		alias = {}
 	},
 	terrain3_lemur_0004 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -844,7 +844,7 @@ return {
 		alias = {}
 	},
 	terrain3_lemur_0005 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -868,7 +868,7 @@ return {
 		alias = {}
 	},
 	terrain3_lemur_0006 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -892,7 +892,7 @@ return {
 		alias = {}
 	},
 	terrain3_lemur_0007 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -916,7 +916,7 @@ return {
 		alias = {}
 	},
 	terrain3_lemur_0008 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -940,7 +940,7 @@ return {
 		alias = {}
 	},
 	terrain3_lemur_0009 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -964,7 +964,7 @@ return {
 		alias = {}
 	},
 	terrain3_lemur_0010 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -988,7 +988,7 @@ return {
 		alias = {}
 	},
 	terrain3_lemur_0012 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -1016,7 +1016,7 @@ return {
 		}
 	},
 	terrain3_lemur_0014 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -1044,7 +1044,7 @@ return {
 		}
 	},
 	terrain3_lemur_0016 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -1072,7 +1072,7 @@ return {
 		}
 	},
 	terrain3_lemur_0018 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -1102,7 +1102,7 @@ return {
 		}
 	},
 	terrain3_lemur_0021 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -1130,7 +1130,7 @@ return {
 		}
 	},
 	terrain3_lemur_0023 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -1160,7 +1160,7 @@ return {
 		}
 	},
 	terrain3_lemur_0040 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -1188,7 +1188,7 @@ return {
 		}
 	},
 	terrain3_lemur_0042 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -1216,7 +1216,7 @@ return {
 		}
 	},
 	terrain3_lemur_0044 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -1244,7 +1244,7 @@ return {
 		}
 	},
 	terrain3_lemur_0046 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -1272,7 +1272,7 @@ return {
 		}
 	},
 	terrain3_lemur_0048 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -1300,7 +1300,7 @@ return {
 		}
 	},
 	terrain3_lemur_0050 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			59,
 			42
@@ -1328,7 +1328,7 @@ return {
 		}
 	},
 	terrain3_spiders_0001 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			17,
 			14
@@ -1354,7 +1354,7 @@ return {
 		}
 	},
 	terrain3_spiders_0003 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			17,
 			14
@@ -1380,7 +1380,7 @@ return {
 		}
 	},
 	terrain3_spiders_0005 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			17,
 			14
@@ -1406,7 +1406,7 @@ return {
 		}
 	},
 	terrain3_spiders_0007 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			17,
 			14
@@ -1432,7 +1432,7 @@ return {
 		}
 	},
 	terrain3_spiders_0009 = {
-		a_name = "go_stage60-1.png",
+		a_name = "go_stage60-1.dds",
 		size = {
 			17,
 			14

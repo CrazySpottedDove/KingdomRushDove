@@ -2,7 +2,7 @@
 
 return {
 	Stage21_0002 = {
-		a_name = "go_stage69-1.png",
+		a_name = "go_stage69-1.dds",
 		size = {
 			1980,
 			1080
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	Stage21_0003 = {
-		a_name = "go_stage69-1.png",
+		a_name = "go_stage69-1.dds",
 		size = {
 			1980,
 			1080
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	banner_0001 = {
-		a_name = "go_stage69-1.png",
+		a_name = "go_stage69-1.dds",
 		size = {
 			127,
 			98
@@ -77,7 +77,7 @@ return {
 		}
 	},
 	banner_0004 = {
-		a_name = "go_stage69-1.png",
+		a_name = "go_stage69-1.dds",
 		size = {
 			127,
 			98
@@ -104,7 +104,7 @@ return {
 		}
 	},
 	banner_0007 = {
-		a_name = "go_stage69-1.png",
+		a_name = "go_stage69-1.dds",
 		size = {
 			127,
 			98
@@ -131,7 +131,7 @@ return {
 		}
 	},
 	banner_0010 = {
-		a_name = "go_stage69-1.png",
+		a_name = "go_stage69-1.dds",
 		size = {
 			127,
 			98
@@ -157,7 +157,7 @@ return {
 		}
 	},
 	banner_0012 = {
-		a_name = "go_stage69-1.png",
+		a_name = "go_stage69-1.dds",
 		size = {
 			127,
 			98
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	banner_0015 = {
-		a_name = "go_stage69-1.png",
+		a_name = "go_stage69-1.dds",
 		size = {
 			127,
 			98
@@ -211,7 +211,7 @@ return {
 		}
 	},
 	banner_0018 = {
-		a_name = "go_stage69-1.png",
+		a_name = "go_stage69-1.dds",
 		size = {
 			127,
 			98
@@ -238,7 +238,7 @@ return {
 		}
 	},
 	banner_0021 = {
-		a_name = "go_stage69-1.png",
+		a_name = "go_stage69-1.dds",
 		size = {
 			127,
 			98

@@ -1,6 +1,6 @@
 return {
 	["demon_pit_tower_build"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			136,
 			142
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0001"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0002"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0003"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0004"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0005"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0006"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0007"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0008"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0009"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0010"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0011"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0012"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0013"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0014"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0015"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0016"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0017"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0018"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0019"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0020"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0021"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0022"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0023"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0024"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0025"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0026"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0027"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0028"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0029"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0030"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0031"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0032"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0033"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0034"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0035"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0036"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0037"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0038"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0039"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0040"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0041"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0042"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0043"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0044"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0045"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0046"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0047"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0048"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0049"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0050"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0051"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0052"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0053"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0054"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0055"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0056"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0057"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0058"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0059"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0060"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0061"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0062"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0063"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0064"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0065"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0066"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0067"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0068"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0069"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0070"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0071"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0072"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0073"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0074"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0075"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0076"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0077"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0078"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0079"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0080"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0081"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0082"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0083"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0084"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0085"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0086"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0087"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0088"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0089"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0090"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0091"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0092"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0093"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0094"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0095"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0096"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0097"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0098"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0099"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0100"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0101"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0102"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0103"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0104"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_0105"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			193,
 			238
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_hit_fx_0001"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			116
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_hit_fx_0002"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			116
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_hit_fx_0003"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			116
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_hit_fx_0004"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			116
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_hit_fx_0005"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			116
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_hit_fx_0006"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			116
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_projectile_0001"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			107,
 			264
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_projectile_0002"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			107,
 			264
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_projectile_0003"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			107,
 			264
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_projectile_0004"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			107,
 			264
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_projectile_0005"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			107,
 			264
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_projectile_0006"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			107,
 			264
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_projectile_0007"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			107,
 			264
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_big_guy_projectile_0008"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			107,
 			264
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0001"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0002"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0003"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0004"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0005"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0006"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0007"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0008"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0009"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0010"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0011"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0012"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0013"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0014"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0015"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0016"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0017"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0018"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0019"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0020"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0021"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0022"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0023"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0024"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0025"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0026"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0027"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0028"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0029"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0030"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0031"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0032"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0033"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0034"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0035"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0036"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0037"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0038"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0039"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0040"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0041"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0042"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0043"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0044"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0045"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0046"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0047"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0048"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0049"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0050"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0051"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0052"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0053"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0054"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0055"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0056"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0057"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0058"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0059"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0060"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0061"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0062"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0063"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0064"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0065"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0066"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0067"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0068"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0069"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0070"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0071"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0072"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0073"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0074"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0075"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0076"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0077"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0078"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0079"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0080"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0081"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0082"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0083"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0084"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0085"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0086"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0087"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0088"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0089"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0090"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0091"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0092"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0093"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0094"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0095"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0096"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0097"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0098"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0099"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0100"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0101"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0102"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0103"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0104"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0105"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0106"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0107"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0108"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0109"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0110"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0111"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0112"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0113"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0114"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0115"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0116"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0117"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0118"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0119"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0120"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0121"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0122"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0123"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0124"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0125"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0126"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0127"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0128"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0129"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0130"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0131"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0132"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0133"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0134"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0135"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0136"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0137"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0138"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0139"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0140"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0141"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_0142"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			142,
 			210
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_explosion_decal"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			90,
 			68
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_hit_fx_0001"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			113,
 			133
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_hit_fx_0002"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			113,
 			133
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_hit_fx_0003"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			113,
 			133
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_hit_fx_0004"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			113,
 			133
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_hit_fx_0005"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			113,
 			133
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_minion_hit_fx_0006"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			113,
 			133
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0001"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0002"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0003"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0004"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0005"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0006"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0007"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0008"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0009"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0010"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0011"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0012"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0013"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0014"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0015"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0016"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0017"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0018"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0019"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0020"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0021"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0022"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0023"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0024"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0025"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0026"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0027"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0028"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0029"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0030"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0031"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0032"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0033"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0034"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0035"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0036"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0037"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0038"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0039"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0040"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0041"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0042"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0043"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0044"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0045"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0046"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_0047"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			76,
 			76
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_particle_0001"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			53,
 			56
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_particle_0002"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			53,
 			56
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_particle_0003"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			53,
 			56
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_particle_0004"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			53,
 			56
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_particle_0005"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			53,
 			56
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_particle_0006"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			53,
 			56
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_demon_projectile_particle_0007"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			53,
 			56
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_base_0001"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			153,
 			218
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_base_0002"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			153,
 			218
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_base_0003"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			153,
 			218
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_base_0004"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			153,
 			218
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_base_0005"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			153,
 			218
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_base_0006"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			153,
 			218
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_base_0007"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			153,
 			218
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0001"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0002"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0003"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0004"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0005"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0006"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0007"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0008"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0009"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0010"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0011"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0012"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0013"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0014"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0015"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0016"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0017"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0018"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0019"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_bubbles_0020"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			144,
 			232
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0001"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0002"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0003"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0004"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0005"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0006"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0007"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0008"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0009"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0010"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0011"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0012"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0013"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0014"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0015"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0016"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0017"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0018"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0019"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0020"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0021"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0022"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0023"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0024"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0025"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0026"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0027"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0028"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0029"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0030"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0031"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0032"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0033"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0034"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0035"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0036"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0037"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0038"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0039"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0040"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0041"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0042"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0043"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0044"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0045"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0046"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0047"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0048"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0049"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0050"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0051"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0052"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0053"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0054"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0055"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0056"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0057"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0058"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0059"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0060"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0061"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0062"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0063"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0064"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0065"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0066"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0067"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0068"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0069"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0070"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0071"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0072"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0073"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0074"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0075"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0076"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0077"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0078"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0079"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0080"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0081"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0082"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0083"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0084"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0085"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0086"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0087"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0088"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0089"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0090"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0091"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0092"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0093"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0094"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0095"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0096"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0097"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0098"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0099"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0100"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0101"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0102"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0103"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0104"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0105"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0106"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0107"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0108"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0109"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0110"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0111"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0112"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0113"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0114"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0115"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0116"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0117"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0118"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0119"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0120"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0121"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0122"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0123"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0124"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0125"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0126"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0127"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0128"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0129"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0130"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0131"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0132"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0133"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0134"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0135"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0136"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0137"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0138"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0139"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0140"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0141"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0142"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0143"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0144"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0145"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0146"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0147"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0148"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0149"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0150"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0151"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0152"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0153"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0154"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0155"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0156"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0157"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0158"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0159"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0160"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0161"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0162"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0163"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0164"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0165"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0166"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0167"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0168"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0169"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0170"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0171"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0172"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0173"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0174"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0175"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0176"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0177"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0178"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0179"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0180"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0181"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0182"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0183"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0184"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0185"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0186"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0187"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0188"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0189"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0190"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0191"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0192"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0193"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0194"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0195"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0196"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0197"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0198"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0199"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0200"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0201"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0202"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0203"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0204"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0205"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0206"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0207"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0208"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0209"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0210"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0211"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0212"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0213"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0214"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0215"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0216"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0217"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0218"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0219"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0220"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0221"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0222"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0223"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0224"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0225"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0226"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0227"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0228"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0229"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0230"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0231"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0232"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0233"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0234"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0235"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0236"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0237"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0238"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0239"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0240"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0241"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0242"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0243"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0244"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0245"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0246"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0247"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0248"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0249"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0250"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0251"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0252"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0253"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0254"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0255"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0256"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0257"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0258"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0259"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0260"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0261"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0262"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0263"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0264"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0265"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0266"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0267"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0268"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0269"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0270"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0271"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0272"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0273"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0274"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0275"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0276"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0277"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0278"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0279"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0280"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0281"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0282"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0283"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0284"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0285"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0286"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0287"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0288"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0289"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0290"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0291"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0292"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0293"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0294"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0295"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0296"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0297"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0298"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0299"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0300"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0301"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0302"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0303"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0304"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0305"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0306"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0307"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0308"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0309"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0310"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0311"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0312"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0313"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0314"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0315"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0316"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0317"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0318"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0319"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0320"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0321"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0322"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0323"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0324"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0325"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0326"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0327"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0328"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0329"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0330"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0331"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0332"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0333"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0334"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0335"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0336"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0337"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0338"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0339"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0340"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_demons_0341"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			159,
 			349
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_front_0001"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			130,
 			142
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_front_0002"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			130,
 			142
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_front_0003"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			130,
 			142
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_front_0004"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			130,
 			142
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_front_0005"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			130,
 			142
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_front_0006"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			130,
 			142
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_front_0007"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			130,
 			142
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0001"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0002"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0003"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0004"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0005"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0006"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0007"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0008"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0009"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0010"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0011"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0012"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0013"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0014"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0015"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0016"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0017"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -17160,7 +17160,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0018"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -17184,7 +17184,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0019"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -17208,7 +17208,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_fuego_0020"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			124,
 			107
@@ -17232,7 +17232,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_reload_0001"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			156,
 			252
@@ -17256,7 +17256,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_reload_0002"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			156,
 			252
@@ -17280,7 +17280,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_reload_0003"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			156,
 			252
@@ -17304,7 +17304,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_reload_0004"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			156,
 			252
@@ -17328,7 +17328,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_reload_0005"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			156,
 			252
@@ -17352,7 +17352,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_reload_0006"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			156,
 			252
@@ -17376,7 +17376,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_reload_0007"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			156,
 			252
@@ -17400,7 +17400,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_reload_0008"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			156,
 			252
@@ -17424,7 +17424,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_reload_0009"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			156,
 			252
@@ -17448,7 +17448,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_lvl4_tower_reload_0010"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			156,
 			252
@@ -17472,7 +17472,7 @@ return {
 		alias = {},
 	},
 	["demon_pit_tower_preview"] = {
-		a_name = "go_towers_demon_pit-1.png",
+		a_name = "go_towers_demon_pit-1.dds",
 		size = {
 			136,
 			170

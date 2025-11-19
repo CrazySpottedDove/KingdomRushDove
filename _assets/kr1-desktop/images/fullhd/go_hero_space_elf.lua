@@ -1,6 +1,6 @@
 return {
 	["hero_therien_black_aegis_bottom_big"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			139,
 			79
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_bottom_small"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			105,
 			62
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_hit_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			93,
 			90
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_hit_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			93,
 			90
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_hit_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			93,
 			90
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_hit_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			93,
 			90
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_hit_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			93,
 			90
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_hit_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			93,
 			90
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_hit_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			93,
 			90
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0016"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0017"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0018"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0019"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0020"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0021"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0022"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0023"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0024"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0025"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0026"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0027"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0028"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0029"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0030"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0031"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0032"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0033"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0034"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0035"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0036"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0037"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0038"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0039"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0040"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_big_0041"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			181,
 			193
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0016"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0017"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0018"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0019"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0020"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0021"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0022"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0023"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0024"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0025"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0026"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0027"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0028"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0029"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0030"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0031"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0032"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0033"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0034"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0035"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0036"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0037"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0038"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0039"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0040"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_black_aegis_top_small_0041"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			142,
 			147
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_melee_hit_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_melee_hit_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_melee_hit_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_melee_hit_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_melee_hit_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_melee_hit_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_melee_hit_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_hit_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			96,
 			96
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_particle_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_proyectile_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_proyectile_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_proyectile_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_proyectile_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_proyectile_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_proyectile_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_proyectile_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_proyectile_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_proyectile_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_proyectile_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_proyectile_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_ranged_proyectile_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0016"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0017"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0018"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0019"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0020"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0021"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0022"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0023"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0024"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0025"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0026"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0027"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0028"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0029"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0030"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0031"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0032"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0033"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0034"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0035"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0036"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0037"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0038"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0039"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0040"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0041"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0042"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0043"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0044"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0045"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0046"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0047"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0048"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0049"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0050"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0051"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0052"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0053"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0054"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0055"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0056"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0057"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0058"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0059"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0060"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0061"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0062"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0063"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0064"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0065"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0066"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0067"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0068"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0069"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0070"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0071"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0072"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0073"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0074"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0075"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0076"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0077"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0078"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0079"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0080"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0081"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0082"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0083"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0084"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0085"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0086"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0087"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0088"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0089"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0090"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0091"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0092"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0093"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0094"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0095"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0096"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0097"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0098"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0099"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0100"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0101"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0102"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0103"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0104"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0105"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0106"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0107"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0108"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0109"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0110"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_0111"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			113,
 			156
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_particle_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			79,
 			82
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_proyectile_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			82,
 			85
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_proyectile_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			82,
 			85
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_proyectile_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			82,
 			85
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_proyectile_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			82,
 			85
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_proyectile_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			82,
 			85
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_proyectile_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			82,
 			85
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_proyectile_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			82,
 			85
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_proyectile_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			82,
 			85
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_proyectile_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			82,
 			85
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_proyectile_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			82,
 			85
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_proyectile_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			82,
 			85
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_ranged_proyectile_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			82,
 			85
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0016"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0017"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0018"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0019"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0020"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0021"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0022"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0023"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0024"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0025"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0026"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0027"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0028"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0029"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0030"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0031"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_reflection_spawn_fx_0032"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			130,
 			173
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0016"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0017"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0018"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0019"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0020"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0021"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0022"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0023"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0024"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0025"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0026"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0027"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0028"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0029"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0030"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0031"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0032"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0033"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0034"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0035"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0036"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0037"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0038"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0039"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0040"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0041"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0042"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0043"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0044"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0045"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0046"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0047"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0048"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0049"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0050"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0051"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0052"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0053"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0054"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0055"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0056"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0057"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0058"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0059"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0060"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0061"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0062"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0063"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0064"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0065"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0066"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0067"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0068"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal2_0069"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			167,
 			170
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0016"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0017"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0018"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0019"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0020"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0021"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0022"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0023"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0024"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0025"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0026"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0027"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0028"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0029"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0030"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0031"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0032"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0033"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0034"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0035"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0036"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0037"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0038"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0039"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0040"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0041"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0042"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0043"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0044"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0045"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0046"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0047"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0048"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0049"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0050"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0051"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0052"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0053"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0054"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0055"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0056"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0057"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0058"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0059"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0060"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0061"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0062"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0063"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0064"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0065"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0066"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0067"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0068"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decal_0069"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			195,
 			133
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0016"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0017"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0018"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0019"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0020"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0021"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0022"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0023"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0024"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0025"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0026"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0027"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0028"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0029"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0030"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0031"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0032"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0033"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0034"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0035"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0036"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0037"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0038"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0039"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0040"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0041"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0042"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0043"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0044"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0045"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0046"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0047"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0048"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0049"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0050"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0051"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0052"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0053"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0054"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0055"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0056"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0057"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0058"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0059"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0060"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0061"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0062"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0063"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0064"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0065"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0066"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0067"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0068"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_fx_decalbrillo_0069"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			133,
 			102
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0016"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0017"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0018"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0019"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0020"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0021"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0022"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0023"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_rift_therien_fx_0024"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			110
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_space_warp_0016"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			187,
 			130
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0016"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0017"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0018"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0019"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0020"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0021"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0022"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0023"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0024"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0025"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0026"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0027"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0028"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0029"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0030"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0031"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0032"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0033"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0034"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0035"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0036"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0037"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0038"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0039"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0040"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0041"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0042"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0043"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0044"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0045"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0046"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0047"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0048"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0049"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0050"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0051"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0052"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0053"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0054"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0055"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0056"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0057"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0058"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0059"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0060"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0061"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0062"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0063"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0064"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0065"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0066"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0067"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0068"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0069"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0070"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0071"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0072"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0073"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0074"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0075"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0076"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0077"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0078"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0079"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0080"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0081"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0082"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0083"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0084"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0085"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0086"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0087"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0088"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0089"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0090"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0091"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0092"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0093"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0094"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0095"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0096"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0097"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0098"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0099"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0100"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0101"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0102"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0103"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0104"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0105"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0106"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0107"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0108"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0109"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0110"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0111"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0112"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0113"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0114"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0115"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0116"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0117"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0118"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0119"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0120"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0121"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0122"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0123"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0124"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0125"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0126"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0127"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0128"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0129"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0130"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0131"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0132"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0133"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0134"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0135"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0136"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0137"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0138"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0139"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0140"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0141"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0142"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0143"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0144"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0145"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0146"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0147"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0148"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0149"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0150"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0151"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0152"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0153"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0154"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0155"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0156"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0157"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0158"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17160,7 +17160,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0159"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17184,7 +17184,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0160"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17208,7 +17208,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0161"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17232,7 +17232,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0162"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17256,7 +17256,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0163"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17280,7 +17280,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0164"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17304,7 +17304,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0165"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17328,7 +17328,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0166"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17352,7 +17352,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0167"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17376,7 +17376,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0168"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17400,7 +17400,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0169"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17424,7 +17424,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0170"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17448,7 +17448,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0171"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17472,7 +17472,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0172"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17496,7 +17496,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0173"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17520,7 +17520,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0174"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17544,7 +17544,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0175"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17568,7 +17568,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0176"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17592,7 +17592,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0177"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17616,7 +17616,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0178"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17640,7 +17640,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0179"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17664,7 +17664,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0180"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17688,7 +17688,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0181"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17712,7 +17712,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0182"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17736,7 +17736,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0183"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17760,7 +17760,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0184"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17784,7 +17784,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0185"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17808,7 +17808,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0186"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17832,7 +17832,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0187"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17856,7 +17856,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0188"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17880,7 +17880,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0189"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17904,7 +17904,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0190"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17928,7 +17928,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0191"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17952,7 +17952,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0192"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -17976,7 +17976,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0193"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18000,7 +18000,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0194"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18024,7 +18024,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0195"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18048,7 +18048,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0196"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18072,7 +18072,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0197"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18096,7 +18096,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0198"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18120,7 +18120,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0199"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18144,7 +18144,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0200"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18168,7 +18168,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0201"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18192,7 +18192,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0202"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18216,7 +18216,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0203"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18240,7 +18240,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0204"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18264,7 +18264,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0205"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18288,7 +18288,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0206"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18312,7 +18312,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0207"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18336,7 +18336,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0208"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18360,7 +18360,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0209"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18384,7 +18384,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0210"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18408,7 +18408,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0211"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18432,7 +18432,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0212"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18456,7 +18456,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0213"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18480,7 +18480,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0214"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18504,7 +18504,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0215"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18528,7 +18528,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0216"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18552,7 +18552,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0217"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18576,7 +18576,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0218"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18600,7 +18600,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0219"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18624,7 +18624,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0220"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18648,7 +18648,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0221"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18672,7 +18672,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0222"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18696,7 +18696,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0223"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18720,7 +18720,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0224"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18744,7 +18744,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0225"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18768,7 +18768,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0226"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18792,7 +18792,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0227"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18816,7 +18816,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0228"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18840,7 +18840,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0229"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18864,7 +18864,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0230"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18888,7 +18888,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0231"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18912,7 +18912,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0232"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18936,7 +18936,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0233"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18960,7 +18960,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0234"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -18984,7 +18984,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0235"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19008,7 +19008,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0236"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19032,7 +19032,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0237"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19056,7 +19056,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0238"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19080,7 +19080,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0239"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19104,7 +19104,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0240"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19128,7 +19128,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0241"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19152,7 +19152,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0242"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19176,7 +19176,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0243"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19200,7 +19200,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0244"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19224,7 +19224,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0245"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19248,7 +19248,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0246"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19272,7 +19272,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0247"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19296,7 +19296,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0248"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19320,7 +19320,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0249"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19344,7 +19344,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0250"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19368,7 +19368,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0251"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19392,7 +19392,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0252"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19416,7 +19416,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0253"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19440,7 +19440,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0254"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19464,7 +19464,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0255"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19488,7 +19488,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0256"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19512,7 +19512,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0257"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19536,7 +19536,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0258"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19560,7 +19560,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0259"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19584,7 +19584,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0260"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19608,7 +19608,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0261"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19632,7 +19632,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0262"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19656,7 +19656,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0263"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19680,7 +19680,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0264"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19704,7 +19704,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0265"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19728,7 +19728,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0266"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19752,7 +19752,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0267"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19776,7 +19776,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0268"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19800,7 +19800,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0269"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19824,7 +19824,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0270"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19848,7 +19848,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0271"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19872,7 +19872,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0272"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19896,7 +19896,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0273"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19920,7 +19920,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0274"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19944,7 +19944,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0275"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19968,7 +19968,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0276"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -19992,7 +19992,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0277"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20016,7 +20016,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0278"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20040,7 +20040,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0279"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20064,7 +20064,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0280"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20088,7 +20088,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0281"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20112,7 +20112,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0282"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20136,7 +20136,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0283"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20160,7 +20160,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0284"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20184,7 +20184,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0285"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20208,7 +20208,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0286"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20232,7 +20232,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0287"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20256,7 +20256,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0288"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20280,7 +20280,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0289"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20304,7 +20304,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0290"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20328,7 +20328,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0291"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20352,7 +20352,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0292"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20376,7 +20376,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0293"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20400,7 +20400,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0294"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20424,7 +20424,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0295"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20448,7 +20448,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0296"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20472,7 +20472,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0297"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20496,7 +20496,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0298"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20520,7 +20520,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0299"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20544,7 +20544,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0300"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20568,7 +20568,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0301"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20592,7 +20592,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0302"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20616,7 +20616,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0303"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20640,7 +20640,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0304"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20664,7 +20664,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0305"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20688,7 +20688,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0306"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20712,7 +20712,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0307"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20736,7 +20736,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0308"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20760,7 +20760,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0309"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20784,7 +20784,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0310"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20808,7 +20808,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0311"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20832,7 +20832,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0312"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20856,7 +20856,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0313"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20880,7 +20880,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0314"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20904,7 +20904,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0315"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20928,7 +20928,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0316"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20952,7 +20952,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0317"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -20976,7 +20976,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0318"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21000,7 +21000,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0319"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21024,7 +21024,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0320"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21048,7 +21048,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0321"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21072,7 +21072,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0322"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21096,7 +21096,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0323"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21120,7 +21120,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0324"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21144,7 +21144,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0325"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21168,7 +21168,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0326"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21192,7 +21192,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0327"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21216,7 +21216,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0328"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21240,7 +21240,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0329"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21264,7 +21264,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0330"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21288,7 +21288,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0331"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21312,7 +21312,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0332"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21336,7 +21336,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0333"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21360,7 +21360,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0334"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21384,7 +21384,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0335"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21408,7 +21408,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0336"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21432,7 +21432,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0337"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21456,7 +21456,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0338"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21480,7 +21480,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0339"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21504,7 +21504,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0340"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21528,7 +21528,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0341"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21552,7 +21552,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0342"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21576,7 +21576,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0343"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21600,7 +21600,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0344"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21624,7 +21624,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0345"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21648,7 +21648,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0346"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21672,7 +21672,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0347"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21696,7 +21696,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0348"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21720,7 +21720,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0349"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21744,7 +21744,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0350"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21768,7 +21768,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0351"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21792,7 +21792,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0352"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21816,7 +21816,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0353"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21840,7 +21840,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0354"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21864,7 +21864,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0355"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21888,7 +21888,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0356"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21912,7 +21912,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0357"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21936,7 +21936,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0358"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21960,7 +21960,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0359"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -21984,7 +21984,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0360"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22008,7 +22008,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0361"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22032,7 +22032,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0362"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22056,7 +22056,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0363"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22080,7 +22080,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0364"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22104,7 +22104,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0365"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22128,7 +22128,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0366"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22152,7 +22152,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0367"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22176,7 +22176,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0368"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22200,7 +22200,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0369"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22224,7 +22224,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0370"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22248,7 +22248,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0371"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22272,7 +22272,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0372"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22296,7 +22296,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0373"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22320,7 +22320,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0374"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22344,7 +22344,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0375"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22368,7 +22368,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0376"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22392,7 +22392,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0377"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22416,7 +22416,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0378"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22440,7 +22440,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0379"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22464,7 +22464,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0380"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22488,7 +22488,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0381"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22512,7 +22512,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0382"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22536,7 +22536,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0383"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22560,7 +22560,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0384"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22584,7 +22584,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0385"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22608,7 +22608,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0386"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22632,7 +22632,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0387"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22656,7 +22656,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0388"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22680,7 +22680,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0389"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22704,7 +22704,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0390"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22728,7 +22728,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0391"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22752,7 +22752,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0392"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22776,7 +22776,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0393"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22800,7 +22800,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0394"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22824,7 +22824,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0395"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22848,7 +22848,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0396"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22872,7 +22872,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0397"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22896,7 +22896,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0398"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22920,7 +22920,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0399"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22944,7 +22944,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0400"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22968,7 +22968,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0401"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -22992,7 +22992,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0402"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23016,7 +23016,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0403"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23040,7 +23040,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0404"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23064,7 +23064,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0405"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23088,7 +23088,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0406"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23112,7 +23112,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0407"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23136,7 +23136,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0408"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23160,7 +23160,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0409"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23184,7 +23184,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0410"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23208,7 +23208,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0411"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23232,7 +23232,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0412"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23256,7 +23256,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0413"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23280,7 +23280,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0414"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23304,7 +23304,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0415"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23328,7 +23328,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0416"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23352,7 +23352,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0417"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23376,7 +23376,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0418"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23400,7 +23400,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0419"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23424,7 +23424,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0420"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23448,7 +23448,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0421"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23472,7 +23472,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0422"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23496,7 +23496,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0423"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23520,7 +23520,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_therien_0424"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			355,
 			198
@@ -23544,7 +23544,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23568,7 +23568,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23592,7 +23592,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23616,7 +23616,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23640,7 +23640,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23664,7 +23664,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23688,7 +23688,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23712,7 +23712,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23736,7 +23736,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23760,7 +23760,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23784,7 +23784,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23808,7 +23808,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23832,7 +23832,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23856,7 +23856,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23880,7 +23880,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23904,7 +23904,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0016"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23928,7 +23928,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0017"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23952,7 +23952,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0018"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -23976,7 +23976,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0019"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -24000,7 +24000,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_floor_fx_0020"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			275,
 			230
@@ -24024,7 +24024,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24048,7 +24048,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24072,7 +24072,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24096,7 +24096,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24120,7 +24120,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24144,7 +24144,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24168,7 +24168,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24192,7 +24192,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24216,7 +24216,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24240,7 +24240,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24264,7 +24264,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24288,7 +24288,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24312,7 +24312,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24336,7 +24336,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24360,7 +24360,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24384,7 +24384,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0016"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24408,7 +24408,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0017"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24432,7 +24432,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0018"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24456,7 +24456,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0019"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24480,7 +24480,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0020"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24504,7 +24504,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0021"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24528,7 +24528,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0022"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24552,7 +24552,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0023"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24576,7 +24576,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0024"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24600,7 +24600,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0025"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24624,7 +24624,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0026"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24648,7 +24648,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0027"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24672,7 +24672,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0028"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24696,7 +24696,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0029"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24720,7 +24720,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0030"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24744,7 +24744,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0031"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24768,7 +24768,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0032"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24792,7 +24792,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0033"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24816,7 +24816,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0034"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24840,7 +24840,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0035"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24864,7 +24864,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0036"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24888,7 +24888,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0037"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24912,7 +24912,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0038"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24936,7 +24936,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0039"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24960,7 +24960,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0040"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -24984,7 +24984,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0041"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25008,7 +25008,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0042"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25032,7 +25032,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0043"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25056,7 +25056,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0044"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25080,7 +25080,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0045"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25104,7 +25104,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0046"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25128,7 +25128,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0047"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25152,7 +25152,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0048"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25176,7 +25176,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0049"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25200,7 +25200,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0050"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25224,7 +25224,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0051"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25248,7 +25248,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0052"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25272,7 +25272,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0053"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25296,7 +25296,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0054"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25320,7 +25320,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0055"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25344,7 +25344,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0056"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25368,7 +25368,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0057"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25392,7 +25392,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0058"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25416,7 +25416,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0059"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25440,7 +25440,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0060"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25464,7 +25464,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0061"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25488,7 +25488,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0062"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25512,7 +25512,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0063"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25536,7 +25536,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0064"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25560,7 +25560,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0065"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25584,7 +25584,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0066"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25608,7 +25608,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0067"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25632,7 +25632,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0068"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25656,7 +25656,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0069"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25680,7 +25680,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0070"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25704,7 +25704,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0071"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25728,7 +25728,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0072"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25752,7 +25752,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0073"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25776,7 +25776,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0074"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25800,7 +25800,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0075"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25824,7 +25824,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0076"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25848,7 +25848,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0077"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25872,7 +25872,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0078"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25896,7 +25896,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0079"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25920,7 +25920,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0080"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25944,7 +25944,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0081"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25968,7 +25968,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0082"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -25992,7 +25992,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0083"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -26016,7 +26016,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0084"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -26040,7 +26040,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0085"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -26064,7 +26064,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0086"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -26088,7 +26088,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0087"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -26112,7 +26112,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_big_0088"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			198,
 			193
@@ -26136,7 +26136,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0001"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26160,7 +26160,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0002"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26184,7 +26184,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0003"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26208,7 +26208,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0004"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26232,7 +26232,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0005"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26256,7 +26256,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0006"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26280,7 +26280,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0007"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26304,7 +26304,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0008"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26328,7 +26328,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0009"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26352,7 +26352,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0010"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26376,7 +26376,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0011"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26400,7 +26400,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0012"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26424,7 +26424,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0013"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26448,7 +26448,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0014"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26472,7 +26472,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0015"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26496,7 +26496,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0016"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26520,7 +26520,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0017"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26544,7 +26544,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0018"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26568,7 +26568,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0019"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26592,7 +26592,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0020"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26616,7 +26616,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0021"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26640,7 +26640,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0022"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26664,7 +26664,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0023"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26688,7 +26688,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0024"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26712,7 +26712,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0025"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26736,7 +26736,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0026"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26760,7 +26760,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0027"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26784,7 +26784,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0028"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26808,7 +26808,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0029"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26832,7 +26832,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0030"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26856,7 +26856,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0031"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26880,7 +26880,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0032"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26904,7 +26904,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0033"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26928,7 +26928,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0034"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26952,7 +26952,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0035"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -26976,7 +26976,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0036"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27000,7 +27000,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0037"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27024,7 +27024,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0038"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27048,7 +27048,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0039"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27072,7 +27072,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0040"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27096,7 +27096,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0041"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27120,7 +27120,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0042"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27144,7 +27144,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0043"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27168,7 +27168,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0044"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27192,7 +27192,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0045"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27216,7 +27216,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0046"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27240,7 +27240,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0047"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27264,7 +27264,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0048"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27288,7 +27288,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0049"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27312,7 +27312,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0050"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27336,7 +27336,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0051"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27360,7 +27360,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0052"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27384,7 +27384,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0053"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27408,7 +27408,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0054"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27432,7 +27432,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0055"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27456,7 +27456,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0056"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27480,7 +27480,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0057"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27504,7 +27504,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0058"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27528,7 +27528,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0059"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27552,7 +27552,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0060"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27576,7 +27576,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0061"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27600,7 +27600,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0062"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27624,7 +27624,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0063"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27648,7 +27648,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0064"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27672,7 +27672,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0065"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27696,7 +27696,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0066"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27720,7 +27720,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0067"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27744,7 +27744,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0068"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27768,7 +27768,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0069"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27792,7 +27792,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0070"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27816,7 +27816,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0071"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27840,7 +27840,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0072"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27864,7 +27864,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0073"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27888,7 +27888,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0074"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27912,7 +27912,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0075"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27936,7 +27936,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0076"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27960,7 +27960,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0077"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -27984,7 +27984,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0078"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -28008,7 +28008,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0079"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -28032,7 +28032,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0080"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -28056,7 +28056,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0081"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -28080,7 +28080,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0082"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -28104,7 +28104,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0083"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -28128,7 +28128,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0084"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -28152,7 +28152,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0085"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -28176,7 +28176,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0086"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -28200,7 +28200,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0087"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150
@@ -28224,7 +28224,7 @@ return {
 		alias = {},
 	},
 	["hero_therien_void_prison_fx_small_0088"] = {
-		a_name = "go_hero_space_elf-1.png",
+		a_name = "go_hero_space_elf-1.dds",
 		size = {
 			153,
 			150

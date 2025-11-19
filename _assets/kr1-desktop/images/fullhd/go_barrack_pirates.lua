@@ -1,7 +1,7 @@
 -- chunkname: @./kr2-desktop/assets/images/fullhd/go_barrack_pirates.lua
 return {
     fatPirate_0001 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {79, 53, 82, 26},
         a_size = {1024, 1024},
@@ -9,7 +9,7 @@ return {
         alias = {}
     },
     fatPirate_0002 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {79, 58, 83, 26},
         a_size = {1024, 1024},
@@ -17,7 +17,7 @@ return {
         alias = {"fatPirate_0003"}
     },
     fatPirate_0004 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {79, 55, 82, 26},
         a_size = {1024, 1024},
@@ -25,7 +25,7 @@ return {
         alias = {"fatPirate_0005"}
     },
     fatPirate_0006 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {80, 51, 82, 26},
         a_size = {1024, 1024},
@@ -33,7 +33,7 @@ return {
         alias = {"fatPirate_0007"}
     },
     fatPirate_0008 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {80, 51, 82, 26},
         a_size = {1024, 1024},
@@ -41,7 +41,7 @@ return {
         alias = {}
     },
     fatPirate_0009 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {79, 52, 81, 26},
         a_size = {1024, 1024},
@@ -49,7 +49,7 @@ return {
         alias = {"fatPirate_0010"}
     },
     fatPirate_0011 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {78, 58, 81, 26},
         a_size = {1024, 1024},
@@ -57,7 +57,7 @@ return {
         alias = {"fatPirate_0012"}
     },
     fatPirate_0013 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {78, 59, 79, 26},
         a_size = {1024, 1024},
@@ -65,7 +65,7 @@ return {
         alias = {"fatPirate_0014"}
     },
     fatPirate_0015 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {79, 55, 80, 26},
         a_size = {1024, 1024},
@@ -73,7 +73,7 @@ return {
         alias = {"fatPirate_0016"}
     },
     fatPirate_0017 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {79, 51, 81, 26},
         a_size = {1024, 1024},
@@ -81,7 +81,7 @@ return {
         alias = {"fatPirate_0018"}
     },
     fatPirate_0019 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {81, 51, 82, 26},
         a_size = {1024, 1024},
@@ -89,7 +89,7 @@ return {
         alias = {}
     },
     fatPirate_0020 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {83, 52, 82, 26},
         a_size = {1024, 1024},
@@ -97,7 +97,7 @@ return {
         alias = {"fatPirate_0021"}
     },
     fatPirate_0022 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {81, 59, 83, 26},
         a_size = {1024, 1024},
@@ -105,7 +105,7 @@ return {
         alias = {"fatPirate_0023"}
     },
     fatPirate_0024 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {79, 53, 82, 26},
         a_size = {1024, 1024},
@@ -113,7 +113,7 @@ return {
         alias = {"fatPirate_0046", "fatPirate_0047"}
     },
     fatPirate_0025 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {46, 63, 94, 26},
         a_size = {1024, 1024},
@@ -121,7 +121,7 @@ return {
         alias = {"fatPirate_0026"}
     },
     fatPirate_0027 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {46, 63, 94, 26},
         a_size = {1024, 1024},
@@ -129,7 +129,7 @@ return {
         alias = {"fatPirate_0028"}
     },
     fatPirate_0029 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {45, 63, 94, 26},
         a_size = {1024, 1024},
@@ -137,7 +137,7 @@ return {
         alias = {"fatPirate_0030"}
     },
     fatPirate_0031 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {94, 27, 35, 22},
         a_size = {1024, 1024},
@@ -145,7 +145,7 @@ return {
         alias = {"fatPirate_0032"}
     },
     fatPirate_0033 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {94, 27, 35, 16},
         a_size = {1024, 1024},
@@ -153,7 +153,7 @@ return {
         alias = {"fatPirate_0034"}
     },
     fatPirate_0035 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {94, 38, 29, 12},
         a_size = {1024, 1024},
@@ -161,7 +161,7 @@ return {
         alias = {"fatPirate_0036"}
     },
     fatPirate_0037 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {94, 79, 22, 9},
         a_size = {1024, 1024},
@@ -169,7 +169,7 @@ return {
         alias = {"fatPirate_0038"}
     },
     fatPirate_0039 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {94, 79, 39, 26},
         a_size = {1024, 1024},
@@ -177,7 +177,7 @@ return {
         alias = {"fatPirate_0040", "fatPirate_0041", "fatPirate_0042", "fatPirate_0043"}
     },
     fatPirate_0044 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {94, 77, 40, 26},
         a_size = {1024, 1024},
@@ -185,7 +185,7 @@ return {
         alias = {"fatPirate_0045"}
     },
     fatPirate_0048 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {91, 24, 70, 25},
         a_size = {1024, 1024},
@@ -193,7 +193,7 @@ return {
         alias = {"fatPirate_0049"}
     },
     fatPirate_0050 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {92, 23, 54, 25},
         a_size = {1024, 1024},
@@ -201,7 +201,7 @@ return {
         alias = {"fatPirate_0051"}
     },
     fatPirate_0052 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {92, 37, 38, 25},
         a_size = {1024, 1024},
@@ -209,7 +209,7 @@ return {
         alias = {"fatPirate_0053"}
     },
     fatPirate_0054 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {93, 70, 34, 25},
         a_size = {1024, 1024},
@@ -217,7 +217,7 @@ return {
         alias = {"fatPirate_0055"}
     },
     fatPirate_0056 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {93, 60, 34, 25},
         a_size = {1024, 1024},
@@ -225,7 +225,7 @@ return {
         alias = {"fatPirate_0057"}
     },
     fatPirate_0058 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {93, 68, 34, 25},
         a_size = {1024, 1024},
@@ -233,7 +233,7 @@ return {
         alias = {"fatPirate_0059"}
     },
     fatPirate_0060 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {107, 63, 34, 16},
         a_size = {1024, 1024},
@@ -241,7 +241,7 @@ return {
         alias = {"fatPirate_0061"}
     },
     fatPirate_0062 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {108, 65, 34, 16},
         a_size = {1024, 1024},
@@ -249,7 +249,7 @@ return {
         alias = {"fatPirate_0063"}
     },
     fatPirate_0064 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {108, 65, 34, 15},
         a_size = {1024, 1024},
@@ -257,7 +257,7 @@ return {
         alias = {"fatPirate_0065"}
     },
     fatPirate_0066 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {225, 152},
         trim = {109, 65, 34, 16},
         a_size = {1024, 1024},
@@ -265,7 +265,7 @@ return {
         alias = {"fatPirate_0067"}
     },
     merc_camp_pirates_0001 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {160, 138},
         trim = {13, 0, 10, 0},
         a_size = {1024, 1024},
@@ -273,7 +273,7 @@ return {
         alias = {}
     },
     merc_camp_pirates_0002 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {160, 138},
         trim = {13, 0, 10, 0},
         a_size = {1024, 1024},
@@ -281,7 +281,7 @@ return {
         alias = {}
     },
     merc_camp_pirates_0003 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {160, 138},
         trim = {13, 0, 10, 0},
         a_size = {1024, 1024},
@@ -289,7 +289,7 @@ return {
         alias = {}
     },
     merc_camp_pirates_0004 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {160, 138},
         trim = {13, 0, 10, 0},
         a_size = {1024, 1024},
@@ -297,7 +297,7 @@ return {
         alias = {}
     },
     pirateTower = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {115, 163},
         trim = {0, 6, 16, 4},
         a_size = {1024, 1024},
@@ -305,7 +305,7 @@ return {
         alias = {}
     },
     pirateTower_bird_0001 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {42, 42},
         trim = {11, 8, 8, 12},
         a_size = {1024, 1024},
@@ -313,7 +313,7 @@ return {
         alias = {"pirateTower_bird_0002"}
     },
     pirateTower_bird_0003 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {42, 42},
         trim = {10, 8, 10, 11},
         a_size = {1024, 1024},
@@ -321,7 +321,7 @@ return {
         alias = {"pirateTower_bird_0004"}
     },
     pirateTower_bird_0005 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {42, 42},
         trim = {10, 8, 10, 11},
         a_size = {1024, 1024},
@@ -329,7 +329,7 @@ return {
         alias = {"pirateTower_bird_0006"}
     },
     pirateTower_bird_0007 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {42, 42},
         trim = {10, 9, 8, 13},
         a_size = {1024, 1024},
@@ -337,7 +337,7 @@ return {
         alias = {"pirateTower_bird_0008"}
     },
     pirateTower_bird_0009 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {42, 42},
         trim = {10, 7, 6, 12},
         a_size = {1024, 1024},
@@ -345,7 +345,7 @@ return {
         alias = {"pirateTower_bird_0010"}
     },
     pirateTower_bird_0011 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {42, 42},
         trim = {11, 3, 9, 11},
         a_size = {1024, 1024},
@@ -353,7 +353,7 @@ return {
         alias = {"pirateTower_bird_0012"}
     },
     pirateTower_bird_0013 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {42, 42},
         trim = {10, 3, 7, 1},
         a_size = {1024, 1024},
@@ -361,7 +361,7 @@ return {
         alias = {"pirateTower_bird_0014"}
     },
     pirateTower_bird_0015 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {42, 42},
         trim = {10, 1, 8, 3},
         a_size = {1024, 1024},
@@ -369,7 +369,7 @@ return {
         alias = {}
     },
     pirateTower_bird_0016 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {42, 42},
         trim = {9, 4, 7, 4},
         a_size = {1024, 1024},
@@ -377,7 +377,7 @@ return {
         alias = {"pirateTower_bird_0017"}
     },
     pirateTower_bird_0018 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {42, 42},
         trim = {9, 1, 6, 2},
         a_size = {1024, 1024},
@@ -385,7 +385,7 @@ return {
         alias = {"pirateTower_bird_0019"}
     },
     pirateTower_bomb = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {17, 17},
         trim = {0, 0, 0, 0},
         a_size = {1024, 1024},
@@ -393,7 +393,7 @@ return {
         alias = {}
     },
     pirateTower_flag_0001 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {115, 163},
         trim = {58, 3, 19, 125},
         a_size = {1024, 1024},
@@ -401,7 +401,7 @@ return {
         alias = {"pirateTower_flag_0002", "pirateTower_flag_0003"}
     },
     pirateTower_flag_0004 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {115, 163},
         trim = {58, 6, 19, 127},
         a_size = {1024, 1024},
@@ -409,7 +409,7 @@ return {
         alias = {"pirateTower_flag_0005", "pirateTower_flag_0006"}
     },
     pirateTower_flag_0007 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {115, 163},
         trim = {58, 4, 25, 125},
         a_size = {1024, 1024},
@@ -417,7 +417,7 @@ return {
         alias = {"pirateTower_flag_0008", "pirateTower_flag_0009"}
     },
     pirateTower_flag_0010 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {115, 163},
         trim = {58, 7, 25, 124},
         a_size = {1024, 1024},
@@ -425,7 +425,7 @@ return {
         alias = {"pirateTower_flag_0011", "pirateTower_flag_0012"}
     },
     pirateTower_flag_0013 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {115, 163},
         trim = {58, 6, 21, 125},
         a_size = {1024, 1024},
@@ -433,7 +433,7 @@ return {
         alias = {"pirateTower_flag_0014", "pirateTower_flag_0015"}
     },
     pirateTower_over = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {154, 87},
         trim = {12, 10, 25, 0},
         a_size = {1024, 1024},
@@ -441,7 +441,7 @@ return {
         alias = {}
     },
     pirateTower_shooter_0001 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {10, 4, 4, 1},
         a_size = {1024, 1024},
@@ -449,7 +449,7 @@ return {
         alias = {"pirateTower_shooter_0002"}
     },
     pirateTower_shooter_0003 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {11, 4, 8, 1},
         a_size = {1024, 1024},
@@ -457,7 +457,7 @@ return {
         alias = {"pirateTower_shooter_0004"}
     },
     pirateTower_shooter_0005 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {11, 5, 10, 1},
         a_size = {1024, 1024},
@@ -465,7 +465,7 @@ return {
         alias = {"pirateTower_shooter_0006"}
     },
     pirateTower_shooter_0007 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {10, 6, 11, 1},
         a_size = {1024, 1024},
@@ -474,7 +474,7 @@ return {
                  "pirateTower_shooter_0011", "pirateTower_shooter_0012", "pirateTower_shooter_0013"}
     },
     pirateTower_shooter_0014 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {7, 3, 16, 1},
         a_size = {1024, 1024},
@@ -482,7 +482,7 @@ return {
         alias = {"pirateTower_shooter_0015"}
     },
     pirateTower_shooter_0016 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {5, 7, 18, 1},
         a_size = {1024, 1024},
@@ -490,7 +490,7 @@ return {
         alias = {"pirateTower_shooter_0017"}
     },
     pirateTower_shooter_0018 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {4, 5, 18, 1},
         a_size = {1024, 1024},
@@ -498,7 +498,7 @@ return {
         alias = {"pirateTower_shooter_0019"}
     },
     pirateTower_shooter_0020 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {4, 6, 18, 1},
         a_size = {1024, 1024},
@@ -506,7 +506,7 @@ return {
         alias = {"pirateTower_shooter_0021"}
     },
     pirateTower_shooter_0022 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {5, 5, 17, 1},
         a_size = {1024, 1024},
@@ -514,7 +514,7 @@ return {
         alias = {"pirateTower_shooter_0023"}
     },
     pirateTower_shooter_0024 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {10, 5, 13, 1},
         a_size = {1024, 1024},
@@ -522,7 +522,7 @@ return {
         alias = {"pirateTower_shooter_0025"}
     },
     pirateTower_shooter_0026 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {9, 4, 8, 1},
         a_size = {1024, 1024},
@@ -530,7 +530,7 @@ return {
         alias = {"pirateTower_shooter_0027"}
     },
     pirateTower_shooter_0028 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {10, 4, 4, 1},
         a_size = {1024, 1024},
@@ -540,7 +540,7 @@ return {
                  "pirateTower_shooter_0035"}
     },
     pirateTower_shooter_0036 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {11, 4, 5, 1},
         a_size = {1024, 1024},
@@ -551,7 +551,7 @@ return {
                  "pirateTower_shooter_0068", "pirateTower_shooter_0069", "pirateTower_shooter_0070"}
     },
     pirateTower_shooter_0038 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {10, 3, 8, 1},
         a_size = {1024, 1024},
@@ -559,7 +559,7 @@ return {
         alias = {"pirateTower_shooter_0039"}
     },
     pirateTower_shooter_0040 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {9, 3, 8, 1},
         a_size = {1024, 1024},
@@ -567,7 +567,7 @@ return {
         alias = {"pirateTower_shooter_0041"}
     },
     pirateTower_shooter_0042 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {9, 3, 8, 1},
         a_size = {1024, 1024},
@@ -576,7 +576,7 @@ return {
                  "pirateTower_shooter_0046", "pirateTower_shooter_0047", "pirateTower_shooter_0048"}
     },
     pirateTower_shooter_0049 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {3, 4, 16, 1},
         a_size = {1024, 1024},
@@ -584,7 +584,7 @@ return {
         alias = {"pirateTower_shooter_0050"}
     },
     pirateTower_shooter_0051 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {2, 4, 17, 1},
         a_size = {1024, 1024},
@@ -592,7 +592,7 @@ return {
         alias = {"pirateTower_shooter_0052"}
     },
     pirateTower_shooter_0053 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {1, 6, 18, 1},
         a_size = {1024, 1024},
@@ -600,7 +600,7 @@ return {
         alias = {"pirateTower_shooter_0054"}
     },
     pirateTower_shooter_0055 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {3, 3, 15, 1},
         a_size = {1024, 1024},
@@ -608,7 +608,7 @@ return {
         alias = {"pirateTower_shooter_0056"}
     },
     pirateTower_shooter_0057 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {4, 5, 13, 1},
         a_size = {1024, 1024},
@@ -616,7 +616,7 @@ return {
         alias = {"pirateTower_shooter_0058"}
     },
     pirateTower_shooter_0059 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {48, 34},
         trim = {7, 3, 10, 1},
         a_size = {1024, 1024},
@@ -624,7 +624,7 @@ return {
         alias = {}
     },
     soldier_pirate_cap_0001 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {21, 8, 21, 8},
         a_size = {1024, 1024},
@@ -632,7 +632,7 @@ return {
         alias = {}
     },
     soldier_pirate_cap_0002 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {21, 8, 21, 8},
         a_size = {1024, 1024},
@@ -640,7 +640,7 @@ return {
         alias = {}
     },
     soldier_pirate_cap_0003 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {21, 6, 21, 8},
         a_size = {1024, 1024},
@@ -648,7 +648,7 @@ return {
         alias = {}
     },
     soldier_pirate_cap_0004 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {21, 5, 21, 8},
         a_size = {1024, 1024},
@@ -656,7 +656,7 @@ return {
         alias = {}
     },
     soldier_pirate_cap_0005 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {21, 7, 21, 8},
         a_size = {1024, 1024},
@@ -664,7 +664,7 @@ return {
         alias = {}
     },
     soldier_pirate_cap_0006 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {21, 10, 21, 8},
         a_size = {1024, 1024},
@@ -672,7 +672,7 @@ return {
         alias = {}
     },
     soldier_pirate_cap_0007 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {1, 7, 24, 8},
         a_size = {1024, 1024},
@@ -680,7 +680,7 @@ return {
         alias = {"soldier_pirate_cap_0008", "soldier_pirate_cap_0009", "soldier_pirate_cap_0010"}
     },
     soldier_pirate_cap_0011 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {15, 3, 3, 8},
         a_size = {1024, 1024},
@@ -688,7 +688,7 @@ return {
         alias = {"soldier_pirate_cap_0012", "soldier_pirate_cap_0013"}
     },
     soldier_pirate_cap_0014 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {23, 9, 5, 8},
         a_size = {1024, 1024},
@@ -696,7 +696,7 @@ return {
         alias = {"soldier_pirate_cap_0015", "soldier_pirate_cap_0016"}
     },
     soldier_pirate_cap_0017 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {21, 8, 22, 8},
         a_size = {1024, 1024},
@@ -704,7 +704,7 @@ return {
         alias = {}
     },
     soldier_pirate_cap_0018 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {5, 7, 28, 8},
         a_size = {1024, 1024},
@@ -712,7 +712,7 @@ return {
         alias = {}
     },
     soldier_pirate_cap_0019 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {2, 6, 31, 8},
         a_size = {1024, 1024},
@@ -720,7 +720,7 @@ return {
         alias = {}
     },
     soldier_pirate_cap_0020 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {0, 8, 33, 8},
         a_size = {1024, 1024},
@@ -728,7 +728,7 @@ return {
         alias = {}
     },
     soldier_pirate_cap_0021 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {4, 20, 34, 1},
         a_size = {1024, 1024},
@@ -736,7 +736,7 @@ return {
         alias = {}
     },
     soldier_pirate_cap_0022 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {3, 28, 34, 2},
         a_size = {1024, 1024},
@@ -744,7 +744,7 @@ return {
         alias = {"soldier_pirate_cap_0023"}
     },
     soldier_pirate_cap_0024 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {73, 53},
         trim = {2, 25, 34, 2},
         a_size = {1024, 1024},
@@ -752,7 +752,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0001 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {31, 12, 30, 5},
         a_size = {1024, 1024},
@@ -760,7 +760,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0002 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {31, 13, 30, 5},
         a_size = {1024, 1024},
@@ -768,7 +768,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0003 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {31, 11, 31, 5},
         a_size = {1024, 1024},
@@ -776,7 +776,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0004 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {31, 9, 31, 5},
         a_size = {1024, 1024},
@@ -784,7 +784,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0005 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {31, 11, 31, 5},
         a_size = {1024, 1024},
@@ -792,7 +792,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0006 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {31, 15, 31, 5},
         a_size = {1024, 1024},
@@ -800,7 +800,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0007 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {21, 12, 32, 5},
         a_size = {1024, 1024},
@@ -808,7 +808,7 @@ return {
         alias = {"soldier_pirate_flamer_0008"}
     },
     soldier_pirate_flamer_0009 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {20, 12, 32, 5},
         a_size = {1024, 1024},
@@ -816,7 +816,7 @@ return {
         alias = {"soldier_pirate_flamer_0010"}
     },
     soldier_pirate_flamer_0011 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {19, 13, 32, 5},
         a_size = {1024, 1024},
@@ -824,7 +824,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0012 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {32, 13, 30, 5},
         a_size = {1024, 1024},
@@ -832,7 +832,7 @@ return {
         alias = {"soldier_pirate_flamer_0013"}
     },
     soldier_pirate_flamer_0014 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {32, 14, 29, 5},
         a_size = {1024, 1024},
@@ -840,7 +840,7 @@ return {
         alias = {"soldier_pirate_flamer_0015"}
     },
     soldier_pirate_flamer_0016 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {32, 13, 29, 5},
         a_size = {1024, 1024},
@@ -848,7 +848,7 @@ return {
         alias = {"soldier_pirate_flamer_0017", "soldier_pirate_flamer_0018"}
     },
     soldier_pirate_flamer_0019 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {29, 13, 28, 5},
         a_size = {1024, 1024},
@@ -856,7 +856,7 @@ return {
         alias = {"soldier_pirate_flamer_0020"}
     },
     soldier_pirate_flamer_0021 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {28, 13, 29, 5},
         a_size = {1024, 1024},
@@ -864,7 +864,7 @@ return {
         alias = {"soldier_pirate_flamer_0022"}
     },
     soldier_pirate_flamer_0023 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {28, 4, 14, 5},
         a_size = {1024, 1024},
@@ -872,7 +872,7 @@ return {
         alias = {"soldier_pirate_flamer_0024", "soldier_pirate_flamer_0025"}
     },
     soldier_pirate_flamer_0026 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {30, 13, 3, 5},
         a_size = {1024, 1024},
@@ -880,7 +880,7 @@ return {
         alias = {"soldier_pirate_flamer_0027"}
     },
     soldier_pirate_flamer_0028 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {30, 14, 3, 5},
         a_size = {1024, 1024},
@@ -888,7 +888,7 @@ return {
         alias = {"soldier_pirate_flamer_0029"}
     },
     soldier_pirate_flamer_0030 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {30, 13, 4, 5},
         a_size = {1024, 1024},
@@ -896,7 +896,7 @@ return {
         alias = {"soldier_pirate_flamer_0031"}
     },
     soldier_pirate_flamer_0032 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {30, 14, 6, 5},
         a_size = {1024, 1024},
@@ -904,7 +904,7 @@ return {
         alias = {"soldier_pirate_flamer_0033"}
     },
     soldier_pirate_flamer_0034 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {30, 13, 5, 5},
         a_size = {1024, 1024},
@@ -912,7 +912,7 @@ return {
         alias = {"soldier_pirate_flamer_0035"}
     },
     soldier_pirate_flamer_0036 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {30, 13, 3, 5},
         a_size = {1024, 1024},
@@ -920,7 +920,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0037 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {30, 14, 4, 5},
         a_size = {1024, 1024},
@@ -928,7 +928,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0038 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {31, 12, 12, 5},
         a_size = {1024, 1024},
@@ -936,7 +936,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0039 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {20, 12, 38, 6},
         a_size = {1024, 1024},
@@ -944,7 +944,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0040 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {17, 11, 41, 6},
         a_size = {1024, 1024},
@@ -952,7 +952,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0041 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {14, 13, 42, 6},
         a_size = {1024, 1024},
@@ -960,7 +960,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0042 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {11, 27, 41, 1},
         a_size = {1024, 1024},
@@ -968,7 +968,7 @@ return {
         alias = {}
     },
     soldier_pirate_flamer_0043 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {10, 33, 41, 1},
         a_size = {1024, 1024},
@@ -976,7 +976,7 @@ return {
         alias = {"soldier_pirate_flamer_0044"}
     },
     soldier_pirate_flamer_0045 = {
-        a_name = "go_barrack_pirates-1.png",
+        a_name = "go_barrack_pirates-1.dds",
         size = {87, 51},
         trim = {9, 30, 41, 1},
         a_size = {1024, 1024},

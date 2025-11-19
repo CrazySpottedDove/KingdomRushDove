@@ -1,6 +1,6 @@
 return {
 	["necromancer_tower_bone_golem_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0019"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0020"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0021"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0022"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0023"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0024"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0025"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0026"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0027"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0028"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0029"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0030"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0031"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0032"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0033"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0034"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0035"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0036"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0037"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0038"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0039"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0040"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0041"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0042"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0043"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0044"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0045"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0046"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0047"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0048"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0049"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0050"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0051"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0052"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0053"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0054"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0055"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0056"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0057"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0058"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0059"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0060"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0061"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0062"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0063"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0064"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0065"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0066"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0067"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0068"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0069"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0070"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0071"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0072"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0073"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0074"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0075"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0076"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0077"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0078"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0079"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0080"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0081"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0082"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0083"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0084"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0085"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0086"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0087"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0088"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0089"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0090"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0091"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0092"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0093"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0094"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0095"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0096"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0097"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0098"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0099"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0100"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0101"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0102"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0103"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0104"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0105"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0106"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0107"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0108"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0109"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0110"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0111"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0112"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0113"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0114"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0115"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0116"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0117"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0118"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0119"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0120"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0121"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0122"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0123"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0124"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0125"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0126"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0127"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0128"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0129"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0130"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0131"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0132"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0133"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0134"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0135"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0136"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0137"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0138"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0139"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0140"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0141"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0142"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0143"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0144"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0145"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0146"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0147"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0148"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0149"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0150"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0151"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0152"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0153"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0154"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_bone_golem_0155"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			221
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_build"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			142,
 			82
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0019"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0020"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0021"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0022"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0023"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0024"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0025"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_0026"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			82,
 			82
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0019"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0020"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0021"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0022"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0023"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0024"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0025"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_big_0026"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			110,
 			107
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_decal"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			85,
 			45
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_curse_decal_big"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			119,
 			56
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0019"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0020"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0021"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0022"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0023"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0024"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0025"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0026"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0027"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0028"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0029"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0030"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0031"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0032"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0033"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0034"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0035"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0036"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0037"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0038"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0039"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0040"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0041"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0042"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0043"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0044"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0045"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0046"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0047"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0048"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0049"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0050"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0051"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0052"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0053"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0054"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0055"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0056"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0057"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0058"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0059"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0060"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0061"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0062"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0063"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0064"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0065"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_0066"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			289,
 			227
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_back_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			62
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_back_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			62
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_back_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			62
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_back_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			62
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_back_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			62
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_back_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			62
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_back_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			62
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_back_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			62
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_back_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			62
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_back_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			62
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_back_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			62
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_back_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			62
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_front_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			85
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_front_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			85
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_front_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			85
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_front_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			85
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_front_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			85
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_front_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			85
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_front_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			85
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_front_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			85
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_front_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			85
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_front_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			85
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_front_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			85
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_front_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			159,
 			85
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_side_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			130,
 			79
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_side_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			130,
 			79
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_side_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			130,
 			79
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_side_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			130,
 			79
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_side_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			130,
 			79
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_side_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			130,
 			79
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_side_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			130,
 			79
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_side_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			130,
 			79
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_side_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			130,
 			79
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_side_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			130,
 			79
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_side_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			130,
 			79
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_start_walk_FX_side_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			130,
 			79
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_A_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			76,
 			73
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_A_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			76,
 			73
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_A_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			76,
 			73
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_A_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			76,
 			73
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_A_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			76,
 			73
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_A_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			76,
 			73
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_A_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			76,
 			73
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_A_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			76,
 			73
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_A_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			76,
 			73
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_A_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			76,
 			73
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_A_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			76,
 			73
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_A_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			76,
 			73
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_A_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			76,
 			73
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_B_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			79,
 			90
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_B_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			79,
 			90
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_B_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			79,
 			90
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_B_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			79,
 			90
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_B_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			79,
 			90
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_B_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			79,
 			90
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_B_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			79,
 			90
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_B_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			79,
 			90
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_death_rider_trial_particle_B_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			79,
 			90
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0019"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0020"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0021"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0022"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0023"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0024"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0025"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0026"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0027"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0028"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0029"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0030"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0031"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0032"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0033"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0034"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0035"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0036"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0037"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0038"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0039"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0040"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0041"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0042"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0043"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0044"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0045"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0046"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0047"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0048"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0049"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0050"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0051"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0052"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0053"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0054"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0055"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0056"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0057"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0058"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0059"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0060"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0061"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0062"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0063"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0064"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0065"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0066"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0067"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0068"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0069"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0070"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0071"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0072"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0073"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0074"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0075"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0076"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0077"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0078"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0079"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0080"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0081"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0082"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0083"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0084"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0085"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0086"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0087"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0088"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0089"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0090"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0091"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0092"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0093"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0094"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0095"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0096"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0097"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0098"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0099"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0100"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0101"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0102"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0103"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0104"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0105"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0106"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0107"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0108"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0109"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0110"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0111"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0112"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0113"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0114"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0115"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0116"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0117"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0118"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0119"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0120"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0121"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0122"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0123"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0124"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0125"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0126"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0127"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0128"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0129"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0130"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0131"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0132"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0133"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0134"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0135"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0136"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0137"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0138"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0139"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0140"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0141"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0142"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0143"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0144"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0145"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0146"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0147"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0148"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0149"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0150"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0151"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0152"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0153"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0154"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0155"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0156"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0157"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0158"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0159"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0160"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0161"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0162"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0163"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0164"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0165"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0166"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0167"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0168"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0169"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0170"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0171"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0172"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0173"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0174"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0175"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0176"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0177"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0178"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0179"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0180"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0181"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0182"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0183"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0184"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0185"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0186"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0187"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0188"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0189"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0190"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0191"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0192"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0193"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0194"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0195"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0196"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0197"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0198"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0199"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0200"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0201"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0202"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0203"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0204"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0205"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0206"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0207"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0208"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0209"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0210"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0211"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0212"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0213"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0214"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0215"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0216"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0217"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0218"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0219"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0220"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0221"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0222"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0223"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0224"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0225"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0226"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0227"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0228"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0229"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0230"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0231"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_necromancer_0232"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			215,
 			423
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			167,
 			215
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0019"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0020"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0021"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0022"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0023"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0024"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0025"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0026"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0027"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0028"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0029"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0030"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0031"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0032"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0033"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0034"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0035"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0036"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0037"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0038"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0039"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0040"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0041"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0042"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0043"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0044"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0045"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0046"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0047"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0048"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0049"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0050"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0051"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0052"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0053"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0054"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0055"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0056"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0057"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0058"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0059"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0060"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0061"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0062"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0063"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0064"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0065"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0066"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0067"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0068"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0069"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0070"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0071"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0072"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0073"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0074"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0075"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0076"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0077"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0078"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0079"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0080"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0081"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0082"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0083"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0084"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0085"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0086"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0087"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0088"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0089"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0090"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0091"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0092"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0093"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0094"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0095"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0096"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0097"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0098"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0099"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0100"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0101"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0102"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0103"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0104"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0105"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0106"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0107"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0108"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0109"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0110"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0111"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0112"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0113"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0114"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0115"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0116"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0117"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0118"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0119"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0120"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0121"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0122"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0123"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0124"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0125"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0126"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0127"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0128"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0129"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0130"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0131"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0132"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0133"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0134"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0135"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0136"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0137"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0138"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0139"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0140"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0141"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0142"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0143"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0144"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0145"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0146"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0147"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0148"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17160,7 +17160,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0149"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17184,7 +17184,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0150"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17208,7 +17208,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0151"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17232,7 +17232,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0152"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17256,7 +17256,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0153"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17280,7 +17280,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0154"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17304,7 +17304,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0155"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17328,7 +17328,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0156"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17352,7 +17352,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_FX_0157"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			181,
 			213
@@ -17376,7 +17376,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17400,7 +17400,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17424,7 +17424,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17448,7 +17448,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17472,7 +17472,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17496,7 +17496,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17520,7 +17520,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17544,7 +17544,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17568,7 +17568,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17592,7 +17592,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17616,7 +17616,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17640,7 +17640,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17664,7 +17664,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17688,7 +17688,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17712,7 +17712,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17736,7 +17736,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17760,7 +17760,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17784,7 +17784,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17808,7 +17808,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0019"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17832,7 +17832,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0020"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17856,7 +17856,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0021"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17880,7 +17880,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0022"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17904,7 +17904,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0023"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17928,7 +17928,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0024"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17952,7 +17952,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0025"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -17976,7 +17976,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0026"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18000,7 +18000,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0027"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18024,7 +18024,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0028"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18048,7 +18048,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0029"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18072,7 +18072,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0030"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18096,7 +18096,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0031"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18120,7 +18120,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0032"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18144,7 +18144,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0033"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18168,7 +18168,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0034"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18192,7 +18192,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0035"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18216,7 +18216,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0036"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18240,7 +18240,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0037"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18264,7 +18264,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0038"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18288,7 +18288,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0039"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18312,7 +18312,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0040"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18336,7 +18336,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0041"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18360,7 +18360,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0042"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18384,7 +18384,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0043"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18408,7 +18408,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0044"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18432,7 +18432,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0045"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18456,7 +18456,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0046"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18480,7 +18480,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0047"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18504,7 +18504,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0048"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18528,7 +18528,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0049"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18552,7 +18552,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0050"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18576,7 +18576,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0051"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18600,7 +18600,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0052"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18624,7 +18624,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0053"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18648,7 +18648,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0054"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18672,7 +18672,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0055"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18696,7 +18696,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0056"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18720,7 +18720,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0057"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18744,7 +18744,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0058"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18768,7 +18768,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0059"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18792,7 +18792,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_lvl4_tower_smoke_0060"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			215
@@ -18816,7 +18816,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -18840,7 +18840,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -18864,7 +18864,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -18888,7 +18888,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -18912,7 +18912,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -18936,7 +18936,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -18960,7 +18960,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -18984,7 +18984,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19008,7 +19008,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19032,7 +19032,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19056,7 +19056,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19080,7 +19080,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19104,7 +19104,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19128,7 +19128,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19152,7 +19152,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19176,7 +19176,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19200,7 +19200,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19224,7 +19224,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19248,7 +19248,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0019"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19272,7 +19272,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0020"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19296,7 +19296,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0021"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19320,7 +19320,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0022"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19344,7 +19344,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0023"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19368,7 +19368,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_floorFX_0024"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			224,
 			147
@@ -19392,7 +19392,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19416,7 +19416,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19440,7 +19440,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19464,7 +19464,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19488,7 +19488,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19512,7 +19512,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19536,7 +19536,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19560,7 +19560,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19584,7 +19584,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19608,7 +19608,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19632,7 +19632,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19656,7 +19656,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19680,7 +19680,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19704,7 +19704,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19728,7 +19728,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19752,7 +19752,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19776,7 +19776,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19800,7 +19800,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19824,7 +19824,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0019"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19848,7 +19848,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0020"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19872,7 +19872,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0021"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19896,7 +19896,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0022"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19920,7 +19920,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0023"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19944,7 +19944,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0024"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19968,7 +19968,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0025"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -19992,7 +19992,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0026"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20016,7 +20016,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0027"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20040,7 +20040,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0028"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20064,7 +20064,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0029"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20088,7 +20088,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0030"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20112,7 +20112,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0031"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20136,7 +20136,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0032"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20160,7 +20160,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0033"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20184,7 +20184,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0034"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20208,7 +20208,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0035"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20232,7 +20232,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0036"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20256,7 +20256,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0037"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20280,7 +20280,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0038"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20304,7 +20304,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0039"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20328,7 +20328,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0040"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20352,7 +20352,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0041"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20376,7 +20376,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0042"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20400,7 +20400,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0043"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20424,7 +20424,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0044"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20448,7 +20448,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0045"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20472,7 +20472,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0046"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20496,7 +20496,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0047"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20520,7 +20520,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0048"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20544,7 +20544,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0049"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20568,7 +20568,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0050"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20592,7 +20592,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0051"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20616,7 +20616,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0052"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20640,7 +20640,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0053"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20664,7 +20664,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0054"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20688,7 +20688,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0055"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20712,7 +20712,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0056"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20736,7 +20736,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0057"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20760,7 +20760,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0058"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20784,7 +20784,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0059"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20808,7 +20808,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0060"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20832,7 +20832,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0061"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20856,7 +20856,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0062"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20880,7 +20880,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0063"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20904,7 +20904,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0064"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20928,7 +20928,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0065"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20952,7 +20952,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0066"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -20976,7 +20976,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0067"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21000,7 +21000,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0068"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21024,7 +21024,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0069"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21048,7 +21048,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0070"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21072,7 +21072,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0071"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21096,7 +21096,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0072"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21120,7 +21120,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0073"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21144,7 +21144,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0074"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21168,7 +21168,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0075"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21192,7 +21192,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0076"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21216,7 +21216,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0077"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21240,7 +21240,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0078"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21264,7 +21264,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0079"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21288,7 +21288,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0080"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21312,7 +21312,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0081"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21336,7 +21336,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0082"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21360,7 +21360,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0083"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21384,7 +21384,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0084"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21408,7 +21408,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0085"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21432,7 +21432,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0086"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21456,7 +21456,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0087"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21480,7 +21480,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0088"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21504,7 +21504,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0089"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21528,7 +21528,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0090"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21552,7 +21552,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0091"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21576,7 +21576,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0092"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21600,7 +21600,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0093"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21624,7 +21624,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0094"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21648,7 +21648,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0095"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21672,7 +21672,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0096"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21696,7 +21696,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0097"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21720,7 +21720,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0098"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21744,7 +21744,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0099"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21768,7 +21768,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0100"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21792,7 +21792,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0101"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21816,7 +21816,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0102"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21840,7 +21840,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0103"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21864,7 +21864,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0104"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21888,7 +21888,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0105"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21912,7 +21912,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0106"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21936,7 +21936,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0107"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21960,7 +21960,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0108"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -21984,7 +21984,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0109"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22008,7 +22008,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0110"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22032,7 +22032,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0111"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22056,7 +22056,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0112"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22080,7 +22080,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0113"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22104,7 +22104,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0114"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22128,7 +22128,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0115"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22152,7 +22152,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0116"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22176,7 +22176,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0117"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22200,7 +22200,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0118"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22224,7 +22224,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0119"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22248,7 +22248,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0120"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22272,7 +22272,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0121"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22296,7 +22296,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0122"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22320,7 +22320,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0123"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22344,7 +22344,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0124"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22368,7 +22368,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0125"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22392,7 +22392,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0126"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22416,7 +22416,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0127"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22440,7 +22440,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0128"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22464,7 +22464,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0129"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22488,7 +22488,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0130"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22512,7 +22512,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0131"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22536,7 +22536,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0132"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22560,7 +22560,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0133"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22584,7 +22584,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0134"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22608,7 +22608,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0135"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22632,7 +22632,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0136"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22656,7 +22656,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0137"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22680,7 +22680,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0138"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22704,7 +22704,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0139"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22728,7 +22728,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0140"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22752,7 +22752,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0141"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22776,7 +22776,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0142"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22800,7 +22800,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0143"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22824,7 +22824,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0144"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22848,7 +22848,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0145"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22872,7 +22872,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0146"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22896,7 +22896,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0147"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22920,7 +22920,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0148"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22944,7 +22944,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0149"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22968,7 +22968,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0150"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -22992,7 +22992,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0151"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -23016,7 +23016,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0152"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -23040,7 +23040,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0153"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -23064,7 +23064,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_mark_of_silence_totem_0154"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			133,
 			210
@@ -23088,7 +23088,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_preview"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			153,
 			173
@@ -23112,7 +23112,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23136,7 +23136,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23160,7 +23160,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23184,7 +23184,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23208,7 +23208,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23232,7 +23232,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23256,7 +23256,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23280,7 +23280,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23304,7 +23304,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23328,7 +23328,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23352,7 +23352,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23376,7 +23376,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23400,7 +23400,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23424,7 +23424,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23448,7 +23448,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23472,7 +23472,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23496,7 +23496,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23520,7 +23520,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23544,7 +23544,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0019"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23568,7 +23568,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0020"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23592,7 +23592,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0021"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23616,7 +23616,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_0022"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			136,
 			181
@@ -23640,7 +23640,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -23664,7 +23664,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -23688,7 +23688,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -23712,7 +23712,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -23736,7 +23736,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -23760,7 +23760,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -23784,7 +23784,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -23808,7 +23808,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -23832,7 +23832,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -23856,7 +23856,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -23880,7 +23880,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -23904,7 +23904,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -23928,7 +23928,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -23952,7 +23952,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -23976,7 +23976,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -24000,7 +24000,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -24024,7 +24024,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -24048,7 +24048,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -24072,7 +24072,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0019"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -24096,7 +24096,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0020"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -24120,7 +24120,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0021"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -24144,7 +24144,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_revive_big_0022"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			193,
 			224
@@ -24168,7 +24168,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24192,7 +24192,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24216,7 +24216,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24240,7 +24240,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24264,7 +24264,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24288,7 +24288,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24312,7 +24312,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24336,7 +24336,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24360,7 +24360,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24384,7 +24384,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24408,7 +24408,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24432,7 +24432,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24456,7 +24456,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24480,7 +24480,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24504,7 +24504,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24528,7 +24528,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24552,7 +24552,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24576,7 +24576,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24600,7 +24600,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0019"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24624,7 +24624,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0020"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24648,7 +24648,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0021"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24672,7 +24672,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0022"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24696,7 +24696,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0023"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24720,7 +24720,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0024"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24744,7 +24744,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0025"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24768,7 +24768,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0026"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24792,7 +24792,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0027"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24816,7 +24816,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0028"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24840,7 +24840,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0029"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24864,7 +24864,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0030"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24888,7 +24888,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0031"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24912,7 +24912,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0032"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24936,7 +24936,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0033"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24960,7 +24960,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0034"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -24984,7 +24984,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0035"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25008,7 +25008,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0036"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25032,7 +25032,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0037"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25056,7 +25056,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0038"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25080,7 +25080,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0039"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25104,7 +25104,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0040"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25128,7 +25128,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0041"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25152,7 +25152,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0042"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25176,7 +25176,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0043"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25200,7 +25200,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0044"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25224,7 +25224,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0045"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25248,7 +25248,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0046"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25272,7 +25272,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0047"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25296,7 +25296,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0048"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25320,7 +25320,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0049"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25344,7 +25344,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0050"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25368,7 +25368,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0051"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25392,7 +25392,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0052"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25416,7 +25416,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0053"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25440,7 +25440,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0054"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25464,7 +25464,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0055"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25488,7 +25488,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0056"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25512,7 +25512,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0057"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25536,7 +25536,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0058"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25560,7 +25560,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0059"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25584,7 +25584,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0060"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25608,7 +25608,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0061"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25632,7 +25632,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0062"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25656,7 +25656,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0063"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25680,7 +25680,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0064"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25704,7 +25704,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0065"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25728,7 +25728,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0066"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25752,7 +25752,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0067"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25776,7 +25776,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0068"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25800,7 +25800,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0069"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25824,7 +25824,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0070"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25848,7 +25848,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0071"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25872,7 +25872,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0072"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25896,7 +25896,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0073"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25920,7 +25920,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0074"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25944,7 +25944,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0075"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25968,7 +25968,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0076"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -25992,7 +25992,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0077"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26016,7 +26016,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0078"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26040,7 +26040,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0079"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26064,7 +26064,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0080"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26088,7 +26088,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0081"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26112,7 +26112,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0082"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26136,7 +26136,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0083"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26160,7 +26160,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0084"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26184,7 +26184,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0085"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26208,7 +26208,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0086"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26232,7 +26232,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0087"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26256,7 +26256,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0088"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26280,7 +26280,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0089"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26304,7 +26304,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0090"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26328,7 +26328,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0091"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26352,7 +26352,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0092"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26376,7 +26376,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0093"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26400,7 +26400,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skeleton_warrior_0094"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			139
@@ -26424,7 +26424,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26448,7 +26448,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26472,7 +26472,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26496,7 +26496,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26520,7 +26520,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26544,7 +26544,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26568,7 +26568,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26592,7 +26592,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26616,7 +26616,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26640,7 +26640,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26664,7 +26664,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26688,7 +26688,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26712,7 +26712,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26736,7 +26736,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26760,7 +26760,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26784,7 +26784,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26808,7 +26808,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26832,7 +26832,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26856,7 +26856,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0019"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26880,7 +26880,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0020"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26904,7 +26904,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0021"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26928,7 +26928,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0022"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26952,7 +26952,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0023"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -26976,7 +26976,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_0024"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			68,
 			105
@@ -27000,7 +27000,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27024,7 +27024,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27048,7 +27048,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27072,7 +27072,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27096,7 +27096,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27120,7 +27120,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27144,7 +27144,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27168,7 +27168,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27192,7 +27192,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27216,7 +27216,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27240,7 +27240,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27264,7 +27264,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27288,7 +27288,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27312,7 +27312,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27336,7 +27336,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27360,7 +27360,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27384,7 +27384,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27408,7 +27408,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_hit_FX_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			227,
 			204
@@ -27432,7 +27432,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_particle_trail_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			56,
 			53
@@ -27456,7 +27456,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_particle_trail_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			56,
 			53
@@ -27480,7 +27480,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_particle_trail_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			56,
 			53
@@ -27504,7 +27504,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_particle_trail_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			56,
 			53
@@ -27528,7 +27528,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_particle_trail_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			56,
 			53
@@ -27552,7 +27552,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_particle_trail_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			56,
 			53
@@ -27576,7 +27576,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_particle_trail_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			56,
 			53
@@ -27600,7 +27600,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_particle_trail_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			56,
 			53
@@ -27624,7 +27624,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_particle_trail_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			56,
 			53
@@ -27648,7 +27648,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_particle_trail_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			56,
 			53
@@ -27672,7 +27672,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_particle_trail_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			56,
 			53
@@ -27696,7 +27696,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0001"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -27720,7 +27720,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0002"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -27744,7 +27744,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0003"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -27768,7 +27768,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0004"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -27792,7 +27792,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0005"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -27816,7 +27816,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0006"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -27840,7 +27840,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0007"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -27864,7 +27864,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0008"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -27888,7 +27888,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0009"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -27912,7 +27912,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0010"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -27936,7 +27936,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0011"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -27960,7 +27960,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0012"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -27984,7 +27984,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0013"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -28008,7 +28008,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0014"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -28032,7 +28032,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0015"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -28056,7 +28056,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0016"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -28080,7 +28080,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0017"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122
@@ -28104,7 +28104,7 @@ return {
 		alias = {},
 	},
 	["necromancer_tower_skull_projectile_spawn_FX_0018"] = {
-		a_name = "go_towers_necromancer-1.png",
+		a_name = "go_towers_necromancer-1.dds",
 		size = {
 			105,
 			122

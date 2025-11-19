@@ -2,7 +2,7 @@
 
 return {
 	boat1_0001 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			44,
 			34
@@ -40,7 +40,7 @@ return {
 		}
 	},
 	boat1_0005 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			44,
 			34
@@ -76,7 +76,7 @@ return {
 		}
 	},
 	boat1_0008 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			44,
 			34
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	boat1_0017 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			44,
 			34
@@ -146,7 +146,7 @@ return {
 		}
 	},
 	boat1_0022 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			44,
 			34
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	boat1_0025 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			44,
 			34
@@ -216,7 +216,7 @@ return {
 		}
 	},
 	fish_0001 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -240,7 +240,7 @@ return {
 		alias = {}
 	},
 	fish_0002 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -264,7 +264,7 @@ return {
 		alias = {}
 	},
 	fish_0003 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -288,7 +288,7 @@ return {
 		alias = {}
 	},
 	fish_0004 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -312,7 +312,7 @@ return {
 		alias = {}
 	},
 	fish_0005 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -336,7 +336,7 @@ return {
 		alias = {}
 	},
 	fish_0006 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -360,7 +360,7 @@ return {
 		alias = {}
 	},
 	fish_0007 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -384,7 +384,7 @@ return {
 		alias = {}
 	},
 	fish_0008 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -408,7 +408,7 @@ return {
 		alias = {}
 	},
 	fish_0009 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -432,7 +432,7 @@ return {
 		alias = {}
 	},
 	fish_0010 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -456,7 +456,7 @@ return {
 		alias = {}
 	},
 	fish_0011 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -480,7 +480,7 @@ return {
 		alias = {}
 	},
 	fish_0012 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -504,7 +504,7 @@ return {
 		alias = {}
 	},
 	fish_0013 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -528,7 +528,7 @@ return {
 		alias = {}
 	},
 	fish_0014 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -552,7 +552,7 @@ return {
 		alias = {}
 	},
 	fish_0015 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -578,7 +578,7 @@ return {
 		}
 	},
 	fish_0017 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -604,7 +604,7 @@ return {
 		}
 	},
 	fish_0019 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -630,7 +630,7 @@ return {
 		}
 	},
 	fish_0021 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			68,
 			48
@@ -656,7 +656,7 @@ return {
 		}
 	},
 	molino_big_0001 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			106,
 			112
@@ -682,7 +682,7 @@ return {
 		}
 	},
 	molino_big_0003 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			106,
 			112
@@ -708,7 +708,7 @@ return {
 		}
 	},
 	molino_big_0005 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			106,
 			112
@@ -734,7 +734,7 @@ return {
 		}
 	},
 	molino_big_0007 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			106,
 			112
@@ -760,7 +760,7 @@ return {
 		}
 	},
 	molino_big_0009 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			106,
 			112
@@ -786,7 +786,7 @@ return {
 		}
 	},
 	molino_big_0011 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			106,
 			112
@@ -812,7 +812,7 @@ return {
 		}
 	},
 	molino_big_0013 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			106,
 			112
@@ -838,7 +838,7 @@ return {
 		}
 	},
 	molino_big_0015 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			106,
 			112
@@ -864,7 +864,7 @@ return {
 		}
 	},
 	molino_small_0001 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			94,
 			100
@@ -890,7 +890,7 @@ return {
 		}
 	},
 	molino_small_0003 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			94,
 			100
@@ -916,7 +916,7 @@ return {
 		}
 	},
 	molino_small_0005 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			94,
 			100
@@ -942,7 +942,7 @@ return {
 		}
 	},
 	molino_small_0007 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			94,
 			100
@@ -968,7 +968,7 @@ return {
 		}
 	},
 	molino_small_0009 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			94,
 			100
@@ -994,7 +994,7 @@ return {
 		}
 	},
 	molino_small_0011 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			94,
 			100
@@ -1020,7 +1020,7 @@ return {
 		}
 	},
 	molino_small_0013 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			94,
 			100
@@ -1046,7 +1046,7 @@ return {
 		}
 	},
 	molino_small_0015 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			94,
 			100
@@ -1072,7 +1072,7 @@ return {
 		}
 	},
 	sheep_big_0001 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			30,
 			26
@@ -1109,7 +1109,7 @@ return {
 		}
 	},
 	sheep_big_0003 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			30,
 			26
@@ -1135,7 +1135,7 @@ return {
 		}
 	},
 	sheep_big_0005 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			30,
 			26
@@ -1163,7 +1163,7 @@ return {
 		}
 	},
 	sheep_big_0007 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			30,
 			26
@@ -1191,7 +1191,7 @@ return {
 		}
 	},
 	sheep_big_0009 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			30,
 			26
@@ -1219,7 +1219,7 @@ return {
 		}
 	},
 	sheep_small_0001 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			24,
 			20
@@ -1256,7 +1256,7 @@ return {
 		}
 	},
 	sheep_small_0003 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			24,
 			20
@@ -1282,7 +1282,7 @@ return {
 		}
 	},
 	sheep_small_0005 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			24,
 			20
@@ -1310,7 +1310,7 @@ return {
 		}
 	},
 	sheep_small_0007 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			24,
 			20
@@ -1338,7 +1338,7 @@ return {
 		}
 	},
 	sheep_small_0009 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			24,
 			20
@@ -1366,7 +1366,7 @@ return {
 		}
 	},
 	water_sparks_0001 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			94,
 			58
@@ -1396,7 +1396,7 @@ return {
 		}
 	},
 	water_sparks_0007 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			94,
 			58
@@ -1433,7 +1433,7 @@ return {
 		}
 	},
 	water_sparks_0014 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			94,
 			58
@@ -1463,7 +1463,7 @@ return {
 		}
 	},
 	water_wave_0001 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			106,
 			20
@@ -1490,7 +1490,7 @@ return {
 		}
 	},
 	water_wave_0004 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			106,
 			20
@@ -1517,7 +1517,7 @@ return {
 		}
 	},
 	water_wave_0007 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			106,
 			20
@@ -1544,7 +1544,7 @@ return {
 		}
 	},
 	water_wave_0010 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			106,
 			20
@@ -1571,7 +1571,7 @@ return {
 		}
 	},
 	water_wave_0013 = {
-		a_name = "go_stages_grass-1.png",
+		a_name = "go_stages_grass-1.dds",
 		size = {
 			106,
 			20

@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["anya_0394"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["anya_0395"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["anya_0396"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["anya_0397"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["anya_0398"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["anya_0399"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["anya_0400"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["anya_0401"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["anya_0402"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["anya_0403"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["anya_0404"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["anya_0405"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["anya_0406"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["anya_0407"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["anya_0408"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["anya_0409"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["anya_0410"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["anya_0411"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["anya_0412"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["anya_0413"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["anya_0414"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["anya_0415"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["anya_0416"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["anya_0417"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["anya_0418"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["anya_0419"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["anya_0420"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["anya_0421"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["anya_0422"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["anya_0423"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["anya_0424"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["anya_0425"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["anya_0426"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["anya_0427"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["anya_0428"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["anya_0429"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["anya_0430"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["anya_0431"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["anya_0432"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["anya_0433"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["anya_0434"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["anya_0435"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["anya_0436"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["anya_0437"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["anya_0438"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["anya_0439"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["anya_0440"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["anya_0441"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["anya_0442"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["anya_0443"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["anya_0444"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["anya_0445"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["anya_0446"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["anya_0447"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["anya_0448"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["anya_0449"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["anya_0450"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["anya_0451"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["anya_0452"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["anya_0453"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["anya_0454"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["anya_0455"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["anya_0456"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["anya_0457"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["anya_0458"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["anya_0459"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["anya_0460"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["anya_0461"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["anya_0462"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["anya_0463"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["anya_0464"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["anya_0465"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["anya_0466"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["anya_0467"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["anya_0468"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["anya_0469"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["anya_0470"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["anya_0471"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["anya_0472"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["anya_0473"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["anya_0474"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["anya_0475"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["anya_0476"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["anya_0477"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["anya_0478"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["anya_0479"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["anya_0480"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["anya_0481"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["anya_0482"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["anya_0483"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["anya_0484"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["anya_0485"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["anya_0486"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["anya_0487"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["anya_0488"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["anya_0489"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["anya_0490"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["anya_0491"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["anya_0492"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["anya_0493"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["anya_0494"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["anya_0495"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["anya_0496"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["anya_0497"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["anya_0498"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["anya_0499"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["anya_0500"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["anya_0501"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["anya_0502"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["anya_0503"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["anya_0504"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["anya_0505"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["anya_0506"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["anya_0507"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["anya_0508"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["anya_0509"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["anya_0510"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["anya_0511"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["anya_0512"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["anya_0513"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["anya_0514"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["anya_0515"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["anya_0516"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["anya_0517"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["anya_0518"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["anya_0519"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["anya_0520"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["anya_0521"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["anya_0522"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["anya_0523"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["anya_0524"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["anya_0525"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["anya_0526"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["anya_0527"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["anya_0528"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["anya_0529"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["anya_0530"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["anya_0531"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["anya_0532"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["anya_0533"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["anya_0534"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["anya_0535"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["anya_0536"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["anya_0537"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["anya_0538"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["anya_0539"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["anya_0540"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["anya_0541"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["anya_0542"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["anya_0543"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["anya_0544"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["anya_0545"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["anya_0546"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["anya_0547"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["anya_0548"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["anya_0549"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["anya_0550"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["anya_0551"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["anya_0552"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["anya_0553"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["anya_0554"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["anya_0555"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["anya_0556"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["anya_0557"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["anya_0558"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["anya_0559"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["anya_0560"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["anya_0561"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["anya_0562"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["anya_0563"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["anya_0564"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["anya_0565"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["anya_0566"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["anya_0567"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["anya_0568"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["anya_0569"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["anya_0570"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["anya_0571"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["anya_0572"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["anya_0573"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["anya_0574"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			204,
 			235
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0001"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0002"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0003"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0004"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0005"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0006"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0007"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0008"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0009"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0010"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0011"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0012"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0013"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0014"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0015"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["argent_storm_decal_0016"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			73,
 			68
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["dante_0001"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["dante_0002"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["dante_0003"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["dante_0004"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["dante_0005"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["dante_0006"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["dante_0007"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["dante_0008"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["dante_0009"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["dante_0010"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["dante_0011"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["dante_0012"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["dante_0013"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["dante_0014"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["dante_0015"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["dante_0016"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["dante_0017"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["dante_0018"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["dante_0019"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["dante_0020"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["dante_0021"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["dante_0022"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["dante_0023"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["dante_0024"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["dante_0025"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["dante_0026"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["dante_0027"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["dante_0028"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["dante_0029"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["dante_0030"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["dante_0031"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["dante_0032"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["dante_0033"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["dante_0034"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["dante_0035"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["dante_0036"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["dante_0037"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["dante_0038"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["dante_0039"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["dante_0040"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["dante_0041"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["dante_0042"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["dante_0043"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["dante_0044"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["dante_0045"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["dante_0046"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["dante_0047"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["dante_0048"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["dante_0049"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["dante_0050"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["dante_0051"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["dante_0052"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["dante_0053"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["dante_0054"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["dante_0055"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["dante_0056"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["dante_0057"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["dante_0058"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["dante_0059"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["dante_0060"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["dante_0061"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["dante_0062"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["dante_0063"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["dante_0064"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["dante_0065"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["dante_0066"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["dante_0067"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["dante_0068"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["dante_0069"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["dante_0070"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["dante_0071"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["dante_0072"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["dante_0073"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["dante_0074"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["dante_0075"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["dante_0076"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["dante_0077"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["dante_0078"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["dante_0079"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["dante_0080"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["dante_0081"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["dante_0082"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["dante_0083"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["dante_0084"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["dante_0085"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["dante_0086"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["dante_0087"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["dante_0088"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["dante_0089"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["dante_0090"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["dante_0091"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["dante_0092"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["dante_0093"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["dante_0094"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["dante_0095"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["dante_0096"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["dante_0097"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["dante_0098"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["dante_0099"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["dante_0100"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["dante_0101"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["dante_0102"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["dante_0103"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["dante_0104"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["dante_0105"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["dante_0106"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["dante_0107"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["dante_0108"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["dante_0109"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["dante_0110"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["dante_0111"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["dante_0112"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["dante_0113"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["dante_0114"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["dante_0115"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["dante_0116"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["dante_0117"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["dante_0118"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["dante_0119"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["dante_0120"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["dante_0121"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["dante_0122"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["dante_0123"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["dante_0124"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["dante_0125"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17160,7 +17160,7 @@ return {
 		alias = {},
 	},
 	["dante_0126"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17184,7 +17184,7 @@ return {
 		alias = {},
 	},
 	["dante_0127"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17208,7 +17208,7 @@ return {
 		alias = {},
 	},
 	["dante_0128"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17232,7 +17232,7 @@ return {
 		alias = {},
 	},
 	["dante_0129"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17256,7 +17256,7 @@ return {
 		alias = {},
 	},
 	["dante_0130"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17280,7 +17280,7 @@ return {
 		alias = {},
 	},
 	["dante_0131"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17304,7 +17304,7 @@ return {
 		alias = {},
 	},
 	["dante_0132"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17328,7 +17328,7 @@ return {
 		alias = {},
 	},
 	["dante_0133"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17352,7 +17352,7 @@ return {
 		alias = {},
 	},
 	["dante_0134"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17376,7 +17376,7 @@ return {
 		alias = {},
 	},
 	["dante_0135"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17400,7 +17400,7 @@ return {
 		alias = {},
 	},
 	["dante_0136"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17424,7 +17424,7 @@ return {
 		alias = {},
 	},
 	["dante_0137"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17448,7 +17448,7 @@ return {
 		alias = {},
 	},
 	["dante_0138"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17472,7 +17472,7 @@ return {
 		alias = {},
 	},
 	["dante_0139"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17496,7 +17496,7 @@ return {
 		alias = {},
 	},
 	["dante_0140"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17520,7 +17520,7 @@ return {
 		alias = {},
 	},
 	["dante_0141"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17544,7 +17544,7 @@ return {
 		alias = {},
 	},
 	["dante_0142"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17568,7 +17568,7 @@ return {
 		alias = {},
 	},
 	["dante_0143"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17592,7 +17592,7 @@ return {
 		alias = {},
 	},
 	["dante_0144"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17616,7 +17616,7 @@ return {
 		alias = {},
 	},
 	["dante_0145"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17640,7 +17640,7 @@ return {
 		alias = {},
 	},
 	["dante_0146"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17664,7 +17664,7 @@ return {
 		alias = {},
 	},
 	["dante_0147"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17688,7 +17688,7 @@ return {
 		alias = {},
 	},
 	["dante_0148"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17712,7 +17712,7 @@ return {
 		alias = {},
 	},
 	["dante_0149"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17736,7 +17736,7 @@ return {
 		alias = {},
 	},
 	["dante_0150"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17760,7 +17760,7 @@ return {
 		alias = {},
 	},
 	["dante_0151"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17784,7 +17784,7 @@ return {
 		alias = {},
 	},
 	["dante_0152"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17808,7 +17808,7 @@ return {
 		alias = {},
 	},
 	["dante_0153"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17832,7 +17832,7 @@ return {
 		alias = {},
 	},
 	["dante_0154"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17856,7 +17856,7 @@ return {
 		alias = {},
 	},
 	["dante_0155"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17880,7 +17880,7 @@ return {
 		alias = {},
 	},
 	["dante_0156"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17904,7 +17904,7 @@ return {
 		alias = {},
 	},
 	["dante_0157"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17928,7 +17928,7 @@ return {
 		alias = {},
 	},
 	["dante_0158"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17952,7 +17952,7 @@ return {
 		alias = {},
 	},
 	["dante_0159"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -17976,7 +17976,7 @@ return {
 		alias = {},
 	},
 	["dante_0160"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -18000,7 +18000,7 @@ return {
 		alias = {},
 	},
 	["dante_0161"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -18024,7 +18024,7 @@ return {
 		alias = {},
 	},
 	["dante_0162"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			241,
 			372
@@ -18048,7 +18048,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0001"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18072,7 +18072,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0002"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18096,7 +18096,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0003"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18120,7 +18120,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0004"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18144,7 +18144,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0005"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18168,7 +18168,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0006"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18192,7 +18192,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0007"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18216,7 +18216,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0008"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18240,7 +18240,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0009"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18264,7 +18264,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0010"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18288,7 +18288,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0011"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18312,7 +18312,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0012"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18336,7 +18336,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0013"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18360,7 +18360,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0014"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18384,7 +18384,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0015"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18408,7 +18408,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0016"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18432,7 +18432,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0017"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18456,7 +18456,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0018"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18480,7 +18480,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0019"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18504,7 +18504,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0020"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18528,7 +18528,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0021"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18552,7 +18552,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0022"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18576,7 +18576,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0023"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18600,7 +18600,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0024"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18624,7 +18624,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0025"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18648,7 +18648,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0026"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18672,7 +18672,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0027"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18696,7 +18696,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0028"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18720,7 +18720,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0029"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18744,7 +18744,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0030"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18768,7 +18768,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0031"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18792,7 +18792,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0032"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18816,7 +18816,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0033"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18840,7 +18840,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0034"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18864,7 +18864,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0035"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18888,7 +18888,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0036"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18912,7 +18912,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0037"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18936,7 +18936,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0038"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18960,7 +18960,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0039"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -18984,7 +18984,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0040"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -19008,7 +19008,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0041"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -19032,7 +19032,7 @@ return {
 		alias = {},
 	},
 	["dante_decal_0042"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			164,
 			119
@@ -19056,7 +19056,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0001"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19080,7 +19080,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0002"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19104,7 +19104,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0003"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19128,7 +19128,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0004"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19152,7 +19152,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0005"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19176,7 +19176,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0006"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19200,7 +19200,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0007"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19224,7 +19224,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0008"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19248,7 +19248,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0009"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19272,7 +19272,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0010"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19296,7 +19296,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0011"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19320,7 +19320,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0012"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19344,7 +19344,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0013"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19368,7 +19368,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0014"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19392,7 +19392,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0015"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19416,7 +19416,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0016"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19440,7 +19440,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0017"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19464,7 +19464,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0018"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19488,7 +19488,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0019"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19512,7 +19512,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0020"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19536,7 +19536,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0021"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19560,7 +19560,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0022"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19584,7 +19584,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0023"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19608,7 +19608,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0024"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19632,7 +19632,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0025"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19656,7 +19656,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0026"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19680,7 +19680,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0027"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19704,7 +19704,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0028"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19728,7 +19728,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0029"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19752,7 +19752,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0030"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19776,7 +19776,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0031"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19800,7 +19800,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0032"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19824,7 +19824,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0033"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19848,7 +19848,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0034"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19872,7 +19872,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0035"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19896,7 +19896,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0036"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19920,7 +19920,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0037"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19944,7 +19944,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0038"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19968,7 +19968,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0039"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -19992,7 +19992,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0040"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -20016,7 +20016,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0041"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -20040,7 +20040,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0042"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -20064,7 +20064,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0043"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -20088,7 +20088,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0044"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -20112,7 +20112,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0045"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -20136,7 +20136,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0046"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -20160,7 +20160,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0047"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -20184,7 +20184,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0048"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -20208,7 +20208,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0049"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -20232,7 +20232,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0050"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -20256,7 +20256,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_0051"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			116,
 			150
@@ -20280,7 +20280,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0001"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20304,7 +20304,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0002"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20328,7 +20328,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0003"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20352,7 +20352,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0004"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20376,7 +20376,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0005"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20400,7 +20400,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0006"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20424,7 +20424,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0007"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20448,7 +20448,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0008"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20472,7 +20472,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0009"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20496,7 +20496,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0010"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20520,7 +20520,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0011"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20544,7 +20544,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0012"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20568,7 +20568,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0013"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20592,7 +20592,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0014"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20616,7 +20616,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0015"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20640,7 +20640,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0016"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20664,7 +20664,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0017"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20688,7 +20688,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0018"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20712,7 +20712,7 @@ return {
 		alias = {},
 	},
 	["duskbeast_coin_0019"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			36,
 			88
@@ -20736,7 +20736,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0001"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -20760,7 +20760,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0002"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -20784,7 +20784,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0003"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -20808,7 +20808,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0004"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -20832,7 +20832,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0005"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -20856,7 +20856,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0006"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -20880,7 +20880,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0007"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -20904,7 +20904,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0008"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -20928,7 +20928,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0009"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -20952,7 +20952,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0010"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -20976,7 +20976,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0011"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -21000,7 +21000,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0012"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -21024,7 +21024,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0013"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -21048,7 +21048,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0014"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -21072,7 +21072,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0015"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -21096,7 +21096,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0016"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -21120,7 +21120,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0017"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -21144,7 +21144,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0018"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -21168,7 +21168,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0019"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -21192,7 +21192,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0020"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -21216,7 +21216,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0021"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -21240,7 +21240,7 @@ return {
 		alias = {},
 	},
 	["hit_dante_0022"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			93,
 			99
@@ -21264,7 +21264,7 @@ return {
 		alias = {},
 	},
 	["mist_run_trail_0001"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			59,
 			68
@@ -21288,7 +21288,7 @@ return {
 		alias = {},
 	},
 	["mist_run_trail_0002"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			59,
 			68
@@ -21312,7 +21312,7 @@ return {
 		alias = {},
 	},
 	["mist_run_trail_0003"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			59,
 			68
@@ -21336,7 +21336,7 @@ return {
 		alias = {},
 	},
 	["mist_run_trail_0004"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			59,
 			68
@@ -21360,7 +21360,7 @@ return {
 		alias = {},
 	},
 	["mist_run_trail_0005"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			59,
 			68
@@ -21384,7 +21384,7 @@ return {
 		alias = {},
 	},
 	["mist_run_trail_0006"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			59,
 			68
@@ -21408,7 +21408,7 @@ return {
 		alias = {},
 	},
 	["mist_run_trail_0007"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			59,
 			68
@@ -21432,7 +21432,7 @@ return {
 		alias = {},
 	},
 	["mist_run_trail_0008"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			59,
 			68
@@ -21456,7 +21456,7 @@ return {
 		alias = {},
 	},
 	["mist_run_trail_0009"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			59,
 			68
@@ -21480,7 +21480,7 @@ return {
 		alias = {},
 	},
 	["mist_run_trail_0010"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			59,
 			68
@@ -21504,7 +21504,7 @@ return {
 		alias = {},
 	},
 	["mist_run_trail_0011"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			59,
 			68
@@ -21528,7 +21528,7 @@ return {
 		alias = {},
 	},
 	["mist_run_trail_0012"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			59,
 			68
@@ -21552,7 +21552,7 @@ return {
 		alias = {},
 	},
 	["mist_run_trail_0013"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			59,
 			68
@@ -21576,7 +21576,7 @@ return {
 		alias = {},
 	},
 	["mist_run_trail_0014"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			59,
 			68
@@ -21600,7 +21600,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone1_0001"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			130,
 			153
@@ -21624,7 +21624,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone1_0002"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			130,
 			153
@@ -21648,7 +21648,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone1_0003"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			130,
 			153
@@ -21672,7 +21672,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone1_0004"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			130,
 			153
@@ -21696,7 +21696,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone1_0005"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			130,
 			153
@@ -21720,7 +21720,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone1_0006"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			130,
 			153
@@ -21744,7 +21744,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone1_0007"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			130,
 			153
@@ -21768,7 +21768,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone1_0008"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			130,
 			153
@@ -21792,7 +21792,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone1_0009"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			130,
 			153
@@ -21816,7 +21816,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone1_0010"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			130,
 			153
@@ -21840,7 +21840,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone1_0011"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			130,
 			153
@@ -21864,7 +21864,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone1_0012"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			130,
 			153
@@ -21888,7 +21888,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone2_0001"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			159,
 			119
@@ -21912,7 +21912,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone2_0002"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			159,
 			119
@@ -21936,7 +21936,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone2_0003"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			159,
 			119
@@ -21960,7 +21960,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone2_0004"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			159,
 			119
@@ -21984,7 +21984,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone2_0005"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			159,
 			119
@@ -22008,7 +22008,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone2_0006"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			159,
 			119
@@ -22032,7 +22032,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone2_0007"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			159,
 			119
@@ -22056,7 +22056,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone2_0008"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			159,
 			119
@@ -22080,7 +22080,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone2_0009"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			159,
 			119
@@ -22104,7 +22104,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone2_0010"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			159,
 			119
@@ -22128,7 +22128,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone2_0011"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			159,
 			119
@@ -22152,7 +22152,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone2_0012"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			159,
 			119
@@ -22176,7 +22176,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone3_0001"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			119,
 			133
@@ -22200,7 +22200,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone3_0002"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			119,
 			133
@@ -22224,7 +22224,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone3_0003"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			119,
 			133
@@ -22248,7 +22248,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone3_0004"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			119,
 			133
@@ -22272,7 +22272,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone3_0005"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			119,
 			133
@@ -22296,7 +22296,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone3_0006"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			119,
 			133
@@ -22320,7 +22320,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone3_0007"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			119,
 			133
@@ -22344,7 +22344,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone3_0008"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			119,
 			133
@@ -22368,7 +22368,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone3_0009"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			119,
 			133
@@ -22392,7 +22392,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone3_0010"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			119,
 			133
@@ -22416,7 +22416,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone3_0011"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			119,
 			133
@@ -22440,7 +22440,7 @@ return {
 		alias = {},
 	},
 	["mistystep_clone3_0012"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			119,
 			133
@@ -22464,7 +22464,7 @@ return {
 		alias = {},
 	},
 	["mistystep_hit_0001"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			107,
 			102
@@ -22488,7 +22488,7 @@ return {
 		alias = {},
 	},
 	["mistystep_hit_0002"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			107,
 			102
@@ -22512,7 +22512,7 @@ return {
 		alias = {},
 	},
 	["mistystep_hit_0003"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			107,
 			102
@@ -22536,7 +22536,7 @@ return {
 		alias = {},
 	},
 	["mistystep_hit_0004"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			107,
 			102
@@ -22560,7 +22560,7 @@ return {
 		alias = {},
 	},
 	["mistystep_hit_0005"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			107,
 			102
@@ -22584,7 +22584,7 @@ return {
 		alias = {},
 	},
 	["mistystep_hit_0006"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			107,
 			102
@@ -22608,7 +22608,7 @@ return {
 		alias = {},
 	},
 	["mistystep_hit_0007"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			107,
 			102
@@ -22632,7 +22632,7 @@ return {
 		alias = {},
 	},
 	["mistystep_hit_0008"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			107,
 			102
@@ -22656,7 +22656,7 @@ return {
 		alias = {},
 	},
 	["mistystep_hit_0009"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			107,
 			102
@@ -22680,7 +22680,7 @@ return {
 		alias = {},
 	},
 	["mistystep_hit_0010"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			107,
 			102
@@ -22704,7 +22704,7 @@ return {
 		alias = {},
 	},
 	["mistystep_trailbetweenclones_0001"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			389,
 			68
@@ -22728,7 +22728,7 @@ return {
 		alias = {},
 	},
 	["mistystep_trailbetweenclones_0002"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			389,
 			68
@@ -22752,7 +22752,7 @@ return {
 		alias = {},
 	},
 	["mistystep_trailbetweenclones_0003"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			389,
 			68
@@ -22776,7 +22776,7 @@ return {
 		alias = {},
 	},
 	["mistystep_trailbetweenclones_0004"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			389,
 			68
@@ -22800,7 +22800,7 @@ return {
 		alias = {},
 	},
 	["mistystep_trailbetweenclones_0005"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			389,
 			68
@@ -22824,7 +22824,7 @@ return {
 		alias = {},
 	},
 	["mistystep_trailbetweenclones_0006"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			389,
 			68
@@ -22848,7 +22848,7 @@ return {
 		alias = {},
 	},
 	["mistystep_trailbetweenclones_0007"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			389,
 			68
@@ -22872,7 +22872,7 @@ return {
 		alias = {},
 	},
 	["mistystep_trailbetweenclones_0008"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			389,
 			68
@@ -22896,7 +22896,7 @@ return {
 		alias = {},
 	},
 	["mistystep_trailbetweenclones_0009"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			389,
 			68
@@ -22920,7 +22920,7 @@ return {
 		alias = {},
 	},
 	["mistystep_trailbetweenclones_0010"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			389,
 			68
@@ -22944,7 +22944,7 @@ return {
 		alias = {},
 	},
 	["mistystep_trailbetweenclones_0011"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			389,
 			68
@@ -22968,7 +22968,7 @@ return {
 		alias = {},
 	},
 	["mistystep_trailbetweenclones_0012"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			389,
 			68
@@ -22992,7 +22992,7 @@ return {
 		alias = {},
 	},
 	["mistystep_trailbetweenclones_0013"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			389,
 			68
@@ -23016,7 +23016,7 @@ return {
 		alias = {},
 	},
 	["shothit_0001"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			68,
 			76
@@ -23040,7 +23040,7 @@ return {
 		alias = {},
 	},
 	["shothit_0002"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			68,
 			76
@@ -23064,7 +23064,7 @@ return {
 		alias = {},
 	},
 	["shothit_0003"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			68,
 			76
@@ -23088,7 +23088,7 @@ return {
 		alias = {},
 	},
 	["shothit_0004"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			68,
 			76
@@ -23112,7 +23112,7 @@ return {
 		alias = {},
 	},
 	["shothit_0005"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			68,
 			76
@@ -23136,7 +23136,7 @@ return {
 		alias = {},
 	},
 	["shothit_0006"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			68,
 			76
@@ -23160,7 +23160,7 @@ return {
 		alias = {},
 	},
 	["shothit_0007"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			68,
 			76
@@ -23184,7 +23184,7 @@ return {
 		alias = {},
 	},
 	["shothit_0008"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			68,
 			76
@@ -23208,7 +23208,7 @@ return {
 		alias = {},
 	},
 	["shothit_0009"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			68,
 			76
@@ -23232,7 +23232,7 @@ return {
 		alias = {},
 	},
 	["shothit_0010"] = {
-		a_name = "go_hero_hunter-1.png",
+		a_name = "go_hero_hunter-1.dds",
 		size = {
 			68,
 			76

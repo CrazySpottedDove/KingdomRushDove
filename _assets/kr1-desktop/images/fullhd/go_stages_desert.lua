@@ -2,7 +2,7 @@
 
 return {
 	Snake_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	Snake_0003 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	Snake_0005 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	Snake_0007 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -104,7 +104,7 @@ return {
 		alias = {}
 	},
 	Snake_0008 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -128,7 +128,7 @@ return {
 		alias = {}
 	},
 	Snake_0009 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -152,7 +152,7 @@ return {
 		alias = {}
 	},
 	Snake_0010 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -176,7 +176,7 @@ return {
 		alias = {}
 	},
 	Snake_0011 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -200,7 +200,7 @@ return {
 		alias = {}
 	},
 	Snake_0012 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -224,7 +224,7 @@ return {
 		alias = {}
 	},
 	Snake_0013 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -248,7 +248,7 @@ return {
 		alias = {}
 	},
 	Snake_0014 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -272,7 +272,7 @@ return {
 		alias = {}
 	},
 	Snake_0015 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -296,7 +296,7 @@ return {
 		alias = {}
 	},
 	Snake_0016 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -320,7 +320,7 @@ return {
 		alias = {}
 	},
 	Snake_0017 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -344,7 +344,7 @@ return {
 		alias = {}
 	},
 	Snake_0018 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -368,7 +368,7 @@ return {
 		alias = {}
 	},
 	Snake_0019 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -392,7 +392,7 @@ return {
 		alias = {}
 	},
 	Snake_0020 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -416,7 +416,7 @@ return {
 		alias = {}
 	},
 	Snake_0021 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -440,7 +440,7 @@ return {
 		alias = {}
 	},
 	Snake_0022 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -464,7 +464,7 @@ return {
 		alias = {}
 	},
 	Snake_0023 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -488,7 +488,7 @@ return {
 		alias = {}
 	},
 	Snake_0024 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -512,7 +512,7 @@ return {
 		alias = {}
 	},
 	Snake_0025 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -536,7 +536,7 @@ return {
 		alias = {}
 	},
 	Snake_0026 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -560,7 +560,7 @@ return {
 		alias = {}
 	},
 	Snake_0027 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -584,7 +584,7 @@ return {
 		alias = {}
 	},
 	Snake_0028 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -608,7 +608,7 @@ return {
 		alias = {}
 	},
 	Snake_0029 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -632,7 +632,7 @@ return {
 		alias = {}
 	},
 	Snake_0030 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -656,7 +656,7 @@ return {
 		alias = {}
 	},
 	Snake_0031 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -680,7 +680,7 @@ return {
 		alias = {}
 	},
 	Snake_0032 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -704,7 +704,7 @@ return {
 		alias = {}
 	},
 	Snake_0033 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -728,7 +728,7 @@ return {
 		alias = {}
 	},
 	Snake_0034 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -752,7 +752,7 @@ return {
 		alias = {}
 	},
 	Snake_0035 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -776,7 +776,7 @@ return {
 		alias = {}
 	},
 	Snake_0036 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -800,7 +800,7 @@ return {
 		alias = {}
 	},
 	Snake_0037 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -826,7 +826,7 @@ return {
 		}
 	},
 	Snake_0039 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -852,7 +852,7 @@ return {
 		}
 	},
 	Snake_0041 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -878,7 +878,7 @@ return {
 		}
 	},
 	Snake_0043 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -904,7 +904,7 @@ return {
 		}
 	},
 	Snake_0045 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -930,7 +930,7 @@ return {
 		}
 	},
 	Snake_0047 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			152,
 			23
@@ -954,7 +954,7 @@ return {
 		alias = {}
 	},
 	Stage3_Camel_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			48
@@ -980,7 +980,7 @@ return {
 		}
 	},
 	Stage3_Camel_0002 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			48
@@ -1006,7 +1006,7 @@ return {
 		}
 	},
 	Stage3_Camel_0004 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			48
@@ -1034,7 +1034,7 @@ return {
 		}
 	},
 	Stage3_Camel_0006 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			48
@@ -1060,7 +1060,7 @@ return {
 		}
 	},
 	Stage3_Camel_0008 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			48
@@ -1086,7 +1086,7 @@ return {
 		}
 	},
 	Stage3_Camel_0010 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			48
@@ -1114,7 +1114,7 @@ return {
 		}
 	},
 	Stage3_Camel_0014 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			48
@@ -1142,7 +1142,7 @@ return {
 		}
 	},
 	Stage3_Camel_0018 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			48
@@ -1170,7 +1170,7 @@ return {
 		}
 	},
 	Stage3_Camel_0022 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			48
@@ -1198,7 +1198,7 @@ return {
 		}
 	},
 	Stage3_Camel_0026 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			48
@@ -1224,7 +1224,7 @@ return {
 		}
 	},
 	Stage3_Camel_0028 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			48
@@ -1250,7 +1250,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1274,7 +1274,7 @@ return {
 		alias = {}
 	},
 	Stage3_Vulture_0002 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1302,7 +1302,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0004 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1330,7 +1330,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0006 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1358,7 +1358,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0008 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1396,7 +1396,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0010 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1434,7 +1434,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0042 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1458,7 +1458,7 @@ return {
 		alias = {}
 	},
 	Stage3_Vulture_0043 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1486,7 +1486,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0045 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1514,7 +1514,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0047 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1542,7 +1542,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0049 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1570,7 +1570,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0051 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1598,7 +1598,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0053 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1624,7 +1624,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0055 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1650,7 +1650,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0057 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1676,7 +1676,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0059 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1702,7 +1702,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0061 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1730,7 +1730,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0063 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1756,7 +1756,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0065 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1782,7 +1782,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0067 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1808,7 +1808,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0069 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1834,7 +1834,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0071 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1860,7 +1860,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0073 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1886,7 +1886,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0075 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1912,7 +1912,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0077 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1938,7 +1938,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0081 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1964,7 +1964,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0083 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -1990,7 +1990,7 @@ return {
 		}
 	},
 	Stage3_Vulture_0095 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			68,
 			146
@@ -2014,7 +2014,7 @@ return {
 		alias = {}
 	},
 	city_archer_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			34,
 			34
@@ -2038,7 +2038,7 @@ return {
 		alias = {}
 	},
 	city_archer_0002 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			34,
 			34
@@ -2062,7 +2062,7 @@ return {
 		alias = {}
 	},
 	city_archer_0003 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			34,
 			34
@@ -2089,7 +2089,7 @@ return {
 		}
 	},
 	city_archer_0006 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			34,
 			34
@@ -2115,7 +2115,7 @@ return {
 		}
 	},
 	city_archer_0008 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			34,
 			34
@@ -2141,7 +2141,7 @@ return {
 		}
 	},
 	city_archer_0010 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			34,
 			34
@@ -2165,7 +2165,7 @@ return {
 		alias = {}
 	},
 	city_archer_0011 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			34,
 			34
@@ -2192,7 +2192,7 @@ return {
 		}
 	},
 	city_archer_0014 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			34,
 			34
@@ -2218,7 +2218,7 @@ return {
 		}
 	},
 	city_archer_0016 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			34,
 			34
@@ -2244,7 +2244,7 @@ return {
 		}
 	},
 	city_archer_0018 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			34,
 			34
@@ -2268,7 +2268,7 @@ return {
 		alias = {}
 	},
 	city_tower = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			132,
 			101
@@ -2292,7 +2292,7 @@ return {
 		alias = {}
 	},
 	merc_camp_desert_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			160,
 			141
@@ -2316,7 +2316,7 @@ return {
 		alias = {}
 	},
 	merc_camp_desert_0002 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			160,
 			141
@@ -2340,7 +2340,7 @@ return {
 		alias = {}
 	},
 	merc_camp_desert_0003 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			160,
 			141
@@ -2364,7 +2364,7 @@ return {
 		alias = {}
 	},
 	merc_camp_desert_0004 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			160,
 			141
@@ -2388,7 +2388,7 @@ return {
 		alias = {}
 	},
 	merc_camp_desert_fire_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			17,
 			17
@@ -2414,7 +2414,7 @@ return {
 		}
 	},
 	merc_camp_desert_fire_0003 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			17,
 			17
@@ -2440,7 +2440,7 @@ return {
 		}
 	},
 	merc_camp_desert_fire_0005 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			17,
 			17
@@ -2466,7 +2466,7 @@ return {
 		}
 	},
 	merc_camp_desert_fire_0007 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			17,
 			17
@@ -2492,7 +2492,7 @@ return {
 		}
 	},
 	merc_camp_desert_fire_0009 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			17,
 			17
@@ -2518,7 +2518,7 @@ return {
 		}
 	},
 	merc_camp_desert_fire_0011 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			17,
 			17
@@ -2544,7 +2544,7 @@ return {
 		}
 	},
 	soldier_djinn_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2572,7 +2572,7 @@ return {
 		}
 	},
 	soldier_djinn_0003 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2600,7 +2600,7 @@ return {
 		}
 	},
 	soldier_djinn_0005 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2628,7 +2628,7 @@ return {
 		}
 	},
 	soldier_djinn_0007 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2656,7 +2656,7 @@ return {
 		}
 	},
 	soldier_djinn_0009 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2684,7 +2684,7 @@ return {
 		}
 	},
 	soldier_djinn_0011 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2712,7 +2712,7 @@ return {
 		}
 	},
 	soldier_djinn_0025 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2738,7 +2738,7 @@ return {
 		}
 	},
 	soldier_djinn_0027 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2764,7 +2764,7 @@ return {
 		}
 	},
 	soldier_djinn_0029 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2790,7 +2790,7 @@ return {
 		}
 	},
 	soldier_djinn_0031 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2814,7 +2814,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0032 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2838,7 +2838,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0033 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2862,7 +2862,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0034 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2886,7 +2886,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0035 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2910,7 +2910,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0036 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2934,7 +2934,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0037 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2958,7 +2958,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0038 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -2982,7 +2982,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0039 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3006,7 +3006,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0040 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3030,7 +3030,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0041 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3054,7 +3054,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0042 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3078,7 +3078,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0043 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3102,7 +3102,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0044 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3128,7 +3128,7 @@ return {
 		}
 	},
 	soldier_djinn_0046 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3154,7 +3154,7 @@ return {
 		}
 	},
 	soldier_djinn_0048 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3180,7 +3180,7 @@ return {
 		}
 	},
 	soldier_djinn_0050 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3206,7 +3206,7 @@ return {
 		}
 	},
 	soldier_djinn_0052 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3230,7 +3230,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0053 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3254,7 +3254,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0054 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3278,7 +3278,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0055 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3302,7 +3302,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0056 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3326,7 +3326,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0057 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3350,7 +3350,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0058 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3374,7 +3374,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0059 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3398,7 +3398,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0060 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3422,7 +3422,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0061 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3446,7 +3446,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0062 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3470,7 +3470,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0063 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3494,7 +3494,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_0064 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3520,7 +3520,7 @@ return {
 		}
 	},
 	soldier_djinn_0066 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3546,7 +3546,7 @@ return {
 		}
 	},
 	soldier_djinn_0068 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3572,7 +3572,7 @@ return {
 		}
 	},
 	soldier_djinn_0070 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3598,7 +3598,7 @@ return {
 		}
 	},
 	soldier_djinn_0072 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3624,7 +3624,7 @@ return {
 		}
 	},
 	soldier_djinn_0074 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3650,7 +3650,7 @@ return {
 		}
 	},
 	soldier_djinn_0076 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			98,
 			76
@@ -3676,7 +3676,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -3700,7 +3700,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_polyshapes_0002 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -3724,7 +3724,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_polyshapes_0003 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -3748,7 +3748,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_polyshapes_0004 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -3775,7 +3775,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0007 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -3803,7 +3803,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0011 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -3830,7 +3830,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0014 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -3858,7 +3858,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0018 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -3885,7 +3885,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0021 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -3913,7 +3913,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0025 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -3940,7 +3940,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0028 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -3968,7 +3968,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0032 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -3995,7 +3995,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0035 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -4023,7 +4023,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0039 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -4050,7 +4050,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0042 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -4074,7 +4074,7 @@ return {
 		alias = {}
 	},
 	soldier_djinn_polyshapes_0043 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -4100,7 +4100,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0045 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -4126,7 +4126,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0047 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -4152,7 +4152,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0049 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -4178,7 +4178,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0051 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -4204,7 +4204,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0053 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -4230,7 +4230,7 @@ return {
 		}
 	},
 	soldier_djinn_polyshapes_0055 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			70
@@ -4256,7 +4256,7 @@ return {
 		}
 	},
 	soldier_djinn_polysmoke_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			96,
 			87
@@ -4282,7 +4282,7 @@ return {
 		}
 	},
 	soldier_djinn_polysmoke_0003 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			96,
 			87
@@ -4308,7 +4308,7 @@ return {
 		}
 	},
 	soldier_djinn_polysmoke_0005 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			96,
 			87
@@ -4334,7 +4334,7 @@ return {
 		}
 	},
 	soldier_djinn_polysmoke_0007 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			96,
 			87
@@ -4360,7 +4360,7 @@ return {
 		}
 	},
 	soldier_djinn_polysmoke_0009 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			96,
 			87
@@ -4386,7 +4386,7 @@ return {
 		}
 	},
 	soldier_djinn_polysmoke_0011 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			96,
 			87
@@ -4412,7 +4412,7 @@ return {
 		}
 	},
 	soldier_djinn_polysmoke_0013 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			96,
 			87
@@ -4438,7 +4438,7 @@ return {
 		}
 	},
 	soldier_legionnaire_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4464,7 +4464,7 @@ return {
 		}
 	},
 	soldier_legionnaire_0002 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4488,7 +4488,7 @@ return {
 		alias = {}
 	},
 	soldier_legionnaire_0003 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4512,7 +4512,7 @@ return {
 		alias = {}
 	},
 	soldier_legionnaire_0004 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4536,7 +4536,7 @@ return {
 		alias = {}
 	},
 	soldier_legionnaire_0005 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4560,7 +4560,7 @@ return {
 		alias = {}
 	},
 	soldier_legionnaire_0006 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4584,7 +4584,7 @@ return {
 		alias = {}
 	},
 	soldier_legionnaire_0007 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4610,7 +4610,7 @@ return {
 		}
 	},
 	soldier_legionnaire_0009 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4636,7 +4636,7 @@ return {
 		}
 	},
 	soldier_legionnaire_0011 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4662,7 +4662,7 @@ return {
 		}
 	},
 	soldier_legionnaire_0013 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4686,7 +4686,7 @@ return {
 		alias = {}
 	},
 	soldier_legionnaire_0014 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4713,7 +4713,7 @@ return {
 		}
 	},
 	soldier_legionnaire_0018 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4737,7 +4737,7 @@ return {
 		alias = {}
 	},
 	soldier_legionnaire_0019 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4761,7 +4761,7 @@ return {
 		alias = {}
 	},
 	soldier_legionnaire_0020 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4785,7 +4785,7 @@ return {
 		alias = {}
 	},
 	soldier_legionnaire_0021 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4809,7 +4809,7 @@ return {
 		alias = {}
 	},
 	soldier_legionnaire_0022 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4835,7 +4835,7 @@ return {
 		}
 	},
 	soldier_legionnaire_0024 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			73,
 			51
@@ -4866,7 +4866,7 @@ return {
 		}
 	},
 	water_sparks_0001 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			94,
 			58
@@ -4896,7 +4896,7 @@ return {
 		}
 	},
 	water_sparks_0007 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			94,
 			58
@@ -4933,7 +4933,7 @@ return {
 		}
 	},
 	water_sparks_0014 = {
-		a_name = "go_stages_desert-1.png",
+		a_name = "go_stages_desert-1.dds",
 		size = {
 			94,
 			58

@@ -2,7 +2,7 @@
 
 return {
 	CB_Stg25_witchHouse = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			172,
 			204
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0001 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -53,7 +53,7 @@ return {
 		}
 	},
 	nessMonster_0002 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -79,7 +79,7 @@ return {
 		}
 	},
 	nessMonster_0003 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -103,7 +103,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0004 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -127,7 +127,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0005 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -151,7 +151,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0006 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -175,7 +175,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0007 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -199,7 +199,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0008 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -223,7 +223,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0009 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -247,7 +247,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0010 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -273,7 +273,7 @@ return {
 		}
 	},
 	nessMonster_0011 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -297,7 +297,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0012 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -321,7 +321,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0013 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -345,7 +345,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0014 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -369,7 +369,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0015 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -393,7 +393,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0016 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -417,7 +417,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0017 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -441,7 +441,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0018 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -465,7 +465,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0019 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -489,7 +489,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0020 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -513,7 +513,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0021 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -537,7 +537,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0022 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -561,7 +561,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0023 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -585,7 +585,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0024 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -609,7 +609,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0025 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -633,7 +633,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0026 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -657,7 +657,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0027 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -681,7 +681,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0028 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -705,7 +705,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0029 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -729,7 +729,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0031 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -753,7 +753,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0032 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -777,7 +777,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0033 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -801,7 +801,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0034 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -825,7 +825,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0035 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -849,7 +849,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0036 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -873,7 +873,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0037 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -897,7 +897,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0038 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -921,7 +921,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0039 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -945,7 +945,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0040 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -969,7 +969,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0042 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -995,7 +995,7 @@ return {
 		}
 	},
 	nessMonster_0044 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1021,7 +1021,7 @@ return {
 		}
 	},
 	nessMonster_0046 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1047,7 +1047,7 @@ return {
 		}
 	},
 	nessMonster_0048 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1073,7 +1073,7 @@ return {
 		}
 	},
 	nessMonster_0050 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1097,7 +1097,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0051 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1121,7 +1121,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0052 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1147,7 +1147,7 @@ return {
 		}
 	},
 	nessMonster_0054 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1173,7 +1173,7 @@ return {
 		}
 	},
 	nessMonster_0056 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1197,7 +1197,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0057 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1221,7 +1221,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0058 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1247,7 +1247,7 @@ return {
 		}
 	},
 	nessMonster_0060 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1273,7 +1273,7 @@ return {
 		}
 	},
 	nessMonster_0062 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1297,7 +1297,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0063 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1321,7 +1321,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0064 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1347,7 +1347,7 @@ return {
 		}
 	},
 	nessMonster_0066 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1373,7 +1373,7 @@ return {
 		}
 	},
 	nessMonster_0068 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1397,7 +1397,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0069 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1423,7 +1423,7 @@ return {
 		}
 	},
 	nessMonster_0070 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1449,7 +1449,7 @@ return {
 		}
 	},
 	nessMonster_0071 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1473,7 +1473,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0072 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1499,7 +1499,7 @@ return {
 		}
 	},
 	nessMonster_0073 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1525,7 +1525,7 @@ return {
 		}
 	},
 	nessMonster_0074 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1549,7 +1549,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0075 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1573,7 +1573,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0076 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1597,7 +1597,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0077 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1621,7 +1621,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0078 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1645,7 +1645,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0079 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1669,7 +1669,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0080 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1693,7 +1693,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0081 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1717,7 +1717,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0082 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1741,7 +1741,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0083 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1765,7 +1765,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0084 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1789,7 +1789,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0085 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1813,7 +1813,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0086 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1837,7 +1837,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0087 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1861,7 +1861,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0088 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1885,7 +1885,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0089 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1909,7 +1909,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0090 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1935,7 +1935,7 @@ return {
 		}
 	},
 	nessMonster_0092 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1959,7 +1959,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0093 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -1983,7 +1983,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0094 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2007,7 +2007,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0095 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2031,7 +2031,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0096 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2055,7 +2055,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0097 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2079,7 +2079,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0098 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2103,7 +2103,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0099 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2127,7 +2127,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0100 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2151,7 +2151,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0101 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2175,7 +2175,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0102 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2199,7 +2199,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0103 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2223,7 +2223,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0104 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2247,7 +2247,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0105 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2271,7 +2271,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0106 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2295,7 +2295,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0107 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2319,7 +2319,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0108 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2343,7 +2343,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0109 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2367,7 +2367,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0110 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2391,7 +2391,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0111 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2415,7 +2415,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0112 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2439,7 +2439,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0113 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2463,7 +2463,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0114 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2487,7 +2487,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0117 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2511,7 +2511,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0120 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2535,7 +2535,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0121 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2559,7 +2559,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0122 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2583,7 +2583,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0123 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2607,7 +2607,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0124 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2633,7 +2633,7 @@ return {
 		}
 	},
 	nessMonster_0126 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2659,7 +2659,7 @@ return {
 		}
 	},
 	nessMonster_0128 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2683,7 +2683,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0129 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2707,7 +2707,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0130 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2733,7 +2733,7 @@ return {
 		}
 	},
 	nessMonster_0132 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2759,7 +2759,7 @@ return {
 		}
 	},
 	nessMonster_0134 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2785,7 +2785,7 @@ return {
 		}
 	},
 	nessMonster_0136 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2809,7 +2809,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0137 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2833,7 +2833,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0138 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2857,7 +2857,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0139 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2881,7 +2881,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0140 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2905,7 +2905,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0141 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2929,7 +2929,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0142 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2953,7 +2953,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0143 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -2977,7 +2977,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0144 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -3001,7 +3001,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0145 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -3025,7 +3025,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0146 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -3049,7 +3049,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0147 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -3073,7 +3073,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0148 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -3097,7 +3097,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0149 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -3121,7 +3121,7 @@ return {
 		alias = {}
 	},
 	nessMonster_0150 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -3147,7 +3147,7 @@ return {
 		}
 	},
 	nessMonster_0152 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -3173,7 +3173,7 @@ return {
 		}
 	},
 	nessMonster_0154 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -3199,7 +3199,7 @@ return {
 		}
 	},
 	nessMonster_0156 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -3225,7 +3225,7 @@ return {
 		}
 	},
 	nessMonster_0158 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -3251,7 +3251,7 @@ return {
 		}
 	},
 	nessMonster_0160 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -3277,7 +3277,7 @@ return {
 		}
 	},
 	nessMonster_0162 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -3303,7 +3303,7 @@ return {
 		}
 	},
 	nessMonster_0164 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192
@@ -3329,7 +3329,7 @@ return {
 		}
 	},
 	nessMonster_0166 = {
-		a_name = "go_stage25-1.png",
+		a_name = "go_stage25-1.dds",
 		size = {
 			130,
 			192

@@ -2,7 +2,7 @@
 
 return {
 	paralyzingTree_0001 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -30,7 +30,7 @@ return {
 		}
 	},
 	paralyzingTree_0005 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -58,7 +58,7 @@ return {
 		}
 	},
 	paralyzingTree_0009 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -86,7 +86,7 @@ return {
 		}
 	},
 	paralyzingTree_0013 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -114,7 +114,7 @@ return {
 		}
 	},
 	paralyzingTree_0017 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -142,7 +142,7 @@ return {
 		}
 	},
 	paralyzingTree_0021 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -170,7 +170,7 @@ return {
 		}
 	},
 	paralyzingTree_0025 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -198,7 +198,7 @@ return {
 		}
 	},
 	paralyzingTree_0029 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -226,7 +226,7 @@ return {
 		}
 	},
 	paralyzingTree_0033 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -254,7 +254,7 @@ return {
 		}
 	},
 	paralyzingTree_0037 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -282,7 +282,7 @@ return {
 		}
 	},
 	paralyzingTree_0041 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -310,7 +310,7 @@ return {
 		}
 	},
 	paralyzingTree_0045 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -338,7 +338,7 @@ return {
 		}
 	},
 	paralyzingTree_0049 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -366,7 +366,7 @@ return {
 		}
 	},
 	paralyzingTree_0053 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -394,7 +394,7 @@ return {
 		}
 	},
 	paralyzingTree_0057 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -422,7 +422,7 @@ return {
 		}
 	},
 	paralyzingTree_0061 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -450,7 +450,7 @@ return {
 		}
 	},
 	paralyzingTree_0065 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -478,7 +478,7 @@ return {
 		}
 	},
 	paralyzingTree_0069 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -506,7 +506,7 @@ return {
 		}
 	},
 	paralyzingTree_0073 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_0074 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -556,7 +556,7 @@ return {
 		}
 	},
 	paralyzingTree_0076 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -582,7 +582,7 @@ return {
 		}
 	},
 	paralyzingTree_0078 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -608,7 +608,7 @@ return {
 		}
 	},
 	paralyzingTree_0080 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -634,7 +634,7 @@ return {
 		}
 	},
 	paralyzingTree_0082 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -660,7 +660,7 @@ return {
 		}
 	},
 	paralyzingTree_0084 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -686,7 +686,7 @@ return {
 		}
 	},
 	paralyzingTree_0086 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -712,7 +712,7 @@ return {
 		}
 	},
 	paralyzingTree_0088 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -738,7 +738,7 @@ return {
 		}
 	},
 	paralyzingTree_0090 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -764,7 +764,7 @@ return {
 		}
 	},
 	paralyzingTree_0092 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -790,7 +790,7 @@ return {
 		}
 	},
 	paralyzingTree_0094 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -816,7 +816,7 @@ return {
 		}
 	},
 	paralyzingTree_0096 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -842,7 +842,7 @@ return {
 		}
 	},
 	paralyzingTree_0098 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -868,7 +868,7 @@ return {
 		}
 	},
 	paralyzingTree_0100 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -892,7 +892,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_0101 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -916,7 +916,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_0102 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -942,7 +942,7 @@ return {
 		}
 	},
 	paralyzingTree_0104 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -968,7 +968,7 @@ return {
 		}
 	},
 	paralyzingTree_0106 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -994,7 +994,7 @@ return {
 		}
 	},
 	paralyzingTree_0108 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -1020,7 +1020,7 @@ return {
 		}
 	},
 	paralyzingTree_0110 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -1046,7 +1046,7 @@ return {
 		}
 	},
 	paralyzingTree_0112 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -1072,7 +1072,7 @@ return {
 		}
 	},
 	paralyzingTree_0114 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -1098,7 +1098,7 @@ return {
 		}
 	},
 	paralyzingTree_0116 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -1127,7 +1127,7 @@ return {
 		}
 	},
 	paralyzingTree_0121 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			253,
 			242
@@ -1151,7 +1151,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_particle0_0001 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1177,7 +1177,7 @@ return {
 		}
 	},
 	paralyzingTree_particle0_0003 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1203,7 +1203,7 @@ return {
 		}
 	},
 	paralyzingTree_particle0_0005 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1229,7 +1229,7 @@ return {
 		}
 	},
 	paralyzingTree_particle0_0007 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1255,7 +1255,7 @@ return {
 		}
 	},
 	paralyzingTree_particle0_0009 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1281,7 +1281,7 @@ return {
 		}
 	},
 	paralyzingTree_particle0_0011 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1307,7 +1307,7 @@ return {
 		}
 	},
 	paralyzingTree_particle0_0013 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1333,7 +1333,7 @@ return {
 		}
 	},
 	paralyzingTree_particle0_0015 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1359,7 +1359,7 @@ return {
 		}
 	},
 	paralyzingTree_particle0_0017 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1385,7 +1385,7 @@ return {
 		}
 	},
 	paralyzingTree_particle0_0019 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1411,7 +1411,7 @@ return {
 		}
 	},
 	paralyzingTree_particle0_0021 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1437,7 +1437,7 @@ return {
 		}
 	},
 	paralyzingTree_particle0_0023 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1463,7 +1463,7 @@ return {
 		}
 	},
 	paralyzingTree_particle0_0025 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1489,7 +1489,7 @@ return {
 		}
 	},
 	paralyzingTree_particle0_0027 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1515,7 +1515,7 @@ return {
 		}
 	},
 	paralyzingTree_particle0_0029 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1541,7 +1541,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0001 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1567,7 +1567,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0003 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1593,7 +1593,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0005 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1619,7 +1619,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0007 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1645,7 +1645,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0009 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1671,7 +1671,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0011 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1697,7 +1697,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0013 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1723,7 +1723,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0015 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1749,7 +1749,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0017 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1775,7 +1775,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0019 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1801,7 +1801,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0021 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1827,7 +1827,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0023 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1853,7 +1853,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0025 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1879,7 +1879,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0027 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1905,7 +1905,7 @@ return {
 		}
 	},
 	paralyzingTree_particle1_0029 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1931,7 +1931,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0001 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1957,7 +1957,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0003 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -1983,7 +1983,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0005 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -2009,7 +2009,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0007 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -2035,7 +2035,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0009 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -2061,7 +2061,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0011 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -2087,7 +2087,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0013 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -2113,7 +2113,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0015 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -2139,7 +2139,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0017 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -2165,7 +2165,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0019 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -2191,7 +2191,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0021 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -2217,7 +2217,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0023 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -2243,7 +2243,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0025 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -2269,7 +2269,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0027 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -2295,7 +2295,7 @@ return {
 		}
 	},
 	paralyzingTree_particle2_0029 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			42,
 			42
@@ -2321,7 +2321,7 @@ return {
 		}
 	},
 	paralyzingTree_stun_0001 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2345,7 +2345,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0002 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2369,7 +2369,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0003 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2393,7 +2393,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0004 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2417,7 +2417,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0005 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2441,7 +2441,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0006 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2465,7 +2465,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0007 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2489,7 +2489,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0008 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2513,7 +2513,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0009 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2537,7 +2537,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0010 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2561,7 +2561,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0011 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2585,7 +2585,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0012 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2609,7 +2609,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0013 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2633,7 +2633,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0014 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2657,7 +2657,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0015 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2681,7 +2681,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0016 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2705,7 +2705,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0017 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2729,7 +2729,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0018 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2753,7 +2753,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0019 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2777,7 +2777,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0020 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2801,7 +2801,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0021 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2825,7 +2825,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0022 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2849,7 +2849,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0023 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2873,7 +2873,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0024 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2897,7 +2897,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0025 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45
@@ -2921,7 +2921,7 @@ return {
 		alias = {}
 	},
 	paralyzingTree_stun_0026 = {
-		a_name = "go_stages_bittering_rancor-1.png",
+		a_name = "go_stages_bittering_rancor-1.dds",
 		size = {
 			56,
 			45

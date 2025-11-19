@@ -1,6 +1,6 @@
 return {
 	["difficulty_bg_notxt"] = {
-		a_name = "select_difficulty-1.png",
+		a_name = "select_difficulty-1.dds",
 		size = {
 			1200,
 			720
@@ -24,7 +24,7 @@ return {
 		alias = {}
 	},
 	["difficulty_btns_ilustraciones_0001"] = {
-		a_name = "select_difficulty-1.png",
+		a_name = "select_difficulty-1.dds",
 		size = {
 			340,
 			380
@@ -48,7 +48,7 @@ return {
 		alias = {}
 	},
 	["difficulty_btns_ilustraciones_0002"] = {
-		a_name = "select_difficulty-1.png",
+		a_name = "select_difficulty-1.dds",
 		size = {
 			340,
 			380
@@ -72,7 +72,7 @@ return {
 		alias = {}
 	},
 	["difficulty_btns_ilustraciones_0003"] = {
-		a_name = "select_difficulty-1.png",
+		a_name = "select_difficulty-1.dds",
 		size = {
 			340,
 			380
@@ -96,7 +96,7 @@ return {
 		alias = {}
 	},
 	["difficulty_btns_ilustraciones_0004"] = {
-		a_name = "select_difficulty-1.png",
+		a_name = "select_difficulty-1.dds",
 		size = {
 			340,
 			380
@@ -120,7 +120,7 @@ return {
 		alias = {}
 	},
 	["difficulty_btns_notxt_marco_0001"] = {
-		a_name = "select_difficulty-1.png",
+		a_name = "select_difficulty-1.dds",
 		size = {
 			340,
 			380
@@ -144,7 +144,7 @@ return {
 		alias = {}
 	},
 	["difficulty_btns_notxt_marco_0002"] = {
-		a_name = "select_difficulty-1.png",
+		a_name = "select_difficulty-1.dds",
 		size = {
 			340,
 			380
@@ -168,7 +168,7 @@ return {
 		alias = {}
 	},
 	["difficulty_btns_notxt_marco_0003"] = {
-		a_name = "select_difficulty-1.png",
+		a_name = "select_difficulty-1.dds",
 		size = {
 			340,
 			380
@@ -192,7 +192,7 @@ return {
 		alias = {}
 	},
 	["difficulty_select_bg"] = {
-		a_name = "select_difficulty-1.png",
+		a_name = "select_difficulty-1.dds",
 		size = {
 			208,
 			46

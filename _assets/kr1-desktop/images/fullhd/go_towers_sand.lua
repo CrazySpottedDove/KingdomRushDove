@@ -1,6 +1,6 @@
 return {
 	["tower_sand_basic_hit_0001"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			79,
 			82
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_basic_hit_0002"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			79,
 			82
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_basic_hit_0003"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			79,
 			82
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_basic_hit_0004"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			79,
 			82
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_basic_hit_0005"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			79,
 			82
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_basic_hit_0006"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			79,
 			82
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_build"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			133,
 			119
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_particle_0001"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			65,
 			68
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_particle_0002"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			65,
 			68
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_particle_0003"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			65,
 			68
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_particle_0004"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			65,
 			68
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_particle_0005"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			65,
 			68
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_particle_0006"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			65,
 			68
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_particle_0007"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			65,
 			68
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_projectile_0001"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			65,
 			65
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_projectile_0002"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			65,
 			65
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_projectile_0003"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			65,
 			65
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0001"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0002"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0003"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0004"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0005"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0006"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0007"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0008"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0009"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0010"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0011"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0012"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0013"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0014"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0015"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0016"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0017"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0018"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0019"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0020"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0021"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0022"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0023"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0024"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0025"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0026"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0027"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0028"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0029"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0030"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0031"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0032"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0033"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0034"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0035"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0036"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0037"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0038"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0039"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0040"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0041"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0042"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0043"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0044"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0045"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0046"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0047"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0048"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0049"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0050"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0051"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0052"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0053"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0054"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0055"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0056"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0057"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0058"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0059"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0060"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0061"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0062"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0063"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0064"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0065"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0066"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0067"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0068"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0069"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0070"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0071"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0072"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0073"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0074"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0075"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0076"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0077"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0078"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0079"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0080"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_sentinel_0081"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			110,
 			127
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0001"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0002"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0003"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0004"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0005"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0006"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0007"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0008"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0009"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0010"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0011"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0012"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0013"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0014"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0015"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_coins_hit_0016"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			127,
 			142
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_hit_0001"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			96,
 			93
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_hit_0002"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			96,
 			93
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_hit_0003"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			96,
 			93
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_hit_0004"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			96,
 			93
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_hit_0005"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			96,
 			93
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_hit_0006"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			96,
 			93
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_particle_0001"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			82,
 			85
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_particle_0002"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			82,
 			85
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_particle_0003"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			82,
 			85
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_particle_0004"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			82,
 			85
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_particle_0005"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			82,
 			85
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_particle_0006"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			82,
 			85
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_particle_0007"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			82,
 			85
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_projectile_0001"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			82,
 			85
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_projectile_0002"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			82,
 			85
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_1_projectile_0003"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			82,
 			85
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0001"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0002"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0003"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0004"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0005"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0006"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0007"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0008"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0009"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0010"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0011"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0012"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0013"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0014"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0015"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0016"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0017"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0018"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0019"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0020"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0021"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0022"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0023"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0024"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0025"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0026"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0027"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0028"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0029"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0030"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0031"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0032"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0033"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0034"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0035"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0036"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0037"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0038"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0039"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0040"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0041"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0042"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0043"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0044"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0045"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_decal_0046"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			164,
 			173
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_hit_FX_0001"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			90,
 			82
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_hit_FX_0002"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			90,
 			82
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_hit_FX_0003"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			90,
 			82
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_hit_FX_0004"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			90,
 			82
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_hit_FX_0005"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			90,
 			82
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_hit_FX_0006"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			90,
 			82
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_hit_FX_0007"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			90,
 			82
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_hit_FX_0008"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			90,
 			82
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_hit_FX_0009"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			90,
 			82
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_hit_FX_0010"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			90,
 			82
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_particle_0001"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			99,
 			88
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_particle_0002"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			99,
 			88
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_particle_0003"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			99,
 			88
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_particle_0004"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			99,
 			88
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_particle_0005"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			99,
 			88
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_particle_0006"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			99,
 			88
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_particle_0007"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			99,
 			88
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_particle_0008"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			99,
 			88
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_projectile_0001"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			88,
 			79
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_projectile_0002"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			88,
 			79
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_skill_2_projectile_0003"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			88,
 			79
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0001"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0002"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0003"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0004"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0005"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0006"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0007"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0008"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0009"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0010"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0011"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0012"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0013"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0014"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0015"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0016"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0017"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0018"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0019"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0020"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0021"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0022"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0023"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0024"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0025"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0026"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0027"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0028"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0029"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0030"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0031"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0032"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0033"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0034"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0035"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0036"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0037"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0038"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0039"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0040"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0041"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0042"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0043"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0044"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0045"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0046"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0047"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0048"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0049"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0050"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0051"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0052"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0053"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_0054"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			213,
 			215
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_lvl4_tower_front"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			113,
 			176
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["tower_sand_preview"] = {
-		a_name = "go_towers_sand-1.png",
+		a_name = "go_towers_sand-1.dds",
 		size = {
 			130,
 			190

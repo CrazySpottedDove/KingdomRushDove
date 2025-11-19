@@ -1,6 +1,6 @@
 return {
 	base = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			740,
 			90
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	base_info_bar = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			150,
 			18
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	base_info_bar_bg = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			154,
 			24
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	base_info_icons_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			22,
 			22
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	base_info_icons_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			22,
 			22
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	base_info_icons_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			22,
 			22
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	base_info_icons_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			22,
 			22
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	base_info_icons_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			22,
 			22
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	base_info_icons_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			22,
 			22
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	base_info_icons_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			22,
 			22
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	base_info_icons_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			22,
 			22
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	base_info_icons_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			22,
 			22
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	base_info_icons_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			22,
 			22
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	base_info_icons_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			22,
 			22
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	base_info_icons_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			22,
 			22
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	base_info_icons_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			22,
 			22
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	base_info_icons_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			22,
 			22
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	base_powers_bg = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			290,
 			92
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	bg_bottom_bar = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			1920,
 			20
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	bg_bottom_center = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			40
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	bg_bottom_left = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			348,
 			50
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	bg_bottom_nextwave = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			174,
 			75
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	bg_bottom_right = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			268,
 			50
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	button_border_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			205,
 			86
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	button_border_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			205,
 			86
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	button_border_large_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			250,
 			96
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	button_border_large_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			250,
 			96
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	button_continue_chains = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			220,
 			124
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	button_restart_chains = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			220,
 			64
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	confirm_feedback_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			52
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	confirm_feedback_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			52
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	confirm_feedback_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			52
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	confirm_feedback_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			52
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	confirm_feedback_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			52
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	confirm_feedback_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			52
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	confirm_feedback_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			52
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	confirm_feedback_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			52
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	confirm_feedback_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			52
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	confirm_feedback_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			52
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	confirm_feedback_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			52
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	defeat_bg_notxt = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			640,
 			540
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0015 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0016 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0017 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0018 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0019 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0020 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0021 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0022 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	effect_powerbuy_0023 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			72,
 			82
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	error_feedback_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			78,
 			72
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	error_feedback_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			78,
 			72
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	error_feedback_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			78,
 			72
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	error_feedback_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			78,
 			72
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	error_feedback_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			78,
 			72
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	error_feedback_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			78,
 			72
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	error_feedback_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			78,
 			72
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	error_feedback_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			78,
 			72
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	error_feedback_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			78,
 			72
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	error_feedback_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			78,
 			72
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	error_feedback_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			78,
 			72
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	error_feedback_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			78,
 			72
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	error_feedback_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			78,
 			72
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	error_feedback_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			78,
 			72
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	fire_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	fire_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0015 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0016 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0017 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0018 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0019 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0020 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0021 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0022 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0023 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0024 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0025 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0026 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0027 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0028 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0029 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0030 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0031 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0032 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0033 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0034 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0035 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0036 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0037 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0038 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0039 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0040 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0041 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0042 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0043 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	fire_ready_0044 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	freeze_gfx_corner = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			504,
 			408
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	freeze_gfx_side = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			408,
 			120
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	gold_gnome = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			96
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	gui_ring = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			209,
 			209
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	heart_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	heart_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	heart_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	heart_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	heart_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	heart_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	heart_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	heart_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	heart_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	heart_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	heart_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	heart_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	heart_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	heart_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	heart_0015 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			36,
 			36
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	hero_portrait_bars_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			80,
 			5
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	hero_portrait_bars_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			80,
 			5
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0015 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0016 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0017 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0018 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0019 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0020 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0021 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0022 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0023 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0024 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0025 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0026 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0027 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0028 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_0029 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_bg = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_dead = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0015 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0016 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0017 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0018 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0019 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0020 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0021 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0022 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0023 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0024 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0025 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0026 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0027 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0028 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0029 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0030 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_L_0031 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0015 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0016 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0017 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0018 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0019 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0020 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0021 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0022 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0023 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0024 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0025 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0026 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0027 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0028 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0029 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0030 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_R_0031 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_selected = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			144,
 			142
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	heroPortrait_separator = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			28,
 			142
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0015 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0016 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0017 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0018 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0019 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	malicia_powerNet_0020 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	nextwave_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	nextwave_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	nextwave_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	nextwave_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	nextwave_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	nextwave_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	nextwave_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	nextwave_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	nextwave_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	nextwave_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	nextwave_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	nextwave_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	nextwave_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	nextwave_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	nextwave_0015 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	nextwave_0016 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	nextwave_0017 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	nextwave_0018 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	nextwave_0019 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	nextwave_0020 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	nextwave_0021 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	nextwave_0022 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	nextwave_0023 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	nextwave_0024 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	nextwave_0025 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	nextwave_0026 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	nextwave_0027 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	nextwave_0028 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	nextwave_0029 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	nextwave_0030 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	nextwave_0031 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	nextwave_0032 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			74,
 			74
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	nextwave_coin_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			40
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	nextwave_coin_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			40
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	nextwave_coin_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			40
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	nextwave_coin_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			40
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	nextwave_coin_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			40
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	nextwave_coin_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			40
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	nextwave_coin_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			40
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	nextwave_coin_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			40
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	nextwave_coin_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			40
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	nextwave_coin_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			40
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	nextwave_coin_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			40
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	nextwave_coin_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			40
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	nextwave_coin_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			40
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	nextwave_coin_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			40
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	nextwaveTimer_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			64,
 			64
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	nextwaveTimer_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			64,
 			64
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	nextwaveTimer_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			64,
 			64
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	nextwaveTimer_0020 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			64,
 			64
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	nextwaveTimer_Full = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			64,
 			64
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	nextwaveTimer_glow_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			80,
 			80
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	nextwaveTimer_glow_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			80,
 			80
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	nextwaveTimer_glow_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			80,
 			80
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	pause_base = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			160,
 			92
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	pause_btn_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			60,
 			54
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	pause_btn_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			60,
 			54
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	pointer_area_blue_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	pointer_area_blue_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	pointer_area_blue_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	pointer_area_blue_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	pointer_area_blue_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	pointer_area_blue_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	pointer_area_blue_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	pointer_area_blue_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	pointer_area_blue_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	pointer_area_blue_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	pointer_area_green_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	pointer_area_green_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	pointer_area_green_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	pointer_area_green_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	pointer_area_green_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	pointer_area_green_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	pointer_area_green_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	pointer_area_green_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	pointer_area_green_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	pointer_area_green_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	pointer_area_orange_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	pointer_area_orange_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	pointer_area_orange_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	pointer_area_orange_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	pointer_area_orange_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	pointer_area_orange_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	pointer_area_orange_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	pointer_area_orange_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	pointer_area_orange_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	pointer_area_orange_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			200,
 			120
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0015 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0016 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0017 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0018 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0019 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0020 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0021 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0022 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0023 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0024 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0025 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0026 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0027 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0028 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0029 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0030 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0031 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	pointer_fireball_0032 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			306,
 			190
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	pointer_pirate_cannons = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			158,
 			87
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	pointer_point_green_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	pointer_point_green_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	pointer_point_green_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	pointer_point_green_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	pointer_point_green_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	pointer_point_green_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	pointer_point_green_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	pointer_point_green_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	pointer_point_green_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	pointer_point_green_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	pointer_point_orange_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	pointer_point_orange_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	pointer_point_orange_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	pointer_point_orange_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	pointer_point_orange_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	pointer_point_orange_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	pointer_point_orange_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	pointer_point_orange_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	pointer_point_orange_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	pointer_point_orange_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	pointer_reinforce_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			120,
 			120
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	pointer_reinforce_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			120,
 			120
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	pointer_reinforce_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			120,
 			120
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	pointer_reinforce_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			120,
 			120
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	pointer_set_rally_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	pointer_set_rally_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	pointer_set_rally_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	pointer_set_rally_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	pointer_set_rally_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	pointer_set_rally_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	pointer_set_rally_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	pointer_set_rally_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	pointer_set_rally_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	pointer_set_rally_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			42
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	pointer_sunray_tower = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			100
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	pointer_user_power_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			100
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	pointer_user_power_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			100
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	power_loading = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			62,
 			62
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	power_nbrs_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			30
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	power_nbrs_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			30
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	power_nbrs_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			30
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	power_rank_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			17,
 			17
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	power_rank_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			17,
 			17
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	power_ready_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	price_tag = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			50,
 			31
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	price_tag_disabled = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			50,
 			31
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	rally_circle = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			193,
 			193
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0015 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0016 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0017 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0018 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0019 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0020 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0021 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0022 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0023 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0024 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0025 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0026 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0027 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0028 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0029 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	rally_feedback_0030 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			108,
 			106
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	range_circle = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			193,
 			193
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0015 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0016 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0017 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0018 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0019 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0020 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0021 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0022 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0023 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0024 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0025 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0026 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0027 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0028 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0029 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0030 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0031 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0032 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0033 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0034 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0035 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0036 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0037 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0038 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0039 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0040 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0041 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0042 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0043 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	reinforcement_ready_0044 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	reinforcements_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	reinforcements_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			88,
 			88
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0015 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0016 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0017 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0018 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0019 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	spiderQueen_powerNet_0020 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			90,
 			96
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	tooltip_arrow = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			34
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	tooltip_bg_small = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			272,
 			139
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	tooltip_bg_standard = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			272,
 			180
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	tooltip_icons_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			25,
 			25
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	tooltip_icons_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			25,
 			25
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	tooltip_icons_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			25,
 			25
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	tooltip_icons_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			25,
 			25
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	tooltip_icons_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			25,
 			25
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	tooltip_icons_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			25,
 			25
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	tooltip_icons_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			25,
 			25
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	tooltip_icons_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			25,
 			25
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	tooltip_icons_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			25,
 			25
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	tooltip_icons_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			25,
 			25
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	top_left = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			524,
 			108
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	TowerOver_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			160,
 			80
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	TowerOver_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			160,
 			80
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	victory_star = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			30,
 			26
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	victoryBadges_notxt_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			660,
 			538
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	victoryBadges_notxt_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			660,
 			538
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	victoryBadges_notxt_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			660,
 			538
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0010 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0013 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0014 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0015 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0016 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0017 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0018 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0019 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0020 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0021 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0022 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0023 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0024 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0025 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0026 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0027 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0028 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0029 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0030 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0031 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0032 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0033 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0034 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0035 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0036 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0037 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0038 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0039 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0040 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0041 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0042 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0043 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0044 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0045 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0046 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0047 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0048 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0049 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0050 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0051 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0052 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0053 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	victoryStars_0054 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			182,
 			106
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	waveFlag_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			70
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	waveFlag_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			70
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	waveFlag_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			70,
 			70
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	waveFlag_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			29,
 			25
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	waveReward_0000 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			44
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	waveReward_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			44
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	waveReward_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			44
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	waveReward_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			44
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	waveReward_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			44
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	waveReward_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			44
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	waveReward_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			44
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	waveReward_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			44
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	waveReward_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			44
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	waveReward_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			44
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	waveReward_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			44
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	waveRewardTimer_0000 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			48
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	waveRewardTimer_0001 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			48
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	waveRewardTimer_0002 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			48
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	waveRewardTimer_0003 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			48
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	waveRewardTimer_0004 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			48
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	waveRewardTimer_0005 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			48
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	waveRewardTimer_0006 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			48
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	waveRewardTimer_0007 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			48
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	waveRewardTimer_0008 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			48
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	waveRewardTimer_0009 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			48
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	waveRewardTimer_0011 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			48
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	waveRewardTimer_0012 = {
-		a_name = "gui_common-1.png",
+		a_name = "gui_common-1.dds",
 		size = {
 			24,
 			48

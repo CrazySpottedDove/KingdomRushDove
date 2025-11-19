@@ -2,7 +2,7 @@
 
 return {
 	Stage04_0002 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			1980,
 			1080
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	Stage3_Worm = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			222,
 			217
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0001 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -76,7 +76,7 @@ return {
 		}
 	},
 	sandworm_attack_0003 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -102,7 +102,7 @@ return {
 		}
 	},
 	sandworm_attack_0005 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -128,7 +128,7 @@ return {
 		}
 	},
 	sandworm_attack_0007 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -154,7 +154,7 @@ return {
 		}
 	},
 	sandworm_attack_0009 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -180,7 +180,7 @@ return {
 		}
 	},
 	sandworm_attack_0011 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -206,7 +206,7 @@ return {
 		}
 	},
 	sandworm_attack_0013 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -237,7 +237,7 @@ return {
 		}
 	},
 	sandworm_attack_0020 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -261,7 +261,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0021 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -285,7 +285,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0022 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -309,7 +309,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0023 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -333,7 +333,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0024 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -357,7 +357,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0025 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -381,7 +381,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0026 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -405,7 +405,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0027 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -429,7 +429,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0028 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -453,7 +453,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0029 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -477,7 +477,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0030 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -501,7 +501,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0031 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -525,7 +525,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0032 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -549,7 +549,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0033 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -573,7 +573,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0034 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -597,7 +597,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0035 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -621,7 +621,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0036 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -645,7 +645,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0037 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -669,7 +669,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0038 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -693,7 +693,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0039 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -717,7 +717,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0040 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -741,7 +741,7 @@ return {
 		alias = {}
 	},
 	sandworm_attack_0041 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			180,
 			180
@@ -765,7 +765,7 @@ return {
 		alias = {}
 	},
 	sandworm_decal_0001 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			160,
 			90
@@ -791,7 +791,7 @@ return {
 		}
 	},
 	sandworm_decal_0003 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			160,
 			90
@@ -815,7 +815,7 @@ return {
 		alias = {}
 	},
 	sandworm_decal_0004 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			160,
 			90
@@ -839,7 +839,7 @@ return {
 		alias = {}
 	},
 	sandworm_decal_0005 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			160,
 			90
@@ -863,7 +863,7 @@ return {
 		alias = {}
 	},
 	sandworm_decal_0006 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			160,
 			90
@@ -887,7 +887,7 @@ return {
 		alias = {}
 	},
 	sandworm_decal_0007 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			160,
 			90
@@ -913,7 +913,7 @@ return {
 		}
 	},
 	sandworm_decal_0009 = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			160,
 			90
@@ -939,7 +939,7 @@ return {
 		}
 	},
 	sandworm_decal_out = {
-		a_name = "go_stage30-1.png",
+		a_name = "go_stage30-1.dds",
 		size = {
 			138,
 			68

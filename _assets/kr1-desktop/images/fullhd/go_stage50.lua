@@ -2,7 +2,7 @@
 
 return {
 	stage2_big_waves_0001 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -29,7 +29,7 @@ return {
 		}
 	},
 	stage2_big_waves_0002 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -56,7 +56,7 @@ return {
 		}
 	},
 	stage2_big_waves_0005 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -83,7 +83,7 @@ return {
 		}
 	},
 	stage2_big_waves_0008 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -110,7 +110,7 @@ return {
 		}
 	},
 	stage2_big_waves_0011 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -137,7 +137,7 @@ return {
 		}
 	},
 	stage2_big_waves_0014 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -164,7 +164,7 @@ return {
 		}
 	},
 	stage2_big_waves_0017 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -191,7 +191,7 @@ return {
 		}
 	},
 	stage2_big_waves_0020 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -218,7 +218,7 @@ return {
 		}
 	},
 	stage2_big_waves_0023 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -245,7 +245,7 @@ return {
 		}
 	},
 	stage2_big_waves_0026 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -272,7 +272,7 @@ return {
 		}
 	},
 	stage2_big_waves_0029 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -299,7 +299,7 @@ return {
 		}
 	},
 	stage2_big_waves_0032 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -326,7 +326,7 @@ return {
 		}
 	},
 	stage2_big_waves_0035 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -353,7 +353,7 @@ return {
 		}
 	},
 	stage2_big_waves_0038 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -380,7 +380,7 @@ return {
 		}
 	},
 	stage2_big_waves_0041 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -407,7 +407,7 @@ return {
 		}
 	},
 	stage2_big_waves_0044 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -434,7 +434,7 @@ return {
 		}
 	},
 	stage2_big_waves_0047 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -461,7 +461,7 @@ return {
 		}
 	},
 	stage2_big_waves_0050 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -488,7 +488,7 @@ return {
 		}
 	},
 	stage2_big_waves_0053 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			276,
 			152
@@ -515,7 +515,7 @@ return {
 		}
 	},
 	stage2_bridge = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			87,
 			45
@@ -539,7 +539,7 @@ return {
 		alias = {}
 	},
 	stage2_shadows = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			647,
 			219
@@ -563,7 +563,7 @@ return {
 		alias = {}
 	},
 	stage2_stones_0001 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			113,
 			65
@@ -587,7 +587,7 @@ return {
 		alias = {}
 	},
 	stage2_stones_0002 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			113,
 			65
@@ -611,7 +611,7 @@ return {
 		alias = {}
 	},
 	stage2_stones_0003 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			113,
 			65
@@ -635,7 +635,7 @@ return {
 		alias = {}
 	},
 	stage2_stones_0004 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			113,
 			65
@@ -659,7 +659,7 @@ return {
 		alias = {}
 	},
 	stage2_stones_0005 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			113,
 			65
@@ -683,7 +683,7 @@ return {
 		alias = {}
 	},
 	stage2_stones_0006 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			113,
 			65
@@ -707,7 +707,7 @@ return {
 		alias = {}
 	},
 	stage2_water_fall1_0001 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			118,
 			98
@@ -734,7 +734,7 @@ return {
 		}
 	},
 	stage2_water_fall1_0004 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			118,
 			98
@@ -761,7 +761,7 @@ return {
 		}
 	},
 	stage2_water_fall1_0007 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			118,
 			98
@@ -788,7 +788,7 @@ return {
 		}
 	},
 	stage2_water_fall2_0001 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			149,
 			79
@@ -815,7 +815,7 @@ return {
 		}
 	},
 	stage2_water_fall2_0004 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			149,
 			79
@@ -842,7 +842,7 @@ return {
 		}
 	},
 	stage2_water_fall2_0007 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			149,
 			79
@@ -869,7 +869,7 @@ return {
 		}
 	},
 	stage2_water_fall3_0001 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			51,
 			48
@@ -896,7 +896,7 @@ return {
 		}
 	},
 	stage2_water_fall3_0004 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			51,
 			48
@@ -923,7 +923,7 @@ return {
 		}
 	},
 	stage2_water_fall3_0007 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			51,
 			48
@@ -950,7 +950,7 @@ return {
 		}
 	},
 	stage2_water_fall4_0001 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			59,
 			42
@@ -977,7 +977,7 @@ return {
 		}
 	},
 	stage2_water_fall4_0004 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			59,
 			42
@@ -1004,7 +1004,7 @@ return {
 		}
 	},
 	stage2_water_fall4_0007 = {
-		a_name = "go_stage50-1.png",
+		a_name = "go_stage50-1.dds",
 		size = {
 			59,
 			42

@@ -2,7 +2,7 @@
 
 return {
 	Stage01_0002 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			1980,
 			1080
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	Stage01_flag_0001 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			43,
 			29
@@ -53,7 +53,7 @@ return {
 		}
 	},
 	Stage01_flag_0004 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			43,
 			29
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	Stage01_flag_0007 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			43,
 			29
@@ -107,7 +107,7 @@ return {
 		}
 	},
 	Stage01_flag_0010 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			43,
 			29
@@ -134,7 +134,7 @@ return {
 		}
 	},
 	Stage01_flag_0013 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			43,
 			29
@@ -161,7 +161,7 @@ return {
 		}
 	},
 	Stage1_BossShadow = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			84,
 			152
@@ -185,7 +185,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossShoutBox_0001 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			295,
 			141
@@ -211,7 +211,7 @@ return {
 		}
 	},
 	Stage1_BossShoutBox_0003 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			295,
 			141
@@ -237,7 +237,7 @@ return {
 		}
 	},
 	Stage1_BossShoutBox_0005 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			295,
 			141
@@ -263,7 +263,7 @@ return {
 		}
 	},
 	Stage1_BossShoutBox_0007 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			295,
 			141
@@ -289,7 +289,7 @@ return {
 		}
 	},
 	Stage1_BossShoutBox_0009 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			295,
 			141
@@ -315,7 +315,7 @@ return {
 		}
 	},
 	Stage1_BossShoutBox_0011 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			295,
 			141
@@ -341,7 +341,7 @@ return {
 		}
 	},
 	Stage1_BossShoutBox_0013 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			295,
 			141
@@ -367,7 +367,7 @@ return {
 		}
 	},
 	Stage1_BossShoutBox_0015 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			295,
 			141
@@ -393,7 +393,7 @@ return {
 		}
 	},
 	Stage1_BossShoutBox_texts_0001 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			295,
 			141
@@ -417,7 +417,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossShoutBox_texts_0002 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			295,
 			141
@@ -441,7 +441,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossShoutBox_texts_0003 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			295,
 			141
@@ -465,7 +465,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0001 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -491,7 +491,7 @@ return {
 		}
 	},
 	Stage1_BossTowerHold_0003 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -515,7 +515,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0004 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -539,7 +539,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0005 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -563,7 +563,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0006 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -587,7 +587,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0007 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -611,7 +611,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0008 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -635,7 +635,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0009 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -659,7 +659,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0010 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -683,7 +683,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0011 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -707,7 +707,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0012 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -731,7 +731,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0013 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -755,7 +755,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0014 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -779,7 +779,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0015 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -803,7 +803,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0016 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -827,7 +827,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0017 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -851,7 +851,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0018 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -875,7 +875,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0019 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -899,7 +899,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0020 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -923,7 +923,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0021 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -947,7 +947,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0022 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -971,7 +971,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0023 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -995,7 +995,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0024 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1019,7 +1019,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0025 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1043,7 +1043,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0026 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1067,7 +1067,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0027 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1091,7 +1091,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0028 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1115,7 +1115,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0029 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1139,7 +1139,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0030 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1163,7 +1163,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0031 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1187,7 +1187,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0032 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1211,7 +1211,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0033 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1235,7 +1235,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0034 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1259,7 +1259,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0035 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1283,7 +1283,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0036 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1307,7 +1307,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0037 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1331,7 +1331,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0038 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1355,7 +1355,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0039 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1379,7 +1379,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0040 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1403,7 +1403,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0041 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1427,7 +1427,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0042 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1451,7 +1451,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0043 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1475,7 +1475,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0044 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1503,7 +1503,7 @@ return {
 		}
 	},
 	Stage1_BossTowerHold_0048 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1527,7 +1527,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0049 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1551,7 +1551,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0050 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1575,7 +1575,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0051 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1599,7 +1599,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0052 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1623,7 +1623,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0053 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1647,7 +1647,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0054 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1671,7 +1671,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0055 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1695,7 +1695,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0056 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1721,7 +1721,7 @@ return {
 		}
 	},
 	Stage1_BossTowerHold_0058 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1747,7 +1747,7 @@ return {
 		}
 	},
 	Stage1_BossTowerHold_0060 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1773,7 +1773,7 @@ return {
 		}
 	},
 	Stage1_BossTowerHold_0062 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1799,7 +1799,7 @@ return {
 		}
 	},
 	Stage1_BossTowerHold_0064 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1823,7 +1823,7 @@ return {
 		alias = {}
 	},
 	Stage1_BossTowerHold_0065 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			163,
 			155
@@ -1847,7 +1847,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0001 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -1871,7 +1871,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0002 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -1895,7 +1895,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0003 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -1919,7 +1919,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0004 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -1943,7 +1943,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0005 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -1967,7 +1967,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0006 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -1991,7 +1991,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0007 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2015,7 +2015,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0008 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2039,7 +2039,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0009 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2063,7 +2063,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0010 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2087,7 +2087,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0011 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2111,7 +2111,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0012 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2135,7 +2135,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0013 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2159,7 +2159,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0014 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2183,7 +2183,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0015 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2207,7 +2207,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0016 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2231,7 +2231,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0017 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2255,7 +2255,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0018 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2279,7 +2279,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0019 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2303,7 +2303,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0020 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2327,7 +2327,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0021 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2351,7 +2351,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0022 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2375,7 +2375,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0023 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2399,7 +2399,7 @@ return {
 		alias = {}
 	},
 	Stage1_Boss_0024 = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			65,
 			118
@@ -2423,7 +2423,7 @@ return {
 		alias = {}
 	},
 	Stage1_Hammer = {
-		a_name = "go_stage27-1.png",
+		a_name = "go_stage27-1.dds",
 		size = {
 			132,
 			149

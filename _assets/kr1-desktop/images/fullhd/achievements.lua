@@ -1,6 +1,6 @@
 return {
 	["achievement_icons_0001"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0002"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0003"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0004"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0005"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0006"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0007"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0008"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0009"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0010"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0011"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0012"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0013"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0014"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0015"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0016"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0017"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0018"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0019"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0020"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0021"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0022"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0023"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0024"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0025"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0026"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0027"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0028"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0029"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0030"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0031"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0032"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0033"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0034"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0035"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0036"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0037"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0038"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0039"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0040"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0041"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0042"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0043"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0044"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0045"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0046"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0047"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0048"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0049"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0050"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0051"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0052"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0053"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0054"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0055"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0056"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0057"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0058"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0059"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0060"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0061"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0062"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0063"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0064"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0065"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0066"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0067"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0068"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0069"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0070"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0071"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0072"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0073"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["achievement_icons_0074"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["Achievements_BG_notxt"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			1024,
 			780
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["Achievements_Box_Big"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			368,
 			122
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["Achievements_Box_Large"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			405,
 			109
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["Achievements_page_0001"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			50,
 			50
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["Achievements_page_0002"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			50,
 			50
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["Achievements_page_0003"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			50,
 			50
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0001"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0002"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0003"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0004"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0005"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0006"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0007"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0008"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0009"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0010"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0011"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0012"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0013"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0014"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0015"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0016"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0017"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0018"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0019"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0020"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0021"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0022"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0023"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0024"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0025"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0026"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0027"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0028"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0029"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0030"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0031"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0032"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0033"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0034"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0035"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0036"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0037"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0038"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0039"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0040"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0041"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0042"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0043"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0044"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0045"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0046"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0047"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0048"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0049"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0050"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0051"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0052"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0053"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0054"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0055"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0056"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0057"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0058"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0059"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["kr2_achievement_icons_0060"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0001"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0002"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0003"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0004"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0005"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0006"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0007"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0008"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0009"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0010"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0011"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0012"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0013"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0014"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0015"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0016"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0017"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0018"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0019"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0020"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0021"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0022"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0023"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0024"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0025"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0026"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0027"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0028"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0029"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0030"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0031"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0032"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0033"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0034"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0035"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0036"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0037"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0038"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0039"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0040"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0041"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0042"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0043"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0044"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0045"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0046"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0047"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0048"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0049"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0050"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0051"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0052"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0053"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0054"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0055"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0056"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0057"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0058"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0059"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0060"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0061"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0062"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0063"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0064"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0065"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0066"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0067"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0068"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0069"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0070"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0071"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0072"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0073"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0074"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0075"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0076"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0077"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0078"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0079"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0080"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0081"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0082"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0083"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0084"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0085"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0086"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0087"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0088"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0089"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0090"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0091"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0092"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0093"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0094"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["kr3_achievement_icons_0095"] = {
-		a_name = "achievements-1.png",
+		a_name = "achievements-1.dds",
 		size = {
 			80,
 			80

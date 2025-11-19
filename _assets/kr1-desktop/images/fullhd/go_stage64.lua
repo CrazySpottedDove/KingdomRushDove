@@ -2,7 +2,7 @@
 
 return {
 	Stage16_0002 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			1980,
 			1080
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	Stage16_0003 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			1980,
 			1080
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	stage16_pathExplosion_0001 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			169,
 			217
@@ -76,7 +76,7 @@ return {
 		}
 	},
 	stage16_pathExplosion_0003 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			169,
 			217
@@ -102,7 +102,7 @@ return {
 		}
 	},
 	stage16_pathExplosion_0005 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			169,
 			217
@@ -128,7 +128,7 @@ return {
 		}
 	},
 	stage16_pathExplosion_0007 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			169,
 			217
@@ -154,7 +154,7 @@ return {
 		}
 	},
 	stage16_pathExplosion_0009 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			169,
 			217
@@ -180,7 +180,7 @@ return {
 		}
 	},
 	stage16_pathExplosion_0011 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			169,
 			217
@@ -206,7 +206,7 @@ return {
 		}
 	},
 	stage16_pathExplosion_0013 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			169,
 			217
@@ -232,7 +232,7 @@ return {
 		}
 	},
 	stage16_pathExplosion_0015 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			169,
 			217
@@ -258,7 +258,7 @@ return {
 		}
 	},
 	stage16_pathExplosion_0017 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			169,
 			217
@@ -284,7 +284,7 @@ return {
 		}
 	},
 	stage16_pathExplosion_0019 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			169,
 			217
@@ -310,7 +310,7 @@ return {
 		}
 	},
 	stage16_pathExplosion_0021 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			169,
 			217
@@ -336,7 +336,7 @@ return {
 		}
 	},
 	stage16_pathExplosion_0023 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			169,
 			217
@@ -362,7 +362,7 @@ return {
 		}
 	},
 	stage16_pathExplosion_0025 = {
-		a_name = "go_stage64-1.png",
+		a_name = "go_stage64-1.dds",
 		size = {
 			169,
 			217

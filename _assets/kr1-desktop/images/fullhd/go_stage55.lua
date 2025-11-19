@@ -2,7 +2,7 @@
 
 return {
 	obelix_0001 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -29,7 +29,7 @@ return {
 		}
 	},
 	obelix_0002 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -55,7 +55,7 @@ return {
 		}
 	},
 	obelix_0004 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -87,7 +87,7 @@ return {
 		}
 	},
 	obelix_0006 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -119,7 +119,7 @@ return {
 		}
 	},
 	obelix_0008 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -151,7 +151,7 @@ return {
 		}
 	},
 	obelix_0010 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -183,7 +183,7 @@ return {
 		}
 	},
 	obelix_0012 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -213,7 +213,7 @@ return {
 		}
 	},
 	obelix_0014 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -243,7 +243,7 @@ return {
 		}
 	},
 	obelix_0016 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -273,7 +273,7 @@ return {
 		}
 	},
 	obelix_0054 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -299,7 +299,7 @@ return {
 		}
 	},
 	obelix_0058 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -323,7 +323,7 @@ return {
 		alias = {}
 	},
 	obelix_0059 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -347,7 +347,7 @@ return {
 		alias = {}
 	},
 	obelix_0060 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -371,7 +371,7 @@ return {
 		alias = {}
 	},
 	obelix_0061 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -395,7 +395,7 @@ return {
 		alias = {}
 	},
 	obelix_0062 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -419,7 +419,7 @@ return {
 		alias = {}
 	},
 	obelix_0063 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -443,7 +443,7 @@ return {
 		alias = {}
 	},
 	obelix_0064 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -467,7 +467,7 @@ return {
 		alias = {}
 	},
 	obelix_0065 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -491,7 +491,7 @@ return {
 		alias = {}
 	},
 	obelix_0066 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -515,7 +515,7 @@ return {
 		alias = {}
 	},
 	obelix_0067 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -539,7 +539,7 @@ return {
 		alias = {}
 	},
 	obelix_0068 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -563,7 +563,7 @@ return {
 		alias = {}
 	},
 	obelix_0069 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -589,7 +589,7 @@ return {
 		}
 	},
 	obelix_0071 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -615,7 +615,7 @@ return {
 		}
 	},
 	obelix_0073 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -643,7 +643,7 @@ return {
 		}
 	},
 	obelix_0077 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -669,7 +669,7 @@ return {
 		}
 	},
 	obelix_0079 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -695,7 +695,7 @@ return {
 		}
 	},
 	obelix_0081 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -719,7 +719,7 @@ return {
 		alias = {}
 	},
 	obelix_0082 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -745,7 +745,7 @@ return {
 		}
 	},
 	obelix_0084 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -771,7 +771,7 @@ return {
 		}
 	},
 	obelix_0086 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -797,7 +797,7 @@ return {
 		}
 	},
 	obelix_0088 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -823,7 +823,7 @@ return {
 		}
 	},
 	obelix_0090 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -849,7 +849,7 @@ return {
 		}
 	},
 	obelix_0092 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -875,7 +875,7 @@ return {
 		}
 	},
 	obelix_0094 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -901,7 +901,7 @@ return {
 		}
 	},
 	obelix_0096 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -927,7 +927,7 @@ return {
 		}
 	},
 	obelix_0098 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -951,7 +951,7 @@ return {
 		alias = {}
 	},
 	obelix_0099 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -975,7 +975,7 @@ return {
 		alias = {}
 	},
 	obelix_0100 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -999,7 +999,7 @@ return {
 		alias = {}
 	},
 	obelix_0101 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -1023,7 +1023,7 @@ return {
 		alias = {}
 	},
 	obelix_0102 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -1047,7 +1047,7 @@ return {
 		alias = {}
 	},
 	obelix_0103 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -1071,7 +1071,7 @@ return {
 		alias = {}
 	},
 	obelix_0104 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -1095,7 +1095,7 @@ return {
 		alias = {}
 	},
 	obelix_0105 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -1119,7 +1119,7 @@ return {
 		alias = {}
 	},
 	obelix_0106 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -1143,7 +1143,7 @@ return {
 		alias = {}
 	},
 	obelix_0107 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -1167,7 +1167,7 @@ return {
 		alias = {}
 	},
 	obelix_0108 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -1191,7 +1191,7 @@ return {
 		alias = {}
 	},
 	obelix_0109 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -1215,7 +1215,7 @@ return {
 		alias = {}
 	},
 	obelix_0110 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -1239,7 +1239,7 @@ return {
 		alias = {}
 	},
 	obelix_0111 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115
@@ -1263,7 +1263,7 @@ return {
 		alias = {}
 	},
 	obelix_0112 = {
-		a_name = "go_stage55-1.png",
+		a_name = "go_stage55-1.dds",
 		size = {
 			143,
 			115

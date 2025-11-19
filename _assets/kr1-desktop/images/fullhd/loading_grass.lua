@@ -2,7 +2,7 @@
 
 return {
 	loading_grass = {
-		a_name = "loading_grass-1.png",
+		a_name = "loading_grass-1.dds",
 		size = {
 			1920,
 			1080

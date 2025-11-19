@@ -2,7 +2,7 @@
 
 return {
 	hero_reinforce_0001 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -34,7 +34,7 @@ return {
 		}
 	},
 	hero_reinforce_0002 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -58,7 +58,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0003 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -82,7 +82,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0004 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -106,7 +106,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0005 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -130,7 +130,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0006 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -154,7 +154,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0008 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -180,7 +180,7 @@ return {
 		}
 	},
 	hero_reinforce_0010 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -206,7 +206,7 @@ return {
 		}
 	},
 	hero_reinforce_0012 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -232,7 +232,7 @@ return {
 		}
 	},
 	hero_reinforce_0014 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -258,7 +258,7 @@ return {
 		}
 	},
 	hero_reinforce_0016 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -284,7 +284,7 @@ return {
 		}
 	},
 	hero_reinforce_0018 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -310,7 +310,7 @@ return {
 		}
 	},
 	hero_reinforce_0020 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -343,7 +343,7 @@ return {
 		}
 	},
 	hero_reinforce_0026 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -369,7 +369,7 @@ return {
 		}
 	},
 	hero_reinforce_0028 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -395,7 +395,7 @@ return {
 		}
 	},
 	hero_reinforce_0030 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -421,7 +421,7 @@ return {
 		}
 	},
 	hero_reinforce_0032 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -447,7 +447,7 @@ return {
 		}
 	},
 	hero_reinforce_0034 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -473,7 +473,7 @@ return {
 		}
 	},
 	hero_reinforce_0036 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -497,7 +497,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0037 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -521,7 +521,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0038 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -549,7 +549,7 @@ return {
 		}
 	},
 	hero_reinforce_0043 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -575,7 +575,7 @@ return {
 		}
 	},
 	hero_reinforce_0045 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -601,7 +601,7 @@ return {
 		}
 	},
 	hero_reinforce_0047 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -627,7 +627,7 @@ return {
 		}
 	},
 	hero_reinforce_0049 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -653,7 +653,7 @@ return {
 		}
 	},
 	hero_reinforce_0051 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -679,7 +679,7 @@ return {
 		}
 	},
 	hero_reinforce_0053 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -705,7 +705,7 @@ return {
 		}
 	},
 	hero_reinforce_0055 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -731,7 +731,7 @@ return {
 		}
 	},
 	hero_reinforce_0057 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -757,7 +757,7 @@ return {
 		}
 	},
 	hero_reinforce_0059 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -783,7 +783,7 @@ return {
 		}
 	},
 	hero_reinforce_0061 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -809,7 +809,7 @@ return {
 		}
 	},
 	hero_reinforce_0063 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -835,7 +835,7 @@ return {
 		}
 	},
 	hero_reinforce_0065 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -861,7 +861,7 @@ return {
 		}
 	},
 	hero_reinforce_0067 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -887,7 +887,7 @@ return {
 		}
 	},
 	hero_reinforce_0069 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -913,7 +913,7 @@ return {
 		}
 	},
 	hero_reinforce_0071 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -939,7 +939,7 @@ return {
 		}
 	},
 	hero_reinforce_0073 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -967,7 +967,7 @@ return {
 		}
 	},
 	hero_reinforce_0077 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -993,7 +993,7 @@ return {
 		}
 	},
 	hero_reinforce_0080 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1019,7 +1019,7 @@ return {
 		}
 	},
 	hero_reinforce_0082 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1045,7 +1045,7 @@ return {
 		}
 	},
 	hero_reinforce_0084 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1071,7 +1071,7 @@ return {
 		}
 	},
 	hero_reinforce_0086 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1097,7 +1097,7 @@ return {
 		}
 	},
 	hero_reinforce_0088 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1123,7 +1123,7 @@ return {
 		}
 	},
 	hero_reinforce_0090 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1149,7 +1149,7 @@ return {
 		}
 	},
 	hero_reinforce_0092 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1175,7 +1175,7 @@ return {
 		}
 	},
 	hero_reinforce_0094 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1201,7 +1201,7 @@ return {
 		}
 	},
 	hero_reinforce_0096 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1227,7 +1227,7 @@ return {
 		}
 	},
 	hero_reinforce_0098 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1253,7 +1253,7 @@ return {
 		}
 	},
 	hero_reinforce_0100 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1279,7 +1279,7 @@ return {
 		}
 	},
 	hero_reinforce_0108 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1305,7 +1305,7 @@ return {
 		}
 	},
 	hero_reinforce_0110 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1331,7 +1331,7 @@ return {
 		}
 	},
 	hero_reinforce_0112 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1355,7 +1355,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0113 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1379,7 +1379,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0114 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1403,7 +1403,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0115 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1427,7 +1427,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0116 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1451,7 +1451,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0117 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1475,7 +1475,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0118 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1499,7 +1499,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0119 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1523,7 +1523,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0120 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1547,7 +1547,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0121 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1571,7 +1571,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0122 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1595,7 +1595,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0123 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1619,7 +1619,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0124 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1643,7 +1643,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0125 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1670,7 +1670,7 @@ return {
 		}
 	},
 	hero_reinforce_0128 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1696,7 +1696,7 @@ return {
 		}
 	},
 	hero_reinforce_0131 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1720,7 +1720,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0132 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1744,7 +1744,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0133 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1768,7 +1768,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0134 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1792,7 +1792,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_0135 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1818,7 +1818,7 @@ return {
 		}
 	},
 	hero_reinforce_0137 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			136,
 			142
@@ -1845,7 +1845,7 @@ return {
 		}
 	},
 	hero_reinforce_ring_0001 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			170,
 			88
@@ -1869,7 +1869,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_ring_0002 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			170,
 			88
@@ -1893,7 +1893,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_ring_0003 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			170,
 			88
@@ -1917,7 +1917,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_ring_0004 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			170,
 			88
@@ -1941,7 +1941,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_ring_0005 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			170,
 			88
@@ -1965,7 +1965,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_ring_0006 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			170,
 			88
@@ -1989,7 +1989,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_ring_0007 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			170,
 			88
@@ -2013,7 +2013,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_ring_0008 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			170,
 			88
@@ -2037,7 +2037,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_ring_0009 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			170,
 			88
@@ -2061,7 +2061,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_ring_0010 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			170,
 			88
@@ -2085,7 +2085,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_ring_0011 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			170,
 			88
@@ -2109,7 +2109,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0001 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			100,
 			94
@@ -2133,7 +2133,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0002 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			100,
 			94
@@ -2157,7 +2157,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0003 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			100,
 			94
@@ -2183,7 +2183,7 @@ return {
 		}
 	},
 	hero_reinforce_rocks_0005 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			100,
 			94
@@ -2209,7 +2209,7 @@ return {
 		}
 	},
 	hero_reinforce_rocks_0007 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			100,
 			94
@@ -2235,7 +2235,7 @@ return {
 		}
 	},
 	hero_reinforce_rocks_0009 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			100,
 			94
@@ -2261,7 +2261,7 @@ return {
 		}
 	},
 	hero_reinforce_rocks_0011 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			100,
 			94
@@ -2285,7 +2285,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0012 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			100,
 			94
@@ -2309,7 +2309,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0013 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			100,
 			94
@@ -2333,7 +2333,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0014 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			100,
 			94
@@ -2357,7 +2357,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0015 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			100,
 			94
@@ -2381,7 +2381,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0016 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			100,
 			94
@@ -2405,7 +2405,7 @@ return {
 		alias = {}
 	},
 	hero_reinforce_rocks_0017 = {
-		a_name = "go_hero_malik-1.png",
+		a_name = "go_hero_malik-1.dds",
 		size = {
 			100,
 			94

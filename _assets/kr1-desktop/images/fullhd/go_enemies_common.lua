@@ -2,7 +2,7 @@
 
 return {
 	bandit_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	bandit_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	bandit_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	bandit_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -104,7 +104,7 @@ return {
 		alias = {}
 	},
 	bandit_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -130,7 +130,7 @@ return {
 		}
 	},
 	bandit_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -156,7 +156,7 @@ return {
 		}
 	},
 	bandit_0012 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -182,7 +182,7 @@ return {
 		}
 	},
 	bandit_0014 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -208,7 +208,7 @@ return {
 		}
 	},
 	bandit_0016 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -234,7 +234,7 @@ return {
 		}
 	},
 	bandit_0018 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -258,7 +258,7 @@ return {
 		alias = {}
 	},
 	bandit_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -284,7 +284,7 @@ return {
 		}
 	},
 	bandit_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -310,7 +310,7 @@ return {
 		}
 	},
 	bandit_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -336,7 +336,7 @@ return {
 		}
 	},
 	bandit_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -362,7 +362,7 @@ return {
 		}
 	},
 	bandit_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -388,7 +388,7 @@ return {
 		}
 	},
 	bandit_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -412,7 +412,7 @@ return {
 		alias = {}
 	},
 	bandit_0030 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -438,7 +438,7 @@ return {
 		}
 	},
 	bandit_0032 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -464,7 +464,7 @@ return {
 		}
 	},
 	bandit_0034 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -490,7 +490,7 @@ return {
 		}
 	},
 	bandit_0036 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -516,7 +516,7 @@ return {
 		}
 	},
 	bandit_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -542,7 +542,7 @@ return {
 		}
 	},
 	bandit_0040 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -566,7 +566,7 @@ return {
 		alias = {}
 	},
 	bandit_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -592,7 +592,7 @@ return {
 		}
 	},
 	bandit_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -618,7 +618,7 @@ return {
 		}
 	},
 	bandit_0045 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -644,7 +644,7 @@ return {
 		}
 	},
 	bandit_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -670,7 +670,7 @@ return {
 		}
 	},
 	bandit_0049 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -696,7 +696,7 @@ return {
 		}
 	},
 	bandit_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -720,7 +720,7 @@ return {
 		alias = {}
 	},
 	bandit_0052 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -746,7 +746,7 @@ return {
 		}
 	},
 	bandit_0054 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -772,7 +772,7 @@ return {
 		}
 	},
 	bandit_0056 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -798,7 +798,7 @@ return {
 		}
 	},
 	bandit_0058 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -824,7 +824,7 @@ return {
 		}
 	},
 	bandit_0060 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -850,7 +850,7 @@ return {
 		}
 	},
 	bandit_0062 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -874,7 +874,7 @@ return {
 		alias = {}
 	},
 	bandit_0063 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -900,7 +900,7 @@ return {
 		}
 	},
 	bandit_0065 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -926,7 +926,7 @@ return {
 		}
 	},
 	bandit_0067 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -950,7 +950,7 @@ return {
 		alias = {}
 	},
 	bandit_0068 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -977,7 +977,7 @@ return {
 		}
 	},
 	bandit_0071 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1005,7 +1005,7 @@ return {
 		}
 	},
 	bandit_0075 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1029,7 +1029,7 @@ return {
 		alias = {}
 	},
 	bandit_0076 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1053,7 +1053,7 @@ return {
 		alias = {}
 	},
 	bandit_0077 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1079,7 +1079,7 @@ return {
 		}
 	},
 	bandit_0079 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1105,7 +1105,7 @@ return {
 		}
 	},
 	bandit_0081 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1129,7 +1129,7 @@ return {
 		alias = {}
 	},
 	bandit_0082 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1153,7 +1153,7 @@ return {
 		alias = {}
 	},
 	bandit_0083 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1177,7 +1177,7 @@ return {
 		alias = {}
 	},
 	bandit_0084 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1201,7 +1201,7 @@ return {
 		alias = {}
 	},
 	bandit_0085 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1234,7 +1234,7 @@ return {
 		}
 	},
 	bandit_0094 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1260,7 +1260,7 @@ return {
 		}
 	},
 	bandit_0096 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1284,7 +1284,7 @@ return {
 		alias = {}
 	},
 	bandit_0097 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1308,7 +1308,7 @@ return {
 		alias = {}
 	},
 	bandit_0098 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1332,7 +1332,7 @@ return {
 		alias = {}
 	},
 	bandit_0099 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1356,7 +1356,7 @@ return {
 		alias = {}
 	},
 	bandit_0100 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1380,7 +1380,7 @@ return {
 		alias = {}
 	},
 	bandit_0101 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1404,7 +1404,7 @@ return {
 		alias = {}
 	},
 	bandit_0102 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1428,7 +1428,7 @@ return {
 		alias = {}
 	},
 	bandit_0103 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1452,7 +1452,7 @@ return {
 		alias = {}
 	},
 	bandit_0104 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1476,7 +1476,7 @@ return {
 		alias = {}
 	},
 	bandit_0105 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1500,7 +1500,7 @@ return {
 		alias = {}
 	},
 	bandit_0106 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1526,7 +1526,7 @@ return {
 		}
 	},
 	bandit_0108 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1550,7 +1550,7 @@ return {
 		alias = {}
 	},
 	bandit_0109 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			68,
 			48
@@ -1576,7 +1576,7 @@ return {
 		}
 	},
 	brigand_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1602,7 +1602,7 @@ return {
 		}
 	},
 	brigand_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1628,7 +1628,7 @@ return {
 		}
 	},
 	brigand_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1654,7 +1654,7 @@ return {
 		}
 	},
 	brigand_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1678,7 +1678,7 @@ return {
 		alias = {}
 	},
 	brigand_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1704,7 +1704,7 @@ return {
 		}
 	},
 	brigand_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1730,7 +1730,7 @@ return {
 		}
 	},
 	brigand_0012 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1756,7 +1756,7 @@ return {
 		}
 	},
 	brigand_0014 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1782,7 +1782,7 @@ return {
 		}
 	},
 	brigand_0016 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1808,7 +1808,7 @@ return {
 		}
 	},
 	brigand_0018 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1832,7 +1832,7 @@ return {
 		alias = {}
 	},
 	brigand_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1858,7 +1858,7 @@ return {
 		}
 	},
 	brigand_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1884,7 +1884,7 @@ return {
 		}
 	},
 	brigand_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1910,7 +1910,7 @@ return {
 		}
 	},
 	brigand_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1936,7 +1936,7 @@ return {
 		}
 	},
 	brigand_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1962,7 +1962,7 @@ return {
 		}
 	},
 	brigand_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -1986,7 +1986,7 @@ return {
 		alias = {}
 	},
 	brigand_0030 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2012,7 +2012,7 @@ return {
 		}
 	},
 	brigand_0032 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2038,7 +2038,7 @@ return {
 		}
 	},
 	brigand_0034 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2064,7 +2064,7 @@ return {
 		}
 	},
 	brigand_0036 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2090,7 +2090,7 @@ return {
 		}
 	},
 	brigand_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2116,7 +2116,7 @@ return {
 		}
 	},
 	brigand_0040 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2140,7 +2140,7 @@ return {
 		alias = {}
 	},
 	brigand_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2166,7 +2166,7 @@ return {
 		}
 	},
 	brigand_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2192,7 +2192,7 @@ return {
 		}
 	},
 	brigand_0045 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2218,7 +2218,7 @@ return {
 		}
 	},
 	brigand_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2244,7 +2244,7 @@ return {
 		}
 	},
 	brigand_0049 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2270,7 +2270,7 @@ return {
 		}
 	},
 	brigand_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2294,7 +2294,7 @@ return {
 		alias = {}
 	},
 	brigand_0052 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2320,7 +2320,7 @@ return {
 		}
 	},
 	brigand_0054 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2346,7 +2346,7 @@ return {
 		}
 	},
 	brigand_0056 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2372,7 +2372,7 @@ return {
 		}
 	},
 	brigand_0058 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2398,7 +2398,7 @@ return {
 		}
 	},
 	brigand_0060 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2424,7 +2424,7 @@ return {
 		}
 	},
 	brigand_0062 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2448,7 +2448,7 @@ return {
 		alias = {}
 	},
 	brigand_0063 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2474,7 +2474,7 @@ return {
 		}
 	},
 	brigand_0065 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2500,7 +2500,7 @@ return {
 		}
 	},
 	brigand_0067 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2526,7 +2526,7 @@ return {
 		}
 	},
 	brigand_0069 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2552,7 +2552,7 @@ return {
 		}
 	},
 	brigand_0071 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2578,7 +2578,7 @@ return {
 		}
 	},
 	brigand_0073 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2604,7 +2604,7 @@ return {
 		}
 	},
 	brigand_0075 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2630,7 +2630,7 @@ return {
 		}
 	},
 	brigand_0077 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2656,7 +2656,7 @@ return {
 		}
 	},
 	brigand_0079 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2682,7 +2682,7 @@ return {
 		}
 	},
 	brigand_0081 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2706,7 +2706,7 @@ return {
 		alias = {}
 	},
 	brigand_0082 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2730,7 +2730,7 @@ return {
 		alias = {}
 	},
 	brigand_0083 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2756,7 +2756,7 @@ return {
 		}
 	},
 	brigand_0085 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2782,7 +2782,7 @@ return {
 		}
 	},
 	brigand_0087 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2806,7 +2806,7 @@ return {
 		alias = {}
 	},
 	brigand_0088 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2830,7 +2830,7 @@ return {
 		alias = {}
 	},
 	brigand_0089 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2854,7 +2854,7 @@ return {
 		alias = {}
 	},
 	brigand_0090 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2878,7 +2878,7 @@ return {
 		alias = {}
 	},
 	brigand_0091 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2911,7 +2911,7 @@ return {
 		}
 	},
 	brigand_0100 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2937,7 +2937,7 @@ return {
 		}
 	},
 	brigand_0102 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2961,7 +2961,7 @@ return {
 		alias = {}
 	},
 	brigand_0103 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -2985,7 +2985,7 @@ return {
 		alias = {}
 	},
 	brigand_0104 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -3009,7 +3009,7 @@ return {
 		alias = {}
 	},
 	brigand_0105 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -3033,7 +3033,7 @@ return {
 		alias = {}
 	},
 	brigand_0106 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -3057,7 +3057,7 @@ return {
 		alias = {}
 	},
 	brigand_0107 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -3081,7 +3081,7 @@ return {
 		alias = {}
 	},
 	brigand_0108 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -3105,7 +3105,7 @@ return {
 		alias = {}
 	},
 	brigand_0109 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -3131,7 +3131,7 @@ return {
 		}
 	},
 	brigand_0111 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			56
@@ -3163,7 +3163,7 @@ return {
 		}
 	},
 	darkKnight_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3189,7 +3189,7 @@ return {
 		}
 	},
 	darkKnight_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3215,7 +3215,7 @@ return {
 		}
 	},
 	darkKnight_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3241,7 +3241,7 @@ return {
 		}
 	},
 	darkKnight_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3265,7 +3265,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3291,7 +3291,7 @@ return {
 		}
 	},
 	darkKnight_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3317,7 +3317,7 @@ return {
 		}
 	},
 	darkKnight_0012 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3343,7 +3343,7 @@ return {
 		}
 	},
 	darkKnight_0014 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3369,7 +3369,7 @@ return {
 		}
 	},
 	darkKnight_0016 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3395,7 +3395,7 @@ return {
 		}
 	},
 	darkKnight_0018 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3419,7 +3419,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3445,7 +3445,7 @@ return {
 		}
 	},
 	darkKnight_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3471,7 +3471,7 @@ return {
 		}
 	},
 	darkKnight_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3497,7 +3497,7 @@ return {
 		}
 	},
 	darkKnight_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3523,7 +3523,7 @@ return {
 		}
 	},
 	darkKnight_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3549,7 +3549,7 @@ return {
 		}
 	},
 	darkKnight_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3573,7 +3573,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0030 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3599,7 +3599,7 @@ return {
 		}
 	},
 	darkKnight_0032 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3625,7 +3625,7 @@ return {
 		}
 	},
 	darkKnight_0034 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3651,7 +3651,7 @@ return {
 		}
 	},
 	darkKnight_0036 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3677,7 +3677,7 @@ return {
 		}
 	},
 	darkKnight_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3703,7 +3703,7 @@ return {
 		}
 	},
 	darkKnight_0040 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3727,7 +3727,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3753,7 +3753,7 @@ return {
 		}
 	},
 	darkKnight_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3779,7 +3779,7 @@ return {
 		}
 	},
 	darkKnight_0045 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3805,7 +3805,7 @@ return {
 		}
 	},
 	darkKnight_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3831,7 +3831,7 @@ return {
 		}
 	},
 	darkKnight_0049 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3857,7 +3857,7 @@ return {
 		}
 	},
 	darkKnight_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3881,7 +3881,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0052 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3907,7 +3907,7 @@ return {
 		}
 	},
 	darkKnight_0054 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3933,7 +3933,7 @@ return {
 		}
 	},
 	darkKnight_0056 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3959,7 +3959,7 @@ return {
 		}
 	},
 	darkKnight_0058 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -3985,7 +3985,7 @@ return {
 		}
 	},
 	darkKnight_0060 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4011,7 +4011,7 @@ return {
 		}
 	},
 	darkKnight_0062 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4035,7 +4035,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0063 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4061,7 +4061,7 @@ return {
 		}
 	},
 	darkKnight_0065 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4087,7 +4087,7 @@ return {
 		}
 	},
 	darkKnight_0067 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4111,7 +4111,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0068 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4137,7 +4137,7 @@ return {
 		}
 	},
 	darkKnight_0070 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4163,7 +4163,7 @@ return {
 		}
 	},
 	darkKnight_0072 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4187,7 +4187,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0073 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4213,7 +4213,7 @@ return {
 		}
 	},
 	darkKnight_0075 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4237,7 +4237,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0076 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4263,7 +4263,7 @@ return {
 		}
 	},
 	darkKnight_0078 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4287,7 +4287,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0079 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4311,7 +4311,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0080 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4335,7 +4335,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0081 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4361,7 +4361,7 @@ return {
 		}
 	},
 	darkKnight_0083 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4387,7 +4387,7 @@ return {
 		}
 	},
 	darkKnight_0085 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4411,7 +4411,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0086 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4435,7 +4435,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0087 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4459,7 +4459,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0088 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4483,7 +4483,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0089 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4516,7 +4516,7 @@ return {
 		}
 	},
 	darkKnight_0098 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4542,7 +4542,7 @@ return {
 		}
 	},
 	darkKnight_0100 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4566,7 +4566,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0101 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4590,7 +4590,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0102 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4614,7 +4614,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0103 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4638,7 +4638,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0104 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4662,7 +4662,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0105 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4686,7 +4686,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0106 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4710,7 +4710,7 @@ return {
 		alias = {}
 	},
 	darkKnight_0107 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4736,7 +4736,7 @@ return {
 		}
 	},
 	darkKnight_0109 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			92,
 			68
@@ -4760,7 +4760,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -4786,7 +4786,7 @@ return {
 		}
 	},
 	darkSlayer_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -4812,7 +4812,7 @@ return {
 		}
 	},
 	darkSlayer_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -4838,7 +4838,7 @@ return {
 		}
 	},
 	darkSlayer_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -4862,7 +4862,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -4888,7 +4888,7 @@ return {
 		}
 	},
 	darkSlayer_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -4914,7 +4914,7 @@ return {
 		}
 	},
 	darkSlayer_0012 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -4940,7 +4940,7 @@ return {
 		}
 	},
 	darkSlayer_0014 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -4966,7 +4966,7 @@ return {
 		}
 	},
 	darkSlayer_0016 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -4992,7 +4992,7 @@ return {
 		}
 	},
 	darkSlayer_0018 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5016,7 +5016,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5042,7 +5042,7 @@ return {
 		}
 	},
 	darkSlayer_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5068,7 +5068,7 @@ return {
 		}
 	},
 	darkSlayer_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5094,7 +5094,7 @@ return {
 		}
 	},
 	darkSlayer_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5120,7 +5120,7 @@ return {
 		}
 	},
 	darkSlayer_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5146,7 +5146,7 @@ return {
 		}
 	},
 	darkSlayer_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5170,7 +5170,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0030 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5196,7 +5196,7 @@ return {
 		}
 	},
 	darkSlayer_0032 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5222,7 +5222,7 @@ return {
 		}
 	},
 	darkSlayer_0034 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5248,7 +5248,7 @@ return {
 		}
 	},
 	darkSlayer_0036 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5274,7 +5274,7 @@ return {
 		}
 	},
 	darkSlayer_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5300,7 +5300,7 @@ return {
 		}
 	},
 	darkSlayer_0040 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5324,7 +5324,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5350,7 +5350,7 @@ return {
 		}
 	},
 	darkSlayer_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5376,7 +5376,7 @@ return {
 		}
 	},
 	darkSlayer_0045 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5402,7 +5402,7 @@ return {
 		}
 	},
 	darkSlayer_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5428,7 +5428,7 @@ return {
 		}
 	},
 	darkSlayer_0049 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5454,7 +5454,7 @@ return {
 		}
 	},
 	darkSlayer_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5478,7 +5478,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0052 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5504,7 +5504,7 @@ return {
 		}
 	},
 	darkSlayer_0054 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5530,7 +5530,7 @@ return {
 		}
 	},
 	darkSlayer_0056 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5556,7 +5556,7 @@ return {
 		}
 	},
 	darkSlayer_0058 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5582,7 +5582,7 @@ return {
 		}
 	},
 	darkSlayer_0060 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5608,7 +5608,7 @@ return {
 		}
 	},
 	darkSlayer_0062 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5632,7 +5632,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0063 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5658,7 +5658,7 @@ return {
 		}
 	},
 	darkSlayer_0065 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5684,7 +5684,7 @@ return {
 		}
 	},
 	darkSlayer_0067 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5708,7 +5708,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0068 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5734,7 +5734,7 @@ return {
 		}
 	},
 	darkSlayer_0070 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5760,7 +5760,7 @@ return {
 		}
 	},
 	darkSlayer_0072 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5786,7 +5786,7 @@ return {
 		}
 	},
 	darkSlayer_0074 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5812,7 +5812,7 @@ return {
 		}
 	},
 	darkSlayer_0076 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5838,7 +5838,7 @@ return {
 		}
 	},
 	darkSlayer_0078 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5862,7 +5862,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0079 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5886,7 +5886,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0080 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5910,7 +5910,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0081 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5934,7 +5934,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0082 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5960,7 +5960,7 @@ return {
 		}
 	},
 	darkSlayer_0084 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -5984,7 +5984,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0085 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6010,7 +6010,7 @@ return {
 		}
 	},
 	darkSlayer_0087 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6034,7 +6034,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0088 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6058,7 +6058,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0089 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6084,7 +6084,7 @@ return {
 		}
 	},
 	darkSlayer_0091 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6110,7 +6110,7 @@ return {
 		}
 	},
 	darkSlayer_0093 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6134,7 +6134,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0094 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6158,7 +6158,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0095 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6182,7 +6182,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0096 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6206,7 +6206,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0097 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6239,7 +6239,7 @@ return {
 		}
 	},
 	darkSlayer_0106 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6265,7 +6265,7 @@ return {
 		}
 	},
 	darkSlayer_0108 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6289,7 +6289,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0109 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6313,7 +6313,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0110 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6339,7 +6339,7 @@ return {
 		}
 	},
 	darkSlayer_0112 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6365,7 +6365,7 @@ return {
 		}
 	},
 	darkSlayer_0114 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6391,7 +6391,7 @@ return {
 		}
 	},
 	darkSlayer_0116 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6417,7 +6417,7 @@ return {
 		}
 	},
 	darkSlayer_0118 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6443,7 +6443,7 @@ return {
 		}
 	},
 	darkSlayer_0120 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6467,7 +6467,7 @@ return {
 		alias = {}
 	},
 	darkSlayer_0121 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6493,7 +6493,7 @@ return {
 		}
 	},
 	darkSlayer_0123 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			106,
 			94
@@ -6519,7 +6519,7 @@ return {
 		}
 	},
 	gargoyle_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6545,7 +6545,7 @@ return {
 		}
 	},
 	gargoyle_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6571,7 +6571,7 @@ return {
 		}
 	},
 	gargoyle_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6597,7 +6597,7 @@ return {
 		}
 	},
 	gargoyle_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6623,7 +6623,7 @@ return {
 		}
 	},
 	gargoyle_0009 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6649,7 +6649,7 @@ return {
 		}
 	},
 	gargoyle_0011 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6675,7 +6675,7 @@ return {
 		}
 	},
 	gargoyle_0013 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6701,7 +6701,7 @@ return {
 		}
 	},
 	gargoyle_0015 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6727,7 +6727,7 @@ return {
 		}
 	},
 	gargoyle_0017 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6753,7 +6753,7 @@ return {
 		}
 	},
 	gargoyle_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6779,7 +6779,7 @@ return {
 		}
 	},
 	gargoyle_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6805,7 +6805,7 @@ return {
 		}
 	},
 	gargoyle_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6831,7 +6831,7 @@ return {
 		}
 	},
 	gargoyle_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6857,7 +6857,7 @@ return {
 		}
 	},
 	gargoyle_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6883,7 +6883,7 @@ return {
 		}
 	},
 	gargoyle_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6909,7 +6909,7 @@ return {
 		}
 	},
 	gargoyle_0031 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6935,7 +6935,7 @@ return {
 		}
 	},
 	gargoyle_0033 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6961,7 +6961,7 @@ return {
 		}
 	},
 	gargoyle_0035 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -6987,7 +6987,7 @@ return {
 		}
 	},
 	gargoyle_0037 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -7013,7 +7013,7 @@ return {
 		}
 	},
 	gargoyle_0039 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -7039,7 +7039,7 @@ return {
 		}
 	},
 	gargoyle_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -7065,7 +7065,7 @@ return {
 		}
 	},
 	gargoyle_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -7091,7 +7091,7 @@ return {
 		}
 	},
 	gargoyle_0045 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -7117,7 +7117,7 @@ return {
 		}
 	},
 	gargoyle_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -7143,7 +7143,7 @@ return {
 		}
 	},
 	gargoyle_0049 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -7169,7 +7169,7 @@ return {
 		}
 	},
 	gargoyle_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -7195,7 +7195,7 @@ return {
 		}
 	},
 	gargoyle_0053 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			126
@@ -7221,7 +7221,7 @@ return {
 		}
 	},
 	marauder_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7247,7 +7247,7 @@ return {
 		}
 	},
 	marauder_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7273,7 +7273,7 @@ return {
 		}
 	},
 	marauder_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7299,7 +7299,7 @@ return {
 		}
 	},
 	marauder_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7323,7 +7323,7 @@ return {
 		alias = {}
 	},
 	marauder_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7349,7 +7349,7 @@ return {
 		}
 	},
 	marauder_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7375,7 +7375,7 @@ return {
 		}
 	},
 	marauder_0012 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7401,7 +7401,7 @@ return {
 		}
 	},
 	marauder_0014 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7427,7 +7427,7 @@ return {
 		}
 	},
 	marauder_0016 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7453,7 +7453,7 @@ return {
 		}
 	},
 	marauder_0018 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7477,7 +7477,7 @@ return {
 		alias = {}
 	},
 	marauder_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7503,7 +7503,7 @@ return {
 		}
 	},
 	marauder_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7529,7 +7529,7 @@ return {
 		}
 	},
 	marauder_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7555,7 +7555,7 @@ return {
 		}
 	},
 	marauder_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7581,7 +7581,7 @@ return {
 		}
 	},
 	marauder_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7607,7 +7607,7 @@ return {
 		}
 	},
 	marauder_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7631,7 +7631,7 @@ return {
 		alias = {}
 	},
 	marauder_0030 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7657,7 +7657,7 @@ return {
 		}
 	},
 	marauder_0032 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7683,7 +7683,7 @@ return {
 		}
 	},
 	marauder_0034 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7709,7 +7709,7 @@ return {
 		}
 	},
 	marauder_0036 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7735,7 +7735,7 @@ return {
 		}
 	},
 	marauder_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7761,7 +7761,7 @@ return {
 		}
 	},
 	marauder_0040 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7785,7 +7785,7 @@ return {
 		alias = {}
 	},
 	marauder_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7811,7 +7811,7 @@ return {
 		}
 	},
 	marauder_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7837,7 +7837,7 @@ return {
 		}
 	},
 	marauder_0045 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7863,7 +7863,7 @@ return {
 		}
 	},
 	marauder_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7889,7 +7889,7 @@ return {
 		}
 	},
 	marauder_0049 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7915,7 +7915,7 @@ return {
 		}
 	},
 	marauder_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7939,7 +7939,7 @@ return {
 		alias = {}
 	},
 	marauder_0052 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7965,7 +7965,7 @@ return {
 		}
 	},
 	marauder_0054 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -7991,7 +7991,7 @@ return {
 		}
 	},
 	marauder_0056 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8017,7 +8017,7 @@ return {
 		}
 	},
 	marauder_0058 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8043,7 +8043,7 @@ return {
 		}
 	},
 	marauder_0060 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8069,7 +8069,7 @@ return {
 		}
 	},
 	marauder_0062 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8093,7 +8093,7 @@ return {
 		alias = {}
 	},
 	marauder_0063 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8119,7 +8119,7 @@ return {
 		}
 	},
 	marauder_0065 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8145,7 +8145,7 @@ return {
 		}
 	},
 	marauder_0067 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8169,7 +8169,7 @@ return {
 		alias = {}
 	},
 	marauder_0068 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8195,7 +8195,7 @@ return {
 		}
 	},
 	marauder_0069 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8221,7 +8221,7 @@ return {
 		}
 	},
 	marauder_0071 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8247,7 +8247,7 @@ return {
 		}
 	},
 	marauder_0073 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8273,7 +8273,7 @@ return {
 		}
 	},
 	marauder_0075 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8297,7 +8297,7 @@ return {
 		alias = {}
 	},
 	marauder_0076 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8323,7 +8323,7 @@ return {
 		}
 	},
 	marauder_0078 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8349,7 +8349,7 @@ return {
 		}
 	},
 	marauder_0081 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8373,7 +8373,7 @@ return {
 		alias = {}
 	},
 	marauder_0082 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8397,7 +8397,7 @@ return {
 		alias = {}
 	},
 	marauder_0083 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8423,7 +8423,7 @@ return {
 		}
 	},
 	marauder_0085 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8449,7 +8449,7 @@ return {
 		}
 	},
 	marauder_0087 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8473,7 +8473,7 @@ return {
 		alias = {}
 	},
 	marauder_0088 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8497,7 +8497,7 @@ return {
 		alias = {}
 	},
 	marauder_0089 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8521,7 +8521,7 @@ return {
 		alias = {}
 	},
 	marauder_0090 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8545,7 +8545,7 @@ return {
 		alias = {}
 	},
 	marauder_0091 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8578,7 +8578,7 @@ return {
 		}
 	},
 	marauder_0100 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8604,7 +8604,7 @@ return {
 		}
 	},
 	marauder_0102 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8628,7 +8628,7 @@ return {
 		alias = {}
 	},
 	marauder_0103 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8652,7 +8652,7 @@ return {
 		alias = {}
 	},
 	marauder_0104 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8678,7 +8678,7 @@ return {
 		}
 	},
 	marauder_0106 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8704,7 +8704,7 @@ return {
 		}
 	},
 	marauder_0108 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8730,7 +8730,7 @@ return {
 		}
 	},
 	marauder_0110 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8756,7 +8756,7 @@ return {
 		}
 	},
 	marauder_0112 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8782,7 +8782,7 @@ return {
 		}
 	},
 	marauder_0114 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8806,7 +8806,7 @@ return {
 		alias = {}
 	},
 	marauder_0115 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8832,7 +8832,7 @@ return {
 		}
 	},
 	marauder_0117 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8858,7 +8858,7 @@ return {
 		}
 	},
 	marauder_0119 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8884,7 +8884,7 @@ return {
 		}
 	},
 	marauder_0121 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			110,
 			80
@@ -8908,7 +8908,7 @@ return {
 		alias = {}
 	},
 	necromancer_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -8934,7 +8934,7 @@ return {
 		}
 	},
 	necromancer_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -8960,7 +8960,7 @@ return {
 		}
 	},
 	necromancer_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -8986,7 +8986,7 @@ return {
 		}
 	},
 	necromancer_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9012,7 +9012,7 @@ return {
 		}
 	},
 	necromancer_0009 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9038,7 +9038,7 @@ return {
 		}
 	},
 	necromancer_0011 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9064,7 +9064,7 @@ return {
 		}
 	},
 	necromancer_0013 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9090,7 +9090,7 @@ return {
 		}
 	},
 	necromancer_0015 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9116,7 +9116,7 @@ return {
 		}
 	},
 	necromancer_0017 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9142,7 +9142,7 @@ return {
 		}
 	},
 	necromancer_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9168,7 +9168,7 @@ return {
 		}
 	},
 	necromancer_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9194,7 +9194,7 @@ return {
 		}
 	},
 	necromancer_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9220,7 +9220,7 @@ return {
 		}
 	},
 	necromancer_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9246,7 +9246,7 @@ return {
 		}
 	},
 	necromancer_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9272,7 +9272,7 @@ return {
 		}
 	},
 	necromancer_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9298,7 +9298,7 @@ return {
 		}
 	},
 	necromancer_0031 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9324,7 +9324,7 @@ return {
 		}
 	},
 	necromancer_0033 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9350,7 +9350,7 @@ return {
 		}
 	},
 	necromancer_0035 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9376,7 +9376,7 @@ return {
 		}
 	},
 	necromancer_0037 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9402,7 +9402,7 @@ return {
 		}
 	},
 	necromancer_0039 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9428,7 +9428,7 @@ return {
 		}
 	},
 	necromancer_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9454,7 +9454,7 @@ return {
 		}
 	},
 	necromancer_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9480,7 +9480,7 @@ return {
 		}
 	},
 	necromancer_0045 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9506,7 +9506,7 @@ return {
 		}
 	},
 	necromancer_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9532,7 +9532,7 @@ return {
 		}
 	},
 	necromancer_0049 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9558,7 +9558,7 @@ return {
 		}
 	},
 	necromancer_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9584,7 +9584,7 @@ return {
 		}
 	},
 	necromancer_0053 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9610,7 +9610,7 @@ return {
 		}
 	},
 	necromancer_0055 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9636,7 +9636,7 @@ return {
 		}
 	},
 	necromancer_0057 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9662,7 +9662,7 @@ return {
 		}
 	},
 	necromancer_0059 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9688,7 +9688,7 @@ return {
 		}
 	},
 	necromancer_0061 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9714,7 +9714,7 @@ return {
 		}
 	},
 	necromancer_0063 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9740,7 +9740,7 @@ return {
 		}
 	},
 	necromancer_0065 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9766,7 +9766,7 @@ return {
 		}
 	},
 	necromancer_0067 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9792,7 +9792,7 @@ return {
 		}
 	},
 	necromancer_0069 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9818,7 +9818,7 @@ return {
 		}
 	},
 	necromancer_0071 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9842,7 +9842,7 @@ return {
 		alias = {}
 	},
 	necromancer_0072 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9875,7 +9875,7 @@ return {
 		}
 	},
 	necromancer_0074 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9901,7 +9901,7 @@ return {
 		}
 	},
 	necromancer_0076 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9927,7 +9927,7 @@ return {
 		}
 	},
 	necromancer_0078 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9954,7 +9954,7 @@ return {
 		}
 	},
 	necromancer_0081 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -9980,7 +9980,7 @@ return {
 		}
 	},
 	necromancer_0083 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10006,7 +10006,7 @@ return {
 		}
 	},
 	necromancer_0085 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10032,7 +10032,7 @@ return {
 		}
 	},
 	necromancer_0087 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10058,7 +10058,7 @@ return {
 		}
 	},
 	necromancer_0089 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10084,7 +10084,7 @@ return {
 		}
 	},
 	necromancer_0094 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10110,7 +10110,7 @@ return {
 		}
 	},
 	necromancer_0096 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10134,7 +10134,7 @@ return {
 		alias = {}
 	},
 	necromancer_0097 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10160,7 +10160,7 @@ return {
 		}
 	},
 	necromancer_0099 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10186,7 +10186,7 @@ return {
 		}
 	},
 	necromancer_0101 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10212,7 +10212,7 @@ return {
 		}
 	},
 	necromancer_0103 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10238,7 +10238,7 @@ return {
 		}
 	},
 	necromancer_0105 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10264,7 +10264,7 @@ return {
 		}
 	},
 	necromancer_0107 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10290,7 +10290,7 @@ return {
 		}
 	},
 	necromancer_0109 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10316,7 +10316,7 @@ return {
 		}
 	},
 	necromancer_0111 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10342,7 +10342,7 @@ return {
 		}
 	},
 	necromancer_0113 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10368,7 +10368,7 @@ return {
 		}
 	},
 	necromancer_0118 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10394,7 +10394,7 @@ return {
 		}
 	},
 	necromancer_0120 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10421,7 +10421,7 @@ return {
 		}
 	},
 	necromancer_0123 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10447,7 +10447,7 @@ return {
 		}
 	},
 	necromancer_0125 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10473,7 +10473,7 @@ return {
 		}
 	},
 	necromancer_0127 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10499,7 +10499,7 @@ return {
 		}
 	},
 	necromancer_0129 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10527,7 +10527,7 @@ return {
 		}
 	},
 	necromancer_0131 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10555,7 +10555,7 @@ return {
 		}
 	},
 	necromancer_0133 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10583,7 +10583,7 @@ return {
 		}
 	},
 	necromancer_0135 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10609,7 +10609,7 @@ return {
 		}
 	},
 	necromancer_0137 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10635,7 +10635,7 @@ return {
 		}
 	},
 	necromancer_0139 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10661,7 +10661,7 @@ return {
 		}
 	},
 	necromancer_0141 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10687,7 +10687,7 @@ return {
 		}
 	},
 	necromancer_0143 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10713,7 +10713,7 @@ return {
 		}
 	},
 	necromancer_0145 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10739,7 +10739,7 @@ return {
 		}
 	},
 	necromancer_0147 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10765,7 +10765,7 @@ return {
 		}
 	},
 	necromancer_0149 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10791,7 +10791,7 @@ return {
 		}
 	},
 	necromancer_0151 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10817,7 +10817,7 @@ return {
 		}
 	},
 	necromancer_0159 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10843,7 +10843,7 @@ return {
 		}
 	},
 	necromancer_0161 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10869,7 +10869,7 @@ return {
 		}
 	},
 	necromancer_0164 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10893,7 +10893,7 @@ return {
 		alias = {}
 	},
 	necromancer_0165 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10917,7 +10917,7 @@ return {
 		alias = {}
 	},
 	necromancer_0166 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10943,7 +10943,7 @@ return {
 		}
 	},
 	necromancer_0168 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10969,7 +10969,7 @@ return {
 		}
 	},
 	necromancer_0170 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -10993,7 +10993,7 @@ return {
 		alias = {}
 	},
 	necromancer_0171 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -11017,7 +11017,7 @@ return {
 		alias = {}
 	},
 	necromancer_0172 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -11041,7 +11041,7 @@ return {
 		alias = {}
 	},
 	necromancer_0173 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -11065,7 +11065,7 @@ return {
 		alias = {}
 	},
 	necromancer_0174 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -11098,7 +11098,7 @@ return {
 		}
 	},
 	necromancer_0183 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -11124,7 +11124,7 @@ return {
 		}
 	},
 	necromancer_0185 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -11148,7 +11148,7 @@ return {
 		alias = {}
 	},
 	necromancer_0186 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -11172,7 +11172,7 @@ return {
 		alias = {}
 	},
 	necromancer_0187 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -11198,7 +11198,7 @@ return {
 		}
 	},
 	necromancer_0189 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -11224,7 +11224,7 @@ return {
 		}
 	},
 	necromancer_0191 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -11250,7 +11250,7 @@ return {
 		}
 	},
 	necromancer_0193 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -11276,7 +11276,7 @@ return {
 		}
 	},
 	necromancer_0195 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -11302,7 +11302,7 @@ return {
 		}
 	},
 	necromancer_0197 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -11328,7 +11328,7 @@ return {
 		}
 	},
 	necromancer_0199 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			62,
 			54
@@ -11354,7 +11354,7 @@ return {
 		}
 	},
 	necromancer_bolt_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			58,
 			38
@@ -11378,7 +11378,7 @@ return {
 		alias = {}
 	},
 	necromancer_bolt_0002 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			58,
 			38
@@ -11402,7 +11402,7 @@ return {
 		alias = {}
 	},
 	necromancer_bolt_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			58,
 			38
@@ -11429,7 +11429,7 @@ return {
 		}
 	},
 	necromancer_bolt_0006 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			58,
 			38
@@ -11455,7 +11455,7 @@ return {
 		}
 	},
 	necromancer_bolt_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			58,
 			38
@@ -11481,7 +11481,7 @@ return {
 		}
 	},
 	necromancer_bolt_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			58,
 			38
@@ -11505,7 +11505,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11529,7 +11529,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0002 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11553,7 +11553,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11577,7 +11577,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0004 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11601,7 +11601,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11625,7 +11625,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0006 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11649,7 +11649,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11673,7 +11673,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11697,7 +11697,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0009 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11721,7 +11721,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11745,7 +11745,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0011 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11769,7 +11769,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0012 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11793,7 +11793,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0013 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11817,7 +11817,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0014 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11841,7 +11841,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0015 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11865,7 +11865,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0016 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11889,7 +11889,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0017 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11913,7 +11913,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0018 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11937,7 +11937,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11961,7 +11961,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0020 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -11985,7 +11985,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12009,7 +12009,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0022 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12033,7 +12033,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12057,7 +12057,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0024 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12081,7 +12081,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12105,7 +12105,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0026 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12129,7 +12129,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12153,7 +12153,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0028 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12177,7 +12177,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12201,7 +12201,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0030 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12225,7 +12225,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0031 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12249,7 +12249,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0032 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12273,7 +12273,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0033 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12297,7 +12297,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0034 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12321,7 +12321,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0035 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12345,7 +12345,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0036 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12369,7 +12369,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0037 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12393,7 +12393,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12417,7 +12417,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0039 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12441,7 +12441,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0040 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12465,7 +12465,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12489,7 +12489,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0042 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12513,7 +12513,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12537,7 +12537,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0044 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12561,7 +12561,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0045 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12585,7 +12585,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0046 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12609,7 +12609,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12633,7 +12633,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0048 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12657,7 +12657,7 @@ return {
 		alias = {}
 	},
 	rocketeer_0049 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12683,7 +12683,7 @@ return {
 		}
 	},
 	rocketeer_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12709,7 +12709,7 @@ return {
 		}
 	},
 	rocketeer_0053 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12735,7 +12735,7 @@ return {
 		}
 	},
 	rocketeer_0055 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12761,7 +12761,7 @@ return {
 		}
 	},
 	rocketeer_0057 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12787,7 +12787,7 @@ return {
 		}
 	},
 	rocketeer_0059 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12813,7 +12813,7 @@ return {
 		}
 	},
 	rocketeer_0061 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12839,7 +12839,7 @@ return {
 		}
 	},
 	rocketeer_0063 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12865,7 +12865,7 @@ return {
 		}
 	},
 	rocketeer_0065 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			114,
 			126
@@ -12891,7 +12891,7 @@ return {
 		}
 	},
 	shadowArcher_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -12917,7 +12917,7 @@ return {
 		}
 	},
 	shadowArcher_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -12943,7 +12943,7 @@ return {
 		}
 	},
 	shadowArcher_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -12969,7 +12969,7 @@ return {
 		}
 	},
 	shadowArcher_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -12993,7 +12993,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13019,7 +13019,7 @@ return {
 		}
 	},
 	shadowArcher_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13045,7 +13045,7 @@ return {
 		}
 	},
 	shadowArcher_0012 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13071,7 +13071,7 @@ return {
 		}
 	},
 	shadowArcher_0014 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13097,7 +13097,7 @@ return {
 		}
 	},
 	shadowArcher_0016 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13123,7 +13123,7 @@ return {
 		}
 	},
 	shadowArcher_0018 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13147,7 +13147,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13173,7 +13173,7 @@ return {
 		}
 	},
 	shadowArcher_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13199,7 +13199,7 @@ return {
 		}
 	},
 	shadowArcher_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13225,7 +13225,7 @@ return {
 		}
 	},
 	shadowArcher_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13251,7 +13251,7 @@ return {
 		}
 	},
 	shadowArcher_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13277,7 +13277,7 @@ return {
 		}
 	},
 	shadowArcher_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13301,7 +13301,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0030 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13327,7 +13327,7 @@ return {
 		}
 	},
 	shadowArcher_0032 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13353,7 +13353,7 @@ return {
 		}
 	},
 	shadowArcher_0034 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13379,7 +13379,7 @@ return {
 		}
 	},
 	shadowArcher_0036 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13405,7 +13405,7 @@ return {
 		}
 	},
 	shadowArcher_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13431,7 +13431,7 @@ return {
 		}
 	},
 	shadowArcher_0040 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13455,7 +13455,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13481,7 +13481,7 @@ return {
 		}
 	},
 	shadowArcher_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13507,7 +13507,7 @@ return {
 		}
 	},
 	shadowArcher_0045 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13533,7 +13533,7 @@ return {
 		}
 	},
 	shadowArcher_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13559,7 +13559,7 @@ return {
 		}
 	},
 	shadowArcher_0049 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13585,7 +13585,7 @@ return {
 		}
 	},
 	shadowArcher_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13609,7 +13609,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0052 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13635,7 +13635,7 @@ return {
 		}
 	},
 	shadowArcher_0054 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13661,7 +13661,7 @@ return {
 		}
 	},
 	shadowArcher_0056 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13687,7 +13687,7 @@ return {
 		}
 	},
 	shadowArcher_0058 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13713,7 +13713,7 @@ return {
 		}
 	},
 	shadowArcher_0060 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13739,7 +13739,7 @@ return {
 		}
 	},
 	shadowArcher_0062 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13763,7 +13763,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0063 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13789,7 +13789,7 @@ return {
 		}
 	},
 	shadowArcher_0065 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13815,7 +13815,7 @@ return {
 		}
 	},
 	shadowArcher_0067 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13841,7 +13841,7 @@ return {
 		}
 	},
 	shadowArcher_0068 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13868,7 +13868,7 @@ return {
 		}
 	},
 	shadowArcher_0071 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13896,7 +13896,7 @@ return {
 		}
 	},
 	shadowArcher_0075 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13922,7 +13922,7 @@ return {
 		}
 	},
 	shadowArcher_0077 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13946,7 +13946,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0078 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13972,7 +13972,7 @@ return {
 		}
 	},
 	shadowArcher_0080 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -13996,7 +13996,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0081 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14020,7 +14020,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0082 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14046,7 +14046,7 @@ return {
 		}
 	},
 	shadowArcher_0084 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14074,7 +14074,7 @@ return {
 		}
 	},
 	shadowArcher_0089 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14098,7 +14098,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0090 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14122,7 +14122,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0091 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14148,7 +14148,7 @@ return {
 		}
 	},
 	shadowArcher_0093 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14174,7 +14174,7 @@ return {
 		}
 	},
 	shadowArcher_0095 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14198,7 +14198,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0096 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14222,7 +14222,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0097 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14246,7 +14246,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0098 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14270,7 +14270,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0099 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14303,7 +14303,7 @@ return {
 		}
 	},
 	shadowArcher_0108 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14329,7 +14329,7 @@ return {
 		}
 	},
 	shadowArcher_0110 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14353,7 +14353,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0111 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14377,7 +14377,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0112 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14401,7 +14401,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0113 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14425,7 +14425,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0114 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14449,7 +14449,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0115 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14473,7 +14473,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0116 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14497,7 +14497,7 @@ return {
 		alias = {}
 	},
 	shadowArcher_0117 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14523,7 +14523,7 @@ return {
 		}
 	},
 	shadowArcher_0119 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			78,
 			52
@@ -14547,7 +14547,7 @@ return {
 		alias = {}
 	},
 	sheep_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14573,7 +14573,7 @@ return {
 		}
 	},
 	sheep_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14599,7 +14599,7 @@ return {
 		}
 	},
 	sheep_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14625,7 +14625,7 @@ return {
 		}
 	},
 	sheep_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14651,7 +14651,7 @@ return {
 		}
 	},
 	sheep_0009 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14677,7 +14677,7 @@ return {
 		}
 	},
 	sheep_0011 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14703,7 +14703,7 @@ return {
 		}
 	},
 	sheep_0013 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14729,7 +14729,7 @@ return {
 		}
 	},
 	sheep_0015 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14755,7 +14755,7 @@ return {
 		}
 	},
 	sheep_0017 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14781,7 +14781,7 @@ return {
 		}
 	},
 	sheep_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14807,7 +14807,7 @@ return {
 		}
 	},
 	sheep_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14833,7 +14833,7 @@ return {
 		}
 	},
 	sheep_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14859,7 +14859,7 @@ return {
 		}
 	},
 	sheep_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14883,7 +14883,7 @@ return {
 		alias = {}
 	},
 	sheep_0049 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14907,7 +14907,7 @@ return {
 		alias = {}
 	},
 	sheep_0050 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14933,7 +14933,7 @@ return {
 		}
 	},
 	sheep_0052 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14959,7 +14959,7 @@ return {
 		}
 	},
 	sheep_0054 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -14985,7 +14985,7 @@ return {
 		}
 	},
 	sheep_0056 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -15011,7 +15011,7 @@ return {
 		}
 	},
 	sheep_0058 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			56
@@ -15037,7 +15037,7 @@ return {
 		}
 	},
 	sheep_flying_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15061,7 +15061,7 @@ return {
 		alias = {}
 	},
 	sheep_flying_0002 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15087,7 +15087,7 @@ return {
 		}
 	},
 	sheep_flying_0004 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15113,7 +15113,7 @@ return {
 		}
 	},
 	sheep_flying_0006 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15137,7 +15137,7 @@ return {
 		alias = {}
 	},
 	sheep_flying_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15163,7 +15163,7 @@ return {
 		}
 	},
 	sheep_flying_0009 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15187,7 +15187,7 @@ return {
 		alias = {}
 	},
 	sheep_flying_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15213,7 +15213,7 @@ return {
 		}
 	},
 	sheep_flying_0012 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15237,7 +15237,7 @@ return {
 		alias = {}
 	},
 	sheep_flying_0013 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15263,7 +15263,7 @@ return {
 		}
 	},
 	sheep_flying_0015 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15289,7 +15289,7 @@ return {
 		}
 	},
 	sheep_flying_0017 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15313,7 +15313,7 @@ return {
 		alias = {}
 	},
 	sheep_flying_0018 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15339,7 +15339,7 @@ return {
 		}
 	},
 	sheep_flying_0020 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15363,7 +15363,7 @@ return {
 		alias = {}
 	},
 	sheep_flying_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15389,7 +15389,7 @@ return {
 		}
 	},
 	sheep_flying_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15413,7 +15413,7 @@ return {
 		alias = {}
 	},
 	sheep_flying_0024 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15439,7 +15439,7 @@ return {
 		}
 	},
 	sheep_flying_0026 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15465,7 +15465,7 @@ return {
 		}
 	},
 	sheep_flying_0028 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15489,7 +15489,7 @@ return {
 		alias = {}
 	},
 	sheep_flying_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15515,7 +15515,7 @@ return {
 		}
 	},
 	sheep_flying_0031 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15539,7 +15539,7 @@ return {
 		alias = {}
 	},
 	sheep_flying_0032 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15565,7 +15565,7 @@ return {
 		}
 	},
 	sheep_flying_0034 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15589,7 +15589,7 @@ return {
 		alias = {}
 	},
 	sheep_flying_0035 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15615,7 +15615,7 @@ return {
 		}
 	},
 	sheep_flying_0037 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15641,7 +15641,7 @@ return {
 		}
 	},
 	sheep_flying_0039 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15667,7 +15667,7 @@ return {
 		}
 	},
 	sheep_flying_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15693,7 +15693,7 @@ return {
 		}
 	},
 	sheep_flying_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			112
@@ -15719,7 +15719,7 @@ return {
 		}
 	},
 	skeleton_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -15745,7 +15745,7 @@ return {
 		}
 	},
 	skeleton_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -15769,7 +15769,7 @@ return {
 		alias = {}
 	},
 	skeleton_0004 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -15793,7 +15793,7 @@ return {
 		alias = {}
 	},
 	skeleton_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -15819,7 +15819,7 @@ return {
 		}
 	},
 	skeleton_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -15843,7 +15843,7 @@ return {
 		alias = {}
 	},
 	skeleton_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -15867,7 +15867,7 @@ return {
 		alias = {}
 	},
 	skeleton_0009 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -15893,7 +15893,7 @@ return {
 		}
 	},
 	skeleton_0011 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -15917,7 +15917,7 @@ return {
 		alias = {}
 	},
 	skeleton_0012 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -15941,7 +15941,7 @@ return {
 		alias = {}
 	},
 	skeleton_0013 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -15967,7 +15967,7 @@ return {
 		}
 	},
 	skeleton_0015 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -15991,7 +15991,7 @@ return {
 		alias = {}
 	},
 	skeleton_0016 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16015,7 +16015,7 @@ return {
 		alias = {}
 	},
 	skeleton_0017 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16041,7 +16041,7 @@ return {
 		}
 	},
 	skeleton_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16065,7 +16065,7 @@ return {
 		alias = {}
 	},
 	skeleton_0020 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16089,7 +16089,7 @@ return {
 		alias = {}
 	},
 	skeleton_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16115,7 +16115,7 @@ return {
 		}
 	},
 	skeleton_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16139,7 +16139,7 @@ return {
 		alias = {}
 	},
 	skeleton_0024 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16163,7 +16163,7 @@ return {
 		alias = {}
 	},
 	skeleton_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16189,7 +16189,7 @@ return {
 		}
 	},
 	skeleton_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16213,7 +16213,7 @@ return {
 		alias = {}
 	},
 	skeleton_0028 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16237,7 +16237,7 @@ return {
 		alias = {}
 	},
 	skeleton_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16263,7 +16263,7 @@ return {
 		}
 	},
 	skeleton_0031 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16287,7 +16287,7 @@ return {
 		alias = {}
 	},
 	skeleton_0032 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16311,7 +16311,7 @@ return {
 		alias = {}
 	},
 	skeleton_0033 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16335,7 +16335,7 @@ return {
 		alias = {}
 	},
 	skeleton_0034 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16359,7 +16359,7 @@ return {
 		alias = {}
 	},
 	skeleton_0035 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16383,7 +16383,7 @@ return {
 		alias = {}
 	},
 	skeleton_0036 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16407,7 +16407,7 @@ return {
 		alias = {}
 	},
 	skeleton_0037 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16431,7 +16431,7 @@ return {
 		alias = {}
 	},
 	skeleton_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16455,7 +16455,7 @@ return {
 		alias = {}
 	},
 	skeleton_0039 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16479,7 +16479,7 @@ return {
 		alias = {}
 	},
 	skeleton_0040 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16503,7 +16503,7 @@ return {
 		alias = {}
 	},
 	skeleton_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16527,7 +16527,7 @@ return {
 		alias = {}
 	},
 	skeleton_0042 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16551,7 +16551,7 @@ return {
 		alias = {}
 	},
 	skeleton_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16575,7 +16575,7 @@ return {
 		alias = {}
 	},
 	skeleton_0044 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16599,7 +16599,7 @@ return {
 		alias = {}
 	},
 	skeleton_0045 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16623,7 +16623,7 @@ return {
 		alias = {}
 	},
 	skeleton_0046 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16647,7 +16647,7 @@ return {
 		alias = {}
 	},
 	skeleton_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16671,7 +16671,7 @@ return {
 		alias = {}
 	},
 	skeleton_0048 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16699,7 +16699,7 @@ return {
 		}
 	},
 	skeleton_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16725,7 +16725,7 @@ return {
 		}
 	},
 	skeleton_0053 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16751,7 +16751,7 @@ return {
 		}
 	},
 	skeleton_0055 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16779,7 +16779,7 @@ return {
 		}
 	},
 	skeleton_0059 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16805,7 +16805,7 @@ return {
 		}
 	},
 	skeleton_0061 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16829,7 +16829,7 @@ return {
 		alias = {}
 	},
 	skeleton_0062 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16853,7 +16853,7 @@ return {
 		alias = {}
 	},
 	skeleton_0063 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16877,7 +16877,7 @@ return {
 		alias = {}
 	},
 	skeleton_0064 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16904,7 +16904,7 @@ return {
 		}
 	},
 	skeleton_0067 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16930,7 +16930,7 @@ return {
 		}
 	},
 	skeleton_0070 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16954,7 +16954,7 @@ return {
 		alias = {}
 	},
 	skeleton_0071 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -16978,7 +16978,7 @@ return {
 		alias = {}
 	},
 	skeleton_0072 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17004,7 +17004,7 @@ return {
 		}
 	},
 	skeleton_0074 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17030,7 +17030,7 @@ return {
 		}
 	},
 	skeleton_0076 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17054,7 +17054,7 @@ return {
 		alias = {}
 	},
 	skeleton_0077 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17078,7 +17078,7 @@ return {
 		alias = {}
 	},
 	skeleton_0078 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17102,7 +17102,7 @@ return {
 		alias = {}
 	},
 	skeleton_0079 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17126,7 +17126,7 @@ return {
 		alias = {}
 	},
 	skeleton_0080 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17159,7 +17159,7 @@ return {
 		}
 	},
 	skeleton_0089 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17185,7 +17185,7 @@ return {
 		}
 	},
 	skeleton_0091 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17209,7 +17209,7 @@ return {
 		alias = {}
 	},
 	skeleton_0092 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17233,7 +17233,7 @@ return {
 		alias = {}
 	},
 	skeleton_0093 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17257,7 +17257,7 @@ return {
 		alias = {}
 	},
 	skeleton_0094 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17281,7 +17281,7 @@ return {
 		alias = {}
 	},
 	skeleton_0095 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17307,7 +17307,7 @@ return {
 		}
 	},
 	skeleton_0097 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17331,7 +17331,7 @@ return {
 		alias = {}
 	},
 	skeleton_0098 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17355,7 +17355,7 @@ return {
 		alias = {}
 	},
 	skeleton_0099 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17379,7 +17379,7 @@ return {
 		alias = {}
 	},
 	skeleton_0100 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17405,7 +17405,7 @@ return {
 		}
 	},
 	skeleton_0102 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17431,7 +17431,7 @@ return {
 		}
 	},
 	skeleton_0104 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17457,7 +17457,7 @@ return {
 		}
 	},
 	skeleton_0106 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17483,7 +17483,7 @@ return {
 		}
 	},
 	skeleton_0108 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17513,7 +17513,7 @@ return {
 		}
 	},
 	skeleton_0114 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17539,7 +17539,7 @@ return {
 		}
 	},
 	skeleton_0116 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17563,7 +17563,7 @@ return {
 		alias = {}
 	},
 	skeleton_0117 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17587,7 +17587,7 @@ return {
 		alias = {}
 	},
 	skeleton_0118 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17611,7 +17611,7 @@ return {
 		alias = {}
 	},
 	skeleton_0119 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17635,7 +17635,7 @@ return {
 		alias = {}
 	},
 	skeleton_0120 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17659,7 +17659,7 @@ return {
 		alias = {}
 	},
 	skeleton_0121 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17683,7 +17683,7 @@ return {
 		alias = {}
 	},
 	skeleton_0122 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17707,7 +17707,7 @@ return {
 		alias = {}
 	},
 	skeleton_0123 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17731,7 +17731,7 @@ return {
 		alias = {}
 	},
 	skeleton_0124 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17755,7 +17755,7 @@ return {
 		alias = {}
 	},
 	skeleton_0125 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17779,7 +17779,7 @@ return {
 		alias = {}
 	},
 	skeleton_0126 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17803,7 +17803,7 @@ return {
 		alias = {}
 	},
 	skeleton_0127 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17827,7 +17827,7 @@ return {
 		alias = {}
 	},
 	skeleton_0128 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17851,7 +17851,7 @@ return {
 		alias = {}
 	},
 	skeleton_0129 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17875,7 +17875,7 @@ return {
 		alias = {}
 	},
 	skeleton_0130 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17899,7 +17899,7 @@ return {
 		alias = {}
 	},
 	skeleton_0131 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17923,7 +17923,7 @@ return {
 		alias = {}
 	},
 	skeleton_0132 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17947,7 +17947,7 @@ return {
 		alias = {}
 	},
 	skeleton_0133 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17971,7 +17971,7 @@ return {
 		alias = {}
 	},
 	skeleton_0134 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -17995,7 +17995,7 @@ return {
 		alias = {}
 	},
 	skeleton_0135 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -18019,7 +18019,7 @@ return {
 		alias = {}
 	},
 	skeleton_0136 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -18043,7 +18043,7 @@ return {
 		alias = {}
 	},
 	skeleton_0137 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -18067,7 +18067,7 @@ return {
 		alias = {}
 	},
 	skeleton_0138 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -18091,7 +18091,7 @@ return {
 		alias = {}
 	},
 	skeleton_0139 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -18115,7 +18115,7 @@ return {
 		alias = {}
 	},
 	skeleton_0140 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -18139,7 +18139,7 @@ return {
 		alias = {}
 	},
 	skeleton_0141 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -18163,7 +18163,7 @@ return {
 		alias = {}
 	},
 	skeleton_0142 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -18187,7 +18187,7 @@ return {
 		alias = {}
 	},
 	skeleton_0143 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -18211,7 +18211,7 @@ return {
 		alias = {}
 	},
 	skeleton_0144 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -18235,7 +18235,7 @@ return {
 		alias = {}
 	},
 	skeleton_0145 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -18259,7 +18259,7 @@ return {
 		alias = {}
 	},
 	skeleton_0146 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			72,
 			54
@@ -18283,7 +18283,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18309,7 +18309,7 @@ return {
 		}
 	},
 	skeleton_warrior_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18333,7 +18333,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0004 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18357,7 +18357,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18383,7 +18383,7 @@ return {
 		}
 	},
 	skeleton_warrior_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18407,7 +18407,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18431,7 +18431,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0009 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18457,7 +18457,7 @@ return {
 		}
 	},
 	skeleton_warrior_0011 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18481,7 +18481,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0012 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18505,7 +18505,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0013 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18531,7 +18531,7 @@ return {
 		}
 	},
 	skeleton_warrior_0015 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18555,7 +18555,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0016 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18579,7 +18579,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0017 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18605,7 +18605,7 @@ return {
 		}
 	},
 	skeleton_warrior_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18629,7 +18629,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0020 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18653,7 +18653,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18679,7 +18679,7 @@ return {
 		}
 	},
 	skeleton_warrior_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18703,7 +18703,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0024 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18727,7 +18727,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18753,7 +18753,7 @@ return {
 		}
 	},
 	skeleton_warrior_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18777,7 +18777,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0028 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18801,7 +18801,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18827,7 +18827,7 @@ return {
 		}
 	},
 	skeleton_warrior_0031 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18851,7 +18851,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0032 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18875,7 +18875,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0033 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18899,7 +18899,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0034 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18923,7 +18923,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0035 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18947,7 +18947,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0036 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18971,7 +18971,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0037 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -18995,7 +18995,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19019,7 +19019,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0039 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19043,7 +19043,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0040 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19067,7 +19067,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19091,7 +19091,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0042 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19115,7 +19115,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19139,7 +19139,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0044 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19163,7 +19163,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0045 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19187,7 +19187,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0046 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19211,7 +19211,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19235,7 +19235,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0048 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19263,7 +19263,7 @@ return {
 		}
 	},
 	skeleton_warrior_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19289,7 +19289,7 @@ return {
 		}
 	},
 	skeleton_warrior_0053 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19315,7 +19315,7 @@ return {
 		}
 	},
 	skeleton_warrior_0055 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19343,7 +19343,7 @@ return {
 		}
 	},
 	skeleton_warrior_0059 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19369,7 +19369,7 @@ return {
 		}
 	},
 	skeleton_warrior_0061 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19393,7 +19393,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0062 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19417,7 +19417,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0063 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19441,7 +19441,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0064 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19468,7 +19468,7 @@ return {
 		}
 	},
 	skeleton_warrior_0067 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19494,7 +19494,7 @@ return {
 		}
 	},
 	skeleton_warrior_0070 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19518,7 +19518,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0071 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19542,7 +19542,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0072 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19568,7 +19568,7 @@ return {
 		}
 	},
 	skeleton_warrior_0074 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19594,7 +19594,7 @@ return {
 		}
 	},
 	skeleton_warrior_0076 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19618,7 +19618,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0077 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19642,7 +19642,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0078 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19666,7 +19666,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0079 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19690,7 +19690,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0080 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19723,7 +19723,7 @@ return {
 		}
 	},
 	skeleton_warrior_0089 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19749,7 +19749,7 @@ return {
 		}
 	},
 	skeleton_warrior_0091 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19773,7 +19773,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0092 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19797,7 +19797,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0093 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19821,7 +19821,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0094 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19845,7 +19845,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0095 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19871,7 +19871,7 @@ return {
 		}
 	},
 	skeleton_warrior_0097 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19895,7 +19895,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0098 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19919,7 +19919,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0099 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19943,7 +19943,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0100 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19969,7 +19969,7 @@ return {
 		}
 	},
 	skeleton_warrior_0102 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -19995,7 +19995,7 @@ return {
 		}
 	},
 	skeleton_warrior_0104 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20021,7 +20021,7 @@ return {
 		}
 	},
 	skeleton_warrior_0106 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20047,7 +20047,7 @@ return {
 		}
 	},
 	skeleton_warrior_0108 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20077,7 +20077,7 @@ return {
 		}
 	},
 	skeleton_warrior_0114 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20101,7 +20101,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0115 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20125,7 +20125,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0116 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20149,7 +20149,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0117 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20173,7 +20173,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0118 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20197,7 +20197,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0119 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20221,7 +20221,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0120 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20245,7 +20245,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0121 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20269,7 +20269,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0122 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20293,7 +20293,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0123 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20317,7 +20317,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0124 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20341,7 +20341,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0125 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20365,7 +20365,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0126 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20389,7 +20389,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0127 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20413,7 +20413,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0128 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20437,7 +20437,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0129 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20461,7 +20461,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0130 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20485,7 +20485,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0131 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20509,7 +20509,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0132 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20533,7 +20533,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0133 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20557,7 +20557,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0134 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20581,7 +20581,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0135 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20605,7 +20605,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0136 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20629,7 +20629,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0137 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20653,7 +20653,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0138 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20677,7 +20677,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0139 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20701,7 +20701,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0140 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20725,7 +20725,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0141 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20749,7 +20749,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0142 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20773,7 +20773,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0143 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20797,7 +20797,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0144 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20821,7 +20821,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0145 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20845,7 +20845,7 @@ return {
 		alias = {}
 	},
 	skeleton_warrior_0146 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			82,
 			72
@@ -20869,7 +20869,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -20893,7 +20893,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0002 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -20917,7 +20917,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -20941,7 +20941,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0004 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -20965,7 +20965,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -20989,7 +20989,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0006 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21013,7 +21013,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21037,7 +21037,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21061,7 +21061,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0009 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21085,7 +21085,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21109,7 +21109,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0011 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21133,7 +21133,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0012 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21157,7 +21157,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0013 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21181,7 +21181,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0014 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21205,7 +21205,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0015 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21229,7 +21229,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0016 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21253,7 +21253,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0017 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21277,7 +21277,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0018 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21301,7 +21301,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21325,7 +21325,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0020 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21349,7 +21349,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21373,7 +21373,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0022 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21397,7 +21397,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21421,7 +21421,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0024 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21445,7 +21445,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21469,7 +21469,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0026 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21493,7 +21493,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21517,7 +21517,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0028 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21541,7 +21541,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21565,7 +21565,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0030 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21589,7 +21589,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0031 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21613,7 +21613,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0032 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21637,7 +21637,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0033 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21661,7 +21661,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0034 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21685,7 +21685,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0035 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21709,7 +21709,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0036 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21733,7 +21733,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0037 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21757,7 +21757,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21781,7 +21781,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0039 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21805,7 +21805,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0040 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21829,7 +21829,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21853,7 +21853,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0042 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21877,7 +21877,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21901,7 +21901,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0044 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21925,7 +21925,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0045 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21949,7 +21949,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0046 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21973,7 +21973,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -21997,7 +21997,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0048 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22021,7 +22021,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0049 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22045,7 +22045,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0050 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22069,7 +22069,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22093,7 +22093,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0052 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22117,7 +22117,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0053 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22141,7 +22141,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0054 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22165,7 +22165,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0055 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22189,7 +22189,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0056 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22213,7 +22213,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0057 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22237,7 +22237,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0058 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22261,7 +22261,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0059 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22285,7 +22285,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0060 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22309,7 +22309,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0061 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22333,7 +22333,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0062 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22357,7 +22357,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0063 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22381,7 +22381,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0064 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22405,7 +22405,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0065 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22429,7 +22429,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0066 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22453,7 +22453,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0067 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22477,7 +22477,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0068 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22501,7 +22501,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0069 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22525,7 +22525,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0070 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22549,7 +22549,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0071 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22573,7 +22573,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0072 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22597,7 +22597,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0073 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22621,7 +22621,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0074 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22645,7 +22645,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0075 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22671,7 +22671,7 @@ return {
 		}
 	},
 	spider_egg_0077 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22695,7 +22695,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0078 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22719,7 +22719,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0079 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22743,7 +22743,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0080 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22767,7 +22767,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0081 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22791,7 +22791,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0082 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22815,7 +22815,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0083 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22839,7 +22839,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0084 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22863,7 +22863,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0085 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22887,7 +22887,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0086 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22911,7 +22911,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0087 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22935,7 +22935,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0088 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22959,7 +22959,7 @@ return {
 		alias = {}
 	},
 	spider_egg_0089 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			44
@@ -22983,7 +22983,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23007,7 +23007,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0002 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23031,7 +23031,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23055,7 +23055,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0004 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23079,7 +23079,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23103,7 +23103,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0006 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23127,7 +23127,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23151,7 +23151,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23175,7 +23175,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0009 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23199,7 +23199,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23223,7 +23223,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0011 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23247,7 +23247,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0012 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23271,7 +23271,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0013 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23295,7 +23295,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0014 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23319,7 +23319,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0015 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23343,7 +23343,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0016 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23367,7 +23367,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0017 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23391,7 +23391,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0018 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23415,7 +23415,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23439,7 +23439,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0020 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23463,7 +23463,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23487,7 +23487,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0022 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23511,7 +23511,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23535,7 +23535,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0024 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23559,7 +23559,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23583,7 +23583,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0026 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23607,7 +23607,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23631,7 +23631,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0028 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23659,7 +23659,7 @@ return {
 		}
 	},
 	spider_medium_0031 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23685,7 +23685,7 @@ return {
 		}
 	},
 	spider_medium_0033 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23711,7 +23711,7 @@ return {
 		}
 	},
 	spider_medium_0035 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23738,7 +23738,7 @@ return {
 		}
 	},
 	spider_medium_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23762,7 +23762,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0039 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23786,7 +23786,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0040 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23812,7 +23812,7 @@ return {
 		}
 	},
 	spider_medium_0042 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23838,7 +23838,7 @@ return {
 		}
 	},
 	spider_medium_0044 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23864,7 +23864,7 @@ return {
 		}
 	},
 	spider_medium_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23888,7 +23888,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0048 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23912,7 +23912,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0049 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23938,7 +23938,7 @@ return {
 		}
 	},
 	spider_medium_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23964,7 +23964,7 @@ return {
 		}
 	},
 	spider_medium_0053 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -23988,7 +23988,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0054 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24012,7 +24012,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0055 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24036,7 +24036,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0056 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24060,7 +24060,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0057 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24093,7 +24093,7 @@ return {
 		}
 	},
 	spider_medium_0066 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24119,7 +24119,7 @@ return {
 		}
 	},
 	spider_medium_0068 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24143,7 +24143,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0069 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24167,7 +24167,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0070 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24191,7 +24191,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0071 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24215,7 +24215,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0072 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24239,7 +24239,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0073 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24263,7 +24263,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0074 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24287,7 +24287,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0075 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24311,7 +24311,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0076 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24335,7 +24335,7 @@ return {
 		alias = {}
 	},
 	spider_medium_0077 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24361,7 +24361,7 @@ return {
 		}
 	},
 	spider_medium_0079 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			80,
 			60
@@ -24391,7 +24391,7 @@ return {
 		}
 	},
 	spider_small_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24415,7 +24415,7 @@ return {
 		alias = {}
 	},
 	spider_small_0002 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24439,7 +24439,7 @@ return {
 		alias = {}
 	},
 	spider_small_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24463,7 +24463,7 @@ return {
 		alias = {}
 	},
 	spider_small_0004 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24487,7 +24487,7 @@ return {
 		alias = {}
 	},
 	spider_small_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24511,7 +24511,7 @@ return {
 		alias = {}
 	},
 	spider_small_0006 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24535,7 +24535,7 @@ return {
 		alias = {}
 	},
 	spider_small_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24559,7 +24559,7 @@ return {
 		alias = {}
 	},
 	spider_small_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24583,7 +24583,7 @@ return {
 		alias = {}
 	},
 	spider_small_0009 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24607,7 +24607,7 @@ return {
 		alias = {}
 	},
 	spider_small_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24631,7 +24631,7 @@ return {
 		alias = {}
 	},
 	spider_small_0011 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24655,7 +24655,7 @@ return {
 		alias = {}
 	},
 	spider_small_0012 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24679,7 +24679,7 @@ return {
 		alias = {}
 	},
 	spider_small_0013 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24703,7 +24703,7 @@ return {
 		alias = {}
 	},
 	spider_small_0014 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24727,7 +24727,7 @@ return {
 		alias = {}
 	},
 	spider_small_0015 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24751,7 +24751,7 @@ return {
 		alias = {}
 	},
 	spider_small_0016 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24775,7 +24775,7 @@ return {
 		alias = {}
 	},
 	spider_small_0017 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24799,7 +24799,7 @@ return {
 		alias = {}
 	},
 	spider_small_0018 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24823,7 +24823,7 @@ return {
 		alias = {}
 	},
 	spider_small_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24847,7 +24847,7 @@ return {
 		alias = {}
 	},
 	spider_small_0020 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24871,7 +24871,7 @@ return {
 		alias = {}
 	},
 	spider_small_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24895,7 +24895,7 @@ return {
 		alias = {}
 	},
 	spider_small_0022 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24919,7 +24919,7 @@ return {
 		alias = {}
 	},
 	spider_small_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24943,7 +24943,7 @@ return {
 		alias = {}
 	},
 	spider_small_0024 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24967,7 +24967,7 @@ return {
 		alias = {}
 	},
 	spider_small_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -24991,7 +24991,7 @@ return {
 		alias = {}
 	},
 	spider_small_0026 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25015,7 +25015,7 @@ return {
 		alias = {}
 	},
 	spider_small_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25039,7 +25039,7 @@ return {
 		alias = {}
 	},
 	spider_small_0028 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25067,7 +25067,7 @@ return {
 		}
 	},
 	spider_small_0031 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25093,7 +25093,7 @@ return {
 		}
 	},
 	spider_small_0033 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25119,7 +25119,7 @@ return {
 		}
 	},
 	spider_small_0035 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25146,7 +25146,7 @@ return {
 		}
 	},
 	spider_small_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25170,7 +25170,7 @@ return {
 		alias = {}
 	},
 	spider_small_0039 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25194,7 +25194,7 @@ return {
 		alias = {}
 	},
 	spider_small_0040 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25220,7 +25220,7 @@ return {
 		}
 	},
 	spider_small_0042 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25246,7 +25246,7 @@ return {
 		}
 	},
 	spider_small_0044 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25272,7 +25272,7 @@ return {
 		}
 	},
 	spider_small_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25296,7 +25296,7 @@ return {
 		alias = {}
 	},
 	spider_small_0048 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25320,7 +25320,7 @@ return {
 		alias = {}
 	},
 	spider_small_0049 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25346,7 +25346,7 @@ return {
 		}
 	},
 	spider_small_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25372,7 +25372,7 @@ return {
 		}
 	},
 	spider_small_0053 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25396,7 +25396,7 @@ return {
 		alias = {}
 	},
 	spider_small_0054 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25420,7 +25420,7 @@ return {
 		alias = {}
 	},
 	spider_small_0055 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25444,7 +25444,7 @@ return {
 		alias = {}
 	},
 	spider_small_0056 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25468,7 +25468,7 @@ return {
 		alias = {}
 	},
 	spider_small_0057 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25501,7 +25501,7 @@ return {
 		}
 	},
 	spider_small_0066 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25527,7 +25527,7 @@ return {
 		}
 	},
 	spider_small_0068 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25551,7 +25551,7 @@ return {
 		alias = {}
 	},
 	spider_small_0069 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25575,7 +25575,7 @@ return {
 		alias = {}
 	},
 	spider_small_0070 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25599,7 +25599,7 @@ return {
 		alias = {}
 	},
 	spider_small_0071 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25623,7 +25623,7 @@ return {
 		alias = {}
 	},
 	spider_small_0072 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25647,7 +25647,7 @@ return {
 		alias = {}
 	},
 	spider_small_0073 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25671,7 +25671,7 @@ return {
 		alias = {}
 	},
 	spider_small_0074 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25695,7 +25695,7 @@ return {
 		alias = {}
 	},
 	spider_small_0075 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25719,7 +25719,7 @@ return {
 		alias = {}
 	},
 	spider_small_0076 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25743,7 +25743,7 @@ return {
 		alias = {}
 	},
 	spider_small_0077 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25769,7 +25769,7 @@ return {
 		}
 	},
 	spider_small_0079 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			52,
 			40
@@ -25799,7 +25799,7 @@ return {
 		}
 	},
 	spider_tiny_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -25823,7 +25823,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0002 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -25847,7 +25847,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -25871,7 +25871,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0004 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -25895,7 +25895,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -25919,7 +25919,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0006 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -25943,7 +25943,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -25967,7 +25967,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -25991,7 +25991,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0009 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26015,7 +26015,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26039,7 +26039,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0011 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26063,7 +26063,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0012 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26087,7 +26087,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0013 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26111,7 +26111,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0014 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26135,7 +26135,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0015 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26159,7 +26159,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0016 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26183,7 +26183,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0017 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26207,7 +26207,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0018 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26231,7 +26231,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26255,7 +26255,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0020 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26279,7 +26279,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26303,7 +26303,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0022 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26327,7 +26327,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26351,7 +26351,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0024 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26375,7 +26375,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26399,7 +26399,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0026 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26423,7 +26423,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26447,7 +26447,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0028 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26475,7 +26475,7 @@ return {
 		}
 	},
 	spider_tiny_0031 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26501,7 +26501,7 @@ return {
 		}
 	},
 	spider_tiny_0033 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26527,7 +26527,7 @@ return {
 		}
 	},
 	spider_tiny_0035 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26554,7 +26554,7 @@ return {
 		}
 	},
 	spider_tiny_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26578,7 +26578,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0039 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26602,7 +26602,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0040 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26628,7 +26628,7 @@ return {
 		}
 	},
 	spider_tiny_0042 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26654,7 +26654,7 @@ return {
 		}
 	},
 	spider_tiny_0044 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26680,7 +26680,7 @@ return {
 		}
 	},
 	spider_tiny_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26704,7 +26704,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0048 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26728,7 +26728,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0049 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26754,7 +26754,7 @@ return {
 		}
 	},
 	spider_tiny_0051 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26780,7 +26780,7 @@ return {
 		}
 	},
 	spider_tiny_0053 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26804,7 +26804,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0054 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26828,7 +26828,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0055 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26852,7 +26852,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0056 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26876,7 +26876,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0057 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26909,7 +26909,7 @@ return {
 		}
 	},
 	spider_tiny_0066 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26935,7 +26935,7 @@ return {
 		}
 	},
 	spider_tiny_0068 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26959,7 +26959,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0069 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -26983,7 +26983,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0070 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -27007,7 +27007,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0071 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -27031,7 +27031,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0072 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -27055,7 +27055,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0073 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -27079,7 +27079,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0074 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -27103,7 +27103,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0075 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -27127,7 +27127,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0076 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -27151,7 +27151,7 @@ return {
 		alias = {}
 	},
 	spider_tiny_0077 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -27177,7 +27177,7 @@ return {
 		}
 	},
 	spider_tiny_0079 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			44,
 			36
@@ -27207,7 +27207,7 @@ return {
 		}
 	},
 	worg_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27233,7 +27233,7 @@ return {
 		}
 	},
 	worg_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27257,7 +27257,7 @@ return {
 		alias = {}
 	},
 	worg_0004 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27281,7 +27281,7 @@ return {
 		alias = {}
 	},
 	worg_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27305,7 +27305,7 @@ return {
 		alias = {}
 	},
 	worg_0006 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27329,7 +27329,7 @@ return {
 		alias = {}
 	},
 	worg_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27353,7 +27353,7 @@ return {
 		alias = {}
 	},
 	worg_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27377,7 +27377,7 @@ return {
 		alias = {}
 	},
 	worg_0009 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27401,7 +27401,7 @@ return {
 		alias = {}
 	},
 	worg_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27425,7 +27425,7 @@ return {
 		alias = {}
 	},
 	worg_0011 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27451,7 +27451,7 @@ return {
 		}
 	},
 	worg_0013 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27477,7 +27477,7 @@ return {
 		}
 	},
 	worg_0015 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27503,7 +27503,7 @@ return {
 		}
 	},
 	worg_0017 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27529,7 +27529,7 @@ return {
 		}
 	},
 	worg_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27555,7 +27555,7 @@ return {
 		}
 	},
 	worg_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27581,7 +27581,7 @@ return {
 		}
 	},
 	worg_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27607,7 +27607,7 @@ return {
 		}
 	},
 	worg_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27633,7 +27633,7 @@ return {
 		}
 	},
 	worg_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27659,7 +27659,7 @@ return {
 		}
 	},
 	worg_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27685,7 +27685,7 @@ return {
 		}
 	},
 	worg_0031 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27709,7 +27709,7 @@ return {
 		alias = {}
 	},
 	worg_0032 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27733,7 +27733,7 @@ return {
 		alias = {}
 	},
 	worg_0033 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27757,7 +27757,7 @@ return {
 		alias = {}
 	},
 	worg_0034 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27783,7 +27783,7 @@ return {
 		}
 	},
 	worg_0036 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27809,7 +27809,7 @@ return {
 		}
 	},
 	worg_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27833,7 +27833,7 @@ return {
 		alias = {}
 	},
 	worg_0039 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27859,7 +27859,7 @@ return {
 		}
 	},
 	worg_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27885,7 +27885,7 @@ return {
 		}
 	},
 	worg_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27909,7 +27909,7 @@ return {
 		alias = {}
 	},
 	worg_0044 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27935,7 +27935,7 @@ return {
 		}
 	},
 	worg_0046 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27959,7 +27959,7 @@ return {
 		alias = {}
 	},
 	worg_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -27983,7 +27983,7 @@ return {
 		alias = {}
 	},
 	worg_0048 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28009,7 +28009,7 @@ return {
 		}
 	},
 	worg_0050 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28035,7 +28035,7 @@ return {
 		}
 	},
 	worg_0052 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28059,7 +28059,7 @@ return {
 		alias = {}
 	},
 	worg_0053 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28083,7 +28083,7 @@ return {
 		alias = {}
 	},
 	worg_0054 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28107,7 +28107,7 @@ return {
 		alias = {}
 	},
 	worg_0055 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28131,7 +28131,7 @@ return {
 		alias = {}
 	},
 	worg_0056 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28164,7 +28164,7 @@ return {
 		}
 	},
 	worg_0065 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28190,7 +28190,7 @@ return {
 		}
 	},
 	worg_0067 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28214,7 +28214,7 @@ return {
 		alias = {}
 	},
 	worg_0068 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28238,7 +28238,7 @@ return {
 		alias = {}
 	},
 	worg_0069 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28264,7 +28264,7 @@ return {
 		}
 	},
 	worg_0071 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28290,7 +28290,7 @@ return {
 		}
 	},
 	worg_0073 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28316,7 +28316,7 @@ return {
 		}
 	},
 	worg_0075 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28342,7 +28342,7 @@ return {
 		}
 	},
 	worg_0077 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28368,7 +28368,7 @@ return {
 		}
 	},
 	worg_0079 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28394,7 +28394,7 @@ return {
 		}
 	},
 	worg_0081 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28420,7 +28420,7 @@ return {
 		}
 	},
 	worg_0083 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			86,
 			72
@@ -28446,7 +28446,7 @@ return {
 		}
 	},
 	wulf_0001 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28472,7 +28472,7 @@ return {
 		}
 	},
 	wulf_0003 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28496,7 +28496,7 @@ return {
 		alias = {}
 	},
 	wulf_0004 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28520,7 +28520,7 @@ return {
 		alias = {}
 	},
 	wulf_0005 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28544,7 +28544,7 @@ return {
 		alias = {}
 	},
 	wulf_0006 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28568,7 +28568,7 @@ return {
 		alias = {}
 	},
 	wulf_0007 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28592,7 +28592,7 @@ return {
 		alias = {}
 	},
 	wulf_0008 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28616,7 +28616,7 @@ return {
 		alias = {}
 	},
 	wulf_0009 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28640,7 +28640,7 @@ return {
 		alias = {}
 	},
 	wulf_0010 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28664,7 +28664,7 @@ return {
 		alias = {}
 	},
 	wulf_0011 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28690,7 +28690,7 @@ return {
 		}
 	},
 	wulf_0013 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28716,7 +28716,7 @@ return {
 		}
 	},
 	wulf_0015 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28742,7 +28742,7 @@ return {
 		}
 	},
 	wulf_0017 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28768,7 +28768,7 @@ return {
 		}
 	},
 	wulf_0019 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28794,7 +28794,7 @@ return {
 		}
 	},
 	wulf_0021 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28820,7 +28820,7 @@ return {
 		}
 	},
 	wulf_0023 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28846,7 +28846,7 @@ return {
 		}
 	},
 	wulf_0025 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28872,7 +28872,7 @@ return {
 		}
 	},
 	wulf_0027 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28898,7 +28898,7 @@ return {
 		}
 	},
 	wulf_0029 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28924,7 +28924,7 @@ return {
 		}
 	},
 	wulf_0031 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28948,7 +28948,7 @@ return {
 		alias = {}
 	},
 	wulf_0032 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28972,7 +28972,7 @@ return {
 		alias = {}
 	},
 	wulf_0033 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -28996,7 +28996,7 @@ return {
 		alias = {}
 	},
 	wulf_0034 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29022,7 +29022,7 @@ return {
 		}
 	},
 	wulf_0036 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29048,7 +29048,7 @@ return {
 		}
 	},
 	wulf_0038 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29072,7 +29072,7 @@ return {
 		alias = {}
 	},
 	wulf_0039 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29098,7 +29098,7 @@ return {
 		}
 	},
 	wulf_0041 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29124,7 +29124,7 @@ return {
 		}
 	},
 	wulf_0043 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29148,7 +29148,7 @@ return {
 		alias = {}
 	},
 	wulf_0044 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29174,7 +29174,7 @@ return {
 		}
 	},
 	wulf_0046 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29198,7 +29198,7 @@ return {
 		alias = {}
 	},
 	wulf_0047 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29222,7 +29222,7 @@ return {
 		alias = {}
 	},
 	wulf_0048 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29248,7 +29248,7 @@ return {
 		}
 	},
 	wulf_0050 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29274,7 +29274,7 @@ return {
 		}
 	},
 	wulf_0052 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29298,7 +29298,7 @@ return {
 		alias = {}
 	},
 	wulf_0053 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29322,7 +29322,7 @@ return {
 		alias = {}
 	},
 	wulf_0054 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29346,7 +29346,7 @@ return {
 		alias = {}
 	},
 	wulf_0055 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29370,7 +29370,7 @@ return {
 		alias = {}
 	},
 	wulf_0056 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29403,7 +29403,7 @@ return {
 		}
 	},
 	wulf_0065 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29429,7 +29429,7 @@ return {
 		}
 	},
 	wulf_0067 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29453,7 +29453,7 @@ return {
 		alias = {}
 	},
 	wulf_0068 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29477,7 +29477,7 @@ return {
 		alias = {}
 	},
 	wulf_0069 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29503,7 +29503,7 @@ return {
 		}
 	},
 	wulf_0071 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29529,7 +29529,7 @@ return {
 		}
 	},
 	wulf_0073 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29555,7 +29555,7 @@ return {
 		}
 	},
 	wulf_0075 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29581,7 +29581,7 @@ return {
 		}
 	},
 	wulf_0077 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29607,7 +29607,7 @@ return {
 		}
 	},
 	wulf_0079 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29633,7 +29633,7 @@ return {
 		}
 	},
 	wulf_0081 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29659,7 +29659,7 @@ return {
 		}
 	},
 	wulf_0083 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29685,7 +29685,7 @@ return {
 		}
 	},
 	wulf_0085 = {
-		a_name = "go_enemies_common-1.png",
+		a_name = "go_enemies_common-1.dds",
 		size = {
 			56,
 			40
@@ -29709,7 +29709,7 @@ return {
 		alias = {}
 	},
     wasp_hornet_0001 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -29733,7 +29733,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0002 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -29757,7 +29757,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0003 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -29781,7 +29781,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0004 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -29805,7 +29805,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0005 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -29829,7 +29829,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0006 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -29853,7 +29853,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0007 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -29877,7 +29877,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0008 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -29901,7 +29901,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0009 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -29925,7 +29925,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0010 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -29949,7 +29949,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0011 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -29973,7 +29973,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0012 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -29997,7 +29997,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0013 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30021,7 +30021,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0014 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30045,7 +30045,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0015 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30069,7 +30069,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0016 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30093,7 +30093,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0017 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30117,7 +30117,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0018 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30141,7 +30141,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0019 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30165,7 +30165,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0020 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30189,7 +30189,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0021 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30213,7 +30213,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0022 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30237,7 +30237,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0023 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30261,7 +30261,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0024 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30285,7 +30285,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0025 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30309,7 +30309,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0026 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30333,7 +30333,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0027 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30357,7 +30357,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0028 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30381,7 +30381,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0029 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30405,7 +30405,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0030 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30429,7 +30429,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0031 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30453,7 +30453,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0032 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30477,7 +30477,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0033 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30501,7 +30501,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0034 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30525,7 +30525,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0035 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30549,7 +30549,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0036 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30573,7 +30573,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0037 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30597,7 +30597,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0038 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30621,7 +30621,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0039 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30645,7 +30645,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0040 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30669,7 +30669,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0041 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30693,7 +30693,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0042 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30717,7 +30717,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0043 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30741,7 +30741,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0044 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30765,7 +30765,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0045 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30789,7 +30789,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0046 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30813,7 +30813,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0047 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30837,7 +30837,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0048 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30861,7 +30861,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0049 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30885,7 +30885,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0050 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30909,7 +30909,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0051 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30933,7 +30933,7 @@ return {
 		alias = {}
 	},
 	wasp_hornet_0052 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			56,
 			93
@@ -30957,7 +30957,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0001 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -30981,7 +30981,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0002 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31005,7 +31005,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0003 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31029,7 +31029,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0004 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31053,7 +31053,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0005 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31077,7 +31077,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0006 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31101,7 +31101,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0007 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31125,7 +31125,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0008 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31149,7 +31149,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0009 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31173,7 +31173,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0010 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31197,7 +31197,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0011 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31221,7 +31221,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0012 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31245,7 +31245,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0013 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31269,7 +31269,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0014 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31293,7 +31293,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0015 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31317,7 +31317,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0016 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31341,7 +31341,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0017 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31365,7 +31365,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0018 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31389,7 +31389,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0019 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31413,7 +31413,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0020 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31437,7 +31437,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0021 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31461,7 +31461,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0022 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31485,7 +31485,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0023 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31509,7 +31509,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0024 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31533,7 +31533,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0025 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31557,7 +31557,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0026 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31581,7 +31581,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0027 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31605,7 +31605,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0028 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31629,7 +31629,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0029 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31653,7 +31653,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0030 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31677,7 +31677,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0031 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31701,7 +31701,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0032 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31725,7 +31725,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0033 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31749,7 +31749,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0034 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31773,7 +31773,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0035 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31797,7 +31797,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0036 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31821,7 +31821,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0037 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31845,7 +31845,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0038 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31869,7 +31869,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0039 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31893,7 +31893,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0040 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31917,7 +31917,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0041 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31941,7 +31941,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0042 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31965,7 +31965,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0043 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -31989,7 +31989,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0044 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -32013,7 +32013,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0045 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -32037,7 +32037,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0046 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -32061,7 +32061,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0047 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -32085,7 +32085,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0048 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -32109,7 +32109,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0049 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -32133,7 +32133,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0050 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -32157,7 +32157,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0051 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -32181,7 +32181,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0052 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -32205,7 +32205,7 @@ return {
 		alias = {}
 	},
 	wasp_queen_0053 = {
-		a_name = "go_enemies_common-2.png",
+		a_name = "go_enemies_common-2.dds",
 		size = {
 			87,
 			132
@@ -32233,7 +32233,7 @@ return {
 	},
     -- kr3
     ettin_0001 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {63, 19, 59, 11},
         a_size = {2048, 2048},
@@ -32241,7 +32241,7 @@ return {
         alias = {}
     },
     ettin_0002 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {56, 15, 57, 11},
         a_size = {2048, 2048},
@@ -32249,7 +32249,7 @@ return {
         alias = {"ettin_0003"}
     },
     ettin_0004 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {57, 20, 58, 8},
         a_size = {2048, 2048},
@@ -32257,7 +32257,7 @@ return {
         alias = {"ettin_0005"}
     },
     ettin_0006 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {61, 23, 59, 11},
         a_size = {2048, 2048},
@@ -32265,7 +32265,7 @@ return {
         alias = {"ettin_0007"}
     },
     ettin_0008 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {69, 19, 60, 11},
         a_size = {2048, 2048},
@@ -32273,7 +32273,7 @@ return {
         alias = {"ettin_0009"}
     },
     ettin_0010 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {72, 16, 61, 11},
         a_size = {2048, 2048},
@@ -32281,7 +32281,7 @@ return {
         alias = {"ettin_0011"}
     },
     ettin_0012 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {73, 14, 62, 11},
         a_size = {2048, 2048},
@@ -32289,7 +32289,7 @@ return {
         alias = {"ettin_0013"}
     },
     ettin_0014 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {73, 13, 63, 11},
         a_size = {2048, 2048},
@@ -32297,7 +32297,7 @@ return {
         alias = {"ettin_0015"}
     },
     ettin_0016 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {73, 13, 64, 11},
         a_size = {2048, 2048},
@@ -32305,7 +32305,7 @@ return {
         alias = {"ettin_0017"}
     },
     ettin_0018 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {73, 17, 63, 11},
         a_size = {2048, 2048},
@@ -32313,7 +32313,7 @@ return {
         alias = {"ettin_0019"}
     },
     ettin_0020 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {67, 22, 61, 11},
         a_size = {2048, 2048},
@@ -32321,7 +32321,7 @@ return {
         alias = {"ettin_0021"}
     },
     ettin_0022 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {63, 17, 60, 11},
         a_size = {2048, 2048},
@@ -32329,7 +32329,7 @@ return {
         alias = {"ettin_0023"}
     },
     ettin_0024 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {58, 13, 59, 11},
         a_size = {2048, 2048},
@@ -32337,7 +32337,7 @@ return {
         alias = {"ettin_0025"}
     },
     ettin_0026 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {57, 12, 59, 11},
         a_size = {2048, 2048},
@@ -32345,7 +32345,7 @@ return {
         alias = {"ettin_0027"}
     },
     ettin_0028 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {56, 13, 58, 11},
         a_size = {2048, 2048},
@@ -32353,7 +32353,7 @@ return {
         alias = {"ettin_0029"}
     },
     ettin_0030 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {51, 13, 52, 11},
         a_size = {2048, 2048},
@@ -32361,7 +32361,7 @@ return {
         alias = {"ettin_0031"}
     },
     ettin_0032 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {53, 22, 53, 11},
         a_size = {2048, 2048},
@@ -32369,7 +32369,7 @@ return {
         alias = {"ettin_0033"}
     },
     ettin_0034 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {54, 22, 54, 11},
         a_size = {2048, 2048},
@@ -32377,7 +32377,7 @@ return {
         alias = {"ettin_0035"}
     },
     ettin_0036 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {56, 18, 57, 11},
         a_size = {2048, 2048},
@@ -32385,7 +32385,7 @@ return {
         alias = {"ettin_0037"}
     },
     ettin_0038 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {58, 13, 59, 11},
         a_size = {2048, 2048},
@@ -32393,7 +32393,7 @@ return {
         alias = {"ettin_0039"}
     },
     ettin_0040 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {59, 11, 59, 11},
         a_size = {2048, 2048},
@@ -32401,7 +32401,7 @@ return {
         alias = {"ettin_0041"}
     },
     ettin_0042 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {59, 10, 59, 11},
         a_size = {2048, 2048},
@@ -32409,7 +32409,7 @@ return {
         alias = {"ettin_0043"}
     },
     ettin_0044 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {59, 9, 60, 11},
         a_size = {2048, 2048},
@@ -32417,7 +32417,7 @@ return {
         alias = {"ettin_0045"}
     },
     ettin_0046 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {59, 11, 58, 11},
         a_size = {2048, 2048},
@@ -32425,7 +32425,7 @@ return {
         alias = {"ettin_0047"}
     },
     ettin_0048 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {58, 19, 56, 11},
         a_size = {2048, 2048},
@@ -32433,7 +32433,7 @@ return {
         alias = {"ettin_0049"}
     },
     ettin_0050 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {56, 19, 56, 11},
         a_size = {2048, 2048},
@@ -32441,7 +32441,7 @@ return {
         alias = {"ettin_0051"}
     },
     ettin_0052 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {54, 16, 55, 11},
         a_size = {2048, 2048},
@@ -32449,7 +32449,7 @@ return {
         alias = {"ettin_0053"}
     },
     ettin_0054 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {53, 15, 54, 11},
         a_size = {2048, 2048},
@@ -32457,7 +32457,7 @@ return {
         alias = {"ettin_0055"}
     },
     ettin_0056 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {52, 12, 53, 11},
         a_size = {2048, 2048},
@@ -32465,7 +32465,7 @@ return {
         alias = {"ettin_0057"}
     },
     ettin_0058 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {52, 13, 52, 11},
         a_size = {2048, 2048},
@@ -32473,7 +32473,7 @@ return {
         alias = {}
     },
     ettin_0059 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {54, 20, 49, 11},
         a_size = {2048, 2048},
@@ -32481,7 +32481,7 @@ return {
         alias = {"ettin_0060"}
     },
     ettin_0061 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {54, 20, 48, 11},
         a_size = {2048, 2048},
@@ -32489,7 +32489,7 @@ return {
         alias = {"ettin_0062"}
     },
     ettin_0063 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {57, 16, 61, 11},
         a_size = {2048, 2048},
@@ -32497,7 +32497,7 @@ return {
         alias = {"ettin_0064"}
     },
     ettin_0065 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {58, 10, 64, 11},
         a_size = {2048, 2048},
@@ -32505,7 +32505,7 @@ return {
         alias = {"ettin_0066"}
     },
     ettin_0067 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {58, 9, 44, 11},
         a_size = {2048, 2048},
@@ -32513,7 +32513,7 @@ return {
         alias = {"ettin_0068"}
     },
     ettin_0069 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {58, 7, 44, 11},
         a_size = {2048, 2048},
@@ -32521,7 +32521,7 @@ return {
         alias = {"ettin_0070"}
     },
     ettin_0071 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {58, 6, 65, 11},
         a_size = {2048, 2048},
@@ -32529,7 +32529,7 @@ return {
         alias = {"ettin_0072"}
     },
     ettin_0073 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {56, 9, 44, 11},
         a_size = {2048, 2048},
@@ -32537,7 +32537,7 @@ return {
         alias = {"ettin_0074"}
     },
     ettin_0075 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {56, 17, 46, 11},
         a_size = {2048, 2048},
@@ -32545,7 +32545,7 @@ return {
         alias = {"ettin_0076"}
     },
     ettin_0077 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {56, 17, 61, 11},
         a_size = {2048, 2048},
@@ -32553,7 +32553,7 @@ return {
         alias = {"ettin_0078"}
     },
     ettin_0079 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {55, 14, 48, 11},
         a_size = {2048, 2048},
@@ -32561,7 +32561,7 @@ return {
         alias = {"ettin_0080"}
     },
     ettin_0081 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {53, 13, 59, 11},
         a_size = {2048, 2048},
@@ -32569,7 +32569,7 @@ return {
         alias = {"ettin_0082"}
     },
     ettin_0083 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {53, 11, 51, 11},
         a_size = {2048, 2048},
@@ -32577,7 +32577,7 @@ return {
         alias = {"ettin_0084"}
     },
     ettin_0085 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {56, 14, 65, 11},
         a_size = {2048, 2048},
@@ -32585,7 +32585,7 @@ return {
         alias = {"ettin_0086"}
     },
     ettin_0087 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {53, 12, 68, 11},
         a_size = {2048, 2048},
@@ -32593,7 +32593,7 @@ return {
         alias = {"ettin_0088"}
     },
     ettin_0089 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {50, 10, 70, 11},
         a_size = {2048, 2048},
@@ -32601,7 +32601,7 @@ return {
         alias = {"ettin_0090", "ettin_0091", "ettin_0092"}
     },
     ettin_0093 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {52, 5, 63, 11},
         a_size = {2048, 2048},
@@ -32609,7 +32609,7 @@ return {
         alias = {"ettin_0094"}
     },
     ettin_0095 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {68, 15, 1, 1},
         a_size = {2048, 2048},
@@ -32617,7 +32617,7 @@ return {
         alias = {"ettin_0096"}
     },
     ettin_0097 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {69, 32, 4, 1},
         a_size = {2048, 2048},
@@ -32625,7 +32625,7 @@ return {
         alias = {"ettin_0098"}
     },
     ettin_0099 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {70, 34, 3, 4},
         a_size = {2048, 2048},
@@ -32633,7 +32633,7 @@ return {
         alias = {"ettin_0100"}
     },
     ettin_0101 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {70, 29, 6, 5},
         a_size = {2048, 2048},
@@ -32641,7 +32641,7 @@ return {
         alias = {"ettin_0102"}
     },
     ettin_0103 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {64, 17, 57, 11},
         a_size = {2048, 2048},
@@ -32649,7 +32649,7 @@ return {
         alias = {"ettin_0104"}
     },
     ettin_0105 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {63, 19, 59, 11},
         a_size = {2048, 2048},
@@ -32657,7 +32657,7 @@ return {
         alias = {"ettin_0106", "ettin_0107", "ettin_0108"}
     },
     ettin_0109 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {63, 19, 59, 11},
         a_size = {2048, 2048},
@@ -32665,7 +32665,7 @@ return {
         alias = {"ettin_0110", "ettin_0111", "ettin_0112"}
     },
     ettin_0113 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {63, 19, 59, 11},
         a_size = {2048, 2048},
@@ -32673,7 +32673,7 @@ return {
         alias = {"ettin_0114"}
     },
     ettin_0115 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {63, 19, 61, 11},
         a_size = {2048, 2048},
@@ -32681,7 +32681,7 @@ return {
         alias = {"ettin_0116"}
     },
     ettin_0117 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {57, 17, 61, 11},
         a_size = {2048, 2048},
@@ -32689,7 +32689,7 @@ return {
         alias = {"ettin_0118"}
     },
     ettin_0119 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {52, 15, 61, 11},
         a_size = {2048, 2048},
@@ -32697,7 +32697,7 @@ return {
         alias = {"ettin_0120"}
     },
     ettin_0121 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {54, 21, 59, 11},
         a_size = {2048, 2048},
@@ -32705,7 +32705,7 @@ return {
         alias = {"ettin_0122"}
     },
     ettin_0123 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {54, 19, 59, 11},
         a_size = {2048, 2048},
@@ -32713,7 +32713,7 @@ return {
         alias = {"ettin_0124"}
     },
     ettin_0125 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {54, 18, 59, 11},
         a_size = {2048, 2048},
@@ -32721,7 +32721,7 @@ return {
         alias = {"ettin_0126"}
     },
     ettin_0127 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {54, 21, 59, 11},
         a_size = {2048, 2048},
@@ -32729,7 +32729,7 @@ return {
         alias = {"ettin_0128"}
     },
     ettin_0129 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {54, 23, 59, 11},
         a_size = {2048, 2048},
@@ -32737,7 +32737,7 @@ return {
         alias = {"ettin_0130"}
     },
     ettin_0131 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {55, 21, 59, 8},
         a_size = {2048, 2048},
@@ -32745,7 +32745,7 @@ return {
         alias = {"ettin_0132"}
     },
     ettin_0133 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {57, 22, 59, 6},
         a_size = {2048, 2048},
@@ -32753,7 +32753,7 @@ return {
         alias = {"ettin_0134"}
     },
     ettin_0135 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {70, 13, 52, 11},
         a_size = {2048, 2048},
@@ -32761,7 +32761,7 @@ return {
         alias = {"ettin_0136"}
     },
     ettin_0137 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {70, 9, 55, 11},
         a_size = {2048, 2048},
@@ -32769,7 +32769,7 @@ return {
         alias = {"ettin_0138"}
     },
     ettin_0139 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {67, 15, 56, 11},
         a_size = {2048, 2048},
@@ -32777,7 +32777,7 @@ return {
         alias = {"ettin_0140"}
     },
     ettin_0141 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {66, 20, 58, 11},
         a_size = {2048, 2048},
@@ -32785,7 +32785,7 @@ return {
         alias = {"ettin_0142"}
     },
     ettin_0143 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {60, 19, 59, 11},
         a_size = {2048, 2048},
@@ -32793,7 +32793,7 @@ return {
         alias = {"ettin_0144"}
     },
     ettin_0145 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {61, 14, 58, 11},
         a_size = {2048, 2048},
@@ -32801,7 +32801,7 @@ return {
         alias = {"ettin_0146"}
     },
     ettin_0147 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {62, 14, 56, 11},
         a_size = {2048, 2048},
@@ -32809,7 +32809,7 @@ return {
         alias = {"ettin_0148"}
     },
     ettin_0149 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {65, 17, 54, 11},
         a_size = {2048, 2048},
@@ -32817,7 +32817,7 @@ return {
         alias = {"ettin_0150"}
     },
     ettin_0151 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {68, 20, 53, 11},
         a_size = {2048, 2048},
@@ -32825,7 +32825,7 @@ return {
         alias = {"ettin_0152"}
     },
     ettin_0153 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {68, 19, 54, 11},
         a_size = {2048, 2048},
@@ -32833,7 +32833,7 @@ return {
         alias = {"ettin_0154"}
     },
     ettin_0155 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {69, 14, 56, 11},
         a_size = {2048, 2048},
@@ -32841,7 +32841,7 @@ return {
         alias = {"ettin_0156"}
     },
     ettin_0157 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {66, 14, 59, 11},
         a_size = {2048, 2048},
@@ -32849,7 +32849,7 @@ return {
         alias = {"ettin_0158"}
     },
     ettin_0159 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {63, 17, 61, 11},
         a_size = {2048, 2048},
@@ -32857,7 +32857,7 @@ return {
         alias = {"ettin_0160"}
     },
     ettin_0161 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {61, 19, 61, 11},
         a_size = {2048, 2048},
@@ -32865,7 +32865,7 @@ return {
         alias = {"ettin_0162"}
     },
     ettin_0163 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {60, 6, 46, 11},
         a_size = {2048, 2048},
@@ -32873,7 +32873,7 @@ return {
         alias = {"ettin_0164"}
     },
     ettin_0165 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {59, 6, 37, 11},
         a_size = {2048, 2048},
@@ -32881,7 +32881,7 @@ return {
         alias = {"ettin_0166"}
     },
     ettin_0167 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {59, 16, 28, 11},
         a_size = {2048, 2048},
@@ -32889,7 +32889,7 @@ return {
         alias = {"ettin_0168"}
     },
     ettin_0169 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {57, 33, 27, 11},
         a_size = {2048, 2048},
@@ -32897,7 +32897,7 @@ return {
         alias = {"ettin_0170"}
     },
     ettin_0171 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {57, 33, 22, 4},
         a_size = {2048, 2048},
@@ -32905,7 +32905,7 @@ return {
         alias = {"ettin_0172"}
     },
     ettin_0173 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {54, 33, 16, 4},
         a_size = {2048, 2048},
@@ -32913,7 +32913,7 @@ return {
         alias = {"ettin_0174"}
     },
     ettin_0175 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {30, 65, 15, 4},
         a_size = {2048, 2048},
@@ -32921,7 +32921,7 @@ return {
         alias = {"ettin_0176"}
     },
     ettin_0177 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {27, 71, 13, 4},
         a_size = {2048, 2048},
@@ -32929,7 +32929,7 @@ return {
         alias = {"ettin_0178"}
     },
     ettin_0179 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {25, 68, 11, 4},
         a_size = {2048, 2048},
@@ -32937,7 +32937,7 @@ return {
         alias = {"ettin_0180"}
     },
     ettin_0181 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {217, 127},
         trim = {24, 70, 11, 4},
         a_size = {2048, 2048},
@@ -32945,7 +32945,7 @@ return {
         alias = {"ettin_0182", "ettin_0183", "ettin_0184", "ettin_0185", "ettin_0186"}
     },
     harraser_0001 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {39, 42, 45, 16},
         a_size = {2048, 2048},
@@ -32953,7 +32953,7 @@ return {
         alias = {"harraser_0048", "harraser_0082", "harraser_0083", "harraser_0084", "harraser_0109", "harraser_0110"}
     },
     harraser_0002 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 48, 51, 16},
         a_size = {2048, 2048},
@@ -32961,7 +32961,7 @@ return {
         alias = {"harraser_0003"}
     },
     harraser_0004 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 45, 49, 16},
         a_size = {2048, 2048},
@@ -32969,7 +32969,7 @@ return {
         alias = {"harraser_0005"}
     },
     harraser_0006 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {45, 42, 48, 16},
         a_size = {2048, 2048},
@@ -32977,7 +32977,7 @@ return {
         alias = {"harraser_0007"}
     },
     harraser_0008 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {45, 42, 49, 16},
         a_size = {2048, 2048},
@@ -32985,7 +32985,7 @@ return {
         alias = {}
     },
     harraser_0009 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {46, 44, 49, 16},
         a_size = {2048, 2048},
@@ -32993,7 +32993,7 @@ return {
         alias = {"harraser_0010"}
     },
     harraser_0011 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {48, 47, 49, 15},
         a_size = {2048, 2048},
@@ -33001,7 +33001,7 @@ return {
         alias = {"harraser_0012"}
     },
     harraser_0013 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {49, 49, 50, 16},
         a_size = {2048, 2048},
@@ -33009,7 +33009,7 @@ return {
         alias = {"harraser_0014"}
     },
     harraser_0015 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {50, 45, 50, 16},
         a_size = {2048, 2048},
@@ -33017,7 +33017,7 @@ return {
         alias = {"harraser_0016"}
     },
     harraser_0017 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {49, 42, 48, 16},
         a_size = {2048, 2048},
@@ -33025,7 +33025,7 @@ return {
         alias = {"harraser_0018"}
     },
     harraser_0019 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {48, 42, 48, 16},
         a_size = {2048, 2048},
@@ -33033,7 +33033,7 @@ return {
         alias = {}
     },
     harraser_0020 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {46, 44, 49, 16},
         a_size = {2048, 2048},
@@ -33041,7 +33041,7 @@ return {
         alias = {"harraser_0021"}
     },
     harraser_0022 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {45, 47, 49, 16},
         a_size = {2048, 2048},
@@ -33049,7 +33049,7 @@ return {
         alias = {"harraser_0023"}
     },
     harraser_0024 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {39, 42, 44, 16},
         a_size = {2048, 2048},
@@ -33057,7 +33057,7 @@ return {
         alias = {"harraser_0025"}
     },
     harraser_0026 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {41, 42, 46, 16},
         a_size = {2048, 2048},
@@ -33065,7 +33065,7 @@ return {
         alias = {"harraser_0027"}
     },
     harraser_0028 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {42, 42, 46, 16},
         a_size = {2048, 2048},
@@ -33073,7 +33073,7 @@ return {
         alias = {"harraser_0029"}
     },
     harraser_0030 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {41, 42, 32, 16},
         a_size = {2048, 2048},
@@ -33081,7 +33081,7 @@ return {
         alias = {"harraser_0031"}
     },
     harraser_0032 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {46, 42, 33, 16},
         a_size = {2048, 2048},
@@ -33089,7 +33089,7 @@ return {
         alias = {"harraser_0033"}
     },
     harraser_0034 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {51, 42, 38, 16},
         a_size = {2048, 2048},
@@ -33097,7 +33097,7 @@ return {
         alias = {"harraser_0035"}
     },
     harraser_0036 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {55, 43, 39, 16},
         a_size = {2048, 2048},
@@ -33105,7 +33105,7 @@ return {
         alias = {"harraser_0037"}
     },
     harraser_0038 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {46, 42, 34, 16},
         a_size = {2048, 2048},
@@ -33113,7 +33113,7 @@ return {
         alias = {"harraser_0039"}
     },
     harraser_0040 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {47, 42, 25, 15},
         a_size = {2048, 2048},
@@ -33121,7 +33121,7 @@ return {
         alias = {"harraser_0041"}
     },
     harraser_0042 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {48, 43, 33, 15},
         a_size = {2048, 2048},
@@ -33129,7 +33129,7 @@ return {
         alias = {"harraser_0043"}
     },
     harraser_0044 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {48, 44, 41, 16},
         a_size = {2048, 2048},
@@ -33137,7 +33137,7 @@ return {
         alias = {"harraser_0045"}
     },
     harraser_0046 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {46, 44, 39, 16},
         a_size = {2048, 2048},
@@ -33145,7 +33145,7 @@ return {
         alias = {"harraser_0047"}
     },
     harraser_0049 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {47, 30, 41, 15},
         a_size = {2048, 2048},
@@ -33153,7 +33153,7 @@ return {
         alias = {"harraser_0050"}
     },
     harraser_0051 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {48, 40, 43, 15},
         a_size = {2048, 2048},
@@ -33161,7 +33161,7 @@ return {
         alias = {"harraser_0052"}
     },
     harraser_0053 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {50, 42, 37, 15},
         a_size = {2048, 2048},
@@ -33169,7 +33169,7 @@ return {
         alias = {"harraser_0054"}
     },
     harraser_0055 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {47, 36, 45, 15},
         a_size = {2048, 2048},
@@ -33177,7 +33177,7 @@ return {
         alias = {"harraser_0056"}
     },
     harraser_0057 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {42, 29, 46, 15},
         a_size = {2048, 2048},
@@ -33185,7 +33185,7 @@ return {
         alias = {"harraser_0058"}
     },
     harraser_0059 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {41, 30, 44, 15},
         a_size = {2048, 2048},
@@ -33193,7 +33193,7 @@ return {
         alias = {"harraser_0060"}
     },
     harraser_0061 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {37, 31, 44, 15},
         a_size = {2048, 2048},
@@ -33201,7 +33201,7 @@ return {
         alias = {"harraser_0062"}
     },
     harraser_0063 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {43, 33, 46, 15},
         a_size = {2048, 2048},
@@ -33209,7 +33209,7 @@ return {
         alias = {"harraser_0064"}
     },
     harraser_0065 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {40, 30, 44, 15},
         a_size = {2048, 2048},
@@ -33217,7 +33217,7 @@ return {
         alias = {"harraser_0066"}
     },
     harraser_0067 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {37, 31, 44, 15},
         a_size = {2048, 2048},
@@ -33225,7 +33225,7 @@ return {
         alias = {}
     },
     harraser_0068 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {43, 33, 46, 15},
         a_size = {2048, 2048},
@@ -33233,7 +33233,7 @@ return {
         alias = {"harraser_0069"}
     },
     harraser_0070 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {40, 30, 44, 15},
         a_size = {2048, 2048},
@@ -33241,7 +33241,7 @@ return {
         alias = {"harraser_0071"}
     },
     harraser_0072 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {37, 32, 44, 15},
         a_size = {2048, 2048},
@@ -33249,7 +33249,7 @@ return {
         alias = {"harraser_0073"}
     },
     harraser_0074 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {40, 34, 48, 15},
         a_size = {2048, 2048},
@@ -33257,7 +33257,7 @@ return {
         alias = {"harraser_0075"}
     },
     harraser_0076 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {49, 43, 41, 15},
         a_size = {2048, 2048},
@@ -33265,7 +33265,7 @@ return {
         alias = {"harraser_0077"}
     },
     harraser_0078 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {47, 43, 54, 15},
         a_size = {2048, 2048},
@@ -33273,7 +33273,7 @@ return {
         alias = {"harraser_0079"}
     },
     harraser_0080 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 43, 49, 15},
         a_size = {2048, 2048},
@@ -33281,7 +33281,7 @@ return {
         alias = {"harraser_0081"}
     },
     harraser_0085 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 34, 45, 16},
         a_size = {2048, 2048},
@@ -33289,7 +33289,7 @@ return {
         alias = {"harraser_0086"}
     },
     harraser_0087 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {45, 25, 40, 16},
         a_size = {2048, 2048},
@@ -33297,7 +33297,7 @@ return {
         alias = {"harraser_0088"}
     },
     harraser_0089 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {39, 15, 39, 16},
         a_size = {2048, 2048},
@@ -33305,7 +33305,7 @@ return {
         alias = {"harraser_0090"}
     },
     harraser_0091 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 20, 48, 41},
         a_size = {2048, 2048},
@@ -33313,7 +33313,7 @@ return {
         alias = {"harraser_0092"}
     },
     harraser_0093 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {45, 22, 49, 43},
         a_size = {2048, 2048},
@@ -33321,7 +33321,7 @@ return {
         alias = {"harraser_0094"}
     },
     harraser_0095 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {47, 22, 49, 44},
         a_size = {2048, 2048},
@@ -33329,7 +33329,7 @@ return {
         alias = {"harraser_0096"}
     },
     harraser_0097 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {42, 14, 39, 16},
         a_size = {2048, 2048},
@@ -33337,7 +33337,7 @@ return {
         alias = {"harraser_0098"}
     },
     harraser_0099 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {41, 0, 46, 16},
         a_size = {2048, 2048},
@@ -33345,7 +33345,7 @@ return {
         alias = {"harraser_0100"}
     },
     harraser_0101 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {39, 10, 50, 16},
         a_size = {2048, 2048},
@@ -33353,7 +33353,7 @@ return {
         alias = {"harraser_0102"}
     },
     harraser_0103 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {37, 26, 48, 16},
         a_size = {2048, 2048},
@@ -33361,7 +33361,7 @@ return {
         alias = {"harraser_0104"}
     },
     harraser_0105 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {37, 37, 51, 16},
         a_size = {2048, 2048},
@@ -33369,7 +33369,7 @@ return {
         alias = {"harraser_0106"}
     },
     harraser_0107 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {37, 46, 49, 16},
         a_size = {2048, 2048},
@@ -33377,7 +33377,7 @@ return {
         alias = {"harraser_0108"}
     },
     harraser_0111 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {32, 33, 59, 16},
         a_size = {2048, 2048},
@@ -33385,7 +33385,7 @@ return {
         alias = {"harraser_0112"}
     },
     harraser_0113 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {25, 29, 63, 16},
         a_size = {2048, 2048},
@@ -33393,7 +33393,7 @@ return {
         alias = {"harraser_0114"}
     },
     harraser_0115 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {16, 36, 55, 16},
         a_size = {2048, 2048},
@@ -33401,7 +33401,7 @@ return {
         alias = {"harraser_0116"}
     },
     harraser_0117 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {13, 43, 53, 6},
         a_size = {2048, 2048},
@@ -33409,7 +33409,7 @@ return {
         alias = {"harraser_0118"}
     },
     harraser_0119 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {13, 58, 62, 7},
         a_size = {2048, 2048},
@@ -33417,7 +33417,7 @@ return {
         alias = {"harraser_0120"}
     },
     harraser_0121 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {13, 53, 61, 2},
         a_size = {2048, 2048},
@@ -33425,7 +33425,7 @@ return {
         alias = {"harraser_0122", "harraser_0123"}
     },
     harraser_0124 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 50, 48, 16},
         a_size = {2048, 2048},
@@ -33433,7 +33433,7 @@ return {
         alias = {"harraser_0125"}
     },
     harraser_0126 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {43, 43, 46, 16},
         a_size = {2048, 2048},
@@ -33441,7 +33441,7 @@ return {
         alias = {"harraser_0127"}
     },
     harraser_0128 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {43, 42, 44, 16},
         a_size = {2048, 2048},
@@ -33449,7 +33449,7 @@ return {
         alias = {"harraser_0129"}
     },
     harraser_0130 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 41, 44, 16},
         a_size = {2048, 2048},
@@ -33457,7 +33457,7 @@ return {
         alias = {}
     },
     harraser_0131 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 44, 44, 16},
         a_size = {2048, 2048},
@@ -33465,7 +33465,7 @@ return {
         alias = {"harraser_0132"}
     },
     harraser_0133 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {46, 47, 44, 16},
         a_size = {2048, 2048},
@@ -33473,7 +33473,7 @@ return {
         alias = {"harraser_0134"}
     },
     harraser_0135 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {48, 50, 44, 16},
         a_size = {2048, 2048},
@@ -33481,7 +33481,7 @@ return {
         alias = {"harraser_0136"}
     },
     harraser_0137 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {46, 42, 44, 16},
         a_size = {2048, 2048},
@@ -33489,7 +33489,7 @@ return {
         alias = {"harraser_0138"}
     },
     harraser_0139 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 41, 44, 16},
         a_size = {2048, 2048},
@@ -33497,7 +33497,7 @@ return {
         alias = {"harraser_0140"}
     },
     harraser_0141 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {43, 41, 44, 16},
         a_size = {2048, 2048},
@@ -33505,7 +33505,7 @@ return {
         alias = {}
     },
     harraser_0142 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 44, 45, 16},
         a_size = {2048, 2048},
@@ -33513,7 +33513,7 @@ return {
         alias = {"harraser_0143"}
     },
     harraser_0144 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {43, 47, 47, 16},
         a_size = {2048, 2048},
@@ -33521,7 +33521,7 @@ return {
         alias = {"harraser_0145"}
     },
     harraser_0146 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {48, 48, 43, 16},
         a_size = {2048, 2048},
@@ -33529,7 +33529,7 @@ return {
         alias = {"harraser_0147"}
     },
     harraser_0148 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {46, 43, 42, 16},
         a_size = {2048, 2048},
@@ -33537,7 +33537,7 @@ return {
         alias = {"harraser_0149"}
     },
     harraser_0150 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 40, 42, 16},
         a_size = {2048, 2048},
@@ -33545,7 +33545,7 @@ return {
         alias = {"harraser_0151"}
     },
     harraser_0152 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 39, 44, 16},
         a_size = {2048, 2048},
@@ -33553,7 +33553,7 @@ return {
         alias = {}
     },
     harraser_0153 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 41, 44, 16},
         a_size = {2048, 2048},
@@ -33561,7 +33561,7 @@ return {
         alias = {"harraser_0154"}
     },
     harraser_0155 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 46, 46, 16},
         a_size = {2048, 2048},
@@ -33569,7 +33569,7 @@ return {
         alias = {"harraser_0156"}
     },
     harraser_0157 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 46, 47, 16},
         a_size = {2048, 2048},
@@ -33577,7 +33577,7 @@ return {
         alias = {"harraser_0158"}
     },
     harraser_0159 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 42, 45, 16},
         a_size = {2048, 2048},
@@ -33585,7 +33585,7 @@ return {
         alias = {"harraser_0160"}
     },
     harraser_0161 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 40, 43, 16},
         a_size = {2048, 2048},
@@ -33593,7 +33593,7 @@ return {
         alias = {"harraser_0162"}
     },
     harraser_0163 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {44, 39, 43, 16},
         a_size = {2048, 2048},
@@ -33601,7 +33601,7 @@ return {
         alias = {}
     },
     harraser_0164 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {45, 41, 44, 16},
         a_size = {2048, 2048},
@@ -33609,7 +33609,7 @@ return {
         alias = {"harraser_0165"}
     },
     harraser_0166 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {135, 104},
         trim = {47, 45, 43, 16},
         a_size = {2048, 2048},
@@ -33617,7 +33617,7 @@ return {
         alias = {"harraser_0167"}
     },
     rabbit_0001 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {13, 4, 10, 5},
         a_size = {2048, 2048},
@@ -33625,7 +33625,7 @@ return {
         alias = {"rabbit_0002"}
     },
     rabbit_0003 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {16, 4, 9, 5},
         a_size = {2048, 2048},
@@ -33633,7 +33633,7 @@ return {
         alias = {}
     },
     rabbit_0004 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {16, 5, 9, 5},
         a_size = {2048, 2048},
@@ -33641,7 +33641,7 @@ return {
         alias = {}
     },
     rabbit_0005 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {17, 6, 9, 5},
         a_size = {2048, 2048},
@@ -33649,7 +33649,7 @@ return {
         alias = {}
     },
     rabbit_0006 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {17, 9, 9, 5},
         a_size = {2048, 2048},
@@ -33657,7 +33657,7 @@ return {
         alias = {}
     },
     rabbit_0007 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {16, 9, 11, 5},
         a_size = {2048, 2048},
@@ -33665,7 +33665,7 @@ return {
         alias = {}
     },
     rabbit_0008 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {13, 10, 12, 5},
         a_size = {2048, 2048},
@@ -33673,7 +33673,7 @@ return {
         alias = {}
     },
     rabbit_0009 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {13, 10, 13, 5},
         a_size = {2048, 2048},
@@ -33681,7 +33681,7 @@ return {
         alias = {}
     },
     rabbit_0010 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {13, 12, 13, 5},
         a_size = {2048, 2048},
@@ -33689,7 +33689,7 @@ return {
         alias = {"rabbit_0011"}
     },
     rabbit_0012 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 10, 14, 2},
         a_size = {2048, 2048},
@@ -33697,7 +33697,7 @@ return {
         alias = {"rabbit_0021", "rabbit_0022"}
     },
     rabbit_0013 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 9, 14, 3},
         a_size = {2048, 2048},
@@ -33705,7 +33705,7 @@ return {
         alias = {}
     },
     rabbit_0014 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 10, 14, 4},
         a_size = {2048, 2048},
@@ -33713,7 +33713,7 @@ return {
         alias = {}
     },
     rabbit_0015 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 11, 14, 4},
         a_size = {2048, 2048},
@@ -33721,7 +33721,7 @@ return {
         alias = {}
     },
     rabbit_0016 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 9, 14, 4},
         a_size = {2048, 2048},
@@ -33729,7 +33729,7 @@ return {
         alias = {}
     },
     rabbit_0017 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 11, 14, 4},
         a_size = {2048, 2048},
@@ -33737,7 +33737,7 @@ return {
         alias = {}
     },
     rabbit_0018 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 13, 14, 4},
         a_size = {2048, 2048},
@@ -33745,7 +33745,7 @@ return {
         alias = {}
     },
     rabbit_0019 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 13, 14, 4},
         a_size = {2048, 2048},
@@ -33753,7 +33753,7 @@ return {
         alias = {}
     },
     rabbit_0020 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 13, 15, 4},
         a_size = {2048, 2048},
@@ -33761,7 +33761,7 @@ return {
         alias = {}
     },
     rabbit_0023 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 10, 15, 1},
         a_size = {2048, 2048},
@@ -33769,7 +33769,7 @@ return {
         alias = {"rabbit_0024", "rabbit_0033"}
     },
     rabbit_0025 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 12, 15, 1},
         a_size = {2048, 2048},
@@ -33777,7 +33777,7 @@ return {
         alias = {}
     },
     rabbit_0026 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 12, 15, 0},
         a_size = {2048, 2048},
@@ -33785,7 +33785,7 @@ return {
         alias = {}
     },
     rabbit_0027 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 12, 15, 0},
         a_size = {2048, 2048},
@@ -33793,7 +33793,7 @@ return {
         alias = {}
     },
     rabbit_0028 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 13, 15, 0},
         a_size = {2048, 2048},
@@ -33801,7 +33801,7 @@ return {
         alias = {}
     },
     rabbit_0029 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 13, 15, 1},
         a_size = {2048, 2048},
@@ -33809,7 +33809,7 @@ return {
         alias = {}
     },
     rabbit_0030 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 13, 15, 2},
         a_size = {2048, 2048},
@@ -33817,7 +33817,7 @@ return {
         alias = {}
     },
     rabbit_0031 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 14, 15, 2},
         a_size = {2048, 2048},
@@ -33825,7 +33825,7 @@ return {
         alias = {}
     },
     rabbit_0032 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {15, 15, 15, 2},
         a_size = {2048, 2048},
@@ -33833,7 +33833,7 @@ return {
         alias = {}
     },
     rabbit_0034 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {12, 12, 11, 6},
         a_size = {2048, 2048},
@@ -33841,7 +33841,7 @@ return {
         alias = {}
     },
     rabbit_0035 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {11, 9, 6, 8},
         a_size = {2048, 2048},
@@ -33849,7 +33849,7 @@ return {
         alias = {"rabbit_0036"}
     },
     rabbit_0037 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {8, 8, 9, 8},
         a_size = {2048, 2048},
@@ -33857,7 +33857,7 @@ return {
         alias = {"rabbit_0038"}
     },
     rabbit_0039 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {6, 9, 9, 8},
         a_size = {2048, 2048},
@@ -33865,7 +33865,7 @@ return {
         alias = {"rabbit_0040"}
     },
     rabbit_0041 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {5, 12, 8, 6},
         a_size = {2048, 2048},
@@ -33873,7 +33873,7 @@ return {
         alias = {"rabbit_0042"}
     },
     rabbit_0043 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {48, 39},
         trim = {4, 16, 7, 3},
         a_size = {2048, 2048},
@@ -33881,7 +33881,7 @@ return {
         alias = {"rabbit_0044"}
     },
     scourger_0001 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {28, 36, 31, 13},
         a_size = {2048, 2048},
@@ -33889,7 +33889,7 @@ return {
         alias = {"scourger_0002"}
     },
     scourger_0003 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {27, 34, 30, 13},
         a_size = {2048, 2048},
@@ -33897,7 +33897,7 @@ return {
         alias = {"scourger_0004"}
     },
     scourger_0005 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {26, 34, 29, 13},
         a_size = {2048, 2048},
@@ -33905,7 +33905,7 @@ return {
         alias = {"scourger_0006"}
     },
     scourger_0007 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {25, 36, 29, 13},
         a_size = {2048, 2048},
@@ -33913,7 +33913,7 @@ return {
         alias = {"scourger_0008"}
     },
     scourger_0009 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {25, 38, 29, 13},
         a_size = {2048, 2048},
@@ -33921,7 +33921,7 @@ return {
         alias = {"scourger_0010"}
     },
     scourger_0011 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {26, 37, 31, 13},
         a_size = {2048, 2048},
@@ -33929,7 +33929,7 @@ return {
         alias = {"scourger_0012"}
     },
     scourger_0013 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {27, 37, 32, 13},
         a_size = {2048, 2048},
@@ -33937,7 +33937,7 @@ return {
         alias = {"scourger_0014"}
     },
     scourger_0015 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {27, 37, 32, 13},
         a_size = {2048, 2048},
@@ -33945,7 +33945,7 @@ return {
         alias = {"scourger_0016"}
     },
     scourger_0017 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {27, 38, 34, 13},
         a_size = {2048, 2048},
@@ -33953,7 +33953,7 @@ return {
         alias = {"scourger_0018"}
     },
     scourger_0019 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {27, 36, 32, 13},
         a_size = {2048, 2048},
@@ -33961,7 +33961,7 @@ return {
         alias = {"scourger_0020"}
     },
     scourger_0021 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {25, 36, 34, 13},
         a_size = {2048, 2048},
@@ -33969,7 +33969,7 @@ return {
         alias = {"scourger_0022"}
     },
     scourger_0023 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {24, 35, 33, 13},
         a_size = {2048, 2048},
@@ -33977,7 +33977,7 @@ return {
         alias = {"scourger_0024"}
     },
     scourger_0025 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {24, 34, 32, 13},
         a_size = {2048, 2048},
@@ -33985,7 +33985,7 @@ return {
         alias = {"scourger_0026"}
     },
     scourger_0027 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {24, 36, 31, 13},
         a_size = {2048, 2048},
@@ -33993,7 +33993,7 @@ return {
         alias = {"scourger_0028"}
     },
     scourger_0029 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {24, 37, 31, 13},
         a_size = {2048, 2048},
@@ -34001,7 +34001,7 @@ return {
         alias = {"scourger_0030"}
     },
     scourger_0031 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {25, 36, 32, 13},
         a_size = {2048, 2048},
@@ -34009,7 +34009,7 @@ return {
         alias = {"scourger_0032"}
     },
     scourger_0033 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {26, 36, 33, 13},
         a_size = {2048, 2048},
@@ -34017,7 +34017,7 @@ return {
         alias = {"scourger_0034"}
     },
     scourger_0035 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {27, 37, 33, 13},
         a_size = {2048, 2048},
@@ -34025,7 +34025,7 @@ return {
         alias = {"scourger_0036"}
     },
     scourger_0037 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {28, 37, 34, 13},
         a_size = {2048, 2048},
@@ -34033,7 +34033,7 @@ return {
         alias = {"scourger_0038"}
     },
     scourger_0039 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {26, 38, 34, 13},
         a_size = {2048, 2048},
@@ -34041,7 +34041,7 @@ return {
         alias = {"scourger_0040"}
     },
     scourger_0041 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {35, 36, 24, 11},
         a_size = {2048, 2048},
@@ -34049,7 +34049,7 @@ return {
         alias = {"scourger_0042"}
     },
     scourger_0043 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {34, 35, 23, 10},
         a_size = {2048, 2048},
@@ -34057,7 +34057,7 @@ return {
         alias = {"scourger_0044"}
     },
     scourger_0045 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {33, 34, 22, 11},
         a_size = {2048, 2048},
@@ -34065,7 +34065,7 @@ return {
         alias = {"scourger_0046"}
     },
     scourger_0047 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {32, 36, 23, 11},
         a_size = {2048, 2048},
@@ -34073,7 +34073,7 @@ return {
         alias = {"scourger_0048"}
     },
     scourger_0049 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {32, 37, 23, 11},
         a_size = {2048, 2048},
@@ -34081,7 +34081,7 @@ return {
         alias = {"scourger_0050"}
     },
     scourger_0051 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {34, 36, 24, 9},
         a_size = {2048, 2048},
@@ -34089,7 +34089,7 @@ return {
         alias = {"scourger_0052"}
     },
     scourger_0053 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {34, 36, 25, 10},
         a_size = {2048, 2048},
@@ -34097,7 +34097,7 @@ return {
         alias = {"scourger_0054"}
     },
     scourger_0055 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {34, 37, 26, 11},
         a_size = {2048, 2048},
@@ -34105,7 +34105,7 @@ return {
         alias = {"scourger_0056"}
     },
     scourger_0057 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {35, 37, 27, 11},
         a_size = {2048, 2048},
@@ -34113,7 +34113,7 @@ return {
         alias = {"scourger_0058"}
     },
     scourger_0059 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {35, 38, 25, 11},
         a_size = {2048, 2048},
@@ -34121,7 +34121,7 @@ return {
         alias = {"scourger_0060"}
     },
     scourger_0061 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {24, 36, 30, 13},
         a_size = {2048, 2048},
@@ -34129,7 +34129,7 @@ return {
         alias = {"scourger_0062", "scourger_0104", "scourger_0127"}
     },
     scourger_0063 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {16, 34, 36, 13},
         a_size = {2048, 2048},
@@ -34137,7 +34137,7 @@ return {
         alias = {"scourger_0064"}
     },
     scourger_0065 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {13, 25, 39, 13},
         a_size = {2048, 2048},
@@ -34145,7 +34145,7 @@ return {
         alias = {"scourger_0066"}
     },
     scourger_0067 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {13, 30, 37, 4},
         a_size = {2048, 2048},
@@ -34153,7 +34153,7 @@ return {
         alias = {"scourger_0068"}
     },
     scourger_0069 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {13, 60, 31, 9},
         a_size = {2048, 2048},
@@ -34161,7 +34161,7 @@ return {
         alias = {"scourger_0070"}
     },
     scourger_0071 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {13, 64, 29, 10},
         a_size = {2048, 2048},
@@ -34169,7 +34169,7 @@ return {
         alias = {"scourger_0072"}
     },
     scourger_0073 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {13, 66, 29, 13},
         a_size = {2048, 2048},
@@ -34177,7 +34177,7 @@ return {
         alias = {"scourger_0074"}
     },
     scourger_0075 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {24, 36, 30, 13},
         a_size = {2048, 2048},
@@ -34185,7 +34185,7 @@ return {
         alias = {"scourger_0103"}
     },
     scourger_0076 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {25, 39, 31, 13},
         a_size = {2048, 2048},
@@ -34193,7 +34193,7 @@ return {
         alias = {"scourger_0077"}
     },
     scourger_0078 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {20, 44, 30, 13},
         a_size = {2048, 2048},
@@ -34201,7 +34201,7 @@ return {
         alias = {"scourger_0079"}
     },
     scourger_0080 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {21, 48, 32, 13},
         a_size = {2048, 2048},
@@ -34209,7 +34209,7 @@ return {
         alias = {"scourger_0081"}
     },
     scourger_0082 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {28, 38, 15, 13},
         a_size = {2048, 2048},
@@ -34217,7 +34217,7 @@ return {
         alias = {"scourger_0083"}
     },
     scourger_0084 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {28, 31, 25, 13},
         a_size = {2048, 2048},
@@ -34225,7 +34225,7 @@ return {
         alias = {"scourger_0085"}
     },
     scourger_0086 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {18, 6, 22, 13},
         a_size = {2048, 2048},
@@ -34233,7 +34233,7 @@ return {
         alias = {"scourger_0087"}
     },
     scourger_0088 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {3, 10, 23, 13},
         a_size = {2048, 2048},
@@ -34241,7 +34241,7 @@ return {
         alias = {"scourger_0089", "scourger_0090"}
     },
     scourger_0091 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {20, 1, 23, 0},
         a_size = {2048, 2048},
@@ -34249,7 +34249,7 @@ return {
         alias = {"scourger_0092", "scourger_0093"}
     },
     scourger_0094 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {25, 7, 2, 13},
         a_size = {2048, 2048},
@@ -34257,7 +34257,7 @@ return {
         alias = {"scourger_0095", "scourger_0096"}
     },
     scourger_0097 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {28, 1, 19, 13},
         a_size = {2048, 2048},
@@ -34265,7 +34265,7 @@ return {
         alias = {"scourger_0098"}
     },
     scourger_0099 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {28, 2, 24, 13},
         a_size = {2048, 2048},
@@ -34273,7 +34273,7 @@ return {
         alias = {"scourger_0100"}
     },
     scourger_0101 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {28, 7, 25, 13},
         a_size = {2048, 2048},
@@ -34281,7 +34281,7 @@ return {
         alias = {"scourger_0102"}
     },
     scourger_0105 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {27, 34, 31, 13},
         a_size = {2048, 2048},
@@ -34289,7 +34289,7 @@ return {
         alias = {"scourger_0106"}
     },
     scourger_0107 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {25, 33, 28, 13},
         a_size = {2048, 2048},
@@ -34297,7 +34297,7 @@ return {
         alias = {"scourger_0108"}
     },
     scourger_0109 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {22, 31, 27, 13},
         a_size = {2048, 2048},
@@ -34305,7 +34305,7 @@ return {
         alias = {"scourger_0110"}
     },
     scourger_0111 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {5, 28, 29, 13},
         a_size = {2048, 2048},
@@ -34313,7 +34313,7 @@ return {
         alias = {"scourger_0112"}
     },
     scourger_0113 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {1, 30, 30, 13},
         a_size = {2048, 2048},
@@ -34321,7 +34321,7 @@ return {
         alias = {"scourger_0114"}
     },
     scourger_0115 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {2, 29, 30, 13},
         a_size = {2048, 2048},
@@ -34329,7 +34329,7 @@ return {
         alias = {"scourger_0116"}
     },
     scourger_0117 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {13, 41, 29, 13},
         a_size = {2048, 2048},
@@ -34337,7 +34337,7 @@ return {
         alias = {"scourger_0118"}
     },
     scourger_0119 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {28, 45, 21, 13},
         a_size = {2048, 2048},
@@ -34345,7 +34345,7 @@ return {
         alias = {"scourger_0120"}
     },
     scourger_0121 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {27, 44, 14, 11},
         a_size = {2048, 2048},
@@ -34353,7 +34353,7 @@ return {
         alias = {"scourger_0122"}
     },
     scourger_0123 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {27, 44, 14, 9},
         a_size = {2048, 2048},
@@ -34361,7 +34361,7 @@ return {
         alias = {"scourger_0124"}
     },
     scourger_0125 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {98, 101},
         trim = {26, 34, 31, 13},
         a_size = {2048, 2048},
@@ -34369,7 +34369,7 @@ return {
         alias = {"scourger_0126"}
     },
     scourger_buff_big_0001 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {84, 76},
         trim = {8, 7, 5, 31},
         a_size = {2048, 2048},
@@ -34377,7 +34377,7 @@ return {
         alias = {"scourger_buff_big_0002", "scourger_buff_big_0003"}
     },
     scourger_buff_big_0004 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {84, 76},
         trim = {6, 8, 3, 31},
         a_size = {2048, 2048},
@@ -34385,7 +34385,7 @@ return {
         alias = {"scourger_buff_big_0005", "scourger_buff_big_0006"}
     },
     scourger_buff_big_0007 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {84, 76},
         trim = {8, 6, 5, 31},
         a_size = {2048, 2048},
@@ -34393,7 +34393,7 @@ return {
         alias = {"scourger_buff_big_0008", "scourger_buff_big_0009"}
     },
     scourger_buff_big_0010 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {84, 76},
         trim = {6, 5, 2, 31},
         a_size = {2048, 2048},
@@ -34401,7 +34401,7 @@ return {
         alias = {"scourger_buff_big_0011", "scourger_buff_big_0012"}
     },
     scourger_buff_glow = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {62, 62},
         trim = {1, 0, 1, 0},
         a_size = {2048, 2048},
@@ -34409,7 +34409,7 @@ return {
         alias = {}
     },
     scourger_buff_small_0001 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {56, 51},
         trim = {5, 4, 2, 21},
         a_size = {2048, 2048},
@@ -34417,7 +34417,7 @@ return {
         alias = {"scourger_buff_small_0002", "scourger_buff_small_0003"}
     },
     scourger_buff_small_0004 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {56, 51},
         trim = {4, 5, 1, 21},
         a_size = {2048, 2048},
@@ -34425,7 +34425,7 @@ return {
         alias = {"scourger_buff_small_0005", "scourger_buff_small_0006"}
     },
     scourger_buff_small_0007 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {56, 51},
         trim = {5, 4, 2, 20},
         a_size = {2048, 2048},
@@ -34433,7 +34433,7 @@ return {
         alias = {"scourger_buff_small_0008", "scourger_buff_small_0009"}
     },
     scourger_buff_small_0010 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {56, 51},
         trim = {4, 3, 1, 21},
         a_size = {2048, 2048},
@@ -34441,7 +34441,7 @@ return {
         alias = {"scourger_buff_small_0011", "scourger_buff_small_0012"}
     },
     scourger_shadow_0001 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {12, 0, 4, 15},
         a_size = {2048, 2048},
@@ -34449,7 +34449,7 @@ return {
         alias = {"scourger_shadow_0002"}
     },
     scourger_shadow_0003 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {11, 1, 4, 16},
         a_size = {2048, 2048},
@@ -34457,7 +34457,7 @@ return {
         alias = {"scourger_shadow_0004"}
     },
     scourger_shadow_0005 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {11, 3, 4, 17},
         a_size = {2048, 2048},
@@ -34465,7 +34465,7 @@ return {
         alias = {"scourger_shadow_0006"}
     },
     scourger_shadow_0007 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {11, 4, 4, 18},
         a_size = {2048, 2048},
@@ -34473,7 +34473,7 @@ return {
         alias = {"scourger_shadow_0008"}
     },
     scourger_shadow_0009 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {11, 4, 4, 19},
         a_size = {2048, 2048},
@@ -34481,7 +34481,7 @@ return {
         alias = {"scourger_shadow_0010"}
     },
     scourger_shadow_0011 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {10, 4, 4, 19},
         a_size = {2048, 2048},
@@ -34489,7 +34489,7 @@ return {
         alias = {"scourger_shadow_0012"}
     },
     scourger_shadow_0013 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {9, 4, 4, 19},
         a_size = {2048, 2048},
@@ -34497,7 +34497,7 @@ return {
         alias = {"scourger_shadow_0014"}
     },
     scourger_shadow_0015 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {10, 1, 4, 17},
         a_size = {2048, 2048},
@@ -34505,7 +34505,7 @@ return {
         alias = {"scourger_shadow_0016"}
     },
     scourger_shadow_0017 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {9, 1, 4, 17},
         a_size = {2048, 2048},
@@ -34513,7 +34513,7 @@ return {
         alias = {"scourger_shadow_0018"}
     },
     scourger_shadow_0019 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {14, 0, 4, 15},
         a_size = {2048, 2048},
@@ -34521,7 +34521,7 @@ return {
         alias = {"scourger_shadow_0020"}
     },
     scourger_shadow_0021 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {18, 2, 15, 16},
         a_size = {2048, 2048},
@@ -34529,7 +34529,7 @@ return {
         alias = {"scourger_shadow_0022"}
     },
     scourger_shadow_0023 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {18, 3, 15, 15},
         a_size = {2048, 2048},
@@ -34537,7 +34537,7 @@ return {
         alias = {"scourger_shadow_0024"}
     },
     scourger_shadow_0025 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {18, 5, 15, 16},
         a_size = {2048, 2048},
@@ -34545,7 +34545,7 @@ return {
         alias = {"scourger_shadow_0026"}
     },
     scourger_shadow_0027 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {18, 5, 15, 17},
         a_size = {2048, 2048},
@@ -34553,7 +34553,7 @@ return {
         alias = {"scourger_shadow_0028"}
     },
     scourger_shadow_0029 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {17, 5, 14, 19},
         a_size = {2048, 2048},
@@ -34561,7 +34561,7 @@ return {
         alias = {"scourger_shadow_0030"}
     },
     scourger_shadow_0031 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {17, 2, 14, 18},
         a_size = {2048, 2048},
@@ -34569,7 +34569,7 @@ return {
         alias = {"scourger_shadow_0032"}
     },
     scourger_shadow_0033 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {16, 3, 13, 18},
         a_size = {2048, 2048},
@@ -34577,7 +34577,7 @@ return {
         alias = {"scourger_shadow_0034"}
     },
     scourger_shadow_0035 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {17, 2, 14, 18},
         a_size = {2048, 2048},
@@ -34585,7 +34585,7 @@ return {
         alias = {"scourger_shadow_0036"}
     },
     scourger_shadow_0037 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {17, 2, 14, 18},
         a_size = {2048, 2048},
@@ -34593,7 +34593,7 @@ return {
         alias = {"scourger_shadow_0038"}
     },
     scourger_shadow_0039 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {18, 1, 15, 17},
         a_size = {2048, 2048},
@@ -34601,7 +34601,7 @@ return {
         alias = {"scourger_shadow_0040"}
     },
     scourger_shadow_0041 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {16, 2, 17, 17},
         a_size = {2048, 2048},
@@ -34609,7 +34609,7 @@ return {
         alias = {"scourger_shadow_0042"}
     },
     scourger_shadow_0043 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {16, 3, 17, 17},
         a_size = {2048, 2048},
@@ -34617,7 +34617,7 @@ return {
         alias = {"scourger_shadow_0044"}
     },
     scourger_shadow_0045 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {16, 5, 17, 17},
         a_size = {2048, 2048},
@@ -34625,7 +34625,7 @@ return {
         alias = {"scourger_shadow_0046"}
     },
     scourger_shadow_0047 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {16, 5, 17, 18},
         a_size = {2048, 2048},
@@ -34633,7 +34633,7 @@ return {
         alias = {"scourger_shadow_0048"}
     },
     scourger_shadow_0049 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {15, 5, 17, 18},
         a_size = {2048, 2048},
@@ -34641,7 +34641,7 @@ return {
         alias = {"scourger_shadow_0050"}
     },
     scourger_shadow_0051 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {15, 2, 16, 17},
         a_size = {2048, 2048},
@@ -34649,7 +34649,7 @@ return {
         alias = {"scourger_shadow_0052"}
     },
     scourger_shadow_0053 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {14, 3, 16, 16},
         a_size = {2048, 2048},
@@ -34657,7 +34657,7 @@ return {
         alias = {"scourger_shadow_0054"}
     },
     scourger_shadow_0055 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {14, 2, 16, 16},
         a_size = {2048, 2048},
@@ -34665,7 +34665,7 @@ return {
         alias = {"scourger_shadow_0056"}
     },
     scourger_shadow_0057 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {15, 2, 16, 16},
         a_size = {2048, 2048},
@@ -34673,7 +34673,7 @@ return {
         alias = {"scourger_shadow_0058"}
     },
     scourger_shadow_0059 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {16, 1, 17, 19},
         a_size = {2048, 2048},
@@ -34681,7 +34681,7 @@ return {
         alias = {"scourger_shadow_0060"}
     },
     scourger_shadow_0061 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {15, 6, 10, 18},
         a_size = {2048, 2048},
@@ -34689,7 +34689,7 @@ return {
         alias = {"scourger_shadow_0062"}
     },
     scourger_shadow_0063 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {13, 6, 10, 16},
         a_size = {2048, 2048},
@@ -34697,7 +34697,7 @@ return {
         alias = {"scourger_shadow_0064"}
     },
     scourger_shadow_0065 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {13, 3, 10, 18},
         a_size = {2048, 2048},
@@ -34705,7 +34705,7 @@ return {
         alias = {"scourger_shadow_0066"}
     },
     scourger_shadow_0067 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {12, 3, 13, 16},
         a_size = {2048, 2048},
@@ -34713,7 +34713,7 @@ return {
         alias = {}
     },
     scourger_shadow_0068 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {12, 3, 13, 16},
         a_size = {2048, 2048},
@@ -34721,7 +34721,7 @@ return {
         alias = {}
     },
     scourger_shadow_0069 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {13, 1, 12, 18},
         a_size = {2048, 2048},
@@ -34729,7 +34729,7 @@ return {
         alias = {"scourger_shadow_0070"}
     },
     scourger_shadow_0071 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {20, 4, 12, 23},
         a_size = {2048, 2048},
@@ -34737,7 +34737,7 @@ return {
         alias = {"scourger_shadow_0072"}
     },
     scourger_shadow_0073 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {73, 65},
         trim = {22, 7, 16, 33},
         a_size = {2048, 2048},
@@ -34745,7 +34745,7 @@ return {
         alias = {"scourger_shadow_0074"}
     },
     scourger_shadow_particle_0001 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {24, 23},
         trim = {0, 0, 0, 0},
         a_size = {2048, 2048},
@@ -34753,7 +34753,7 @@ return {
         alias = {"scourger_shadow_particle_0002"}
     },
     scourger_shadow_particle_0003 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {24, 23},
         trim = {0, 0, 0, 0},
         a_size = {2048, 2048},
@@ -34761,7 +34761,7 @@ return {
         alias = {"scourger_shadow_particle_0004"}
     },
     scourger_shadow_particle_0005 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {24, 23},
         trim = {1, 3, 1, 0},
         a_size = {2048, 2048},
@@ -34769,7 +34769,7 @@ return {
         alias = {"scourger_shadow_particle_0006"}
     },
     scourger_shadow_particle_0007 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {24, 23},
         trim = {3, 4, 2, 3},
         a_size = {2048, 2048},
@@ -34777,7 +34777,7 @@ return {
         alias = {"scourger_shadow_particle_0008"}
     },
     scourger_shadow_particle_0009 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {24, 23},
         trim = {9, 6, 5, 5},
         a_size = {2048, 2048},
@@ -34785,7 +34785,7 @@ return {
         alias = {"scourger_shadow_particle_0010"}
     },
     scourger_special_0001 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {158, 124},
         trim = {16, 28, 42, 0},
         a_size = {2048, 2048},
@@ -34793,7 +34793,7 @@ return {
         alias = {"scourger_special_0002"}
     },
     scourger_special_0003 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {158, 124},
         trim = {14, 15, 28, 0},
         a_size = {2048, 2048},
@@ -34801,7 +34801,7 @@ return {
         alias = {"scourger_special_0004"}
     },
     scourger_special_0005 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {158, 124},
         trim = {12, 3, 14, 0},
         a_size = {2048, 2048},
@@ -34809,7 +34809,7 @@ return {
         alias = {"scourger_special_0006"}
     },
     scourger_special_0007 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {158, 124},
         trim = {6, 0, 7, 0},
         a_size = {2048, 2048},
@@ -34817,7 +34817,7 @@ return {
         alias = {"scourger_special_0008"}
     },
     scourger_special_0009 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {158, 124},
         trim = {4, 4, 4, 0},
         a_size = {2048, 2048},
@@ -34825,7 +34825,7 @@ return {
         alias = {"scourger_special_0010"}
     },
     scourger_special_0011 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {158, 124},
         trim = {2, 9, 3, 0},
         a_size = {2048, 2048},
@@ -34833,7 +34833,7 @@ return {
         alias = {"scourger_special_0012"}
     },
     scourger_special_0013 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {158, 124},
         trim = {1, 13, 1, 0},
         a_size = {2048, 2048},
@@ -34841,7 +34841,7 @@ return {
         alias = {"scourger_special_0014"}
     },
     scourger_special_0015 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {158, 124},
         trim = {0, 20, 0, 0},
         a_size = {2048, 2048},
@@ -34849,7 +34849,7 @@ return {
         alias = {"scourger_special_0016"}
     },
     screecher_bat_0001 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {40, 41, 53, 36},
         a_size = {2048, 2048},
@@ -34857,7 +34857,7 @@ return {
         alias = {"screecher_bat_0002"}
     },
     screecher_bat_0003 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {38, 35, 52, 59},
         a_size = {2048, 2048},
@@ -34865,7 +34865,7 @@ return {
         alias = {"screecher_bat_0004"}
     },
     screecher_bat_0005 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {28, 25, 52, 63},
         a_size = {2048, 2048},
@@ -34873,7 +34873,7 @@ return {
         alias = {"screecher_bat_0006"}
     },
     screecher_bat_0007 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {31, 19, 51, 63},
         a_size = {2048, 2048},
@@ -34881,7 +34881,7 @@ return {
         alias = {"screecher_bat_0008"}
     },
     screecher_bat_0009 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {36, 8, 51, 60},
         a_size = {2048, 2048},
@@ -34889,7 +34889,7 @@ return {
         alias = {"screecher_bat_0010"}
     },
     screecher_bat_0011 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {35, 5, 52, 56},
         a_size = {2048, 2048},
@@ -34897,7 +34897,7 @@ return {
         alias = {"screecher_bat_0012"}
     },
     screecher_bat_0013 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {31, 10, 52, 54},
         a_size = {2048, 2048},
@@ -34905,7 +34905,7 @@ return {
         alias = {"screecher_bat_0014"}
     },
     screecher_bat_0015 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {32, 42, 43, 35},
         a_size = {2048, 2048},
@@ -34913,7 +34913,7 @@ return {
         alias = {"screecher_bat_0016"}
     },
     screecher_bat_0017 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {30, 30, 42, 67},
         a_size = {2048, 2048},
@@ -34921,7 +34921,7 @@ return {
         alias = {"screecher_bat_0018"}
     },
     screecher_bat_0019 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {23, 25, 35, 65},
         a_size = {2048, 2048},
@@ -34929,7 +34929,7 @@ return {
         alias = {"screecher_bat_0020"}
     },
     screecher_bat_0021 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {23, 23, 35, 61},
         a_size = {2048, 2048},
@@ -34937,7 +34937,7 @@ return {
         alias = {"screecher_bat_0022"}
     },
     screecher_bat_0023 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {27, 8, 38, 56},
         a_size = {2048, 2048},
@@ -34945,7 +34945,7 @@ return {
         alias = {"screecher_bat_0024"}
     },
     screecher_bat_0025 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {26, 7, 37, 53},
         a_size = {2048, 2048},
@@ -34953,7 +34953,7 @@ return {
         alias = {"screecher_bat_0026"}
     },
     screecher_bat_0027 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {25, 11, 38, 55},
         a_size = {2048, 2048},
@@ -34961,7 +34961,7 @@ return {
         alias = {"screecher_bat_0028"}
     },
     screecher_bat_0029 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {30, 37, 42, 30},
         a_size = {2048, 2048},
@@ -34969,7 +34969,7 @@ return {
         alias = {"screecher_bat_0030"}
     },
     screecher_bat_0031 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {26, 24, 37, 63},
         a_size = {2048, 2048},
@@ -34977,7 +34977,7 @@ return {
         alias = {"screecher_bat_0032"}
     },
     screecher_bat_0033 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {16, 18, 29, 59},
         a_size = {2048, 2048},
@@ -34985,7 +34985,7 @@ return {
         alias = {"screecher_bat_0034"}
     },
     screecher_bat_0035 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {19, 17, 30, 61},
         a_size = {2048, 2048},
@@ -34993,7 +34993,7 @@ return {
         alias = {"screecher_bat_0036"}
     },
     screecher_bat_0037 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {25, 8, 36, 58},
         a_size = {2048, 2048},
@@ -35001,7 +35001,7 @@ return {
         alias = {"screecher_bat_0038"}
     },
     screecher_bat_0039 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {25, 6, 36, 55},
         a_size = {2048, 2048},
@@ -35009,7 +35009,7 @@ return {
         alias = {"screecher_bat_0040"}
     },
     screecher_bat_0041 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {25, 12, 38, 53},
         a_size = {2048, 2048},
@@ -35017,7 +35017,7 @@ return {
         alias = {"screecher_bat_0042"}
     },
     screecher_bat_0043 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {34, 40, 52, 30},
         a_size = {2048, 2048},
@@ -35025,7 +35025,7 @@ return {
         alias = {"screecher_bat_0044"}
     },
     screecher_bat_0045 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {24, 15, 54, 60},
         a_size = {2048, 2048},
@@ -35033,7 +35033,7 @@ return {
         alias = {"screecher_bat_0046"}
     },
     screecher_bat_0047 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {9, 1, 58, 66},
         a_size = {2048, 2048},
@@ -35041,7 +35041,7 @@ return {
         alias = {"screecher_bat_0048"}
     },
     screecher_bat_0049 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {9, 0, 58, 73},
         a_size = {2048, 2048},
@@ -35049,7 +35049,7 @@ return {
         alias = {"screecher_bat_0050"}
     },
     screecher_bat_0051 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {27, 19, 51, 68},
         a_size = {2048, 2048},
@@ -35057,7 +35057,7 @@ return {
         alias = {"screecher_bat_0052"}
     },
     screecher_bat_0053 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {18, 2, 33, 24},
         a_size = {2048, 2048},
@@ -35065,7 +35065,7 @@ return {
         alias = {"screecher_bat_0054"}
     },
     screecher_bat_0055 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {19, 0, 30, 24},
         a_size = {2048, 2048},
@@ -35073,7 +35073,7 @@ return {
         alias = {"screecher_bat_0056"}
     },
     screecher_bat_0057 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {19, 2, 28, 18},
         a_size = {2048, 2048},
@@ -35081,7 +35081,7 @@ return {
         alias = {"screecher_bat_0058"}
     },
     screecher_bat_0059 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {19, 0, 22, 15},
         a_size = {2048, 2048},
@@ -35089,7 +35089,7 @@ return {
         alias = {"screecher_bat_0060"}
     },
     screecher_bat_0061 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {19, 2, 25, 15},
         a_size = {2048, 2048},
@@ -35097,7 +35097,7 @@ return {
         alias = {"screecher_bat_0062"}
     },
     screecher_bat_0063 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {19, 0, 33, 24},
         a_size = {2048, 2048},
@@ -35105,7 +35105,7 @@ return {
         alias = {"screecher_bat_0064"}
     },
     screecher_bat_0065 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {19, 2, 30, 24},
         a_size = {2048, 2048},
@@ -35113,7 +35113,7 @@ return {
         alias = {"screecher_bat_0066"}
     },
     screecher_bat_0067 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {19, 0, 28, 18},
         a_size = {2048, 2048},
@@ -35121,7 +35121,7 @@ return {
         alias = {"screecher_bat_0068"}
     },
     screecher_bat_0069 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {19, 0, 25, 15},
         a_size = {2048, 2048},
@@ -35129,7 +35129,7 @@ return {
         alias = {"screecher_bat_0070"}
     },
     screecher_bat_0071 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {16, 17, 51, 68},
         a_size = {2048, 2048},
@@ -35137,7 +35137,7 @@ return {
         alias = {}
     },
     screecher_bat_0072 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {35, 12, 30, 61},
         a_size = {2048, 2048},
@@ -35145,7 +35145,7 @@ return {
         alias = {"screecher_bat_0073"}
     },
     screecher_bat_0074 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {34, 15, 39, 68},
         a_size = {2048, 2048},
@@ -35153,7 +35153,7 @@ return {
         alias = {"screecher_bat_0075"}
     },
     screecher_bat_0076 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {34, 12, 31, 64},
         a_size = {2048, 2048},
@@ -35161,7 +35161,7 @@ return {
         alias = {"screecher_bat_0077"}
     },
     screecher_bat_0078 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {35, 15, 27, 60},
         a_size = {2048, 2048},
@@ -35169,7 +35169,7 @@ return {
         alias = {"screecher_bat_0079"}
     },
     screecher_bat_0080 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {30, 7, 23, 57},
         a_size = {2048, 2048},
@@ -35177,7 +35177,7 @@ return {
         alias = {"screecher_bat_0081"}
     },
     screecher_bat_0082 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {28, 6, 21, 58},
         a_size = {2048, 2048},
@@ -35185,7 +35185,7 @@ return {
         alias = {"screecher_bat_0083"}
     },
     screecher_bat_0084 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {28, 18, 32, 64},
         a_size = {2048, 2048},
@@ -35193,7 +35193,7 @@ return {
         alias = {"screecher_bat_0085"}
     },
     screecher_bat_0086 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {0, 0, 146, 139},
         a_size = {2048, 2048},
@@ -35201,7 +35201,7 @@ return {
         alias = {}
     },
     screecher_bat_0087 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {148, 141},
         trim = {54, 130, 61, 2},
         a_size = {2048, 2048},
@@ -35209,7 +35209,7 @@ return {
         alias = {}
     },
     sword_spider_0001 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {12, 18, 11, 4},
         a_size = {2048, 2048},
@@ -35217,7 +35217,7 @@ return {
         alias = {}
     },
     sword_spider_0002 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {12, 16, 11, 4},
         a_size = {2048, 2048},
@@ -35225,7 +35225,7 @@ return {
         alias = {}
     },
     sword_spider_0003 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {12, 13, 11, 4},
         a_size = {2048, 2048},
@@ -35233,7 +35233,7 @@ return {
         alias = {}
     },
     sword_spider_0004 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {12, 15, 11, 4},
         a_size = {2048, 2048},
@@ -35241,7 +35241,7 @@ return {
         alias = {}
     },
     sword_spider_0005 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {12, 18, 11, 4},
         a_size = {2048, 2048},
@@ -35249,7 +35249,7 @@ return {
         alias = {}
     },
     sword_spider_0006 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {12, 16, 11, 4},
         a_size = {2048, 2048},
@@ -35257,7 +35257,7 @@ return {
         alias = {}
     },
     sword_spider_0007 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {12, 14, 11, 4},
         a_size = {2048, 2048},
@@ -35265,7 +35265,7 @@ return {
         alias = {}
     },
     sword_spider_0008 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {12, 15, 11, 4},
         a_size = {2048, 2048},
@@ -35273,7 +35273,7 @@ return {
         alias = {}
     },
     sword_spider_0009 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {12, 17, 11, 4},
         a_size = {2048, 2048},
@@ -35281,7 +35281,7 @@ return {
         alias = {}
     },
     sword_spider_0010 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {14, 15, 14, 4},
         a_size = {2048, 2048},
@@ -35289,7 +35289,7 @@ return {
         alias = {"sword_spider_0018"}
     },
     sword_spider_0011 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {14, 12, 14, 4},
         a_size = {2048, 2048},
@@ -35297,7 +35297,7 @@ return {
         alias = {}
     },
     sword_spider_0012 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {13, 10, 14, 4},
         a_size = {2048, 2048},
@@ -35305,7 +35305,7 @@ return {
         alias = {}
     },
     sword_spider_0013 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {14, 12, 14, 4},
         a_size = {2048, 2048},
@@ -35313,7 +35313,7 @@ return {
         alias = {}
     },
     sword_spider_0014 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {14, 14, 14, 4},
         a_size = {2048, 2048},
@@ -35321,7 +35321,7 @@ return {
         alias = {}
     },
     sword_spider_0015 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {14, 12, 14, 4},
         a_size = {2048, 2048},
@@ -35329,7 +35329,7 @@ return {
         alias = {}
     },
     sword_spider_0016 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {14, 10, 12, 4},
         a_size = {2048, 2048},
@@ -35337,7 +35337,7 @@ return {
         alias = {}
     },
     sword_spider_0017 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {14, 13, 13, 4},
         a_size = {2048, 2048},
@@ -35345,7 +35345,7 @@ return {
         alias = {}
     },
     sword_spider_0019 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {14, 17, 13, 5},
         a_size = {2048, 2048},
@@ -35353,7 +35353,7 @@ return {
         alias = {}
     },
     sword_spider_0020 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {13, 17, 13, 5},
         a_size = {2048, 2048},
@@ -35361,7 +35361,7 @@ return {
         alias = {}
     },
     sword_spider_0021 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {13, 15, 12, 5},
         a_size = {2048, 2048},
@@ -35369,7 +35369,7 @@ return {
         alias = {}
     },
     sword_spider_0022 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {14, 18, 13, 5},
         a_size = {2048, 2048},
@@ -35377,7 +35377,7 @@ return {
         alias = {}
     },
     sword_spider_0023 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {14, 20, 13, 3},
         a_size = {2048, 2048},
@@ -35385,7 +35385,7 @@ return {
         alias = {}
     },
     sword_spider_0024 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {14, 18, 13, 5},
         a_size = {2048, 2048},
@@ -35393,7 +35393,7 @@ return {
         alias = {}
     },
     sword_spider_0025 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {13, 15, 13, 5},
         a_size = {2048, 2048},
@@ -35401,7 +35401,7 @@ return {
         alias = {}
     },
     sword_spider_0026 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {14, 17, 13, 5},
         a_size = {2048, 2048},
@@ -35409,7 +35409,7 @@ return {
         alias = {}
     },
     sword_spider_0027 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {14, 17, 13, 5},
         a_size = {2048, 2048},
@@ -35417,7 +35417,7 @@ return {
         alias = {}
     },
     sword_spider_0028 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {13, 17, 12, 4},
         a_size = {2048, 2048},
@@ -35425,7 +35425,7 @@ return {
         alias = {"sword_spider_0045"}
     },
     sword_spider_0029 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {10, 22, 12, 4},
         a_size = {2048, 2048},
@@ -35433,7 +35433,7 @@ return {
         alias = {"sword_spider_0030"}
     },
     sword_spider_0031 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {9, 18, 12, 4},
         a_size = {2048, 2048},
@@ -35441,7 +35441,7 @@ return {
         alias = {"sword_spider_0032"}
     },
     sword_spider_0033 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {7, 16, 12, 4},
         a_size = {2048, 2048},
@@ -35449,7 +35449,7 @@ return {
         alias = {"sword_spider_0034"}
     },
     sword_spider_0035 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {4, 9, 12, 4},
         a_size = {2048, 2048},
@@ -35457,7 +35457,7 @@ return {
         alias = {"sword_spider_0036"}
     },
     sword_spider_0037 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {7, 2, 12, 4},
         a_size = {2048, 2048},
@@ -35465,7 +35465,7 @@ return {
         alias = {"sword_spider_0038"}
     },
     sword_spider_0039 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {13, 1, 8, 4},
         a_size = {2048, 2048},
@@ -35473,7 +35473,7 @@ return {
         alias = {"sword_spider_0040"}
     },
     sword_spider_0041 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {13, 12, 8, 4},
         a_size = {2048, 2048},
@@ -35481,7 +35481,7 @@ return {
         alias = {"sword_spider_0042"}
     },
     sword_spider_0043 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {13, 17, 11, 4},
         a_size = {2048, 2048},
@@ -35489,7 +35489,7 @@ return {
         alias = {"sword_spider_0044"}
     },
     sword_spider_0046 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {10, 8, 13, 4},
         a_size = {2048, 2048},
@@ -35497,7 +35497,7 @@ return {
         alias = {}
     },
     sword_spider_0047 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {6, 8, 13, 4},
         a_size = {2048, 2048},
@@ -35505,7 +35505,7 @@ return {
         alias = {"sword_spider_0048"}
     },
     sword_spider_0049 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {9, 7, 13, 4},
         a_size = {2048, 2048},
@@ -35513,7 +35513,7 @@ return {
         alias = {"sword_spider_0050"}
     },
     sword_spider_0051 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {12, 8, 13, 4},
         a_size = {2048, 2048},
@@ -35521,7 +35521,7 @@ return {
         alias = {"sword_spider_0052"}
     },
     sword_spider_0053 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {12, 8, 13, 4},
         a_size = {2048, 2048},
@@ -35529,7 +35529,7 @@ return {
         alias = {"sword_spider_0054"}
     },
     sword_spider_0055 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {12, 29, 13, 4},
         a_size = {2048, 2048},
@@ -35537,7 +35537,7 @@ return {
         alias = {"sword_spider_0056"}
     },
     sword_spider_0057 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {68, 53},
         trim = {12, 30, 13, 4},
         a_size = {2048, 2048},
@@ -35545,7 +35545,7 @@ return {
         alias = {"sword_spider_0058", "sword_spider_0059", "sword_spider_0060"}
     },
     twilight_avenger_0001 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {41, 69, 36, 18},
         a_size = {2048, 2048},
@@ -35553,7 +35553,7 @@ return {
         alias = {}
     },
     twilight_avenger_0002 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 68, 35, 18},
         a_size = {2048, 2048},
@@ -35561,7 +35561,7 @@ return {
         alias = {"twilight_avenger_0003"}
     },
     twilight_avenger_0004 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 63, 35, 18},
         a_size = {2048, 2048},
@@ -35569,7 +35569,7 @@ return {
         alias = {"twilight_avenger_0005"}
     },
     twilight_avenger_0006 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 61, 35, 18},
         a_size = {2048, 2048},
@@ -35577,7 +35577,7 @@ return {
         alias = {"twilight_avenger_0007"}
     },
     twilight_avenger_0008 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 61, 35, 18},
         a_size = {2048, 2048},
@@ -35585,7 +35585,7 @@ return {
         alias = {}
     },
     twilight_avenger_0009 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {41, 65, 35, 18},
         a_size = {2048, 2048},
@@ -35593,7 +35593,7 @@ return {
         alias = {"twilight_avenger_0010"}
     },
     twilight_avenger_0011 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {41, 71, 36, 18},
         a_size = {2048, 2048},
@@ -35601,7 +35601,7 @@ return {
         alias = {"twilight_avenger_0012"}
     },
     twilight_avenger_0013 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {41, 68, 35, 18},
         a_size = {2048, 2048},
@@ -35609,7 +35609,7 @@ return {
         alias = {"twilight_avenger_0014"}
     },
     twilight_avenger_0015 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {42, 64, 37, 18},
         a_size = {2048, 2048},
@@ -35617,7 +35617,7 @@ return {
         alias = {"twilight_avenger_0016"}
     },
     twilight_avenger_0017 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {42, 61, 37, 18},
         a_size = {2048, 2048},
@@ -35625,7 +35625,7 @@ return {
         alias = {"twilight_avenger_0018"}
     },
     twilight_avenger_0019 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {41, 62, 37, 18},
         a_size = {2048, 2048},
@@ -35633,7 +35633,7 @@ return {
         alias = {}
     },
     twilight_avenger_0020 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {41, 66, 37, 18},
         a_size = {2048, 2048},
@@ -35641,7 +35641,7 @@ return {
         alias = {"twilight_avenger_0021"}
     },
     twilight_avenger_0022 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {41, 71, 36, 18},
         a_size = {2048, 2048},
@@ -35649,7 +35649,7 @@ return {
         alias = {"twilight_avenger_0023"}
     },
     twilight_avenger_0024 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {43, 61, 39, 18},
         a_size = {2048, 2048},
@@ -35657,7 +35657,7 @@ return {
         alias = {"twilight_avenger_0025"}
     },
     twilight_avenger_0026 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {42, 61, 39, 18},
         a_size = {2048, 2048},
@@ -35665,7 +35665,7 @@ return {
         alias = {"twilight_avenger_0027"}
     },
     twilight_avenger_0028 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {42, 64, 39, 18},
         a_size = {2048, 2048},
@@ -35673,7 +35673,7 @@ return {
         alias = {}
     },
     twilight_avenger_0029 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 68, 39, 16},
         a_size = {2048, 2048},
@@ -35681,7 +35681,7 @@ return {
         alias = {"twilight_avenger_0030"}
     },
     twilight_avenger_0031 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 66, 39, 18},
         a_size = {2048, 2048},
@@ -35689,7 +35689,7 @@ return {
         alias = {"twilight_avenger_0032"}
     },
     twilight_avenger_0033 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 64, 38, 18},
         a_size = {2048, 2048},
@@ -35697,7 +35697,7 @@ return {
         alias = {"twilight_avenger_0034"}
     },
     twilight_avenger_0035 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 61, 38, 18},
         a_size = {2048, 2048},
@@ -35705,7 +35705,7 @@ return {
         alias = {"twilight_avenger_0036"}
     },
     twilight_avenger_0037 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 61, 37, 18},
         a_size = {2048, 2048},
@@ -35713,7 +35713,7 @@ return {
         alias = {"twilight_avenger_0038"}
     },
     twilight_avenger_0039 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 64, 38, 18},
         a_size = {2048, 2048},
@@ -35721,7 +35721,7 @@ return {
         alias = {}
     },
     twilight_avenger_0040 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 69, 38, 18},
         a_size = {2048, 2048},
@@ -35729,7 +35729,7 @@ return {
         alias = {"twilight_avenger_0041"}
     },
     twilight_avenger_0042 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {42, 66, 39, 18},
         a_size = {2048, 2048},
@@ -35737,7 +35737,7 @@ return {
         alias = {"twilight_avenger_0043"}
     },
     twilight_avenger_0044 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {43, 64, 39, 18},
         a_size = {2048, 2048},
@@ -35745,7 +35745,7 @@ return {
         alias = {"twilight_avenger_0045"}
     },
     twilight_avenger_0046 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {42, 60, 39, 18},
         a_size = {2048, 2048},
@@ -35753,7 +35753,7 @@ return {
         alias = {"twilight_avenger_0047"}
     },
     twilight_avenger_0048 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {41, 66, 39, 18},
         a_size = {2048, 2048},
@@ -35761,7 +35761,7 @@ return {
         alias = {"twilight_avenger_0049"}
     },
     twilight_avenger_0050 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 70, 39, 18},
         a_size = {2048, 2048},
@@ -35769,7 +35769,7 @@ return {
         alias = {}
     },
     twilight_avenger_0051 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 67, 39, 18},
         a_size = {2048, 2048},
@@ -35777,7 +35777,7 @@ return {
         alias = {"twilight_avenger_0052"}
     },
     twilight_avenger_0053 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 64, 39, 18},
         a_size = {2048, 2048},
@@ -35785,7 +35785,7 @@ return {
         alias = {"twilight_avenger_0054"}
     },
     twilight_avenger_0055 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 62, 39, 18},
         a_size = {2048, 2048},
@@ -35793,7 +35793,7 @@ return {
         alias = {"twilight_avenger_0056"}
     },
     twilight_avenger_0057 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 61, 41, 18},
         a_size = {2048, 2048},
@@ -35801,7 +35801,7 @@ return {
         alias = {"twilight_avenger_0058"}
     },
     twilight_avenger_0059 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {39, 64, 39, 18},
         a_size = {2048, 2048},
@@ -35809,7 +35809,7 @@ return {
         alias = {"twilight_avenger_0060"}
     },
     twilight_avenger_0061 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 70, 39, 18},
         a_size = {2048, 2048},
@@ -35817,7 +35817,7 @@ return {
         alias = {}
     },
     twilight_avenger_0062 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 67, 39, 18},
         a_size = {2048, 2048},
@@ -35825,7 +35825,7 @@ return {
         alias = {"twilight_avenger_0063"}
     },
     twilight_avenger_0064 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 64, 39, 18},
         a_size = {2048, 2048},
@@ -35833,7 +35833,7 @@ return {
         alias = {"twilight_avenger_0065"}
     },
     twilight_avenger_0066 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {41, 62, 39, 18},
         a_size = {2048, 2048},
@@ -35841,7 +35841,7 @@ return {
         alias = {"twilight_avenger_0067"}
     },
     twilight_avenger_0068 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {41, 69, 36, 18},
         a_size = {2048, 2048},
@@ -35849,7 +35849,7 @@ return {
         alias = {"twilight_avenger_0069", "twilight_avenger_0091", "twilight_avenger_0092"}
     },
     twilight_avenger_0070 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {40, 69, 38, 18},
         a_size = {2048, 2048},
@@ -35857,7 +35857,7 @@ return {
         alias = {"twilight_avenger_0071"}
     },
     twilight_avenger_0072 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {27, 64, 37, 18},
         a_size = {2048, 2048},
@@ -35865,7 +35865,7 @@ return {
         alias = {"twilight_avenger_0073"}
     },
     twilight_avenger_0074 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {28, 42, 39, 18},
         a_size = {2048, 2048},
@@ -35873,7 +35873,7 @@ return {
         alias = {"twilight_avenger_0075"}
     },
     twilight_avenger_0076 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {30, 40, 41, 18},
         a_size = {2048, 2048},
@@ -35881,7 +35881,7 @@ return {
         alias = {"twilight_avenger_0077"}
     },
     twilight_avenger_0078 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {30, 39, 41, 18},
         a_size = {2048, 2048},
@@ -35889,7 +35889,7 @@ return {
         alias = {"twilight_avenger_0079", "twilight_avenger_0080"}
     },
     twilight_avenger_0081 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {27, 49, 30, 11},
         a_size = {2048, 2048},
@@ -35897,7 +35897,7 @@ return {
         alias = {}
     },
     twilight_avenger_0082 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {53, 58, 10, 14},
         a_size = {2048, 2048},
@@ -35905,7 +35905,7 @@ return {
         alias = {"twilight_avenger_0083"}
     },
     twilight_avenger_0084 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {53, 60, 16, 18},
         a_size = {2048, 2048},
@@ -35913,7 +35913,7 @@ return {
         alias = {}
     },
     twilight_avenger_0085 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {53, 60, 16, 18},
         a_size = {2048, 2048},
@@ -35921,7 +35921,7 @@ return {
         alias = {}
     },
     twilight_avenger_0086 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {53, 62, 31, 18},
         a_size = {2048, 2048},
@@ -35929,7 +35929,7 @@ return {
         alias = {}
     },
     twilight_avenger_0087 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {51, 68, 34, 18},
         a_size = {2048, 2048},
@@ -35937,7 +35937,7 @@ return {
         alias = {"twilight_avenger_0088"}
     },
     twilight_avenger_0089 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {43, 68, 37, 18},
         a_size = {2048, 2048},
@@ -35945,7 +35945,7 @@ return {
         alias = {"twilight_avenger_0090"}
     },
     twilight_avenger_0093 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {41, 69, 36, 18},
         a_size = {2048, 2048},
@@ -35954,7 +35954,7 @@ return {
                  "twilight_avenger_0128"}
     },
     twilight_avenger_0095 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {44, 68, 37, 18},
         a_size = {2048, 2048},
@@ -35962,7 +35962,7 @@ return {
         alias = {"twilight_avenger_0096"}
     },
     twilight_avenger_0097 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {43, 50, 38, 18},
         a_size = {2048, 2048},
@@ -35970,7 +35970,7 @@ return {
         alias = {"twilight_avenger_0098"}
     },
     twilight_avenger_0099 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {45, 39, 38, 18},
         a_size = {2048, 2048},
@@ -35978,7 +35978,7 @@ return {
         alias = {"twilight_avenger_0100"}
     },
     twilight_avenger_0101 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {46, 36, 39, 18},
         a_size = {2048, 2048},
@@ -35986,7 +35986,7 @@ return {
         alias = {"twilight_avenger_0102"}
     },
     twilight_avenger_0103 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {44, 37, 37, 18},
         a_size = {2048, 2048},
@@ -35994,7 +35994,7 @@ return {
         alias = {"twilight_avenger_0104"}
     },
     twilight_avenger_0105 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {33, 14, 39, 9},
         a_size = {2048, 2048},
@@ -36002,7 +36002,7 @@ return {
         alias = {"twilight_avenger_0106"}
     },
     twilight_avenger_0107 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {32, 7, 37, 8},
         a_size = {2048, 2048},
@@ -36010,7 +36010,7 @@ return {
         alias = {"twilight_avenger_0108"}
     },
     twilight_avenger_0109 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {32, 0, 34, 6},
         a_size = {2048, 2048},
@@ -36018,7 +36018,7 @@ return {
         alias = {"twilight_avenger_0110"}
     },
     twilight_avenger_0111 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {30, 7, 30, 5},
         a_size = {2048, 2048},
@@ -36026,7 +36026,7 @@ return {
         alias = {"twilight_avenger_0112"}
     },
     twilight_avenger_0113 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {27, 11, 27, 3},
         a_size = {2048, 2048},
@@ -36034,7 +36034,7 @@ return {
         alias = {"twilight_avenger_0114"}
     },
     twilight_avenger_0115 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {26, 20, 26, 3},
         a_size = {2048, 2048},
@@ -36042,7 +36042,7 @@ return {
         alias = {"twilight_avenger_0116"}
     },
     twilight_avenger_0117 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {25, 13, 25, 3},
         a_size = {2048, 2048},
@@ -36050,7 +36050,7 @@ return {
         alias = {"twilight_avenger_0118"}
     },
     twilight_avenger_0119 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {24, 39, 24, 2},
         a_size = {2048, 2048},
@@ -36058,7 +36058,7 @@ return {
         alias = {"twilight_avenger_0120"}
     },
     twilight_avenger_0121 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {23, 50, 23, 1},
         a_size = {2048, 2048},
@@ -36066,7 +36066,7 @@ return {
         alias = {"twilight_avenger_0122"}
     },
     twilight_avenger_0123 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {37, 68, 37, 18},
         a_size = {2048, 2048},
@@ -36074,7 +36074,7 @@ return {
         alias = {"twilight_avenger_0124"}
     },
     twilight_avenger_0129 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {32, 62, 34, 18},
         a_size = {2048, 2048},
@@ -36082,7 +36082,7 @@ return {
         alias = {"twilight_avenger_0130"}
     },
     twilight_avenger_0131 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {17, 59, 34, 18},
         a_size = {2048, 2048},
@@ -36090,7 +36090,7 @@ return {
         alias = {"twilight_avenger_0132"}
     },
     twilight_avenger_0133 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {17, 70, 33, 18},
         a_size = {2048, 2048},
@@ -36098,7 +36098,7 @@ return {
         alias = {"twilight_avenger_0134"}
     },
     twilight_avenger_0135 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {22, 73, 32, 15},
         a_size = {2048, 2048},
@@ -36106,7 +36106,7 @@ return {
         alias = {}
     },
     twilight_avenger_0136 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {24, 73, 32, 15},
         a_size = {2048, 2048},
@@ -36114,7 +36114,7 @@ return {
         alias = {"twilight_avenger_0137"}
     },
     twilight_avenger_0138 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {23, 73, 32, 15},
         a_size = {2048, 2048},
@@ -36122,7 +36122,7 @@ return {
         alias = {"twilight_avenger_0139", "twilight_avenger_0140"}
     },
     twilight_avenger_0141 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {23, 73, 31, 15},
         a_size = {2048, 2048},
@@ -36130,7 +36130,7 @@ return {
         alias = {}
     },
     twilight_avenger_0142 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {23, 77, 27, 15},
         a_size = {2048, 2048},
@@ -36138,7 +36138,7 @@ return {
         alias = {"twilight_avenger_0143"}
     },
     twilight_avenger_0144 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {23, 85, 22, 15},
         a_size = {2048, 2048},
@@ -36146,7 +36146,7 @@ return {
         alias = {"twilight_avenger_0145"}
     },
     twilight_avenger_0146 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {23, 85, 18, 15},
         a_size = {2048, 2048},
@@ -36155,7 +36155,7 @@ return {
                  "twilight_avenger_0151", "twilight_avenger_0152", "twilight_avenger_0153"}
     },
     twilight_avenger_0154 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {23, 85, 18, 15},
         a_size = {2048, 2048},
@@ -36163,7 +36163,7 @@ return {
         alias = {"twilight_avenger_0155"}
     },
     twilight_avenger_0156 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {23, 85, 18, 15},
         a_size = {2048, 2048},
@@ -36171,7 +36171,7 @@ return {
         alias = {"twilight_avenger_0157"}
     },
     twilight_avenger_0158 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {23, 85, 18, 11},
         a_size = {2048, 2048},
@@ -36179,7 +36179,7 @@ return {
         alias = {"twilight_avenger_0159"}
     },
     twilight_avenger_0160 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {23, 85, 18, 11},
         a_size = {2048, 2048},
@@ -36187,7 +36187,7 @@ return {
         alias = {"twilight_avenger_0161"}
     },
     twilight_avenger_0162 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {138, 141},
         trim = {23, 85, 18, 11},
         a_size = {2048, 2048},
@@ -36195,7 +36195,7 @@ return {
         alias = {"twilight_avenger_0163"}
     },
     webspitterSpider_0001 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 32, 14, 19},
         a_size = {2048, 2048},
@@ -36203,7 +36203,7 @@ return {
         alias = {"webspitterSpider_0031", "webspitterSpider_0049", "webspitterSpider_0073"}
     },
     webspitterSpider_0002 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 33, 10, 18},
         a_size = {2048, 2048},
@@ -36211,7 +36211,7 @@ return {
         alias = {}
     },
     webspitterSpider_0003 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 31, 14, 19},
         a_size = {2048, 2048},
@@ -36219,7 +36219,7 @@ return {
         alias = {}
     },
     webspitterSpider_0004 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 27, 14, 19},
         a_size = {2048, 2048},
@@ -36227,7 +36227,7 @@ return {
         alias = {}
     },
     webspitterSpider_0005 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 31, 14, 19},
         a_size = {2048, 2048},
@@ -36235,7 +36235,7 @@ return {
         alias = {}
     },
     webspitterSpider_0006 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 34, 14, 19},
         a_size = {2048, 2048},
@@ -36243,7 +36243,7 @@ return {
         alias = {}
     },
     webspitterSpider_0007 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 31, 14, 19},
         a_size = {2048, 2048},
@@ -36251,7 +36251,7 @@ return {
         alias = {}
     },
     webspitterSpider_0008 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 29, 14, 19},
         a_size = {2048, 2048},
@@ -36259,7 +36259,7 @@ return {
         alias = {}
     },
     webspitterSpider_0009 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 31, 13, 19},
         a_size = {2048, 2048},
@@ -36267,7 +36267,7 @@ return {
         alias = {}
     },
     webspitterSpider_0010 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 34, 11, 19},
         a_size = {2048, 2048},
@@ -36275,7 +36275,7 @@ return {
         alias = {}
     },
     webspitterSpider_0011 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 26, 14, 8},
         a_size = {2048, 2048},
@@ -36283,7 +36283,7 @@ return {
         alias = {"webspitterSpider_0020"}
     },
     webspitterSpider_0012 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 24, 14, 9},
         a_size = {2048, 2048},
@@ -36291,7 +36291,7 @@ return {
         alias = {}
     },
     webspitterSpider_0013 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 24, 14, 11},
         a_size = {2048, 2048},
@@ -36299,7 +36299,7 @@ return {
         alias = {}
     },
     webspitterSpider_0014 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 25, 14, 13},
         a_size = {2048, 2048},
@@ -36307,7 +36307,7 @@ return {
         alias = {}
     },
     webspitterSpider_0015 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 27, 14, 7},
         a_size = {2048, 2048},
@@ -36315,7 +36315,7 @@ return {
         alias = {}
     },
     webspitterSpider_0016 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 24, 14, 7},
         a_size = {2048, 2048},
@@ -36323,7 +36323,7 @@ return {
         alias = {}
     },
     webspitterSpider_0017 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 24, 14, 11},
         a_size = {2048, 2048},
@@ -36331,7 +36331,7 @@ return {
         alias = {}
     },
     webspitterSpider_0018 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 24, 14, 12},
         a_size = {2048, 2048},
@@ -36339,7 +36339,7 @@ return {
         alias = {}
     },
     webspitterSpider_0019 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 27, 14, 6},
         a_size = {2048, 2048},
@@ -36347,7 +36347,7 @@ return {
         alias = {}
     },
     webspitterSpider_0021 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 24, 14, 16},
         a_size = {2048, 2048},
@@ -36355,7 +36355,7 @@ return {
         alias = {"webspitterSpider_0030"}
     },
     webspitterSpider_0022 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 22, 14, 15},
         a_size = {2048, 2048},
@@ -36363,7 +36363,7 @@ return {
         alias = {}
     },
     webspitterSpider_0023 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 28, 14, 16},
         a_size = {2048, 2048},
@@ -36371,7 +36371,7 @@ return {
         alias = {}
     },
     webspitterSpider_0024 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 31, 14, 14},
         a_size = {2048, 2048},
@@ -36379,7 +36379,7 @@ return {
         alias = {}
     },
     webspitterSpider_0025 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 28, 14, 17},
         a_size = {2048, 2048},
@@ -36387,7 +36387,7 @@ return {
         alias = {}
     },
     webspitterSpider_0026 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 24, 14, 16},
         a_size = {2048, 2048},
@@ -36395,7 +36395,7 @@ return {
         alias = {}
     },
     webspitterSpider_0027 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 26, 14, 16},
         a_size = {2048, 2048},
@@ -36403,7 +36403,7 @@ return {
         alias = {}
     },
     webspitterSpider_0028 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 26, 14, 17},
         a_size = {2048, 2048},
@@ -36411,7 +36411,7 @@ return {
         alias = {}
     },
     webspitterSpider_0029 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 26, 14, 15},
         a_size = {2048, 2048},
@@ -36419,7 +36419,7 @@ return {
         alias = {}
     },
     webspitterSpider_0032 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 32, 14, 19},
         a_size = {2048, 2048},
@@ -36427,7 +36427,7 @@ return {
         alias = {"webspitterSpider_0033"}
     },
     webspitterSpider_0034 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 32, 14, 19},
         a_size = {2048, 2048},
@@ -36435,7 +36435,7 @@ return {
         alias = {"webspitterSpider_0035"}
     },
     webspitterSpider_0036 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 34, 14, 19},
         a_size = {2048, 2048},
@@ -36443,7 +36443,7 @@ return {
         alias = {"webspitterSpider_0037"}
     },
     webspitterSpider_0038 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 34, 14, 19},
         a_size = {2048, 2048},
@@ -36451,7 +36451,7 @@ return {
         alias = {"webspitterSpider_0039", "webspitterSpider_0040"}
     },
     webspitterSpider_0041 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 32, 14, 19},
         a_size = {2048, 2048},
@@ -36459,7 +36459,7 @@ return {
         alias = {}
     },
     webspitterSpider_0042 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 32, 14, 19},
         a_size = {2048, 2048},
@@ -36467,7 +36467,7 @@ return {
         alias = {}
     },
     webspitterSpider_0043 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 34, 14, 19},
         a_size = {2048, 2048},
@@ -36475,7 +36475,7 @@ return {
         alias = {"webspitterSpider_0044"}
     },
     webspitterSpider_0045 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 35, 14, 19},
         a_size = {2048, 2048},
@@ -36483,7 +36483,7 @@ return {
         alias = {"webspitterSpider_0046"}
     },
     webspitterSpider_0047 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 33, 14, 19},
         a_size = {2048, 2048},
@@ -36491,7 +36491,7 @@ return {
         alias = {"webspitterSpider_0048"}
     },
     webspitterSpider_0050 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 32, 14, 19},
         a_size = {2048, 2048},
@@ -36499,7 +36499,7 @@ return {
         alias = {"webspitterSpider_0072"}
     },
     webspitterSpider_0051 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 33, 14, 19},
         a_size = {2048, 2048},
@@ -36507,7 +36507,7 @@ return {
         alias = {"webspitterSpider_0052"}
     },
     webspitterSpider_0053 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 34, 14, 19},
         a_size = {2048, 2048},
@@ -36515,7 +36515,7 @@ return {
         alias = {"webspitterSpider_0054"}
     },
     webspitterSpider_0055 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 35, 14, 19},
         a_size = {2048, 2048},
@@ -36523,7 +36523,7 @@ return {
         alias = {"webspitterSpider_0056"}
     },
     webspitterSpider_0057 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 13, 8, 19},
         a_size = {2048, 2048},
@@ -36531,7 +36531,7 @@ return {
         alias = {"webspitterSpider_0058"}
     },
     webspitterSpider_0059 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 3, 14, 19},
         a_size = {2048, 2048},
@@ -36539,7 +36539,7 @@ return {
         alias = {}
     },
     webspitterSpider_0060 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 3, 13, 19},
         a_size = {2048, 2048},
@@ -36547,7 +36547,7 @@ return {
         alias = {"webspitterSpider_0061"}
     },
     webspitterSpider_0062 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 4, 8, 19},
         a_size = {2048, 2048},
@@ -36555,7 +36555,7 @@ return {
         alias = {"webspitterSpider_0063"}
     },
     webspitterSpider_0064 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 5, 7, 19},
         a_size = {2048, 2048},
@@ -36563,7 +36563,7 @@ return {
         alias = {}
     },
     webspitterSpider_0065 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 5, 7, 19},
         a_size = {2048, 2048},
@@ -36571,7 +36571,7 @@ return {
         alias = {}
     },
     webspitterSpider_0066 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 19, 6, 19},
         a_size = {2048, 2048},
@@ -36579,7 +36579,7 @@ return {
         alias = {"webspitterSpider_0067"}
     },
     webspitterSpider_0068 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 31, 14, 19},
         a_size = {2048, 2048},
@@ -36587,7 +36587,7 @@ return {
         alias = {"webspitterSpider_0069"}
     },
     webspitterSpider_0070 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 34, 14, 19},
         a_size = {2048, 2048},
@@ -36595,7 +36595,7 @@ return {
         alias = {"webspitterSpider_0071"}
     },
     webspitterSpider_0074 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 38, 14, 19},
         a_size = {2048, 2048},
@@ -36603,7 +36603,7 @@ return {
         alias = {"webspitterSpider_0075"}
     },
     webspitterSpider_0076 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 34, 14, 19},
         a_size = {2048, 2048},
@@ -36611,7 +36611,7 @@ return {
         alias = {"webspitterSpider_0077"}
     },
     webspitterSpider_0078 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 34, 14, 19},
         a_size = {2048, 2048},
@@ -36619,7 +36619,7 @@ return {
         alias = {"webspitterSpider_0079"}
     },
     webspitterSpider_0080 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 36, 14, 19},
         a_size = {2048, 2048},
@@ -36627,7 +36627,7 @@ return {
         alias = {"webspitterSpider_0081"}
     },
     webspitterSpider_0082 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 39, 14, 19},
         a_size = {2048, 2048},
@@ -36635,7 +36635,7 @@ return {
         alias = {"webspitterSpider_0083", "webspitterSpider_0084"}
     },
     webspitterSpider_0085 = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {107, 98},
         trim = {15, 51, 14, 19},
         a_size = {2048, 2048},
@@ -36643,7 +36643,7 @@ return {
         alias = {}
     },
     ["webspitterSpider_web-f_0001"] = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {110, 98},
         trim = {23, 27, 5, 5},
         a_size = {2048, 2048},
@@ -36651,7 +36651,7 @@ return {
         alias = {"webspitterSpider_web-f_0002"}
     },
     ["webspitterSpider_web-f_0003"] = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {110, 98},
         trim = {23, 14, 2, 5},
         a_size = {2048, 2048},
@@ -36659,7 +36659,7 @@ return {
         alias = {"webspitterSpider_web-f_0004"}
     },
     ["webspitterSpider_web-f_0005"] = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {110, 98},
         trim = {16, 6, 8, 5},
         a_size = {2048, 2048},
@@ -36667,7 +36667,7 @@ return {
         alias = {"webspitterSpider_web-f_0006"}
     },
     ["webspitterSpider_web-f_0007"] = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {110, 98},
         trim = {18, 5, 8, 5},
         a_size = {2048, 2048},
@@ -36675,7 +36675,7 @@ return {
         alias = {"webspitterSpider_web-f_0008"}
     },
     ["webspitterSpider_web-f_0009"] = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {110, 98},
         trim = {16, 4, 8, 5},
         a_size = {2048, 2048},
@@ -36683,7 +36683,7 @@ return {
         alias = {"webspitterSpider_web-f_0010"}
     },
     ["webspitterSpider_web-f_0011"] = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {110, 98},
         trim = {6, 1, 7, 6},
         a_size = {2048, 2048},
@@ -36691,7 +36691,7 @@ return {
         alias = {"webspitterSpider_web-f_0012"}
     },
     ["webspitterSpider_web-f_0013"] = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {110, 98},
         trim = {7, 1, 0, 5},
         a_size = {2048, 2048},
@@ -36699,7 +36699,7 @@ return {
         alias = {"webspitterSpider_web-f_0014"}
     },
     ["webspitterSpider_web-f_0015"] = {
-        a_name = "go_enemies_common-3.png",
+        a_name = "go_enemies_common-3.dds",
         size = {110, 98},
         trim = {3, 1, 0, 4},
         a_size = {2048, 2048},

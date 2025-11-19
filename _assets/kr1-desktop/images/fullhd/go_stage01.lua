@@ -2,7 +2,7 @@
 
 return {
 	stage1_trees = {
-		a_name = "go_stage01-1.png",
+		a_name = "go_stage01-1.dds",
 		size = {
 			180,
 			128
