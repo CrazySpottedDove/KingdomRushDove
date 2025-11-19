@@ -45,45 +45,41 @@ zip -r "$ARCHIVE_DIR" . -x "*.dds" -x ".versions/*" -x "tmp/*" -x "*.exe" -x ".g
 # 创建临时目录用于放置缩放后的 png，保留相对路径
 tempdir=$(mktemp -d)
 trap 'rm -rf "$tempdir"' EXIT
-
 DDS_ASSETS_DIR="./_assets/kr1-desktop/images/fullhd"
 
-# 收集待处理 PNG 列表（相对于工作目录）
-mapfile -d '' png_files < <(find $DDS_ASSETS_DIR -type f -name "*.dds" -print0 || printf '')
+# 收集待处理 DDS 列表（相对于工作目录）
+mapfile -d '' dds_files < <(find $DDS_ASSETS_DIR -type f -name "*.dds" -print0 || printf '')
 
-# 更可靠地计算数量（避免复杂的参数替换导致的兼容性问题）
-png_count=$(find $DDS_ASSETS_DIR -type f -name "*.dds" 2>/dev/null | wc -l | tr -d ' ')
-png_count=${png_count:-0}
+# 更可靠地计算数量
+dds_count=$(find $DDS_ASSETS_DIR -type f -name "*.dds" 2>/dev/null | wc -l | tr -d ' ')
+dds_count=${dds_count:-0}
 
-if [ "$png_count" -eq 0 ]; then
-    echo "No PNG files found in $DDS_ASSETS_DIR."
+if [ "$dds_count" -eq 0 ]; then
+    echo "No DDS files found in $DDS_ASSETS_DIR."
 else
-    echo "Processing $png_count PNG files with $JOBS jobs (ImageMagick: $IM_CMD)..."
+    echo "Processing $dds_count DDS files with $JOBS jobs (ImageMagick: $IM_CMD)..."
 
-    # 导出环境变量，供子 shell 使用
-    export IM_CMD PNGQUANT_CMD tempdir
+    export IM_CMD tempdir
 
-    # 使用 xargs 并行处理，每个任务在独立 shell 中完成
-    printf "%s\0" "${png_files[@]}" | xargs -0 -P "$JOBS" -I {} bash -c '
+    # 并行处理 DDS -> PNG（缩小一半）
+    printf "%s\0" "${dds_files[@]}" | xargs -0 -P "$JOBS" -I {} bash -c '
         src="{}"
-        # 去掉前导 ./ （若存在）
         rel="${src#./}"
-        dest="$tempdir/$rel"
+        dest="$tempdir/${rel%.dds}.png"
         mkdir -p "$(dirname "$dest")"
-        # 使用 ImageMagick 缩小并 strip 元数据
+        # 用 ImageMagick 转换并缩小一半
         "$IM_CMD" "$src" -resize 50% -strip "$dest"
     '
 
-    # 实时进度监控（直到临时目录的 png 数量达到总数或超时）
+    # 实时进度监控
     processed=0
     start_ts=$(date +%s)
     while :; do
         processed=$(find "$tempdir" -type f -name "*.png" 2>/dev/null | wc -l || echo 0)
-        printf "\r[PNG] %d/%d processed..." "$processed" "$png_count"
-        if [ "$processed" -ge "$png_count" ]; then
+        printf "\r[PNG] %d/%d processed..." "$processed" "$dds_count"
+        if [ "$processed" -ge "$dds_count" ]; then
             break
         fi
-        # 超时保护：如果超过 30 分钟则退出循环（避免死等）
         now_ts=$(date +%s)
         if [ $((now_ts - start_ts)) -gt 1800 ]; then
             echo
@@ -94,12 +90,11 @@ else
     done
     echo
 
-    # 确认所有文件已生成
     processed=$(find "$tempdir" -type f -name "*.png" 2>/dev/null | wc -l || echo 0)
-    printf "[PNG] %d/%d processed.\n" "$processed" "$png_count"
+    printf "[PNG] %d/%d processed.\n" "$processed" "$dds_count"
 fi
 
-# 把处理好的图片按相对路径追加到已有 zip 中（若 tempdir 有内容）
+# 把处理好的 PNG 按相对路径追加到已有 zip 中
 if [ -d "$tempdir" ] && [ "$(find "$tempdir" -type f | wc -l)" -gt 0 ]; then
     echo "Appending processed PNGs to archive..."
     pushd "$tempdir" >/dev/null
