@@ -614,7 +614,6 @@ function entity_db:gen_wave(level_idx, game_mode)
     if not file then
         return false, err
     end
-
     file:write(data_string)
     file:close()
 end

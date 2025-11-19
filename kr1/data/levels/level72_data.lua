@@ -306,7 +306,7 @@ return {
         locked_towers = {},
         max_upgrade_level = 6
     }, {
-        locked_towers = {"tower_build_engineer", "tower_build_mage"},
+        locked_towers = {"tower_build_archer", "tower_build_barrack","tower_build_engineer"},
         max_upgrade_level = 6
     }},
     level_terrain_type = 1,

@@ -2078,7 +2078,7 @@ return {
                 heroe = true,
                 level = 5
             },
-            iron = {"mages", "artillery"}
+            iron = {"archers", "artillery", "barracks"}
         },
         [90] = {
             upgrades = {
