@@ -79,3 +79,13 @@ lua ./scripts/gen_assets_index.lua
 ```sh
 ./client --sync-assets
 ```
+
+## 服务器仓库
+
+本项目托管于仓库：
+
+```sh
+# git remote -v
+server  ssh://root@10.112.99.5:60001/srv/git/KingdomRushDove.git (fetch)
+server  ssh://root@10.112.99.5:60001/srv/git/KingdomRushDove.git (push)
+```
