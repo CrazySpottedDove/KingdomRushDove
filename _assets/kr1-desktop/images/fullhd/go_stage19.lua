@@ -2,7 +2,7 @@
 
 return {
 	FrozenMushroom_0001 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			58,
 			58
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	FrozenMushroom_0002 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			58,
 			58
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	FrozenMushroom_0003 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			58,
 			58
@@ -76,7 +76,7 @@ return {
 		}
 	},
 	FrozenMushroom_0005 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			58,
 			58
@@ -102,7 +102,7 @@ return {
 		}
 	},
 	FrozenMushroom_0007 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			58,
 			58
@@ -128,7 +128,7 @@ return {
 		}
 	},
 	FrozenMushroom_0009 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			58,
 			58
@@ -154,7 +154,7 @@ return {
 		}
 	},
 	FrozenMushroom_0011 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			58,
 			58
@@ -180,7 +180,7 @@ return {
 		}
 	},
 	FrozenMushroom_0013 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			58,
 			58
@@ -206,7 +206,7 @@ return {
 		}
 	},
 	FrozenMushroom_0015 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			58,
 			58
@@ -232,7 +232,7 @@ return {
 		}
 	},
 	FrozenMushroom_0017 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			58,
 			58
@@ -258,7 +258,7 @@ return {
 		}
 	},
 	Stage19_burner_0001 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			48,
 			58
@@ -284,7 +284,7 @@ return {
 		}
 	},
 	Stage19_burner_0003 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			48,
 			58
@@ -310,7 +310,7 @@ return {
 		}
 	},
 	Stage19_burner_0005 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			48,
 			58
@@ -336,7 +336,7 @@ return {
 		}
 	},
 	Stage19_burner_0007 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			48,
 			58
@@ -362,7 +362,7 @@ return {
 		}
 	},
 	Stage19_burner_0009 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			48,
 			58
@@ -388,7 +388,7 @@ return {
 		}
 	},
 	Stage19_burner_0011 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			48,
 			58
@@ -412,7 +412,7 @@ return {
 		alias = {}
 	},
 	Stage19_flag_0001 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			68,
 			128
@@ -440,7 +440,7 @@ return {
 		}
 	},
 	Stage19_flag_0002 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			68,
 			128
@@ -466,7 +466,7 @@ return {
 		}
 	},
 	Stage19_flag_0004 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			68,
 			128
@@ -493,7 +493,7 @@ return {
 		}
 	},
 	Stage19_flag_0007 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			68,
 			128
@@ -519,7 +519,7 @@ return {
 		}
 	},
 	Stage19_flag_0009 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			68,
 			128
@@ -546,7 +546,7 @@ return {
 		}
 	},
 	Stage19_flag_0012 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			68,
 			128
@@ -572,7 +572,7 @@ return {
 		}
 	},
 	Stage19_flag_0014 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			68,
 			128
@@ -598,7 +598,7 @@ return {
 		}
 	},
 	TrollBoss_0001 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -624,7 +624,7 @@ return {
 		}
 	},
 	TrollBoss_0003 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -650,7 +650,7 @@ return {
 		}
 	},
 	TrollBoss_0005 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -676,7 +676,7 @@ return {
 		}
 	},
 	TrollBoss_0007 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -702,7 +702,7 @@ return {
 		}
 	},
 	TrollBoss_0009 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -728,7 +728,7 @@ return {
 		}
 	},
 	TrollBoss_0011 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -754,7 +754,7 @@ return {
 		}
 	},
 	TrollBoss_0013 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -780,7 +780,7 @@ return {
 		}
 	},
 	TrollBoss_0015 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -806,7 +806,7 @@ return {
 		}
 	},
 	TrollBoss_0017 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -832,7 +832,7 @@ return {
 		}
 	},
 	TrollBoss_0019 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -858,7 +858,7 @@ return {
 		}
 	},
 	TrollBoss_0021 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -884,7 +884,7 @@ return {
 		}
 	},
 	TrollBoss_0023 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -910,7 +910,7 @@ return {
 		}
 	},
 	TrollBoss_0025 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -936,7 +936,7 @@ return {
 		}
 	},
 	TrollBoss_0027 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -962,7 +962,7 @@ return {
 		}
 	},
 	TrollBoss_0029 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -988,7 +988,7 @@ return {
 		}
 	},
 	TrollBoss_0031 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1014,7 +1014,7 @@ return {
 		}
 	},
 	TrollBoss_0033 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			240,
 			150
@@ -1040,7 +1040,7 @@ return {
 		}
 	},
 	TrollBoss_0035 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			240,
 			150
@@ -1064,7 +1064,7 @@ return {
 		alias = {}
 	},
 	TrollBoss_0036 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			240,
 			150
@@ -1091,7 +1091,7 @@ return {
 		}
 	},
 	TrollBoss_0039 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			240,
 			150
@@ -1117,7 +1117,7 @@ return {
 		}
 	},
 	TrollBoss_0041 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			240,
 			150
@@ -1144,7 +1144,7 @@ return {
 		}
 	},
 	TrollBoss_0044 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1170,7 +1170,7 @@ return {
 		}
 	},
 	TrollBoss_0046 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1197,7 +1197,7 @@ return {
 		}
 	},
 	TrollBoss_0049 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1223,7 +1223,7 @@ return {
 		}
 	},
 	TrollBoss_0051 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			240,
 			150
@@ -1247,7 +1247,7 @@ return {
 		alias = {}
 	},
 	TrollBoss_0052 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			240,
 			150
@@ -1274,7 +1274,7 @@ return {
 		}
 	},
 	TrollBoss_0055 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			240,
 			150
@@ -1300,7 +1300,7 @@ return {
 		}
 	},
 	TrollBoss_0057 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			240,
 			150
@@ -1327,7 +1327,7 @@ return {
 		}
 	},
 	TrollBoss_0060 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1353,7 +1353,7 @@ return {
 		}
 	},
 	TrollBoss_0062 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			240,
 			150
@@ -1380,7 +1380,7 @@ return {
 		}
 	},
 	TrollBoss_0065 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1404,7 +1404,7 @@ return {
 		alias = {}
 	},
 	TrollBoss_0066 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1433,7 +1433,7 @@ return {
 		}
 	},
 	TrollBoss_0068 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			240,
 			150
@@ -1459,7 +1459,7 @@ return {
 		}
 	},
 	TrollBoss_0070 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1485,7 +1485,7 @@ return {
 		}
 	},
 	TrollBoss_0072 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1511,7 +1511,7 @@ return {
 		}
 	},
 	TrollBoss_0074 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1537,7 +1537,7 @@ return {
 		}
 	},
 	TrollBoss_0076 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1563,7 +1563,7 @@ return {
 		}
 	},
 	TrollBoss_0078 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1591,7 +1591,7 @@ return {
 		}
 	},
 	TrollBoss_0082 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1617,7 +1617,7 @@ return {
 		}
 	},
 	TrollBoss_0084 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1641,7 +1641,7 @@ return {
 		alias = {}
 	},
 	TrollBoss_0085 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1665,7 +1665,7 @@ return {
 		alias = {}
 	},
 	TrollBoss_0086 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1689,7 +1689,7 @@ return {
 		alias = {}
 	},
 	TrollBoss_0087 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1713,7 +1713,7 @@ return {
 		alias = {}
 	},
 	TrollBoss_0088 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1737,7 +1737,7 @@ return {
 		alias = {}
 	},
 	TrollBoss_0089 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1761,7 +1761,7 @@ return {
 		alias = {}
 	},
 	TrollBoss_0090 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1791,7 +1791,7 @@ return {
 		}
 	},
 	TrollBoss_0096 = {
-		a_name = "go_stage19-2.png",
+		a_name = "go_stage19-2.dds",
 		size = {
 			240,
 			150
@@ -1817,7 +1817,7 @@ return {
 		}
 	},
 	TrollBoss_0101 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1843,7 +1843,7 @@ return {
 		}
 	},
 	TrollBoss_0103 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1869,7 +1869,7 @@ return {
 		}
 	},
 	TrollBoss_0105 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1895,7 +1895,7 @@ return {
 		}
 	},
 	TrollBoss_0107 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1921,7 +1921,7 @@ return {
 		}
 	},
 	TrollBoss_0109 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1947,7 +1947,7 @@ return {
 		}
 	},
 	TrollBoss_0111 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1973,7 +1973,7 @@ return {
 		}
 	},
 	TrollBoss_0113 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -1999,7 +1999,7 @@ return {
 		}
 	},
 	TrollBoss_0115 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -2025,7 +2025,7 @@ return {
 		}
 	},
 	TrollBoss_0117 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -2051,7 +2051,7 @@ return {
 		}
 	},
 	TrollBoss_0119 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -2075,7 +2075,7 @@ return {
 		alias = {}
 	},
 	TrollBoss_0120 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -2101,7 +2101,7 @@ return {
 		}
 	},
 	TrollBoss_0122 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -2127,7 +2127,7 @@ return {
 		}
 	},
 	TrollBoss_0124 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -2153,7 +2153,7 @@ return {
 		}
 	},
 	TrollBoss_0126 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150
@@ -2179,7 +2179,7 @@ return {
 		}
 	},
 	TrollBoss_0128 = {
-		a_name = "go_stage19-1.png",
+		a_name = "go_stage19-1.dds",
 		size = {
 			240,
 			150

@@ -1,6 +1,6 @@
 return {
 	["dirtholder_cuernos_asst_wukong_woodragon_horns_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			99,
 			134
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_cuernos_asst_wukong_woodragon_wisker"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			75,
 			51
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_elemental_wood_fire_portal_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			29,
 			35
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_elemental_wood_fire_portal_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			82,
 			78
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_elemental_wood_fire_portal_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			122
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_elemental_wood_fire_portal_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			124,
 			101
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_elemental_wood_fire_portal_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			102
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_elemental_wood_fire_portal_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			105
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_elemental_wood_fire_portal_07"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			113,
 			107
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_elemental_wood_fire_portal_08"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			97
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_elemental_wood_fire_portal_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			82
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_colacurva_1_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			49
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_colacurva_1_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			49
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_colacurva_1_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			61,
 			49
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_colacurva_1_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			48
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_colacurva_1_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			60,
 			48
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_colacurva_1_lineastill"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			86,
 			48
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_colacurva_1_relleno"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			55
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_dronehive_impact_body_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			80
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_dronehive_impact_body_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			54,
 			41
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_dronehive_impact_body_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			38,
 			44
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_dronehive_impact_body_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			35
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_dronehive_impact_body_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			35
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_fx_humito_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_fx_humito_1_nube"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_fx_humito_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_spark"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			44
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_sparkattack1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			90
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_sparkattack2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_sparkattack3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			73,
 			71
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_sparkattack4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			65
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_head_cd"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			160,
 			166
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_head_shape6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			205,
 			134
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_head_shape6_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			121,
 			126
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_head_shape_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			236,
 			205
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_head_shape_3_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			217,
 			235
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_head_shape_3_copy_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			229,
 			253
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_head_shape_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			93,
 			140
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_headterciofrente_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			43,
 			51
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_headterciofrente_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			41,
 			53
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_headterciofrente_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			52
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_headterciofrente_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			52
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_headterciofrente_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			45,
 			52
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_headterciofrente_lineastill_idle"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			156
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_headterciofrente_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_headterciofrente_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_headterciofrente_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_headterciofrente_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_headterciofrente_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_bigote"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			33
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_body_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_body_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_body_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_body_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			99,
 			94
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_body_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			100,
 			93
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_body_lineastill"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			95,
 			61
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_body_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			69
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_body_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			69
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_body_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			71
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_body_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			72
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_body_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			69
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			52
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			48
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			57,
 			48
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			61,
 			50
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			49
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			47,
 			34
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			36
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			36
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			47,
 			36
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			45,
 			34
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_idle_head_body"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			54,
 			72
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_mouth_cd"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			88,
 			82
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_nube_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			137,
 			102
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_puntacola_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_puntacola_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_puntacola_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_puntacola_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_puntacola_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_puntacola_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			34
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_puntacola_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			34
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_puntacola_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			36
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_puntacola_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			34
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_dragon_asst_wukong_woodragon_puntacola_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			36
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_gradiente_asst_wukong_woodragon_gradientetorre"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			337,
 			302
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_elemental_wood_fire_portal_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			29,
 			35
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_elemental_wood_fire_portal_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			82,
 			78
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_elemental_wood_fire_portal_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			122
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_elemental_wood_fire_portal_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			124,
 			101
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_elemental_wood_fire_portal_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			102
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_elemental_wood_fire_portal_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			105
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_elemental_wood_fire_portal_07"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			113,
 			107
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_elemental_wood_fire_portal_08"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			97
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_elemental_wood_fire_portal_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			82
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_wukong_woodragon_fx_humito_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_wukong_woodragon_fx_humito_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_wukong_woodragon_head_shape6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			205,
 			134
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_wukong_woodragon_head_shape_3_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			217,
 			235
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_wukong_woodragon_head_shape_3_copy_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			229,
 			253
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_wukong_woodragon_head_shape_3_openmouth"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			237,
 			205
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_habilidad_1_asst_wukong_woodragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarra_asst_underground_prop_smallrock_01_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			17
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarra_asst_underground_prop_smallrock_01_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			17
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarra_asst_underground_prop_smallrock_02_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			23,
 			24
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarra_asst_underground_prop_smallrock_02_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			21,
 			22
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarra_asst_underground_prop_smallrock_03_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			12,
 			11
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarra_asst_underground_prop_smallrock_03_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			12,
 			11
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarra_asst_underground_prop_smallrock_04_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			26,
 			28
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarra_asst_underground_prop_smallrock_04_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			24,
 			23
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarra_asst_wukong_dirtdragin_jarra_head_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			56
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarra_asst_wukong_woodragon_jarra"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			95,
 			115
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarra_asst_wukong_woodragon_jarra_handle_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			36,
 			59
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarra_asst_wukong_woodragon_jarra_handle_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			35,
 			63
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarra_asst_wukong_woodragon_shadowbase_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			66,
 			18
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarra_asst_wukong_woodragon_shadowbase_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			31
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_jarrahojas_asst_wukong_woodragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_parche_asst_wukong_waterdragon_parche_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			31,
 			28
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_asst_wukong_woodragon_ray_light"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			47
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_asst_wukong_woodragon_ray_lighting_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			383
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_asst_wukong_woodragon_ray_lighting_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			347
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_asst_wukong_woodragon_ray_lighting_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			303
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_asst_wukong_woodragon_ray_lighting_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			57,
 			295
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_asst_wukong_woodragon_ray_lighting_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			69,
 			307
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_asst_wukong_woodragon_ray_lighting_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			36,
 			113
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_asst_wukong_woodragon_ray_lighting_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			25,
 			119
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_asst_wukong_woodragon_ray_sky_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			56
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_asst_wukong_woodragon_ray_sky_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			31,
 			94
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_asst_wukong_woodragon_ray_sky_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			197
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_asst_wukong_woodragon_ray_sky_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			313
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_asst_wukong_woodragon_ray_sky_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			134,
 			217
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_babies_smokecircle1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			75,
 			61
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_babies_smokecircle2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			80,
 			61
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_babies_smokecircle3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			76,
 			62
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_babies_smokecircle4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			78,
 			57
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			72,
 			51
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			67
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			138,
 			149
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			135
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			129,
 			139
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			147,
 			142
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_7"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			151,
 			133
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_8"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			180,
 			130
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_9"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			165,
 			117
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			190,
 			126
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_11"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			168,
 			127
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_12"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			171,
 			108
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_13"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			143,
 			87
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_boss3_bigglow"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			39,
 			39
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_lightning_splash_"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			39
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_lightning_splash_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			13
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_lightning_splash_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			32
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_lightning_splash_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			38
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_lightning_splash_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			38
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_lightning_splash_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			38
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_rey01_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			41
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_rey02_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			48
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_rey03_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			41
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_rockexpl"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			87,
 			87
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_Symbol_30_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_Symbol_32_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_Symbol_33_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_Symbol_34_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			62,
 			52
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_Symbol_35_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			62,
 			49
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["dirtholder_rayo_explosion_asst_wukong_woodragon_Symbol_36_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["fireholder_cuernos_asst_wukong_woodragon_horns_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			99,
 			134
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["fireholder_cuernos_asst_wukong_woodragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["fireholder_cuernos_asst_wukong_woodragon_wisker"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			75,
 			51
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_elemental_wood_fire_portal_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			29,
 			35
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_elemental_wood_fire_portal_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			82,
 			78
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_elemental_wood_fire_portal_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			122
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_elemental_wood_fire_portal_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			124,
 			101
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_elemental_wood_fire_portal_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			102
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_elemental_wood_fire_portal_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			105
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_elemental_wood_fire_portal_07"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			113,
 			107
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_elemental_wood_fire_portal_08"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			97
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_elemental_wood_fire_portal_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			82
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_colacurva_1_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			49
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_colacurva_1_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			49
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_colacurva_1_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			61,
 			49
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_colacurva_1_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			48
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_colacurva_1_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			60,
 			48
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_colacurva_1_lineastill"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			86,
 			48
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_colacurva_1_relleno"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			55
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_dronehive_impact_body_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			80
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_dronehive_impact_body_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			54,
 			41
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_dronehive_impact_body_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			38,
 			44
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_dronehive_impact_body_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			35
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_dronehive_impact_body_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			35
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_fx_humito_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_fx_humito_1_nube"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_fx_humito_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_spark"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			44
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_sparkattack1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			90
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_sparkattack2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_sparkattack3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			73,
 			71
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_sparkattack4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			65
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_head_cd"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			160,
 			166
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_head_shape6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			205,
 			134
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_head_shape6_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			197,
 			193
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_head_shape_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			236,
 			205
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_head_shape_3_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			217,
 			235
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_head_shape_3_copy_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			229,
 			253
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_head_shape_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			99,
 			154
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_headterciofrente_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			43,
 			51
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_headterciofrente_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			41,
 			53
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_headterciofrente_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			52
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_headterciofrente_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			52
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_headterciofrente_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			45,
 			52
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_headterciofrente_lineastill_idle"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			156
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_headterciofrente_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_headterciofrente_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_headterciofrente_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_headterciofrente_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_headterciofrente_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_bigote"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			33
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_body_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_body_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_body_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_body_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			99,
 			94
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_body_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			100,
 			93
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_body_lineastill"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			95,
 			61
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_body_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			69
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_body_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			69
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_body_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			71
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_body_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			72
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_body_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			69
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			52
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			48
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			57,
 			48
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			61,
 			50
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			49
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			47,
 			34
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			36
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			36
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			47,
 			36
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			45,
 			34
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_idle_head_body"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			93
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_mouth_cd"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			88,
 			82
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_nube_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			163,
 			123
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_puntacola_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_puntacola_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_puntacola_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_puntacola_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_puntacola_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_puntacola_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			34
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_puntacola_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			34
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_puntacola_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			36
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_puntacola_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			34
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_asst_wukong_woodragon_puntacola_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			36
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion1_b_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			69,
 			83
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_b_00"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			51
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_b_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			94
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_b_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			90,
 			98
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_b_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			90,
 			103
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_b_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			90,
 			99
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_b_07"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			89,
 			100
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_b_08"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			87,
 			71
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_c_00"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			28,
 			25
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_c_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			57,
 			43
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_c_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			73,
 			61
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_c_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			83,
 			79
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_c_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			92,
 			98
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_c_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			89
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_c_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			100,
 			88
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_c_07"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			88
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_c_08"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			96,
 			63
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_atomic_car_explosion_c_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			61,
 			52
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_body_decal_8"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			63
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_body_decal_9"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			88,
 			44
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_body_decal_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			34,
 			58
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_body_decal_11"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			34,
 			34
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			62,
 			75
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			84
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_2_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			27,
 			36
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_2_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			42,
 			39
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_2_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			41
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_2_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			43
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_2_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			42
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_2_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			28
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_2_7"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			37,
 			24
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			91,
 			83
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			91,
 			83
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			90,
 			81
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			88,
 			78
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_7"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			78
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_explosion_fire_9"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			84,
 			70
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_glow2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			41,
 			41
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_head_shape_3_decal1_teeth"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			210,
 			208
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_head_shape_3_decal3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			277,
 			157
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_head_shape_3_decal6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			107,
 			62
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_head_shape_3_openmouth_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			120,
 			154
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_head_shape_3_openmouth_body"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			144,
 			205
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_psychoexplosion_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			75,
 			64
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_psychoexplosion_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			80
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_psychoexplosion_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			99,
 			92
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_psychoexplosion_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			86,
 			84
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_execution_asst_wukong_woodragon_psychoexplosion_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			71,
 			55
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_root_asst_wukong_woodragon_body_decal_8"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			63
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_root_asst_wukong_woodragon_body_decal_9"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			88,
 			44
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_root_asst_wukong_woodragon_body_decal_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			34,
 			58
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_root_asst_wukong_woodragon_body_decal_11"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			34,
 			34
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_root_asst_wukong_woodragon_head_shape_3_decal1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			210,
 			208
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_root_asst_wukong_woodragon_head_shape_3_decal2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			199,
 			172
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_root_asst_wukong_woodragon_head_shape_3_decal3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			277,
 			157
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_root_asst_wukong_woodragon_head_shape_3_decal4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			107,
 			64
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_root_asst_wukong_woodragon_head_shape_3_decal5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			107,
 			60
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_root_asst_wukong_woodragon_head_shape_3_decal6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			107,
 			62
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["fireholder_dragon_root_asst_wukong_woodragon_head_shape_3_decaln1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			186,
 			159
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["fireholder_gradiente_asst_wukong_woodragon_gradientetorre"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			337,
 			302
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_elemental_wood_fire_portal_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			29,
 			35
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_elemental_wood_fire_portal_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			82,
 			78
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_elemental_wood_fire_portal_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			122
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_elemental_wood_fire_portal_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			124,
 			101
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_elemental_wood_fire_portal_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			102
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_elemental_wood_fire_portal_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			105
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_elemental_wood_fire_portal_07"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			113,
 			107
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_elemental_wood_fire_portal_08"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			97
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_elemental_wood_fire_portal_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			82
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_wukong_woodragon_fx_humito_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_wukong_woodragon_fx_humito_1_nube"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_wukong_woodragon_fx_humito_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_wukong_woodragon_head_shape6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			205,
 			134
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_wukong_woodragon_head_shape_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			236,
 			205
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_wukong_woodragon_head_shape_3_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			217,
 			235
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_wukong_woodragon_head_shape_3_copy_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			229,
 			253
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_wukong_woodragon_head_shape_3_openmouth"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			237,
 			205
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_wukong_woodragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["fireholder_habilidad_1_asst_wukong_woodragon_nube_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			137,
 			102
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarra_asst_underground_prop_smallrock_01_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			17
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarra_asst_underground_prop_smallrock_01_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			17
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarra_asst_underground_prop_smallrock_02_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			23,
 			24
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarra_asst_underground_prop_smallrock_02_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			21,
 			22
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarra_asst_underground_prop_smallrock_03_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			12,
 			11
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarra_asst_underground_prop_smallrock_03_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			12,
 			11
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarra_asst_underground_prop_smallrock_04_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			26,
 			28
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarra_asst_underground_prop_smallrock_04_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			24,
 			23
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarra_asst_wukong_woodragon_jarra"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			101,
 			114
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarra_asst_wukong_woodragon_jarra_handle_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			36,
 			59
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarra_asst_wukong_woodragon_jarra_handle_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			35,
 			63
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarra_asst_wukong_woodragon_jarra_head"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			56
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarra_asst_wukong_woodragon_shadowbase_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			66,
 			18
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarra_asst_wukong_woodragon_shadowbase_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			31
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["fireholder_jarrahojas_asst_wukong_woodragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_asst_wukong_woodragon_ray_light"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			47
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_asst_wukong_woodragon_ray_lighting_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			383
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_asst_wukong_woodragon_ray_lighting_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			347
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_asst_wukong_woodragon_ray_lighting_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			303
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_asst_wukong_woodragon_ray_lighting_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			57,
 			295
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_asst_wukong_woodragon_ray_lighting_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			69,
 			307
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_asst_wukong_woodragon_ray_lighting_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			36,
 			113
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_asst_wukong_woodragon_ray_lighting_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			25,
 			119
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_asst_wukong_woodragon_ray_sky_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			56
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_asst_wukong_woodragon_ray_sky_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			31,
 			94
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_asst_wukong_woodragon_ray_sky_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			197
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_asst_wukong_woodragon_ray_sky_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			313
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_asst_wukong_woodragon_ray_sky_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			134,
 			217
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_babies_smokecircle1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			75,
 			61
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_babies_smokecircle2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			80,
 			61
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_babies_smokecircle3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			76,
 			62
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_babies_smokecircle4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			78,
 			57
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			72,
 			51
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			67
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			138,
 			149
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			135
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			129,
 			139
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			147,
 			142
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_7"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			151,
 			133
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_8"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			180,
 			130
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_9"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			165,
 			117
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			190,
 			126
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_11"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			168,
 			127
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_12"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			171,
 			108
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_barn_lightning_13"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			143,
 			87
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_boss3_bigglow"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			39,
 			39
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_lightning_splash_"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			39
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_lightning_splash_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			13
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_lightning_splash_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			32
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_lightning_splash_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			38
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_lightning_splash_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			38
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_lightning_splash_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			38
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_rey01_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			41
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_rey02_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			48
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_rey03_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			41
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_rockexpl"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			87,
 			87
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_Symbol_30_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_Symbol_32_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_Symbol_33_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_Symbol_34_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			62,
 			52
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_Symbol_35_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			62,
 			49
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["fireholder_rayo_explosion_asst_wukong_woodragon_Symbol_36_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["goldholder_coin_splash_asst_wukong_goldragon_coin1_sep"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			26,
 			29
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["goldholder_coin_splash_asst_wukong_goldragon_coin2_sep"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			24,
 			29
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["goldholder_coin_splash_asst_wukong_goldragon_coin3_sep"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			26,
 			27
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["goldholder_cuernos_asst_wukong_goldragon_horns_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			99,
 			134
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["goldholder_cuernos_asst_wukong_goldragon_wisker"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			75,
 			51
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_coin1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			26,
 			29
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_coin2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			24,
 			29
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_coin3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			26,
 			27
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_colacurva_1_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			49
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_colacurva_1_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			49
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_colacurva_1_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			61,
 			49
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_colacurva_1_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			48
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_colacurva_1_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			60,
 			48
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_colacurva_1_lineastill"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			86,
 			48
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_colacurva_1_relleno"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			55
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_dronehive_impact_body_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			80
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_dronehive_impact_body_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			54,
 			41
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_dronehive_impact_body_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			38,
 			44
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_dronehive_impact_body_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			35
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_dronehive_impact_body_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			35
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fire_portal_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			29,
 			35
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fire_portal_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			82,
 			78
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fire_portal_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			122
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fire_portal_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			124,
 			101
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fire_portal_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			102
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fire_portal_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			105
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fire_portal_07"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			113,
 			107
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fire_portal_08"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			97
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fire_portal_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			82
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fx_humito_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fx_humito_1_nube"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fx_humito_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fxcd_boss_v1_dallas_spark"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			44
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fxcd_boss_v1_dallas_sparkattack1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			90
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fxcd_boss_v1_dallas_sparkattack2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fxcd_boss_v1_dallas_sparkattack3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			73,
 			71
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_fxcd_boss_v1_dallas_sparkattack4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			65
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_head_cd"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			160,
 			166
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_head_shape6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			205,
 			134
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_head_shape6_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			197,
 			193
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_head_shape_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			236,
 			205
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_head_shape_3_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			217,
 			235
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_head_shape_3_copy_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			229,
 			253
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_head_shape_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			99,
 			154
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_headterciofrente_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			163,
 			123
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_headterciofrente_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			43,
 			51
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_headterciofrente_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			41,
 			53
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_headterciofrente_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			52
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_headterciofrente_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			52
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_headterciofrente_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			45,
 			52
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_headterciofrente_lineastill_idle"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			156
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_headterciofrente_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_headterciofrente_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_headterciofrente_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_headterciofrente_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_headterciofrente_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_bigote"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			70,
 			65
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_body_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_body_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_body_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_body_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			99,
 			94
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_body_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			100,
 			93
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_body_lineastill"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			95,
 			61
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_body_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			69
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_body_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			69
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_body_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			71
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_body_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			72
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_body_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			69
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_colacurva_pelo_1_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			52
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_colacurva_pelo_1_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			48
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_colacurva_pelo_1_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			57,
 			48
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_colacurva_pelo_1_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			61,
 			50
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_colacurva_pelo_1_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			49
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_colacurva_pelo_1_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			47,
 			34
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_colacurva_pelo_1_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			36
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_colacurva_pelo_1_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			36
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_colacurva_pelo_1_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			47,
 			36
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_colacurva_pelo_1_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			45,
 			34
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_idle_head_body"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			70,
 			104
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_mouth_cd"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			88,
 			82
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_oscurito_body1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			70,
 			104
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_oscurito_head"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			124,
 			135
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_puntacola_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_puntacola_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_puntacola_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_puntacola_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_puntacola_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_puntacola_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			34
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_puntacola_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			34
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_puntacola_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			36
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_puntacola_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			34
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_puntacola_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			36
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_asst_wukong_goldragon_star"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			51,
 			53
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_root_asst_wukong_goldragon_body_decal_8"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			63
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_root_asst_wukong_goldragon_body_decal_9"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			88,
 			44
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_root_asst_wukong_goldragon_body_decal_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			34,
 			58
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_root_asst_wukong_goldragon_body_decal_11"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			34,
 			34
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_root_asst_wukong_goldragon_head_shape_3_decal1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			210,
 			208
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_root_asst_wukong_goldragon_head_shape_3_decal2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			199,
 			172
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_root_asst_wukong_goldragon_head_shape_3_decal3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			277,
 			157
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_root_asst_wukong_goldragon_head_shape_3_decal4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			107,
 			64
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_root_asst_wukong_goldragon_head_shape_3_decal5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			107,
 			60
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_root_asst_wukong_goldragon_head_shape_3_decal6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			107,
 			62
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["goldholder_dragon_root_asst_wukong_goldragon_head_shape_3_decaln1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			186,
 			159
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["goldholder_gradiente_asst_wukong_goldragon_gradientetorre"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			338,
 			259
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_coin1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			26,
 			29
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_coin2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			24,
 			29
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_coin3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			26,
 			27
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_fire_portal_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			29,
 			35
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_fire_portal_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			82,
 			78
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_fire_portal_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			122
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_fire_portal_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			124,
 			101
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_fire_portal_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			102
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_fire_portal_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			105
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_fire_portal_07"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			113,
 			107
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_fire_portal_08"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			97
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_fire_portal_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			82
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_fx_humito_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_fx_humito_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_head_shape6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			205,
 			134
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_head_shape_3_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			217,
 			235
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_head_shape_3_copy_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			229,
 			253
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_head_shape_3_openmouth"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			237,
 			205
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["goldholder_habilidad_1_asst_wukong_goldragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarra_asst_wukong_goldragon_baselineart"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			76,
 			14
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarra_asst_wukong_goldragon_jarra_head_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			56
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarra_asst_wukong_goldragon_prop_smallrock_01_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			17
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarra_asst_wukong_goldragon_prop_smallrock_01_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			17
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarra_asst_wukong_goldragon_prop_smallrock_02_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			23,
 			24
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarra_asst_wukong_goldragon_prop_smallrock_02_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			21,
 			22
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarra_asst_wukong_goldragon_prop_smallrock_03_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			12,
 			11
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarra_asst_wukong_goldragon_prop_smallrock_03_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			12,
 			11
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarra_asst_wukong_goldragon_prop_smallrock_04_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			26,
 			28
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarra_asst_wukong_goldragon_prop_smallrock_04_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			24,
 			23
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarra_asst_wukong_goldragon_sombra"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			99,
 			29
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarra_asst_wukong_goldragon_stage5_goldragon"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			139,
 			139
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarra_asst_wukong_goldragon_star"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			51,
 			53
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarrahojas_asst_wukong_goldragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["goldholder_jarrahojas_asst_wukong_goldragon_star"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			51,
 			53
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_asst_wukong_goldragon_ray_light"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			47
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_asst_wukong_goldragon_ray_lighting_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			383
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_asst_wukong_goldragon_ray_lighting_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			347
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_asst_wukong_goldragon_ray_lighting_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			303
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_asst_wukong_goldragon_ray_lighting_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			57,
 			295
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_asst_wukong_goldragon_ray_lighting_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			69,
 			307
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_asst_wukong_goldragon_ray_lighting_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			36,
 			113
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_asst_wukong_goldragon_ray_lighting_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			25,
 			119
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_asst_wukong_goldragon_ray_sky_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			56
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_asst_wukong_goldragon_ray_sky_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			31,
 			94
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_asst_wukong_goldragon_ray_sky_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			197
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_asst_wukong_goldragon_ray_sky_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			313
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_asst_wukong_goldragon_ray_sky_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			134,
 			217
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_babies_smokecircle1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			75,
 			61
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_babies_smokecircle2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			80,
 			61
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_babies_smokecircle3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			76,
 			62
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_babies_smokecircle4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			78,
 			57
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_barn_lightning_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			72,
 			51
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_barn_lightning_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			67
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_barn_lightning_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			138,
 			149
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_barn_lightning_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			135
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_barn_lightning_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			129,
 			139
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_barn_lightning_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			147,
 			142
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_barn_lightning_7"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			151,
 			133
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_barn_lightning_8"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			180,
 			130
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_barn_lightning_9"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			165,
 			117
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_barn_lightning_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			190,
 			126
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_barn_lightning_11"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			168,
 			127
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_barn_lightning_12"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			171,
 			108
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_barn_lightning_13"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			143,
 			87
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_boss3_bigglow"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			39,
 			39
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_lightning_splash_"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			39
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_lightning_splash_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			13
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_lightning_splash_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			32
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_lightning_splash_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			38
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_lightning_splash_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			38
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_lightning_splash_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			38
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_rey01_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			41
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_rey02_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			48
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_rey03_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			41
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_rockexpl"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			87,
 			87
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_Symbol_30_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_Symbol_32_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_Symbol_33_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_Symbol_34_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			62,
 			52
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_Symbol_35_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			62,
 			49
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["goldholder_rayo_explosion_asst_wukong_goldragon_Symbol_36_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_0001"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			110,
 			113
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_0002"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			110,
 			113
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_0003"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			110,
 			113
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_0004"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			110,
 			113
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_0005"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			110,
 			113
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_0006"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			110,
 			113
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_0007"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			110,
 			113
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_0008"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			110,
 			113
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_0009"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			110,
 			113
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_0010"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			110,
 			113
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_big_0001"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			139,
 			144
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_big_0002"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			139,
 			144
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_big_0003"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			139,
 			144
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_big_0004"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			139,
 			144
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_big_0005"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			139,
 			144
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_big_0006"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			139,
 			144
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_big_0007"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			139,
 			144
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_big_0008"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			139,
 			144
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_big_0009"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			139,
 			144
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["holder_elemental_33_teleport_teleport_fx_big_0010"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			139,
 			144
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_animations_parche_asst_wukong_woodragon_parche_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			45,
 			14
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_animations_parche_asst_wukong_woodragon_parche_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			45,
 			15
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_animations_parche_asst_wukong_woodragon_parche_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			45,
 			14
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_cuernos_asst_wukong_woodragon_horns_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			100,
 			134
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_cuernos_asst_wukong_woodragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_cuernos_asst_wukong_woodragon_wisker"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			75,
 			51
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_elemental_wood_fire_portal_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			29,
 			35
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_elemental_wood_fire_portal_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			82,
 			78
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_elemental_wood_fire_portal_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			122
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_elemental_wood_fire_portal_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			124,
 			101
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_elemental_wood_fire_portal_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			102
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_elemental_wood_fire_portal_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			105
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_elemental_wood_fire_portal_07"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			113,
 			107
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_elemental_wood_fire_portal_08"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			97
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_elemental_wood_fire_portal_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			82
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_colacurva_1_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			49
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_colacurva_1_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			49
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_colacurva_1_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			61,
 			49
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_colacurva_1_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			48
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_colacurva_1_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			60,
 			48
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_colacurva_1_lineastill"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			86,
 			48
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_colacurva_1_relleno"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			55
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_dronehive_impact_body_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			80
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_dronehive_impact_body_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			54,
 			41
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_dronehive_impact_body_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			38,
 			44
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_dronehive_impact_body_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			35
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_dronehive_impact_body_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			35
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_fx_humito_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_fx_humito_1_nube"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_fx_humito_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_spark"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			44
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_sparkattack1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			90
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_sparkattack2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_sparkattack3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			73,
 			71
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_fxcd_boss_v1_dallas_sparkattack4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			65
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_head_cd"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			160,
 			166
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_head_shape6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			205,
 			134
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_head_shape6_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			121,
 			126
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_head_shape_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			236,
 			205
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_head_shape_3_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			217,
 			235
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_head_shape_3_copy_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			229,
 			253
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_head_shape_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			93,
 			140
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_headterciofrente_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			43,
 			51
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_headterciofrente_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			41,
 			53
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_headterciofrente_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			52
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_headterciofrente_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			52
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_headterciofrente_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			45,
 			52
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_headterciofrente_lineastill_idle"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			156
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_headterciofrente_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_headterciofrente_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_headterciofrente_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_headterciofrente_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_headterciofrente_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_bigote"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			33
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_body_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_body_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_body_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_body_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			99,
 			94
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_body_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			100,
 			93
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_body_lineastill"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			95,
 			61
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_body_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			69
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_body_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			69
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_body_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			71
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_body_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			72
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_body_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			69
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			52
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			48
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			57,
 			48
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			61,
 			50
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			49
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			47,
 			34
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			36
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			36
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			47,
 			36
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_colacurva_pelo_1_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			45,
 			34
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_idle_head_body"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			54,
 			72
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_mouth_cd"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			88,
 			82
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_nube_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			163,
 			109
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_puntacola_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_puntacola_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_puntacola_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_puntacola_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_puntacola_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_puntacola_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			34
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_puntacola_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			34
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_puntacola_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			36
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_puntacola_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			34
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_asst_wukong_woodragon_puntacola_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			36
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_root_asst_wukong_woodragon_body_decal_8"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			63
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_root_asst_wukong_woodragon_body_decal_9"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			88,
 			44
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_root_asst_wukong_woodragon_body_decal_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			34,
 			58
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_root_asst_wukong_woodragon_body_decal_11"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			34,
 			34
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_root_asst_wukong_woodragon_head_shape_3_decal1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			210,
 			208
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_root_asst_wukong_woodragon_head_shape_3_decal2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			199,
 			172
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_root_asst_wukong_woodragon_head_shape_3_decal3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			277,
 			157
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_root_asst_wukong_woodragon_head_shape_3_decal4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			107,
 			64
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_root_asst_wukong_woodragon_head_shape_3_decal5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			107,
 			60
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_root_asst_wukong_woodragon_head_shape_3_decal6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			107,
 			62
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_dragon_root_asst_wukong_woodragon_head_shape_3_decaln1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			186,
 			159
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_gradiente_asst_wukong_woodragon_gradientetorre"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			337,
 			302
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_elemental_wood_fire_portal_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			29,
 			35
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_elemental_wood_fire_portal_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			82,
 			78
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_elemental_wood_fire_portal_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			122
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_elemental_wood_fire_portal_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			124,
 			101
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_elemental_wood_fire_portal_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			102
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_elemental_wood_fire_portal_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			105
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_elemental_wood_fire_portal_07"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			113,
 			107
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_elemental_wood_fire_portal_08"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			97
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_elemental_wood_fire_portal_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			82
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_wukong_woodragon_fx_humito_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_wukong_woodragon_fx_humito_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_wukong_woodragon_head_shape6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			205,
 			134
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_wukong_woodragon_head_shape_3_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			217,
 			235
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_wukong_woodragon_head_shape_3_copy_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			229,
 			253
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_wukong_woodragon_head_shape_3_openmouth"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			237,
 			205
@@ -17160,7 +17160,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_habilidad_1_asst_wukong_woodragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -17184,7 +17184,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarra_asst_underground_prop_smallrock_01_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			17
@@ -17208,7 +17208,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarra_asst_underground_prop_smallrock_01_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			17
@@ -17232,7 +17232,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarra_asst_underground_prop_smallrock_02_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			23,
 			24
@@ -17256,7 +17256,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarra_asst_underground_prop_smallrock_02_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			21,
 			22
@@ -17280,7 +17280,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarra_asst_underground_prop_smallrock_03_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			12,
 			11
@@ -17304,7 +17304,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarra_asst_underground_prop_smallrock_03_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			12,
 			11
@@ -17328,7 +17328,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarra_asst_underground_prop_smallrock_04_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			26,
 			28
@@ -17352,7 +17352,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarra_asst_underground_prop_smallrock_04_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			24,
 			23
@@ -17376,7 +17376,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarra_asst_wukong_woodragon_jarra"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			98
@@ -17400,7 +17400,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarra_asst_wukong_woodragon_jarra_handle_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			36,
 			59
@@ -17424,7 +17424,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarra_asst_wukong_woodragon_jarra_handle_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			35,
 			63
@@ -17448,7 +17448,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarra_asst_wukong_woodragon_jarra_head"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			56
@@ -17472,7 +17472,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarra_asst_wukong_woodragon_shadowbase_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			66,
 			18
@@ -17496,7 +17496,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarra_asst_wukong_woodragon_shadowbase_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			31
@@ -17520,7 +17520,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_jarrahojas_asst_wukong_woodragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -17544,7 +17544,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_asst_wukong_woodragon_ray_light"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			47
@@ -17568,7 +17568,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_asst_wukong_woodragon_ray_lighting_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			383
@@ -17592,7 +17592,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_asst_wukong_woodragon_ray_lighting_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			347
@@ -17616,7 +17616,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_asst_wukong_woodragon_ray_lighting_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			303
@@ -17640,7 +17640,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_asst_wukong_woodragon_ray_lighting_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			57,
 			295
@@ -17664,7 +17664,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_asst_wukong_woodragon_ray_lighting_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			69,
 			307
@@ -17688,7 +17688,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_asst_wukong_woodragon_ray_lighting_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			36,
 			113
@@ -17712,7 +17712,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_asst_wukong_woodragon_ray_lighting_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			25,
 			119
@@ -17736,7 +17736,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_asst_wukong_woodragon_ray_sky_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			56
@@ -17760,7 +17760,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_asst_wukong_woodragon_ray_sky_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			31,
 			94
@@ -17784,7 +17784,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_asst_wukong_woodragon_ray_sky_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			197
@@ -17808,7 +17808,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_asst_wukong_woodragon_ray_sky_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			313
@@ -17832,7 +17832,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_asst_wukong_woodragon_ray_sky_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			134,
 			217
@@ -17856,7 +17856,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_babies_smokecircle1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			75,
 			61
@@ -17880,7 +17880,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_babies_smokecircle2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			80,
 			61
@@ -17904,7 +17904,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_babies_smokecircle3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			76,
 			62
@@ -17928,7 +17928,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_babies_smokecircle4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			78,
 			57
@@ -17952,7 +17952,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_barn_lightning_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			72,
 			51
@@ -17976,7 +17976,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_barn_lightning_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			67
@@ -18000,7 +18000,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_barn_lightning_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			138,
 			149
@@ -18024,7 +18024,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_barn_lightning_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			135
@@ -18048,7 +18048,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_barn_lightning_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			129,
 			139
@@ -18072,7 +18072,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_barn_lightning_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			147,
 			142
@@ -18096,7 +18096,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_barn_lightning_7"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			151,
 			133
@@ -18120,7 +18120,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_barn_lightning_8"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			180,
 			130
@@ -18144,7 +18144,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_barn_lightning_9"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			165,
 			117
@@ -18168,7 +18168,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_barn_lightning_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			190,
 			126
@@ -18192,7 +18192,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_barn_lightning_11"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			168,
 			127
@@ -18216,7 +18216,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_barn_lightning_12"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			171,
 			108
@@ -18240,7 +18240,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_barn_lightning_13"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			143,
 			87
@@ -18264,7 +18264,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_boss3_bigglow"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			39,
 			39
@@ -18288,7 +18288,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_lightning_splash_"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			39
@@ -18312,7 +18312,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_lightning_splash_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			13
@@ -18336,7 +18336,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_lightning_splash_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			32
@@ -18360,7 +18360,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_lightning_splash_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			38
@@ -18384,7 +18384,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_lightning_splash_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			38
@@ -18408,7 +18408,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_lightning_splash_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			38
@@ -18432,7 +18432,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_rey01_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			41
@@ -18456,7 +18456,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_rey02_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			48
@@ -18480,7 +18480,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_rey03_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			41
@@ -18504,7 +18504,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_rockexpl"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			87,
 			87
@@ -18528,7 +18528,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_Symbol_30_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -18552,7 +18552,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_Symbol_32_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -18576,7 +18576,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_Symbol_33_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -18600,7 +18600,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_Symbol_34_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			62,
 			52
@@ -18624,7 +18624,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_Symbol_35_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			62,
 			49
@@ -18648,7 +18648,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_rayo_explosion_asst_wukong_woodragon_Symbol_36_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -18672,7 +18672,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root1_asst_wukong_woodragon_root1_rock1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			22
@@ -18696,7 +18696,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root1_asst_wukong_woodragon_root1_rock2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			22
@@ -18720,7 +18720,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root1_asst_wukong_woodragon_root1_rock3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			51,
 			19
@@ -18744,7 +18744,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root1_asst_wukong_woodragon_root1_rock4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			17
@@ -18768,7 +18768,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root1_asst_wukong_woodragon_root1_rock5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			17
@@ -18792,7 +18792,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root1_asst_wukong_woodragon_root1_rock6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			47,
 			9
@@ -18816,7 +18816,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root1_asst_wukong_woodragon_root2_flower_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			12,
 			13
@@ -18840,7 +18840,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root1_asst_wukong_woodragon_root2_flower_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			21,
 			20
@@ -18864,7 +18864,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root1_asst_wukong_woodragon_roots_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			87,
 			39
@@ -18888,7 +18888,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root2_asst_wukong_woodragon_root1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			46
@@ -18912,7 +18912,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root2_asst_wukong_woodragon_root1_rock1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			22
@@ -18936,7 +18936,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root2_asst_wukong_woodragon_root1_rock2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			22
@@ -18960,7 +18960,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root2_asst_wukong_woodragon_root1_rock3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			51,
 			19
@@ -18984,7 +18984,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root2_asst_wukong_woodragon_root1_rock4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			17
@@ -19008,7 +19008,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root2_asst_wukong_woodragon_root1_rock5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			17
@@ -19032,7 +19032,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root2_asst_wukong_woodragon_root1_rock6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			47,
 			9
@@ -19056,7 +19056,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root2_asst_wukong_woodragon_root2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			61,
 			30
@@ -19080,7 +19080,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root2_asst_wukong_woodragon_root2_flower_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			12,
 			13
@@ -19104,7 +19104,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root2_asst_wukong_woodragon_root2_flower_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			21,
 			20
@@ -19128,7 +19128,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root2_asst_wukong_woodragon_root4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			19
@@ -19152,7 +19152,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root3_asst_wukong_woodragon_root1_rock1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			22
@@ -19176,7 +19176,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root3_asst_wukong_woodragon_root1_rock2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			22
@@ -19200,7 +19200,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root3_asst_wukong_woodragon_root1_rock3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			51,
 			19
@@ -19224,7 +19224,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root3_asst_wukong_woodragon_root1_rock4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			17
@@ -19248,7 +19248,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root3_asst_wukong_woodragon_root1_rock5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			17
@@ -19272,7 +19272,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root3_asst_wukong_woodragon_root1_rock6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			47,
 			9
@@ -19296,7 +19296,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root3_asst_wukong_woodragon_root2_flower_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			12,
 			13
@@ -19320,7 +19320,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root3_asst_wukong_woodragon_root2_flower_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			21,
 			20
@@ -19344,7 +19344,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root3_asst_wukong_woodragon_roots_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			79,
 			32
@@ -19368,7 +19368,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root4_asst_wukong_woodragon_root1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			46
@@ -19392,7 +19392,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root4_asst_wukong_woodragon_root1_rock1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			22
@@ -19416,7 +19416,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root4_asst_wukong_woodragon_root1_rock2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			22
@@ -19440,7 +19440,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root4_asst_wukong_woodragon_root1_rock3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			51,
 			19
@@ -19464,7 +19464,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root4_asst_wukong_woodragon_root1_rock4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			17
@@ -19488,7 +19488,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root4_asst_wukong_woodragon_root1_rock5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			17
@@ -19512,7 +19512,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root4_asst_wukong_woodragon_root1_rock6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			47,
 			9
@@ -19536,7 +19536,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root4_asst_wukong_woodragon_root2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			61,
 			30
@@ -19560,7 +19560,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root4_asst_wukong_woodragon_root2_flower_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			12,
 			13
@@ -19584,7 +19584,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root4_asst_wukong_woodragon_root2_flower_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			21,
 			20
@@ -19608,7 +19608,7 @@ return {
 		alias = {},
 	},
 	["stage31_wood_holder_root4_asst_wukong_woodragon_root4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			19
@@ -19632,7 +19632,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_debuff_mid_asst_wukong_waterdragon_debuff_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			47
@@ -19656,7 +19656,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_debuff_mid_asst_wukong_waterdragon_debuff_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			42
@@ -19680,7 +19680,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_debuff_mid_asst_wukong_waterdragon_debuff_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			43
@@ -19704,7 +19704,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_debuff_mid_asst_wukong_waterdragon_debuff_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			47
@@ -19728,7 +19728,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_debuff_mid_asst_wukong_waterdragon_debuff_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			42
@@ -19752,7 +19752,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_debuff_mid_asst_wukong_waterdragon_debuff_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			43
@@ -19776,7 +19776,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonfly_asst_wukong_waterdragon_body_decal_8"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			63
@@ -19800,7 +19800,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonfly_asst_wukong_waterdragon_body_decal_9"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			88,
 			44
@@ -19824,7 +19824,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonfly_asst_wukong_waterdragon_body_decal_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			34,
 			58
@@ -19848,7 +19848,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonfly_asst_wukong_waterdragon_body_decal_11"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			34,
 			34
@@ -19872,7 +19872,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonfly_asst_wukong_waterdragon_head_shape_3_decal3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			277,
 			157
@@ -19896,7 +19896,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonfly_asst_wukong_waterdragon_head_shape_3_decal6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			107,
 			62
@@ -19920,7 +19920,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonfly_asst_wukong_woodragon_head_shape_3_decal1_teeth"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			210,
 			208
@@ -19944,7 +19944,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonfly_asst_wukong_woodragon_head_shape_3_openmouth_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			120,
 			154
@@ -19968,7 +19968,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonfly_asst_wukong_woodragon_head_shape_3_openmouth_body"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			144,
 			208
@@ -19992,7 +19992,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonroot_asst_wukong_waterdragon_body_decal_8"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			63
@@ -20016,7 +20016,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonroot_asst_wukong_waterdragon_body_decal_9"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			88,
 			44
@@ -20040,7 +20040,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonroot_asst_wukong_waterdragon_body_decal_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			34,
 			58
@@ -20064,7 +20064,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonroot_asst_wukong_waterdragon_body_decal_11"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			34,
 			34
@@ -20088,7 +20088,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonroot_asst_wukong_waterdragon_head_shape_3_decal1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			210,
 			208
@@ -20112,7 +20112,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonroot_asst_wukong_waterdragon_head_shape_3_decal2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			199,
 			172
@@ -20136,7 +20136,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonroot_asst_wukong_waterdragon_head_shape_3_decal3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			277,
 			157
@@ -20160,7 +20160,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonroot_asst_wukong_waterdragon_head_shape_3_decal4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			107,
 			64
@@ -20184,7 +20184,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonroot_asst_wukong_waterdragon_head_shape_3_decal5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			107,
 			60
@@ -20208,7 +20208,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonroot_asst_wukong_waterdragon_head_shape_3_decal6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			107,
 			62
@@ -20232,7 +20232,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_dragonroot_asst_wukong_waterdragon_head_shape_3_decaln1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			186,
 			159
@@ -20256,7 +20256,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_animations_parche_asst_wukong_waterdragon_parche_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			31,
 			28
@@ -20280,7 +20280,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_cuernos_asst_wukong_waterdragon_horns_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			100,
 			134
@@ -20304,7 +20304,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_cuernos_asst_wukong_waterdragon_wisker"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			75,
 			51
@@ -20328,7 +20328,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_dreadfull_boss_v1_dallas_spark"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			44
@@ -20352,7 +20352,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_dreadfull_boss_v1_dallas_sparkattack1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			90
@@ -20376,7 +20376,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_dreadfull_boss_v1_dallas_sparkattack2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -20400,7 +20400,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_dreadfull_boss_v1_dallas_sparkattack3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			73,
 			71
@@ -20424,7 +20424,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_dreadfull_boss_v1_dallas_sparkattack4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			65
@@ -20448,7 +20448,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_elemental_wood_fire_portal_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			29,
 			35
@@ -20472,7 +20472,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_elemental_wood_fire_portal_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			82,
 			78
@@ -20496,7 +20496,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_elemental_wood_fire_portal_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			122
@@ -20520,7 +20520,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_elemental_wood_fire_portal_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			124,
 			101
@@ -20544,7 +20544,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_elemental_wood_fire_portal_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			102
@@ -20568,7 +20568,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_elemental_wood_fire_portal_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			105
@@ -20592,7 +20592,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_elemental_wood_fire_portal_07"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			113,
 			107
@@ -20616,7 +20616,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_elemental_wood_fire_portal_08"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			97
@@ -20640,7 +20640,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_elemental_wood_fire_portal_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			82
@@ -20664,7 +20664,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_colacurva_1_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			49
@@ -20688,7 +20688,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_colacurva_1_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			49
@@ -20712,7 +20712,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_colacurva_1_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			61,
 			49
@@ -20736,7 +20736,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_colacurva_1_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			48
@@ -20760,7 +20760,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_colacurva_1_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			60,
 			48
@@ -20784,7 +20784,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_colacurva_1_lineastill"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			86,
 			48
@@ -20808,7 +20808,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_colacurva_1_relleno"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			55
@@ -20832,7 +20832,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_dronehive_impact_body_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			80
@@ -20856,7 +20856,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_dronehive_impact_body_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			54,
 			41
@@ -20880,7 +20880,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_dronehive_impact_body_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			38,
 			44
@@ -20904,7 +20904,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_dronehive_impact_body_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			35
@@ -20928,7 +20928,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_dronehive_impact_body_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			35
@@ -20952,7 +20952,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_fx_humito_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -20976,7 +20976,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_fx_humito_1_nube"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -21000,7 +21000,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_fx_humito_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -21024,7 +21024,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_head_cd"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			160,
 			166
@@ -21048,7 +21048,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_head_shape6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			205,
 			134
@@ -21072,7 +21072,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_head_shape6_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			121,
 			126
@@ -21096,7 +21096,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_head_shape_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			236,
 			205
@@ -21120,7 +21120,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_head_shape_3_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			217,
 			235
@@ -21144,7 +21144,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_head_shape_3_copy_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			229,
 			253
@@ -21168,7 +21168,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_head_shape_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			93,
 			140
@@ -21192,7 +21192,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_headterciofrente_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			43,
 			51
@@ -21216,7 +21216,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_headterciofrente_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			41,
 			53
@@ -21240,7 +21240,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_headterciofrente_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			52
@@ -21264,7 +21264,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_headterciofrente_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			52
@@ -21288,7 +21288,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_headterciofrente_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			45,
 			52
@@ -21312,7 +21312,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_headterciofrente_lineastill_idle"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			156
@@ -21336,7 +21336,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_headterciofrente_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -21360,7 +21360,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_headterciofrente_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -21384,7 +21384,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_headterciofrente_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -21408,7 +21408,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_headterciofrente_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -21432,7 +21432,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_headterciofrente_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			81,
 			115
@@ -21456,7 +21456,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_bigote"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			33
@@ -21480,7 +21480,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_body_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -21504,7 +21504,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_body_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -21528,7 +21528,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_body_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			92
@@ -21552,7 +21552,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_body_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			99,
 			94
@@ -21576,7 +21576,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_body_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			100,
 			93
@@ -21600,7 +21600,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_body_lineastill"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			95,
 			61
@@ -21624,7 +21624,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_body_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			69
@@ -21648,7 +21648,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_body_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			69
@@ -21672,7 +21672,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_body_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			71
@@ -21696,7 +21696,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_body_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			97,
 			72
@@ -21720,7 +21720,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_body_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			98,
 			69
@@ -21744,7 +21744,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_colacurva_pelo_1_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			52
@@ -21768,7 +21768,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_colacurva_pelo_1_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			48
@@ -21792,7 +21792,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_colacurva_pelo_1_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			57,
 			48
@@ -21816,7 +21816,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_colacurva_pelo_1_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			61,
 			50
@@ -21840,7 +21840,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_colacurva_pelo_1_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			49
@@ -21864,7 +21864,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_colacurva_pelo_1_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			47,
 			34
@@ -21888,7 +21888,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_colacurva_pelo_1_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			36
@@ -21912,7 +21912,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_colacurva_pelo_1_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			36
@@ -21936,7 +21936,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_colacurva_pelo_1_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			47,
 			36
@@ -21960,7 +21960,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_colacurva_pelo_1_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			45,
 			34
@@ -21984,7 +21984,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_idle_head_body"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			54,
 			72
@@ -22008,7 +22008,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -22032,7 +22032,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_mouth_cd"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			88,
 			82
@@ -22056,7 +22056,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_nube_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			163,
 			109
@@ -22080,7 +22080,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_puntacola_linea_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -22104,7 +22104,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_puntacola_linea_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -22128,7 +22128,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_puntacola_linea_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -22152,7 +22152,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_puntacola_linea_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -22176,7 +22176,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_puntacola_linea_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			63
@@ -22200,7 +22200,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_puntacola_relleno_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			34
@@ -22224,7 +22224,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_puntacola_relleno_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			34
@@ -22248,7 +22248,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_puntacola_relleno_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			36
@@ -22272,7 +22272,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_puntacola_relleno_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			34
@@ -22296,7 +22296,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_dragon_asst_wukong_waterdragon_puntacola_relleno_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			36
@@ -22320,7 +22320,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_gradiente_asst_wukong_waterdragon_gradientetorre"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			337,
 			302
@@ -22344,7 +22344,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_elemental_wood_fire_portal_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			29,
 			35
@@ -22368,7 +22368,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_elemental_wood_fire_portal_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			82,
 			78
@@ -22392,7 +22392,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_elemental_wood_fire_portal_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			122
@@ -22416,7 +22416,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_elemental_wood_fire_portal_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			124,
 			101
@@ -22440,7 +22440,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_elemental_wood_fire_portal_05"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			102
@@ -22464,7 +22464,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_elemental_wood_fire_portal_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			115,
 			105
@@ -22488,7 +22488,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_elemental_wood_fire_portal_07"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			113,
 			107
@@ -22512,7 +22512,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_elemental_wood_fire_portal_08"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			105,
 			97
@@ -22536,7 +22536,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_elemental_wood_fire_portal_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			82
@@ -22560,7 +22560,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_wukong_waterdragon_fx_humito_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -22584,7 +22584,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_wukong_waterdragon_fx_humito_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			51
@@ -22608,7 +22608,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_wukong_waterdragon_fx_waterheal_cross_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			60,
 			60
@@ -22632,7 +22632,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_wukong_waterdragon_head_shape6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			205,
 			134
@@ -22656,7 +22656,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_wukong_waterdragon_head_shape_3_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			217,
 			235
@@ -22680,7 +22680,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_wukong_waterdragon_head_shape_3_copy_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			229,
 			253
@@ -22704,7 +22704,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_wukong_waterdragon_head_shape_3_openmouth"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			237,
 			205
@@ -22728,7 +22728,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_habilidad_1_asst_wukong_waterdragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -22752,7 +22752,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_heal_asst_wukong_waterdragon_fx_waterheal_cross_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			60,
 			60
@@ -22776,7 +22776,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_jarra_asst_underground_prop_smallrock_01_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			17
@@ -22800,7 +22800,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_jarra_asst_underground_prop_smallrock_01_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			17
@@ -22824,7 +22824,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_jarra_asst_underground_prop_smallrock_02_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			23,
 			24
@@ -22848,7 +22848,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_jarra_asst_underground_prop_smallrock_02_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			21,
 			22
@@ -22872,7 +22872,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_jarra_asst_underground_prop_smallrock_03_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			12,
 			11
@@ -22896,7 +22896,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_jarra_asst_underground_prop_smallrock_03_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			12,
 			11
@@ -22920,7 +22920,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_jarra_asst_underground_prop_smallrock_04_escama"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			26,
 			28
@@ -22944,7 +22944,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_jarra_asst_underground_prop_smallrock_04_jade"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			24,
 			23
@@ -22968,7 +22968,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_jarra_asst_wukong_waterdragon_jarra"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			94,
 			113
@@ -22992,7 +22992,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_jarra_asst_wukong_waterdragon_jarra_head"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			56
@@ -23016,7 +23016,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_jarra_asst_wukong_waterdragon_jarrasombra"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			66,
 			21
@@ -23040,7 +23040,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_jarrahojas_asst_wukong_waterdragon_leaf"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			14,
 			14
@@ -23064,7 +23064,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_asst_wukong_waterdragon_ray_light"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			65,
 			47
@@ -23088,7 +23088,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_asst_wukong_waterdragon_ray_lighting_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			383
@@ -23112,7 +23112,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_asst_wukong_waterdragon_ray_lighting_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			347
@@ -23136,7 +23136,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_asst_wukong_waterdragon_ray_lighting_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			49,
 			303
@@ -23160,7 +23160,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_asst_wukong_waterdragon_ray_lighting_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			57,
 			295
@@ -23184,7 +23184,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_asst_wukong_waterdragon_ray_lighting_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			69,
 			307
@@ -23208,7 +23208,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_asst_wukong_waterdragon_ray_lighting_09"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			36,
 			113
@@ -23232,7 +23232,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_asst_wukong_waterdragon_ray_lighting_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			25,
 			119
@@ -23256,7 +23256,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_asst_wukong_waterdragon_ray_sky_01"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			17,
 			56
@@ -23280,7 +23280,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_asst_wukong_waterdragon_ray_sky_02"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			31,
 			94
@@ -23304,7 +23304,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_asst_wukong_waterdragon_ray_sky_03"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			58,
 			197
@@ -23328,7 +23328,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_asst_wukong_waterdragon_ray_sky_04"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			59,
 			313
@@ -23352,7 +23352,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_asst_wukong_waterdragon_ray_sky_06"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			134,
 			217
@@ -23376,7 +23376,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_babies_smokecircle1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			75,
 			61
@@ -23400,7 +23400,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_babies_smokecircle2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			80,
 			61
@@ -23424,7 +23424,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_babies_smokecircle3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			76,
 			62
@@ -23448,7 +23448,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_babies_smokecircle4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			78,
 			57
@@ -23472,7 +23472,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_barn_lightning_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			72,
 			51
@@ -23496,7 +23496,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_barn_lightning_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			85,
 			67
@@ -23520,7 +23520,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_barn_lightning_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			138,
 			149
@@ -23544,7 +23544,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_barn_lightning_4"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			127,
 			135
@@ -23568,7 +23568,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_barn_lightning_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			129,
 			139
@@ -23592,7 +23592,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_barn_lightning_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			147,
 			142
@@ -23616,7 +23616,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_barn_lightning_7"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			151,
 			133
@@ -23640,7 +23640,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_barn_lightning_8"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			180,
 			130
@@ -23664,7 +23664,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_barn_lightning_9"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			165,
 			117
@@ -23688,7 +23688,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_barn_lightning_10"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			190,
 			126
@@ -23712,7 +23712,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_barn_lightning_11"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			168,
 			127
@@ -23736,7 +23736,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_barn_lightning_12"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			171,
 			108
@@ -23760,7 +23760,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_barn_lightning_13"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			143,
 			87
@@ -23784,7 +23784,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_boss3_bigglow"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			39,
 			39
@@ -23808,7 +23808,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_lightning_splash_"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			53,
 			39
@@ -23832,7 +23832,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_lightning_splash_1"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			18,
 			13
@@ -23856,7 +23856,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_lightning_splash_2"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			32
@@ -23880,7 +23880,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_lightning_splash_3"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			48,
 			38
@@ -23904,7 +23904,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_lightning_splash_5"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			55,
 			38
@@ -23928,7 +23928,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_lightning_splash_6"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			56,
 			38
@@ -23952,7 +23952,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_rey01_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			41
@@ -23976,7 +23976,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_rey02_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			48
@@ -24000,7 +24000,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_rey03_teleport_skillA"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			44,
 			41
@@ -24024,7 +24024,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_rockexpl"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			87,
 			87
@@ -24048,7 +24048,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_Symbol_30_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -24072,7 +24072,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_Symbol_32_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -24096,7 +24096,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_Symbol_33_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -24120,7 +24120,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_Symbol_34_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			62,
 			52
@@ -24144,7 +24144,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_Symbol_35_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			62,
 			49
@@ -24168,7 +24168,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_holder_rayo_explosion_asst_wukong_waterdragon_Symbol_36_copy"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			46,
 			41
@@ -24192,7 +24192,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_mist_asst_waterdragon_smokepurp"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			63,
 			61
@@ -24216,7 +24216,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_mist_asst_waterdragon_smokeup"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			24,
 			22
@@ -24240,7 +24240,7 @@ return {
 		alias = {},
 	},
 	["stage33_water_mist_asst_waterdragon_spark"] = {
-		a_name = "go_wukong_elemental_holders-1.png",
+		a_name = "go_wukong_elemental_holders-1.dds",
 		size = {
 			7,
 			7

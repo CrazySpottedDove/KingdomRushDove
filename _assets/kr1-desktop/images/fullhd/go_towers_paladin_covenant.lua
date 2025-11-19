@@ -1,6 +1,6 @@
 return {
 	["paladin_covenant_build"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			284,
 			284
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			284,
 			284
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0001"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0002"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0003"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0004"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0005"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0006"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0007"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0008"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0009"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0010"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0011"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0012"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0013"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0014"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0015"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0016"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0017"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_door_0018"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			56,
 			102
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0001"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0002"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0003"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0004"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0005"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0006"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0007"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0008"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0009"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0010"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0011"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0012"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0013"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0014"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0015"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0016"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0017"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0018"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0019"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0020"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0021"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_lvl4_flag_0022"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			266
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["paladin_covenant_preview"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			147,
 			187
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0001"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0002"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0003"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0004"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0005"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0006"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0007"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0008"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0009"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0010"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0011"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0012"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0013"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0014"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0015"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0016"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0017"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0018"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0019"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0020"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0021"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0022"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0023"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0024"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0025"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0026"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0027"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0028"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0029"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0030"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0031"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0032"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0033"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0034"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0035"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0036"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0037"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0038"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0039"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_fx_healing_0040"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			79,
 			93
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_glow_0001"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_glow_0002"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_glow_0003"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_glow_0004"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_glow_0005"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_glow_0006"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_glow_0007"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_glow_0008"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_glow_0009"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_glow_0010"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_halo"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			76,
 			96
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0001"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0002"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0003"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0004"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0005"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0006"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0007"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0008"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0009"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0010"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0011"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0012"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0013"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0014"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0015"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0016"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0017"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0018"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0019"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0020"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0021"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0022"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0023"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0024"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0025"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0026"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0027"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0028"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0029"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0030"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0031"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldier_lvl4_healing_plusSymbol_0032"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0001"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0002"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0003"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0004"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0005"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0006"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0007"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0008"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0009"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0010"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0011"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0012"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0013"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0014"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0015"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0016"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0017"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0018"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0019"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0020"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0021"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0022"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0023"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0024"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0025"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0026"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0027"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0028"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0029"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0030"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0031"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0032"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0033"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0034"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0035"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0036"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0037"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0038"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0039"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0040"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0041"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0042"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0043"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0044"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0045"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0046"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0047"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0048"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0049"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0050"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0051"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0052"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0053"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0054"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0055"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0056"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0057"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0058"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0059"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0060"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0061"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0062"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0063"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0064"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0065"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0066"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0067"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0068"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0069"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0070"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0071"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0072"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0073"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0074"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0075"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0076"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0077"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0078"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0079"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0080"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0081"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0082"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0083"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0084"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0085"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0086"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0087"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0088"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0089"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0090"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0091"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0092"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0093"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0094"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0095"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0096"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0097"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0098"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0099"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0100"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0101"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0102"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0103"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0104"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0105"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0106"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0107"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0108"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0109"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0110"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0111"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0112"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0113"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0114"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0115"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0116"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0117"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0118"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_0119"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			159,
 			170
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0001"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0002"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0003"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0004"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0005"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0006"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0007"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0008"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0009"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0010"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0011"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0012"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0013"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0014"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0015"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0016"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0017"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0018"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_buff_0019"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			218
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0001"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0002"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0003"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0004"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0005"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0006"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0007"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0008"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0009"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0010"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0011"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0012"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0013"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0014"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0015"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0016"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0017"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0018"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0019"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0020"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0021"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0022"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0023"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0024"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0025"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0026"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0027"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0028"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0029"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0030"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0031"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0032"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0033"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0034"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0035"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0036"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0037"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0038"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0039"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0040"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_decal_0041"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			190,
 			96
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_armor_mod_decal"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			127,
 			79
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0001"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0002"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0003"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0004"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0005"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0006"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0007"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0008"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0009"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0010"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0011"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0012"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0013"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0014"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0015"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0016"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0017"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0018"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0019"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0020"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0021"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0022"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0023"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0024"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0025"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0026"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0027"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0028"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0029"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0030"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0031"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0032"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0033"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0034"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0035"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0036"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0037"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0038"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0039"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0040"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0041"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0042"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0043"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0044"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0045"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0046"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0047"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0048"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0049"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0050"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0051"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0052"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0053"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0054"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0055"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0056"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0057"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0058"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0059"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0060"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0061"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0062"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0063"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0064"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0065"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0066"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0067"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0068"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0069"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0070"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0071"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0072"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0073"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0074"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0075"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0076"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0077"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0078"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0079"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0080"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0081"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0082"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0083"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0084"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0085"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0086"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0087"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0088"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0089"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0090"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0091"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0092"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0093"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0094"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0095"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0096"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0097"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0098"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0099"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0100"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0101"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0102"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0103"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0104"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0105"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0106"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0107"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0108"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0109"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0110"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0111"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0112"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0113"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0114"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0115"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0116"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0117"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0118"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0119"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0120"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0121"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0122"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0123"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0124"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0125"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0126"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0127"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0128"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0129"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0130"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0131"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0132"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0133"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0134"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0135"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0136"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0137"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0138"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0139"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0140"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0141"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0142"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0143"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0144"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0145"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0146"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0147"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0148"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0149"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0150"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0151"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0152"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0153"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0154"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0155"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0156"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0157"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0158"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0159"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0160"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0161"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0162"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0163"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0164"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0165"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0166"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0167"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0168"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0169"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0170"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0171"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0172"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0173"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0174"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0175"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0176"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0177"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0178"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0179"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0180"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0181"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0182"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0183"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0184"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0185"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0186"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0187"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0188"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0189"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0190"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0191"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0192"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0193"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0194"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0195"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0196"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0197"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0198"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0199"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0200"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0201"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0202"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0203"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0204"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0205"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0206"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_captain_soldier_0207"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			153,
 			195
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_glow_0001"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_glow_0002"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_glow_0003"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_glow_0004"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_glow_0005"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_glow_0006"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_glow_0007"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_glow_0008"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_glow_0009"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_glow_0010"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			124,
 			178
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_halo"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			76,
 			96
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0001"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0002"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0003"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0004"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0005"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0006"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0007"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0008"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0009"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0010"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0011"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0012"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0013"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0014"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0015"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0016"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0017"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0018"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0019"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0020"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0021"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0022"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0023"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0024"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0025"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0026"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0027"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0028"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0029"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["paladin_soldiers_lvl4_healing_plusSymbol_0030"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			93,
 			187
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0001"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0002"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0003"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0004"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0005"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0006"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0007"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0008"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0009"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0010"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0011"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0012"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0013"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0014"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0015"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0016"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0017"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0018"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0019"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0020"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0021"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0022"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0023"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0024"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0025"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0026"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0027"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0028"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0029"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0030"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0031"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0032"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0033"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0034"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0035"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0036"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0037"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0038"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0039"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0040"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0041"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0042"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0043"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0044"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0045"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0046"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0047"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0048"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0049"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0050"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0051"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0052"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0053"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0054"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0055"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["paladins_FX_0056"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			113,
 			113
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["tower_build_paladin_covenant"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			284,
 			284
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["tower_preview_paladin_covenant"] = {
-		a_name = "go_towers_paladin_covenant-1.png",
+		a_name = "go_towers_paladin_covenant-1.dds",
 		size = {
 			284,
 			284

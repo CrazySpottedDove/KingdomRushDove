@@ -1,6 +1,6 @@
 return {
 	["hero_lumenir_attack_hit_fx_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0013"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0014"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0015"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0016"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0017"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0018"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0019"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_0020"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			124,
 			193
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0013"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0014"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0015"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0016"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0017"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_hit_fx_air_0018"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			107,
 			105
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			76
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			76
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			76
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			76
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			76
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			76
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			76
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			76
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			76
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			76
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_trail_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			76,
 			59
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_trail_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			76,
 			59
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_trail_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			76,
 			59
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_trail_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			76,
 			59
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_trail_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			76,
 			59
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_trail_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			76,
 			59
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_trail_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			76,
 			59
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_trail_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			76,
 			59
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_trail_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			76,
 			59
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_trail_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			76,
 			59
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_trail_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			76,
 			59
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_attack_projectile_trail_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			76,
 			59
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0013"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0014"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_0015"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			167,
 			124
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_big_decal"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			127,
 			68
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_decal_big"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			127,
 			68
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_decal_mid"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			99,
 			59
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_decal_small"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			99,
 			59
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0013"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0014"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_0015"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			133,
 			105
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_mid_decal"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			99,
 			59
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0013"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0014"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_0015"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			122,
 			102
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_blessing_of_retribution_shield_small_decal"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			99,
 			59
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0013"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0014"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0015"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0016"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0017"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0018"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0019"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0020"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0021"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0022"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0023"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0024"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0025"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0026"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0027"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0028"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0029"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0030"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0031"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0032"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0033"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0034"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0035"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0036"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0037"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0038"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0039"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0040"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0041"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0042"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0043"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0044"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0045"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0046"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0047"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0048"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0049"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0050"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0051"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0052"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0053"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0054"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0055"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0056"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0057"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0058"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0059"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0060"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0061"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0062"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0063"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0064"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_0065"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			303
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_decal"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			142,
 			96
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0013"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0014"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0015"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0016"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0017"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0018"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0019"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0020"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0021"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0022"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0023"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_call_of_triumph_spawn_fx_0024"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			241,
 			621
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0013"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0014"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0015"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0016"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0017"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0018"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0019"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0020"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0021"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0022"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0023"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0024"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0025"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0026"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0027"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0028"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0029"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0030"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0031"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0032"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0033"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0034"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0035"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0036"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0037"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0038"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_0039"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			255,
 			553
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_celestial_judgement_fx_decal"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			184,
 			119
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0013"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0014"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0015"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0016"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0017"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0018"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0019"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0020"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0021"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0022"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0023"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0024"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0025"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0026"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0027"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0028"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0029"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0030"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0031"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0032"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0033"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0034"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0035"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0036"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0037"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0038"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0039"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0040"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0041"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0042"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0043"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0044"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0045"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0046"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0047"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0048"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0049"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0050"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0051"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0052"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0053"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0054"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0055"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0056"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0057"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0058"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0059"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0060"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0061"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0062"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0063"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0064"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0065"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0066"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0067"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0068"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0069"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0070"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0071"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0072"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0073"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0074"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0075"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0076"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0077"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0078"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0079"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0080"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0081"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0082"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0083"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0084"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0085"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0086"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0087"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0088"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0089"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0090"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0091"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0092"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0093"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0094"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0095"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0096"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0097"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0098"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0099"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0100"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0101"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0102"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0103"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0104"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0105"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0106"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0107"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0108"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0109"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0110"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0111"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0112"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0113"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0114"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0115"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0116"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0117"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0118"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0119"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0120"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0121"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0122"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0123"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0124"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0125"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0126"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0127"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0128"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0129"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0130"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0131"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0132"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0133"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0134"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0135"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0136"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0137"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0138"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0139"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0140"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0141"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0142"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0143"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0144"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0145"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0146"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0147"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0148"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0149"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0150"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0151"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0152"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0153"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0154"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0155"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0156"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0157"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0158"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0159"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0160"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0161"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0162"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0163"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0164"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0165"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0166"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0167"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0168"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0169"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0170"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0171"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0172"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0173"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0174"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0175"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0176"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0177"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0178"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0179"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0180"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0181"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0182"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0183"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0184"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0185"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0186"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0187"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0188"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0189"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0190"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0191"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0192"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0193"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0194"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0195"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0196"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0197"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0198"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0199"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0200"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0201"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0202"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0203"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0204"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0205"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0206"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0207"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0208"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0209"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0210"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0211"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0212"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0213"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0214"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0215"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0216"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0217"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0218"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0219"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0220"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0221"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0222"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0223"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0224"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0225"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0226"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0227"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0228"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0229"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0230"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0231"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0232"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0233"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0234"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0235"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0236"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0237"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0238"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0239"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0240"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0241"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0242"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0243"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0244"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0245"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0246"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0247"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0248"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0249"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0250"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0251"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0252"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0253"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0254"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0255"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0256"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0257"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0258"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0259"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0260"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0261"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0262"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0263"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0264"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0265"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0266"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0267"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0268"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0269"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0270"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0271"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0272"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0273"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0274"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0275"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0276"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0277"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0278"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0279"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0280"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0281"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0282"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0283"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0284"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0285"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0286"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0287"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0288"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0289"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0290"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0291"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0292"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			357
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0293"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			394
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0294"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			394
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0295"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			394
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_0296"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			431,
 			394
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_hero_shadow"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			71,
 			42
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0013"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0014"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0015"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0016"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0017"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0018"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0019"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0020"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0021"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0022"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0023"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0024"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0025"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0026"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0027"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0028"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0029"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0030"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0031"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0032"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0033"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0034"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0035"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0036"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0037"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0038"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0039"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0040"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0041"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0042"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0043"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0044"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0045"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0046"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0047"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0048"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0049"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0050"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0051"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0052"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0053"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0054"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0055"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0056"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0057"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0058"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0059"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0060"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0061"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0062"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0063"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0064"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0065"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0066"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0067"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0068"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0069"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0070"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0071"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0072"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0073"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0074"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0075"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0076"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0077"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0078"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0079"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0080"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_0081"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			258,
 			337
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_fx_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			90,
 			82
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_fx_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			90,
 			82
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_fx_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			90,
 			82
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_fx_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			90,
 			82
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_fx_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			90,
 			82
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_fx_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			90,
 			82
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_fx_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			90,
 			82
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_fx_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			90,
 			82
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0013"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0014"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0015"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0016"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0017"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0018"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0019"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_0020"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			79,
 			62
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			176,
 			65
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			176,
 			65
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			176,
 			65
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			176,
 			65
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			176,
 			65
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			176,
 			65
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			176,
 			65
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			176,
 			65
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			176,
 			65
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			176,
 			65
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			176,
 			65
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			176,
 			65
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_0013"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			176,
 			65
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_0014"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			176,
 			65
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_particle_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			59,
 			53
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_particle_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			59,
 			53
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_particle_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			59,
 			53
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_particle_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			59,
 			53
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_particle_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			59,
 			53
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_attack_projectile_trail_particle_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			59,
 			53
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_light_companion_shadow"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			56,
 			36
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0013"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0014"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0015"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0016"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0017"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0018"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0019"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_projectile_0020"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			93,
 			79
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0001"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0002"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0003"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0004"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0005"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0006"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0007"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0008"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0009"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0010"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0011"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0012"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0013"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0014"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0015"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["hero_lumenir_radiant_wave_trail_0016"] = {
-		a_name = "go_hero_lumenir-1.png",
+		a_name = "go_hero_lumenir-1.dds",
 		size = {
 			96,
 			76

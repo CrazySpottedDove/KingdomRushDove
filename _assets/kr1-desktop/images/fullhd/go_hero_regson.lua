@@ -2,7 +2,7 @@
 
 return {
 	regson_hero_0001 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -33,7 +33,7 @@ return {
 		}
 	},
 	regson_hero_0002 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -57,7 +57,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0003 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -81,7 +81,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0004 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -107,7 +107,7 @@ return {
 		}
 	},
 	regson_hero_0006 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -131,7 +131,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0007 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -157,7 +157,7 @@ return {
 		}
 	},
 	regson_hero_0009 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -183,7 +183,7 @@ return {
 		}
 	},
 	regson_hero_0011 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -209,7 +209,7 @@ return {
 		}
 	},
 	regson_hero_0013 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -236,7 +236,7 @@ return {
 		}
 	},
 	regson_hero_0016 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -262,7 +262,7 @@ return {
 		}
 	},
 	regson_hero_0018 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -288,7 +288,7 @@ return {
 		}
 	},
 	regson_hero_0020 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -314,7 +314,7 @@ return {
 		}
 	},
 	regson_hero_0022 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -340,7 +340,7 @@ return {
 		}
 	},
 	regson_hero_0024 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -366,7 +366,7 @@ return {
 		}
 	},
 	regson_hero_0027 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -392,7 +392,7 @@ return {
 		}
 	},
 	regson_hero_0029 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -418,7 +418,7 @@ return {
 		}
 	},
 	regson_hero_0031 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -444,7 +444,7 @@ return {
 		}
 	},
 	regson_hero_0033 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -470,7 +470,7 @@ return {
 		}
 	},
 	regson_hero_0035 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -496,7 +496,7 @@ return {
 		}
 	},
 	regson_hero_0037 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -522,7 +522,7 @@ return {
 		}
 	},
 	regson_hero_0039 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -548,7 +548,7 @@ return {
 		}
 	},
 	regson_hero_0041 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -574,7 +574,7 @@ return {
 		}
 	},
 	regson_hero_0043 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -598,7 +598,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0044 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -624,7 +624,7 @@ return {
 		}
 	},
 	regson_hero_0046 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -650,7 +650,7 @@ return {
 		}
 	},
 	regson_hero_0048 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -676,7 +676,7 @@ return {
 		}
 	},
 	regson_hero_0050 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -702,7 +702,7 @@ return {
 		}
 	},
 	regson_hero_0052 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -728,7 +728,7 @@ return {
 		}
 	},
 	regson_hero_0054 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -754,7 +754,7 @@ return {
 		}
 	},
 	regson_hero_0056 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -780,7 +780,7 @@ return {
 		}
 	},
 	regson_hero_0058 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -806,7 +806,7 @@ return {
 		}
 	},
 	regson_hero_0061 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -832,7 +832,7 @@ return {
 		}
 	},
 	regson_hero_0063 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -858,7 +858,7 @@ return {
 		}
 	},
 	regson_hero_0065 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -884,7 +884,7 @@ return {
 		}
 	},
 	regson_hero_0067 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -910,7 +910,7 @@ return {
 		}
 	},
 	regson_hero_0069 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -936,7 +936,7 @@ return {
 		}
 	},
 	regson_hero_0071 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -962,7 +962,7 @@ return {
 		}
 	},
 	regson_hero_0073 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -988,7 +988,7 @@ return {
 		}
 	},
 	regson_hero_0075 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1014,7 +1014,7 @@ return {
 		}
 	},
 	regson_hero_0077 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1040,7 +1040,7 @@ return {
 		}
 	},
 	regson_hero_0079 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1064,7 +1064,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0080 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1088,7 +1088,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0081 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1112,7 +1112,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0082 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1136,7 +1136,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0083 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1160,7 +1160,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0084 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1184,7 +1184,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0085 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1208,7 +1208,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0086 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1232,7 +1232,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0087 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1256,7 +1256,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0088 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1280,7 +1280,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0089 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1304,7 +1304,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0090 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1328,7 +1328,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0091 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1352,7 +1352,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0092 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1376,7 +1376,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0093 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1400,7 +1400,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0096 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1426,7 +1426,7 @@ return {
 		}
 	},
 	regson_hero_0098 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1452,7 +1452,7 @@ return {
 		}
 	},
 	regson_hero_0100 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1478,7 +1478,7 @@ return {
 		}
 	},
 	regson_hero_0102 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1504,7 +1504,7 @@ return {
 		}
 	},
 	regson_hero_0104 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1530,7 +1530,7 @@ return {
 		}
 	},
 	regson_hero_0106 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1556,7 +1556,7 @@ return {
 		}
 	},
 	regson_hero_0108 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1582,7 +1582,7 @@ return {
 		}
 	},
 	regson_hero_0110 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1608,7 +1608,7 @@ return {
 		}
 	},
 	regson_hero_0112 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1634,7 +1634,7 @@ return {
 		}
 	},
 	regson_hero_0114 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1660,7 +1660,7 @@ return {
 		}
 	},
 	regson_hero_0116 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1686,7 +1686,7 @@ return {
 		}
 	},
 	regson_hero_0118 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1712,7 +1712,7 @@ return {
 		}
 	},
 	regson_hero_0120 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1738,7 +1738,7 @@ return {
 		}
 	},
 	regson_hero_0122 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1762,7 +1762,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0123 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1786,7 +1786,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0124 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1812,7 +1812,7 @@ return {
 		}
 	},
 	regson_hero_0126 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1836,7 +1836,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0127 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1862,7 +1862,7 @@ return {
 		}
 	},
 	regson_hero_0129 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1888,7 +1888,7 @@ return {
 		}
 	},
 	regson_hero_0131 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1914,7 +1914,7 @@ return {
 		}
 	},
 	regson_hero_0133 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1940,7 +1940,7 @@ return {
 		}
 	},
 	regson_hero_0135 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1967,7 +1967,7 @@ return {
 		}
 	},
 	regson_hero_0138 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -1993,7 +1993,7 @@ return {
 		}
 	},
 	regson_hero_0140 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2019,7 +2019,7 @@ return {
 		}
 	},
 	regson_hero_0142 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2045,7 +2045,7 @@ return {
 		}
 	},
 	regson_hero_0144 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2071,7 +2071,7 @@ return {
 		}
 	},
 	regson_hero_0146 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2097,7 +2097,7 @@ return {
 		}
 	},
 	regson_hero_0148 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2123,7 +2123,7 @@ return {
 		}
 	},
 	regson_hero_0150 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2150,7 +2150,7 @@ return {
 		}
 	},
 	regson_hero_0153 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2176,7 +2176,7 @@ return {
 		}
 	},
 	regson_hero_0155 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2202,7 +2202,7 @@ return {
 		}
 	},
 	regson_hero_0157 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2228,7 +2228,7 @@ return {
 		}
 	},
 	regson_hero_0159 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2254,7 +2254,7 @@ return {
 		}
 	},
 	regson_hero_0161 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2280,7 +2280,7 @@ return {
 		}
 	},
 	regson_hero_0163 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2306,7 +2306,7 @@ return {
 		}
 	},
 	regson_hero_0165 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2332,7 +2332,7 @@ return {
 		}
 	},
 	regson_hero_0167 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2356,7 +2356,7 @@ return {
 		alias = {}
 	},
 	regson_hero_0168 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2382,7 +2382,7 @@ return {
 		}
 	},
 	regson_hero_0170 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2408,7 +2408,7 @@ return {
 		}
 	},
 	regson_hero_0172 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2434,7 +2434,7 @@ return {
 		}
 	},
 	regson_hero_0174 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			169,
 			141
@@ -2460,7 +2460,7 @@ return {
 		}
 	},
 	regson_hero_soulFx_0001 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			56
@@ -2486,7 +2486,7 @@ return {
 		}
 	},
 	regson_hero_soulFx_0003 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			56
@@ -2512,7 +2512,7 @@ return {
 		}
 	},
 	regson_hero_soulFx_0005 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			56
@@ -2538,7 +2538,7 @@ return {
 		}
 	},
 	regson_hero_soulFx_0007 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			56
@@ -2564,7 +2564,7 @@ return {
 		}
 	},
 	regson_hero_soulFx_0009 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			56
@@ -2590,7 +2590,7 @@ return {
 		}
 	},
 	regson_hero_soulFx_0011 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			56
@@ -2616,7 +2616,7 @@ return {
 		}
 	},
 	regson_hero_soulHeal_0001 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2640,7 +2640,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0002 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2664,7 +2664,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0003 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2688,7 +2688,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0004 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2712,7 +2712,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0005 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2736,7 +2736,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0006 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2760,7 +2760,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0007 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2784,7 +2784,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0008 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2808,7 +2808,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0009 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2832,7 +2832,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0010 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2856,7 +2856,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0011 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2880,7 +2880,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0012 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2904,7 +2904,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0013 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2928,7 +2928,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0014 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2952,7 +2952,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0015 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -2976,7 +2976,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0016 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -3000,7 +3000,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0017 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -3024,7 +3024,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0018 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -3048,7 +3048,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0019 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -3072,7 +3072,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0020 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -3096,7 +3096,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0021 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -3120,7 +3120,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0022 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -3144,7 +3144,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0023 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -3168,7 +3168,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0024 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -3192,7 +3192,7 @@ return {
 		alias = {}
 	},
 	regson_hero_soulHeal_0025 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			56,
 			70
@@ -3216,7 +3216,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0001 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3240,7 +3240,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0002 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3266,7 +3266,7 @@ return {
 		}
 	},
 	regson_hero_ultimate_0004 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3292,7 +3292,7 @@ return {
 		}
 	},
 	regson_hero_ultimate_0006 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3316,7 +3316,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0007 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3340,7 +3340,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0008 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3364,7 +3364,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0009 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3388,7 +3388,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0010 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3412,7 +3412,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0011 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3436,7 +3436,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0012 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3460,7 +3460,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0013 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3486,7 +3486,7 @@ return {
 		}
 	},
 	regson_hero_ultimate_0015 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3510,7 +3510,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0016 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3536,7 +3536,7 @@ return {
 		}
 	},
 	regson_hero_ultimate_0018 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3560,7 +3560,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0019 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3584,7 +3584,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0020 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3608,7 +3608,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0021 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3632,7 +3632,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0022 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3656,7 +3656,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0023 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3680,7 +3680,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0024 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3704,7 +3704,7 @@ return {
 		alias = {}
 	},
 	regson_hero_ultimate_0025 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			163,
 			155
@@ -3728,7 +3728,7 @@ return {
 		alias = {}
 	},
 	regson_hero_whirlwindFx_0001 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			65,
 			79
@@ -3752,7 +3752,7 @@ return {
 		alias = {}
 	},
 	regson_hero_whirlwindFx_0002 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			65,
 			79
@@ -3776,7 +3776,7 @@ return {
 		alias = {}
 	},
 	regson_hero_whirlwindFx_0003 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			65,
 			79
@@ -3800,7 +3800,7 @@ return {
 		alias = {}
 	},
 	regson_hero_whirlwindFx_0004 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			65,
 			79
@@ -3826,7 +3826,7 @@ return {
 		}
 	},
 	regson_hero_whirlwindFx_0006 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			65,
 			79
@@ -3852,7 +3852,7 @@ return {
 		}
 	},
 	regson_hero_whirlwindFx_0008 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			65,
 			79
@@ -3878,7 +3878,7 @@ return {
 		}
 	},
 	regson_hero_whirlwindFx_0010 = {
-		a_name = "go_hero_regson-1.png",
+		a_name = "go_hero_regson-1.dds",
 		size = {
 			65,
 			79

@@ -40,21 +40,23 @@ JOBS=${JOBS:-$(nproc 2>/dev/null || echo 4)}
 
 echo "Creating base archive (excluding PNGs) -> $ARCHIVE_DIR"
 # 先打包项目中除 png 和 .versions 的文件（避免把 archive 自己打进去）
-zip -r "$ARCHIVE_DIR" . -x "*.png" -x ".versions/*" -x "tmp/*" -x "*.exe" -x ".git/*" -x "KingdomRushDoveUpdater" -q
+zip -r "$ARCHIVE_DIR" . -x "*.dds" -x ".versions/*" -x "tmp/*" -x "*.exe" -x ".git/*" -x "KingdomRushDoveUpdater" -q
 
 # 创建临时目录用于放置缩放后的 png，保留相对路径
 tempdir=$(mktemp -d)
 trap 'rm -rf "$tempdir"' EXIT
 
+DDS_ASSETS_DIR="./_assets/kr1-desktop/images/fullhd"
+
 # 收集待处理 PNG 列表（相对于工作目录）
-mapfile -d '' png_files < <(find ./_assets -type f -name "*.png" -print0 || printf '')
+mapfile -d '' png_files < <(find $DDS_ASSETS_DIR -type f -name "*.dds" -print0 || printf '')
 
 # 更可靠地计算数量（避免复杂的参数替换导致的兼容性问题）
-png_count=$(find ./_assets -type f -name "*.png" 2>/dev/null | wc -l | tr -d ' ')
+png_count=$(find $DDS_ASSETS_DIR -type f -name "*.dds" 2>/dev/null | wc -l | tr -d ' ')
 png_count=${png_count:-0}
 
 if [ "$png_count" -eq 0 ]; then
-    echo "No PNG files found in ./_assets"
+    echo "No PNG files found in $DDS_ASSETS_DIR."
 else
     echo "Processing $png_count PNG files with $JOBS jobs (ImageMagick: $IM_CMD)..."
 

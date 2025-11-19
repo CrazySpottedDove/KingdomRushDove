@@ -1,6 +1,6 @@
 return {
 	["alert_creep_notxt_0001"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -24,7 +24,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0002"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -48,7 +48,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0003"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -72,7 +72,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0004"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -96,7 +96,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0005"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -120,7 +120,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0006"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -144,7 +144,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0007"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -168,7 +168,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0008"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -192,7 +192,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0009"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -216,7 +216,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0010"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -240,7 +240,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0011"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -264,7 +264,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0012"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -288,7 +288,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0013"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -312,7 +312,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0014"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -336,7 +336,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0015"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -360,7 +360,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0016"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -384,7 +384,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0017"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -408,7 +408,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0018"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -432,7 +432,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0019"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -456,7 +456,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0020"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -480,7 +480,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0021"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -504,7 +504,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0022"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -528,7 +528,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0023"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -552,7 +552,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0024"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -576,7 +576,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0025"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -600,7 +600,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0026"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -624,7 +624,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0027"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -648,7 +648,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0028"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -672,7 +672,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0029"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -696,7 +696,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0030"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -720,7 +720,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0031"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -744,7 +744,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0032"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -768,7 +768,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0033"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -792,7 +792,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0034"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -816,7 +816,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0035"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -840,7 +840,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0036"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -864,7 +864,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0037"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -888,7 +888,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0038"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -912,7 +912,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0039"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -936,7 +936,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0040"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -960,7 +960,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0041"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -984,7 +984,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0042"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1008,7 +1008,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0043"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1032,7 +1032,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0044"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1056,7 +1056,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0045"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1080,7 +1080,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0046"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1104,7 +1104,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0047"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1128,7 +1128,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0048"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1152,7 +1152,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0049"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1176,7 +1176,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0050"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1200,7 +1200,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0051"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1224,7 +1224,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0052"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1248,7 +1248,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0053"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1272,7 +1272,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0054"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1296,7 +1296,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0055"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1320,7 +1320,7 @@ return {
 		alias = {}
 	},
 	["alert_creep_notxt_0056"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1344,7 +1344,7 @@ return {
 		alias = {}
 	},
 	["alert_tip_notxt_0001"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1368,7 +1368,7 @@ return {
 		alias = {}
 	},
 	["alert_tip_notxt_0002"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1392,7 +1392,7 @@ return {
 		alias = {}
 	},
 	["alert_tip_notxt_0003"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1416,7 +1416,7 @@ return {
 		alias = {}
 	},
 	["alert_tip_notxt_0004"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1440,7 +1440,7 @@ return {
 		alias = {}
 	},
 	["alert_tip_notxt_0005"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1464,7 +1464,7 @@ return {
 		alias = {}
 	},
 	["alert_tip_notxt_0006"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1488,7 +1488,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0001"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1512,7 +1512,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0002"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1536,7 +1536,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0003"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1560,7 +1560,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0004"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1584,7 +1584,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0005"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1608,7 +1608,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0006"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1632,7 +1632,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0007"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1656,7 +1656,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0008"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1680,7 +1680,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0009"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1704,7 +1704,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0010"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1728,7 +1728,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0011"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1752,7 +1752,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0012"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1776,7 +1776,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0013"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1800,7 +1800,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0014"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1824,7 +1824,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0015"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1848,7 +1848,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0016"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1872,7 +1872,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0017"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1896,7 +1896,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0018"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1920,7 +1920,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0019"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1944,7 +1944,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0020"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1968,7 +1968,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0021"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -1992,7 +1992,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0022"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2016,7 +2016,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0023"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2040,7 +2040,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0024"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2064,7 +2064,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0025"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2088,7 +2088,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0026"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2112,7 +2112,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0027"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2136,7 +2136,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0028"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2160,7 +2160,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0029"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2184,7 +2184,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0030"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2208,7 +2208,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0031"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2232,7 +2232,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0032"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2256,7 +2256,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0033"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2280,7 +2280,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0034"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2304,7 +2304,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0035"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2328,7 +2328,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0036"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2352,7 +2352,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0037"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2376,7 +2376,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0038"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2400,7 +2400,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0039"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2424,7 +2424,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0040"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2448,7 +2448,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0041"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2472,7 +2472,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0042"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2496,7 +2496,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0043"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2520,7 +2520,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0044"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2544,7 +2544,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0045"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2568,7 +2568,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0046"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2592,7 +2592,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0047"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2616,7 +2616,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0048"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2640,7 +2640,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0049"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2664,7 +2664,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0050"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2688,7 +2688,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0051"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2712,7 +2712,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0052"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2736,7 +2736,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0053"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2760,7 +2760,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0054"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2784,7 +2784,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0055"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2808,7 +2808,7 @@ return {
 		alias = {}
 	},
 	["kr2_alert_creep_notxt_0056"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2832,7 +2832,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0001"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2856,7 +2856,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0002"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2880,7 +2880,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0003"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2904,7 +2904,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0004"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2928,7 +2928,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0005"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2952,7 +2952,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0006"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -2976,7 +2976,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0007"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3000,7 +3000,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0008"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3024,7 +3024,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0009"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3048,7 +3048,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0010"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3072,7 +3072,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0011"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3096,7 +3096,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0012"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3120,7 +3120,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0013"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3144,7 +3144,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0014"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3168,7 +3168,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0015"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3192,7 +3192,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0016"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3216,7 +3216,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0017"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3240,7 +3240,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0018"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3264,7 +3264,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0019"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3288,7 +3288,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0020"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3312,7 +3312,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0021"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3336,7 +3336,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0022"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3360,7 +3360,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0023"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3384,7 +3384,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0024"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3408,7 +3408,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0025"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3432,7 +3432,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0026"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3456,7 +3456,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0027"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3480,7 +3480,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0028"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3504,7 +3504,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0029"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3528,7 +3528,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0030"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3552,7 +3552,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0031"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3576,7 +3576,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0032"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3600,7 +3600,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0033"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3624,7 +3624,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0034"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3648,7 +3648,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0035"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3672,7 +3672,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0036"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3696,7 +3696,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0037"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3720,7 +3720,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0038"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3744,7 +3744,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0039"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3768,7 +3768,7 @@ return {
 		alias = {}
 	},
 	["kr3_alert_creep_notxt_0040"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3792,7 +3792,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0001"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3816,7 +3816,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0002"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3840,7 +3840,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0003"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3864,7 +3864,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0004"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3888,7 +3888,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0005"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3912,7 +3912,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0006"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3936,7 +3936,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0007"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3960,7 +3960,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0008"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -3984,7 +3984,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0009"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4008,7 +4008,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0010"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4032,7 +4032,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0011"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4056,7 +4056,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0012"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4080,7 +4080,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0013"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4104,7 +4104,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0014"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4128,7 +4128,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0015"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4152,7 +4152,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0016"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4176,7 +4176,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0017"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4200,7 +4200,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0018"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4224,7 +4224,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0019"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4248,7 +4248,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0020"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4272,7 +4272,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0021"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4296,7 +4296,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0022"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4320,7 +4320,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0023"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4344,7 +4344,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0024"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4368,7 +4368,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0025"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4392,7 +4392,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0026"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4416,7 +4416,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0027"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4440,7 +4440,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0028"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4464,7 +4464,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0029"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4488,7 +4488,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0030"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4512,7 +4512,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0031"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4536,7 +4536,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0032"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4560,7 +4560,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0033"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4584,7 +4584,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0034"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4608,7 +4608,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0035"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4632,7 +4632,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0036"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4656,7 +4656,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0037"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4680,7 +4680,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0038"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4704,7 +4704,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0039"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4728,7 +4728,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0040"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4752,7 +4752,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0041"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4776,7 +4776,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0042"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4800,7 +4800,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0043"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4824,7 +4824,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0044"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4848,7 +4848,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0045"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4872,7 +4872,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0046"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4896,7 +4896,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0047"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4920,7 +4920,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0048"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4944,7 +4944,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0049"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4968,7 +4968,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0050"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -4992,7 +4992,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0051"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5016,7 +5016,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0052"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5040,7 +5040,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0053"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5064,7 +5064,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0054"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5088,7 +5088,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0055"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5112,7 +5112,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0056"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5136,7 +5136,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0057"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5160,7 +5160,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0058"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5184,7 +5184,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0059"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5208,7 +5208,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0060"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5232,7 +5232,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0061"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5256,7 +5256,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0062"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5280,7 +5280,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0063"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5304,7 +5304,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0064"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5328,7 +5328,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0065"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5352,7 +5352,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0066"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5376,7 +5376,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0067"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5400,7 +5400,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0068"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5424,7 +5424,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0069"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5448,7 +5448,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0070"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5472,7 +5472,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0071"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5496,7 +5496,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0072"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5520,7 +5520,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0073"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5544,7 +5544,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0074"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5568,7 +5568,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0075"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5592,7 +5592,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0076"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5616,7 +5616,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0077"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5640,7 +5640,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0078"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5664,7 +5664,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0079"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5688,7 +5688,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0080"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5712,7 +5712,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0081"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5736,7 +5736,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0082"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5760,7 +5760,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0083"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5784,7 +5784,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0084"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5808,7 +5808,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0085"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5832,7 +5832,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0086"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5856,7 +5856,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0087"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5880,7 +5880,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0088"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5904,7 +5904,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0089"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5928,7 +5928,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0090"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5952,7 +5952,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0091"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -5976,7 +5976,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0092"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -6000,7 +6000,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0093"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -6024,7 +6024,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0094"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -6048,7 +6048,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0095"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -6072,7 +6072,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0096"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -6096,7 +6096,7 @@ return {
 		alias = {}
 	},
 	["kr5_alert_creep_notxt_0097"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			112,
 			92
@@ -6120,7 +6120,7 @@ return {
 		alias = {}
 	},
 	["notifications_but_dark_bg_0001"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			200,
 			88
@@ -6144,7 +6144,7 @@ return {
 		alias = {}
 	},
 	["notifications_but_dark_bg_0002"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			200,
 			88
@@ -6168,7 +6168,7 @@ return {
 		alias = {}
 	},
 	["notifications_but_lightblue_bg_0001"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			200,
 			90
@@ -6192,7 +6192,7 @@ return {
 		alias = {}
 	},
 	["notifications_but_lightblue_bg_0002"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			200,
 			90
@@ -6216,7 +6216,7 @@ return {
 		alias = {}
 	},
 	["notifications_newenemy_polaroidTop"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			900,
 			420
@@ -6240,7 +6240,7 @@ return {
 		alias = {}
 	},
 	["notifications_polaroid_overlay"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			330,
 			320
@@ -6264,7 +6264,7 @@ return {
 		alias = {}
 	},
 	["notifications_polaroid_overlay_small_shadow"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			330,
 			320
@@ -6288,7 +6288,7 @@ return {
 		alias = {}
 	},
 	["notifications_tit_generics_bg_0001"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			360,
 			100
@@ -6312,7 +6312,7 @@ return {
 		alias = {}
 	},
 	["notifications_tit_generics_bg_0002"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			360,
 			100
@@ -6336,7 +6336,7 @@ return {
 		alias = {}
 	},
 	["notifications_tit_newenemy_bg"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			360,
 			100
@@ -6360,7 +6360,7 @@ return {
 		alias = {}
 	},
 	["notifications_tit_newpower_bg"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			360,
 			100
@@ -6384,7 +6384,7 @@ return {
 		alias = {}
 	},
 	["notifications_tit_towers_bg"] = {
-		a_name = "gui_notifications-1.png",
+		a_name = "gui_notifications-1.dds",
 		size = {
 			360,
 			100

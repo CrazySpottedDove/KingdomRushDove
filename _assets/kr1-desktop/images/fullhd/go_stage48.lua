@@ -2,7 +2,7 @@
 
 return {
 	Stage22_0002 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			1980,
 			1080
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	burner_0001 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			73,
 			87
@@ -52,7 +52,7 @@ return {
 		}
 	},
 	burner_0003 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			73,
 			87
@@ -78,7 +78,7 @@ return {
 		}
 	},
 	burner_0005 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			73,
 			87
@@ -104,7 +104,7 @@ return {
 		}
 	},
 	burner_0007 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			73,
 			87
@@ -130,7 +130,7 @@ return {
 		}
 	},
 	burner_0009 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			73,
 			87
@@ -156,7 +156,7 @@ return {
 		}
 	},
 	burner_0011 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			73,
 			87
@@ -182,7 +182,7 @@ return {
 		}
 	},
 	moria_0001 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			82,
 			118
@@ -206,7 +206,7 @@ return {
 		alias = {}
 	},
 	moria_0002 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			82,
 			118
@@ -230,7 +230,7 @@ return {
 		alias = {}
 	},
 	reptile_0001 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -256,7 +256,7 @@ return {
 		}
 	},
 	reptile_0003 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -280,7 +280,7 @@ return {
 		alias = {}
 	},
 	reptile_0004 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -304,7 +304,7 @@ return {
 		alias = {}
 	},
 	reptile_0005 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -328,7 +328,7 @@ return {
 		alias = {}
 	},
 	reptile_0006 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -352,7 +352,7 @@ return {
 		alias = {}
 	},
 	reptile_0007 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -376,7 +376,7 @@ return {
 		alias = {}
 	},
 	reptile_0008 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -400,7 +400,7 @@ return {
 		alias = {}
 	},
 	reptile_0009 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -446,7 +446,7 @@ return {
 		}
 	},
 	reptile_0023 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -482,7 +482,7 @@ return {
 		}
 	},
 	reptile_0043 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -508,7 +508,7 @@ return {
 		}
 	},
 	reptile_0045 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -534,7 +534,7 @@ return {
 		}
 	},
 	reptile_0047 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -560,7 +560,7 @@ return {
 		}
 	},
 	reptile_0049 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -586,7 +586,7 @@ return {
 		}
 	},
 	reptile_0051 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -612,7 +612,7 @@ return {
 		}
 	},
 	reptile_0053 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -638,7 +638,7 @@ return {
 		}
 	},
 	reptile_0055 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -664,7 +664,7 @@ return {
 		}
 	},
 	reptile_0057 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -690,7 +690,7 @@ return {
 		}
 	},
 	reptile_0059 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -716,7 +716,7 @@ return {
 		}
 	},
 	reptile_0061 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -742,7 +742,7 @@ return {
 		}
 	},
 	reptile_0063 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -768,7 +768,7 @@ return {
 		}
 	},
 	reptile_0065 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -794,7 +794,7 @@ return {
 		}
 	},
 	reptile_0067 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -820,7 +820,7 @@ return {
 		}
 	},
 	reptile_0069 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -849,7 +849,7 @@ return {
 		}
 	},
 	reptile_0074 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -875,7 +875,7 @@ return {
 		}
 	},
 	reptile_0076 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -901,7 +901,7 @@ return {
 		}
 	},
 	reptile_0078 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -927,7 +927,7 @@ return {
 		}
 	},
 	reptile_0080 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -953,7 +953,7 @@ return {
 		}
 	},
 	reptile_0082 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -979,7 +979,7 @@ return {
 		}
 	},
 	reptile_0084 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1005,7 +1005,7 @@ return {
 		}
 	},
 	reptile_0086 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1031,7 +1031,7 @@ return {
 		}
 	},
 	reptile_0088 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1057,7 +1057,7 @@ return {
 		}
 	},
 	reptile_0090 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1083,7 +1083,7 @@ return {
 		}
 	},
 	reptile_0092 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1109,7 +1109,7 @@ return {
 		}
 	},
 	reptile_0094 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1135,7 +1135,7 @@ return {
 		}
 	},
 	reptile_0096 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1161,7 +1161,7 @@ return {
 		}
 	},
 	reptile_0098 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1187,7 +1187,7 @@ return {
 		}
 	},
 	reptile_0100 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1213,7 +1213,7 @@ return {
 		}
 	},
 	reptile_0102 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1239,7 +1239,7 @@ return {
 		}
 	},
 	reptile_0104 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1265,7 +1265,7 @@ return {
 		}
 	},
 	reptile_0106 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1291,7 +1291,7 @@ return {
 		}
 	},
 	reptile_0108 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1317,7 +1317,7 @@ return {
 		}
 	},
 	reptile_0110 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1343,7 +1343,7 @@ return {
 		}
 	},
 	reptile_0112 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			87,
 			152
@@ -1369,7 +1369,7 @@ return {
 		}
 	},
 	saurianBoss_0001 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1395,7 +1395,7 @@ return {
 		}
 	},
 	saurianBoss_0002 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1421,7 +1421,7 @@ return {
 		}
 	},
 	saurianBoss_0004 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1447,7 +1447,7 @@ return {
 		}
 	},
 	saurianBoss_0006 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1473,7 +1473,7 @@ return {
 		}
 	},
 	saurianBoss_0008 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1499,7 +1499,7 @@ return {
 		}
 	},
 	saurianBoss_0010 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1525,7 +1525,7 @@ return {
 		}
 	},
 	saurianBoss_0012 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1551,7 +1551,7 @@ return {
 		}
 	},
 	saurianBoss_0014 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1577,7 +1577,7 @@ return {
 		}
 	},
 	saurianBoss_0016 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1603,7 +1603,7 @@ return {
 		}
 	},
 	saurianBoss_0018 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1629,7 +1629,7 @@ return {
 		}
 	},
 	saurianBoss_0020 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1655,7 +1655,7 @@ return {
 		}
 	},
 	saurianBoss_0022 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1681,7 +1681,7 @@ return {
 		}
 	},
 	saurianBoss_0024 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1707,7 +1707,7 @@ return {
 		}
 	},
 	saurianBoss_0026 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1733,7 +1733,7 @@ return {
 		}
 	},
 	saurianBoss_0028 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1759,7 +1759,7 @@ return {
 		}
 	},
 	saurianBoss_0030 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1785,7 +1785,7 @@ return {
 		}
 	},
 	saurianBoss_0032 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1811,7 +1811,7 @@ return {
 		}
 	},
 	saurianBoss_0034 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1837,7 +1837,7 @@ return {
 		}
 	},
 	saurianBoss_0036 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1861,7 +1861,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0037 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1885,7 +1885,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0038 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1909,7 +1909,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0039 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1933,7 +1933,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0040 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1957,7 +1957,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0041 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -1981,7 +1981,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0042 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2007,7 +2007,7 @@ return {
 		}
 	},
 	saurianBoss_0044 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2033,7 +2033,7 @@ return {
 		}
 	},
 	saurianBoss_0046 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2059,7 +2059,7 @@ return {
 		}
 	},
 	saurianBoss_0048 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2085,7 +2085,7 @@ return {
 		}
 	},
 	saurianBoss_0050 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2113,7 +2113,7 @@ return {
 		}
 	},
 	saurianBoss_0052 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2141,7 +2141,7 @@ return {
 		}
 	},
 	saurianBoss_0054 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2167,7 +2167,7 @@ return {
 		}
 	},
 	saurianBoss_0056 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2193,7 +2193,7 @@ return {
 		}
 	},
 	saurianBoss_0058 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2219,7 +2219,7 @@ return {
 		}
 	},
 	saurianBoss_0060 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2245,7 +2245,7 @@ return {
 		}
 	},
 	saurianBoss_0062 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2271,7 +2271,7 @@ return {
 		}
 	},
 	saurianBoss_0064 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2297,7 +2297,7 @@ return {
 		}
 	},
 	saurianBoss_0066 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2323,7 +2323,7 @@ return {
 		}
 	},
 	saurianBoss_0068 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2349,7 +2349,7 @@ return {
 		}
 	},
 	saurianBoss_0070 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2375,7 +2375,7 @@ return {
 		}
 	},
 	saurianBoss_0072 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2401,7 +2401,7 @@ return {
 		}
 	},
 	saurianBoss_0074 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2427,7 +2427,7 @@ return {
 		}
 	},
 	saurianBoss_0076 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2453,7 +2453,7 @@ return {
 		}
 	},
 	saurianBoss_0078 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2479,7 +2479,7 @@ return {
 		}
 	},
 	saurianBoss_0080 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2505,7 +2505,7 @@ return {
 		}
 	},
 	saurianBoss_0082 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2531,7 +2531,7 @@ return {
 		}
 	},
 	saurianBoss_0084 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2557,7 +2557,7 @@ return {
 		}
 	},
 	saurianBoss_0086 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2583,7 +2583,7 @@ return {
 		}
 	},
 	saurianBoss_0088 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2609,7 +2609,7 @@ return {
 		}
 	},
 	saurianBoss_0090 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2635,7 +2635,7 @@ return {
 		}
 	},
 	saurianBoss_0093 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2661,7 +2661,7 @@ return {
 		}
 	},
 	saurianBoss_0095 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2687,7 +2687,7 @@ return {
 		}
 	},
 	saurianBoss_0097 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2713,7 +2713,7 @@ return {
 		}
 	},
 	saurianBoss_0099 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2739,7 +2739,7 @@ return {
 		}
 	},
 	saurianBoss_0101 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2765,7 +2765,7 @@ return {
 		}
 	},
 	saurianBoss_0103 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2791,7 +2791,7 @@ return {
 		}
 	},
 	saurianBoss_0105 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2817,7 +2817,7 @@ return {
 		}
 	},
 	saurianBoss_0107 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2849,7 +2849,7 @@ return {
 		}
 	},
 	saurianBoss_0109 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2881,7 +2881,7 @@ return {
 		}
 	},
 	saurianBoss_0111 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2913,7 +2913,7 @@ return {
 		}
 	},
 	saurianBoss_0135 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2945,7 +2945,7 @@ return {
 		}
 	},
 	saurianBoss_0137 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2971,7 +2971,7 @@ return {
 		}
 	},
 	saurianBoss_0141 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -2997,7 +2997,7 @@ return {
 		}
 	},
 	saurianBoss_0147 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3021,7 +3021,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0148 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3045,7 +3045,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0149 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3069,7 +3069,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0150 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3093,7 +3093,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0151 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3117,7 +3117,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0152 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3141,7 +3141,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0153 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3165,7 +3165,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0154 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3189,7 +3189,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0155 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3213,7 +3213,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0156 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3237,7 +3237,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0157 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3261,7 +3261,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0158 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3285,7 +3285,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0159 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3309,7 +3309,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0160 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3333,7 +3333,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0161 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3357,7 +3357,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0162 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3381,7 +3381,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0163 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3405,7 +3405,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0164 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3429,7 +3429,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0165 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3453,7 +3453,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0166 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3477,7 +3477,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0167 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3501,7 +3501,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0168 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3525,7 +3525,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0169 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3549,7 +3549,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0170 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3573,7 +3573,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0171 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3597,7 +3597,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0172 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3621,7 +3621,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0173 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3645,7 +3645,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0174 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3669,7 +3669,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0175 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3693,7 +3693,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0176 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3717,7 +3717,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0177 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3741,7 +3741,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0178 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3765,7 +3765,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0179 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3789,7 +3789,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0180 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3813,7 +3813,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0181 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3837,7 +3837,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0182 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3861,7 +3861,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0183 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3885,7 +3885,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0184 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3909,7 +3909,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0185 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3935,7 +3935,7 @@ return {
 		}
 	},
 	saurianBoss_0187 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3959,7 +3959,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0188 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -3983,7 +3983,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_0189 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -4009,7 +4009,7 @@ return {
 		}
 	},
 	saurianBoss_0191 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -4035,7 +4035,7 @@ return {
 		}
 	},
 	saurianBoss_0193 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -4061,7 +4061,7 @@ return {
 		}
 	},
 	saurianBoss_0195 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			323,
 			211
@@ -4085,7 +4085,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0001 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4109,7 +4109,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0002 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4133,7 +4133,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0003 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4157,7 +4157,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0004 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4181,7 +4181,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0005 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4205,7 +4205,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0006 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4229,7 +4229,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0007 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4253,7 +4253,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0008 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4277,7 +4277,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0009 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4301,7 +4301,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0010 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4325,7 +4325,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0011 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4349,7 +4349,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0012 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4373,7 +4373,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0013 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4397,7 +4397,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0014 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4421,7 +4421,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0015 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4445,7 +4445,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0016 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4469,7 +4469,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0017 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4493,7 +4493,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0018 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4517,7 +4517,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0019 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48
@@ -4541,7 +4541,7 @@ return {
 		alias = {}
 	},
 	saurianBoss_effect_0020 = {
-		a_name = "go_stage48-1.png",
+		a_name = "go_stage48-1.dds",
 		size = {
 			146,
 			48

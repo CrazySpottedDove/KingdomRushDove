@@ -2,7 +2,7 @@
 
 return {
 	loading_ice = {
-		a_name = "loading_ice-1.png",
+		a_name = "loading_ice-1.dds",
 		size = {
 			1920,
 			1080

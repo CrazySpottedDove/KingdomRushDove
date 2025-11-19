@@ -1,6 +1,6 @@
 return {
 	["balloon_0001"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			254,
 			178
@@ -24,7 +24,7 @@ return {
 		alias = {}
 	},
 	["balloon_0002"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			254,
 			178
@@ -48,7 +48,7 @@ return {
 		alias = {}
 	},
 	["balloon_0003"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			254,
 			178
@@ -72,7 +72,7 @@ return {
 		alias = {}
 	},
 	["balloon_0004"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			254,
 			178
@@ -96,7 +96,7 @@ return {
 		alias = {}
 	},
 	["balloon_0005"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			254,
 			178
@@ -120,7 +120,7 @@ return {
 		alias = {}
 	},
 	["balloon_0006"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			254,
 			178
@@ -144,7 +144,7 @@ return {
 		alias = {}
 	},
 	["balloon_0007"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			254,
 			178
@@ -168,7 +168,7 @@ return {
 		alias = {}
 	},
 	["balloon_0008"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			254,
 			178
@@ -192,7 +192,7 @@ return {
 		alias = {}
 	},
 	["balloon_0009"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			254,
 			178
@@ -216,7 +216,7 @@ return {
 		alias = {}
 	},
 	["balloon_0010"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			254,
 			178
@@ -240,7 +240,7 @@ return {
 		alias = {}
 	},
 	["balloon_0011"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			254,
 			178
@@ -264,7 +264,7 @@ return {
 		alias = {}
 	},
 	["balloon_0012"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			254,
 			178
@@ -288,7 +288,7 @@ return {
 		alias = {}
 	},
 	["balloon_0013"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			254,
 			178
@@ -312,7 +312,7 @@ return {
 		alias = {}
 	},
 	["balloon_box"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			312,
 			70
@@ -336,7 +336,7 @@ return {
 		alias = {}
 	},
 	["balloon_buildhere_bg"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			256,
 			96
@@ -360,7 +360,7 @@ return {
 		alias = {}
 	},
 	["balloon_clickhere_bg"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			276,
 			72
@@ -384,7 +384,7 @@ return {
 		alias = {}
 	},
 	["balloon_newpower_bg"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			256,
 			96
@@ -408,7 +408,7 @@ return {
 		alias = {}
 	},
 	["balloon_nextwave_bg"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			378,
 			92
@@ -432,7 +432,7 @@ return {
 		alias = {}
 	},
 	["balloon_startbattle_bg"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			237,
 			93
@@ -456,7 +456,7 @@ return {
 		alias = {}
 	},
 	["balloon_taphere_bg"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			270,
 			90
@@ -480,7 +480,7 @@ return {
 		alias = {}
 	},
 	["mapBalloon_heroUnlocked_notxt"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			180,
 			82
@@ -504,7 +504,7 @@ return {
 		alias = {}
 	},
 	["mapBalloon_starthere_notxt"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			180,
 			68
@@ -528,7 +528,7 @@ return {
 		alias = {}
 	},
 	["mapBaloon_buyUpgrade_notxt"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			258,
 			168
@@ -552,7 +552,7 @@ return {
 		alias = {}
 	},
 	["mapBaloon_heroLvlUp_notxt"] = {
-		a_name = "ballon-1.png",
+		a_name = "ballon-1.dds",
 		size = {
 			258,
 			168

@@ -1,6 +1,6 @@
 return {
 	["archer_arcane_proy2_decal-f"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			20,
 			11
@@ -24,7 +24,7 @@ return {
 		alias = {}
 	},
 	["archer_arcane_proy_decal-f"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			23,
 			14
@@ -48,7 +48,7 @@ return {
 		alias = {}
 	},
 	["archer_arcane_special_decal1"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			96,
 			51
@@ -72,7 +72,7 @@ return {
 		alias = {}
 	},
 	["archer_arcane_special_decal2"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			169,
 			76
@@ -96,7 +96,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_decal_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -120,7 +120,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_decal_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -144,7 +144,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_decal_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -168,7 +168,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_decal_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -192,7 +192,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_decal_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -216,7 +216,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_decal_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -240,7 +240,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_decal_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -264,7 +264,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_decal_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -288,7 +288,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_decal_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -312,7 +312,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_decal_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -336,7 +336,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_decal_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -360,7 +360,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_smokeDecal_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -384,7 +384,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_smokeDecal_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -408,7 +408,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_smokeDecal_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -432,7 +432,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_smokeDecal_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -456,7 +456,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_smokeDecal_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -480,7 +480,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_smokeDecal_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -504,7 +504,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_smokeDecal_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -528,7 +528,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_smokeDecal_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -552,7 +552,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_smokeDecal_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -576,7 +576,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_smokeDecal_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -600,7 +600,7 @@ return {
 		alias = {}
 	},
 	["archer_hero_arrows_smokeDecal_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			70
@@ -624,7 +624,7 @@ return {
 		alias = {}
 	},
 	["archer_silver_mark_effect_below"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			79,
 			191
@@ -648,7 +648,7 @@ return {
 		alias = {}
 	},
 	["archer_silver_proys_0002-f"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			39,
 			11
@@ -672,7 +672,7 @@ return {
 		alias = {}
 	},
 	["archer_silver_proys_0004-f"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			39,
 			11
@@ -696,7 +696,7 @@ return {
 		alias = {}
 	},
 	["arivan_hero_freeze_decal"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			93,
 			34
@@ -720,7 +720,7 @@ return {
 		alias = {}
 	},
 	["artillery_henge_curse_decal"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			113,
 			73
@@ -744,7 +744,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -768,7 +768,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -792,7 +792,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -816,7 +816,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -840,7 +840,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -864,7 +864,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -888,7 +888,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -912,7 +912,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -936,7 +936,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -960,7 +960,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -984,7 +984,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -1008,7 +1008,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -1032,7 +1032,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -1056,7 +1056,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -1080,7 +1080,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -1104,7 +1104,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -1128,7 +1128,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -1152,7 +1152,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -1176,7 +1176,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -1200,7 +1200,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_scorched_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			101
@@ -1224,7 +1224,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_smoke_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			197,
 			90
@@ -1248,7 +1248,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_smoke_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			197,
 			90
@@ -1272,7 +1272,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_smoke_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			197,
 			90
@@ -1296,7 +1296,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_smoke_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			197,
 			90
@@ -1320,7 +1320,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_smoke_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			197,
 			90
@@ -1344,7 +1344,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_smoke_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			197,
 			90
@@ -1368,7 +1368,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_smoke_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			197,
 			90
@@ -1392,7 +1392,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_smoke_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			197,
 			90
@@ -1416,7 +1416,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_smoke_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			197,
 			90
@@ -1440,7 +1440,7 @@ return {
 		alias = {}
 	},
 	["artillery_tree_smoke_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			197,
 			90
@@ -1464,7 +1464,7 @@ return {
 		alias = {}
 	},
 	["bloodsydianWarlock_convert_aura"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			127,
 			56
@@ -1488,7 +1488,7 @@ return {
 		alias = {}
 	},
 	["bossHiena_creepFx"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			51,
 			20
@@ -1512,7 +1512,7 @@ return {
 		alias = {}
 	},
 	["catha_hero_cloud_decal_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			79
@@ -1536,7 +1536,7 @@ return {
 		alias = {}
 	},
 	["catha_hero_cloud_decal_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			79
@@ -1560,7 +1560,7 @@ return {
 		alias = {}
 	},
 	["catha_hero_cloud_decal_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			79
@@ -1584,7 +1584,7 @@ return {
 		alias = {}
 	},
 	["catha_hero_cloud_decal_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			79
@@ -1608,7 +1608,7 @@ return {
 		alias = {}
 	},
 	["catha_hero_cloud_decal_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			79
@@ -1632,7 +1632,7 @@ return {
 		alias = {}
 	},
 	["catha_hero_cloud_decal_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			79
@@ -1656,7 +1656,7 @@ return {
 		alias = {}
 	},
 	["catha_hero_cloud_decal_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			79
@@ -1680,7 +1680,7 @@ return {
 		alias = {}
 	},
 	["catha_hero_cloud_decal_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			79
@@ -1704,7 +1704,7 @@ return {
 		alias = {}
 	},
 	["catha_hero_cloud_decal_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			79
@@ -1728,7 +1728,7 @@ return {
 		alias = {}
 	},
 	["catha_hero_cloud_decal_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			79
@@ -1752,7 +1752,7 @@ return {
 		alias = {}
 	},
 	["catha_hero_cloud_decal_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			79
@@ -1776,7 +1776,7 @@ return {
 		alias = {}
 	},
 	["catha_hero_cloud_decal_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			79
@@ -1800,7 +1800,7 @@ return {
 		alias = {}
 	},
 	["catha_hero_cloud_decal_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			79
@@ -1824,7 +1824,7 @@ return {
 		alias = {}
 	},
 	["catha_hero_cloud_decal_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			79
@@ -1848,7 +1848,7 @@ return {
 		alias = {}
 	},
 	["DartDecal"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			14,
 			8
@@ -1872,7 +1872,7 @@ return {
 		alias = {}
 	},
 	["decal_arrow"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			20,
 			10
@@ -1896,7 +1896,7 @@ return {
 		alias = {}
 	},
 	["decal_axe"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			29,
 			26
@@ -1920,7 +1920,7 @@ return {
 		alias = {}
 	},
 	["decal_blood_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			31,
 			8
@@ -1944,7 +1944,7 @@ return {
 		alias = {}
 	},
 	["decal_blood_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			31,
 			8
@@ -1968,7 +1968,7 @@ return {
 		alias = {}
 	},
 	["decal_blood_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			31,
 			8
@@ -1992,7 +1992,7 @@ return {
 		alias = {}
 	},
 	["decal_blood_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			31,
 			8
@@ -2016,7 +2016,7 @@ return {
 		alias = {}
 	},
 	["decal_blood_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			31,
 			8
@@ -2040,7 +2040,7 @@ return {
 		alias = {}
 	},
 	["decal_bomb_crater"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			39
@@ -2064,7 +2064,7 @@ return {
 		alias = {}
 	},
 	["decal_flying_shadow"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			28,
 			6
@@ -2088,7 +2088,7 @@ return {
 		alias = {}
 	},
 	["decal_holystrike_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			158,
 			110
@@ -2112,7 +2112,7 @@ return {
 		alias = {}
 	},
 	["decal_holystrike_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			158,
 			110
@@ -2136,7 +2136,7 @@ return {
 		alias = {}
 	},
 	["decal_holystrike_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			158,
 			110
@@ -2160,7 +2160,7 @@ return {
 		alias = {}
 	},
 	["decal_holystrike_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			158,
 			110
@@ -2184,7 +2184,7 @@ return {
 		alias = {}
 	},
 	["decal_holystrike_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			158,
 			110
@@ -2208,7 +2208,7 @@ return {
 		alias = {}
 	},
 	["decal_holystrike_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			158,
 			110
@@ -2232,7 +2232,7 @@ return {
 		alias = {}
 	},
 	["decal_holystrike_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			158,
 			110
@@ -2256,7 +2256,7 @@ return {
 		alias = {}
 	},
 	["decal_holystrike_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			158,
 			110
@@ -2280,7 +2280,7 @@ return {
 		alias = {}
 	},
 	["decal_holystrike_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			158,
 			110
@@ -2304,7 +2304,7 @@ return {
 		alias = {}
 	},
 	["decal_holystrike_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			158,
 			110
@@ -2328,7 +2328,7 @@ return {
 		alias = {}
 	},
 	["decal_holystrike_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			158,
 			110
@@ -2352,7 +2352,7 @@ return {
 		alias = {}
 	},
 	["decal_holystrike_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			158,
 			110
@@ -2376,7 +2376,7 @@ return {
 		alias = {}
 	},
 	["decal_lamp"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			86,
 			84
@@ -2400,7 +2400,7 @@ return {
 		alias = {}
 	},
 	["decal_scorched_earth_base"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			140,
 			78
@@ -2424,7 +2424,7 @@ return {
 		alias = {}
 	},
 	["decal_scorched_earth_fire"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			140,
 			78
@@ -2448,7 +2448,7 @@ return {
 		alias = {}
 	},
 	["decal_smoke_hitground_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			94,
 			60
@@ -2472,7 +2472,7 @@ return {
 		alias = {}
 	},
 	["decal_smoke_hitground_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			94,
 			60
@@ -2496,7 +2496,7 @@ return {
 		alias = {}
 	},
 	["decal_smoke_hitground_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			94,
 			60
@@ -2520,7 +2520,7 @@ return {
 		alias = {}
 	},
 	["decal_smoke_hitground_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			94,
 			60
@@ -2544,7 +2544,7 @@ return {
 		alias = {}
 	},
 	["decal_smoke_hitground_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			94,
 			60
@@ -2568,7 +2568,7 @@ return {
 		alias = {}
 	},
 	["decal_smoke_hitground_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			94,
 			60
@@ -2592,7 +2592,7 @@ return {
 		alias = {}
 	},
 	["decal_smoke_hitground_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			94,
 			60
@@ -2616,7 +2616,7 @@ return {
 		alias = {}
 	},
 	["decal_smoke_hitground_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			94,
 			60
@@ -2640,7 +2640,7 @@ return {
 		alias = {}
 	},
 	["decal_smoke_hitground_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			94,
 			60
@@ -2664,7 +2664,7 @@ return {
 		alias = {}
 	},
 	["decal_smoke_hitground_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			94,
 			60
@@ -2688,7 +2688,7 @@ return {
 		alias = {}
 	},
 	["decal_smoke_hitground_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			94,
 			60
@@ -2712,7 +2712,7 @@ return {
 		alias = {}
 	},
 	["decal_smoke_hitground_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			94,
 			60
@@ -2736,7 +2736,7 @@ return {
 		alias = {}
 	},
 	["decal_spear"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			30,
 			6
@@ -2760,7 +2760,7 @@ return {
 		alias = {}
 	},
 	["decal_street_lamp"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			86,
 			110
@@ -2784,7 +2784,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -2808,7 +2808,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -2832,7 +2832,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -2856,7 +2856,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -2880,7 +2880,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -2904,7 +2904,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -2928,7 +2928,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -2952,7 +2952,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -2976,7 +2976,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3000,7 +3000,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3024,7 +3024,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3048,7 +3048,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3072,7 +3072,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3096,7 +3096,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3120,7 +3120,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3144,7 +3144,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3168,7 +3168,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3192,7 +3192,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3216,7 +3216,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3240,7 +3240,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3264,7 +3264,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0021"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3288,7 +3288,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0022"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3312,7 +3312,7 @@ return {
 		alias = {}
 	},
 	["decal_teleportal_0023"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			120,
 			144
@@ -3336,7 +3336,7 @@ return {
 		alias = {}
 	},
 	["defendFlag"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			50,
 			64
@@ -3360,7 +3360,7 @@ return {
 		alias = {}
 	},
 	["defendFlag_0060"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			108,
 			72
@@ -3384,7 +3384,7 @@ return {
 		alias = {}
 	},
 	["defendFlag_0069"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			108,
 			72
@@ -3408,7 +3408,7 @@ return {
 		alias = {}
 	},
 	["defendFlag_underground_0069"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			107,
 			70
@@ -3432,7 +3432,7 @@ return {
 		alias = {}
 	},
 	["defendFlag_water"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			42,
 			76
@@ -3456,7 +3456,7 @@ return {
 		alias = {}
 	},
 	["EarthquakeTower_HitDecal1"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			87,
 			68
@@ -3480,7 +3480,7 @@ return {
 		alias = {}
 	},
 	["EarthquakeTower_HitDecal2"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			87,
 			68
@@ -3504,7 +3504,7 @@ return {
 		alias = {}
 	},
 	["EarthquakeTower_HitDecal3"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			132,
 			76
@@ -3528,7 +3528,7 @@ return {
 		alias = {}
 	},
 	["EarthquakeTower_Lava"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			231,
 			172
@@ -3552,7 +3552,7 @@ return {
 		alias = {}
 	},
 	["EarthquakeTower_Lava1"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			127,
 			98
@@ -3576,7 +3576,7 @@ return {
 		alias = {}
 	},
 	["EarthquakeTower_Lava2"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			124,
 			107
@@ -3600,7 +3600,7 @@ return {
 		alias = {}
 	},
 	["ewok_2_proy_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			48,
 			8
@@ -3624,7 +3624,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3648,7 +3648,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3672,7 +3672,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3696,7 +3696,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3720,7 +3720,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3744,7 +3744,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3768,7 +3768,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3792,7 +3792,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3816,7 +3816,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3840,7 +3840,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3864,7 +3864,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3888,7 +3888,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3912,7 +3912,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3936,7 +3936,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3960,7 +3960,7 @@ return {
 		alias = {}
 	},
 	["faustus_hero_teleportDecal_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			144,
 			142
@@ -3984,7 +3984,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4008,7 +4008,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4032,7 +4032,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4056,7 +4056,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4080,7 +4080,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4104,7 +4104,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4128,7 +4128,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4152,7 +4152,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4176,7 +4176,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4200,7 +4200,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4224,7 +4224,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4248,7 +4248,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4272,7 +4272,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4296,7 +4296,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4320,7 +4320,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4344,7 +4344,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4368,7 +4368,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4392,7 +4392,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4416,7 +4416,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4440,7 +4440,7 @@ return {
 		alias = {}
 	},
 	["fireball_shadow_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			20
@@ -4464,7 +4464,7 @@ return {
 		alias = {}
 	},
 	["forestKeeper_soldierBuff_decal_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			56,
 			31
@@ -4488,7 +4488,7 @@ return {
 		alias = {}
 	},
 	["forestKeeper_soldierBuff_decal_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			56,
 			31
@@ -4512,7 +4512,7 @@ return {
 		alias = {}
 	},
 	["forestKeeper_soldierBuff_decal_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			56,
 			31
@@ -4536,7 +4536,7 @@ return {
 		alias = {}
 	},
 	["forestKeeper_soldierBuff_decal_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			56,
 			31
@@ -4560,7 +4560,7 @@ return {
 		alias = {}
 	},
 	["forestKeeper_soldierBuff_decal_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			56,
 			31
@@ -4584,7 +4584,7 @@ return {
 		alias = {}
 	},
 	["forestKeeper_soldierBuff_decal_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			56,
 			31
@@ -4608,7 +4608,7 @@ return {
 		alias = {}
 	},
 	["forestKeeper_soldierBuff_decal_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			56,
 			31
@@ -4632,7 +4632,7 @@ return {
 		alias = {}
 	},
 	["forestKeeper_soldierBuff_decal_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			56,
 			31
@@ -4656,7 +4656,7 @@ return {
 		alias = {}
 	},
 	["gollem_attackFx"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			141,
 			65
@@ -4680,7 +4680,7 @@ return {
 		alias = {}
 	},
 	["hero_death_0039"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			154,
 			192
@@ -4704,7 +4704,7 @@ return {
 		alias = {}
 	},
 	["hero_reinforce_rocks_decal"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			86,
 			44
@@ -4728,7 +4728,7 @@ return {
 		alias = {}
 	},
 	["mage_highElven_energyBall_shadow"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			101,
 			101
@@ -4752,7 +4752,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			73,
 			73
@@ -4776,7 +4776,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -4800,7 +4800,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -4824,7 +4824,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -4848,7 +4848,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -4872,7 +4872,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -4896,7 +4896,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -4920,7 +4920,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -4944,7 +4944,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -4968,7 +4968,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -4992,7 +4992,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -5016,7 +5016,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -5040,7 +5040,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -5064,7 +5064,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -5088,7 +5088,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -5112,7 +5112,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			72,
 			72
@@ -5136,7 +5136,7 @@ return {
 		alias = {}
 	},
 	["mage_wild_silence_decal_glow"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			79,
 			45
@@ -5160,7 +5160,7 @@ return {
 		alias = {}
 	},
 	["malikAfro_ring_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			169,
 			87
@@ -5184,7 +5184,7 @@ return {
 		alias = {}
 	},
 	["malikAfro_ring_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			169,
 			87
@@ -5208,7 +5208,7 @@ return {
 		alias = {}
 	},
 	["malikAfro_ring_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			169,
 			87
@@ -5232,7 +5232,7 @@ return {
 		alias = {}
 	},
 	["malikAfro_ring_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			169,
 			87
@@ -5256,7 +5256,7 @@ return {
 		alias = {}
 	},
 	["malikAfro_ring_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			169,
 			87
@@ -5280,7 +5280,7 @@ return {
 		alias = {}
 	},
 	["malikAfro_ring_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			169,
 			87
@@ -5304,7 +5304,7 @@ return {
 		alias = {}
 	},
 	["malikAfro_ring_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			169,
 			87
@@ -5328,7 +5328,7 @@ return {
 		alias = {}
 	},
 	["malikAfro_ring_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			169,
 			87
@@ -5352,7 +5352,7 @@ return {
 		alias = {}
 	},
 	["malikAfro_ring_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			169,
 			87
@@ -5376,7 +5376,7 @@ return {
 		alias = {}
 	},
 	["malikAfro_ring_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			169,
 			87
@@ -5400,7 +5400,7 @@ return {
 		alias = {}
 	},
 	["malikAfro_ring_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			169,
 			87
@@ -5424,7 +5424,7 @@ return {
 		alias = {}
 	},
 	["malikAfro_rocks_decal"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			84,
 			42
@@ -5448,7 +5448,7 @@ return {
 		alias = {}
 	},
 	["Mecha_Shit"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			188,
 			84
@@ -5472,7 +5472,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5496,7 +5496,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5520,7 +5520,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5544,7 +5544,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5568,7 +5568,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5592,7 +5592,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5616,7 +5616,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5640,7 +5640,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5664,7 +5664,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5688,7 +5688,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5712,7 +5712,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5736,7 +5736,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5760,7 +5760,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5784,7 +5784,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5808,7 +5808,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5832,7 +5832,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5856,7 +5856,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5880,7 +5880,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5904,7 +5904,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5928,7 +5928,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5952,7 +5952,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0021"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -5976,7 +5976,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0022"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -6000,7 +6000,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0023"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -6024,7 +6024,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0024"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -6048,7 +6048,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0025"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -6072,7 +6072,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0026"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -6096,7 +6096,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0027"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -6120,7 +6120,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0028"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -6144,7 +6144,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0029"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -6168,7 +6168,7 @@ return {
 		alias = {}
 	},
 	["mercenaryDraw_decal_0030"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			62,
 			42
@@ -6192,7 +6192,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6216,7 +6216,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6240,7 +6240,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6264,7 +6264,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6288,7 +6288,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6312,7 +6312,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6336,7 +6336,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6360,7 +6360,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6384,7 +6384,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6408,7 +6408,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6432,7 +6432,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6456,7 +6456,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6480,7 +6480,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6504,7 +6504,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6528,7 +6528,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6552,7 +6552,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6576,7 +6576,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6600,7 +6600,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6624,7 +6624,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6648,7 +6648,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6672,7 +6672,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0021"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6696,7 +6696,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0022"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6720,7 +6720,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0023"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6744,7 +6744,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0024"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6768,7 +6768,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0025"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6792,7 +6792,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0026"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6816,7 +6816,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0027"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6840,7 +6840,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0028"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6864,7 +6864,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0029"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6888,7 +6888,7 @@ return {
 		alias = {}
 	},
 	["NecromancerDeathKnight_Aura_0030"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			138,
 			51
@@ -6912,7 +6912,7 @@ return {
 		alias = {}
 	},
 	["NecromancerSkeletonAura"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			51,
 			20
@@ -6936,7 +6936,7 @@ return {
 		alias = {}
 	},
 	["NecroPestilenceDecal"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			121,
 			76
@@ -6960,7 +6960,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -6984,7 +6984,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7008,7 +7008,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7032,7 +7032,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7056,7 +7056,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7080,7 +7080,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7104,7 +7104,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7128,7 +7128,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7152,7 +7152,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7176,7 +7176,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7200,7 +7200,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7224,7 +7224,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7248,7 +7248,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7272,7 +7272,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7296,7 +7296,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7320,7 +7320,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7344,7 +7344,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7368,7 +7368,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7392,7 +7392,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7416,7 +7416,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7440,7 +7440,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0021"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7464,7 +7464,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0022"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7488,7 +7488,7 @@ return {
 		alias = {}
 	},
 	["ogre_mage_aura_0023"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			56
@@ -7512,7 +7512,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7536,7 +7536,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7560,7 +7560,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7584,7 +7584,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7608,7 +7608,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7632,7 +7632,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7656,7 +7656,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7680,7 +7680,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7704,7 +7704,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7728,7 +7728,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7752,7 +7752,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7776,7 +7776,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7800,7 +7800,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7824,7 +7824,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7848,7 +7848,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7872,7 +7872,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7896,7 +7896,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7920,7 +7920,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7944,7 +7944,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7968,7 +7968,7 @@ return {
 		alias = {}
 	},
 	["ray_explosion_decal_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			180,
 			107
@@ -7992,7 +7992,7 @@ return {
 		alias = {}
 	},
 	["Redspine_spear_decal"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			51,
 			23
@@ -8016,7 +8016,7 @@ return {
 		alias = {}
 	},
 	["reinforce_proy_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			34,
 			34
@@ -8040,7 +8040,7 @@ return {
 		alias = {}
 	},
 	["scourger_special_decal"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			70
@@ -8064,7 +8064,7 @@ return {
 		alias = {}
 	},
 	["selected_big"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			84,
 			32
@@ -8088,7 +8088,7 @@ return {
 		alias = {}
 	},
 	["selected_med"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			60,
 			22
@@ -8112,7 +8112,7 @@ return {
 		alias = {}
 	},
 	["selected_small"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			36,
 			18
@@ -8136,7 +8136,7 @@ return {
 		alias = {}
 	},
 	["selected_soldier_small"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			36,
 			18
@@ -8160,7 +8160,7 @@ return {
 		alias = {}
 	},
 	["stage4_fire_decal_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			183,
 			113
@@ -8184,7 +8184,7 @@ return {
 		alias = {}
 	},
 	["terrain_archer_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			123,
 			70
@@ -8208,7 +8208,7 @@ return {
 		alias = {}
 	},
 	["terrain_archer_0001_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			165,
 			94
@@ -8232,7 +8232,7 @@ return {
 		alias = {}
 	},
 	["terrain_archer_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			123,
 			70
@@ -8256,7 +8256,7 @@ return {
 		alias = {}
 	},
 	["terrain_archer_0002_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			165,
 			94
@@ -8280,7 +8280,7 @@ return {
 		alias = {}
 	},
 	["terrain_archer_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			123,
 			70
@@ -8304,7 +8304,7 @@ return {
 		alias = {}
 	},
 	["terrain_archer_0003_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			165,
 			94
@@ -8328,7 +8328,7 @@ return {
 		alias = {}
 	},
 	["terrain_archer_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			113,
 			59
@@ -8352,7 +8352,7 @@ return {
 		alias = {}
 	},
 	["terrain_archer_0008_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			151,
 			79
@@ -8376,7 +8376,7 @@ return {
 		alias = {}
 	},
 	["terrain_archer_0008_over_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			202,
 			106
@@ -8400,7 +8400,7 @@ return {
 		alias = {}
 	},
 	["terrain_artillery_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			129,
 			70
@@ -8424,7 +8424,7 @@ return {
 		alias = {}
 	},
 	["terrain_artillery_0001_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			173,
 			94
@@ -8448,7 +8448,7 @@ return {
 		alias = {}
 	},
 	["terrain_artillery_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			129,
 			70
@@ -8472,7 +8472,7 @@ return {
 		alias = {}
 	},
 	["terrain_artillery_0002_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			173,
 			94
@@ -8496,7 +8496,7 @@ return {
 		alias = {}
 	},
 	["terrain_artillery_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			129,
 			70
@@ -8520,7 +8520,7 @@ return {
 		alias = {}
 	},
 	["terrain_artillery_0003_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			173,
 			94
@@ -8544,7 +8544,7 @@ return {
 		alias = {}
 	},
 	["terrain_artillery_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			146,
 			127
@@ -8568,7 +8568,7 @@ return {
 		alias = {}
 	},
 	["terrain_artillery_0004_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			196,
 			170
@@ -8592,7 +8592,7 @@ return {
 		alias = {}
 	},
 	["terrain_artillery_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			146,
 			127
@@ -8616,7 +8616,7 @@ return {
 		alias = {}
 	},
 	["terrain_artillery_0005_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			196,
 			170
@@ -8640,7 +8640,7 @@ return {
 		alias = {}
 	},
 	["terrain_artillery_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			146,
 			127
@@ -8664,7 +8664,7 @@ return {
 		alias = {}
 	},
 	["terrain_artillery_0006_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			196,
 			170
@@ -8688,7 +8688,7 @@ return {
 		alias = {}
 	},
 	["terrain_artillery_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			118,
 			59
@@ -8712,7 +8712,7 @@ return {
 		alias = {}
 	},
 	["terrain_artillery_0008_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			158,
 			79
@@ -8736,7 +8736,7 @@ return {
 		alias = {}
 	},
 	["terrain_barrack_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			123,
 			72
@@ -8760,7 +8760,7 @@ return {
 		alias = {}
 	},
 	["terrain_barrack_0001_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			165,
 			96
@@ -8784,7 +8784,7 @@ return {
 		alias = {}
 	},
 	["terrain_barrack_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			123,
 			72
@@ -8808,7 +8808,7 @@ return {
 		alias = {}
 	},
 	["terrain_barrack_0002_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			165,
 			96
@@ -8832,7 +8832,7 @@ return {
 		alias = {}
 	},
 	["terrain_barrack_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			123,
 			72
@@ -8856,7 +8856,7 @@ return {
 		alias = {}
 	},
 	["terrain_barrack_0003_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			165,
 			96
@@ -8880,7 +8880,7 @@ return {
 		alias = {}
 	},
 	["terrain_barrack_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			113,
 			62
@@ -8904,7 +8904,7 @@ return {
 		alias = {}
 	},
 	["terrain_barrack_0008_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			151,
 			83
@@ -8928,7 +8928,7 @@ return {
 		alias = {}
 	},
 	["terrain_mage_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			125,
 			72
@@ -8952,7 +8952,7 @@ return {
 		alias = {}
 	},
 	["terrain_mage_0001_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			168,
 			96
@@ -8976,7 +8976,7 @@ return {
 		alias = {}
 	},
 	["terrain_mage_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			125,
 			72
@@ -9000,7 +9000,7 @@ return {
 		alias = {}
 	},
 	["terrain_mage_0002_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			168,
 			96
@@ -9024,7 +9024,7 @@ return {
 		alias = {}
 	},
 	["terrain_mage_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			125,
 			72
@@ -9048,7 +9048,7 @@ return {
 		alias = {}
 	},
 	["terrain_mage_0003_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			168,
 			96
@@ -9072,7 +9072,7 @@ return {
 		alias = {}
 	},
 	["terrain_mage_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			124,
 			62
@@ -9096,7 +9096,7 @@ return {
 		alias = {}
 	},
 	["terrain_mage_0008_over"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			166,
 			83
@@ -9120,7 +9120,7 @@ return {
 		alias = {}
 	},
 	["TotemAxe_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			28,
 			23
@@ -9144,7 +9144,7 @@ return {
 		alias = {}
 	},
 	["TotemTower_GroundEffect-Red_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			196,
 			124
@@ -9168,7 +9168,7 @@ return {
 		alias = {}
 	},
 	["TotemTower_GroundEffect-Red_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			196,
 			124
@@ -9192,7 +9192,7 @@ return {
 		alias = {}
 	},
 	["TotemTower_GroundEffect-Violet_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			196,
 			124
@@ -9216,7 +9216,7 @@ return {
 		alias = {}
 	},
 	["TotemTower_GroundEffect-Violet_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			196,
 			124
@@ -9240,7 +9240,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9264,7 +9264,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9288,7 +9288,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9312,7 +9312,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9336,7 +9336,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9360,7 +9360,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9384,7 +9384,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9408,7 +9408,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9432,7 +9432,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9456,7 +9456,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9480,7 +9480,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9504,7 +9504,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9528,7 +9528,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9552,7 +9552,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9576,7 +9576,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9600,7 +9600,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9624,7 +9624,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9648,7 +9648,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9672,7 +9672,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9696,7 +9696,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9720,7 +9720,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0021"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9744,7 +9744,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0022"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9768,7 +9768,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0023"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9792,7 +9792,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0024"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9816,7 +9816,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0025"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9840,7 +9840,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0026"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9864,7 +9864,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0027"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9888,7 +9888,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0028"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9912,7 +9912,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0029"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9936,7 +9936,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0030"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9960,7 +9960,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0031"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -9984,7 +9984,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0032"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10008,7 +10008,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0033"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10032,7 +10032,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0034"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10056,7 +10056,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0035"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10080,7 +10080,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0036"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10104,7 +10104,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0037"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10128,7 +10128,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0038"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10152,7 +10152,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0039"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10176,7 +10176,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0040"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10200,7 +10200,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0041"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10224,7 +10224,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0042"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10248,7 +10248,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0043"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10272,7 +10272,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0044"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10296,7 +10296,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0045"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10320,7 +10320,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0046"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10344,7 +10344,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0047"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10368,7 +10368,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0048"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10392,7 +10392,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0049"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10416,7 +10416,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0050"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10440,7 +10440,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0051"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10464,7 +10464,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0052"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10488,7 +10488,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer1_0053"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10512,7 +10512,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10536,7 +10536,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10560,7 +10560,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10584,7 +10584,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10608,7 +10608,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10632,7 +10632,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10656,7 +10656,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10680,7 +10680,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10704,7 +10704,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10728,7 +10728,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10752,7 +10752,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10776,7 +10776,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10800,7 +10800,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10824,7 +10824,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10848,7 +10848,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10872,7 +10872,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10896,7 +10896,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10920,7 +10920,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10944,7 +10944,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10968,7 +10968,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -10992,7 +10992,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0021"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11016,7 +11016,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0022"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11040,7 +11040,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0023"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11064,7 +11064,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0024"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11088,7 +11088,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0025"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11112,7 +11112,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0026"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11136,7 +11136,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0027"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11160,7 +11160,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0028"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11184,7 +11184,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0029"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11208,7 +11208,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0030"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11232,7 +11232,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0031"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11256,7 +11256,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0032"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11280,7 +11280,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0033"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11304,7 +11304,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0034"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11328,7 +11328,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0035"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11352,7 +11352,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0036"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11376,7 +11376,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0037"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11400,7 +11400,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0038"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11424,7 +11424,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0039"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11448,7 +11448,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0040"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11472,7 +11472,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0041"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11496,7 +11496,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0042"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11520,7 +11520,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0043"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11544,7 +11544,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0044"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11568,7 +11568,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0045"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11592,7 +11592,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0046"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11616,7 +11616,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0047"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11640,7 +11640,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0048"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11664,7 +11664,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0049"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11688,7 +11688,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0050"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11712,7 +11712,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0051"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11736,7 +11736,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0052"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11760,7 +11760,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer2_0053"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11784,7 +11784,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11808,7 +11808,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11832,7 +11832,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11856,7 +11856,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11880,7 +11880,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11904,7 +11904,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11928,7 +11928,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11952,7 +11952,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -11976,7 +11976,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12000,7 +12000,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12024,7 +12024,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12048,7 +12048,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12072,7 +12072,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12096,7 +12096,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12120,7 +12120,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12144,7 +12144,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12168,7 +12168,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12192,7 +12192,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12216,7 +12216,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12240,7 +12240,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12264,7 +12264,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0021"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12288,7 +12288,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0022"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12312,7 +12312,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0023"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12336,7 +12336,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0024"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12360,7 +12360,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0025"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12384,7 +12384,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0026"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12408,7 +12408,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0027"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12432,7 +12432,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0028"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12456,7 +12456,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0029"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12480,7 +12480,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0030"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12504,7 +12504,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0031"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12528,7 +12528,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0032"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12552,7 +12552,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0033"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12576,7 +12576,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0034"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12600,7 +12600,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0035"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12624,7 +12624,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0036"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12648,7 +12648,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0037"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12672,7 +12672,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0038"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12696,7 +12696,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0039"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12720,7 +12720,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0040"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12744,7 +12744,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0041"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12768,7 +12768,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0042"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12792,7 +12792,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0043"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12816,7 +12816,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0044"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12840,7 +12840,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0045"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12864,7 +12864,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0046"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12888,7 +12888,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0047"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12912,7 +12912,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0048"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12936,7 +12936,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0049"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12960,7 +12960,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0050"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -12984,7 +12984,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0051"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13008,7 +13008,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0052"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13032,7 +13032,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer3_0053"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13056,7 +13056,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13080,7 +13080,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13104,7 +13104,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13128,7 +13128,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13152,7 +13152,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13176,7 +13176,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13200,7 +13200,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13224,7 +13224,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13248,7 +13248,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13272,7 +13272,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13296,7 +13296,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13320,7 +13320,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13344,7 +13344,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13368,7 +13368,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13392,7 +13392,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13416,7 +13416,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13440,7 +13440,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13464,7 +13464,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13488,7 +13488,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13512,7 +13512,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13536,7 +13536,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0021"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13560,7 +13560,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0022"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13584,7 +13584,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0023"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13608,7 +13608,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0024"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13632,7 +13632,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0025"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13656,7 +13656,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0026"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13680,7 +13680,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0027"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13704,7 +13704,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0028"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13728,7 +13728,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0029"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13752,7 +13752,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0030"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13776,7 +13776,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0031"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13800,7 +13800,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0032"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13824,7 +13824,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0033"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13848,7 +13848,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0034"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13872,7 +13872,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0035"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13896,7 +13896,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0036"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13920,7 +13920,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0037"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13944,7 +13944,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0038"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13968,7 +13968,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0039"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -13992,7 +13992,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0040"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14016,7 +14016,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0041"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14040,7 +14040,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0042"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14064,7 +14064,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0043"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14088,7 +14088,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0044"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14112,7 +14112,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0045"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14136,7 +14136,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0046"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14160,7 +14160,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0047"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14184,7 +14184,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0048"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14208,7 +14208,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0049"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14232,7 +14232,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0050"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14256,7 +14256,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0051"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14280,7 +14280,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0052"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14304,7 +14304,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer4_0053"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14328,7 +14328,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14352,7 +14352,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14376,7 +14376,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14400,7 +14400,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14424,7 +14424,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14448,7 +14448,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14472,7 +14472,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14496,7 +14496,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14520,7 +14520,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14544,7 +14544,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14568,7 +14568,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14592,7 +14592,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14616,7 +14616,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14640,7 +14640,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14664,7 +14664,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14688,7 +14688,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14712,7 +14712,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14736,7 +14736,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14760,7 +14760,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14784,7 +14784,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14808,7 +14808,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0021"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14832,7 +14832,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0022"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14856,7 +14856,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0023"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14880,7 +14880,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0024"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14904,7 +14904,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0025"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14928,7 +14928,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0026"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14952,7 +14952,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0027"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -14976,7 +14976,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0028"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15000,7 +15000,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0029"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15024,7 +15024,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0030"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15048,7 +15048,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0031"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15072,7 +15072,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0032"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15096,7 +15096,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0033"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15120,7 +15120,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0034"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15144,7 +15144,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0035"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15168,7 +15168,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0036"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15192,7 +15192,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0037"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15216,7 +15216,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0038"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15240,7 +15240,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0039"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15264,7 +15264,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0040"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15288,7 +15288,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0041"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15312,7 +15312,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0042"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15336,7 +15336,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0043"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15360,7 +15360,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0044"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15384,7 +15384,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0045"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15408,7 +15408,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0046"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15432,7 +15432,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0047"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15456,7 +15456,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0048"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15480,7 +15480,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0049"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15504,7 +15504,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0050"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15528,7 +15528,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0051"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15552,7 +15552,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0052"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15576,7 +15576,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer5_0053"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15600,7 +15600,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15624,7 +15624,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15648,7 +15648,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15672,7 +15672,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15696,7 +15696,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15720,7 +15720,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15744,7 +15744,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15768,7 +15768,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15792,7 +15792,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15816,7 +15816,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15840,7 +15840,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15864,7 +15864,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15888,7 +15888,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15912,7 +15912,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15936,7 +15936,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15960,7 +15960,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -15984,7 +15984,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16008,7 +16008,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16032,7 +16032,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16056,7 +16056,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16080,7 +16080,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0021"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16104,7 +16104,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0022"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16128,7 +16128,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0023"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16152,7 +16152,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0024"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16176,7 +16176,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0025"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16200,7 +16200,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0026"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16224,7 +16224,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0027"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16248,7 +16248,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0028"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16272,7 +16272,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0029"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16296,7 +16296,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0030"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16320,7 +16320,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0031"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16344,7 +16344,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0032"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16368,7 +16368,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0033"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16392,7 +16392,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0034"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16416,7 +16416,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0035"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16440,7 +16440,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0036"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16464,7 +16464,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0037"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16488,7 +16488,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0038"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16512,7 +16512,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0039"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16536,7 +16536,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0040"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16560,7 +16560,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0041"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16584,7 +16584,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0042"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16608,7 +16608,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0043"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16632,7 +16632,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0044"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16656,7 +16656,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0045"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16680,7 +16680,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0046"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16704,7 +16704,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0047"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16728,7 +16728,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0048"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16752,7 +16752,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0049"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16776,7 +16776,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0050"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16800,7 +16800,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0051"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16824,7 +16824,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0052"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16848,7 +16848,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer6_0053"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16872,7 +16872,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16896,7 +16896,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16920,7 +16920,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16944,7 +16944,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16968,7 +16968,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -16992,7 +16992,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17016,7 +17016,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17040,7 +17040,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17064,7 +17064,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17088,7 +17088,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17112,7 +17112,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17136,7 +17136,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17160,7 +17160,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17184,7 +17184,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17208,7 +17208,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17232,7 +17232,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17256,7 +17256,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17280,7 +17280,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17304,7 +17304,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17328,7 +17328,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17352,7 +17352,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0021"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17376,7 +17376,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0022"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17400,7 +17400,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0023"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17424,7 +17424,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0024"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17448,7 +17448,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0025"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17472,7 +17472,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0026"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17496,7 +17496,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0027"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17520,7 +17520,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0028"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17544,7 +17544,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0029"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17568,7 +17568,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0030"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17592,7 +17592,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0031"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17616,7 +17616,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0032"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17640,7 +17640,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0033"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17664,7 +17664,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0034"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17688,7 +17688,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0035"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17712,7 +17712,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0036"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17736,7 +17736,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0037"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17760,7 +17760,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0038"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17784,7 +17784,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0039"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17808,7 +17808,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0040"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17832,7 +17832,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0041"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17856,7 +17856,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0042"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17880,7 +17880,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0043"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17904,7 +17904,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0044"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17928,7 +17928,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0045"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17952,7 +17952,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0046"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -17976,7 +17976,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0047"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18000,7 +18000,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0048"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18024,7 +18024,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0049"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18048,7 +18048,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0050"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18072,7 +18072,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0051"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18096,7 +18096,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0052"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18120,7 +18120,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer7_0053"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18144,7 +18144,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18168,7 +18168,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18192,7 +18192,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18216,7 +18216,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18240,7 +18240,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18264,7 +18264,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18288,7 +18288,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18312,7 +18312,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18336,7 +18336,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18360,7 +18360,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18384,7 +18384,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18408,7 +18408,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18432,7 +18432,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18456,7 +18456,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18480,7 +18480,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18504,7 +18504,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18528,7 +18528,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18552,7 +18552,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18576,7 +18576,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18600,7 +18600,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18624,7 +18624,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0021"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18648,7 +18648,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0022"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18672,7 +18672,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0023"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18696,7 +18696,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0024"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18720,7 +18720,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0025"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18744,7 +18744,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0026"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18768,7 +18768,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0027"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18792,7 +18792,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0028"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18816,7 +18816,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0029"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18840,7 +18840,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0030"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18864,7 +18864,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0031"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18888,7 +18888,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0032"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18912,7 +18912,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0033"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18936,7 +18936,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0034"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18960,7 +18960,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0035"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -18984,7 +18984,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0036"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19008,7 +19008,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0037"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19032,7 +19032,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0038"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19056,7 +19056,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0039"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19080,7 +19080,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0040"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19104,7 +19104,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0041"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19128,7 +19128,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0042"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19152,7 +19152,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0043"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19176,7 +19176,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0044"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19200,7 +19200,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0045"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19224,7 +19224,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0046"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19248,7 +19248,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0047"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19272,7 +19272,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0048"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19296,7 +19296,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0049"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19320,7 +19320,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0050"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19344,7 +19344,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0051"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19368,7 +19368,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0052"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19392,7 +19392,7 @@ return {
 		alias = {}
 	},
 	["tower_mechs_layer8_0053"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			155,
 			174
@@ -19416,7 +19416,7 @@ return {
 		alias = {}
 	},
 	["twilight_evoker_aura"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			121,
 			62
@@ -19440,7 +19440,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_decal_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19464,7 +19464,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_decal_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19488,7 +19488,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_decal_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19512,7 +19512,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_decal_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19536,7 +19536,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_decal_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19560,7 +19560,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_decal_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19584,7 +19584,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_decal_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19608,7 +19608,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_decal_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19632,7 +19632,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_decal_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19656,7 +19656,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_decal_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19680,7 +19680,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_decal_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19704,7 +19704,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_decal_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19728,7 +19728,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_decal_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19752,7 +19752,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_decal_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19776,7 +19776,7 @@ return {
 		alias = {}
 	},
 	["veznan_hero_arcaneNova_terrainDecal"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			149,
 			73
@@ -19800,7 +19800,7 @@ return {
 		alias = {}
 	},
 	["weakness_big_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			54,
 			28
@@ -19824,7 +19824,7 @@ return {
 		alias = {}
 	},
 	["weakness_big_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			54,
 			28
@@ -19848,7 +19848,7 @@ return {
 		alias = {}
 	},
 	["weakness_big_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			54,
 			28
@@ -19872,7 +19872,7 @@ return {
 		alias = {}
 	},
 	["weakness_big_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			54,
 			28
@@ -19896,7 +19896,7 @@ return {
 		alias = {}
 	},
 	["weakness_big_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			54,
 			28
@@ -19920,7 +19920,7 @@ return {
 		alias = {}
 	},
 	["weakness_big_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			54,
 			28
@@ -19944,7 +19944,7 @@ return {
 		alias = {}
 	},
 	["weakness_big_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			54,
 			28
@@ -19968,7 +19968,7 @@ return {
 		alias = {}
 	},
 	["weakness_big_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			54,
 			28
@@ -19992,7 +19992,7 @@ return {
 		alias = {}
 	},
 	["weakness_big_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			54,
 			28
@@ -20016,7 +20016,7 @@ return {
 		alias = {}
 	},
 	["weakness_big_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			54,
 			28
@@ -20040,7 +20040,7 @@ return {
 		alias = {}
 	},
 	["weakness_big_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			54,
 			28
@@ -20064,7 +20064,7 @@ return {
 		alias = {}
 	},
 	["weakness_small_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			37,
 			20
@@ -20088,7 +20088,7 @@ return {
 		alias = {}
 	},
 	["weakness_small_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			37,
 			20
@@ -20112,7 +20112,7 @@ return {
 		alias = {}
 	},
 	["weakness_small_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			37,
 			20
@@ -20136,7 +20136,7 @@ return {
 		alias = {}
 	},
 	["weakness_small_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			37,
 			20
@@ -20160,7 +20160,7 @@ return {
 		alias = {}
 	},
 	["weakness_small_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			37,
 			20
@@ -20184,7 +20184,7 @@ return {
 		alias = {}
 	},
 	["weakness_small_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			37,
 			20
@@ -20208,7 +20208,7 @@ return {
 		alias = {}
 	},
 	["weakness_small_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			37,
 			20
@@ -20232,7 +20232,7 @@ return {
 		alias = {}
 	},
 	["weakness_small_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			37,
 			20
@@ -20256,7 +20256,7 @@ return {
 		alias = {}
 	},
 	["weakness_small_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			37,
 			20
@@ -20280,7 +20280,7 @@ return {
 		alias = {}
 	},
 	["weakness_small_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			37,
 			20
@@ -20304,7 +20304,7 @@ return {
 		alias = {}
 	},
 	["weakness_small_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			37,
 			20
@@ -20328,7 +20328,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_drink_auraCircle"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			98,
 			38
@@ -20352,7 +20352,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_drink_decal"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			79,
 			23
@@ -20376,7 +20376,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_decal"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			183,
 			70
@@ -20400,7 +20400,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0001"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20424,7 +20424,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0002"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20448,7 +20448,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0003"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20472,7 +20472,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0004"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20496,7 +20496,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0005"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20520,7 +20520,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0006"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20544,7 +20544,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0007"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20568,7 +20568,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0008"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20592,7 +20592,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0009"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20616,7 +20616,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0010"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20640,7 +20640,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0011"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20664,7 +20664,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0012"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20688,7 +20688,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0013"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20712,7 +20712,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0014"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20736,7 +20736,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0015"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20760,7 +20760,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0016"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20784,7 +20784,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0017"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20808,7 +20808,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0018"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20832,7 +20832,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0019"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20856,7 +20856,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0020"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20880,7 +20880,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0021"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20904,7 +20904,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0022"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20928,7 +20928,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0023"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25
@@ -20952,7 +20952,7 @@ return {
 		alias = {}
 	},
 	["xin_hero_scream_soldierDecal_0024"] = {
-		a_name = "go_decals-1.png",
+		a_name = "go_decals-1.dds",
 		size = {
 			53,
 			25

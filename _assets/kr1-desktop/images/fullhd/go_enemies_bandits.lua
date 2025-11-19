@@ -2,7 +2,7 @@
 
 return {
 	Pillager_0001 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	Pillager_0003 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	Pillager_0005 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	Pillager_0007 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	Pillager_0009 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	Pillager_0011 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -158,7 +158,7 @@ return {
 		}
 	},
 	Pillager_0013 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -184,7 +184,7 @@ return {
 		}
 	},
 	Pillager_0015 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -210,7 +210,7 @@ return {
 		}
 	},
 	Pillager_0017 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -236,7 +236,7 @@ return {
 		}
 	},
 	Pillager_0019 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -262,7 +262,7 @@ return {
 		}
 	},
 	Pillager_0021 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -288,7 +288,7 @@ return {
 		}
 	},
 	Pillager_0023 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -314,7 +314,7 @@ return {
 		}
 	},
 	Pillager_0025 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -340,7 +340,7 @@ return {
 		}
 	},
 	Pillager_0027 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -366,7 +366,7 @@ return {
 		}
 	},
 	Pillager_0029 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -392,7 +392,7 @@ return {
 		}
 	},
 	Pillager_0031 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -418,7 +418,7 @@ return {
 		}
 	},
 	Pillager_0033 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -444,7 +444,7 @@ return {
 		}
 	},
 	Pillager_0035 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -470,7 +470,7 @@ return {
 		}
 	},
 	Pillager_0037 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -496,7 +496,7 @@ return {
 		}
 	},
 	Pillager_0039 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -522,7 +522,7 @@ return {
 		}
 	},
 	Pillager_0041 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -548,7 +548,7 @@ return {
 		}
 	},
 	Pillager_0043 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -574,7 +574,7 @@ return {
 		}
 	},
 	Pillager_0045 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -600,7 +600,7 @@ return {
 		}
 	},
 	Pillager_0047 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -626,7 +626,7 @@ return {
 		}
 	},
 	Pillager_0049 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -652,7 +652,7 @@ return {
 		}
 	},
 	Pillager_0051 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -678,7 +678,7 @@ return {
 		}
 	},
 	Pillager_0053 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -704,7 +704,7 @@ return {
 		}
 	},
 	Pillager_0055 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -730,7 +730,7 @@ return {
 		}
 	},
 	Pillager_0057 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -756,7 +756,7 @@ return {
 		}
 	},
 	Pillager_0059 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -782,7 +782,7 @@ return {
 		}
 	},
 	Pillager_0061 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -808,7 +808,7 @@ return {
 		}
 	},
 	Pillager_0063 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -834,7 +834,7 @@ return {
 		}
 	},
 	Pillager_0065 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -860,7 +860,7 @@ return {
 		}
 	},
 	Pillager_0067 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -886,7 +886,7 @@ return {
 		}
 	},
 	Pillager_0069 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -912,7 +912,7 @@ return {
 		}
 	},
 	Pillager_0071 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -938,7 +938,7 @@ return {
 		}
 	},
 	Pillager_0073 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -964,7 +964,7 @@ return {
 		}
 	},
 	Pillager_0075 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -990,7 +990,7 @@ return {
 		}
 	},
 	Pillager_0077 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1016,7 +1016,7 @@ return {
 		}
 	},
 	Pillager_0079 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1040,7 +1040,7 @@ return {
 		alias = {}
 	},
 	Pillager_0080 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1066,7 +1066,7 @@ return {
 		}
 	},
 	Pillager_0082 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1092,7 +1092,7 @@ return {
 		}
 	},
 	Pillager_0084 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1118,7 +1118,7 @@ return {
 		}
 	},
 	Pillager_0086 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1144,7 +1144,7 @@ return {
 		}
 	},
 	Pillager_0088 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1170,7 +1170,7 @@ return {
 		}
 	},
 	Pillager_0090 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1197,7 +1197,7 @@ return {
 		}
 	},
 	Pillager_0093 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1223,7 +1223,7 @@ return {
 		}
 	},
 	Pillager_0095 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1249,7 +1249,7 @@ return {
 		}
 	},
 	Pillager_0097 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1275,7 +1275,7 @@ return {
 		}
 	},
 	Pillager_0099 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1303,7 +1303,7 @@ return {
 		}
 	},
 	Pillager_0103 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1327,7 +1327,7 @@ return {
 		alias = {}
 	},
 	Pillager_0104 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1351,7 +1351,7 @@ return {
 		alias = {}
 	},
 	Pillager_0105 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1375,7 +1375,7 @@ return {
 		alias = {}
 	},
 	Pillager_0106 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1401,7 +1401,7 @@ return {
 		}
 	},
 	Pillager_0108 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1427,7 +1427,7 @@ return {
 		}
 	},
 	Pillager_0110 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1451,7 +1451,7 @@ return {
 		alias = {}
 	},
 	Pillager_0111 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1475,7 +1475,7 @@ return {
 		alias = {}
 	},
 	Pillager_0112 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1499,7 +1499,7 @@ return {
 		alias = {}
 	},
 	Pillager_0113 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1523,7 +1523,7 @@ return {
 		alias = {}
 	},
 	Pillager_0114 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1556,7 +1556,7 @@ return {
 		}
 	},
 	Pillager_0123 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1582,7 +1582,7 @@ return {
 		}
 	},
 	Pillager_0125 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1606,7 +1606,7 @@ return {
 		alias = {}
 	},
 	Pillager_0126 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1630,7 +1630,7 @@ return {
 		alias = {}
 	},
 	Pillager_0127 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1656,7 +1656,7 @@ return {
 		}
 	},
 	Pillager_0129 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1680,7 +1680,7 @@ return {
 		alias = {}
 	},
 	Pillager_0130 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1704,7 +1704,7 @@ return {
 		alias = {}
 	},
 	Pillager_0131 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1730,7 +1730,7 @@ return {
 		}
 	},
 	Pillager_0133 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1756,7 +1756,7 @@ return {
 		}
 	},
 	Pillager_0135 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1782,7 +1782,7 @@ return {
 		}
 	},
 	Pillager_0137 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1806,7 +1806,7 @@ return {
 		alias = {}
 	},
 	Pillager_0138 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1832,7 +1832,7 @@ return {
 		}
 	},
 	Pillager_0140 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1858,7 +1858,7 @@ return {
 		}
 	},
 	Pillager_0142 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1884,7 +1884,7 @@ return {
 		}
 	},
 	Pillager_0144 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			218,
 			168
@@ -1908,7 +1908,7 @@ return {
 		alias = {}
 	},
 	RaiderBall_0001 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			27,
 			27
@@ -1932,7 +1932,7 @@ return {
 		alias = {}
 	},
 	RaiderBall_0002 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			27,
 			27
@@ -1956,7 +1956,7 @@ return {
 		alias = {}
 	},
 	Raider_0001 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -1982,7 +1982,7 @@ return {
 		}
 	},
 	Raider_0003 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2008,7 +2008,7 @@ return {
 		}
 	},
 	Raider_0005 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2034,7 +2034,7 @@ return {
 		}
 	},
 	Raider_0007 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2058,7 +2058,7 @@ return {
 		alias = {}
 	},
 	Raider_0008 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2084,7 +2084,7 @@ return {
 		}
 	},
 	Raider_0010 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2110,7 +2110,7 @@ return {
 		}
 	},
 	Raider_0012 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2136,7 +2136,7 @@ return {
 		}
 	},
 	Raider_0014 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2162,7 +2162,7 @@ return {
 		}
 	},
 	Raider_0016 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2188,7 +2188,7 @@ return {
 		}
 	},
 	Raider_0018 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2212,7 +2212,7 @@ return {
 		alias = {}
 	},
 	Raider_0019 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2238,7 +2238,7 @@ return {
 		}
 	},
 	Raider_0021 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2264,7 +2264,7 @@ return {
 		}
 	},
 	Raider_0023 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2290,7 +2290,7 @@ return {
 		}
 	},
 	Raider_0025 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2316,7 +2316,7 @@ return {
 		}
 	},
 	Raider_0027 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2342,7 +2342,7 @@ return {
 		}
 	},
 	Raider_0029 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2366,7 +2366,7 @@ return {
 		alias = {}
 	},
 	Raider_0030 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2392,7 +2392,7 @@ return {
 		}
 	},
 	Raider_0032 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2418,7 +2418,7 @@ return {
 		}
 	},
 	Raider_0034 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2444,7 +2444,7 @@ return {
 		}
 	},
 	Raider_0036 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2470,7 +2470,7 @@ return {
 		}
 	},
 	Raider_0038 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2496,7 +2496,7 @@ return {
 		}
 	},
 	Raider_0040 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2520,7 +2520,7 @@ return {
 		alias = {}
 	},
 	Raider_0041 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2546,7 +2546,7 @@ return {
 		}
 	},
 	Raider_0043 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2572,7 +2572,7 @@ return {
 		}
 	},
 	Raider_0045 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2598,7 +2598,7 @@ return {
 		}
 	},
 	Raider_0047 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2624,7 +2624,7 @@ return {
 		}
 	},
 	Raider_0049 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2650,7 +2650,7 @@ return {
 		}
 	},
 	Raider_0051 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2674,7 +2674,7 @@ return {
 		alias = {}
 	},
 	Raider_0052 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2700,7 +2700,7 @@ return {
 		}
 	},
 	Raider_0054 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2726,7 +2726,7 @@ return {
 		}
 	},
 	Raider_0056 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2752,7 +2752,7 @@ return {
 		}
 	},
 	Raider_0058 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2778,7 +2778,7 @@ return {
 		}
 	},
 	Raider_0060 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2804,7 +2804,7 @@ return {
 		}
 	},
 	Raider_0062 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2828,7 +2828,7 @@ return {
 		alias = {}
 	},
 	Raider_0063 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2854,7 +2854,7 @@ return {
 		}
 	},
 	Raider_0065 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -2880,7 +2880,7 @@ return {
 		}
 	},
 	Raider_0067 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2911,7 +2911,7 @@ return {
 		}
 	},
 	Raider_0070 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2937,7 +2937,7 @@ return {
 		}
 	},
 	Raider_0072 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2963,7 +2963,7 @@ return {
 		}
 	},
 	Raider_0074 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -2989,7 +2989,7 @@ return {
 		}
 	},
 	Raider_0076 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3015,7 +3015,7 @@ return {
 		}
 	},
 	Raider_0078 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3041,7 +3041,7 @@ return {
 		}
 	},
 	Raider_0080 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3065,7 +3065,7 @@ return {
 		alias = {}
 	},
 	Raider_0081 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -3089,7 +3089,7 @@ return {
 		alias = {}
 	},
 	Raider_0082 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -3115,7 +3115,7 @@ return {
 		}
 	},
 	Raider_0087 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3141,7 +3141,7 @@ return {
 		}
 	},
 	Raider_0089 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3167,7 +3167,7 @@ return {
 		}
 	},
 	Raider_0091 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3193,7 +3193,7 @@ return {
 		}
 	},
 	Raider_0093 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3219,7 +3219,7 @@ return {
 		}
 	},
 	Raider_0095 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3245,7 +3245,7 @@ return {
 		}
 	},
 	Raider_0097 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3271,7 +3271,7 @@ return {
 		}
 	},
 	Raider_0099 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3297,7 +3297,7 @@ return {
 		}
 	},
 	Raider_0101 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -3323,7 +3323,7 @@ return {
 		}
 	},
 	Raider_0103 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -3349,7 +3349,7 @@ return {
 		}
 	},
 	Raider_0105 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -3375,7 +3375,7 @@ return {
 		}
 	},
 	Raider_0107 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -3401,7 +3401,7 @@ return {
 		}
 	},
 	Raider_0110 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3425,7 +3425,7 @@ return {
 		alias = {}
 	},
 	Raider_0111 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3449,7 +3449,7 @@ return {
 		alias = {}
 	},
 	Raider_0112 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3475,7 +3475,7 @@ return {
 		}
 	},
 	Raider_0114 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3501,7 +3501,7 @@ return {
 		}
 	},
 	Raider_0116 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3525,7 +3525,7 @@ return {
 		alias = {}
 	},
 	Raider_0117 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3549,7 +3549,7 @@ return {
 		alias = {}
 	},
 	Raider_0118 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3573,7 +3573,7 @@ return {
 		alias = {}
 	},
 	Raider_0119 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3597,7 +3597,7 @@ return {
 		alias = {}
 	},
 	Raider_0120 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3630,7 +3630,7 @@ return {
 		}
 	},
 	Raider_0129 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -3656,7 +3656,7 @@ return {
 		}
 	},
 	Raider_0131 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3680,7 +3680,7 @@ return {
 		alias = {}
 	},
 	Raider_0132 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3704,7 +3704,7 @@ return {
 		alias = {}
 	},
 	Raider_0133 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -3730,7 +3730,7 @@ return {
 		}
 	},
 	Raider_0135 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -3756,7 +3756,7 @@ return {
 		}
 	},
 	Raider_0137 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -3782,7 +3782,7 @@ return {
 		}
 	},
 	Raider_0139 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -3808,7 +3808,7 @@ return {
 		}
 	},
 	Raider_0141 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -3834,7 +3834,7 @@ return {
 		}
 	},
 	Raider_0143 = {
-		a_name = "go_enemies_bandits-2.png",
+		a_name = "go_enemies_bandits-2.dds",
 		size = {
 			126,
 			96
@@ -3858,7 +3858,7 @@ return {
 		alias = {}
 	},
 	Raider_0144 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3884,7 +3884,7 @@ return {
 		}
 	},
 	Raider_0146 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3910,7 +3910,7 @@ return {
 		}
 	},
 	Raider_0148 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96
@@ -3936,7 +3936,7 @@ return {
 		}
 	},
 	Raider_0150 = {
-		a_name = "go_enemies_bandits-1.png",
+		a_name = "go_enemies_bandits-1.dds",
 		size = {
 			126,
 			96

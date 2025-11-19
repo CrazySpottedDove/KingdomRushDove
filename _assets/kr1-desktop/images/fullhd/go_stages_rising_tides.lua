@@ -2,7 +2,7 @@
 
 return {
 	Stage16_fish_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0002 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0003 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0004 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0005 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0006 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0007 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0008 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0009 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0010 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0011 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0012 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0013 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0014 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0015 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0016 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	Stage16_fish_0017 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -412,7 +412,7 @@ return {
 		}
 	},
 	Stage16_fish_0019 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -438,7 +438,7 @@ return {
 		}
 	},
 	Stage16_fish_0021 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			70,
 			56
@@ -464,7 +464,7 @@ return {
 		}
 	},
 	Stage16_waterSparks_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			87,
 			53
@@ -494,7 +494,7 @@ return {
 		}
 	},
 	Stage16_waterSparks_0007 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			87,
 			53
@@ -531,7 +531,7 @@ return {
 		}
 	},
 	Stage16_waterSparks_0014 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			87,
 			53
@@ -561,7 +561,7 @@ return {
 		}
 	},
 	Stage16_waterWave_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			76,
 			17
@@ -588,7 +588,7 @@ return {
 		}
 	},
 	Stage16_waterWave_0004 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			76,
 			17
@@ -615,7 +615,7 @@ return {
 		}
 	},
 	Stage16_waterWave_0007 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			76,
 			17
@@ -642,7 +642,7 @@ return {
 		}
 	},
 	Stage16_waterWave_0010 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			76,
 			17
@@ -669,7 +669,7 @@ return {
 		}
 	},
 	Stage16_waterWave_0013 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			76,
 			17
@@ -696,7 +696,7 @@ return {
 		}
 	},
 	neptuno_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -720,7 +720,7 @@ return {
 		alias = {}
 	},
 	neptuno_0001_over = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			256,
 			121
@@ -744,7 +744,7 @@ return {
 		alias = {}
 	},
 	neptuno_0002 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -768,7 +768,7 @@ return {
 		alias = {}
 	},
 	neptuno_0002_over = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			256,
 			121
@@ -792,7 +792,7 @@ return {
 		alias = {}
 	},
 	neptuno_energy2_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -818,7 +818,7 @@ return {
 		}
 	},
 	neptuno_energy2_0003 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -844,7 +844,7 @@ return {
 		}
 	},
 	neptuno_energy2_0005 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -870,7 +870,7 @@ return {
 		}
 	},
 	neptuno_energy2_0007 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -896,7 +896,7 @@ return {
 		}
 	},
 	neptuno_energy2_0009 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -922,7 +922,7 @@ return {
 		}
 	},
 	neptuno_energy2_0011 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -948,7 +948,7 @@ return {
 		}
 	},
 	neptuno_energy2_0013 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -974,7 +974,7 @@ return {
 		}
 	},
 	neptuno_energy2_0015 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1000,7 +1000,7 @@ return {
 		}
 	},
 	neptuno_energy2_0017 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1026,7 +1026,7 @@ return {
 		}
 	},
 	neptuno_energy2_0019 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1052,7 +1052,7 @@ return {
 		}
 	},
 	neptuno_energy2_0021 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1078,7 +1078,7 @@ return {
 		}
 	},
 	neptuno_energy2_0023 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1104,7 +1104,7 @@ return {
 		}
 	},
 	neptuno_energy2_0025 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1130,7 +1130,7 @@ return {
 		}
 	},
 	neptuno_energy_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1156,7 +1156,7 @@ return {
 		}
 	},
 	neptuno_energy_0003 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1182,7 +1182,7 @@ return {
 		}
 	},
 	neptuno_energy_0005 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1208,7 +1208,7 @@ return {
 		}
 	},
 	neptuno_energy_0007 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1234,7 +1234,7 @@ return {
 		}
 	},
 	neptuno_energy_0009 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1260,7 +1260,7 @@ return {
 		}
 	},
 	neptuno_energy_0011 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1286,7 +1286,7 @@ return {
 		}
 	},
 	neptuno_energy_0013 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1312,7 +1312,7 @@ return {
 		}
 	},
 	neptuno_energy_0015 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1338,7 +1338,7 @@ return {
 		}
 	},
 	neptuno_energy_0017 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1364,7 +1364,7 @@ return {
 		}
 	},
 	neptuno_energy_0019 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1390,7 +1390,7 @@ return {
 		}
 	},
 	neptuno_energy_0021 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1416,7 +1416,7 @@ return {
 		}
 	},
 	neptuno_energy_0023 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1442,7 +1442,7 @@ return {
 		}
 	},
 	neptuno_energy_0025 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1468,7 +1468,7 @@ return {
 		}
 	},
 	neptuno_explosion_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			169,
 			127
@@ -1494,7 +1494,7 @@ return {
 		}
 	},
 	neptuno_explosion_0003 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			169,
 			127
@@ -1520,7 +1520,7 @@ return {
 		}
 	},
 	neptuno_explosion_0005 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			169,
 			127
@@ -1546,7 +1546,7 @@ return {
 		}
 	},
 	neptuno_explosion_0007 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			169,
 			127
@@ -1572,7 +1572,7 @@ return {
 		}
 	},
 	neptuno_explosion_0009 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			169,
 			127
@@ -1598,7 +1598,7 @@ return {
 		}
 	},
 	neptuno_explosion_0011 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			169,
 			127
@@ -1624,7 +1624,7 @@ return {
 		}
 	},
 	neptuno_explosion_0013 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			169,
 			127
@@ -1650,7 +1650,7 @@ return {
 		}
 	},
 	neptuno_explosion_0015 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			169,
 			127
@@ -1676,7 +1676,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1702,7 +1702,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0002 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1726,7 +1726,7 @@ return {
 		alias = {}
 	},
 	neptuno_gems_layer1_0003 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1752,7 +1752,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0005 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1778,7 +1778,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0007 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1804,7 +1804,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0009 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1830,7 +1830,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0011 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1856,7 +1856,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0013 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1882,7 +1882,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0015 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1908,7 +1908,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0017 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1934,7 +1934,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0019 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1960,7 +1960,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0021 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -1984,7 +1984,7 @@ return {
 		alias = {}
 	},
 	neptuno_gems_layer1_0022 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2012,7 +2012,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0026 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2038,7 +2038,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0028 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2064,7 +2064,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0030 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2090,7 +2090,7 @@ return {
 		}
 	},
 	neptuno_gems_layer1_0032 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2116,7 +2116,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2142,7 +2142,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0002 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2166,7 +2166,7 @@ return {
 		alias = {}
 	},
 	neptuno_gems_layer2_0003 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2192,7 +2192,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0005 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2218,7 +2218,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0007 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2244,7 +2244,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0009 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2270,7 +2270,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0011 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2296,7 +2296,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0013 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2322,7 +2322,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0015 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2348,7 +2348,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0017 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2374,7 +2374,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0019 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2400,7 +2400,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0021 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2424,7 +2424,7 @@ return {
 		alias = {}
 	},
 	neptuno_gems_layer2_0022 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2452,7 +2452,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0026 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2478,7 +2478,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0028 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2504,7 +2504,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0030 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2530,7 +2530,7 @@ return {
 		}
 	},
 	neptuno_gems_layer2_0032 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2556,7 +2556,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2582,7 +2582,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0002 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2606,7 +2606,7 @@ return {
 		alias = {}
 	},
 	neptuno_gems_layer3_0003 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2632,7 +2632,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0005 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2658,7 +2658,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0007 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2684,7 +2684,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0009 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2710,7 +2710,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0011 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2736,7 +2736,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0013 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2762,7 +2762,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0015 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2788,7 +2788,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0017 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2814,7 +2814,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0019 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2840,7 +2840,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0021 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2864,7 +2864,7 @@ return {
 		alias = {}
 	},
 	neptuno_gems_layer3_0022 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2892,7 +2892,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0026 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2918,7 +2918,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0028 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2944,7 +2944,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0030 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2970,7 +2970,7 @@ return {
 		}
 	},
 	neptuno_gems_layer3_0032 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -2996,7 +2996,7 @@ return {
 		}
 	},
 	neptuno_gems_layer4_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3024,7 +3024,7 @@ return {
 		}
 	},
 	neptuno_gems_layer4_0003 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3052,7 +3052,7 @@ return {
 		}
 	},
 	neptuno_gems_layer4_0005 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3080,7 +3080,7 @@ return {
 		}
 	},
 	neptuno_gems_layer4_0007 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3108,7 +3108,7 @@ return {
 		}
 	},
 	neptuno_gems_layer4_0009 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3136,7 +3136,7 @@ return {
 		}
 	},
 	neptuno_gems_layer4_0011 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3166,7 +3166,7 @@ return {
 		}
 	},
 	neptuno_gems_layer4_0013 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3192,7 +3192,7 @@ return {
 		}
 	},
 	neptuno_gems_layer4_0015 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3218,7 +3218,7 @@ return {
 		}
 	},
 	neptuno_gems_layer4_0017 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3244,7 +3244,7 @@ return {
 		}
 	},
 	neptuno_gems_layer4_0019 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3270,7 +3270,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3296,7 +3296,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0002 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3320,7 +3320,7 @@ return {
 		alias = {}
 	},
 	neptuno_gems_layer5_0003 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3346,7 +3346,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0005 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3372,7 +3372,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0007 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3398,7 +3398,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0009 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3424,7 +3424,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0011 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3450,7 +3450,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0013 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3476,7 +3476,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0015 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3502,7 +3502,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0017 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3528,7 +3528,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0019 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3554,7 +3554,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0021 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3578,7 +3578,7 @@ return {
 		alias = {}
 	},
 	neptuno_gems_layer5_0022 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3606,7 +3606,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0026 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3632,7 +3632,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0028 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3658,7 +3658,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0030 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3684,7 +3684,7 @@ return {
 		}
 	},
 	neptuno_gems_layer5_0032 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3710,7 +3710,7 @@ return {
 		}
 	},
 	neptuno_glow_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3736,7 +3736,7 @@ return {
 		}
 	},
 	neptuno_glow_0002 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3764,7 +3764,7 @@ return {
 		}
 	},
 	neptuno_glow_0004 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3792,7 +3792,7 @@ return {
 		}
 	},
 	neptuno_glow_0006 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3820,7 +3820,7 @@ return {
 		}
 	},
 	neptuno_glow_0008 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3848,7 +3848,7 @@ return {
 		}
 	},
 	neptuno_glow_0010 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			191,
 			225
@@ -3874,7 +3874,7 @@ return {
 		}
 	},
 	neptuno_glow_2_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			84,
 			84
@@ -3898,7 +3898,7 @@ return {
 		alias = {}
 	},
 	neptuno_glow_2_0002 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			84,
 			84
@@ -3922,7 +3922,7 @@ return {
 		alias = {}
 	},
 	neptuno_glow_2_0003 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			84,
 			84
@@ -3946,7 +3946,7 @@ return {
 		alias = {}
 	},
 	neptuno_glow_2_0004 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			84,
 			84
@@ -3970,7 +3970,7 @@ return {
 		alias = {}
 	},
 	neptuno_glow_2_0005 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			84,
 			84
@@ -3994,7 +3994,7 @@ return {
 		alias = {}
 	},
 	neptuno_glow_2_0006 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			84,
 			84
@@ -4018,7 +4018,7 @@ return {
 		alias = {}
 	},
 	neptuno_glow_2_0007 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			84,
 			84
@@ -4042,7 +4042,7 @@ return {
 		alias = {}
 	},
 	neptuno_glow_2_0008 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			84,
 			84
@@ -4066,7 +4066,7 @@ return {
 		alias = {}
 	},
 	neptuno_glow_2_0009 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			84,
 			84
@@ -4090,7 +4090,7 @@ return {
 		alias = {}
 	},
 	neptuno_glow_2_0010 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			84,
 			84
@@ -4114,7 +4114,7 @@ return {
 		alias = {}
 	},
 	neptuno_glow_2_0011 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			84,
 			84
@@ -4138,7 +4138,7 @@ return {
 		alias = {}
 	},
 	neptuno_glow_2_0012 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			84,
 			84
@@ -4162,7 +4162,7 @@ return {
 		alias = {}
 	},
 	neptuno_glow_2_0013 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			84,
 			84
@@ -4186,7 +4186,7 @@ return {
 		alias = {}
 	},
 	neptuno_glow_2_0014 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			84,
 			84
@@ -4210,7 +4210,7 @@ return {
 		alias = {}
 	},
 	neptuno_ray_0001 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			503,
 			42
@@ -4236,7 +4236,7 @@ return {
 		}
 	},
 	neptuno_ray_0003 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			503,
 			42
@@ -4262,7 +4262,7 @@ return {
 		}
 	},
 	neptuno_ray_0005 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			503,
 			42
@@ -4288,7 +4288,7 @@ return {
 		}
 	},
 	neptuno_ray_0007 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			503,
 			42
@@ -4314,7 +4314,7 @@ return {
 		}
 	},
 	neptuno_ray_0009 = {
-		a_name = "go_stages_rising_tides-1.png",
+		a_name = "go_stages_rising_tides-1.dds",
 		size = {
 			503,
 			42

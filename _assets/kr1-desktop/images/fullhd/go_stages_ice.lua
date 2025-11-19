@@ -2,7 +2,7 @@
 
 return {
 	Copo = {
-		a_name = "go_stages_ice-1.png",
+		a_name = "go_stages_ice-1.dds",
 		size = {
 			16,
 			16
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	cave_light_0001 = {
-		a_name = "go_stages_ice-1.png",
+		a_name = "go_stages_ice-1.dds",
 		size = {
 			120,
 			120
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	goat_0001 = {
-		a_name = "go_stages_ice-1.png",
+		a_name = "go_stages_ice-1.dds",
 		size = {
 			44,
 			38
@@ -81,7 +81,7 @@ return {
 		}
 	},
 	goat_0003 = {
-		a_name = "go_stages_ice-1.png",
+		a_name = "go_stages_ice-1.dds",
 		size = {
 			44,
 			38
@@ -107,7 +107,7 @@ return {
 		}
 	},
 	goat_0005 = {
-		a_name = "go_stages_ice-1.png",
+		a_name = "go_stages_ice-1.dds",
 		size = {
 			44,
 			38
@@ -135,7 +135,7 @@ return {
 		}
 	},
 	goat_0007 = {
-		a_name = "go_stages_ice-1.png",
+		a_name = "go_stages_ice-1.dds",
 		size = {
 			44,
 			38
@@ -163,7 +163,7 @@ return {
 		}
 	},
 	goat_0009 = {
-		a_name = "go_stages_ice-1.png",
+		a_name = "go_stages_ice-1.dds",
 		size = {
 			44,
 			38
@@ -196,7 +196,7 @@ return {
 		}
 	},
 	goat_0013 = {
-		a_name = "go_stages_ice-1.png",
+		a_name = "go_stages_ice-1.dds",
 		size = {
 			44,
 			38

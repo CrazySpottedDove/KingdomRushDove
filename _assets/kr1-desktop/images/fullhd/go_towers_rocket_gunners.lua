@@ -1,6 +1,6 @@
 return {
 	["rocket_gunners_tower_build"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			136,
 			99
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_gunner_shadow"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			56,
 			36
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			99,
 			96
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			99,
 			96
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			99,
 			96
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			99,
 			96
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			99,
 			96
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			99,
 			96
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			99,
 			96
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			99,
 			96
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0017"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0018"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0019"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0020"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0021"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0022"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0023"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0024"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_hit_fx_floor_0025"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			107
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_landing_fx_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			76
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0017"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0018"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0019"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0020"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0021"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0022"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0023"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0024"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0025"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0026"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0027"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0028"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0029"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0030"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0031"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0032"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0033"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0034"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0035"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0036"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0037"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0038"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0039"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0040"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0041"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0042"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0043"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0044"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0045"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0046"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0047"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0048"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0049"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0050"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0051"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0052"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0053"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0054"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0055"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0056"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0057"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0058"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0059"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0060"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0061"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0062"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0063"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0064"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0065"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0066"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0067"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0068"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0069"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0070"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0071"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0072"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0073"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0074"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0075"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0076"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0077"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0078"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0079"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0080"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0081"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0082"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0083"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0084"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0085"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0086"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0087"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0088"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0089"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0090"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0091"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0092"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0093"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0094"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0095"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0096"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0097"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0098"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0099"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0100"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0101"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0102"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0103"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0104"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0105"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0106"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0107"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0108"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0109"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0110"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0111"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0112"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0113"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0114"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0115"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0116"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0117"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0118"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0119"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0120"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0121"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0122"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0123"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0124"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0125"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0126"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0127"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0128"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0129"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0130"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0131"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0132"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0133"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0134"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0135"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0136"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0137"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0138"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0139"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0140"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0141"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0142"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0143"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0144"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0145"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0146"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0147"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0148"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0149"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0150"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0151"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0152"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0153"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0154"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0155"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0156"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0157"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0158"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0159"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0160"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0161"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0162"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0163"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0164"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0165"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0166"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0167"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0168"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0169"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0170"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0171"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0172"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0173"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0174"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0175"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0176"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0177"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0178"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0179"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0180"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0181"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0182"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0183"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0184"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0185"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0186"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0187"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0188"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0189"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0190"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0191"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0192"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0193"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0194"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0195"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0196"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0197"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0198"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0199"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0200"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0201"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0202"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0203"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0204"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0205"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0206"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0207"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0208"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0209"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0210"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0211"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0212"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0213"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0214"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0215"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0216"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0217"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0218"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0219"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0220"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0221"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0222"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0223"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0224"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0225"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0226"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0227"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0228"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0229"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0230"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0231"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0232"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0233"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0234"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0235"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0236"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0237"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0238"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0239"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0240"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0241"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0242"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0243"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0244"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0245"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0246"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0247"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0248"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0249"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0250"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0251"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0252"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0253"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0254"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0255"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0256"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0257"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0258"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0259"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0260"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0261"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0262"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0263"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0264"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0265"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0266"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0267"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0268"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0269"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0270"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0271"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0272"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0273"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0274"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0275"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0276"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0277"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0278"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0279"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0280"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0281"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0282"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0283"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0284"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0285"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0286"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0287"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0288"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0289"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0290"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0291"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0292"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0293"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0294"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0295"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0296"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0297"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0298"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0299"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0300"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0301"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0302"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0303"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0304"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0305"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0306"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0307"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0308"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0309"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0310"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0311"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0312"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0313"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0314"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0315"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0316"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0317"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0318"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0319"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0320"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0321"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0322"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0323"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0324"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0325"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0326"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0327"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0328"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0329"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0330"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0331"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0332"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0333"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0334"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0335"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0336"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0337"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0338"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0339"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0340"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0341"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0342"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0343"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0344"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0345"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0346"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0347"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0348"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0349"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0350"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0351"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0352"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0353"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0354"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0355"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0356"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0357"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0358"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0359"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0360"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0361"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0362"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0363"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0364"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0365"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0366"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0367"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0368"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0369"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0370"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0371"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0372"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0373"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0374"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0375"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0376"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0377"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0378"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_gunner_0379"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			193,
 			215
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0017"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0018"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0019"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0020"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0021"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0022"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0023"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0024"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0025"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0026"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0027"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0028"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0029"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0030"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0031"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0032"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0033"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0034"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0035"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0036"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0037"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0038"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0039"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0040"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0041"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0042"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0043"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0044"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0045"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0046"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0047"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0048"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0049"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0050"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0051"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0052"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0053"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0054"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0055"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0056"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0057"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0058"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0059"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0060"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0061"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_lvl4_tower_0062"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			159,
 			238
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0017"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0018"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0019"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0020"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_0021"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			127,
 			252
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0017"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_explosion_air_0018"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			153,
 			144
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			122
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			122
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			122
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			122
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			122
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			122
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			122
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			122
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			122
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			122
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			122
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			110,
 			122
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0017"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0018"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0019"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0020"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0021"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0022"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0023"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0024"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_hit_fx_floor_0025"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			139,
 			136
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_trace_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			136,
 			68
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_phosphoric_coating_trace_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			136,
 			68
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_preview"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			124,
 			113
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_reticle_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			167,
 			156
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_reticle_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			167,
 			156
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_reticle_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			167,
 			156
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_reticle_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			167,
 			156
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_reticle_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			167,
 			156
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_reticle_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			167,
 			156
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_reticle_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			167,
 			156
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_reticle_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			167,
 			156
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_reticle_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			167,
 			156
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_reticle_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			167,
 			156
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_reticle_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			167,
 			156
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_reticle_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			167,
 			156
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			105,
 			71
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0017"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0018"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0019"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0020"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0021"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0022"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0023"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_floor_decal_smoke_0024"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			53,
 			107
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_particles_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			42,
 			39
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_particles_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			42,
 			39
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_particles_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			42,
 			39
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_particles_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			42,
 			39
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_particles_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			42,
 			39
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_particles_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			42,
 			39
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_particles_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			42,
 			39
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_particles_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			42,
 			39
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_particles_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			42,
 			39
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_projectile_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			102,
 			45
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_projectile_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			102,
 			45
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_sting_missiles_projectile_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			102,
 			45
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0001"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0002"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0003"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0004"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0005"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0006"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0007"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0008"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0009"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0010"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0011"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0012"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0013"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0014"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0015"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0016"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["rocket_gunners_tower_take_off_fx_0017"] = {
-		a_name = "go_towers_rocket_gunners-1.png",
+		a_name = "go_towers_rocket_gunners-1.dds",
 		size = {
 			107,
 			82

@@ -1,6 +1,6 @@
 return {
 	flag_bullet_0001 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_0002 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_0003 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_0004 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_0005 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_0006 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_0007 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_0008 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_0009 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_0010 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_water_0001 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_water_0002 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_water_0003 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_water_0004 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_water_0005 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_water_0006 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_water_0007 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_water_0008 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_water_0009 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	flag_bullet_water_0010 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			10,
 			7
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	map_flag_0001 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	map_flag_0002 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	map_flag_0003 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	map_flag_0004 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	map_flag_0005 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	map_flag_0006 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	map_flag_0007 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	map_flag_0008 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	map_flag_0009 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	map_flag_0010 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	map_flag_0011 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	map_flag_0012 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	map_flag_0013 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	map_flag_0014 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	map_flag_0015 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	map_flag_0016 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	map_flag_0017 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	map_flag_0018 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	map_flag_0019 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	map_flag_0020 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	map_flag_0021 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	map_flag_0022 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	map_flag_0023 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	map_flag_0024 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	map_flag_0025 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	map_flag_0026 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	map_flag_0027 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	map_flag_0028 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	map_flag_0029 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	map_flag_0030 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	map_flag_0031 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	map_flag_0032 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	map_flag_0033 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	map_flag_0034 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	map_flag_0035 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	map_flag_0036 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	map_flag_0037 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	map_flag_0038 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	map_flag_0039 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	map_flag_0040 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	map_flag_0041 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	map_flag_0042 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	map_flag_0043 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	map_flag_0044 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	map_flag_0045 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	map_flag_0046 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	map_flag_0047 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	map_flag_0048 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	map_flag_0049 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	map_flag_0050 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	map_flag_0051 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	map_flag_0052 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	map_flag_0053 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	map_flag_0054 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	map_flag_0055 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	map_flag_0056 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	map_flag_0057 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	map_flag_0058 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	map_flag_0059 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	map_flag_0060 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	map_flag_0061 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	map_flag_0062 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	map_flag_0063 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	map_flag_0064 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	map_flag_0065 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	map_flag_0066 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	map_flag_0067 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	map_flag_0068 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	map_flag_0069 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	map_flag_0070 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	map_flag_0071 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	map_flag_0072 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	map_flag_0073 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	map_flag_0074 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	map_flag_0075 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	map_flag_0076 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	map_flag_0077 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	map_flag_0078 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	map_flag_0079 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	map_flag_0080 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	map_flag_0081 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	map_flag_0082 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	map_flag_0083 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	map_flag_0084 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	map_flag_0085 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	map_flag_0086 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	map_flag_0087 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	map_flag_0088 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	map_flag_0089 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	map_flag_0090 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	map_flag_0091 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	map_flag_0092 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	map_flag_0093 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	map_flag_0094 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	map_flag_0095 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	map_flag_0096 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	map_flag_0097 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	map_flag_0098 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	map_flag_0099 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	map_flag_0100 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	map_flag_0101 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	map_flag_0102 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	map_flag_0103 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	map_flag_0104 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	map_flag_0105 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	map_flag_0106 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	map_flag_0107 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	map_flag_0108 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	map_flag_0109 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	map_flag_0110 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	map_flag_0111 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	map_flag_0112 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	map_flag_0113 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	map_flag_0114 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	map_flag_0115 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	map_flag_0116 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	map_flag_0117 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	map_flag_0118 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	map_flag_0119 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	map_flag_0120 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	map_flag_0121 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	map_flag_0122 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	map_flag_0123 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	map_flag_0124 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	map_flag_0125 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	map_flag_0126 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	map_flag_0127 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	map_flag_0128 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	map_flag_0129 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	map_flag_0130 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	map_flag_0131 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	map_flag_0132 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	map_flag_0133 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	map_flag_0134 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	map_flag_0135 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	map_flag_0136 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	map_flag_0137 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	map_flag_0138 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	map_flag_0139 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	map_flag_0140 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	map_flag_0141 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	map_flag_0142 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	map_flag_0143 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	map_flag_0144 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	map_flag_0145 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	map_flag_0146 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	map_flag_0147 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	map_flag_0148 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	map_flag_0149 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	map_flag_0150 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	map_flag_0151 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	map_flag_0152 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	map_flag_0153 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	map_flag_0154 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	map_flag_0155 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	map_flag_0156 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	map_flag_0157 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	map_flag_0158 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	map_flag_0159 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	map_flag_0160 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	map_flag_0161 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	map_flag_0162 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	map_flag_0163 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	map_flag_0164 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	map_flag_0165 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	map_flag_0166 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	map_flag_0167 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	map_flag_0168 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	map_flag_0169 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	map_flag_0170 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	map_flag_0171 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	map_flag_0172 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	map_flag_0173 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	map_flag_0174 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	map_flag_0175 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	map_flag_0176 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	map_flag_0177 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	map_flag_0178 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	map_flag_0179 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	map_flag_0180 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	map_flag_0181 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	map_flag_0182 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			88,
 			120
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	map_flag_grass_0001 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			80,
 			84
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	map_flag_grass_0002 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			80,
 			84
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	map_flag_grass_0003 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			80,
 			84
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0001 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0002 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0003 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0004 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0005 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0006 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0007 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0008 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0009 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0010 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0011 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0012 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0013 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0014 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	map_flag_heroic_0015 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			82,
 			110
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	map_overFlags_0001 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			120,
 			60
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	map_overFlags_0002 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			120,
 			60
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0001 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0002 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0003 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0004 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0005 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0006 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0007 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0008 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0009 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0010 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0011 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0012 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0013 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0014 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0015 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0016 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	mapFlag_star_0017 = {
-		a_name = "screen_map_flags-1.png",
+		a_name = "screen_map_flags-1.dds",
 		size = {
 			34,
 			34

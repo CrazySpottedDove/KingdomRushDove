@@ -2,7 +2,7 @@
 
 return {
 	blank_button_over = {
-		a_name = "screen_settings-1.png",
+		a_name = "screen_settings-1.dds",
 		size = {
 			132,
 			57
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	blank_button_up = {
-		a_name = "screen_settings-1.png",
+		a_name = "screen_settings-1.dds",
 		size = {
 			132,
 			57
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	check_bg = {
-		a_name = "screen_settings-1.png",
+		a_name = "screen_settings-1.dds",
 		size = {
 			22,
 			22
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	game_image = {
-		a_name = "screen_settings-1.png",
+		a_name = "screen_settings-1.dds",
 		size = {
 			378,
 			145
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	image_bg = {
-		a_name = "screen_settings-1.png",
+		a_name = "screen_settings-1.dds",
 		size = {
 			385,
 			115
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	screen_setting_bg = {
-		a_name = "screen_settings-1.png",
+		a_name = "screen_settings-1.dds",
 		size = {
 			420,
 			520

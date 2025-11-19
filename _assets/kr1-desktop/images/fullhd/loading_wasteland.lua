@@ -2,7 +2,7 @@
 
 return {
 	loading_wasteland = {
-		a_name = "loading_wasteland-1.png",
+		a_name = "loading_wasteland-1.dds",
 		size = {
 			1920,
 			1080

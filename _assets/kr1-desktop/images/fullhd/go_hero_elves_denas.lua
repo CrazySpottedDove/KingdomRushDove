@@ -2,7 +2,7 @@
 
 return {
 	denas_hero_0001 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -44,7 +44,7 @@ return {
 		}
 	},
 	denas_hero_0002 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -70,7 +70,7 @@ return {
 		}
 	},
 	denas_hero_0004 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -96,7 +96,7 @@ return {
 		}
 	},
 	denas_hero_0006 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -122,7 +122,7 @@ return {
 		}
 	},
 	denas_hero_0008 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -148,7 +148,7 @@ return {
 		}
 	},
 	denas_hero_0010 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -174,7 +174,7 @@ return {
 		}
 	},
 	denas_hero_0012 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -200,7 +200,7 @@ return {
 		}
 	},
 	denas_hero_0014 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -226,7 +226,7 @@ return {
 		}
 	},
 	denas_hero_0016 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -252,7 +252,7 @@ return {
 		}
 	},
 	denas_hero_0018 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -278,7 +278,7 @@ return {
 		}
 	},
 	denas_hero_0020 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -304,7 +304,7 @@ return {
 		}
 	},
 	denas_hero_0022 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -330,7 +330,7 @@ return {
 		}
 	},
 	denas_hero_0024 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -356,7 +356,7 @@ return {
 		}
 	},
 	denas_hero_0026 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -382,7 +382,7 @@ return {
 		}
 	},
 	denas_hero_0028 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -408,7 +408,7 @@ return {
 		}
 	},
 	denas_hero_0030 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -434,7 +434,7 @@ return {
 		}
 	},
 	denas_hero_0032 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -460,7 +460,7 @@ return {
 		}
 	},
 	denas_hero_0034 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -486,7 +486,7 @@ return {
 		}
 	},
 	denas_hero_0036 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -512,7 +512,7 @@ return {
 		}
 	},
 	denas_hero_0038 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -538,7 +538,7 @@ return {
 		}
 	},
 	denas_hero_0040 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -564,7 +564,7 @@ return {
 		}
 	},
 	denas_hero_0042 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -590,7 +590,7 @@ return {
 		}
 	},
 	denas_hero_0044 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -618,7 +618,7 @@ return {
 		}
 	},
 	denas_hero_0046 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -646,7 +646,7 @@ return {
 		}
 	},
 	denas_hero_0050 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -674,7 +674,7 @@ return {
 		}
 	},
 	denas_hero_0054 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -700,7 +700,7 @@ return {
 		}
 	},
 	denas_hero_0056 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -726,7 +726,7 @@ return {
 		}
 	},
 	denas_hero_0058 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -752,7 +752,7 @@ return {
 		}
 	},
 	denas_hero_0060 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -778,7 +778,7 @@ return {
 		}
 	},
 	denas_hero_0062 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -804,7 +804,7 @@ return {
 		}
 	},
 	denas_hero_0064 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -830,7 +830,7 @@ return {
 		}
 	},
 	denas_hero_0066 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -856,7 +856,7 @@ return {
 		}
 	},
 	denas_hero_0068 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -882,7 +882,7 @@ return {
 		}
 	},
 	denas_hero_0070 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -908,7 +908,7 @@ return {
 		}
 	},
 	denas_hero_0072 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -934,7 +934,7 @@ return {
 		}
 	},
 	denas_hero_0074 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -960,7 +960,7 @@ return {
 		}
 	},
 	denas_hero_0076 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -986,7 +986,7 @@ return {
 		}
 	},
 	denas_hero_0080 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1012,7 +1012,7 @@ return {
 		}
 	},
 	denas_hero_0082 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1038,7 +1038,7 @@ return {
 		}
 	},
 	denas_hero_0084 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1064,7 +1064,7 @@ return {
 		}
 	},
 	denas_hero_0086 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1090,7 +1090,7 @@ return {
 		}
 	},
 	denas_hero_0088 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1116,7 +1116,7 @@ return {
 		}
 	},
 	denas_hero_0090 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1142,7 +1142,7 @@ return {
 		}
 	},
 	denas_hero_0092 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1168,7 +1168,7 @@ return {
 		}
 	},
 	denas_hero_0094 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1194,7 +1194,7 @@ return {
 		}
 	},
 	denas_hero_0096 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1220,7 +1220,7 @@ return {
 		}
 	},
 	denas_hero_0098 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1246,7 +1246,7 @@ return {
 		}
 	},
 	denas_hero_0100 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1272,7 +1272,7 @@ return {
 		}
 	},
 	denas_hero_0102 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1298,7 +1298,7 @@ return {
 		}
 	},
 	denas_hero_0104 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1324,7 +1324,7 @@ return {
 		}
 	},
 	denas_hero_0106 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1350,7 +1350,7 @@ return {
 		}
 	},
 	denas_hero_0108 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1376,7 +1376,7 @@ return {
 		}
 	},
 	denas_hero_0110 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1402,7 +1402,7 @@ return {
 		}
 	},
 	denas_hero_0112 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1428,7 +1428,7 @@ return {
 		}
 	},
 	denas_hero_0114 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1458,7 +1458,7 @@ return {
 		}
 	},
 	denas_hero_0116 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1488,7 +1488,7 @@ return {
 		}
 	},
 	denas_hero_0118 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1518,7 +1518,7 @@ return {
 		}
 	},
 	denas_hero_0132 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1544,7 +1544,7 @@ return {
 		}
 	},
 	denas_hero_0134 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1570,7 +1570,7 @@ return {
 		}
 	},
 	denas_hero_0136 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1596,7 +1596,7 @@ return {
 		}
 	},
 	denas_hero_0140 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1623,7 +1623,7 @@ return {
 		}
 	},
 	denas_hero_0142 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1649,7 +1649,7 @@ return {
 		}
 	},
 	denas_hero_0144 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1675,7 +1675,7 @@ return {
 		}
 	},
 	denas_hero_0146 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1701,7 +1701,7 @@ return {
 		}
 	},
 	denas_hero_0148 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1727,7 +1727,7 @@ return {
 		}
 	},
 	denas_hero_0150 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1755,7 +1755,7 @@ return {
 		}
 	},
 	denas_hero_0154 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1781,7 +1781,7 @@ return {
 		}
 	},
 	denas_hero_0156 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1807,7 +1807,7 @@ return {
 		}
 	},
 	denas_hero_0158 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1833,7 +1833,7 @@ return {
 		}
 	},
 	denas_hero_0160 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1859,7 +1859,7 @@ return {
 		}
 	},
 	denas_hero_0162 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1885,7 +1885,7 @@ return {
 		}
 	},
 	denas_hero_0164 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1911,7 +1911,7 @@ return {
 		}
 	},
 	denas_hero_0166 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1937,7 +1937,7 @@ return {
 		}
 	},
 	denas_hero_0168 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1963,7 +1963,7 @@ return {
 		}
 	},
 	denas_hero_0170 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -1989,7 +1989,7 @@ return {
 		}
 	},
 	denas_hero_0172 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2015,7 +2015,7 @@ return {
 		}
 	},
 	denas_hero_0174 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2041,7 +2041,7 @@ return {
 		}
 	},
 	denas_hero_0176 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2067,7 +2067,7 @@ return {
 		}
 	},
 	denas_hero_0178 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2091,7 +2091,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0179 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2115,7 +2115,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0180 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2139,7 +2139,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0181 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2163,7 +2163,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0182 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2187,7 +2187,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0183 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2211,7 +2211,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0184 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2235,7 +2235,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0185 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2259,7 +2259,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0186 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2285,7 +2285,7 @@ return {
 		}
 	},
 	denas_hero_0187 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2311,7 +2311,7 @@ return {
 		}
 	},
 	denas_hero_0190 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2337,7 +2337,7 @@ return {
 		}
 	},
 	denas_hero_0192 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2363,7 +2363,7 @@ return {
 		}
 	},
 	denas_hero_0194 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2389,7 +2389,7 @@ return {
 		}
 	},
 	denas_hero_0196 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2415,7 +2415,7 @@ return {
 		}
 	},
 	denas_hero_0198 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2441,7 +2441,7 @@ return {
 		}
 	},
 	denas_hero_0200 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2467,7 +2467,7 @@ return {
 		}
 	},
 	denas_hero_0202 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2493,7 +2493,7 @@ return {
 		}
 	},
 	denas_hero_0204 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2517,7 +2517,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0205 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2541,7 +2541,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0206 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2565,7 +2565,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0207 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2589,7 +2589,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0208 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2613,7 +2613,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0209 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2637,7 +2637,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0210 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2661,7 +2661,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0211 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2685,7 +2685,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0212 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2709,7 +2709,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0213 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2733,7 +2733,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0214 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2757,7 +2757,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0218 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2783,7 +2783,7 @@ return {
 		}
 	},
 	denas_hero_0220 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2809,7 +2809,7 @@ return {
 		}
 	},
 	denas_hero_0222 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2835,7 +2835,7 @@ return {
 		}
 	},
 	denas_hero_0224 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2861,7 +2861,7 @@ return {
 		}
 	},
 	denas_hero_0226 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2887,7 +2887,7 @@ return {
 		}
 	},
 	denas_hero_0228 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2913,7 +2913,7 @@ return {
 		}
 	},
 	denas_hero_0230 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2939,7 +2939,7 @@ return {
 		}
 	},
 	denas_hero_0232 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2965,7 +2965,7 @@ return {
 		}
 	},
 	denas_hero_0234 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -2991,7 +2991,7 @@ return {
 		}
 	},
 	denas_hero_0236 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3020,7 +3020,7 @@ return {
 		}
 	},
 	denas_hero_0241 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3046,7 +3046,7 @@ return {
 		}
 	},
 	denas_hero_0243 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3072,7 +3072,7 @@ return {
 		}
 	},
 	denas_hero_0245 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3098,7 +3098,7 @@ return {
 		}
 	},
 	denas_hero_0247 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3124,7 +3124,7 @@ return {
 		}
 	},
 	denas_hero_0249 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3150,7 +3150,7 @@ return {
 		}
 	},
 	denas_hero_0251 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3176,7 +3176,7 @@ return {
 		}
 	},
 	denas_hero_0253 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3202,7 +3202,7 @@ return {
 		}
 	},
 	denas_hero_0255 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3228,7 +3228,7 @@ return {
 		}
 	},
 	denas_hero_0257 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3254,7 +3254,7 @@ return {
 		}
 	},
 	denas_hero_0259 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3280,7 +3280,7 @@ return {
 		}
 	},
 	denas_hero_0261 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3306,7 +3306,7 @@ return {
 		}
 	},
 	denas_hero_0272 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3334,7 +3334,7 @@ return {
 		}
 	},
 	denas_hero_0274 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3360,7 +3360,7 @@ return {
 		}
 	},
 	denas_hero_0276 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3386,7 +3386,7 @@ return {
 		}
 	},
 	denas_hero_0278 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3412,7 +3412,7 @@ return {
 		}
 	},
 	denas_hero_0280 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3439,7 +3439,7 @@ return {
 		}
 	},
 	denas_hero_0283 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3465,7 +3465,7 @@ return {
 		}
 	},
 	denas_hero_0285 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3491,7 +3491,7 @@ return {
 		}
 	},
 	denas_hero_0287 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3518,7 +3518,7 @@ return {
 		}
 	},
 	denas_hero_0290 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3544,7 +3544,7 @@ return {
 		}
 	},
 	denas_hero_0292 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3571,7 +3571,7 @@ return {
 		}
 	},
 	denas_hero_0295 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3597,7 +3597,7 @@ return {
 		}
 	},
 	denas_hero_0297 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3623,7 +3623,7 @@ return {
 		}
 	},
 	denas_hero_0299 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3649,7 +3649,7 @@ return {
 		}
 	},
 	denas_hero_0301 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3675,7 +3675,7 @@ return {
 		}
 	},
 	denas_hero_0303 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3701,7 +3701,7 @@ return {
 		}
 	},
 	denas_hero_0305 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3725,7 +3725,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0307 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3751,7 +3751,7 @@ return {
 		}
 	},
 	denas_hero_0309 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3777,7 +3777,7 @@ return {
 		}
 	},
 	denas_hero_0311 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3803,7 +3803,7 @@ return {
 		}
 	},
 	denas_hero_0313 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3829,7 +3829,7 @@ return {
 		}
 	},
 	denas_hero_0315 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3855,7 +3855,7 @@ return {
 		}
 	},
 	denas_hero_0317 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3881,7 +3881,7 @@ return {
 		}
 	},
 	denas_hero_0319 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3907,7 +3907,7 @@ return {
 		}
 	},
 	denas_hero_0321 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3933,7 +3933,7 @@ return {
 		}
 	},
 	denas_hero_0323 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3959,7 +3959,7 @@ return {
 		}
 	},
 	denas_hero_0325 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -3985,7 +3985,7 @@ return {
 		}
 	},
 	denas_hero_0327 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4011,7 +4011,7 @@ return {
 		}
 	},
 	denas_hero_0329 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4037,7 +4037,7 @@ return {
 		}
 	},
 	denas_hero_0331 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4063,7 +4063,7 @@ return {
 		}
 	},
 	denas_hero_0333 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4087,7 +4087,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0334 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4111,7 +4111,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0335 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4135,7 +4135,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0336 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4159,7 +4159,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0337 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4183,7 +4183,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0338 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4207,7 +4207,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0339 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4231,7 +4231,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0340 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4255,7 +4255,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0341 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4279,7 +4279,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0342 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4303,7 +4303,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0343 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4327,7 +4327,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0344 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4351,7 +4351,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0345 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4375,7 +4375,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0346 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4399,7 +4399,7 @@ return {
 		alias = {}
 	},
 	denas_hero_0347 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4425,7 +4425,7 @@ return {
 		}
 	},
 	denas_hero_0349 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4451,7 +4451,7 @@ return {
 		}
 	},
 	denas_hero_0351 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4477,7 +4477,7 @@ return {
 		}
 	},
 	denas_hero_0357 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4503,7 +4503,7 @@ return {
 		}
 	},
 	denas_hero_0359 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4529,7 +4529,7 @@ return {
 		}
 	},
 	denas_hero_0361 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4555,7 +4555,7 @@ return {
 		}
 	},
 	denas_hero_0363 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4581,7 +4581,7 @@ return {
 		}
 	},
 	denas_hero_0365 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4607,7 +4607,7 @@ return {
 		}
 	},
 	denas_hero_0367 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4633,7 +4633,7 @@ return {
 		}
 	},
 	denas_hero_0369 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4659,7 +4659,7 @@ return {
 		}
 	},
 	denas_hero_0371 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4685,7 +4685,7 @@ return {
 		}
 	},
 	denas_hero_0373 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4711,7 +4711,7 @@ return {
 		}
 	},
 	denas_hero_0375 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4737,7 +4737,7 @@ return {
 		}
 	},
 	denas_hero_0377 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4763,7 +4763,7 @@ return {
 		}
 	},
 	denas_hero_0379 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4789,7 +4789,7 @@ return {
 		}
 	},
 	denas_hero_0381 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4815,7 +4815,7 @@ return {
 		}
 	},
 	denas_hero_0383 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4841,7 +4841,7 @@ return {
 		}
 	},
 	denas_hero_0385 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4867,7 +4867,7 @@ return {
 		}
 	},
 	denas_hero_0387 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4893,7 +4893,7 @@ return {
 		}
 	},
 	denas_hero_0389 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			200,
 			127
@@ -4919,7 +4919,7 @@ return {
 		}
 	},
 	denas_hero_flash_0001 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			56,
 			56
@@ -4945,7 +4945,7 @@ return {
 		}
 	},
 	denas_hero_flash_0003 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			56,
 			56
@@ -4969,7 +4969,7 @@ return {
 		alias = {}
 	},
 	denas_hero_guard_0001 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -4996,7 +4996,7 @@ return {
 		}
 	},
 	denas_hero_guard_0002 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5020,7 +5020,7 @@ return {
 		alias = {}
 	},
 	denas_hero_guard_0003 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5044,7 +5044,7 @@ return {
 		alias = {}
 	},
 	denas_hero_guard_0004 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5068,7 +5068,7 @@ return {
 		alias = {}
 	},
 	denas_hero_guard_0005 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5092,7 +5092,7 @@ return {
 		alias = {}
 	},
 	denas_hero_guard_0006 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5116,7 +5116,7 @@ return {
 		alias = {}
 	},
 	denas_hero_guard_0007 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5142,7 +5142,7 @@ return {
 		}
 	},
 	denas_hero_guard_0009 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5168,7 +5168,7 @@ return {
 		}
 	},
 	denas_hero_guard_0011 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5194,7 +5194,7 @@ return {
 		}
 	},
 	denas_hero_guard_0013 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5220,7 +5220,7 @@ return {
 		}
 	},
 	denas_hero_guard_0015 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5246,7 +5246,7 @@ return {
 		}
 	},
 	denas_hero_guard_0017 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5272,7 +5272,7 @@ return {
 		}
 	},
 	denas_hero_guard_0019 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5298,7 +5298,7 @@ return {
 		}
 	},
 	denas_hero_guard_0021 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5324,7 +5324,7 @@ return {
 		}
 	},
 	denas_hero_guard_0023 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5350,7 +5350,7 @@ return {
 		}
 	},
 	denas_hero_guard_0025 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5376,7 +5376,7 @@ return {
 		}
 	},
 	denas_hero_guard_0027 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5402,7 +5402,7 @@ return {
 		}
 	},
 	denas_hero_guard_0029 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5428,7 +5428,7 @@ return {
 		}
 	},
 	denas_hero_guard_0031 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5454,7 +5454,7 @@ return {
 		}
 	},
 	denas_hero_guard_0033 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5480,7 +5480,7 @@ return {
 		}
 	},
 	denas_hero_guard_0035 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5506,7 +5506,7 @@ return {
 		}
 	},
 	denas_hero_guard_0037 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5532,7 +5532,7 @@ return {
 		}
 	},
 	denas_hero_guard_0039 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5558,7 +5558,7 @@ return {
 		}
 	},
 	denas_hero_guard_0041 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5582,7 +5582,7 @@ return {
 		alias = {}
 	},
 	denas_hero_guard_0042 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5606,7 +5606,7 @@ return {
 		alias = {}
 	},
 	denas_hero_guard_0043 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5632,7 +5632,7 @@ return {
 		}
 	},
 	denas_hero_guard_0045 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5658,7 +5658,7 @@ return {
 		}
 	},
 	denas_hero_guard_0047 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5684,7 +5684,7 @@ return {
 		}
 	},
 	denas_hero_guard_0049 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5710,7 +5710,7 @@ return {
 		}
 	},
 	denas_hero_guard_0051 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5736,7 +5736,7 @@ return {
 		}
 	},
 	denas_hero_guard_0053 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5760,7 +5760,7 @@ return {
 		alias = {}
 	},
 	denas_hero_guard_0054 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5784,7 +5784,7 @@ return {
 		alias = {}
 	},
 	denas_hero_guard_0055 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5808,7 +5808,7 @@ return {
 		alias = {}
 	},
 	denas_hero_guard_0056 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5832,7 +5832,7 @@ return {
 		alias = {}
 	},
 	denas_hero_guard_0057 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5858,7 +5858,7 @@ return {
 		}
 	},
 	denas_hero_guard_0059 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5884,7 +5884,7 @@ return {
 		}
 	},
 	denas_hero_guard_0061 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5910,7 +5910,7 @@ return {
 		}
 	},
 	denas_hero_guard_0063 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5936,7 +5936,7 @@ return {
 		}
 	},
 	denas_hero_guard_0065 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5962,7 +5962,7 @@ return {
 		}
 	},
 	denas_hero_guard_0067 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -5988,7 +5988,7 @@ return {
 		}
 	},
 	denas_hero_guard_0069 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -6014,7 +6014,7 @@ return {
 		}
 	},
 	denas_hero_guard_0071 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -6040,7 +6040,7 @@ return {
 		}
 	},
 	denas_hero_guard_0073 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -6066,7 +6066,7 @@ return {
 		}
 	},
 	denas_hero_guard_0075 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -6092,7 +6092,7 @@ return {
 		}
 	},
 	denas_hero_guard_0077 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			132,
 			113
@@ -6116,7 +6116,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0001 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6140,7 +6140,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0002 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6164,7 +6164,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0003 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6188,7 +6188,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0004 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6212,7 +6212,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0005 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6236,7 +6236,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0006 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6260,7 +6260,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0007 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6284,7 +6284,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0008 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6308,7 +6308,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0009 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6332,7 +6332,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0010 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6356,7 +6356,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0011 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6380,7 +6380,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0012 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6404,7 +6404,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0013 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6428,7 +6428,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0014 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6452,7 +6452,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0015 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6476,7 +6476,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0016 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6500,7 +6500,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0017 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6524,7 +6524,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0018 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6548,7 +6548,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0019 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6572,7 +6572,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0020 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6596,7 +6596,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0021 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6620,7 +6620,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0022 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6644,7 +6644,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0023 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6668,7 +6668,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0024 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6692,7 +6692,7 @@ return {
 		alias = {}
 	},
 	denas_hero_healFx_0025 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			42,
 			73
@@ -6716,7 +6716,7 @@ return {
 		alias = {}
 	},
 	hero_denas_proyHit_0001 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			98,
 			56
@@ -6742,7 +6742,7 @@ return {
 		}
 	},
 	hero_denas_proyHit_0003 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			98,
 			56
@@ -6768,7 +6768,7 @@ return {
 		}
 	},
 	hero_denas_proyHit_0005 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			98,
 			56
@@ -6794,7 +6794,7 @@ return {
 		}
 	},
 	hero_denas_proyHit_0007 = {
-		a_name = "go_hero_elves_denas-1.png",
+		a_name = "go_hero_elves_denas-1.dds",
 		size = {
 			98,
 			56

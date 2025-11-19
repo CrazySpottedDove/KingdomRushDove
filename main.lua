@@ -1,12 +1,24 @@
 ﻿-- chunkname: @./main.lua
-local function check_update_async()
-    -- 1. 读取 update.lua
-    local ok, update_cfg = pcall(dofile, "update.lua")
-    if ok and type(update_cfg) ~= "table" or not update_cfg.auto_upgrade then
-        return
-    end
+local apply_upgrade = love.system.getOS() ~= "Android"
+local ok, update_cfg = pcall(dofile, "update.lua")
+if ok and type(update_cfg) == "table" and update_cfg.auto_upgrade == false then
+    apply_upgrade = false
+end
 
-    -- 2. 读取 current_version_commit_hash.txt
+local binary = "client"
+if package.config:sub(1, 1) == "\\" then -- Windows
+    binary = "client.exe"
+end
+local exe_dir = love.filesystem.getWorkingDirectory() or "."
+-- 统一分隔符
+exe_dir = exe_dir:gsub("\\", "/")
+local binary_path = exe_dir .. "/" .. binary
+-- Windows下再转回反斜杠
+if package.config:sub(1, 1) == "\\" then
+    binary_path = binary_path:gsub("/", "\\")
+end
+
+local function check_update_async()
     local hash_file = io.open("current_version_commit_hash.txt", "r")
     if not hash_file then
         return
@@ -17,12 +29,8 @@ local function check_update_async()
         return
     end
 
-    -- 3. 拼接命令
-    local binary = "kr_client"
-    if package.config:sub(1, 1) == "\\" then -- Windows
-        binary = "kr_client.exe"
-    end
-    local cmd = string.format('"%s" --check-new-version', binary)
+    local cmd = string.format('"%s" --check-new-version', binary_path)
+    print("cmd:", cmd)
 
     -- 4. 启动线程调用
     local thread = love.thread.newThread([[
@@ -551,6 +559,9 @@ function love.load(arg)
         ffi.cdef(" void kr_init_ios(); ")
         ffi.C.kr_init_ios()
     end
+    if apply_upgrade then
+        check_update_async()
+    end
 end
 
 local update_result_json = nil
@@ -571,42 +582,65 @@ function love.update(dt)
         custom_script:update(dt)
     end
     do
-        if not update_popup_shown then
+        if (apply_upgrade) and (not update_popup_shown) then
             local ch = love.thread.getChannel("update_result")
             local result = ch:pop()
             if result and result ~= false then
-                local ok, resp = pcall(json.decode, result)
+                local ok, resp = pcall(require("json").decode, result)
                 if ok and type(resp) == "table" and resp.has_update then
                     update_result_json = result
+                    -- 收集所有 commit message
+                    local messages = {}
+                    local max_messages_to_show = 10
+                    if resp.commits then
+                        for i, commit in ipairs(resp.commits) do
+                            if i > max_messages_to_show then
+                                table.insert(messages, string.format("...以及另外 %d 条更新内容。",
+                                    #resp.commits - max_messages_to_show))
+                                break
+                            end
+                            table.insert(messages, commit.message)
+                        end
+                    end
+                    local msg_text = table.concat(messages, "\n\n")
+                    msg_text = msg_text .. "\n\n请耐心等待升级完成..."
+                    local cmd = string.format('"%s" --upgrade-new-version', binary_path)
                     -- 弹窗有“升级”按钮
                     local pressed = love.window.showMessageBox("发现新版本",
-                        "检测到有新内容可更新，是否立即升级？", {"升级", "取消"})
+                        "检测到有新内容可更新，是否立即更新？", {"更新", "取消"})
                     if pressed == 1 then
-                        -- 用户选择升级，调用 upgrade_new_version
-                        local binary = "kr_client"
-                        if package.config:sub(1, 1) == "\\" then
-                            binary = "kr_client.exe"
+                        local upgrade_thread = love.thread.newThread([[
+        local cmd, update_result_json = ...
+        local pipe = io.popen(cmd, "w")
+        if pipe then
+            pipe:write(update_result_json)
+            pipe:close()
+        end
+        love.thread.getChannel("upgrade_result"):push("done")
+    ]])
+                        upgrade_thread:start(cmd, update_result_json)
+
+                        love.window.showMessageBox("更新内容", msg_text, {"确定以继续"})
+
+                        -- 3. 在 love.update 里轮询升级状态
+                        love.update = function(dt)
+                            local ch = love.thread.getChannel("upgrade_result")
+                            local result = ch:pop()
+                            if result == "done" then
+                                upgrading = false
+                                love.window.showMessageBox("升级完成", "资源已更新。", {"点击以退出"})
+                                love.event.quit() -- 升级完成后退出程序
+                            end
                         end
-                        -- 写入临时文件传递JSON
-                        local tmpfile = os.tmpname()
-                        local f = io.open(tmpfile, "w")
-                        if f then
-                            f:write(update_result_json)
-                            f:close()
-                        end
-                        local cmd = string.format('"%s" --upgrade-new-version < "%s"', binary, tmpfile)
-                        os.execute(cmd)
-                        os.remove(tmpfile)
-                        love.window.showMessageBox("升级完成", "资源已更新。", "info")
                     end
                 end
+
                 update_popup_shown = true
             elseif result == false then
                 update_popup_shown = true
             end
         end
     end
-
 end
 
 function love.draw()

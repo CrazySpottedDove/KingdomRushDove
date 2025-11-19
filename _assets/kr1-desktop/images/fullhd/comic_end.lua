@@ -2,7 +2,7 @@
 
 return {
 	balloon_0001 = {
-		a_name = "comic_end-3.png",
+		a_name = "comic_end-3.dds",
 		size = {
 			254,
 			178
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	balloon_0002 = {
-		a_name = "comic_end-2.png",
+		a_name = "comic_end-2.dds",
 		size = {
 			254,
 			178
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	balloon_0003 = {
-		a_name = "comic_end-2.png",
+		a_name = "comic_end-2.dds",
 		size = {
 			254,
 			178
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	balloon_0004 = {
-		a_name = "comic_end-3.png",
+		a_name = "comic_end-3.dds",
 		size = {
 			254,
 			178
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	balloon_0005 = {
-		a_name = "comic_end-3.png",
+		a_name = "comic_end-3.dds",
 		size = {
 			254,
 			178
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	balloon_0006 = {
-		a_name = "comic_end-3.png",
+		a_name = "comic_end-3.dds",
 		size = {
 			254,
 			178
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	balloon_0007 = {
-		a_name = "comic_end-3.png",
+		a_name = "comic_end-3.dds",
 		size = {
 			254,
 			178
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	balloon_0008 = {
-		a_name = "comic_end-3.png",
+		a_name = "comic_end-3.dds",
 		size = {
 			254,
 			178
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	balloon_0009 = {
-		a_name = "comic_end-2.png",
+		a_name = "comic_end-2.dds",
 		size = {
 			254,
 			178
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	balloon_0010 = {
-		a_name = "comic_end-3.png",
+		a_name = "comic_end-3.dds",
 		size = {
 			254,
 			178
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	balloon_0011 = {
-		a_name = "comic_end-2.png",
+		a_name = "comic_end-2.dds",
 		size = {
 			254,
 			178
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	balloon_0012 = {
-		a_name = "comic_end-3.png",
+		a_name = "comic_end-3.dds",
 		size = {
 			254,
 			178
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	balloon_0013 = {
-		a_name = "comic_end-2.png",
+		a_name = "comic_end-2.dds",
 		size = {
 			254,
 			178
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	balloon_box = {
-		a_name = "comic_end-2.png",
+		a_name = "comic_end-2.dds",
 		size = {
 			312,
 			70
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	endComic_box1 = {
-		a_name = "comic_end-2.png",
+		a_name = "comic_end-2.dds",
 		size = {
 			466,
 			416
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	endComic_box2 = {
-		a_name = "comic_end-2.png",
+		a_name = "comic_end-2.dds",
 		size = {
 			466,
 			416
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	endComic_box3 = {
-		a_name = "comic_end-1.png",
+		a_name = "comic_end-1.dds",
 		size = {
 			956,
 			508
@@ -410,7 +410,7 @@ return {
 		alias = {}
 	},
 	endComic_box4 = {
-		a_name = "comic_end-2.png",
+		a_name = "comic_end-2.dds",
 		size = {
 			466,
 			416
@@ -434,7 +434,7 @@ return {
 		alias = {}
 	},
 	endComic_box5 = {
-		a_name = "comic_end-2.png",
+		a_name = "comic_end-2.dds",
 		size = {
 			466,
 			416
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	endComic_box6 = {
-		a_name = "comic_end-1.png",
+		a_name = "comic_end-1.dds",
 		size = {
 			956,
 			508

@@ -2,7 +2,7 @@
 
 return {
 	Explosion_RottenShot_0001 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			134,
 			74
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	Explosion_RottenShot_0003 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			134,
 			74
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	Explosion_RottenShot_0005 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			134,
 			74
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	Explosion_RottenShot_0007 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			134,
 			74
@@ -106,7 +106,7 @@ return {
 		}
 	},
 	Explosion_RottenShot_0009 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			134,
 			74
@@ -132,7 +132,7 @@ return {
 		}
 	},
 	Explosion_RottenShot_0011 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			134,
 			74
@@ -156,7 +156,7 @@ return {
 		alias = {}
 	},
 	Proyectile_RottenShot = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			38,
 			38
@@ -180,7 +180,7 @@ return {
 		alias = {}
 	},
 	mushroom_0001 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -204,7 +204,7 @@ return {
 		alias = {}
 	},
 	mushroom_0002 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -230,7 +230,7 @@ return {
 		}
 	},
 	mushroom_0004 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -256,7 +256,7 @@ return {
 		}
 	},
 	mushroom_0006 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -282,7 +282,7 @@ return {
 		}
 	},
 	mushroom_0008 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -308,7 +308,7 @@ return {
 		}
 	},
 	mushroom_0010 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -334,7 +334,7 @@ return {
 		}
 	},
 	mushroom_0012 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -360,7 +360,7 @@ return {
 		}
 	},
 	mushroom_0014 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -386,7 +386,7 @@ return {
 		}
 	},
 	mushroom_0016 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -412,7 +412,7 @@ return {
 		}
 	},
 	mushroom_0018 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -438,7 +438,7 @@ return {
 		}
 	},
 	mushroom_0020 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -464,7 +464,7 @@ return {
 		}
 	},
 	mushroom_0022 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -490,7 +490,7 @@ return {
 		}
 	},
 	mushroom_0024 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -516,7 +516,7 @@ return {
 		}
 	},
 	mushroom_0026 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -542,7 +542,7 @@ return {
 		}
 	},
 	mushroom_0028 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -568,7 +568,7 @@ return {
 		}
 	},
 	mushroom_0030 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -594,7 +594,7 @@ return {
 		}
 	},
 	mushroom_0032 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -620,7 +620,7 @@ return {
 		}
 	},
 	mushroom_0034 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -646,7 +646,7 @@ return {
 		}
 	},
 	mushroom_0036 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -672,7 +672,7 @@ return {
 		}
 	},
 	mushroom_0038 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -698,7 +698,7 @@ return {
 		}
 	},
 	mushroom_0040 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -724,7 +724,7 @@ return {
 		}
 	},
 	mushroom_0042 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -750,7 +750,7 @@ return {
 		}
 	},
 	mushroom_0044 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -776,7 +776,7 @@ return {
 		}
 	},
 	mushroom_0046 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -802,7 +802,7 @@ return {
 		}
 	},
 	mushroom_0048 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -828,7 +828,7 @@ return {
 		}
 	},
 	mushroom_0050 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			128,
 			106
@@ -854,7 +854,7 @@ return {
 		}
 	},
 	mushroom_0052 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -880,7 +880,7 @@ return {
 		}
 	},
 	mushroom_0054 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			128,
 			106
@@ -906,7 +906,7 @@ return {
 		}
 	},
 	mushroom_0056 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -932,7 +932,7 @@ return {
 		}
 	},
 	mushroom_0058 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -966,7 +966,7 @@ return {
 		}
 	},
 	mushroom_0068 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -992,7 +992,7 @@ return {
 		}
 	},
 	mushroom_0070 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -1018,7 +1018,7 @@ return {
 		}
 	},
 	mushroom_0072 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			128,
 			106
@@ -1044,7 +1044,7 @@ return {
 		}
 	},
 	mushroom_0074 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1070,7 +1070,7 @@ return {
 		}
 	},
 	mushroom_0076 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1096,7 +1096,7 @@ return {
 		}
 	},
 	mushroom_0078 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			128,
 			106
@@ -1122,7 +1122,7 @@ return {
 		}
 	},
 	mushroom_0080 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1148,7 +1148,7 @@ return {
 		}
 	},
 	mushroom_0082 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1174,7 +1174,7 @@ return {
 		}
 	},
 	mushroom_0084 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1198,7 +1198,7 @@ return {
 		alias = {}
 	},
 	mushroom_0085 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1222,7 +1222,7 @@ return {
 		alias = {}
 	},
 	mushroom_0086 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -1248,7 +1248,7 @@ return {
 		}
 	},
 	mushroom_0088 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1274,7 +1274,7 @@ return {
 		}
 	},
 	mushroom_0090 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1298,7 +1298,7 @@ return {
 		alias = {}
 	},
 	mushroom_0091 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1322,7 +1322,7 @@ return {
 		alias = {}
 	},
 	mushroom_0092 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1346,7 +1346,7 @@ return {
 		alias = {}
 	},
 	mushroom_0093 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1370,7 +1370,7 @@ return {
 		alias = {}
 	},
 	mushroom_0094 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -1403,7 +1403,7 @@ return {
 		}
 	},
 	mushroom_0103 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1429,7 +1429,7 @@ return {
 		}
 	},
 	mushroom_0105 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1453,7 +1453,7 @@ return {
 		alias = {}
 	},
 	mushroom_0106 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1477,7 +1477,7 @@ return {
 		alias = {}
 	},
 	mushroom_0107 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1503,7 +1503,7 @@ return {
 		}
 	},
 	mushroom_0109 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1529,7 +1529,7 @@ return {
 		}
 	},
 	mushroom_0111 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1555,7 +1555,7 @@ return {
 		}
 	},
 	mushroom_0113 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1581,7 +1581,7 @@ return {
 		}
 	},
 	mushroom_0115 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1607,7 +1607,7 @@ return {
 		}
 	},
 	mushroom_0117 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1633,7 +1633,7 @@ return {
 		}
 	},
 	mushroom_0119 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			128,
 			106
@@ -1659,7 +1659,7 @@ return {
 		}
 	},
 	mushroom_0121 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			128,
 			106
@@ -1685,7 +1685,7 @@ return {
 		}
 	},
 	poison_small_violet_0001 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			58,
 			46
@@ -1711,7 +1711,7 @@ return {
 		}
 	},
 	poison_small_violet_0003 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			58,
 			46
@@ -1737,7 +1737,7 @@ return {
 		}
 	},
 	poison_small_violet_0005 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			58,
 			46
@@ -1763,7 +1763,7 @@ return {
 		}
 	},
 	poison_small_violet_0007 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			58,
 			46
@@ -1789,7 +1789,7 @@ return {
 		}
 	},
 	poison_small_violet_0009 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			58,
 			46
@@ -1815,7 +1815,7 @@ return {
 		}
 	},
 	poison_small_violet_0011 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			58,
 			46
@@ -1841,7 +1841,7 @@ return {
 		}
 	},
 	rotten_egg_0001 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			68,
 			68
@@ -1865,7 +1865,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0002 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -1889,7 +1889,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0003 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -1913,7 +1913,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0004 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -1937,7 +1937,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0005 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -1961,7 +1961,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0006 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -1985,7 +1985,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0007 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2009,7 +2009,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0008 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2033,7 +2033,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0009 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2057,7 +2057,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0010 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2081,7 +2081,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0011 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2105,7 +2105,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0012 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2129,7 +2129,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0013 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2153,7 +2153,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0014 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2177,7 +2177,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0015 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2201,7 +2201,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0016 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2225,7 +2225,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0017 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2249,7 +2249,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0018 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2273,7 +2273,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0019 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2297,7 +2297,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0020 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2321,7 +2321,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0021 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2345,7 +2345,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0022 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2369,7 +2369,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0023 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2393,7 +2393,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0024 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2417,7 +2417,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0025 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2441,7 +2441,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0026 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2465,7 +2465,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0027 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2489,7 +2489,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0028 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2513,7 +2513,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0029 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2537,7 +2537,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0030 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2561,7 +2561,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0031 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2585,7 +2585,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0032 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2609,7 +2609,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0033 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2633,7 +2633,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0034 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2657,7 +2657,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0035 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2681,7 +2681,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0036 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2705,7 +2705,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0037 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2729,7 +2729,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0038 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2753,7 +2753,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0039 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2777,7 +2777,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0040 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2801,7 +2801,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0041 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2825,7 +2825,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0042 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2849,7 +2849,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0043 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2873,7 +2873,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0044 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2897,7 +2897,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0045 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2921,7 +2921,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0046 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2945,7 +2945,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0047 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2969,7 +2969,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0048 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -2993,7 +2993,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0049 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3017,7 +3017,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0050 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3041,7 +3041,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0051 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3065,7 +3065,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0052 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3089,7 +3089,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0053 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3113,7 +3113,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0054 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3137,7 +3137,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0055 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3161,7 +3161,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0056 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3185,7 +3185,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0057 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3209,7 +3209,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0058 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3233,7 +3233,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0059 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3257,7 +3257,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0060 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3281,7 +3281,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0061 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3305,7 +3305,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0062 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3329,7 +3329,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0063 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3353,7 +3353,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0064 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3377,7 +3377,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0065 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3401,7 +3401,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0066 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3425,7 +3425,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0067 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3449,7 +3449,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0068 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3473,7 +3473,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0069 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3497,7 +3497,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0070 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3521,7 +3521,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0071 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3545,7 +3545,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0072 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3569,7 +3569,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0073 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3593,7 +3593,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0074 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3617,7 +3617,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0075 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3643,7 +3643,7 @@ return {
 		}
 	},
 	rotten_egg_0077 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			68,
 			68
@@ -3667,7 +3667,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0078 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			68,
 			68
@@ -3691,7 +3691,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0079 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			68,
 			68
@@ -3715,7 +3715,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0080 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3739,7 +3739,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0081 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3763,7 +3763,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0082 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3787,7 +3787,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0083 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3811,7 +3811,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0084 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3835,7 +3835,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0085 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3859,7 +3859,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0086 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3883,7 +3883,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0087 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3907,7 +3907,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0088 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			68,
 			68
@@ -3931,7 +3931,7 @@ return {
 		alias = {}
 	},
 	rotten_egg_0089 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			68,
 			68
@@ -3955,7 +3955,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0001 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -3979,7 +3979,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0002 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4003,7 +4003,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0003 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4027,7 +4027,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0004 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4051,7 +4051,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0005 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4075,7 +4075,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0006 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4099,7 +4099,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0007 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4123,7 +4123,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0008 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4147,7 +4147,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0009 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4171,7 +4171,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0010 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4195,7 +4195,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0011 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4219,7 +4219,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0012 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4243,7 +4243,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0013 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4267,7 +4267,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0014 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4291,7 +4291,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0015 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4315,7 +4315,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0016 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4339,7 +4339,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0017 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4363,7 +4363,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0018 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4387,7 +4387,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0019 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4411,7 +4411,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0020 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4435,7 +4435,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0021 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4459,7 +4459,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0022 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4483,7 +4483,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0023 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4507,7 +4507,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0024 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4531,7 +4531,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0025 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4555,7 +4555,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0026 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4579,7 +4579,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0027 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4603,7 +4603,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0028 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4627,7 +4627,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0029 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4651,7 +4651,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0030 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4675,7 +4675,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0031 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4699,7 +4699,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0032 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4723,7 +4723,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0033 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4747,7 +4747,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0034 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4771,7 +4771,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0035 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4795,7 +4795,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0036 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4819,7 +4819,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0037 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4843,7 +4843,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0038 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4867,7 +4867,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0039 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4891,7 +4891,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0040 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4919,7 +4919,7 @@ return {
 		}
 	},
 	rotten_spider_0043 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4945,7 +4945,7 @@ return {
 		}
 	},
 	rotten_spider_0045 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4971,7 +4971,7 @@ return {
 		}
 	},
 	rotten_spider_0047 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -4998,7 +4998,7 @@ return {
 		}
 	},
 	rotten_spider_0050 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5022,7 +5022,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0051 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5046,7 +5046,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0052 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5072,7 +5072,7 @@ return {
 		}
 	},
 	rotten_spider_0054 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5098,7 +5098,7 @@ return {
 		}
 	},
 	rotten_spider_0056 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5124,7 +5124,7 @@ return {
 		}
 	},
 	rotten_spider_0059 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5148,7 +5148,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0060 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5172,7 +5172,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0061 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5198,7 +5198,7 @@ return {
 		}
 	},
 	rotten_spider_0063 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5224,7 +5224,7 @@ return {
 		}
 	},
 	rotten_spider_0065 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5248,7 +5248,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0066 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			116,
 			88
@@ -5272,7 +5272,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0067 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			116,
 			88
@@ -5296,7 +5296,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0068 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5320,7 +5320,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0069 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5353,7 +5353,7 @@ return {
 		}
 	},
 	rotten_spider_0078 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5379,7 +5379,7 @@ return {
 		}
 	},
 	rotten_spider_0080 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5403,7 +5403,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0081 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5427,7 +5427,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0082 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			116,
 			88
@@ -5451,7 +5451,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0083 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			116,
 			88
@@ -5475,7 +5475,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0084 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			116,
 			88
@@ -5499,7 +5499,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0085 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5523,7 +5523,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0086 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5547,7 +5547,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0087 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5571,7 +5571,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0088 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5595,7 +5595,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_0089 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5621,7 +5621,7 @@ return {
 		}
 	},
 	rotten_spider_0091 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			88
@@ -5651,7 +5651,7 @@ return {
 		}
 	},
 	rotten_spider_tiny_0001 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -5675,7 +5675,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0002 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -5699,7 +5699,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0003 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -5723,7 +5723,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0004 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -5747,7 +5747,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0005 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -5771,7 +5771,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0006 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -5795,7 +5795,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0007 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -5819,7 +5819,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0008 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -5843,7 +5843,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0009 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -5867,7 +5867,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0010 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -5891,7 +5891,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0011 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -5915,7 +5915,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0012 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -5939,7 +5939,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0013 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -5963,7 +5963,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0014 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -5987,7 +5987,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0015 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6011,7 +6011,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0016 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6035,7 +6035,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0017 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6059,7 +6059,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0018 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6083,7 +6083,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0019 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6107,7 +6107,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0020 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6131,7 +6131,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0021 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6155,7 +6155,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0022 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6179,7 +6179,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0023 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6203,7 +6203,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0024 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6227,7 +6227,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0025 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6251,7 +6251,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0026 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6275,7 +6275,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0027 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6299,7 +6299,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0028 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6327,7 +6327,7 @@ return {
 		}
 	},
 	rotten_spider_tiny_0031 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6353,7 +6353,7 @@ return {
 		}
 	},
 	rotten_spider_tiny_0033 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6379,7 +6379,7 @@ return {
 		}
 	},
 	rotten_spider_tiny_0035 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6406,7 +6406,7 @@ return {
 		}
 	},
 	rotten_spider_tiny_0038 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6430,7 +6430,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0039 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6454,7 +6454,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0040 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			60,
 			46
@@ -6480,7 +6480,7 @@ return {
 		}
 	},
 	rotten_spider_tiny_0042 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6506,7 +6506,7 @@ return {
 		}
 	},
 	rotten_spider_tiny_0044 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6532,7 +6532,7 @@ return {
 		}
 	},
 	rotten_spider_tiny_0047 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6556,7 +6556,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0048 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6580,7 +6580,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0049 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			46
@@ -6606,7 +6606,7 @@ return {
 		}
 	},
 	rotten_spider_tiny_0051 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6632,7 +6632,7 @@ return {
 		}
 	},
 	rotten_spider_tiny_0053 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6656,7 +6656,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0054 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6680,7 +6680,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0055 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6704,7 +6704,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0056 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6728,7 +6728,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0057 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6761,7 +6761,7 @@ return {
 		}
 	},
 	rotten_spider_tiny_0066 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6787,7 +6787,7 @@ return {
 		}
 	},
 	rotten_spider_tiny_0068 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6811,7 +6811,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0069 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6835,7 +6835,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0070 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			46
@@ -6859,7 +6859,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0071 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			60,
 			46
@@ -6883,7 +6883,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0072 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6907,7 +6907,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0073 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6931,7 +6931,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0074 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			60,
 			46
@@ -6955,7 +6955,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0075 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -6979,7 +6979,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0076 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -7003,7 +7003,7 @@ return {
 		alias = {}
 	},
 	rotten_spider_tiny_0077 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -7029,7 +7029,7 @@ return {
 		}
 	},
 	rotten_spider_tiny_0079 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			46
@@ -7059,7 +7059,7 @@ return {
 		}
 	},
 	rotten_thing_0001 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7085,7 +7085,7 @@ return {
 		}
 	},
 	rotten_thing_0002 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7109,7 +7109,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0003 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7135,7 +7135,7 @@ return {
 		}
 	},
 	rotten_thing_0005 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7159,7 +7159,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0006 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7185,7 +7185,7 @@ return {
 		}
 	},
 	rotten_thing_0008 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -7209,7 +7209,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0009 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -7235,7 +7235,7 @@ return {
 		}
 	},
 	rotten_thing_0011 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -7259,7 +7259,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0012 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -7285,7 +7285,7 @@ return {
 		}
 	},
 	rotten_thing_0014 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -7309,7 +7309,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0015 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -7335,7 +7335,7 @@ return {
 		}
 	},
 	rotten_thing_0017 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -7359,7 +7359,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0018 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -7385,7 +7385,7 @@ return {
 		}
 	},
 	rotten_thing_0020 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7409,7 +7409,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0021 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7435,7 +7435,7 @@ return {
 		}
 	},
 	rotten_thing_0023 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7459,7 +7459,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0024 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7483,7 +7483,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0025 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7509,7 +7509,7 @@ return {
 		}
 	},
 	rotten_thing_0027 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7535,7 +7535,7 @@ return {
 		}
 	},
 	rotten_thing_0029 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7561,7 +7561,7 @@ return {
 		}
 	},
 	rotten_thing_0031 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7587,7 +7587,7 @@ return {
 		}
 	},
 	rotten_thing_0033 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7613,7 +7613,7 @@ return {
 		}
 	},
 	rotten_thing_0035 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7639,7 +7639,7 @@ return {
 		}
 	},
 	rotten_thing_0037 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7665,7 +7665,7 @@ return {
 		}
 	},
 	rotten_thing_0039 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7691,7 +7691,7 @@ return {
 		}
 	},
 	rotten_thing_0041 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7717,7 +7717,7 @@ return {
 		}
 	},
 	rotten_thing_0043 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7743,7 +7743,7 @@ return {
 		}
 	},
 	rotten_thing_0045 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7769,7 +7769,7 @@ return {
 		}
 	},
 	rotten_thing_0047 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7795,7 +7795,7 @@ return {
 		}
 	},
 	rotten_thing_0049 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7821,7 +7821,7 @@ return {
 		}
 	},
 	rotten_thing_0051 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7847,7 +7847,7 @@ return {
 		}
 	},
 	rotten_thing_0053 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7873,7 +7873,7 @@ return {
 		}
 	},
 	rotten_thing_0055 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7899,7 +7899,7 @@ return {
 		}
 	},
 	rotten_thing_0057 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7925,7 +7925,7 @@ return {
 		}
 	},
 	rotten_thing_0059 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7951,7 +7951,7 @@ return {
 		}
 	},
 	rotten_thing_0061 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -7977,7 +7977,7 @@ return {
 		}
 	},
 	rotten_thing_0063 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8003,7 +8003,7 @@ return {
 		}
 	},
 	rotten_thing_0065 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8029,7 +8029,7 @@ return {
 		}
 	},
 	rotten_thing_0067 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8055,7 +8055,7 @@ return {
 		}
 	},
 	rotten_thing_0069 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8081,7 +8081,7 @@ return {
 		}
 	},
 	rotten_thing_0071 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8105,7 +8105,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0072 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8129,7 +8129,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0073 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8155,7 +8155,7 @@ return {
 		}
 	},
 	rotten_thing_0075 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8179,7 +8179,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0076 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8203,7 +8203,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0077 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8227,7 +8227,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0078 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8253,7 +8253,7 @@ return {
 		}
 	},
 	rotten_thing_0080 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8279,7 +8279,7 @@ return {
 		}
 	},
 	rotten_thing_0082 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8305,7 +8305,7 @@ return {
 		}
 	},
 	rotten_thing_0084 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8331,7 +8331,7 @@ return {
 		}
 	},
 	rotten_thing_0086 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8357,7 +8357,7 @@ return {
 		}
 	},
 	rotten_thing_0088 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8383,7 +8383,7 @@ return {
 		}
 	},
 	rotten_thing_0090 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8409,7 +8409,7 @@ return {
 		}
 	},
 	rotten_thing_0092 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8440,7 +8440,7 @@ return {
 		}
 	},
 	rotten_thing_0099 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8466,7 +8466,7 @@ return {
 		}
 	},
 	rotten_thing_0101 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8490,7 +8490,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0102 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8516,7 +8516,7 @@ return {
 		}
 	},
 	rotten_thing_0104 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8542,7 +8542,7 @@ return {
 		}
 	},
 	rotten_thing_0106 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8568,7 +8568,7 @@ return {
 		}
 	},
 	rotten_thing_0108 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8594,7 +8594,7 @@ return {
 		}
 	},
 	rotten_thing_0110 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8620,7 +8620,7 @@ return {
 		}
 	},
 	rotten_thing_0112 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8647,7 +8647,7 @@ return {
 		}
 	},
 	rotten_thing_0115 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8671,7 +8671,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0116 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8697,7 +8697,7 @@ return {
 		}
 	},
 	rotten_thing_0118 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8723,7 +8723,7 @@ return {
 		}
 	},
 	rotten_thing_0120 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8749,7 +8749,7 @@ return {
 		}
 	},
 	rotten_thing_0122 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8775,7 +8775,7 @@ return {
 		}
 	},
 	rotten_thing_0124 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8801,7 +8801,7 @@ return {
 		}
 	},
 	rotten_thing_0126 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8827,7 +8827,7 @@ return {
 		}
 	},
 	rotten_thing_0128 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8851,7 +8851,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0129 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8875,7 +8875,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0130 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8901,7 +8901,7 @@ return {
 		}
 	},
 	rotten_thing_0132 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -8927,7 +8927,7 @@ return {
 		}
 	},
 	rotten_thing_0134 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8951,7 +8951,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0135 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8975,7 +8975,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0136 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -8999,7 +8999,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0137 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -9023,7 +9023,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0138 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -9056,7 +9056,7 @@ return {
 		}
 	},
 	rotten_thing_0147 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -9082,7 +9082,7 @@ return {
 		}
 	},
 	rotten_thing_0149 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -9106,7 +9106,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0150 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -9130,7 +9130,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0151 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			154,
 			124
@@ -9156,7 +9156,7 @@ return {
 		}
 	},
 	rotten_thing_0153 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9180,7 +9180,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0154 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9206,7 +9206,7 @@ return {
 		}
 	},
 	rotten_thing_0156 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9230,7 +9230,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0157 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9256,7 +9256,7 @@ return {
 		}
 	},
 	rotten_thing_0159 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9282,7 +9282,7 @@ return {
 		}
 	},
 	rotten_thing_0161 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9317,7 +9317,7 @@ return {
 		}
 	},
 	rotten_thing_0172 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9343,7 +9343,7 @@ return {
 		}
 	},
 	rotten_thing_0174 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9369,7 +9369,7 @@ return {
 		}
 	},
 	rotten_thing_0176 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9395,7 +9395,7 @@ return {
 		}
 	},
 	rotten_thing_0178 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9421,7 +9421,7 @@ return {
 		}
 	},
 	rotten_thing_0180 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9445,7 +9445,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0181 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9469,7 +9469,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0182 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9493,7 +9493,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0183 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9517,7 +9517,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0184 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9541,7 +9541,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0185 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9565,7 +9565,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0186 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9589,7 +9589,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0187 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9613,7 +9613,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0188 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9637,7 +9637,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0189 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9661,7 +9661,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0190 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9685,7 +9685,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0191 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9709,7 +9709,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0192 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9733,7 +9733,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0193 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9757,7 +9757,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0194 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9781,7 +9781,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0195 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9805,7 +9805,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0196 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9829,7 +9829,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0197 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9853,7 +9853,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0198 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9877,7 +9877,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0199 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9901,7 +9901,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0200 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9925,7 +9925,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0201 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9949,7 +9949,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0202 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9973,7 +9973,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0203 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -9997,7 +9997,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0204 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -10021,7 +10021,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0205 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -10045,7 +10045,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0206 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -10069,7 +10069,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0207 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -10093,7 +10093,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0208 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -10117,7 +10117,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0209 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -10141,7 +10141,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0210 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -10165,7 +10165,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0211 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -10189,7 +10189,7 @@ return {
 		alias = {}
 	},
 	rotten_thing_0212 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			154,
 			124
@@ -10213,7 +10213,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0001 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10239,7 +10239,7 @@ return {
 		}
 	},
 	rotten_treant_0003 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10265,7 +10265,7 @@ return {
 		}
 	},
 	rotten_treant_0005 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10291,7 +10291,7 @@ return {
 		}
 	},
 	rotten_treant_0007 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10317,7 +10317,7 @@ return {
 		}
 	},
 	rotten_treant_0009 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10343,7 +10343,7 @@ return {
 		}
 	},
 	rotten_treant_0011 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10369,7 +10369,7 @@ return {
 		}
 	},
 	rotten_treant_0013 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10395,7 +10395,7 @@ return {
 		}
 	},
 	rotten_treant_0015 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10421,7 +10421,7 @@ return {
 		}
 	},
 	rotten_treant_0017 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10447,7 +10447,7 @@ return {
 		}
 	},
 	rotten_treant_0019 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10473,7 +10473,7 @@ return {
 		}
 	},
 	rotten_treant_0021 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10499,7 +10499,7 @@ return {
 		}
 	},
 	rotten_treant_0023 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10525,7 +10525,7 @@ return {
 		}
 	},
 	rotten_treant_0025 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10551,7 +10551,7 @@ return {
 		}
 	},
 	rotten_treant_0027 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10577,7 +10577,7 @@ return {
 		}
 	},
 	rotten_treant_0029 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10603,7 +10603,7 @@ return {
 		}
 	},
 	rotten_treant_0031 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10629,7 +10629,7 @@ return {
 		}
 	},
 	rotten_treant_0033 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10655,7 +10655,7 @@ return {
 		}
 	},
 	rotten_treant_0035 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10681,7 +10681,7 @@ return {
 		}
 	},
 	rotten_treant_0037 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10707,7 +10707,7 @@ return {
 		}
 	},
 	rotten_treant_0039 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10733,7 +10733,7 @@ return {
 		}
 	},
 	rotten_treant_0041 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10759,7 +10759,7 @@ return {
 		}
 	},
 	rotten_treant_0043 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10785,7 +10785,7 @@ return {
 		}
 	},
 	rotten_treant_0045 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10811,7 +10811,7 @@ return {
 		}
 	},
 	rotten_treant_0047 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10837,7 +10837,7 @@ return {
 		}
 	},
 	rotten_treant_0049 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10867,7 +10867,7 @@ return {
 		}
 	},
 	rotten_treant_0052 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10893,7 +10893,7 @@ return {
 		}
 	},
 	rotten_treant_0054 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10919,7 +10919,7 @@ return {
 		}
 	},
 	rotten_treant_0056 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -10946,7 +10946,7 @@ return {
 		}
 	},
 	rotten_treant_0059 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -10972,7 +10972,7 @@ return {
 		}
 	},
 	rotten_treant_0061 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -10996,7 +10996,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0062 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11020,7 +11020,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0063 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11044,7 +11044,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0064 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11068,7 +11068,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0065 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11095,7 +11095,7 @@ return {
 		}
 	},
 	rotten_treant_0068 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11121,7 +11121,7 @@ return {
 		}
 	},
 	rotten_treant_0071 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11145,7 +11145,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0072 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11169,7 +11169,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0073 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11195,7 +11195,7 @@ return {
 		}
 	},
 	rotten_treant_0075 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11221,7 +11221,7 @@ return {
 		}
 	},
 	rotten_treant_0077 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11245,7 +11245,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0078 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11269,7 +11269,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0079 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11293,7 +11293,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0080 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11317,7 +11317,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0081 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11347,7 +11347,7 @@ return {
 		}
 	},
 	rotten_treant_0087 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11373,7 +11373,7 @@ return {
 		}
 	},
 	rotten_treant_0089 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11397,7 +11397,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0090 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11421,7 +11421,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0091 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			116,
 			108
@@ -11445,7 +11445,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0092 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			116,
 			108
@@ -11469,7 +11469,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0093 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11493,7 +11493,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0094 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			116,
 			108
@@ -11517,7 +11517,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0095 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11541,7 +11541,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0096 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11565,7 +11565,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0097 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11589,7 +11589,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0098 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11613,7 +11613,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0099 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11637,7 +11637,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0100 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			116,
 			108
@@ -11661,7 +11661,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0101 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11685,7 +11685,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0102 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11709,7 +11709,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0103 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11733,7 +11733,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0104 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11757,7 +11757,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0105 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11781,7 +11781,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0106 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11805,7 +11805,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0107 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11829,7 +11829,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0108 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11853,7 +11853,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0109 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11877,7 +11877,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0110 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11901,7 +11901,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0111 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11925,7 +11925,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0112 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11949,7 +11949,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0113 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -11973,7 +11973,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0114 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			116,
 			108
@@ -11997,7 +11997,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0115 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12021,7 +12021,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0116 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12045,7 +12045,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0117 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12069,7 +12069,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0118 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12095,7 +12095,7 @@ return {
 		}
 	},
 	rotten_treant_0120 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12121,7 +12121,7 @@ return {
 		}
 	},
 	rotten_treant_0122 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12148,7 +12148,7 @@ return {
 		}
 	},
 	rotten_treant_0127 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12172,7 +12172,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0128 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12196,7 +12196,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0129 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12220,7 +12220,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0130 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12244,7 +12244,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0131 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12268,7 +12268,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0132 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12292,7 +12292,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0133 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12316,7 +12316,7 @@ return {
 		alias = {}
 	},
 	rotten_treant_0134 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12342,7 +12342,7 @@ return {
 		}
 	},
 	rotten_treant_0136 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			116,
 			108
@@ -12366,7 +12366,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0001 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12392,7 +12392,7 @@ return {
 		}
 	},
 	rotten_zombie_0003 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12418,7 +12418,7 @@ return {
 		}
 	},
 	rotten_zombie_0005 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12444,7 +12444,7 @@ return {
 		}
 	},
 	rotten_zombie_0007 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12470,7 +12470,7 @@ return {
 		}
 	},
 	rotten_zombie_0009 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12496,7 +12496,7 @@ return {
 		}
 	},
 	rotten_zombie_0011 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12522,7 +12522,7 @@ return {
 		}
 	},
 	rotten_zombie_0013 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12548,7 +12548,7 @@ return {
 		}
 	},
 	rotten_zombie_0015 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12574,7 +12574,7 @@ return {
 		}
 	},
 	rotten_zombie_0017 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12600,7 +12600,7 @@ return {
 		}
 	},
 	rotten_zombie_0019 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12626,7 +12626,7 @@ return {
 		}
 	},
 	rotten_zombie_0021 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12652,7 +12652,7 @@ return {
 		}
 	},
 	rotten_zombie_0023 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			60,
 			68
@@ -12676,7 +12676,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0024 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12702,7 +12702,7 @@ return {
 		}
 	},
 	rotten_zombie_0026 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12728,7 +12728,7 @@ return {
 		}
 	},
 	rotten_zombie_0028 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12754,7 +12754,7 @@ return {
 		}
 	},
 	rotten_zombie_0030 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			68
@@ -12780,7 +12780,7 @@ return {
 		}
 	},
 	rotten_zombie_0032 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			68
@@ -12806,7 +12806,7 @@ return {
 		}
 	},
 	rotten_zombie_0034 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12832,7 +12832,7 @@ return {
 		}
 	},
 	rotten_zombie_0036 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12858,7 +12858,7 @@ return {
 		}
 	},
 	rotten_zombie_0038 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12884,7 +12884,7 @@ return {
 		}
 	},
 	rotten_zombie_0040 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12910,7 +12910,7 @@ return {
 		}
 	},
 	rotten_zombie_0042 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12936,7 +12936,7 @@ return {
 		}
 	},
 	rotten_zombie_0044 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12962,7 +12962,7 @@ return {
 		}
 	},
 	rotten_zombie_0046 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -12988,7 +12988,7 @@ return {
 		}
 	},
 	rotten_zombie_0048 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13014,7 +13014,7 @@ return {
 		}
 	},
 	rotten_zombie_0050 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13040,7 +13040,7 @@ return {
 		}
 	},
 	rotten_zombie_0052 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13066,7 +13066,7 @@ return {
 		}
 	},
 	rotten_zombie_0054 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13092,7 +13092,7 @@ return {
 		}
 	},
 	rotten_zombie_0056 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13118,7 +13118,7 @@ return {
 		}
 	},
 	rotten_zombie_0058 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			68
@@ -13144,7 +13144,7 @@ return {
 		}
 	},
 	rotten_zombie_0060 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13170,7 +13170,7 @@ return {
 		}
 	},
 	rotten_zombie_0062 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13196,7 +13196,7 @@ return {
 		}
 	},
 	rotten_zombie_0064 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13222,7 +13222,7 @@ return {
 		}
 	},
 	rotten_zombie_0066 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13248,7 +13248,7 @@ return {
 		}
 	},
 	rotten_zombie_0068 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13274,7 +13274,7 @@ return {
 		}
 	},
 	rotten_zombie_0070 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13300,7 +13300,7 @@ return {
 		}
 	},
 	rotten_zombie_0072 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13327,7 +13327,7 @@ return {
 		}
 	},
 	rotten_zombie_0074 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13351,7 +13351,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0075 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13377,7 +13377,7 @@ return {
 		}
 	},
 	rotten_zombie_0077 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13403,7 +13403,7 @@ return {
 		}
 	},
 	rotten_zombie_0079 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13431,7 +13431,7 @@ return {
 		}
 	},
 	rotten_zombie_0083 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13457,7 +13457,7 @@ return {
 		}
 	},
 	rotten_zombie_0085 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13481,7 +13481,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0086 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13505,7 +13505,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0087 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13529,7 +13529,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0088 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			68
@@ -13556,7 +13556,7 @@ return {
 		}
 	},
 	rotten_zombie_0091 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			68
@@ -13582,7 +13582,7 @@ return {
 		}
 	},
 	rotten_zombie_0094 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13606,7 +13606,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0095 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			68
@@ -13630,7 +13630,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0096 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			68
@@ -13656,7 +13656,7 @@ return {
 		}
 	},
 	rotten_zombie_0098 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13682,7 +13682,7 @@ return {
 		}
 	},
 	rotten_zombie_0100 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13706,7 +13706,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0101 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13730,7 +13730,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0102 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13754,7 +13754,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0103 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13778,7 +13778,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0104 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13811,7 +13811,7 @@ return {
 		}
 	},
 	rotten_zombie_0113 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13837,7 +13837,7 @@ return {
 		}
 	},
 	rotten_zombie_0115 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13861,7 +13861,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0116 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			60,
 			68
@@ -13885,7 +13885,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0117 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			60,
 			68
@@ -13909,7 +13909,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0118 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13933,7 +13933,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0119 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13957,7 +13957,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0120 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -13981,7 +13981,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0121 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14005,7 +14005,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0122 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			68
@@ -14029,7 +14029,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0123 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			68
@@ -14053,7 +14053,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0124 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14077,7 +14077,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0125 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14101,7 +14101,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0126 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14125,7 +14125,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0127 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14149,7 +14149,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0128 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14175,7 +14175,7 @@ return {
 		}
 	},
 	rotten_zombie_0130 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14201,7 +14201,7 @@ return {
 		}
 	},
 	rotten_zombie_0132 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14231,7 +14231,7 @@ return {
 		}
 	},
 	rotten_zombie_0138 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			60,
 			68
@@ -14255,7 +14255,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0139 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			60,
 			68
@@ -14279,7 +14279,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0140 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14303,7 +14303,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0141 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14327,7 +14327,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0142 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14351,7 +14351,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0143 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14375,7 +14375,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0144 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			68
@@ -14399,7 +14399,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0145 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14423,7 +14423,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0146 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			60,
 			68
@@ -14447,7 +14447,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0147 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			60,
 			68
@@ -14471,7 +14471,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0148 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14495,7 +14495,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0149 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14519,7 +14519,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0150 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			60,
 			68
@@ -14543,7 +14543,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0151 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14567,7 +14567,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0152 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			68
@@ -14591,7 +14591,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0153 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			68
@@ -14615,7 +14615,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0154 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14639,7 +14639,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0155 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14663,7 +14663,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0156 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14687,7 +14687,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0157 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14711,7 +14711,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0158 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			60,
 			68
@@ -14735,7 +14735,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0159 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14759,7 +14759,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0160 = {
-		a_name = "go_enemies_rotten-2.png",
+		a_name = "go_enemies_rotten-2.dds",
 		size = {
 			60,
 			68
@@ -14783,7 +14783,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0161 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14807,7 +14807,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0162 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14831,7 +14831,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0163 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14855,7 +14855,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0164 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14879,7 +14879,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0165 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14903,7 +14903,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0166 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14927,7 +14927,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0167 = {
-		a_name = "go_enemies_rotten-1.png",
+		a_name = "go_enemies_rotten-1.dds",
 		size = {
 			60,
 			68
@@ -14951,7 +14951,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0168 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14975,7 +14975,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0169 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68
@@ -14999,7 +14999,7 @@ return {
 		alias = {}
 	},
 	rotten_zombie_0170 = {
-		a_name = "go_enemies_rotten-3.png",
+		a_name = "go_enemies_rotten-3.dds",
 		size = {
 			60,
 			68

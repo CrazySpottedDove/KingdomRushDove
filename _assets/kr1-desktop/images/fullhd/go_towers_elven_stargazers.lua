@@ -1,6 +1,6 @@
 return {
 	["elven_stargazers_tower_build"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			136,
 			102
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0026"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0027"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0028"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0029"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0030"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_0031"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			170,
 			164
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			139,
 			130
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_decal_big_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			173,
 			164
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0026"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0027"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0028"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0029"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0030"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0031"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0032"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0033"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0034"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0035"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0036"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0037"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0038"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0039"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0040"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0041"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0042"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0043"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0044"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0045"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0046"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0047"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0048"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0049"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0050"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0051"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0052"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0053"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0054"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0055"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0056"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0057"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0058"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0059"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0060"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0061"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0062"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0063"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_event_horizon_tower_fx_0064"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			144,
 			142
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0026"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0027"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0028"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0029"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0030"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0031"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0032"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0033"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0034"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0035"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0036"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0037"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0038"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0039"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0040"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0041"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0042"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0043"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0044"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0045"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0046"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0047"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0048"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0049"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0050"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0051"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0052"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0053"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0054"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0055"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0056"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0057"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0058"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0059"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0060"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0061"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0062"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0063"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0064"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0065"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0066"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0067"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0068"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0069"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0070"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0071"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0072"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0073"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0074"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0075"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0076"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0077"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0078"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0079"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0080"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0081"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0082"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0083"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0084"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0085"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0086"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0087"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0088"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0089"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0090"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0091"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0092"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0093"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0094"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0095"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0096"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0097"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_elf_0098"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			107
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0026"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0027"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0028"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0029"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0030"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0031"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0032"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0033"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0034"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0035"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0036"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0037"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0038"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0039"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0040"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0041"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0042"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0043"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0044"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer1_0045"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0026"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0027"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0028"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0029"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0030"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0031"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0032"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0033"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0034"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0035"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0036"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0037"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0038"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0039"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0040"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0041"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0042"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0043"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0044"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer2_0045"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0026"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0027"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0028"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0029"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0030"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0031"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0032"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0033"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0034"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0035"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0036"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0037"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0038"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0039"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0040"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0041"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0042"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0043"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0044"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer3_0045"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0026"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0027"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0028"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0029"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0030"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0031"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0032"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0033"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0034"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0035"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0036"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0037"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0038"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0039"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0040"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0041"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0042"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0043"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0044"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer4_0045"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0026"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0027"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0028"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0029"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0030"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0031"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0032"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0033"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0034"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0035"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0036"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0037"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0038"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0039"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0040"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0041"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0042"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0043"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0044"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer5_0045"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0026"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0027"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0028"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0029"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0030"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0031"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0032"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0033"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0034"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0035"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0036"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0037"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0038"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0039"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0040"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0041"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0042"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0043"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0044"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer6_0045"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0026"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0027"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0028"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0029"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0030"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0031"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0032"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0033"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0034"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0035"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0036"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0037"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0038"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0039"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0040"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0041"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0042"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0043"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0044"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer7_0045"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0026"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0027"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0028"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0029"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0030"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0031"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0032"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0033"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0034"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0035"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0036"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0037"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0038"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0039"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0040"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0041"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0042"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0043"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0044"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_lvl4_tower_layer8_0045"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			269
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_mark_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_preview"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			142,
 			147
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0026"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0027"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0028"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0029"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0030"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0031"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0032"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_0033"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			542,
 			59
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0026"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0027"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_end_0028"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			161,
 			161
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0015"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0016"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0017"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0018"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0019"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0020"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0021"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0022"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0023"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0024"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0025"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0026"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0027"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0028"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0029"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0030"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0031"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0032"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_ray_start_lvl4_0033"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			76,
 			73
@@ -17160,7 +17160,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_explosion_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			207
@@ -17184,7 +17184,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_explosion_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			207
@@ -17208,7 +17208,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_explosion_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			207
@@ -17232,7 +17232,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_explosion_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			207
@@ -17256,7 +17256,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_explosion_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			207
@@ -17280,7 +17280,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_explosion_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			207
@@ -17304,7 +17304,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_explosion_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			207
@@ -17328,7 +17328,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_explosion_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			207
@@ -17352,7 +17352,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_explosion_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			207
@@ -17376,7 +17376,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_explosion_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			207
@@ -17400,7 +17400,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_explosion_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			207
@@ -17424,7 +17424,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_explosion_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			207
@@ -17448,7 +17448,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_explosion_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			207
@@ -17472,7 +17472,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_explosion_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			167,
 			207
@@ -17496,7 +17496,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_hit_fx_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			153,
 			176
@@ -17520,7 +17520,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_hit_fx_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			153,
 			176
@@ -17544,7 +17544,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_hit_fx_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			153,
 			176
@@ -17568,7 +17568,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_hit_fx_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			153,
 			176
@@ -17592,7 +17592,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_hit_fx_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			153,
 			176
@@ -17616,7 +17616,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_hit_fx_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			153,
 			176
@@ -17640,7 +17640,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_hit_fx_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			153,
 			176
@@ -17664,7 +17664,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_hit_fx_0008"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			153,
 			176
@@ -17688,7 +17688,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_hit_fx_0009"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			153,
 			176
@@ -17712,7 +17712,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_hit_fx_0010"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			153,
 			176
@@ -17736,7 +17736,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_hit_fx_0011"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			153,
 			176
@@ -17760,7 +17760,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_hit_fx_0012"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			153,
 			176
@@ -17784,7 +17784,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_hit_fx_0013"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			153,
 			176
@@ -17808,7 +17808,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_hit_fx_0014"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			153,
 			176
@@ -17832,7 +17832,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_particle_trail_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			73,
 			73
@@ -17856,7 +17856,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_particle_trail_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			73,
 			73
@@ -17880,7 +17880,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_particle_trail_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			73,
 			73
@@ -17904,7 +17904,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_particle_trail_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			73,
 			73
@@ -17928,7 +17928,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_particle_trail_0005"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			73,
 			73
@@ -17952,7 +17952,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_particle_trail_0006"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			73,
 			73
@@ -17976,7 +17976,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_particle_trail_0007"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			73,
 			73
@@ -18000,7 +18000,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_star_0001"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -18024,7 +18024,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_star_0002"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -18048,7 +18048,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_star_0003"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76
@@ -18072,7 +18072,7 @@ return {
 		alias = {},
 	},
 	["elven_stargazers_tower_rising_star_star_0004"] = {
-		a_name = "go_towers_elven_stargazers-1.png",
+		a_name = "go_towers_elven_stargazers-1.dds",
 		size = {
 			79,
 			76

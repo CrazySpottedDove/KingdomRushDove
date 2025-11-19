@@ -2,7 +2,7 @@
 
 return {
 	Stage18_squirrel_0001 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -60,7 +60,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0020 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -86,7 +86,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0022 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -114,7 +114,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0024 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -142,7 +142,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0026 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -170,7 +170,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0028 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -196,7 +196,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0030 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -222,7 +222,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0038 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -248,7 +248,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0040 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -274,7 +274,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0042 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -300,7 +300,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0059 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -326,7 +326,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0061 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -352,7 +352,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0063 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -378,7 +378,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0065 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -404,7 +404,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0067 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -446,7 +446,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0085 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -497,7 +497,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0087 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -527,7 +527,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0089 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -557,7 +557,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0091 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -587,7 +587,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0093 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -617,7 +617,7 @@ return {
 		}
 	},
 	Stage18_squirrel_0095 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -645,7 +645,7 @@ return {
 		}
 	},
 	Stage18_squirrel_ice_0001 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -723,7 +723,7 @@ return {
 		}
 	},
 	Stage18_squirrel_ice_0055 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -747,7 +747,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0056 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -771,7 +771,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0057 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -795,7 +795,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0058 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -819,7 +819,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0059 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -843,7 +843,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0060 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -867,7 +867,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0061 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -891,7 +891,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0062 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -915,7 +915,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0063 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -941,7 +941,7 @@ return {
 		}
 	},
 	Stage18_squirrel_ice_0065 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -999,7 +999,7 @@ return {
 		}
 	},
 	Stage18_squirrel_ice_0099 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1025,7 +1025,7 @@ return {
 		}
 	},
 	Stage18_squirrel_ice_0101 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1051,7 +1051,7 @@ return {
 		}
 	},
 	Stage18_squirrel_ice_0103 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1082,7 +1082,7 @@ return {
 		}
 	},
 	Stage18_squirrel_ice_0110 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1106,7 +1106,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0111 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1130,7 +1130,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0112 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1154,7 +1154,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0113 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1178,7 +1178,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0114 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1202,7 +1202,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0115 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1226,7 +1226,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0116 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1250,7 +1250,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0117 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1274,7 +1274,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0118 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1298,7 +1298,7 @@ return {
 		alias = {}
 	},
 	Stage18_squirrel_ice_0119 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1324,7 +1324,7 @@ return {
 		}
 	},
 	Stage18_squirrel_ice_0121 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1350,7 +1350,7 @@ return {
 		}
 	},
 	Stage18_squirrel_ice_0123 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1376,7 +1376,7 @@ return {
 		}
 	},
 	Stage18_squirrel_ice_0125 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1402,7 +1402,7 @@ return {
 		}
 	},
 	Stage18_squirrel_ice_0127 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1439,7 +1439,7 @@ return {
 		}
 	},
 	Stage18_squirrel_touchFx_0001 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1465,7 +1465,7 @@ return {
 		}
 	},
 	Stage18_squirrel_touchFx_0003 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1491,7 +1491,7 @@ return {
 		}
 	},
 	Stage18_squirrel_touchFx_0005 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1517,7 +1517,7 @@ return {
 		}
 	},
 	Stage18_squirrel_touchFx_0007 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1543,7 +1543,7 @@ return {
 		}
 	},
 	Stage18_squirrel_touchFx_0009 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1569,7 +1569,7 @@ return {
 		}
 	},
 	Stage18_squirrel_touchFx_0011 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			254,
 			178
@@ -1595,7 +1595,7 @@ return {
 		}
 	},
 	stage18_caveLights_0001 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			174,
 			162
@@ -1621,7 +1621,7 @@ return {
 		}
 	},
 	stage18_caveLights_0002 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			174,
 			162
@@ -1645,7 +1645,7 @@ return {
 		alias = {}
 	},
 	stage18_caveLights_0003 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			174,
 			162
@@ -1669,7 +1669,7 @@ return {
 		alias = {}
 	},
 	stage18_caveLights_0004 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			174,
 			162
@@ -1693,7 +1693,7 @@ return {
 		alias = {}
 	},
 	stage18_caveLights_0005 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			174,
 			162
@@ -1717,7 +1717,7 @@ return {
 		alias = {}
 	},
 	stage18_caveLights_0006 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			174,
 			162
@@ -1741,7 +1741,7 @@ return {
 		alias = {}
 	},
 	stage18_caveLights_0007 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			174,
 			162
@@ -1765,7 +1765,7 @@ return {
 		alias = {}
 	},
 	stage18_caveLights_0008 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			174,
 			162
@@ -1789,7 +1789,7 @@ return {
 		alias = {}
 	},
 	stage18_caveLights_0009 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			174,
 			162
@@ -1813,7 +1813,7 @@ return {
 		alias = {}
 	},
 	stage18_caveLights_0010 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			174,
 			162
@@ -1837,7 +1837,7 @@ return {
 		alias = {}
 	},
 	stage18_caveLights_0011 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			174,
 			162
@@ -1861,7 +1861,7 @@ return {
 		alias = {}
 	},
 	stage18_caveLights_0012 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			174,
 			162
@@ -1885,7 +1885,7 @@ return {
 		alias = {}
 	},
 	stage18_caveLights_0013 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			174,
 			162
@@ -1909,7 +1909,7 @@ return {
 		alias = {}
 	},
 	stage_18_0002 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			1920,
 			1080
@@ -1933,7 +1933,7 @@ return {
 		alias = {}
 	},
 	stage_18_0003 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			1920,
 			1080
@@ -1957,7 +1957,7 @@ return {
 		alias = {}
 	},
 	stage_18_0004 = {
-		a_name = "go_stage18-1.png",
+		a_name = "go_stage18-1.dds",
 		size = {
 			1920,
 			1080
