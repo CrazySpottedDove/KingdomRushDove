@@ -2,7 +2,7 @@
 
 return {
 	InfernoDecal_0001 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			128,
 			102
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	InfernoDecal_0002 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			128,
 			102
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0001 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0002 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0003 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0004 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0005 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0006 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0007 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0008 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0009 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0010 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0011 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0012 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0013 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0014 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0015 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -410,7 +410,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0016 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -434,7 +434,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0017 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0018 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -482,7 +482,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0019 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -506,7 +506,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0020 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0021 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -554,7 +554,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0022 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -578,7 +578,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0023 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -602,7 +602,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0024 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -626,7 +626,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0025 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -650,7 +650,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0026 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -674,7 +674,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0027 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -698,7 +698,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0028 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -722,7 +722,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0029 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -746,7 +746,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0030 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -770,7 +770,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0031 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -794,7 +794,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0032 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -818,7 +818,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0033 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -842,7 +842,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0034 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -866,7 +866,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0035 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -890,7 +890,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0036 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -914,7 +914,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0037 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -938,7 +938,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0038 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -962,7 +962,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0039 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -986,7 +986,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0040 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -1010,7 +1010,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0041 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -1034,7 +1034,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0042 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -1058,7 +1058,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0043 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -1082,7 +1082,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0044 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -1106,7 +1106,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0045 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -1130,7 +1130,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0046 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -1154,7 +1154,7 @@ return {
 		alias = {}
 	},
 	Inferno_LavaBubble_0047 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			54,
 			32
@@ -1178,7 +1178,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0001 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1204,7 +1204,7 @@ return {
 		}
 	},
 	Inferno_Lava_0003 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1230,7 +1230,7 @@ return {
 		}
 	},
 	Inferno_Lava_0005 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1254,7 +1254,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0006 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1278,7 +1278,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0007 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1302,7 +1302,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0008 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1326,7 +1326,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0009 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1350,7 +1350,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0010 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1374,7 +1374,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0011 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1398,7 +1398,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0012 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1422,7 +1422,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0013 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1446,7 +1446,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0014 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1470,7 +1470,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0015 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1496,7 +1496,7 @@ return {
 		}
 	},
 	Inferno_Lava_0017 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1522,7 +1522,7 @@ return {
 		}
 	},
 	Inferno_Lava_0019 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1546,7 +1546,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0020 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1570,7 +1570,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0021 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1594,7 +1594,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0022 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1618,7 +1618,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0023 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1642,7 +1642,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0024 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1666,7 +1666,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0025 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1690,7 +1690,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0026 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1714,7 +1714,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0027 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1738,7 +1738,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0028 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1762,7 +1762,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0029 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1786,7 +1786,7 @@ return {
 		alias = {}
 	},
 	Inferno_Lava_0030 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			74,
 			66
@@ -1810,7 +1810,7 @@ return {
 		alias = {}
 	},
 	stage15_portal_0001 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			182,
 			202
@@ -1837,7 +1837,7 @@ return {
 		}
 	},
 	stage15_portal_0004 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			182,
 			202
@@ -1864,7 +1864,7 @@ return {
 		}
 	},
 	stage15_portal_0007 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			182,
 			202
@@ -1891,7 +1891,7 @@ return {
 		}
 	},
 	stage15_portal_0010 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			182,
 			202
@@ -1918,7 +1918,7 @@ return {
 		}
 	},
 	stage15_portal_0013 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			182,
 			202
@@ -1945,7 +1945,7 @@ return {
 		}
 	},
 	stage15_portal_0016 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			182,
 			202
@@ -1972,7 +1972,7 @@ return {
 		}
 	},
 	stage15_portal_0019 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			182,
 			202
@@ -1999,7 +1999,7 @@ return {
 		}
 	},
 	stage15_portal_0022 = {
-		a_name = "go_stages_rotten_torment-1.png",
+		a_name = "go_stages_rotten_torment-1.dds",
 		size = {
 			182,
 			202

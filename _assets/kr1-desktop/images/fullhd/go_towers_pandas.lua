@@ -1,6 +1,6 @@
 return {
 	["la_red_lvl4_tp_fire_enemy_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0005"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0006"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0007"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0008"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0009"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0010"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0011"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0012"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0013"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0014"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0015"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0016"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0017"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0018"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0019"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["la_red_lvl4_tp_fire_enemy_0020"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			150
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["quickmenu_retreat_icons_tower_panda"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			85,
 			85
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["quickmenu_retreat_icons_tower_panda_disabled"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			85,
 			85
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["quickmenu_retreat_icons_tower_panda_disabled_turn_off"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			85,
 			85
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["quickmenu_retreat_icons_tower_panda_turn_off"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			85,
 			85
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_level_up_fx_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			105,
 			142
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_level_up_fx_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			105,
 			142
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_level_up_fx_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			105,
 			142
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_level_up_fx_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			105,
 			142
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_level_up_fx_0005"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			105,
 			142
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_level_up_fx_0006"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			105,
 			142
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_level_up_fx_0007"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			105,
 			142
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_level_up_fx_0008"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			105,
 			142
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0005"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0006"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0007"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0008"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0009"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0010"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0011"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0012"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0013"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0014"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0015"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0016"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0017"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0018"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0019"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0020"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0021"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0022"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0023"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_lighting_sky_0024"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			116,
 			1104
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0005"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0006"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0007"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0008"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0009"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0010"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0011"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0012"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0013"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0014"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0015"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0016"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0017"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0018"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0019"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0020"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0021"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0022"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0023"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0024"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0025"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0026"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0027"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0028"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0029"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0030"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0031"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0032"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0033"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0034"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0035"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0036"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0037"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0038"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0039"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0040"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0041"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0042"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0043"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0044"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0045"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0046"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0047"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0048"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0049"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0050"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0051"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0052"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0053"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0054"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0055"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0056"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0057"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0058"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0059"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0060"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0061"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0062"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0063"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0064"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0065"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0066"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0067"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0068"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0069"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0070"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0071"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0072"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0073"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0074"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0075"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0076"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0077"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0078"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0079"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0080"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0081"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0082"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0083"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0084"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0085"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0086"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0087"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0088"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0089"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0090"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0091"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0092"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0093"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0094"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0095"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0096"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0097"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0098"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0099"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0100"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0101"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0102"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0103"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0104"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0105"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0106"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0107"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0108"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0109"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0110"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0111"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0112"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0113"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0114"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0115"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0116"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0117"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0118"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0119"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0120"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0121"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0122"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0123"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0124"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0125"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0126"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0127"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0128"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0129"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0130"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0131"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0132"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0133"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0134"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0135"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0136"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0137"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0138"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0139"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0140"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0141"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0142"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0143"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0144"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0145"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0146"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0147"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0148"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0149"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0150"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0151"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0152"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0153"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0154"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0155"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0156"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0157"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0158"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0159"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0160"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0161"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0162"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0163"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0164"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0165"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0166"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0167"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0168"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0169"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0170"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0171"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0172"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0173"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0174"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0175"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0176"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0177"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0178"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0179"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0180"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0181"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0182"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0183"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0184"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0185"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0186"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0187"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0188"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0189"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0190"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0191"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0192"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0193"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0194"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0195"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0196"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0197"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0198"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0199"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0200"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0201"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0202"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0203"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0204"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0205"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0206"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0207"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0208"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0209"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0210"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0211"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_blue_lvl4_0212"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			420
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0005"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0006"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0007"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0008"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0009"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0010"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0011"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0012"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0013"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0014"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0015"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0016"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0017"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0018"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0019"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0020"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0021"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0022"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0023"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0024"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0025"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0026"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0027"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0028"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0029"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0030"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0031"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0032"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0033"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0034"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0035"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0036"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0037"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0038"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0039"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0040"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0041"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0042"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0043"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0044"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0045"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0046"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0047"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0048"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0049"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0050"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0051"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0052"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0053"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0054"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0055"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0056"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0057"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0058"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0059"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0060"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0061"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0062"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0063"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0064"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0065"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0066"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0067"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0068"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0069"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0070"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0071"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0072"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0073"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0074"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0075"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0076"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0077"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0078"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0079"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0080"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0081"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0082"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0083"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0084"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0085"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0086"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0087"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0088"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0089"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0090"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0091"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0092"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0093"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0094"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0095"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0096"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0097"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0098"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0099"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0100"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0101"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0102"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0103"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0104"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0105"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0106"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0107"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0108"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0109"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0110"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0111"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0112"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0113"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0114"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0115"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0116"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0117"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0118"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0119"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0120"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0121"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0122"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0123"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0124"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0125"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0126"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0127"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0128"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0129"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0130"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0131"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0132"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0133"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0134"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0135"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0136"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0137"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0138"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0139"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0140"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0141"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0142"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0143"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0144"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0145"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0146"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0147"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0148"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0149"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0150"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0151"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0152"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0153"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0154"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0155"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0156"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0157"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0158"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0159"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0160"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0161"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0162"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0163"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0164"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0165"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0166"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0167"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0168"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0169"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0170"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0171"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0172"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0173"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0174"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0175"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0176"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0177"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0178"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0179"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0180"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0181"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0182"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0183"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0184"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0185"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0186"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0187"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0188"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0189"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0190"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0191"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0192"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0193"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0194"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0195"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0196"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0197"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0198"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0199"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0200"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0201"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0202"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0203"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0204"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0205"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0206"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0207"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0208"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0209"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0210"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0211"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0212"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0213"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0214"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0215"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0216"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0217"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0218"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0219"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0220"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0221"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0222"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0223"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0224"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0225"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0226"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0227"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0228"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0229"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0230"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0231"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_green_lvl4_0232"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			181,
 			428
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0005"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0006"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0007"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0008"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0009"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0010"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0011"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0012"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0013"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0014"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0015"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0016"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0017"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0018"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0019"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0020"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0021"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0022"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0023"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0024"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0025"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0026"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0027"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0028"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0029"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0030"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0031"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0032"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0033"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0034"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0035"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0036"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0037"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0038"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0039"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0040"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0041"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0042"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0043"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0044"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0045"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0046"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0047"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0048"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0049"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0050"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0051"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0052"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0053"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0054"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0055"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0056"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0057"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0058"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0059"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0060"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0061"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0062"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0063"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0064"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0065"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0066"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0067"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0068"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0069"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0070"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0071"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0072"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0073"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0074"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0075"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0076"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0077"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0078"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0079"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0080"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0081"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0082"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0083"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0084"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0085"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0086"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0087"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0088"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0089"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0090"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0091"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0092"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0093"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0094"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0095"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0096"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0097"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0098"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0099"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0100"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0101"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0102"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0103"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0104"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0105"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0106"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0107"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0108"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0109"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0110"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0111"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0112"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0113"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0114"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0115"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0116"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0117"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0118"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0119"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0120"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0121"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0122"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0123"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0124"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0125"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0126"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0127"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0128"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0129"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0130"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0131"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0132"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0133"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0134"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0135"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0136"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0137"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0138"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0139"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0140"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0141"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0142"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0143"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0144"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0145"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0146"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0147"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0148"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0149"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0150"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0151"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0152"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0153"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0154"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0155"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0156"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0157"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0158"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0159"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0160"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0161"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0162"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0163"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0164"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0165"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0166"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0167"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0168"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0169"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0170"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0171"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0172"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0173"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0174"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0175"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0176"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0177"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0178"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0179"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0180"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0181"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0182"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0183"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0184"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0185"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0186"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0187"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0188"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0189"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0190"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0191"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0192"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0193"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0194"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0195"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0196"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0197"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0198"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0199"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0200"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0201"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0202"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0203"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0204"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0205"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0206"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0207"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0208"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0209"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0210"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0211"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0212"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0213"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0214"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0215"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17160,7 +17160,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0216"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17184,7 +17184,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0217"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17208,7 +17208,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0218"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17232,7 +17232,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0219"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17256,7 +17256,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0220"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17280,7 +17280,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0221"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17304,7 +17304,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0222"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17328,7 +17328,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0223"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17352,7 +17352,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0224"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17376,7 +17376,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0225"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17400,7 +17400,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0226"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17424,7 +17424,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0227"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17448,7 +17448,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0228"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17472,7 +17472,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0229"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17496,7 +17496,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_panda_red_lvl4_0230"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			292,
 			533
@@ -17520,7 +17520,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_air_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			71
@@ -17544,7 +17544,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_air_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			71
@@ -17568,7 +17568,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_air_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			71
@@ -17592,7 +17592,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_air_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			71
@@ -17616,7 +17616,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_air_hit_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			96
@@ -17640,7 +17640,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_air_hit_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			96
@@ -17664,7 +17664,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_air_hit_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			96
@@ -17688,7 +17688,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_air_hit_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			96
@@ -17712,7 +17712,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_fire_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			130,
 			79
@@ -17736,7 +17736,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_fire_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			130,
 			79
@@ -17760,7 +17760,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_fire_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			130,
 			79
@@ -17784,7 +17784,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_fire_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			130,
 			79
@@ -17808,7 +17808,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_fire_0005"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			130,
 			79
@@ -17832,7 +17832,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_fire_0006"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			130,
 			79
@@ -17856,7 +17856,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_fire_0007"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			130,
 			79
@@ -17880,7 +17880,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_fire_0008"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			130,
 			79
@@ -17904,7 +17904,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_fire_hit_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			96
@@ -17928,7 +17928,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_fire_hit_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			96
@@ -17952,7 +17952,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_fire_hit_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			96
@@ -17976,7 +17976,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_fire_hit_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			96
@@ -18000,7 +18000,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			374,
 			113
@@ -18024,7 +18024,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			374,
 			113
@@ -18048,7 +18048,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			374,
 			113
@@ -18072,7 +18072,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			374,
 			113
@@ -18096,7 +18096,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_0005"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			374,
 			113
@@ -18120,7 +18120,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_0006"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			374,
 			113
@@ -18144,7 +18144,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_0007"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			374,
 			113
@@ -18168,7 +18168,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_0008"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			374,
 			113
@@ -18192,7 +18192,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_0009"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			374,
 			113
@@ -18216,7 +18216,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_0010"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			374,
 			113
@@ -18240,7 +18240,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_0011"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			374,
 			113
@@ -18264,7 +18264,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_hit_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			96
@@ -18288,7 +18288,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_hit_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			96
@@ -18312,7 +18312,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_hit_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			96
@@ -18336,7 +18336,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_projectile_ray_hit_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			93,
 			96
@@ -18360,7 +18360,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18384,7 +18384,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18408,7 +18408,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18432,7 +18432,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18456,7 +18456,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0005"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18480,7 +18480,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0006"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18504,7 +18504,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0007"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18528,7 +18528,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0008"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18552,7 +18552,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0009"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18576,7 +18576,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0010"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18600,7 +18600,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0011"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18624,7 +18624,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0012"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18648,7 +18648,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0013"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18672,7 +18672,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0014"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18696,7 +18696,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0015"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18720,7 +18720,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0016"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18744,7 +18744,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0017"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18768,7 +18768,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0018"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18792,7 +18792,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0019"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18816,7 +18816,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0020"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18840,7 +18840,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0021"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18864,7 +18864,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0022"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18888,7 +18888,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_0023"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			215,
 			181
@@ -18912,7 +18912,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -18936,7 +18936,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -18960,7 +18960,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -18984,7 +18984,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19008,7 +19008,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0005"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19032,7 +19032,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0006"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19056,7 +19056,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0007"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19080,7 +19080,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0008"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19104,7 +19104,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0009"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19128,7 +19128,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0010"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19152,7 +19152,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0011"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19176,7 +19176,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0012"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19200,7 +19200,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0013"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19224,7 +19224,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0014"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19248,7 +19248,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0015"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19272,7 +19272,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0016"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19296,7 +19296,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0017"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19320,7 +19320,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0018"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19344,7 +19344,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0019"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19368,7 +19368,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0020"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19392,7 +19392,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_red_lvl4_tp_decal_enemy_0021"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			150,
 			136
@@ -19416,7 +19416,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19440,7 +19440,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19464,7 +19464,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19488,7 +19488,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19512,7 +19512,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0005"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19536,7 +19536,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0006"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19560,7 +19560,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0007"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19584,7 +19584,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0008"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19608,7 +19608,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0009"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19632,7 +19632,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0010"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19656,7 +19656,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0011"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19680,7 +19680,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0012"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19704,7 +19704,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0013"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19728,7 +19728,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0014"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19752,7 +19752,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0015"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19776,7 +19776,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_target_ray_0016"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			213,
 			502
@@ -19800,7 +19800,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_tower_build"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			167,
 			102
@@ -19824,7 +19824,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_tower_lvl_01"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			164,
 			105
@@ -19848,7 +19848,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_tower_lvl_02"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			164,
 			119
@@ -19872,7 +19872,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_tower_lvl_03"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			161,
 			133
@@ -19896,7 +19896,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_tower_lvl_04"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			170,
 			156
@@ -19920,7 +19920,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0001"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -19944,7 +19944,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0002"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -19968,7 +19968,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0003"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -19992,7 +19992,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0004"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -20016,7 +20016,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0005"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -20040,7 +20040,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0006"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -20064,7 +20064,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0007"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -20088,7 +20088,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0008"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -20112,7 +20112,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0009"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -20136,7 +20136,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0010"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -20160,7 +20160,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0011"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -20184,7 +20184,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0012"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -20208,7 +20208,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0013"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -20232,7 +20232,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0014"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -20256,7 +20256,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0015"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53
@@ -20280,7 +20280,7 @@ return {
 		alias = {},
 	},
 	["tower_pandas_trail_fire_0016"] = {
-		a_name = "go_towers_pandas-1.png",
+		a_name = "go_towers_pandas-1.dds",
 		size = {
 			53,
 			53

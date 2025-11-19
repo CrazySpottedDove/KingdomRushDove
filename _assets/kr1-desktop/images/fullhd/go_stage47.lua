@@ -2,7 +2,7 @@
 
 return {
 	HalloweenBoss_0001 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	HalloweenBoss_0002 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -56,7 +56,7 @@ return {
 		}
 	},
 	HalloweenBoss_0004 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -82,7 +82,7 @@ return {
 		}
 	},
 	HalloweenBoss_0006 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -108,7 +108,7 @@ return {
 		}
 	},
 	HalloweenBoss_0008 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -134,7 +134,7 @@ return {
 		}
 	},
 	HalloweenBoss_0012 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -160,7 +160,7 @@ return {
 		}
 	},
 	HalloweenBoss_0014 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -186,7 +186,7 @@ return {
 		}
 	},
 	HalloweenBoss_0016 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -212,7 +212,7 @@ return {
 		}
 	},
 	HalloweenBoss_0018 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -238,7 +238,7 @@ return {
 		}
 	},
 	HalloweenBoss_0020 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -264,7 +264,7 @@ return {
 		}
 	},
 	HalloweenBoss_0022 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -290,7 +290,7 @@ return {
 		}
 	},
 	HalloweenBoss_0024 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -316,7 +316,7 @@ return {
 		}
 	},
 	HalloweenBoss_0026 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -342,7 +342,7 @@ return {
 		}
 	},
 	HalloweenBoss_0028 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -368,7 +368,7 @@ return {
 		}
 	},
 	HalloweenBoss_0030 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -394,7 +394,7 @@ return {
 		}
 	},
 	HalloweenBoss_0032 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -420,7 +420,7 @@ return {
 		}
 	},
 	HalloweenBoss_0034 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -446,7 +446,7 @@ return {
 		}
 	},
 	HalloweenBoss_0036 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -478,7 +478,7 @@ return {
 		}
 	},
 	HalloweenBoss_0038 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -506,7 +506,7 @@ return {
 		}
 	},
 	HalloweenBoss_0040 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -534,7 +534,7 @@ return {
 		}
 	},
 	HalloweenBoss_0042 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -560,7 +560,7 @@ return {
 		}
 	},
 	HalloweenBoss_0044 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -596,7 +596,7 @@ return {
 		}
 	},
 	HalloweenBoss_0046 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -632,7 +632,7 @@ return {
 		}
 	},
 	HalloweenBoss_0048 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -668,7 +668,7 @@ return {
 		}
 	},
 	HalloweenBoss_0050 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -702,7 +702,7 @@ return {
 		}
 	},
 	HalloweenBoss_0090 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -728,7 +728,7 @@ return {
 		}
 	},
 	HalloweenBoss_0094 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -756,7 +756,7 @@ return {
 		}
 	},
 	HalloweenBoss_0106 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -782,7 +782,7 @@ return {
 		}
 	},
 	HalloweenBoss_0108 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -808,7 +808,7 @@ return {
 		}
 	},
 	HalloweenBoss_0110 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -834,7 +834,7 @@ return {
 		}
 	},
 	HalloweenBoss_0112 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -860,7 +860,7 @@ return {
 		}
 	},
 	HalloweenBoss_0114 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -886,7 +886,7 @@ return {
 		}
 	},
 	HalloweenBoss_0116 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -912,7 +912,7 @@ return {
 		}
 	},
 	HalloweenBoss_0118 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -938,7 +938,7 @@ return {
 		}
 	},
 	HalloweenBoss_0120 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -964,7 +964,7 @@ return {
 		}
 	},
 	HalloweenBoss_0122 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -990,7 +990,7 @@ return {
 		}
 	},
 	HalloweenBoss_0124 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1016,7 +1016,7 @@ return {
 		}
 	},
 	HalloweenBoss_0126 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1042,7 +1042,7 @@ return {
 		}
 	},
 	HalloweenBoss_0128 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1068,7 +1068,7 @@ return {
 		}
 	},
 	HalloweenBoss_0130 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1094,7 +1094,7 @@ return {
 		}
 	},
 	HalloweenBoss_0132 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1120,7 +1120,7 @@ return {
 		}
 	},
 	HalloweenBoss_0134 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1146,7 +1146,7 @@ return {
 		}
 	},
 	HalloweenBoss_0136 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1172,7 +1172,7 @@ return {
 		}
 	},
 	HalloweenBoss_0138 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1198,7 +1198,7 @@ return {
 		}
 	},
 	HalloweenBoss_0140 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1230,7 +1230,7 @@ return {
 		}
 	},
 	HalloweenBoss_0148 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1256,7 +1256,7 @@ return {
 		}
 	},
 	HalloweenBoss_0150 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1282,7 +1282,7 @@ return {
 		}
 	},
 	HalloweenBoss_0152 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1308,7 +1308,7 @@ return {
 		}
 	},
 	HalloweenBoss_0154 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1334,7 +1334,7 @@ return {
 		}
 	},
 	HalloweenBoss_0156 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1360,7 +1360,7 @@ return {
 		}
 	},
 	HalloweenBoss_0158 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1386,7 +1386,7 @@ return {
 		}
 	},
 	HalloweenBoss_0160 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1418,7 +1418,7 @@ return {
 		}
 	},
 	HalloweenBoss_0162 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1448,7 +1448,7 @@ return {
 		}
 	},
 	HalloweenBoss_0174 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1472,7 +1472,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0175 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1496,7 +1496,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0176 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1520,7 +1520,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0177 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1544,7 +1544,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0178 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1568,7 +1568,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0179 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1592,7 +1592,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0180 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1616,7 +1616,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0181 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1640,7 +1640,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0182 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1664,7 +1664,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0183 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1688,7 +1688,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0184 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1712,7 +1712,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0185 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1736,7 +1736,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0186 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1762,7 +1762,7 @@ return {
 		}
 	},
 	HalloweenBoss_0188 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1788,7 +1788,7 @@ return {
 		}
 	},
 	HalloweenBoss_0190 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1814,7 +1814,7 @@ return {
 		}
 	},
 	HalloweenBoss_0192 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1840,7 +1840,7 @@ return {
 		}
 	},
 	HalloweenBoss_0194 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1866,7 +1866,7 @@ return {
 		}
 	},
 	HalloweenBoss_0196 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1892,7 +1892,7 @@ return {
 		}
 	},
 	HalloweenBoss_0198 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1918,7 +1918,7 @@ return {
 		}
 	},
 	HalloweenBoss_0200 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1942,7 +1942,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0201 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1966,7 +1966,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0202 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -1990,7 +1990,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0203 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2014,7 +2014,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0204 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2038,7 +2038,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0205 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2062,7 +2062,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0206 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2086,7 +2086,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0207 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2110,7 +2110,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0208 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2134,7 +2134,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0209 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2158,7 +2158,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0210 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2182,7 +2182,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0211 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2206,7 +2206,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0212 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2230,7 +2230,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0213 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2254,7 +2254,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0214 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2278,7 +2278,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0215 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2302,7 +2302,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0216 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2328,7 +2328,7 @@ return {
 		}
 	},
 	HalloweenBoss_0218 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2352,7 +2352,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0219 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2378,7 +2378,7 @@ return {
 		}
 	},
 	HalloweenBoss_0221 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2404,7 +2404,7 @@ return {
 		}
 	},
 	HalloweenBoss_0223 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2430,7 +2430,7 @@ return {
 		}
 	},
 	HalloweenBoss_0225 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2456,7 +2456,7 @@ return {
 		}
 	},
 	HalloweenBoss_0227 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2482,7 +2482,7 @@ return {
 		}
 	},
 	HalloweenBoss_0229 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2508,7 +2508,7 @@ return {
 		}
 	},
 	HalloweenBoss_0231 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2534,7 +2534,7 @@ return {
 		}
 	},
 	HalloweenBoss_0233 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2560,7 +2560,7 @@ return {
 		}
 	},
 	HalloweenBoss_0235 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2586,7 +2586,7 @@ return {
 		}
 	},
 	HalloweenBoss_0237 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2612,7 +2612,7 @@ return {
 		}
 	},
 	HalloweenBoss_0239 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2638,7 +2638,7 @@ return {
 		}
 	},
 	HalloweenBoss_0241 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2664,7 +2664,7 @@ return {
 		}
 	},
 	HalloweenBoss_0243 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2692,7 +2692,7 @@ return {
 		}
 	},
 	HalloweenBoss_0245 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2720,7 +2720,7 @@ return {
 		}
 	},
 	HalloweenBoss_0247 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2748,7 +2748,7 @@ return {
 		}
 	},
 	HalloweenBoss_0249 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2776,7 +2776,7 @@ return {
 		}
 	},
 	HalloweenBoss_0251 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2804,7 +2804,7 @@ return {
 		}
 	},
 	HalloweenBoss_0253 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2832,7 +2832,7 @@ return {
 		}
 	},
 	HalloweenBoss_0255 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2856,7 +2856,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0268 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2882,7 +2882,7 @@ return {
 		}
 	},
 	HalloweenBoss_0270 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2908,7 +2908,7 @@ return {
 		}
 	},
 	HalloweenBoss_0272 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2934,7 +2934,7 @@ return {
 		}
 	},
 	HalloweenBoss_0274 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2961,7 +2961,7 @@ return {
 		}
 	},
 	HalloweenBoss_0277 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -2987,7 +2987,7 @@ return {
 		}
 	},
 	HalloweenBoss_0279 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3013,7 +3013,7 @@ return {
 		}
 	},
 	HalloweenBoss_0281 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3039,7 +3039,7 @@ return {
 		}
 	},
 	HalloweenBoss_0283 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3065,7 +3065,7 @@ return {
 		}
 	},
 	HalloweenBoss_0285 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3091,7 +3091,7 @@ return {
 		}
 	},
 	HalloweenBoss_0287 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3115,7 +3115,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0288 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3139,7 +3139,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0289 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3163,7 +3163,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0290 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3187,7 +3187,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0291 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3211,7 +3211,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0292 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3235,7 +3235,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0293 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3259,7 +3259,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0294 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3283,7 +3283,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0295 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3307,7 +3307,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0296 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3331,7 +3331,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0297 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3355,7 +3355,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0298 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3379,7 +3379,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0299 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3403,7 +3403,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0300 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3427,7 +3427,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0301 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3451,7 +3451,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0302 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3475,7 +3475,7 @@ return {
 		alias = {}
 	},
 	HalloweenBoss_0303 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3501,7 +3501,7 @@ return {
 		}
 	},
 	HalloweenBoss_0305 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			129,
 			113
@@ -3527,7 +3527,7 @@ return {
 		}
 	},
 	HalloweenBoss_Fx_0001 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			194,
 			93
@@ -3553,7 +3553,7 @@ return {
 		}
 	},
 	HalloweenBoss_Fx_0003 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			194,
 			93
@@ -3579,7 +3579,7 @@ return {
 		}
 	},
 	HalloweenBoss_Fx_0005 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			194,
 			93
@@ -3605,7 +3605,7 @@ return {
 		}
 	},
 	HalloweenBoss_Fx_0007 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			194,
 			93
@@ -3631,7 +3631,7 @@ return {
 		}
 	},
 	HalloweenBoss_Fx_0009 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			194,
 			93
@@ -3657,7 +3657,7 @@ return {
 		}
 	},
 	HalloweenBoss_Fx_0011 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			194,
 			93
@@ -3683,7 +3683,7 @@ return {
 		}
 	},
 	HalloweenBoss_Fx_0013 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			194,
 			93
@@ -3709,7 +3709,7 @@ return {
 		}
 	},
 	HalloweenBoss_Fx_0015 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			194,
 			93
@@ -3735,7 +3735,7 @@ return {
 		}
 	},
 	HalloweenBoss_tauntBox = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			278,
 			141
@@ -3759,7 +3759,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg21_castleDoor_0001 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -3786,7 +3786,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0004 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -3812,7 +3812,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0006 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -3838,7 +3838,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0008 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -3864,7 +3864,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0010 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -3890,7 +3890,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0012 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -3916,7 +3916,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0014 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -3942,7 +3942,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0016 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -3968,7 +3968,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0018 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -3994,7 +3994,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0020 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4020,7 +4020,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0022 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4046,7 +4046,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0024 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4072,7 +4072,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0026 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4098,7 +4098,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0028 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4124,7 +4124,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0030 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4150,7 +4150,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0032 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4176,7 +4176,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0034 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4202,7 +4202,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0036 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4228,7 +4228,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0038 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4254,7 +4254,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0040 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4280,7 +4280,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0042 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4306,7 +4306,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0044 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4332,7 +4332,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0046 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4358,7 +4358,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0048 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4384,7 +4384,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0050 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4410,7 +4410,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0052 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4436,7 +4436,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0054 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4462,7 +4462,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0056 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4488,7 +4488,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0058 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4514,7 +4514,7 @@ return {
 		}
 	},
 	Halloween_stg21_castleDoor_0060 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			101,
 			191
@@ -4540,7 +4540,7 @@ return {
 		}
 	},
 	Halloween_stg21_chateauTour_0001 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			180,
 			155
@@ -4564,7 +4564,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg21_chateauTour_0002 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			180,
 			155
@@ -4588,7 +4588,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg21_fire_0001 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			28,
 			31
@@ -4614,7 +4614,7 @@ return {
 		}
 	},
 	Halloween_stg21_fire_0003 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			28,
 			31
@@ -4640,7 +4640,7 @@ return {
 		}
 	},
 	Halloween_stg21_fire_0005 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			28,
 			31
@@ -4666,7 +4666,7 @@ return {
 		}
 	},
 	Halloween_stg21_fire_0007 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			28,
 			31
@@ -4692,7 +4692,7 @@ return {
 		}
 	},
 	Halloween_stg21_fire_0009 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			28,
 			31
@@ -4718,7 +4718,7 @@ return {
 		}
 	},
 	Halloween_stg21_fire_0011 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			28,
 			31
@@ -4744,7 +4744,7 @@ return {
 		}
 	},
 	Halloween_stg21_gratingDoor_0001 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			160,
 			228
@@ -4768,7 +4768,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg21_gratingDoor_0002 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			160,
 			228
@@ -4794,7 +4794,7 @@ return {
 		}
 	},
 	Halloween_stg21_gratingDoor_0004 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			160,
 			228
@@ -4820,7 +4820,7 @@ return {
 		}
 	},
 	Halloween_stg21_gratingDoor_0006 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			160,
 			228
@@ -4846,7 +4846,7 @@ return {
 		}
 	},
 	Halloween_stg21_gratingDoor_0008 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			160,
 			228
@@ -4872,7 +4872,7 @@ return {
 		}
 	},
 	Halloween_stg21_gratingDoor_0010 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			160,
 			228
@@ -4898,7 +4898,7 @@ return {
 		}
 	},
 	Halloween_stg21_gratingDoor_0012 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			160,
 			228
@@ -4924,7 +4924,7 @@ return {
 		}
 	},
 	Halloween_stg21_gratingDoor_0014 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			160,
 			228
@@ -4950,7 +4950,7 @@ return {
 		}
 	},
 	Halloween_stg21_gratingDoor_0016 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			160,
 			228
@@ -4974,7 +4974,7 @@ return {
 		alias = {}
 	},
 	Halloween_stg21_tree = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			121,
 			132
@@ -4998,7 +4998,7 @@ return {
 		alias = {}
 	},
 	Stage21_0002 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			1980,
 			1080
@@ -5022,7 +5022,7 @@ return {
 		alias = {}
 	},
 	Stage21_0003 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			1980,
 			1080
@@ -5046,7 +5046,7 @@ return {
 		alias = {}
 	},
 	Stage21_0004 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			1980,
 			1080
@@ -5070,7 +5070,7 @@ return {
 		alias = {}
 	},
 	Stage21_0005 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			1980,
 			1080
@@ -5094,7 +5094,7 @@ return {
 		alias = {}
 	},
 	Stage21_0006 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			1980,
 			1080
@@ -5118,7 +5118,7 @@ return {
 		alias = {}
 	},
 	Stage21_0007 = {
-		a_name = "go_stage47-1.png",
+		a_name = "go_stage47-1.dds",
 		size = {
 			1980,
 			1080

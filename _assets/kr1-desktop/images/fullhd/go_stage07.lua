@@ -2,7 +2,7 @@
 
 return {
 	stage7_cave1 = {
-		a_name = "go_stage07-1.png",
+		a_name = "go_stage07-1.dds",
 		size = {
 			268,
 			230
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	stage7_cave2 = {
-		a_name = "go_stage07-1.png",
+		a_name = "go_stage07-1.dds",
 		size = {
 			278,
 			292
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	stage7_cave3 = {
-		a_name = "go_stage07-1.png",
+		a_name = "go_stage07-1.dds",
 		size = {
 			246,
 			268

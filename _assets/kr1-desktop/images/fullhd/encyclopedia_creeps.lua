@@ -1,6 +1,6 @@
 return {
 	["encyclopedia_creeps_0001"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0002"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0003"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0004"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0005"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0006"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0007"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0008"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0009"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0010"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0011"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0012"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0013"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0014"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0015"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0016"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0017"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0018"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0019"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0020"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0021"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0022"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0023"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0024"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0025"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0026"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0027"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0028"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0029"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0030"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0031"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0032"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0033"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0034"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0035"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0036"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0037"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0038"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0039"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0040"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0041"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0042"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0043"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0044"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0045"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0046"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0047"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0048"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0050"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0051"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0052"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0053"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0054"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0055"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0056"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0057"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0058"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0059"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0060"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0061"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0062"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0063"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0064"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0065"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0066"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0067"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0068"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_creeps_0069"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0001"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0002"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0003"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0004"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0005"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0006"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0007"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0008"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0009"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0010"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0011"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0012"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0013"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0014"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0015"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0016"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0017"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0018"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0019"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["encyclopedia_towers_0020"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0001"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0002"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0003"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0004"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0005"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0006"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0007"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0008"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0009"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0010"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0011"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0012"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0013"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0014"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0015"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0016"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0017"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0018"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0019"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0020"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0021"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0022"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0023"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0024"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0025"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0026"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0027"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0028"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0029"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0030"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0031"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0032"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0033"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0034"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0035"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0036"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0037"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0038"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0039"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0040"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0041"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0042"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0043"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0044"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0045"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0046"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0047"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0048"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0049"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0050"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0051"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0052"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0053"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0054"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0055"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0056"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0057"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0058"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0059"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_creeps_0060"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_towers_0001"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_towers_0002"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_towers_0003"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_towers_0004"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_towers_0005"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_towers_0006"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_towers_0007"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["kr2_encyclopedia_towers_0008"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0001"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0002"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0003"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0004"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0005"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0006"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0007"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0008"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0009"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0010"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0011"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0012"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0013"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0014"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0015"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0016"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0017"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0018"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0019"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0020"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0021"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0022"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0023"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0024"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0025"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0026"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0027"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0028"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0029"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0030"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0031"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0032"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0033"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0034"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0035"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0036"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0037"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0038"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0039"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0040"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0041"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0042"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0043"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0044"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0045"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0046"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0047"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_creeps_0048"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_towers_0001"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_towers_0002"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_towers_0003"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_towers_0004"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_towers_0005"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_towers_0006"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_towers_0007"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["kr3_encyclopedia_towers_0008"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0002"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0003"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0004"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0005"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0006"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0007"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0008"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0009"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0010"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0011"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0012"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0013"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0014"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0015"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0016"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0017"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0018"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0019"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0020"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0021"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["kr4_encyclopedia_towers_0022"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0001"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0002"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0003"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0004"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0005"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0006"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0007"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0008"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0009"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0010"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0011"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0012"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0013"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0014"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0015"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0016"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0017"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0018"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0019"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0020"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["kr5_encyclopedia_towers_0021"] = {
-		a_name = "encyclopedia_creeps-1.png",
+		a_name = "encyclopedia_creeps-1.dds",
 		size = {
 			260,
 			250

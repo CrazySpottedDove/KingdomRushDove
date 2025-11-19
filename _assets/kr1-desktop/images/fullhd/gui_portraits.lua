@@ -1,6 +1,6 @@
 return {
 	["glow_ico_main"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			90,
 			82
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["glow_ico_sell"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			64,
 			60
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["glow_ico_special"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			90,
 			86
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["glow_ico_sub"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			76,
 			74
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["hero_portraits_0000"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["hero_portraits_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["hero_portraits_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["hero_portraits_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["hero_portraits_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["hero_portraits_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["hero_portraits_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["hero_portraits_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["hero_portraits_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["hero_portraits_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["hero_portraits_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["hero_portraits_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["hero_portraits_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["hero_portraits_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["ico_sell_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			56,
 			50
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_0000"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0024"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0025"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0026"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0027"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0028"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0029"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0030"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0031"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0032"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0033"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0034"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0035"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0036"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0037"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0038"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0039"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0040"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0041"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0042"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0043"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0044"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0045"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0046"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0047"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0048"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0049"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0050"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0051"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0052"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0053"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0054"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0055"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0056"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0057"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0058"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0059"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0060"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0061"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0062"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0063"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0064"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0065"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0066"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0067"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0068"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0069"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0070"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0071"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_enemies_0072"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_heroes_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_heroes_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_heroes_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_heroes_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_heroes_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_heroes_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_heroes_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_heroes_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_heroes_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_heroes_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_heroes_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_heroes_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_heroes_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_soldiers_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["info_portraits_towers_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0013_dead"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["kr2_hero_portraits_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0024"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0025"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0026"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0027"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0028"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0029"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0030"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0031"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0032"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0033"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0034"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0035"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0036"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0037"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0038"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0039"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0040"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0041"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0042"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0043"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0044"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0045"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0046"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0047"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0048"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0049"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0050"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0051"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0052"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0053"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0054"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0055"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0056"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0057"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0058"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0059"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0060"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0061"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0062"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0063"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0064"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0065"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0066"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_enemies_0067"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0013_dead"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_heroes_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_soldiers_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["kr2_info_portraits_towers_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["kr3_hero_portraits_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0024"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0025"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0026"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0027"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0028"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0029"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0030"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0031"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0032"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0033"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0034"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0035"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0036"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0037"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0038"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0039"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0040"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0041"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0042"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0043"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0044"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0045"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0046"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0047"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0048"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0049"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0050"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0051"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0052"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0053"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0054"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0055"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0056"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_enemies_0057"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_heroes_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_soldiers_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_soldiers_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_soldiers_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_soldiers_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_soldiers_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_soldiers_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_soldiers_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_soldiers_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_soldiers_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_soldiers_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["kr3_info_portraits_towers_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["kr3_main_icons_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0024"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0025"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0026"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0027"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["kr3_special_icons_0028"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["kr4_hero_portraits_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0024"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0025"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0026"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0027"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0028"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0029"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0030"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0031"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0032"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0033"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0034"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0035"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0036"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0037"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0038"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0039"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0040"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0041"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0042"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0043"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0044"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0045"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0046"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0047"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0048"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0049"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0050"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0051"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0052"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0053"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0054"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0055"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0056"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0057"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0058"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0059"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0060"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0061"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0062"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0063"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0064"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0065"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0066"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0067"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0068"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0069"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0070"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0071"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0072"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0073"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0074"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0075"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0076"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0077"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0078"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0079"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0080"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0081"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0082"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0083"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0084"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0085"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0086"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0087"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0088"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0089"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0090"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0091"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0092"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0093"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0094"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0095"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0096"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0097"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0098"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0099"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0100"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0101"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0102"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0103"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0104"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0105"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0106"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0107"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0108"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0109"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0110"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0111"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0112"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0113"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0114"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0115"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0116"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0117"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0118"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0119"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0120"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0121"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0122"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0123"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0124"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0125"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0126"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0127"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0128"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0129"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0130"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0131"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0132"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0133"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0134"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0135"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0136"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_enemies_0137"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_heroes_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0024"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0025"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0026"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0027"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0028"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0029"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0030"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0031"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0032"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0033"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0034"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0035"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0036"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0037"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0038"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_soldiers_0039"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0024"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0025"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0026"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["kr4_info_portraits_towers_0027"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -17160,7 +17160,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -17184,7 +17184,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -17208,7 +17208,7 @@ return {
 		alias = {},
 	},
 	["kr4_main_icons_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -17232,7 +17232,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17256,7 +17256,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17280,7 +17280,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17304,7 +17304,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17328,7 +17328,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17352,7 +17352,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17376,7 +17376,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17400,7 +17400,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17424,7 +17424,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17448,7 +17448,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17472,7 +17472,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17496,7 +17496,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17520,7 +17520,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17544,7 +17544,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17568,7 +17568,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17592,7 +17592,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17616,7 +17616,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17640,7 +17640,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17664,7 +17664,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17688,7 +17688,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17712,7 +17712,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17736,7 +17736,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17760,7 +17760,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17784,7 +17784,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0024"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17808,7 +17808,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0025"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17832,7 +17832,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0026"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17856,7 +17856,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0027"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17880,7 +17880,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0028"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17904,7 +17904,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0029"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17928,7 +17928,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0030"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17952,7 +17952,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0031"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -17976,7 +17976,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0032"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18000,7 +18000,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0033"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18024,7 +18024,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0034"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18048,7 +18048,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0035"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18072,7 +18072,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0036"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18096,7 +18096,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0037"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18120,7 +18120,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0038"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18144,7 +18144,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0039"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18168,7 +18168,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0040"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18192,7 +18192,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0041"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18216,7 +18216,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0042"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18240,7 +18240,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0043"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18264,7 +18264,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0044"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18288,7 +18288,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0045"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18312,7 +18312,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0046"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18336,7 +18336,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0047"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18360,7 +18360,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0048"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18384,7 +18384,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0049"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18408,7 +18408,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0050"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18432,7 +18432,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0051"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18456,7 +18456,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0052"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18480,7 +18480,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0053"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18504,7 +18504,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0054"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18528,7 +18528,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0055"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18552,7 +18552,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0056"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18576,7 +18576,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0057"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18600,7 +18600,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0058"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18624,7 +18624,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0059"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18648,7 +18648,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0060"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18672,7 +18672,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0061"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18696,7 +18696,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0062"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18720,7 +18720,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0063"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18744,7 +18744,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0064"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18768,7 +18768,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0065"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18792,7 +18792,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0066"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18816,7 +18816,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0067"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18840,7 +18840,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0068"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18864,7 +18864,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0069"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18888,7 +18888,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0070"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18912,7 +18912,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0071"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18936,7 +18936,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0072"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18960,7 +18960,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0073"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -18984,7 +18984,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0074"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -19008,7 +19008,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0075"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -19032,7 +19032,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0076"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -19056,7 +19056,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0077"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -19080,7 +19080,7 @@ return {
 		alias = {},
 	},
 	["kr4_special_icons_0078"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -19104,7 +19104,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19128,7 +19128,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19152,7 +19152,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19176,7 +19176,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19200,7 +19200,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19224,7 +19224,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19248,7 +19248,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19272,7 +19272,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19296,7 +19296,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19320,7 +19320,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19344,7 +19344,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19368,7 +19368,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19392,7 +19392,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19416,7 +19416,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19440,7 +19440,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19464,7 +19464,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19488,7 +19488,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19512,7 +19512,7 @@ return {
 		alias = {},
 	},
 	["kr5_hero_portraits_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			144,
 			142
@@ -19536,7 +19536,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19560,7 +19560,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19584,7 +19584,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19608,7 +19608,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19632,7 +19632,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19656,7 +19656,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19680,7 +19680,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19704,7 +19704,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19728,7 +19728,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19752,7 +19752,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19776,7 +19776,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19800,7 +19800,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19824,7 +19824,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19848,7 +19848,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19872,7 +19872,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19896,7 +19896,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19920,7 +19920,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19944,7 +19944,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19968,7 +19968,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -19992,7 +19992,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20016,7 +20016,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20040,7 +20040,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20064,7 +20064,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20088,7 +20088,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0024"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20112,7 +20112,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0025"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20136,7 +20136,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0026"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20160,7 +20160,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0027"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20184,7 +20184,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0028"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20208,7 +20208,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0029"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20232,7 +20232,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0030"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20256,7 +20256,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0031"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20280,7 +20280,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0032"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20304,7 +20304,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0033"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20328,7 +20328,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0034"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20352,7 +20352,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0035"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20376,7 +20376,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0036"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20400,7 +20400,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0037"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20424,7 +20424,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0038"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20448,7 +20448,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0039"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20472,7 +20472,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0040"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20496,7 +20496,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0041"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20520,7 +20520,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0042"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20544,7 +20544,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0043"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20568,7 +20568,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0044"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20592,7 +20592,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0045"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20616,7 +20616,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0046"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20640,7 +20640,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0047"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20664,7 +20664,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0048"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20688,7 +20688,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0049"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20712,7 +20712,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0050"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20736,7 +20736,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0051"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20760,7 +20760,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0052"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20784,7 +20784,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0053"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20808,7 +20808,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0054"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20832,7 +20832,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0055"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20856,7 +20856,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0056"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20880,7 +20880,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0057"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20904,7 +20904,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0058"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20928,7 +20928,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0059"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20952,7 +20952,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0060"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -20976,7 +20976,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0061"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21000,7 +21000,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0062"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21024,7 +21024,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0063"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21048,7 +21048,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0064"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21072,7 +21072,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0065"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21096,7 +21096,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0066"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21120,7 +21120,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0072"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21144,7 +21144,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0073"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21168,7 +21168,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0074"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21192,7 +21192,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0075"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21216,7 +21216,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0076"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21240,7 +21240,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0077"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21264,7 +21264,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0078"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21288,7 +21288,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0079"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21312,7 +21312,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0080"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21336,7 +21336,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0081"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21360,7 +21360,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0082"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21384,7 +21384,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0083"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21408,7 +21408,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0084"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21432,7 +21432,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0085"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21456,7 +21456,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0086"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21480,7 +21480,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0087"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21504,7 +21504,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0088"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21528,7 +21528,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0089"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21552,7 +21552,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0090"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21576,7 +21576,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0091"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21600,7 +21600,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0092"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21624,7 +21624,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0093"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21648,7 +21648,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0094"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21672,7 +21672,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0095"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21696,7 +21696,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0096"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21720,7 +21720,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0097"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21744,7 +21744,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0098"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21768,7 +21768,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0099"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21792,7 +21792,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0100"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21816,7 +21816,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0101"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21840,7 +21840,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0102"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21864,7 +21864,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0103"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21888,7 +21888,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0104"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21912,7 +21912,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0105"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21936,7 +21936,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0106"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21960,7 +21960,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0107"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -21984,7 +21984,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0108"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22008,7 +22008,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0109"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22032,7 +22032,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0110"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22056,7 +22056,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0111"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22080,7 +22080,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0112"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22104,7 +22104,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0113"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22128,7 +22128,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0114"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22152,7 +22152,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0115"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22176,7 +22176,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0116"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22200,7 +22200,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0117"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22224,7 +22224,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0118"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22248,7 +22248,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0119"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22272,7 +22272,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0120"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22296,7 +22296,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0121"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22320,7 +22320,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0122"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22344,7 +22344,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0123"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22368,7 +22368,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0124"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22392,7 +22392,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0125"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22416,7 +22416,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0126"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22440,7 +22440,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0127"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22464,7 +22464,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_enemies_0128"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22488,7 +22488,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22512,7 +22512,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22536,7 +22536,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22560,7 +22560,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22584,7 +22584,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22608,7 +22608,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22632,7 +22632,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22656,7 +22656,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22680,7 +22680,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22704,7 +22704,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22728,7 +22728,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22752,7 +22752,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22776,7 +22776,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22800,7 +22800,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22824,7 +22824,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22848,7 +22848,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22872,7 +22872,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22896,7 +22896,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_heroes_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22920,7 +22920,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22944,7 +22944,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22968,7 +22968,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -22992,7 +22992,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23016,7 +23016,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23040,7 +23040,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23064,7 +23064,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23088,7 +23088,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23112,7 +23112,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23136,7 +23136,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23160,7 +23160,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23184,7 +23184,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23208,7 +23208,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23232,7 +23232,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23256,7 +23256,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23280,7 +23280,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23304,7 +23304,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23328,7 +23328,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23352,7 +23352,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23376,7 +23376,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23400,7 +23400,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23424,7 +23424,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23448,7 +23448,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23472,7 +23472,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0024"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23496,7 +23496,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0025"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23520,7 +23520,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0026"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23544,7 +23544,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0027"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23568,7 +23568,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0028"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23592,7 +23592,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0029"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23616,7 +23616,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0030"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23640,7 +23640,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0031"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23664,7 +23664,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0032"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23688,7 +23688,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0033"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23712,7 +23712,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0034"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23736,7 +23736,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0035"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23760,7 +23760,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0036"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23784,7 +23784,7 @@ return {
 		alias = {},
 	},
 	["kr5_info_portraits_soldiers_0037"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -23808,7 +23808,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -23832,7 +23832,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -23856,7 +23856,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -23880,7 +23880,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -23904,7 +23904,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -23928,7 +23928,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -23952,7 +23952,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -23976,7 +23976,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24000,7 +24000,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24024,7 +24024,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24048,7 +24048,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24072,7 +24072,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24096,7 +24096,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24120,7 +24120,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24144,7 +24144,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24168,7 +24168,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0030"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24192,7 +24192,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0031"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24216,7 +24216,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0032"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24240,7 +24240,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0033"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24264,7 +24264,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0034"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24288,7 +24288,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0035"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24312,7 +24312,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0036"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24336,7 +24336,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0037"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24360,7 +24360,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0038"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24384,7 +24384,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0039"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24408,7 +24408,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0040"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24432,7 +24432,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0041"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24456,7 +24456,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0042"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24480,7 +24480,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0043"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24504,7 +24504,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0044"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24528,7 +24528,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0045"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24552,7 +24552,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0046"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24576,7 +24576,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0047"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24600,7 +24600,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0048"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24624,7 +24624,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0049"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24648,7 +24648,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0050"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24672,7 +24672,7 @@ return {
 		alias = {},
 	},
 	["kr5_main_icons_0105"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -24696,7 +24696,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -24720,7 +24720,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -24744,7 +24744,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -24768,7 +24768,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -24792,7 +24792,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -24816,7 +24816,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -24840,7 +24840,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -24864,7 +24864,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -24888,7 +24888,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -24912,7 +24912,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -24936,7 +24936,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -24960,7 +24960,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -24984,7 +24984,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25008,7 +25008,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25032,7 +25032,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25056,7 +25056,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25080,7 +25080,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25104,7 +25104,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25128,7 +25128,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25152,7 +25152,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25176,7 +25176,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25200,7 +25200,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0024"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25224,7 +25224,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0025"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25248,7 +25248,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0026"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25272,7 +25272,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0027"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25296,7 +25296,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0028"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25320,7 +25320,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0029"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25344,7 +25344,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0030"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25368,7 +25368,7 @@ return {
 		alias = {},
 	},
 	["kr5_portraits_towers_0031"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			96,
 			96
@@ -25392,7 +25392,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			64,
 			64
@@ -25416,7 +25416,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0001_hover"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			64,
 			64
@@ -25440,7 +25440,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			64,
 			64
@@ -25464,7 +25464,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			64,
 			64
@@ -25488,7 +25488,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			64,
 			64
@@ -25512,7 +25512,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			64,
 			64
@@ -25536,7 +25536,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			64,
 			64
@@ -25560,7 +25560,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_action_icons_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			64,
 			64
@@ -25584,7 +25584,7 @@ return {
 		alias = {},
 	},
 	["kr5_quickmenu_retreat_icons_tower_panda"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			60,
 			60
@@ -25608,7 +25608,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25632,7 +25632,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25656,7 +25656,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25680,7 +25680,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25704,7 +25704,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25728,7 +25728,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25752,7 +25752,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25776,7 +25776,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25800,7 +25800,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25824,7 +25824,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25848,7 +25848,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25872,7 +25872,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25896,7 +25896,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25920,7 +25920,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25944,7 +25944,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25968,7 +25968,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -25992,7 +25992,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26016,7 +26016,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26040,7 +26040,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26064,7 +26064,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26088,7 +26088,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26112,7 +26112,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26136,7 +26136,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0024"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26160,7 +26160,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0025"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26184,7 +26184,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0026"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26208,7 +26208,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0027"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26232,7 +26232,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0028"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26256,7 +26256,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0029"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26280,7 +26280,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0030"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26304,7 +26304,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0031"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26328,7 +26328,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0032"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26352,7 +26352,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0033"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26376,7 +26376,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0034"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26400,7 +26400,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0035"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26424,7 +26424,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0036"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26448,7 +26448,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0037"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26472,7 +26472,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0038"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26496,7 +26496,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0039"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26520,7 +26520,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0040"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26544,7 +26544,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0041"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26568,7 +26568,7 @@ return {
 		alias = {},
 	},
 	["kr5_special_icons_0042"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -26592,7 +26592,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0000"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26616,7 +26616,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26640,7 +26640,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26664,7 +26664,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26688,7 +26688,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26712,7 +26712,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26736,7 +26736,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26760,7 +26760,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26784,7 +26784,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26808,7 +26808,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26832,7 +26832,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26856,7 +26856,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26880,7 +26880,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26904,7 +26904,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26928,7 +26928,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26952,7 +26952,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -26976,7 +26976,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27000,7 +27000,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27024,7 +27024,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27048,7 +27048,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27072,7 +27072,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0020"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27096,7 +27096,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0021"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27120,7 +27120,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27144,7 +27144,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27168,7 +27168,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0024"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27192,7 +27192,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0025"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27216,7 +27216,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0026"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27240,7 +27240,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0027"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27264,7 +27264,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0028"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27288,7 +27288,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0029"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27312,7 +27312,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0030"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27336,7 +27336,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0031"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27360,7 +27360,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0032"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27384,7 +27384,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0033"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27408,7 +27408,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0034"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27432,7 +27432,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0035"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27456,7 +27456,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0036"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27480,7 +27480,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0037"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27504,7 +27504,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0038"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27528,7 +27528,7 @@ return {
 		alias = {},
 	},
 	["main_icons_0039"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			74
@@ -27552,7 +27552,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0000"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27576,7 +27576,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27600,7 +27600,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27624,7 +27624,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0003"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27648,7 +27648,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0004"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27672,7 +27672,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0005"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27696,7 +27696,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0006"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27720,7 +27720,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0007"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27744,7 +27744,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0008"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27768,7 +27768,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0009"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27792,7 +27792,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0010"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27816,7 +27816,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0011"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27840,7 +27840,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0012"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27864,7 +27864,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0013"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27888,7 +27888,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0014"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27912,7 +27912,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0015"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27936,7 +27936,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0016"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27960,7 +27960,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0017"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -27984,7 +27984,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0018"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28008,7 +28008,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0019"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28032,7 +28032,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0022"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28056,7 +28056,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0023"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28080,7 +28080,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0024"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28104,7 +28104,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0025"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28128,7 +28128,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0026"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28152,7 +28152,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0027"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28176,7 +28176,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0028"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28200,7 +28200,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0029"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28224,7 +28224,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0030"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28248,7 +28248,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0031"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28272,7 +28272,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0032"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28296,7 +28296,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0033"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28320,7 +28320,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0034"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28344,7 +28344,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0035"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28368,7 +28368,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0036"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28392,7 +28392,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0037"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28416,7 +28416,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0038"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28440,7 +28440,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0039"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28464,7 +28464,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0040"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28488,7 +28488,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0041"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28512,7 +28512,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0042"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28536,7 +28536,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0043"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28560,7 +28560,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0044"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28584,7 +28584,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0045"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28608,7 +28608,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0046"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28632,7 +28632,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0047"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28656,7 +28656,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0048"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28680,7 +28680,7 @@ return {
 		alias = {},
 	},
 	["special_icons_0049"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			82,
 			76
@@ -28704,7 +28704,7 @@ return {
 		alias = {},
 	},
 	["sub_icons_0000"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			68,
 			68
@@ -28728,7 +28728,7 @@ return {
 		alias = {},
 	},
 	["sub_icons_0001"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			68,
 			68
@@ -28752,7 +28752,7 @@ return {
 		alias = {},
 	},
 	["sub_icons_0002"] = {
-		a_name = "gui_portraits-1.png",
+		a_name = "gui_portraits-1.dds",
 		size = {
 			68,
 			68

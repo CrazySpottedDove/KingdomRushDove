@@ -1,6 +1,6 @@
 return {
 	["hero_venom_death_decal_0001"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			127,
 			79
@@ -24,7 +24,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_death_decal_0002"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			127,
 			79
@@ -48,7 +48,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_death_decal_0003"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			127,
 			79
@@ -72,7 +72,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_death_decal_0004"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			127,
 			79
@@ -96,7 +96,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_eat_fx_0001"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			93
@@ -120,7 +120,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_eat_fx_0002"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			93
@@ -144,7 +144,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_eat_fx_0003"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			93
@@ -168,7 +168,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_eat_fx_0004"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			93
@@ -192,7 +192,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_eat_fx_0005"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			93
@@ -216,7 +216,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_eat_fx_0006"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			93
@@ -240,7 +240,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_eat_fx_0007"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			93
@@ -264,7 +264,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_eat_fx_0008"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			93
@@ -288,7 +288,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_eat_fx_0009"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			93
@@ -312,7 +312,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_eat_fx_0010"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			93
@@ -336,7 +336,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_eat_fx_0011"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			93
@@ -360,7 +360,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0001"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -384,7 +384,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0002"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -408,7 +408,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0003"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -432,7 +432,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0004"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -456,7 +456,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0005"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -480,7 +480,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0006"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -504,7 +504,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0007"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -528,7 +528,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0008"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -552,7 +552,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0009"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -576,7 +576,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0010"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -600,7 +600,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0011"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -624,7 +624,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0012"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -648,7 +648,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0013"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -672,7 +672,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0014"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -696,7 +696,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0015"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -720,7 +720,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0016"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -744,7 +744,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0017"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -768,7 +768,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0018"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -792,7 +792,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0019"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -816,7 +816,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0020"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -840,7 +840,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0021"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -864,7 +864,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0022"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -888,7 +888,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0023"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -912,7 +912,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0024"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -936,7 +936,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0025"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -960,7 +960,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0026"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -984,7 +984,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0027"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1008,7 +1008,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0028"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1032,7 +1032,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0029"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1056,7 +1056,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0030"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1080,7 +1080,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0031"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1104,7 +1104,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0032"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1128,7 +1128,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0033"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1152,7 +1152,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0034"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1176,7 +1176,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0035"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1200,7 +1200,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0036"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1224,7 +1224,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0037"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1248,7 +1248,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0038"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1272,7 +1272,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0039"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1296,7 +1296,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0040"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1320,7 +1320,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0041"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1344,7 +1344,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0042"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1368,7 +1368,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0043"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1392,7 +1392,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_back_0044"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			130,
 			181
@@ -1416,7 +1416,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0001"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1440,7 +1440,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0002"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1464,7 +1464,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0003"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1488,7 +1488,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0004"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1512,7 +1512,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0005"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1536,7 +1536,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0006"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1560,7 +1560,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0007"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1584,7 +1584,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0008"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1608,7 +1608,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0009"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1632,7 +1632,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0010"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1656,7 +1656,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0011"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1680,7 +1680,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0012"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1704,7 +1704,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0013"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1728,7 +1728,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0014"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1752,7 +1752,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0015"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1776,7 +1776,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0016"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1800,7 +1800,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0017"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1824,7 +1824,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0018"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1848,7 +1848,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0019"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1872,7 +1872,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0020"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1896,7 +1896,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0021"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1920,7 +1920,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0022"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1944,7 +1944,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0023"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1968,7 +1968,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0024"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -1992,7 +1992,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0025"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2016,7 +2016,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0026"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2040,7 +2040,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0027"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2064,7 +2064,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0028"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2088,7 +2088,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0029"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2112,7 +2112,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0030"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2136,7 +2136,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0031"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2160,7 +2160,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0032"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2184,7 +2184,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0033"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2208,7 +2208,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0034"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2232,7 +2232,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0035"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2256,7 +2256,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0036"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2280,7 +2280,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0037"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2304,7 +2304,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0038"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2328,7 +2328,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0039"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2352,7 +2352,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0040"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2376,7 +2376,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0041"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2400,7 +2400,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0042"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2424,7 +2424,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0043"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2448,7 +2448,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_heal_fx_front_0044"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			198
@@ -2472,7 +2472,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0001"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2496,7 +2496,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0002"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2520,7 +2520,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0003"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2544,7 +2544,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0004"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2568,7 +2568,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0005"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2592,7 +2592,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0006"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2616,7 +2616,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0007"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2640,7 +2640,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0008"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2664,7 +2664,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0009"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2688,7 +2688,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0010"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2712,7 +2712,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0011"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2736,7 +2736,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0012"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2760,7 +2760,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0013"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2784,7 +2784,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0014"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2808,7 +2808,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0015"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2832,7 +2832,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0016"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2856,7 +2856,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0017"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2880,7 +2880,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0018"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2904,7 +2904,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0019"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2928,7 +2928,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0020"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2952,7 +2952,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0021"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -2976,7 +2976,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0022"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3000,7 +3000,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0023"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3024,7 +3024,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0024"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3048,7 +3048,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0025"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3072,7 +3072,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0026"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3096,7 +3096,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0027"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3120,7 +3120,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0028"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3144,7 +3144,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0029"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3168,7 +3168,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0030"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3192,7 +3192,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0031"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3216,7 +3216,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0032"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3240,7 +3240,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0033"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3264,7 +3264,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0034"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3288,7 +3288,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0035"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3312,7 +3312,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0036"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3336,7 +3336,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0037"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3360,7 +3360,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0038"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3384,7 +3384,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0039"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3408,7 +3408,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0040"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3432,7 +3432,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0041"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3456,7 +3456,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0042"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3480,7 +3480,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0043"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3504,7 +3504,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0044"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3528,7 +3528,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0045"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3552,7 +3552,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0046"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3576,7 +3576,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0047"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3600,7 +3600,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0048"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3624,7 +3624,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0049"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3648,7 +3648,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0050"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3672,7 +3672,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0051"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3696,7 +3696,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0052"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3720,7 +3720,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0053"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3744,7 +3744,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0054"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3768,7 +3768,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0055"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3792,7 +3792,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0056"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3816,7 +3816,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0057"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3840,7 +3840,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0058"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3864,7 +3864,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0059"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3888,7 +3888,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0060"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3912,7 +3912,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0061"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3936,7 +3936,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0062"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3960,7 +3960,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0063"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -3984,7 +3984,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0064"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4008,7 +4008,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0065"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4032,7 +4032,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0066"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4056,7 +4056,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0067"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4080,7 +4080,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0068"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4104,7 +4104,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0069"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4128,7 +4128,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0070"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4152,7 +4152,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0071"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4176,7 +4176,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0072"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4200,7 +4200,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0073"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4224,7 +4224,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0074"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4248,7 +4248,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0075"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4272,7 +4272,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0076"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4296,7 +4296,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0077"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4320,7 +4320,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0078"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4344,7 +4344,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0079"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4368,7 +4368,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0080"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4392,7 +4392,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0081"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4416,7 +4416,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0082"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4440,7 +4440,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0083"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4464,7 +4464,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0084"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4488,7 +4488,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0085"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4512,7 +4512,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0086"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4536,7 +4536,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0087"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4560,7 +4560,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0088"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4584,7 +4584,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0089"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4608,7 +4608,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0090"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4632,7 +4632,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0091"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4656,7 +4656,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0092"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4680,7 +4680,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0093"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4704,7 +4704,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0094"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4728,7 +4728,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0095"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4752,7 +4752,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0096"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4776,7 +4776,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0097"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4800,7 +4800,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0098"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4824,7 +4824,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0099"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4848,7 +4848,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0100"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4872,7 +4872,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0101"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4896,7 +4896,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0102"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4920,7 +4920,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0103"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4944,7 +4944,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0104"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4968,7 +4968,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0105"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -4992,7 +4992,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0106"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5016,7 +5016,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0107"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5040,7 +5040,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0108"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5064,7 +5064,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0109"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5088,7 +5088,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0110"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5112,7 +5112,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0111"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5136,7 +5136,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0112"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5160,7 +5160,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0113"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5184,7 +5184,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0114"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5208,7 +5208,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0115"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5232,7 +5232,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0116"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5256,7 +5256,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0117"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5280,7 +5280,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0118"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5304,7 +5304,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0119"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5328,7 +5328,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0120"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5352,7 +5352,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0121"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5376,7 +5376,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0122"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5400,7 +5400,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0123"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5424,7 +5424,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0124"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5448,7 +5448,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0125"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5472,7 +5472,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0126"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5496,7 +5496,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0127"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5520,7 +5520,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0128"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5544,7 +5544,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0129"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5568,7 +5568,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0130"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5592,7 +5592,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0131"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5616,7 +5616,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0132"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5640,7 +5640,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0133"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5664,7 +5664,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0134"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5688,7 +5688,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0135"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5712,7 +5712,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0136"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5736,7 +5736,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0137"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5760,7 +5760,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0138"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5784,7 +5784,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0139"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5808,7 +5808,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0140"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5832,7 +5832,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0141"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5856,7 +5856,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0142"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5880,7 +5880,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0143"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5904,7 +5904,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0144"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5928,7 +5928,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0145"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5952,7 +5952,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0146"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -5976,7 +5976,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0147"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6000,7 +6000,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0148"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6024,7 +6024,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0149"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6048,7 +6048,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0150"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6072,7 +6072,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0151"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6096,7 +6096,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0152"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6120,7 +6120,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0153"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6144,7 +6144,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0154"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6168,7 +6168,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0155"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6192,7 +6192,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0156"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6216,7 +6216,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0157"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6240,7 +6240,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0158"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6264,7 +6264,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0159"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6288,7 +6288,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0160"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6312,7 +6312,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0161"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6336,7 +6336,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0162"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6360,7 +6360,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0163"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6384,7 +6384,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0164"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6408,7 +6408,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0165"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6432,7 +6432,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0166"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6456,7 +6456,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0167"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6480,7 +6480,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0168"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6504,7 +6504,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0169"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6528,7 +6528,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0170"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6552,7 +6552,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0171"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6576,7 +6576,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0172"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6600,7 +6600,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0173"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6624,7 +6624,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0174"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6648,7 +6648,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0175"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6672,7 +6672,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0176"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6696,7 +6696,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0177"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6720,7 +6720,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0178"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6744,7 +6744,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0179"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6768,7 +6768,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0180"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6792,7 +6792,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0181"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6816,7 +6816,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0182"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6840,7 +6840,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0183"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6864,7 +6864,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0184"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6888,7 +6888,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0185"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6912,7 +6912,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0186"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6936,7 +6936,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0187"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6960,7 +6960,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0188"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -6984,7 +6984,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0189"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7008,7 +7008,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0190"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7032,7 +7032,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0191"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7056,7 +7056,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0192"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7080,7 +7080,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0193"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7104,7 +7104,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0194"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7128,7 +7128,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0195"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7152,7 +7152,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0196"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7176,7 +7176,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0197"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7200,7 +7200,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0198"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7224,7 +7224,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0199"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7248,7 +7248,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0200"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7272,7 +7272,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0201"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7296,7 +7296,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0202"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7320,7 +7320,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0203"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7344,7 +7344,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0204"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7368,7 +7368,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0205"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7392,7 +7392,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0206"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7416,7 +7416,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0207"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7440,7 +7440,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0208"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7464,7 +7464,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0209"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7488,7 +7488,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0210"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7512,7 +7512,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0211"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7536,7 +7536,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0212"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7560,7 +7560,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0213"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7584,7 +7584,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0214"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7608,7 +7608,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0215"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7632,7 +7632,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0216"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7656,7 +7656,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0217"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7680,7 +7680,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0218"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7704,7 +7704,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0219"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7728,7 +7728,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0220"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7752,7 +7752,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0221"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7776,7 +7776,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0222"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7800,7 +7800,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0223"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7824,7 +7824,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0224"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7848,7 +7848,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0225"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7872,7 +7872,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0226"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7896,7 +7896,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0227"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7920,7 +7920,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0228"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7944,7 +7944,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0229"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7968,7 +7968,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0230"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -7992,7 +7992,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0231"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8016,7 +8016,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0232"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8040,7 +8040,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0233"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8064,7 +8064,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0234"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8088,7 +8088,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0235"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8112,7 +8112,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0236"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8136,7 +8136,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0237"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8160,7 +8160,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0238"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8184,7 +8184,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0239"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8208,7 +8208,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0240"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8232,7 +8232,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0241"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8256,7 +8256,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0242"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8280,7 +8280,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0243"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8304,7 +8304,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0244"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8328,7 +8328,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0245"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8352,7 +8352,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0246"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8376,7 +8376,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0247"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8400,7 +8400,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0248"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8424,7 +8424,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0249"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8448,7 +8448,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0250"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8472,7 +8472,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0251"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8496,7 +8496,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0252"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8520,7 +8520,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0253"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8544,7 +8544,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0254"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8568,7 +8568,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0255"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8592,7 +8592,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0256"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8616,7 +8616,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0257"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8640,7 +8640,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0258"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8664,7 +8664,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0259"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8688,7 +8688,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0260"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8712,7 +8712,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0261"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8736,7 +8736,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0262"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8760,7 +8760,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0263"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8784,7 +8784,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0264"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8808,7 +8808,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0265"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8832,7 +8832,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0266"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8856,7 +8856,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0267"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8880,7 +8880,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0268"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8904,7 +8904,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0269"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8928,7 +8928,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0270"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8952,7 +8952,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0271"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -8976,7 +8976,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0272"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9000,7 +9000,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0273"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9024,7 +9024,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0274"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9048,7 +9048,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0275"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9072,7 +9072,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0276"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9096,7 +9096,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0277"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9120,7 +9120,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0278"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9144,7 +9144,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0279"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9168,7 +9168,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0280"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9192,7 +9192,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0281"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9216,7 +9216,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0282"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9240,7 +9240,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0283"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9264,7 +9264,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0284"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9288,7 +9288,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0285"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9312,7 +9312,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0286"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9336,7 +9336,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0287"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9360,7 +9360,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0288"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9384,7 +9384,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0289"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9408,7 +9408,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0290"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9432,7 +9432,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0291"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9456,7 +9456,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0292"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9480,7 +9480,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0293"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9504,7 +9504,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0294"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9528,7 +9528,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0295"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9552,7 +9552,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0296"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9576,7 +9576,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0297"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9600,7 +9600,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0298"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9624,7 +9624,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0299"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9648,7 +9648,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0300"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9672,7 +9672,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0301"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9696,7 +9696,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0302"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9720,7 +9720,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0303"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9744,7 +9744,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0304"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9768,7 +9768,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0305"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9792,7 +9792,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0306"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9816,7 +9816,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0307"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9840,7 +9840,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0308"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9864,7 +9864,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0309"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9888,7 +9888,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0310"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9912,7 +9912,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0311"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9936,7 +9936,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0312"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9960,7 +9960,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0313"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -9984,7 +9984,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0314"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10008,7 +10008,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0315"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10032,7 +10032,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0316"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10056,7 +10056,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0317"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10080,7 +10080,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0318"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10104,7 +10104,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0319"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10128,7 +10128,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0320"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10152,7 +10152,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0321"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10176,7 +10176,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0322"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10200,7 +10200,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0323"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10224,7 +10224,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0324"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10248,7 +10248,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0325"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10272,7 +10272,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0326"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10296,7 +10296,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0327"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10320,7 +10320,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0328"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10344,7 +10344,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0329"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10368,7 +10368,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0330"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10392,7 +10392,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0331"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10416,7 +10416,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0332"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10440,7 +10440,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0333"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10464,7 +10464,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0334"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10488,7 +10488,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0335"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10512,7 +10512,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0336"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10536,7 +10536,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0337"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10560,7 +10560,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0338"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10584,7 +10584,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0339"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10608,7 +10608,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0340"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10632,7 +10632,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0341"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10656,7 +10656,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0342"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10680,7 +10680,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0343"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10704,7 +10704,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0344"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10728,7 +10728,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0345"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10752,7 +10752,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0346"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10776,7 +10776,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0347"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10800,7 +10800,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0348"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10824,7 +10824,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0349"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10848,7 +10848,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0350"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10872,7 +10872,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0351"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10896,7 +10896,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0352"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10920,7 +10920,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0353"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10944,7 +10944,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0354"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10968,7 +10968,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0355"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -10992,7 +10992,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0356"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11016,7 +11016,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0357"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11040,7 +11040,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0358"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11064,7 +11064,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0359"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11088,7 +11088,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0360"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11112,7 +11112,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0361"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11136,7 +11136,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0362"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11160,7 +11160,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0363"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11184,7 +11184,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0364"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11208,7 +11208,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0365"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11232,7 +11232,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0366"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11256,7 +11256,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0367"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11280,7 +11280,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0368"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11304,7 +11304,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0369"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11328,7 +11328,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0370"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11352,7 +11352,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0371"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11376,7 +11376,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0372"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11400,7 +11400,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0373"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11424,7 +11424,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0374"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11448,7 +11448,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0375"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11472,7 +11472,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0376"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11496,7 +11496,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0377"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11520,7 +11520,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0378"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11544,7 +11544,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0379"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11568,7 +11568,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0380"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11592,7 +11592,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0381"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11616,7 +11616,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0382"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11640,7 +11640,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0383"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11664,7 +11664,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0384"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11688,7 +11688,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0385"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11712,7 +11712,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0386"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11736,7 +11736,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0387"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11760,7 +11760,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0388"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11784,7 +11784,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0389"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11808,7 +11808,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0390"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11832,7 +11832,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0391"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11856,7 +11856,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0392"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11880,7 +11880,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0393"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11904,7 +11904,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0394"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11928,7 +11928,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0395"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11952,7 +11952,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0396"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -11976,7 +11976,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0397"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12000,7 +12000,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0398"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12024,7 +12024,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0399"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12048,7 +12048,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0400"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12072,7 +12072,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0401"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12096,7 +12096,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0402"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12120,7 +12120,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0403"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12144,7 +12144,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0404"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12168,7 +12168,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0405"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12192,7 +12192,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0406"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12216,7 +12216,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0407"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12240,7 +12240,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0408"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12264,7 +12264,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0409"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12288,7 +12288,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0410"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12312,7 +12312,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0411"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12336,7 +12336,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0412"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12360,7 +12360,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0413"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12384,7 +12384,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0414"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12408,7 +12408,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0415"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12432,7 +12432,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0416"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12456,7 +12456,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0417"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12480,7 +12480,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0418"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12504,7 +12504,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0419"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12528,7 +12528,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0420"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12552,7 +12552,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0421"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12576,7 +12576,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0422"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12600,7 +12600,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0423"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12624,7 +12624,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0424"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12648,7 +12648,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0425"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12672,7 +12672,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0426"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12696,7 +12696,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0427"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12720,7 +12720,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0428"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12744,7 +12744,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0429"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12768,7 +12768,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0430"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12792,7 +12792,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0431"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12816,7 +12816,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0432"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12840,7 +12840,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0433"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12864,7 +12864,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0434"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12888,7 +12888,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0435"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12912,7 +12912,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0436"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12936,7 +12936,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0437"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12960,7 +12960,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0438"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -12984,7 +12984,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0439"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13008,7 +13008,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0440"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13032,7 +13032,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0441"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13056,7 +13056,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0442"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13080,7 +13080,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0443"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13104,7 +13104,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0444"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13128,7 +13128,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0445"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13152,7 +13152,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0446"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13176,7 +13176,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0447"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13200,7 +13200,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0448"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13224,7 +13224,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0449"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13248,7 +13248,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0450"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13272,7 +13272,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0451"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13296,7 +13296,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0452"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13320,7 +13320,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0453"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13344,7 +13344,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0454"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13368,7 +13368,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0455"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13392,7 +13392,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0456"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13416,7 +13416,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0457"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13440,7 +13440,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0458"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13464,7 +13464,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0459"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13488,7 +13488,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0460"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13512,7 +13512,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0461"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13536,7 +13536,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0462"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13560,7 +13560,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0463"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13584,7 +13584,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0464"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13608,7 +13608,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0465"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13632,7 +13632,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0466"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13656,7 +13656,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0467"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13680,7 +13680,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0468"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13704,7 +13704,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0469"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13728,7 +13728,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0470"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13752,7 +13752,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0471"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13776,7 +13776,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0472"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13800,7 +13800,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0473"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13824,7 +13824,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0474"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13848,7 +13848,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0475"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13872,7 +13872,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0476"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13896,7 +13896,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0477"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13920,7 +13920,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0478"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13944,7 +13944,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0479"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13968,7 +13968,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0480"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -13992,7 +13992,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0481"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14016,7 +14016,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0482"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14040,7 +14040,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0483"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14064,7 +14064,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0484"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14088,7 +14088,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0485"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14112,7 +14112,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0486"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14136,7 +14136,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0487"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14160,7 +14160,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0488"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14184,7 +14184,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0489"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14208,7 +14208,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0490"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14232,7 +14232,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0500"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14256,7 +14256,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0501"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14280,7 +14280,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0502"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14304,7 +14304,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0503"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14328,7 +14328,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0504"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14352,7 +14352,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0505"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14376,7 +14376,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0506"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14400,7 +14400,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0507"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14424,7 +14424,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0508"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14448,7 +14448,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0509"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14472,7 +14472,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0510"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14496,7 +14496,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0511"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14520,7 +14520,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0512"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14544,7 +14544,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0513"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14568,7 +14568,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0514"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14592,7 +14592,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0515"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14616,7 +14616,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0516"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14640,7 +14640,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0517"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14664,7 +14664,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0518"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14688,7 +14688,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0519"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14712,7 +14712,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0520"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14736,7 +14736,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0521"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14760,7 +14760,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0522"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14784,7 +14784,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0523"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14808,7 +14808,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0524"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14832,7 +14832,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0525"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14856,7 +14856,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0526"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14880,7 +14880,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0527"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14904,7 +14904,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0528"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14928,7 +14928,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0529"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14952,7 +14952,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0530"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -14976,7 +14976,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0531"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15000,7 +15000,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0532"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15024,7 +15024,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0533"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15048,7 +15048,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0534"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15072,7 +15072,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0535"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15096,7 +15096,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0536"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15120,7 +15120,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0537"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15144,7 +15144,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0538"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15168,7 +15168,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0539"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15192,7 +15192,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0540"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15216,7 +15216,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0541"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15240,7 +15240,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0542"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15264,7 +15264,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0543"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15288,7 +15288,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0544"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15312,7 +15312,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0545"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15336,7 +15336,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0546"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15360,7 +15360,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0547"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15384,7 +15384,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0548"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15408,7 +15408,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0549"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15432,7 +15432,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0550"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15456,7 +15456,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0551"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15480,7 +15480,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0552"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15504,7 +15504,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0553"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15528,7 +15528,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0554"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15552,7 +15552,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0555"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15576,7 +15576,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0556"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15600,7 +15600,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0557"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15624,7 +15624,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hero_0558"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			266,
 			289
@@ -15648,7 +15648,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hit_fx_0001"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			96,
 			102
@@ -15672,7 +15672,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hit_fx_0002"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			96,
 			102
@@ -15696,7 +15696,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hit_fx_0003"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			96,
 			102
@@ -15720,7 +15720,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hit_fx_0004"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			96,
 			102
@@ -15744,7 +15744,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hit_fx_0005"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			96,
 			102
@@ -15768,7 +15768,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hit_fx_0006"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			96,
 			102
@@ -15792,7 +15792,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hit_fx_0007"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			96,
 			102
@@ -15816,7 +15816,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hit_fx_0008"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			96,
 			102
@@ -15840,7 +15840,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hit_fx_0009"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			96,
 			102
@@ -15864,7 +15864,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_hit_fx_0010"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			96,
 			102
@@ -15888,7 +15888,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_levelup_fx_0001"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -15912,7 +15912,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_levelup_fx_0002"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -15936,7 +15936,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_levelup_fx_0003"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -15960,7 +15960,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_levelup_fx_0004"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -15984,7 +15984,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_levelup_fx_0005"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16008,7 +16008,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_levelup_fx_0006"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16032,7 +16032,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_levelup_fx_0007"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16056,7 +16056,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_levelup_fx_0008"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16080,7 +16080,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_levelup_fx_0009"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16104,7 +16104,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_levelup_fx_0010"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16128,7 +16128,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_levelup_fx_0011"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16152,7 +16152,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_levelup_fx_0012"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16176,7 +16176,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_levelup_fx_0013"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16200,7 +16200,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_levelup_fx_0014"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16224,7 +16224,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_lvlup_fx_0001"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16248,7 +16248,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_lvlup_fx_0002"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16272,7 +16272,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_lvlup_fx_0003"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16296,7 +16296,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_lvlup_fx_0004"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16320,7 +16320,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_lvlup_fx_0005"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16344,7 +16344,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_lvlup_fx_0006"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16368,7 +16368,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_lvlup_fx_0007"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16392,7 +16392,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_lvlup_fx_0008"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16416,7 +16416,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_lvlup_fx_0009"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16440,7 +16440,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_lvlup_fx_0010"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16464,7 +16464,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_lvlup_fx_0011"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16488,7 +16488,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_lvlup_fx_0012"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16512,7 +16512,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_lvlup_fx_0013"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16536,7 +16536,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_lvlup_fx_0014"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			93,
 			164
@@ -16560,7 +16560,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0001"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16584,7 +16584,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0002"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16608,7 +16608,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0003"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16632,7 +16632,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0004"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16656,7 +16656,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0005"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16680,7 +16680,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0006"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16704,7 +16704,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0007"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16728,7 +16728,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0008"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16752,7 +16752,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0009"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16776,7 +16776,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0010"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16800,7 +16800,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0011"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16824,7 +16824,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0012"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16848,7 +16848,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0013"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16872,7 +16872,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0014"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16896,7 +16896,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0015"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16920,7 +16920,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0016"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16944,7 +16944,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0017"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16968,7 +16968,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0018"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -16992,7 +16992,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0019"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -17016,7 +17016,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ranged_skill_tentacle_0020"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			508,
 			159
@@ -17040,7 +17040,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_run_particle_0001"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			88,
 			62
@@ -17064,7 +17064,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_run_particle_0002"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			88,
 			62
@@ -17088,7 +17088,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_run_particle_0003"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			88,
 			62
@@ -17112,7 +17112,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_run_particle_0004"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			88,
 			62
@@ -17136,7 +17136,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_run_particle_0005"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			88,
 			62
@@ -17160,7 +17160,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_run_particle_0006"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			88,
 			62
@@ -17184,7 +17184,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_run_particle_0007"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			88,
 			62
@@ -17208,7 +17208,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_run_particle_0008"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			88,
 			62
@@ -17232,7 +17232,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_run_particle_0009"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			88,
 			62
@@ -17256,7 +17256,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_run_particle_0010"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			88,
 			62
@@ -17280,7 +17280,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0001"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17304,7 +17304,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0002"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17328,7 +17328,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0003"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17352,7 +17352,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0004"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17376,7 +17376,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0005"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17400,7 +17400,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0006"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17424,7 +17424,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0007"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17448,7 +17448,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0008"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17472,7 +17472,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0009"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17496,7 +17496,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0010"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17520,7 +17520,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0011"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17544,7 +17544,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0012"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17568,7 +17568,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0013"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17592,7 +17592,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0014"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17616,7 +17616,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0015"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17640,7 +17640,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0016"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17664,7 +17664,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0017"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17688,7 +17688,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0018"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17712,7 +17712,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0019"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17736,7 +17736,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0020"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17760,7 +17760,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_a_0021"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			65,
 			116
@@ -17784,7 +17784,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0001"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -17808,7 +17808,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0002"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -17832,7 +17832,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0003"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -17856,7 +17856,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0004"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -17880,7 +17880,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0005"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -17904,7 +17904,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0006"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -17928,7 +17928,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0007"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -17952,7 +17952,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0008"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -17976,7 +17976,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0009"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -18000,7 +18000,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0010"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -18024,7 +18024,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0011"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -18048,7 +18048,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0012"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -18072,7 +18072,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0013"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -18096,7 +18096,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0014"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -18120,7 +18120,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0015"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -18144,7 +18144,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0016"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -18168,7 +18168,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0017"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -18192,7 +18192,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0018"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -18216,7 +18216,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_spike_b_0019"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			62,
 			82
@@ -18240,7 +18240,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0001"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18264,7 +18264,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0002"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18288,7 +18288,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0003"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18312,7 +18312,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0004"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18336,7 +18336,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0005"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18360,7 +18360,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0006"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18384,7 +18384,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0007"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18408,7 +18408,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0008"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18432,7 +18432,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0009"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18456,7 +18456,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0010"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18480,7 +18480,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0011"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18504,7 +18504,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0012"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18528,7 +18528,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0013"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18552,7 +18552,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0014"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18576,7 +18576,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0015"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18600,7 +18600,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0016"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18624,7 +18624,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0017"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18648,7 +18648,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0018"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18672,7 +18672,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0019"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18696,7 +18696,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0020"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18720,7 +18720,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0021"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18744,7 +18744,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0022"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18768,7 +18768,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0023"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18792,7 +18792,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0024"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18816,7 +18816,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0025"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18840,7 +18840,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0026"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18864,7 +18864,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0027"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18888,7 +18888,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0028"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18912,7 +18912,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0029"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18936,7 +18936,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0030"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18960,7 +18960,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0031"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -18984,7 +18984,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0032"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19008,7 +19008,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0033"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19032,7 +19032,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0034"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19056,7 +19056,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0035"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19080,7 +19080,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0036"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19104,7 +19104,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0037"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19128,7 +19128,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0038"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19152,7 +19152,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0039"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19176,7 +19176,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0040"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19200,7 +19200,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0041"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19224,7 +19224,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0042"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19248,7 +19248,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0043"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19272,7 +19272,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0044"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19296,7 +19296,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0045"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19320,7 +19320,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0046"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19344,7 +19344,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0047"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19368,7 +19368,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0048"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19392,7 +19392,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0049"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19416,7 +19416,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0050"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19440,7 +19440,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0051"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19464,7 +19464,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0052"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19488,7 +19488,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0053"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19512,7 +19512,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0054"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19536,7 +19536,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0055"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19560,7 +19560,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0056"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19584,7 +19584,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0057"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19608,7 +19608,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0058"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19632,7 +19632,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0059"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19656,7 +19656,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0060"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19680,7 +19680,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0061"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19704,7 +19704,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0062"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19728,7 +19728,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0063"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19752,7 +19752,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0064"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19776,7 +19776,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0065"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19800,7 +19800,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0066"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19824,7 +19824,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0067"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19848,7 +19848,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0068"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19872,7 +19872,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0069"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19896,7 +19896,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0070"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19920,7 +19920,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0071"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19944,7 +19944,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0072"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19968,7 +19968,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0073"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -19992,7 +19992,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0074"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -20016,7 +20016,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0075"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -20040,7 +20040,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0076"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -20064,7 +20064,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0077"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -20088,7 +20088,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0078"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -20112,7 +20112,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0079"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -20136,7 +20136,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0080"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -20160,7 +20160,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0081"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -20184,7 +20184,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0082"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173
@@ -20208,7 +20208,7 @@ return {
 		alias = {},
 	},
 	["hero_venom_ultimate_0083"] = {
-		a_name = "go_hero_venom-1.png",
+		a_name = "go_hero_venom-1.dds",
 		size = {
 			252,
 			173

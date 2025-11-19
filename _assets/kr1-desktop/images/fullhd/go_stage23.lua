@@ -2,7 +2,7 @@
 
 return {
 	CB_Stg23_Light = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			86,
 			110
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	CB_Stg23_brokenHouse1 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			142,
 			86
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	CB_Stg23_brokenHouse2 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			122,
 			86
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	CB_house1 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			176,
 			164
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	splinter_0001 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	splinter_0002 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -148,7 +148,7 @@ return {
 		}
 	},
 	splinter_0004 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -174,7 +174,7 @@ return {
 		}
 	},
 	splinter_0006 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -200,7 +200,7 @@ return {
 		}
 	},
 	splinter_0008 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -226,7 +226,7 @@ return {
 		}
 	},
 	splinter_0010 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -252,7 +252,7 @@ return {
 		}
 	},
 	splinter_0012 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -278,7 +278,7 @@ return {
 		}
 	},
 	splinter_0014 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -304,7 +304,7 @@ return {
 		}
 	},
 	splinter_0016 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -330,7 +330,7 @@ return {
 		}
 	},
 	splinter_0018 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -356,7 +356,7 @@ return {
 		}
 	},
 	splinter_0020 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -389,7 +389,7 @@ return {
 		}
 	},
 	splinter_0029 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -415,7 +415,7 @@ return {
 		}
 	},
 	splinter_0031 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -441,7 +441,7 @@ return {
 		}
 	},
 	splinter_0033 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -467,7 +467,7 @@ return {
 		}
 	},
 	splinter_0035 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -493,7 +493,7 @@ return {
 		}
 	},
 	splinter_0037 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -519,7 +519,7 @@ return {
 		}
 	},
 	splinter_0039 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -545,7 +545,7 @@ return {
 		}
 	},
 	splinter_0041 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -571,7 +571,7 @@ return {
 		}
 	},
 	splinter_0043 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -597,7 +597,7 @@ return {
 		}
 	},
 	splinter_0045 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -623,7 +623,7 @@ return {
 		}
 	},
 	splinter_0047 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -650,7 +650,7 @@ return {
 		}
 	},
 	splinter_noPizza_0002 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -678,7 +678,7 @@ return {
 		}
 	},
 	splinter_noPizza_0004 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -706,7 +706,7 @@ return {
 		}
 	},
 	splinter_noPizza_0006 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -734,7 +734,7 @@ return {
 		}
 	},
 	splinter_noPizza_0008 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52
@@ -762,7 +762,7 @@ return {
 		}
 	},
 	splinter_noPizza_0010 = {
-		a_name = "go_stage23-1.png",
+		a_name = "go_stage23-1.dds",
 		size = {
 			52,
 			52

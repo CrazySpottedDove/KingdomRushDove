@@ -1,6 +1,6 @@
 return {
 	["cricet_random_eff_0001"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			136,
 			96
@@ -28,7 +28,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_0004"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			136,
 			96
@@ -53,7 +53,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_0005"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			136,
 			96
@@ -83,7 +83,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_0010"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			136,
 			96
@@ -108,7 +108,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_0011"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			136,
 			96
@@ -133,7 +133,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_0012"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			136,
 			96
@@ -158,7 +158,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_0013"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			136,
 			96
@@ -190,7 +190,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_0020"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			136,
 			96
@@ -215,7 +215,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_0021"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			136,
 			96
@@ -240,7 +240,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_0023"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			136,
 			96
@@ -265,7 +265,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_0024"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			136,
 			96
@@ -290,7 +290,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_0026"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			136,
 			96
@@ -315,7 +315,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_0027"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			136,
 			96
@@ -340,7 +340,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0001"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -365,7 +365,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0002"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -390,7 +390,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0003"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -415,7 +415,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0004"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -440,7 +440,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0005"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -465,7 +465,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0006"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -490,7 +490,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0007"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -515,7 +515,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0008"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -540,7 +540,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0009"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -565,7 +565,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0010"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -590,7 +590,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0011"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -615,7 +615,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0012"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -640,7 +640,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0013"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -665,7 +665,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0014"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -690,7 +690,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0015"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -715,7 +715,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0016"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -740,7 +740,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0017"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -765,7 +765,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0018"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -790,7 +790,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0019"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -815,7 +815,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0020"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87
@@ -840,7 +840,7 @@ return {
 		textureRotated = false
 	},
 	["cricet_random_eff_a_0021"] = {
-		a_name = "cricet_random_eff.png",
+		a_name = "cricet_random_eff.dds",
 		size = {
 			82,
 			87

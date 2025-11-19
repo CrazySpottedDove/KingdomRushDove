@@ -2,7 +2,7 @@
 
 return {
 	credits_back_bg_0001 = {
-		a_name = "screen_credits-1.png",
+		a_name = "screen_credits-1.dds",
 		size = {
 			342,
 			244
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	credits_back_bg_0002 = {
-		a_name = "screen_credits-1.png",
+		a_name = "screen_credits-1.dds",
 		size = {
 			342,
 			244
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	credits_knife = {
-		a_name = "screen_credits-1.png",
+		a_name = "screen_credits-1.dds",
 		size = {
 			240,
 			200
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	credits_logo = {
-		a_name = "screen_credits-1.png",
+		a_name = "screen_credits-1.dds",
 		size = {
 			648,
 			268
@@ -100,7 +100,7 @@ return {
 		}
 	},
 	credits_new_bg = {
-		a_name = "screen_credits-1.png",
+		a_name = "screen_credits-1.dds",
 		size = {
 			1920,
 			1080
@@ -124,7 +124,7 @@ return {
 		alias = {}
 	},
 	credits_skip_0001 = {
-		a_name = "screen_credits-1.png",
+		a_name = "screen_credits-1.dds",
 		size = {
 			155,
 			124
@@ -148,7 +148,7 @@ return {
 		alias = {}
 	},
 	credits_skip_0002 = {
-		a_name = "screen_credits-1.png",
+		a_name = "screen_credits-1.dds",
 		size = {
 			155,
 			124

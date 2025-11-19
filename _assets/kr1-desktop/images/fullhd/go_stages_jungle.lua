@@ -2,7 +2,7 @@
 
 return {
 	AmazonGirl_healFx_0001 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0002 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0003 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0004 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0005 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0006 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0007 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0008 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -194,7 +194,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0009 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -218,7 +218,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0010 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -242,7 +242,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0011 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -266,7 +266,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0012 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -290,7 +290,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0013 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -314,7 +314,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0014 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -338,7 +338,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0015 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -362,7 +362,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0016 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -386,7 +386,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0017 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -410,7 +410,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0018 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -434,7 +434,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0019 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -458,7 +458,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0020 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -482,7 +482,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0021 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -506,7 +506,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0022 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -530,7 +530,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0023 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -554,7 +554,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0024 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -578,7 +578,7 @@ return {
 		alias = {}
 	},
 	AmazonGirl_healFx_0025 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			42,
 			53
@@ -602,7 +602,7 @@ return {
 		alias = {}
 	},
 	AmazonTower_0001 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			132,
 			124
@@ -626,7 +626,7 @@ return {
 		alias = {}
 	},
 	AmazonTower_0002 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			132,
 			124
@@ -650,7 +650,7 @@ return {
 		alias = {}
 	},
 	AmazonTower_0003 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			132,
 			124
@@ -674,7 +674,7 @@ return {
 		alias = {}
 	},
 	AmazonTower_0004 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			132,
 			124
@@ -698,7 +698,7 @@ return {
 		alias = {}
 	},
 	AmazonianGirl_0001 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -730,7 +730,7 @@ return {
 		}
 	},
 	AmazonianGirl_0002 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -754,7 +754,7 @@ return {
 		alias = {}
 	},
 	AmazonianGirl_0003 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -778,7 +778,7 @@ return {
 		alias = {}
 	},
 	AmazonianGirl_0004 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -802,7 +802,7 @@ return {
 		alias = {}
 	},
 	AmazonianGirl_0005 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -826,7 +826,7 @@ return {
 		alias = {}
 	},
 	AmazonianGirl_0006 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -850,7 +850,7 @@ return {
 		alias = {}
 	},
 	AmazonianGirl_0009 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -876,7 +876,7 @@ return {
 		}
 	},
 	AmazonianGirl_0011 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -902,7 +902,7 @@ return {
 		}
 	},
 	AmazonianGirl_0013 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -926,7 +926,7 @@ return {
 		alias = {}
 	},
 	AmazonianGirl_0014 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -952,7 +952,7 @@ return {
 		}
 	},
 	AmazonianGirl_0016 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -978,7 +978,7 @@ return {
 		}
 	},
 	AmazonianGirl_0018 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -1005,7 +1005,7 @@ return {
 		}
 	},
 	AmazonianGirl_0024 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -1031,7 +1031,7 @@ return {
 		}
 	},
 	AmazonianGirl_0026 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -1057,7 +1057,7 @@ return {
 		}
 	},
 	AmazonianGirl_0028 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -1083,7 +1083,7 @@ return {
 		}
 	},
 	AmazonianGirl_0030 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -1109,7 +1109,7 @@ return {
 		}
 	},
 	AmazonianGirl_0032 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -1135,7 +1135,7 @@ return {
 		}
 	},
 	AmazonianGirl_0034 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -1161,7 +1161,7 @@ return {
 		}
 	},
 	AmazonianGirl_0036 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -1187,7 +1187,7 @@ return {
 		}
 	},
 	AmazonianGirl_0040 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -1211,7 +1211,7 @@ return {
 		alias = {}
 	},
 	AmazonianGirl_0041 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -1235,7 +1235,7 @@ return {
 		alias = {}
 	},
 	AmazonianGirl_0042 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -1259,7 +1259,7 @@ return {
 		alias = {}
 	},
 	AmazonianGirl_0043 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -1283,7 +1283,7 @@ return {
 		alias = {}
 	},
 	AmazonianGirl_0044 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -1309,7 +1309,7 @@ return {
 		}
 	},
 	AmazonianGirl_0046 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			152,
 			98
@@ -1333,7 +1333,7 @@ return {
 		alias = {}
 	},
 	Stage6_Birds_0001 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			31,
 			23
@@ -1357,7 +1357,7 @@ return {
 		alias = {}
 	},
 	Stage6_Birds_0002 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			31,
 			23
@@ -1383,7 +1383,7 @@ return {
 		}
 	},
 	Stage6_Birds_0004 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			31,
 			23
@@ -1407,7 +1407,7 @@ return {
 		alias = {}
 	},
 	Stage6_Birds_0005 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			31,
 			23
@@ -1431,7 +1431,7 @@ return {
 		alias = {}
 	},
 	Stage6_Birds_0006 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			31,
 			23
@@ -1455,7 +1455,7 @@ return {
 		alias = {}
 	},
 	Stage6_Birds_0007 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			31,
 			23
@@ -1481,7 +1481,7 @@ return {
 		}
 	},
 	Stage6_Birds_0009 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			31,
 			23
@@ -1505,7 +1505,7 @@ return {
 		alias = {}
 	},
 	Stage6_Birds_0010 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			31,
 			23
@@ -1531,7 +1531,7 @@ return {
 		}
 	},
 	Stage6_Birds_0012 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			31,
 			23
@@ -1555,7 +1555,7 @@ return {
 		alias = {}
 	},
 	Stage6_Birds_0013 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			31,
 			23
@@ -1579,7 +1579,7 @@ return {
 		alias = {}
 	},
 	Stage6_Birds_0014 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			31,
 			23
@@ -1603,7 +1603,7 @@ return {
 		alias = {}
 	},
 	Stage6_Birds_0015 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			31,
 			23
@@ -1629,7 +1629,7 @@ return {
 		}
 	},
 	Stage8_Predator_0001 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1653,7 +1653,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0002 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1677,7 +1677,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0003 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1701,7 +1701,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0004 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1725,7 +1725,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0005 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1749,7 +1749,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0006 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1773,7 +1773,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0007 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1797,7 +1797,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0008 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1821,7 +1821,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0009 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1845,7 +1845,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0010 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1869,7 +1869,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0011 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1893,7 +1893,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0012 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1917,7 +1917,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0013 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1941,7 +1941,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0014 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1965,7 +1965,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0015 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -1989,7 +1989,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0016 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2013,7 +2013,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0017 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2037,7 +2037,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0018 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2061,7 +2061,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0019 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2085,7 +2085,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0020 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2109,7 +2109,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0021 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2133,7 +2133,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0022 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2157,7 +2157,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0023 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2181,7 +2181,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0024 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2205,7 +2205,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0025 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2229,7 +2229,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0026 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2253,7 +2253,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0027 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2277,7 +2277,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0028 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2301,7 +2301,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0029 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2325,7 +2325,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0030 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2349,7 +2349,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0031 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2373,7 +2373,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0032 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2397,7 +2397,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0033 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2421,7 +2421,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0034 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2445,7 +2445,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0035 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2469,7 +2469,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0036 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2493,7 +2493,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0037 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2517,7 +2517,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0038 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2541,7 +2541,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0039 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2565,7 +2565,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0040 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2589,7 +2589,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0041 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2613,7 +2613,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0042 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2637,7 +2637,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0043 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2682,7 +2682,7 @@ return {
 		}
 	},
 	Stage8_Predator_0064 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2708,7 +2708,7 @@ return {
 		}
 	},
 	Stage8_Predator_0066 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2735,7 +2735,7 @@ return {
 		}
 	},
 	Stage8_Predator_0067 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2761,7 +2761,7 @@ return {
 		}
 	},
 	Stage8_Predator_0069 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2787,7 +2787,7 @@ return {
 		}
 	},
 	Stage8_Predator_0071 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2813,7 +2813,7 @@ return {
 		}
 	},
 	Stage8_Predator_0073 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2839,7 +2839,7 @@ return {
 		}
 	},
 	Stage8_Predator_0075 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2865,7 +2865,7 @@ return {
 		}
 	},
 	Stage8_Predator_0077 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2891,7 +2891,7 @@ return {
 		}
 	},
 	Stage8_Predator_0081 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2917,7 +2917,7 @@ return {
 		}
 	},
 	Stage8_Predator_0083 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2943,7 +2943,7 @@ return {
 		}
 	},
 	Stage8_Predator_0085 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2969,7 +2969,7 @@ return {
 		}
 	},
 	Stage8_Predator_0087 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -2995,7 +2995,7 @@ return {
 		}
 	},
 	Stage8_Predator_0089 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3021,7 +3021,7 @@ return {
 		}
 	},
 	Stage8_Predator_0091 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3045,7 +3045,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0092 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3069,7 +3069,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0093 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3093,7 +3093,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0094 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3117,7 +3117,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0095 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3143,7 +3143,7 @@ return {
 		}
 	},
 	Stage8_Predator_0097 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3169,7 +3169,7 @@ return {
 		}
 	},
 	Stage8_Predator_0099 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3195,7 +3195,7 @@ return {
 		}
 	},
 	Stage8_Predator_0101 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3221,7 +3221,7 @@ return {
 		}
 	},
 	Stage8_Predator_0103 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3248,7 +3248,7 @@ return {
 		}
 	},
 	Stage8_Predator_0106 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3277,7 +3277,7 @@ return {
 		}
 	},
 	Stage8_Predator_0108 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3305,7 +3305,7 @@ return {
 		}
 	},
 	Stage8_Predator_0110 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3333,7 +3333,7 @@ return {
 		}
 	},
 	Stage8_Predator_0112 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3361,7 +3361,7 @@ return {
 		}
 	},
 	Stage8_Predator_0114 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3403,7 +3403,7 @@ return {
 		}
 	},
 	Stage8_Predator_0116 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3445,7 +3445,7 @@ return {
 		}
 	},
 	Stage8_Predator_0159 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3469,7 +3469,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0160 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3493,7 +3493,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0161 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3517,7 +3517,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0162 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3541,7 +3541,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0163 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3565,7 +3565,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0164 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3589,7 +3589,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0165 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3613,7 +3613,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0166 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3637,7 +3637,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0167 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3661,7 +3661,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0168 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3685,7 +3685,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0169 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3709,7 +3709,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0170 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3733,7 +3733,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0171 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3757,7 +3757,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0172 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3781,7 +3781,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0173 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3805,7 +3805,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0174 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3829,7 +3829,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0175 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3853,7 +3853,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0176 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3877,7 +3877,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0177 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3901,7 +3901,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0178 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3925,7 +3925,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0179 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3949,7 +3949,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0180 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3973,7 +3973,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0181 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -3997,7 +3997,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0182 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -4021,7 +4021,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0183 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -4045,7 +4045,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0184 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -4069,7 +4069,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0185 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -4093,7 +4093,7 @@ return {
 		alias = {}
 	},
 	Stage8_Predator_0186 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			87,
 			62
@@ -4117,7 +4117,7 @@ return {
 		alias = {}
 	},
 	water_sparks_0001 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			94,
 			58
@@ -4147,7 +4147,7 @@ return {
 		}
 	},
 	water_sparks_0007 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			94,
 			58
@@ -4184,7 +4184,7 @@ return {
 		}
 	},
 	water_sparks_0014 = {
-		a_name = "go_stages_jungle-1.png",
+		a_name = "go_stages_jungle-1.dds",
 		size = {
 			94,
 			58

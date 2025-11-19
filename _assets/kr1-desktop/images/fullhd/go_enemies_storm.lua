@@ -2,7 +2,7 @@
 
 return {
 	troll_brute_0001 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -28,7 +28,7 @@ return {
 		}
 	},
 	troll_brute_0003 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -54,7 +54,7 @@ return {
 		}
 	},
 	troll_brute_0005 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -80,7 +80,7 @@ return {
 		}
 	},
 	troll_brute_0007 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -104,7 +104,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0008 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -130,7 +130,7 @@ return {
 		}
 	},
 	troll_brute_0010 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -156,7 +156,7 @@ return {
 		}
 	},
 	troll_brute_0012 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -182,7 +182,7 @@ return {
 		}
 	},
 	troll_brute_0014 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -208,7 +208,7 @@ return {
 		}
 	},
 	troll_brute_0016 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -234,7 +234,7 @@ return {
 		}
 	},
 	troll_brute_0018 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -258,7 +258,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0019 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -284,7 +284,7 @@ return {
 		}
 	},
 	troll_brute_0021 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -310,7 +310,7 @@ return {
 		}
 	},
 	troll_brute_0023 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -336,7 +336,7 @@ return {
 		}
 	},
 	troll_brute_0025 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -362,7 +362,7 @@ return {
 		}
 	},
 	troll_brute_0027 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -388,7 +388,7 @@ return {
 		}
 	},
 	troll_brute_0029 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -412,7 +412,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0030 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -438,7 +438,7 @@ return {
 		}
 	},
 	troll_brute_0032 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -464,7 +464,7 @@ return {
 		}
 	},
 	troll_brute_0034 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -490,7 +490,7 @@ return {
 		}
 	},
 	troll_brute_0036 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -516,7 +516,7 @@ return {
 		}
 	},
 	troll_brute_0038 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -542,7 +542,7 @@ return {
 		}
 	},
 	troll_brute_0040 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -566,7 +566,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0041 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -592,7 +592,7 @@ return {
 		}
 	},
 	troll_brute_0043 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -618,7 +618,7 @@ return {
 		}
 	},
 	troll_brute_0045 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -644,7 +644,7 @@ return {
 		}
 	},
 	troll_brute_0047 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -670,7 +670,7 @@ return {
 		}
 	},
 	troll_brute_0049 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -696,7 +696,7 @@ return {
 		}
 	},
 	troll_brute_0051 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -720,7 +720,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0052 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -746,7 +746,7 @@ return {
 		}
 	},
 	troll_brute_0054 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -772,7 +772,7 @@ return {
 		}
 	},
 	troll_brute_0056 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -798,7 +798,7 @@ return {
 		}
 	},
 	troll_brute_0058 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -824,7 +824,7 @@ return {
 		}
 	},
 	troll_brute_0060 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -850,7 +850,7 @@ return {
 		}
 	},
 	troll_brute_0062 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -874,7 +874,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0063 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -900,7 +900,7 @@ return {
 		}
 	},
 	troll_brute_0065 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -926,7 +926,7 @@ return {
 		}
 	},
 	troll_brute_0067 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -950,7 +950,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0068 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -977,7 +977,7 @@ return {
 		}
 	},
 	troll_brute_0070 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1003,7 +1003,7 @@ return {
 		}
 	},
 	troll_brute_0072 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1029,7 +1029,7 @@ return {
 		}
 	},
 	troll_brute_0074 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1055,7 +1055,7 @@ return {
 		}
 	},
 	troll_brute_0076 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1083,7 +1083,7 @@ return {
 		}
 	},
 	troll_brute_0080 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1109,7 +1109,7 @@ return {
 		}
 	},
 	troll_brute_0082 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1135,7 +1135,7 @@ return {
 		}
 	},
 	troll_brute_0084 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1161,7 +1161,7 @@ return {
 		}
 	},
 	troll_brute_0086 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1187,7 +1187,7 @@ return {
 		}
 	},
 	troll_brute_0088 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1217,7 +1217,7 @@ return {
 		}
 	},
 	troll_brute_0094 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1243,7 +1243,7 @@ return {
 		}
 	},
 	troll_brute_0097 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1267,7 +1267,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0098 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1291,7 +1291,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0099 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1317,7 +1317,7 @@ return {
 		}
 	},
 	troll_brute_0101 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1343,7 +1343,7 @@ return {
 		}
 	},
 	troll_brute_0103 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1367,7 +1367,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0104 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1391,7 +1391,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0105 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1415,7 +1415,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0106 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1439,7 +1439,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0107 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1472,7 +1472,7 @@ return {
 		}
 	},
 	troll_brute_0116 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1498,7 +1498,7 @@ return {
 		}
 	},
 	troll_brute_0118 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1522,7 +1522,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0119 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1546,7 +1546,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0120 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1572,7 +1572,7 @@ return {
 		}
 	},
 	troll_brute_0122 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1598,7 +1598,7 @@ return {
 		}
 	},
 	troll_brute_0124 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1624,7 +1624,7 @@ return {
 		}
 	},
 	troll_brute_0126 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1650,7 +1650,7 @@ return {
 		}
 	},
 	troll_brute_0128 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1676,7 +1676,7 @@ return {
 		}
 	},
 	troll_brute_0130 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1700,7 +1700,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0131 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1724,7 +1724,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0132 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1748,7 +1748,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0133 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1772,7 +1772,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0134 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1796,7 +1796,7 @@ return {
 		alias = {}
 	},
 	troll_brute_0135 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1822,7 +1822,7 @@ return {
 		}
 	},
 	troll_brute_0137 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			148,
 			114
@@ -1848,7 +1848,7 @@ return {
 		}
 	},
 	troll_skater_0001 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -1874,7 +1874,7 @@ return {
 		}
 	},
 	troll_skater_0003 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -1900,7 +1900,7 @@ return {
 		}
 	},
 	troll_skater_0005 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -1926,7 +1926,7 @@ return {
 		}
 	},
 	troll_skater_0007 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -1950,7 +1950,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0008 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -1976,7 +1976,7 @@ return {
 		}
 	},
 	troll_skater_0010 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2002,7 +2002,7 @@ return {
 		}
 	},
 	troll_skater_0012 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2028,7 +2028,7 @@ return {
 		}
 	},
 	troll_skater_0014 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2054,7 +2054,7 @@ return {
 		}
 	},
 	troll_skater_0016 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2080,7 +2080,7 @@ return {
 		}
 	},
 	troll_skater_0018 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2104,7 +2104,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0019 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2130,7 +2130,7 @@ return {
 		}
 	},
 	troll_skater_0021 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2156,7 +2156,7 @@ return {
 		}
 	},
 	troll_skater_0023 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2182,7 +2182,7 @@ return {
 		}
 	},
 	troll_skater_0025 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2208,7 +2208,7 @@ return {
 		}
 	},
 	troll_skater_0027 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2234,7 +2234,7 @@ return {
 		}
 	},
 	troll_skater_0029 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2258,7 +2258,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0030 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2284,7 +2284,7 @@ return {
 		}
 	},
 	troll_skater_0032 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2310,7 +2310,7 @@ return {
 		}
 	},
 	troll_skater_0034 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2336,7 +2336,7 @@ return {
 		}
 	},
 	troll_skater_0036 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2362,7 +2362,7 @@ return {
 		}
 	},
 	troll_skater_0038 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2388,7 +2388,7 @@ return {
 		}
 	},
 	troll_skater_0040 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2412,7 +2412,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0041 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2438,7 +2438,7 @@ return {
 		}
 	},
 	troll_skater_0043 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2464,7 +2464,7 @@ return {
 		}
 	},
 	troll_skater_0045 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2490,7 +2490,7 @@ return {
 		}
 	},
 	troll_skater_0047 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2516,7 +2516,7 @@ return {
 		}
 	},
 	troll_skater_0049 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2542,7 +2542,7 @@ return {
 		}
 	},
 	troll_skater_0051 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2566,7 +2566,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0052 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2592,7 +2592,7 @@ return {
 		}
 	},
 	troll_skater_0054 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2618,7 +2618,7 @@ return {
 		}
 	},
 	troll_skater_0056 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2644,7 +2644,7 @@ return {
 		}
 	},
 	troll_skater_0058 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2670,7 +2670,7 @@ return {
 		}
 	},
 	troll_skater_0060 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2696,7 +2696,7 @@ return {
 		}
 	},
 	troll_skater_0062 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2720,7 +2720,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0063 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2746,7 +2746,7 @@ return {
 		}
 	},
 	troll_skater_0065 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2772,7 +2772,7 @@ return {
 		}
 	},
 	troll_skater_0067 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2811,7 +2811,7 @@ return {
 		}
 	},
 	troll_skater_0070 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2837,7 +2837,7 @@ return {
 		}
 	},
 	troll_skater_0072 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2863,7 +2863,7 @@ return {
 		}
 	},
 	troll_skater_0074 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2889,7 +2889,7 @@ return {
 		}
 	},
 	troll_skater_0076 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2915,7 +2915,7 @@ return {
 		}
 	},
 	troll_skater_0078 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2939,7 +2939,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0079 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2963,7 +2963,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0080 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -2987,7 +2987,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0081 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3011,7 +3011,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0082 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3037,7 +3037,7 @@ return {
 		}
 	},
 	troll_skater_0084 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3064,7 +3064,7 @@ return {
 		}
 	},
 	troll_skater_0087 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3090,7 +3090,7 @@ return {
 		}
 	},
 	troll_skater_0100 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3116,7 +3116,7 @@ return {
 		}
 	},
 	troll_skater_0102 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3142,7 +3142,7 @@ return {
 		}
 	},
 	troll_skater_0104 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3168,7 +3168,7 @@ return {
 		}
 	},
 	troll_skater_0106 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3194,7 +3194,7 @@ return {
 		}
 	},
 	troll_skater_0108 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3220,7 +3220,7 @@ return {
 		}
 	},
 	troll_skater_0110 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3246,7 +3246,7 @@ return {
 		}
 	},
 	troll_skater_0112 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3270,7 +3270,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0113 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3294,7 +3294,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0114 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3320,7 +3320,7 @@ return {
 		}
 	},
 	troll_skater_0116 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3346,7 +3346,7 @@ return {
 		}
 	},
 	troll_skater_0118 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3370,7 +3370,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0119 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3394,7 +3394,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0120 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3418,7 +3418,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0121 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3442,7 +3442,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0122 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3475,7 +3475,7 @@ return {
 		}
 	},
 	troll_skater_0131 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3501,7 +3501,7 @@ return {
 		}
 	},
 	troll_skater_0133 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3525,7 +3525,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0134 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3549,7 +3549,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0136 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3573,7 +3573,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0137 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3597,7 +3597,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0138 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3621,7 +3621,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0139 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3645,7 +3645,7 @@ return {
 		alias = {}
 	},
 	troll_skater_0140 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72
@@ -3671,7 +3671,7 @@ return {
 		}
 	},
 	troll_skater_0142 = {
-		a_name = "go_enemies_storm-1.png",
+		a_name = "go_enemies_storm-1.dds",
 		size = {
 			116,
 			72

@@ -2,7 +2,7 @@
 
 return {
 	stage_2 = {
-		a_name = "go_stage02_bg-1.png",
+		a_name = "go_stage02_bg-1.dds",
 		size = {
 			1920,
 			1080

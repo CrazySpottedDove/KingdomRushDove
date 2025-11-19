@@ -2,7 +2,7 @@
 
 return {
 	Stage9_Smoke_0001 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -26,7 +26,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0002 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -50,7 +50,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0003 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -74,7 +74,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0004 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -98,7 +98,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0005 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -122,7 +122,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0006 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -146,7 +146,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0007 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -170,7 +170,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0008 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -196,7 +196,7 @@ return {
 		}
 	},
 	Stage9_Smoke_0009 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -220,7 +220,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0010 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -244,7 +244,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0011 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -268,7 +268,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0012 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -292,7 +292,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0013 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -316,7 +316,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0014 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -340,7 +340,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0015 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -364,7 +364,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0016 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -388,7 +388,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0017 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -412,7 +412,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0018 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -436,7 +436,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0019 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -460,7 +460,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0020 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -484,7 +484,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0021 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -508,7 +508,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0022 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -532,7 +532,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0024 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -556,7 +556,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0025 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -580,7 +580,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0026 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -604,7 +604,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0027 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -628,7 +628,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0028 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -652,7 +652,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0029 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -676,7 +676,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0030 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -700,7 +700,7 @@ return {
 		alias = {}
 	},
 	Stage9_Smoke_0031 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			34,
 			82
@@ -724,7 +724,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0001 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -748,7 +748,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0002 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -772,7 +772,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0003 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -796,7 +796,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0004 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -820,7 +820,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0005 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -844,7 +844,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0006 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -868,7 +868,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0007 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -892,7 +892,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0008 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -916,7 +916,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0009 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -940,7 +940,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0010 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -964,7 +964,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0011 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -988,7 +988,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0012 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1012,7 +1012,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0013 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1036,7 +1036,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0014 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1060,7 +1060,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0015 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1084,7 +1084,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0016 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1108,7 +1108,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0017 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1132,7 +1132,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0018 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1156,7 +1156,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0019 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1180,7 +1180,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0020 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1204,7 +1204,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0021 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1228,7 +1228,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0022 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1252,7 +1252,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0023 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1276,7 +1276,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0024 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1300,7 +1300,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0025 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1324,7 +1324,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0026 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1348,7 +1348,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0027 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1372,7 +1372,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0028 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1396,7 +1396,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0029 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1420,7 +1420,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0030 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1444,7 +1444,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0031 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1468,7 +1468,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0032 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1492,7 +1492,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0033 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1516,7 +1516,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0034 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1540,7 +1540,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0035 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1564,7 +1564,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0036 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1588,7 +1588,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0037 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1612,7 +1612,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0038 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1636,7 +1636,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0039 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1660,7 +1660,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0040 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1684,7 +1684,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0041 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1708,7 +1708,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0042 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1732,7 +1732,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0043 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1756,7 +1756,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0044 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1780,7 +1780,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0045 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1804,7 +1804,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0046 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1828,7 +1828,7 @@ return {
 		alias = {}
 	},
 	Stage9_lavaBubble_0047 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			51,
 			31
@@ -1852,7 +1852,7 @@ return {
 		alias = {}
 	},
 	lava_bubble_0001 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			15,
 			8
@@ -1876,7 +1876,7 @@ return {
 		alias = {}
 	},
 	lava_bubble_0002 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			15,
 			8
@@ -1902,7 +1902,7 @@ return {
 		}
 	},
 	lava_bubble_0004 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			15,
 			8
@@ -1928,7 +1928,7 @@ return {
 		}
 	},
 	lava_bubble_0006 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			15,
 			8
@@ -1952,7 +1952,7 @@ return {
 		alias = {}
 	},
 	lava_bubble_0007 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			15,
 			8
@@ -1976,7 +1976,7 @@ return {
 		alias = {}
 	},
 	lava_bubble_0008 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			15,
 			8
@@ -2000,7 +2000,7 @@ return {
 		alias = {}
 	},
 	lava_bubble_0009 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			15,
 			8
@@ -2024,7 +2024,7 @@ return {
 		alias = {}
 	},
 	lava_bubble_0010 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			15,
 			8
@@ -2048,7 +2048,7 @@ return {
 		alias = {}
 	},
 	lava_bubble_0011 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			15,
 			8
@@ -2072,7 +2072,7 @@ return {
 		alias = {}
 	},
 	lava_bubble_0012 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			15,
 			8
@@ -2096,7 +2096,7 @@ return {
 		alias = {}
 	},
 	lava_bubble_0013 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			15,
 			8
@@ -2120,7 +2120,7 @@ return {
 		alias = {}
 	},
 	lava_bubble_0014 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			15,
 			8
@@ -2144,7 +2144,7 @@ return {
 		alias = {}
 	},
 	lava_bubble_0015 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			15,
 			8
@@ -2168,7 +2168,7 @@ return {
 		alias = {}
 	},
 	lava_bubble_0016 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			15,
 			8
@@ -2192,7 +2192,7 @@ return {
 		alias = {}
 	},
 	white_fire_0001 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			28,
 			31
@@ -2218,7 +2218,7 @@ return {
 		}
 	},
 	white_fire_0003 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			28,
 			31
@@ -2244,7 +2244,7 @@ return {
 		}
 	},
 	white_fire_0005 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			28,
 			31
@@ -2270,7 +2270,7 @@ return {
 		}
 	},
 	white_fire_0007 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			28,
 			31
@@ -2296,7 +2296,7 @@ return {
 		}
 	},
 	white_fire_0009 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			28,
 			31
@@ -2322,7 +2322,7 @@ return {
 		}
 	},
 	white_fire_0011 = {
-		a_name = "go_stages_forgotten_treasures-1.png",
+		a_name = "go_stages_forgotten_treasures-1.dds",
 		size = {
 			28,
 			31
