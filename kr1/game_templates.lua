@@ -13,6 +13,12 @@ end
 local function ady(v)
     return v - anchor_y * image_y
 end
+local function v(x, y)
+    return {
+        x = x,
+        y = y
+    }
+end
 require("game_templates_utils")
 
 ----------
@@ -423,8 +429,6 @@ tt.tower.type = "sasquash"
 tt.ui.click_rect = r(-40, -30, 80, 90)
 tt.ui.has_nav_mesh = true
 
-
-
 tt = RT("soldier_sasquash", "soldier_militia")
 image_y = 80
 anchor_y = 0.17
@@ -631,7 +635,6 @@ tt.bullet.pop = nil
 tt.render.sprites[1].name = "demon_flareon_flare"
 tt.render.sprites[1].animated = true
 
-
 tt = RT("bolt_necromancer", "bolt_enemy")
 tt.bullet.align_with_trajectory = true
 tt.bullet.damage_max = 40
@@ -652,7 +655,6 @@ tt.bullet.mod = "mod_witch_frog"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
 tt.render.sprites[1].prefix = "bolt_witch"
 tt.sound_events.insert = "kr4_tower_wickedsisters_attack_v1"
-
 
 tt = RT("bolt_magnus", "bolt")
 tt.bullet.vis_flags = F_RANGED
@@ -841,8 +843,6 @@ tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].anchor.y = 0.375
 tt.sound_events.insert = "TeleporthSound"
 
-
-
 tt = RT("aura_ignus_idle", "aura")
 tt.aura.duration = 0
 tt.particles_name = "ps_hero_ignus_idle"
@@ -850,7 +850,6 @@ tt.emit_states = {"idle", "attack"}
 tt.main_script.update = scripts.aura_ignus_particles.update
 tt.particle_offsets = {vec_2(-17, 16), vec_2(-12, 27), vec_2(4, 37), vec_2(2, 35), vec_2(12, 22), vec_2(14, 13)}
 tt.flip_offset = vec_2(3, 0)
-
 
 tt = RT("aura_10yr_idle", "aura")
 tt.aura.duration = 0
@@ -953,7 +952,7 @@ tt.aura.cycle_time = 0.3
 tt.aura.mod = "mod_burning_floor_burn"
 tt.aura.radius = 75
 tt.aura.vis_flags = bor(F_MOD, F_BURN, F_RANGED)
-tt.aura.vis_bans = bor(F_ENEMY,F_FLYING)
+tt.aura.vis_bans = bor(F_ENEMY, F_FLYING)
 tt.main_script.update = scripts.aura_burning_floor.update
 tt.render.sprites[1].name = "InfernoDecal_0001"
 tt.render.sprites[1].animated = false
@@ -998,14 +997,8 @@ tt.graveyard.vis_bans = F_BOSS
 tt = RT("graveyard_s110", "graveyard_controller")
 tt.main_script.update = scripts.graveyard_s110.update
 tt.graveyard.keep_gold = false
-tt.graveyard.spawns_by_health = {
-    {"enemy_skeleton", 400},
-    {"enemy_halloween_zombie", 600},
-    {"enemy_skeleton_big", 1000},
-    {"enemy_gnoll_bloodsydian", 2000},
-    {"enemy_blade", 3750},
-    {"eb_alleria", 9e+99}
-}
+tt.graveyard.spawns_by_health = {{"enemy_skeleton", 400}, {"enemy_halloween_zombie", 600}, {"enemy_skeleton_big", 1000},
+                                 {"enemy_gnoll_bloodsydian", 2000}, {"enemy_blade", 3750}, {"eb_alleria", 9e+99}}
 tt.graveyard.vis_has = bor(F_ENEMY, F_FRIEND)
 tt.graveyard.vis_flags = F_SKELETON
 tt.graveyard.vis_bans = F_HERO
@@ -1157,9 +1150,6 @@ tt.render.sprites[1].z = Z_BULLETS + 1
 tt.render.sprites[1].loop = false
 tt.main_script.insert = scripts.mod_track_target.insert
 tt.main_script.update = scripts.mod_track_target.update
-
-
-
 
 tt = E:register_t("mod_shaman_heal", "modifier")
 
@@ -3685,7 +3675,7 @@ tt.tween.props[2] = E:clone_c("tween_prop")
 tt.tween.props[2].name = "scale"
 tt.tween.props[2].keys = {{0, vec_1(0.7)}, {fts(20), vec_1(1.5)}}
 tt = RT("decal_veznan_arcanenova", "decal_bomb_crater")
-tt.render.sprites[1].name =         "veznan_hero_arcaneNova_terrainDecal"
+tt.render.sprites[1].name = "veznan_hero_arcaneNova_terrainDecal"
 tt.render.sprites[2] = CC("sprite")
 tt.render.sprites[2].name = "fx_veznan_arcanenova_terrain"
 tt.render.sprites[2].hide_after_runs = 1
@@ -3982,7 +3972,6 @@ tt.render.sprites[1].name = "build_terrain_0005"
 tt = E:register_t("tower_holder_forgotten_treasures", "tower_holder")
 tt.tower.terrain_style = TERRAIN_STYLE_FORGOTTEN_TREASURES
 tt.render.sprites[1].name = "build_terrain_0006"
-
 
 tt = RT("tower_bastion_holder")
 
@@ -4816,8 +4805,6 @@ tt.render.sprites[1].name = "fx_paralyzing_tree_2"
 tt = RT("fx_paralyzing_tree_3", "fx_paralyzing_tree_1")
 tt.render.sprites[1].name = "fx_paralyzing_tree_3"
 
-
-
 tt = E:register_t("bolt_elves_1", "bolt_elves")
 tt.alter_reality_chance = 0.1
 tt.alter_reality_mod = "mod_teleport_mage"
@@ -4863,7 +4850,6 @@ tt.bullet.damage_min = 10
 tt = E:register_t("arrow_soldier_re_5", "arrow_soldier_re_2")
 tt.bullet.damage_max = 30
 tt.bullet.damage_min = 20
-
 
 tt = E:register_t("bolt_lance_faustus", "bolt")
 tt.bullet.acceleration_factor = 0.25
@@ -5032,7 +5018,6 @@ tt.render.sprites[1].name = "fallen_angel_hero_ultimate_meteor"
 tt.render.sprites[1].animated = false
 tt.render.sprites[1].anchor.x = 0.9166666666666666
 tt.sound_events.hit = "ElvesHeroLilithMeteorsHit"
-
 
 tt = E:register_t("torch_gnoll_burner", "arrow")
 tt.bullet.mod = "mod_gnoll_burner"
@@ -5278,7 +5263,6 @@ tt.aura.vis_flags = bor(F_RANGED, F_SPELLCASTER)
 tt.aura.vis_bans = bor(F_BOSS, F_FRIEND, F_HERO)
 tt.aura.targets_per_cycle = nil
 
-
 tt = E:register_t("aura_bravebark_springsap", "aura")
 E:add_comps(tt, "render", "tween")
 tt.aura.cycle_time = fts(3)
@@ -5359,7 +5343,6 @@ tt.aura.duration = -1
 tt.main_script.update = scripts.aura_bruce_hps.update
 tt.hps.heal_max = 3
 tt.hps.heal_every = 1
-
 
 tt = RT("aura_bomb_wilbur", "aura_rabbit_kamihare")
 tt.aura.damage_min = 110
@@ -5699,8 +5682,6 @@ tt.custom_offsets.enemy_grim_devourers = vec_2(0, 39)
 tt.custom_offsets.enemy_mounted_avenger = vec_2(0, 63)
 tt.custom_offsets.enemy_shadow_champion = vec_2(0, 55)
 tt.custom_offsets.enemy_shadows_spawns = vec_2(0, 34)
-
-
 
 tt = E:register_t("mod_druid_sylvan_affected", "modifier")
 E:add_comps(tt, "render")
@@ -6042,7 +6023,6 @@ tt.hps.heal_max = 25
 tt.hps.heal_every = fts(3)
 tt.modifier.duration = 2
 tt.hit_fx = "fx_redcap_death_blow"
-
 
 tt = E:register_t("mod_twilight_scourger_lash", "modifier")
 
@@ -7371,8 +7351,6 @@ tt.render.sprites[2].animated = false
 tt.render.sprites[2].offset = vec_2(0, 32)
 tt.ui.click_rect = r(-40, -10, 80, 90)
 
-
-
 tt = E:register_t("decal_s05_tree_round", "decal")
 tt.render.sprites[1].name = "stage5_tree"
 tt.render.sprites[1].animated = false
@@ -7854,7 +7832,6 @@ tt.delayed_play.max_delay = 3
 tt.delayed_play.idle_animation = nil
 tt.delayed_play.play_animation = "play"
 
-
 tt = E:register_t("decal_faerie_dragon_freeze_enemy", "decal_freeze_enemy")
 tt.shader_args = {
     tint_color = {0.9725490196078431, 0.6627450980392157, 0.9882352941176471, 1}
@@ -7993,7 +7970,6 @@ tt.render.sprites[1].name = "simon_gnome_fx"
 tt = E:register_t("simon_gnome_sign", "fx")
 tt.render.sprites[1].name = "simon_gnome_sign"
 tt.render.sprites[1].offset = vec_2(30, 15)
-
 
 tt = E:register_t("decal_pixie", "decal_scripted")
 E:add_comps(tt, "idle_flip", "soldier", "unit")
@@ -8412,7 +8388,6 @@ tt.tween.remove = false
 tt.tween.props[1].keys = {{0, 0}, {2, 255}, {2.5, 255}, {4.5, 0}}
 tt.tween.props[1].sprite_id = 4
 tt.tween.props[1].loop = true
-
 
 tt = RT("decal_s14_break_egg", "decal_scripted")
 
@@ -9768,3 +9743,65 @@ tt.spawn_gaps = 3
 tt = E:register_t("s72_init")
 AC(tt, "main_script")
 tt.main_script.insert = scripts.s72_init.insert
+
+tt = E:register_t("ps_bullet_tower_ballista_skill_bomb_trail_A")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "ballista_tower_junk_particle_projectile_1"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 15
+tt.particle_system.animation_fps = 30
+tt.particle_system.emit_area_spread = v(10, 10)
+tt.particle_system.z = Z_BULLET_PARTICLES
+
+tt = E:register_t("ps_bullet_tower_ballista_skill_bomb_trail_B")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "ballista_tower_junk_particle_projectile_2"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 10
+tt.particle_system.animation_fps = 30
+tt.particle_system.emit_area_spread = v(10, 10)
+tt.particle_system.z = Z_BULLET_PARTICLES
+
+tt = E:register_t("fx_tower_ballista_shot", "fx")
+tt.render.sprites[1].name = "ballista_tower_arrow_fx_idle"
+tt = E:register_t("fx_tower_ballista_final_shot", "fx")
+tt.render.sprites[1].name = "ballista_tower_special_arrow_fx_idle"
+tt = E:register_t("fx_bullet_tower_ballista_hit", "fx")
+tt.render.sprites[1].name = "ballista_tower_hit_2"
+tt = E:register_t("fx_bullet_tower_ballista_final_shot_hit", "fx")
+tt.render.sprites[1].name = "ballista_tower_special_hit_idle"
+tt = E:register_t("fx_bullet_tower_ballista_missed_arrow", "fx")
+
+E:add_comps(tt, "tween")
+
+tt.render.sprites[1].name = "ballista_tower_missed_arrow"
+tt.render.sprites[1].z = Z_OBJECTS
+tt.timed.duration = 6
+tt.timed.runs = 1e+99
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {tt.timed.duration - 0.5, 255}, {tt.timed.duration, 0}}
+tt = E:register_t("fx_bullet_tower_ballista_missed_arrow_dust", "fx")
+tt.render.sprites[1].name = "ballista_tower_missed_arrow_dust"
+tt = E:register_t("fx_bullet_tower_ballista_missed_arrow_decal", "fx")
+
+E:add_comps(tt, "tween")
+
+tt.render.sprites[1].name = "ballista_tower_missed_arrow_decal"
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[1].animated = false
+tt.timed.duration = 6
+tt.timed.runs = 1e+99
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {tt.timed.duration - 0.5, 255}, {tt.timed.duration, 0}}
+tt = E:register_t("fx_bullet_tower_ballista_bomb_spawn", "fx")
+tt.render.sprites[1].name = "ballista_tower_bomb_fx_idle"
+tt = E:register_t("fx_bullet_tower_ballista_bomb_junk_floor", "fx")
+tt.render.sprites[1].name = "ballista_tower_junk_particle_floor"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_OBJECTS
+tt.timed.duration = fts(16)
+tt.timed.runs = 1e+99
+tt = E:register_t("fx_bullet_tower_ballista_bomb_explosion", "fx")
+tt.render.sprites[1].name = "ballista_tower_bomb_explotion_idle"

@@ -5745,7 +5745,7 @@ local towers = {
         }
     },
     ballista = {
-        turn_speed = 15,
+        turn_speed = 30,
         stats = {
             cooldown = 3,
             range = 6,
@@ -5755,8 +5755,8 @@ local towers = {
         basic_attack = {
             burst_count = 5,
             cooldown = 2.5,
-            damage_min = {3, 7, 14, 25},
-            damage_max = {5, 11, 22, 38},
+            damage_min = {3, 7, 14, 30},
+            damage_max = {5, 11, 22, 40},
             range = {160, 175, 190, 210},
             damage_type = DAMAGE_PHYSICAL
         },
@@ -5766,20 +5766,21 @@ local towers = {
             price = {250, 100, 100},
             cooldown = {4, 4, 4},
             damage_factor = {1.5, 2, 2.5},
-            s_damage_factor = {0.5, 1, 1.5}
+            s_damage_factor = {0.5, 1, 1.5},
+            damage_type = DAMAGE_AGAINST_ARMOR
         },
         skill_bomb = {
             max_range = 250,
             min_range = 80,
             min_targets = 2,
             node_prediction = 40,
-            damage_radius = 55,
+            damage_radius = 70,
             price = {200, 200, 200},
             cooldown = {24, 20, 16},
             damage_min = {82, 118, 142},
             damage_max = {124, 176, 214},
             duration = {6, 6, 6},
-            damage_type = DAMAGE_PHYSICAL
+            damage_type = DAMAGE_EXPLOSION
         }
     },
     flamespitter = {

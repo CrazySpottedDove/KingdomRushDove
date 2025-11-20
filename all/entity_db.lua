@@ -22,7 +22,7 @@ function entity_db:load()
     require("components")
     require("templates")
     require("game_templates")
-    -- self:test_tween()
+    self:test_tween()
 end
 
 function entity_db:test_tween()

@@ -2218,16 +2218,6 @@ function scripts.arrow.update(this, store)
     local hit = false
 
     if target and target.health and not target.health.dead then
-        -- print("b.to")
-        -- debug_macros.print(b.to)
-        -- print("b.from")
-        -- debug_macros.print(b.from)
-        -- print("this.pos")
-        -- debug_macros.print(this.pos)
-        -- print("flight_time")
-        -- debug_macros.print(b.flight_time)
-        -- print("delta_x/speed.x")
-        -- debug_macros.print((b.to.x - b.from.x) / b.speed.x)
         local target_pos = V.vclone(target.pos)
 
         if target.unit and target.unit.hit_offset and not b.ignore_hit_offset then

@@ -211,12 +211,12 @@ return {
         tt_title = _("TOWER_DEMON_PIT_NAME"),
         tt_desc = _("TOWER_DEMON_PIT_1_DESCRIPTION"),
         place = 15
-    }), merge(templates.upgrade,{
+    }), merge(templates.upgrade, {
         action_arg = "tower_flamespitter_lvl4",
         image = "kr5_main_icons_0012",
         place = 16,
         tt_title = _("TOWER_FLAMESPITTER_NAME"),
-        tt_desc = _("TOWER_FLAMESPITTER_1_DESCRIPTION"),
+        tt_desc = _("TOWER_FLAMESPITTER_1_DESCRIPTION")
     }), templates.sell}},
 
     -- 箭塔
@@ -297,6 +297,12 @@ return {
         place = 17,
         tt_title = _("TOWER_ROYAL_ARCHERS_NAME"),
         tt_desc = _("TOWER_ROYAL_ARCHERS_1_DESCRIPTION")
+    }), merge(templates.upgrade, {
+        action_arg = "tower_ballista_lvl4",
+        image = "kr5_main_icons_0010",
+        place = 18,
+        tt_title = _("TOWER_BALLISTA_NAME"),
+        tt_desc = _("TOWER_BALLISTA_1_DESCRIPTION")
     }), templates.sell}},
 
     -- 兵营
@@ -2399,5 +2405,40 @@ return {
             tt_title = _("TOWER_FLAMESPITTER_4_SKILL_COLUMNS_3_NAME"),
             tt_desc = _("TOWER_FLAMESPITTER_4_SKILL_COLUMNS_3_DESCRIPTION")
         }}
-    }), templates.sell}}
+    }), templates.sell}},
+    ballista = {{merge(templates.upgrade_power, {
+        action_arg = "skill_final_shot",
+        action = "upgrade_power",
+        image = "kr5_special_icons_0019",
+        place = 6,
+        sounds = {"TowerBallistaSkillATaunt"},
+        tt_phrase = _("TOWER_BALLISTA_4_SKILL_FINAL_SHOT_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_BALLISTA_4_SKILL_FINAL_SHOT_1_NAME"),
+            tt_desc = _("TOWER_BALLISTA_4_SKILL_FINAL_SHOT_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_BALLISTA_4_SKILL_FINAL_SHOT_2_NAME"),
+            tt_desc = _("TOWER_BALLISTA_4_SKILL_FINAL_SHOT_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_BALLISTA_4_SKILL_FINAL_SHOT_3_NAME"),
+            tt_desc = _("TOWER_BALLISTA_4_SKILL_FINAL_SHOT_3_DESCRIPTION")
+        }}
+    }), merge(templates.upgrade_power, {
+        action_arg = "skill_bomb",
+        action = "upgrade_power",
+        image = "kr5_special_icons_0021",
+        place = 7,
+        sounds = {"TowerBallistaSkillBTaunt"},
+        tt_phrase = _("TOWER_BALLISTA_4_SKILL_BOMB_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_BALLISTA_4_SKILL_BOMB_1_NAME"),
+            tt_desc = _("TOWER_BALLISTA_4_SKILL_BOMB_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_BALLISTA_4_SKILL_BOMB_2_NAME"),
+            tt_desc = _("TOWER_BALLISTA_4_SKILL_BOMB_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_BALLISTA_4_SKILL_BOMB_3_NAME"),
+            tt_desc = _("TOWER_BALLISTA_4_SKILL_BOMB_3_DESCRIPTION")
+        }}
+    }),templates.sell}}
 }

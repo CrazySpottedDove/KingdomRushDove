@@ -2307,6 +2307,14 @@ return {
         icon = 11,
         detail_icon = 11,
         from_kr = 5
+    },
+    -- 16, 17: 蛤蟆
+    -- 18: 巨像
+    {
+        name = "tower_ballista_lvl4",
+        icon = 5,
+        detail_icon = 5,
+        from_kr = 5
     }},
     map_animations1 = {{
         sail_time = 15,

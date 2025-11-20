@@ -1,3 +1,4 @@
+
 local i18n = require("i18n")
 require("constants")
 local anchor_x = 0
@@ -12,6 +13,12 @@ local function adx(v)
 end
 local function ady(v)
     return v - anchor_y * image_y
+end
+local function v(x, y)
+    return {
+        x = x,
+        y = y
+    }
 end
 require("game_templates_utils")
 
@@ -1509,10 +1516,9 @@ tt.main_script.remove = scripts.tower_royal_archers.remove
 tt.sid_rapacious_hunter = 6
 tt.sound_events.insert = "TowerRoyalArchersTaunt"
 tt.ui.click_rect = r(-35, 3, 73, 77)
+
 tt = E:register_t("tower_royal_archers_pow_rapacious_hunter_tamer", "decal_scripted")
-
 E:add_comps(tt, "pos", "main_script", "attacks")
-
 b = balance.towers.royal_archers
 tt.render.sprites[1].prefix = "royal_archer_tower_royal_archer_lvl4_rapacious_hunter_tamer"
 tt.render.sprites[1].name = "idle_1"
@@ -1541,10 +1547,9 @@ tt.idle = {}
 tt.idle.min_cooldown = 4
 tt.idle.max_cooldown = 10
 tt.idle.animation = "idle_2"
+
 tt = E:register_t("tower_royal_archers_pow_rapacious_hunter_eagle", "decal_scripted")
-
 E:add_comps(tt, "pos", "main_script", "attacks", "force_motion", "tween", "sound_events")
-
 b = balance.towers.royal_archers
 tt.flight_speed = 45
 tt.flight_height = 27
@@ -1647,3 +1652,189 @@ tt.damage_min = 0.1
 tt.damage_max = 0.1
 tt.damage_type = bor(DAMAGE_ARMOR, DAMAGE_NO_SHIELD_HIT)
 -- 皇家弓箭手 END
+
+-- 巨弩哨站 BEGIN
+tt = E:register_t("tower_ballista_lvl4", "tower")
+local b = balance.towers.ballista
+E:add_comps(tt, "powers", "attacks")
+tt.tower.level = 1
+tt.tower.price = b.price[4]
+tt.tower.menu_offset = v(0, 30)
+tt.tower.type = "ballista"
+tt.info.i18n_key = "TOWER_BALLISTA_4"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrain_archer_%04i"
+tt.render.sprites[1].offset = v(0, 15)
+for i = 2, 4 do
+    tt.render.sprites[i] = E:clone_c("sprite")
+    tt.render.sprites[i].animated = true
+    tt.render.sprites[i].prefix = "ballista_tower_lvl4_tower_base_layer" .. i - 1
+    tt.render.sprites[i].name = "idle_1_1"
+    tt.render.sprites[i].offset = v(0, 5)
+    tt.render.sprites[i].sort_y_offset = 5
+    tt.render.sprites[i].group = "layers_base"
+end
+tt.render.sprites[5] = E:clone_c("sprite")
+tt.render.sprites[5].animated = true
+tt.render.sprites[5].prefix = "ballista_tower_lvl4_tower_goblin"
+tt.render.sprites[5].name = "idle"
+tt.render.sprites[5].offset = tt.render.sprites[2].offset
+tt.render.sprites[5].sort_y_offset = tt.render.sprites[2].sort_y_offset
+tt.render.sprites[6] = E:clone_c("sprite")
+tt.render.sprites[6].animated = true
+tt.render.sprites[6].name = "idle_1_1"
+tt.render.sprites[6].prefix = "ballista_tower_lvl4_tower_top"
+tt.render.sprites[6].offset = tt.render.sprites[2].offset
+tt.render.sprites[6].angles = {}
+tt.render.sprites[6].angles.idle = {"idle_1_1", "idle_1_2", "idle_1_3", "idle_1_4", "idle_1_5"}
+tt.render.sprites[6].angles.shot = {"ability1_loop_1_1", "ability1_loop_1_2", "ability1_loop_1_3", "ability1_loop_1_4",
+                                    "ability1_loop_1_5"}
+tt.render.sprites[6].angles.reload = {"ability1_out_1_1", "ability1_out_1_2", "ability1_out_1_3", "ability1_out_1_4",
+                                      "ability1_out_1_5"}
+tt.render.sprites[6].angles.final_shot = {"ability2_1", "ability2_2", "ability2_3", "ability2_4", "ability2_5"}
+tt.render.sprites[6].sort_y_offset = tt.render.sprites[2].sort_y_offset
+tt.render.sid_tower_base_back = 2
+tt.render.sid_tower_base_arrows = 3
+tt.render.sid_tower_base_front = 4
+tt.render.sid_goblin = 5
+tt.render.sid_tower_top = 6
+tt.main_script.insert = scripts.tower_archer.insert
+tt.main_script.update = scripts.tower_ballista.update
+tt.main_script.remove = scripts.tower_ballista.remove
+tt.attacks.range = b.basic_attack.range[4]
+tt.attacks.min_cooldown = b.shared_min_cooldown
+tt.attacks.range = b.basic_attack.range[1]
+tt.attacks.attack_delay_on_spawn = fts(5)
+tt.attacks.list[1] = E:clone_c("bullet_attack")
+tt.attacks.list[1].bullet = "bullet_tower_ballista_lvl4"
+tt.attacks.list[1].cooldown = b.basic_attack.cooldown
+tt.attacks.list[1].shoot_time = fts(8)
+tt.attacks.list[1].vis_flags = bor(F_RANGED)
+tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
+tt.attacks.list[1].burst_count = 5
+tt.attacks.list[1].max_dist_between_shots = 60
+tt.attacks.list[1].bullet_start_offset = {v(12, 54), v(23, 59), v(15, 78), v(0, 80), v(0, 47)}
+tt.attacks.list[2] = E:clone_c("bullet_attack")
+tt.attacks.list[2].bullet = "bullet_tower_ballista_skill_bomb"
+tt.attacks.list[2].max_range = b.skill_bomb.max_range
+tt.attacks.list[2].min_range = b.skill_bomb.min_range
+tt.attacks.list[2].cooldown = b.skill_bomb.cooldown[1]
+tt.attacks.list[2].shoot_time = fts(20)
+tt.attacks.list[2].vis_bans = bor(F_FLYING, F_NIGHTMARE, F_CLIFF)
+tt.attacks.list[2].bullet_start_offset = v(0, 10)
+tt.attacks.list[2].node_prediction = fts(b.skill_bomb.node_prediction)
+tt.attacks.list[2].damage_type = b.skill_bomb.damage_type
+tt.attacks.list[2].damage_max = b.skill_bomb.damage_max
+tt.attacks.list[2].damage_min = b.skill_bomb.damage_min
+tt.attacks.list[2].min_targets = b.skill_bomb.min_targets
+tt.attacks.list[2].sound = "TowerTricannonBasicAttackFire"
+tt.powers.skill_final_shot = E:clone_c("power")
+tt.powers.skill_final_shot.cooldown = b.skill_final_shot.cooldown
+tt.powers.skill_final_shot.price_base = b.skill_final_shot.price[1]
+tt.powers.skill_final_shot.price_inc = b.skill_final_shot.price[2]
+tt.powers.skill_final_shot.damage_factor = b.skill_final_shot.damage_factor[1]
+tt.powers.skill_final_shot.damage_factor_config = b.skill_final_shot.damage_factor
+tt.powers.skill_final_shot.bullet = "bullet_tower_ballista_skill_final_shot"
+tt.powers.skill_final_shot.enc_icon = 19
+tt.powers.skill_bomb = E:clone_c("power")
+tt.powers.skill_bomb.price_base = b.skill_bomb.price[1]
+tt.powers.skill_bomb.price_inc = b.skill_bomb.price[2]
+tt.powers.skill_bomb.cooldown = b.skill_bomb.cooldown
+tt.powers.skill_bomb.duration = b.skill_bomb.duration
+tt.powers.skill_bomb.enc_icon = 20
+tt.shot_fx = "fx_tower_ballista_shot"
+tt.final_shot_fx = "fx_tower_ballista_final_shot"
+tt.tower_top_offset = v(0, 20)
+tt.turn_speed = b.turn_speed
+tt.sound_events.insert = "TowerBallistaTaunt"
+tt.sound_events.tower_room_select = "TowerBallistaTauntSelect"
+tt.ui.click_rect = r(-35, 0, 70, 90)
+tt.ui.click_rect_offset_y = -10
+
+tt = E:register_t("bullet_tower_ballista_lvl4", "bullet")
+b = balance.towers.ballista.basic_attack
+tt.bullet.hit_fx = "fx_bullet_tower_ballista_hit"
+tt.bullet.flight_time = fts(2)
+tt.bullet.hit_time = fts(2)
+tt.bullet.damage_type = DAMAGE_PHYSICAL
+tt.bullet.level = 1
+tt.bullet.damage_max = b.damage_max[4]
+tt.bullet.damage_min = b.damage_min[4]
+tt.main_script.update = scripts.bullet_tower_ballista.update
+tt.render.sprites[1].anchor = v(0.2, 0.5)
+tt.render.sprites[1].name = "ballista_tower_arrow_idle"
+tt.render.sprites[1].loop = false
+tt.image_width = 175
+tt.ray_duration = fts(11)
+tt.hit_delay = fts(3)
+tt.missed_arrow = "fx_bullet_tower_ballista_missed_arrow"
+tt.missed_arrow_dust = "fx_bullet_tower_ballista_missed_arrow_dust"
+tt.missed_arrow_decal = "fx_bullet_tower_ballista_missed_arrow_decal"
+tt.sound_events.insert = "TowerBallistaBasicAttack"
+
+tt = E:register_t("bullet_tower_ballista_skill_final_shot", "bullet_tower_ballista_lvl4")
+b = balance.towers.ballista.skill_final_shot
+tt.bullet.hit_fx = "fx_bullet_tower_ballista_final_shot_hit"
+tt.bullet.damage_factor = b.damage_factor[1]
+tt.bullet.damage_type = b.damage_type
+tt.bullet.mod = "mod_bullet_tower_ballista_skill_final_shot_stun"
+tt.render.sprites[1].anchor = v(0.5, 0.5)
+tt.render.sprites[1].name = "ballista_tower_special_arrow_idle"
+tt.image_width = 162.5
+tt.is_final_shot = true
+tt.sound_events.insert = "TowerBallistaFinalNail"
+tt = E:register_t("bullet_tower_ballista_skill_bomb", "bomb")
+local b = balance.towers.ballista.skill_bomb
+tt.bullet.damage_max_config = b.damage_area_max
+tt.bullet.damage_min_config = b.damage_area_min
+tt.bullet.damage_radius = b.damage_radius
+tt.bullet.damage_type = b.damage_type
+tt.bullet.flight_time = fts(31)
+tt.bullet.hit_fx = "fx_bullet_tower_ballista_bomb_explosion"
+tt.bullet.pop_chance = 0.5
+tt.bullet.particles_name =
+    {"ps_bullet_tower_ballista_skill_bomb_trail_A", "ps_bullet_tower_ballista_skill_bomb_trail_B"}
+tt.main_script.update = scripts.bullet_tower_ballista_skill_bomb.update
+tt.main_script.remove = scripts.bullet_tower_ballista_skill_bomb.remove
+tt.sound_events.hit_water = nil
+tt.sound_events.hit = "TowerTricannonBasicAttackImpact"
+tt.render.sprites[1].name = "ballista_tower_bomb_projectile_idle"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].hidden = false
+tt.scraps = "aura_bullet_tower_ballista_skill_bomb"
+tt.duration_config = balance.towers.ballista.skill_bomb.duration
+tt.sound_events.insert = "TowerBallistaScrapBombCast"
+tt.sound_events.hit = "TowerBallistaScrapBombExplosion"
+
+tt = E:register_t("aura_bullet_tower_ballista_skill_bomb", "aura")
+b = balance.towers.ballista.skill_bomb
+E:add_comps(tt, "render", "tween")
+tt.aura.mod = "mod_bullet_tower_ballista_skill_bomb_slow"
+tt.aura.radius = 35
+tt.aura.vis_flags = bor(F_AREA)
+tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
+tt.aura.duration = nil
+tt.aura.cycle_time = fts(5)
+tt.aura.excluded_templates = {}
+tt.render.sprites[1].prefix = "ballista_tower_bomb_decal"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_bullet_tower_ballista_skill_bomb.update
+tt.damage_min = 0
+tt.damage_max = 0
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].sprite_id = 1
+tt.junk_fx = "fx_bullet_tower_ballista_bomb_junk_floor"
+
+tt = E:register_t("mod_bullet_tower_ballista_skill_final_shot_stun", "mod_stun")
+b = balance.towers.ballista.skill_final_shot
+tt.modifier.duration = fts(b.stun_time)
+tt.modifier.vis_flags = bor(F_MOD, F_STUN)
+tt.modifier.vis_bans = bor(F_BOSS)
+
+tt = E:register_t("mod_bullet_tower_ballista_skill_bomb_slow", "mod_slow")
+b = balance.towers.ballista.skill_bomb
+tt.slow.factor = 0.5
+tt.modifier.duration = 0.5
+-- 巨弩哨站 END

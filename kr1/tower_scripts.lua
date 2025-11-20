@@ -7202,8 +7202,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
     end
 
     local function find_target(attack)
-        local target = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, attack.vis_flags,
-            attack.vis_bans)
+        local target = U.detect_foremost_enemy_in_range_filter_off(tpos, a.range, attack.vis_flags, attack.vis_bans)
         return target, target and U.calculate_enemy_ffe_pos(target, attack.node_prediction) or nil
     end
 
@@ -7265,8 +7264,8 @@ function scripts.tower_necromancer_lvl4.update(this, store)
             return
         end
 
-        local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos, attack.max_range,
-            attack.node_prediction, attack.vis_flags, attack.vis_bans)
+        local enemy, enemies = U.find_foremost_enemy_in_range_filter_off(tpos, attack.max_range, attack.node_prediction,
+            attack.vis_flags, attack.vis_bans)
 
         if not enemy or #enemies < attack.min_targets then
             attack.ts = attack.ts + fts(10)
@@ -14870,10 +14869,11 @@ function scripts.tower_flamespitter.update(this, store)
                         if tried_seek_last_time then
                             tried_seek_last_time = false
                         else
-                            local targets = U.find_enemies_in_range_filter_on(tpos, this.attacks.range, attack_basic.vis_flags, attack_basic.vis_bans, function(v)
-                                return math.abs(V.angleTo(tpos.x - v.pos.x, tpos.y - v.pos.y, tpos.x - pred_pos.x,
-                                    tpos.y - pred_pos.y)) < attack_basic.max_retarget_angle
-                            end)
+                            local targets = U.find_enemies_in_range_filter_on(tpos, this.attacks.range,
+                                attack_basic.vis_flags, attack_basic.vis_bans, function(v)
+                                    return math.abs(V.angleTo(tpos.x - v.pos.x, tpos.y - v.pos.y, tpos.x - pred_pos.x,
+                                        tpos.y - pred_pos.y)) < attack_basic.max_retarget_angle
+                                end)
                             target = targets and targets[random(1, #targets)] or nil
 
                             tried_seek_last_time = true
@@ -15119,4 +15119,757 @@ function scripts.controller_tower_flamespitter_column.update(this, store)
 end
 
 -- 喷火器 END
+
+-- 巨弩哨站 BEGIN
+scripts.tower_ballista = {}
+
+function scripts.tower_ballista.update(this, store)
+    local a = this.attacks
+    local aa = a.list[1]
+    local ab = a.list[2]
+    local last_ts = store.tick_ts - aa.cooldown
+
+    aa.ts = store.tick_ts - aa.cooldown + this.attacks.attack_delay_on_spawn
+
+    local arrive_epsilon = 0.5
+    local last_ts_idle = store.tick_ts
+    local idle_cooldown = math.random(4, 8)
+    local a_name, a_flip, angle_idx
+
+    if not this.tower_upgrade_persistent_data.current_angle then
+        this.tower_upgrade_persistent_data.current_angle = 235
+    end
+
+    local sprites = this.render.sprites
+    local tpos = tpos(this)
+    local tw = this.tower
+    local pow_s = this.powers.skill_final_shot
+    local pow_b = this.powers.skill_bomb
+
+    local function find_target(attack)
+        local target,_ = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, a.range, attack.vis_flags,
+            attack.vis_bans)
+        return target, target and U.calculate_enemy_ffe_pos(target, attack.node_prediction) or nil
+    end
+
+    local function animation_name_facing_angle_ballista(group, angle_deg)
+        local a1, a2, a3, a4, a5, a6, a7, a8 = 22.5, 67.5, 112.5, 157.5, 202.5, 247.5, 292.5, 337.5
+        local angles = sprites[this.render.sid_tower_top].angles[group]
+
+        if a1 <= angle_deg and angle_deg < a2 then
+            return angles[3], true, 3
+        elseif a2 <= angle_deg and angle_deg < a3 then
+            return angles[4], false, 4
+        elseif a3 <= angle_deg and angle_deg < a4 then
+            return angles[3], false, 3
+        elseif a4 <= angle_deg and angle_deg < a5 then
+            return angles[2], false, 2
+        elseif a5 <= angle_deg and angle_deg < a6 then
+            return angles[1], false, 1
+        elseif a6 <= angle_deg and angle_deg < a7 then
+            return angles[5], false, 5
+        elseif a7 <= angle_deg and angle_deg < a8 then
+            return angles[1], true, 1
+        else
+            return angles[2], true, 2
+        end
+    end
+
+    local function animation_name_facing_point_ballista(group, point, offset)
+        local fx, fy = this.pos.x, this.pos.y
+
+        if offset then
+            fx, fy = fx + offset.x, fy + offset.y
+        end
+
+        local vx, vy = V.sub(point.x, point.y, fx, fy)
+        local v_angle = V.angleTo(vx, vy)
+        local angle = km.unroll(v_angle)
+        local angle_deg = angle * 180 / math.pi
+
+        this.tower_upgrade_persistent_data.current_angle = angle_deg
+
+        return animation_name_facing_angle_ballista(group, angle_deg)
+    end
+
+    local function rotate_towards_angle(target_angle_deg)
+        local current_angle = this.tower_upgrade_persistent_data.current_angle
+        local angle_dist = km.short_angle_deg(current_angle, target_angle_deg)
+
+        current_angle = km.unroll_deg(current_angle + math.min(this.turn_speed, math.abs(angle_dist)) *
+                                          km.sign(angle_dist))
+        a_name, a_flip, angle_idx = animation_name_facing_angle_ballista("idle", current_angle)
+
+        U.animation_start(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
+
+        this.tower_upgrade_persistent_data.current_angle = current_angle
+
+        return km.short_angle_deg(current_angle, target_angle_deg)
+    end
+
+    local function rotate_towards_pos(pos)
+        local vx, vy = V.sub(pos.x, pos.y, this.pos.x + this.tower_top_offset.x, this.pos.y + this.tower_top_offset.y)
+        local v_angle = V.angleTo(vx, vy)
+        local angle_to_target = km.unroll(v_angle)
+
+        angle_to_target = angle_to_target * 180 / math.pi
+
+        return rotate_towards_angle(angle_to_target)
+    end
+
+    local function shoot_bomb(attack, dest)
+        local b = E:create_entity(attack.bullet)
+        b.pos.x, b.pos.y = this.pos.x + attack.bullet_start_offset.x, this.pos.y + attack.bullet_start_offset.y
+        local bl = b.bullet
+        bl.from = V.vclone(b.pos)
+        bl.to = dest
+        bl.level = pow_b.level
+        bl.source_id = this.id
+        bl.damage_min = attack.damage_min[pow_b.level]
+        bl.damage_max = attack.damage_max[pow_b.level]
+        bl.damage_factor = tw.damage_factor * bl.damage_factor
+        queue_insert(store, b)
+    end
+
+    local function check_skill_bomb()
+        if pow_b.level <= 0 or not ready_to_attack(ab, store, tw.cooldown_factor) then
+            return
+        end
+
+        local enemy, enemies, pred_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, ab.max_range,
+            ab.node_prediction, ab.vis_flags, ab.vis_bans, E:get_template("bullet_tower_ballista_skill_bomb").bullet
+                .damage_radius)
+
+        if not enemy or #enemies < ab.min_targets then
+            return
+        end
+
+        local available_paths = {enemy.nav_path.pi}
+        local nearest = P:nearest_nodes(pred_pos.x, pred_pos.y, available_paths)
+
+        if #nearest > 0 then
+            local path_pi, path_spi, path_ni = unpack(nearest[1])
+
+            path_spi = 1
+            pred_pos = P:node_pos(path_pi, path_spi, path_ni)
+        end
+
+        local start_ts = store.tick_ts
+
+        U.animation_start(this, "ability1", nil, store.tick_ts, false, this.render.sid_goblin)
+
+        while store.tick_ts - start_ts < ab.shoot_time do
+            coroutine.yield()
+        end
+
+        shoot_bomb(ab, pred_pos)
+
+        ab.ts = start_ts
+    end
+
+    a_name, a_flip, angle_idx = animation_name_facing_angle_ballista("idle",
+        this.tower_upgrade_persistent_data.current_angle)
+
+    U.animation_start(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
+
+    -- local attack = this.attacks.list[1]
+    local target, pred_pos = find_target(aa)
+
+    ::label_586_0::
+
+    while true do
+        if tw.blocked then
+            coroutine.yield()
+        else
+            if pow_b.changed then
+                pow_b.changed = nil
+                ab.cooldown = pow_b.cooldown[pow_b.level]
+                ab.ts = store.tick_ts - ab.cooldown
+            end
+            if pow_s.changed then
+                pow_s.damage_factor = pow_s.damage_factor_config[pow_s.level]
+                pow_s.changed = nil
+            end
+
+            SU.towers_swaped(store, this, a.list)
+
+            if idle_cooldown < store.tick_ts - last_ts_idle and (not target or not pred_pos) then
+                local new_angle
+
+                if this.tower_upgrade_persistent_data.current_angle > 270 then
+                    new_angle = math.random(180, 235)
+                else
+                    new_angle = math.random(305, 360)
+                end
+
+                repeat
+                    local angle_dist
+                    local end_rotation = false
+
+                    angle_dist = rotate_towards_angle(new_angle)
+                    target, pred_pos = find_target(aa)
+                    end_rotation = arrive_epsilon >= math.abs(angle_dist) or target and pred_pos
+
+                    if not end_rotation then
+                        coroutine.yield()
+                    end
+                until end_rotation
+
+                last_ts_idle = store.tick_ts
+                idle_cooldown = math.random(4, 8)
+            end
+
+            if target and pred_pos then
+                local angle_dist = rotate_towards_pos(pred_pos)
+            end
+
+            if ready_to_attack(aa, store, tw.cooldown_factor) then
+                target, pred_pos = find_target(aa)
+
+                if not target then
+                    aa.ts = aa.ts + fts(10)
+                    goto label_586_0
+                end
+
+                local a_name, a_flip, angle_idx
+                local start_ts = store.tick_ts
+
+                repeat
+                    local angle_dist
+                    local reached_target = false
+
+                    if target and pred_pos then
+                        angle_dist = rotate_towards_pos(pred_pos)
+                        target, pred_pos = find_target(aa)
+                        reached_target = arrive_epsilon >= math.abs(angle_dist) and target and pred_pos
+                    end
+
+                    if not target or not pred_pos then
+                        goto label_586_1
+                    end
+
+                    if not reached_target then
+                        coroutine.yield()
+                    end
+                until reached_target
+
+                local last_target_pos = V.vclone(pred_pos)
+                local missed_shot = false
+                local shoot_final_shot = false
+
+                for i = 1, aa.burst_count do
+                    a_name, a_flip, angle_idx = animation_name_facing_point_ballista("idle", pred_pos,
+                        this.tower_top_offset)
+
+                    local b
+
+                    if pow_s.level > 0 and i == aa.burst_count then
+                        shoot_final_shot = true
+                        a_name, a_flip, angle_idx = animation_name_facing_point_ballista("final_shot", pred_pos,
+                            this.tower_top_offset)
+
+                        U.animation_start(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
+                        U.y_wait(store, fts(6) * tw.cooldown_factor)
+
+                        b = E:create_entity(this.powers.skill_final_shot.bullet)
+                    else
+                        b = E:create_entity(aa.bullet)
+                    end
+
+                    missed_shot = false
+                    target, pred_pos = find_target(this.attacks.list[1])
+
+                    if not target then
+                        pred_pos = V.vclone(last_target_pos)
+                        local offset_x, offset_y = random(5, 10), random(5, 10)
+                        local angle = random() * math.pi * 2
+                        offset_x, offset_y = V.rotate(angle, offset_x, offset_y)
+                        pred_pos.x, pred_pos.y = V.add(pred_pos.x, pred_pos.y, offset_x, offset_y)
+                        missed_shot = true
+                    else
+                        local dist = V.dist(last_target_pos.x, last_target_pos.y, pred_pos.x, pred_pos.y)
+                        local max_dist = aa.max_dist_between_shots
+
+                        if shoot_final_shot then
+                            max_dist = max_dist * 1.5
+                        end
+
+                        if max_dist < dist then
+                            local enemy = U.detect_foremost_enemy_in_range_filter_off(last_target_pos, max_dist,
+                                aa.vis_flags, aa.vis_bans)
+
+                            if not enemy then
+                                local dir_x, dir_y = V.sub(target.pos.x, target.pos.y, last_target_pos.x,
+                                    last_target_pos.y)
+
+                                dir_x, dir_y = V.normalize(dir_x, dir_y)
+                                dir_x, dir_y = V.mul(max_dist, dir_x, dir_y)
+                                pred_pos.x, pred_pos.y = V.add(last_target_pos.x, last_target_pos.y, dir_x, dir_y)
+                                missed_shot = true
+                            else
+                                pred_pos = U.calculate_enemy_ffe_pos(enemy, aa.node_prediction)
+                                target = enemy
+                            end
+                        end
+                    end
+
+                    last_target_pos = V.vclone(pred_pos)
+
+                    local start_offset = V.vclone(aa.bullet_start_offset[angle_idx])
+
+                    if not a_flip then
+                        start_offset.x = -start_offset.x
+                    end
+
+                    b.pos.x, b.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
+                    local bl = b.bullet
+                    bl.from = V.vclone(b.pos)
+                    bl.to = V.vclone(pred_pos)
+
+                    if not missed_shot and target and not aa.ignore_hit_offset then
+                        bl.to.x = bl.to.x + target.unit.hit_offset.x
+                        bl.to.y = bl.to.y + target.unit.hit_offset.y
+                    end
+
+                    if not missed_shot and target then
+                        bl.target_id = target.id
+                    end
+
+                    bl.source_id = this.id
+                    bl.level = this.tower.level
+                    bl.damage_factor = bl.damage_factor * tw.damage_factor
+                    if shoot_final_shot then
+                        bl.damage_factor = this.powers.skill_final_shot.damage_factor * bl.damage_factor
+                        local fx = E:create_entity(this.final_shot_fx)
+                        fx.pos = V.vclone(bl.from)
+                        fx.render.sprites[1].ts = store.tick_ts
+                        queue_insert(store, fx)
+                    end
+
+                    if missed_shot then
+                        b.missed_shot = true
+                    end
+
+                    queue_insert(store, b)
+
+                    local fx = E:create_entity(this.shot_fx)
+                    fx.pos = V.vclone(bl.from)
+                    local s = fx.render.sprites[1]
+                    s.ts = store.tick_ts
+                    local angle = V.angleTo(bl.to.x - fx.pos.x, bl.to.y - fx.pos.y)
+                    s.r = angle
+                    if angle_idx == 3 or angle_idx == 4 then
+                        s.z = sprites[this.render.sid_tower_top].z
+                    else
+                        s.z = sprites[this.render.sid_tower_top].z + 1
+                    end
+
+                    queue_insert(store, fx)
+
+                    if i < 5 then
+                        U.animation_start_group(this, "ability" .. i, false, store.tick_ts, false, "layers_base")
+                    end
+
+                    if shoot_final_shot then
+                        U.y_animation_wait(this, this.render.sid_tower_top)
+                    else
+                        a_name, a_flip, angle_idx = animation_name_facing_point_ballista("shot", pred_pos,
+                            this.tower_top_offset)
+
+                        U.y_animation_play(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
+                    end
+                end
+
+                shoot_final_shot = false
+                aa.ts = store.tick_ts
+                last_ts = start_ts
+
+                U.y_wait(store, fts(15) * tw.cooldown_factor)
+
+                U.y_animation_play_group(this, "ability5", false, store.tick_ts, false, "layers_base")
+
+                a_name, a_flip, angle_idx = animation_name_facing_angle_ballista("reload",
+                    this.tower_upgrade_persistent_data.current_angle)
+
+                U.y_animation_play(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
+                U.y_wait(store, fts(4) * tw.cooldown_factor)
+
+                last_ts_idle = store.tick_ts
+                idle_cooldown = random(4, 8)
+            end
+
+            check_skill_bomb()
+
+            ::label_586_1::
+
+            this.tower_upgrade_persistent_data.last_ts = last_ts
+
+            coroutine.yield()
+        end
+    end
+end
+
+scripts.bullet_tower_ballista = {}
+
+function scripts.bullet_tower_ballista.update(this, store)
+    local b = this.bullet
+    local s = this.render.sprites[1]
+    local target = store.entities[b.target_id]
+    local source = store.entities[b.source_id]
+    local dest = V.vclone(b.to)
+
+    local function update_sprite()
+        if this.track_target and target and target.motion then
+            local tpx, tpy = target.pos.x, target.pos.y
+
+            if not b.ignore_hit_offset then
+                tpx, tpy = tpx + target.unit.hit_offset.x, tpy + target.unit.hit_offset.y
+            end
+
+            local d = math.max(math.abs(tpx - b.to.x), math.abs(tpy - b.to.y))
+
+            if d > b.max_track_distance then
+                log.paranoid("(%s) ray_simple target (%s) out of max_track_distance", this.id, target.id)
+
+                target = nil
+            else
+                dest.x, dest.y = target.pos.x, target.pos.y
+
+                if target.unit and target.unit.hit_offset then
+                    dest.x, dest.y = dest.x + target.unit.hit_offset.x, dest.y + target.unit.hit_offset.y
+                end
+            end
+        end
+
+        local angle = V.angleTo(dest.x - this.pos.x, dest.y - this.pos.y)
+
+        s.r = angle
+        s.scale.x = V.dist(dest.x, dest.y, this.pos.x, this.pos.y) / this.image_width
+    end
+
+    local function hit_target()
+        if target then
+            local d = SU.create_bullet_damage(b, target.id, this.id)
+
+            queue_damage(store, d)
+
+            local mods
+            if b.mod then
+                mods = type(b.mod) == "table" and b.mod or {b.mod}
+            elseif b.mods then
+                mods = b.mods
+            end
+            if mods then
+                for _, mod_name in pairs(mods) do
+                    local mod = E:create_entity(mod_name)
+                    mod.modifier.source_id = this.id
+                    mod.modifier.target_id = target.id
+                    mod.modifier.level = b.level
+                    mod.modifier.source_damage = d
+                    mod.modifier.damage_factor = b.damage_factor
+                    queue_insert(store, mod)
+                end
+            end
+
+            local fx = E:create_entity(b.hit_fx)
+
+            fx.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+            fx.render.sprites[1].ts = store.tick_ts
+
+            queue_insert(store, fx)
+
+            if this.is_final_shot then
+                local angle = V.angleTo(b.from.x - b.to.x, b.from.y - b.to.y)
+
+                fx.render.sprites[1].r = angle
+            end
+        elseif this.missed_shot and GR:cell_is_only(this.pos.x, this.pos.y, TERRAIN_LAND) then
+            local fx = E:create_entity(this.missed_arrow_decal)
+
+            fx.pos = V.v(b.to.x, b.to.y)
+            fx.render.sprites[1].ts = store.tick_ts
+
+            queue_insert(store, fx)
+
+            local fx = E:create_entity(this.missed_arrow_dust)
+
+            fx.pos = V.v(b.to.x, b.to.y)
+            fx.render.sprites[1].ts = store.tick_ts
+
+            queue_insert(store, fx)
+
+            local fx = E:create_entity(this.missed_arrow)
+
+            fx.pos = V.v(b.to.x, b.to.y)
+            fx.render.sprites[1].ts = store.tick_ts
+            fx.render.sprites[1].flip_x = b.to.x > b.from.x
+
+            queue_insert(store, fx)
+        end
+    end
+
+    if not b.ignore_hit_offset and this.track_target and target and target.motion then
+        b.to.x, b.to.y = target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y
+    end
+
+    s.scale = s.scale or V.v(1, 1)
+    s.ts = store.tick_ts
+
+    update_sprite()
+
+    if b.hit_time > fts(1) then
+        while store.tick_ts - s.ts < b.hit_time do
+            coroutine.yield()
+
+            if target and U.flag_has(target.vis.bans, F_RANGED) then
+                target = nil
+            end
+
+            if this.track_target then
+                update_sprite()
+            end
+        end
+    end
+
+    local already_hit_target = false
+
+    if this.ray_duration then
+        while store.tick_ts - s.ts < this.ray_duration do
+            if this.track_target then
+                update_sprite()
+            end
+
+            if source and not store.entities[source.id] then
+                queue_remove(store, this)
+
+                break
+            end
+
+            if not already_hit_target and store.tick_ts - s.ts > this.hit_delay then
+                hit_target()
+
+                already_hit_target = true
+            end
+
+            coroutine.yield()
+
+            s.hidden = false
+        end
+    else
+        while not U.animation_finished(this, 1) do
+            if source and not store.entities[source.id] then
+                queue_remove(store, this)
+
+                break
+            end
+
+            if not already_hit_target and store.tick_ts - s.ts > this.hit_delay then
+                hit_target(b, target)
+
+                already_hit_target = true
+            end
+
+            coroutine.yield()
+        end
+    end
+
+    queue_remove(store, this)
+end
+
+scripts.bullet_tower_ballista_skill_bomb = {}
+
+function scripts.bullet_tower_ballista_skill_bomb.update(this, store, script)
+    local b = this.bullet
+    local dmin, dmax = b.damage_min, b.damage_max
+    local dradius = b.damage_radius
+    local ps
+
+    if b.particles_name then
+        if #b.particles_name > 1 then
+            for _, pn in ipairs(b.particles_name) do
+                ps = E:create_entity(pn)
+                ps.particle_system.track_id = this.id
+
+                queue_insert(store, ps)
+            end
+        else
+            ps = E:create_entity(b.particles_name)
+            ps.particle_system.track_id = this.id
+
+            queue_insert(store, ps)
+        end
+    end
+
+    local this_pos = this.pos
+    local v_x = b.speed.x
+    local v_y = b.speed.y
+    local last_ts = store.tick_ts
+    while store.tick_ts - b.ts + store.tick_length < b.flight_time do
+        coroutine.yield()
+        local dt = store.tick_ts - last_ts
+        this_pos.x = this_pos.x + v_x * dt
+        this_pos.y = this_pos.y + v_y * dt
+
+        if b.align_with_trajectory then
+            this.render.sprites[1].r = math.atan2(v_y, v_x)
+        elseif b.rotation_speed then
+            this.render.sprites[1].r = this.render.sprites[1].r + b.rotation_speed * store.tick_length
+        end
+
+        if b.hide_radius then
+            this.render.sprites[1].hidden = V.dist(this_pos.x, this_pos.y, b.from.x, b.from.y) < b.hide_radius or
+                                                V.dist(this_pos.x, this_pos.y, b.to.x, b.to.y) < b.hide_radius
+        end
+        last_ts = store.tick_ts
+        v_y = v_y + b.g * dt
+    end
+
+    local enemies = U.find_enemies_in_range_filter_off(this_pos, dradius, b.damage_flags, b.damage_bans)
+
+    if enemies then
+        for _, enemy in pairs(enemies) do
+            local d = E:create_entity("damage")
+
+            d.damage_type = b.damage_type
+            d.reduce_armor = b.reduce_armor
+            d.reduce_magic_armor = b.reduce_magic_armor
+
+            local upg = UP:get_upgrade("engineer_efficiency")
+
+            if upg then
+                d.value = dmax
+            else
+                local dist_factor = U.dist_factor_inside_ellipse(enemy.pos, this_pos, dradius)
+
+                d.value = math.floor(dmax - (dmax - dmin) * dist_factor)
+            end
+
+            d.value = math.ceil(b.damage_factor * d.value)
+            d.source_id = this.id
+            d.target_id = enemy.id
+
+            queue_damage(store, d)
+        end
+
+    end
+
+    local p = SU.create_bullet_pop(store, this)
+
+    queue_insert(store, p)
+
+    local cell_type = GR:cell_type(this_pos.x, this_pos.y)
+
+    if b.hit_fx then
+        S:queue(this.sound_events.hit)
+
+        local sfx = E:create_entity(b.hit_fx)
+
+        sfx.pos = V.vclone(b.to)
+        sfx.render.sprites[1].ts = store.tick_ts
+        sfx.render.sprites[1].sort_y_offset = b.hit_fx_sort_y_offset
+
+        queue_insert(store, sfx)
+    end
+
+    if b.hit_decal and band(cell_type, TERRAIN_WATER) == 0 then
+        local decal = E:create_entity(b.hit_decal)
+
+        decal.pos = V.vclone(this_pos)
+        decal.render.sprites[1].ts = store.tick_ts
+
+        queue_insert(store, decal)
+    end
+
+    queue_remove(store, this)
+end
+
+function scripts.bullet_tower_ballista_skill_bomb.remove(this, store)
+    local b = this.bullet
+    local angle_aux = 2 * math.pi / 3
+
+    for i = 1, 3 do
+        local scraps = E:create_entity(this.scraps)
+
+        scraps.pos = U.point_on_ellipse(this.pos, 30, angle_aux * (i - 1))
+
+        scraps.aura.duration = this.duration_config[b.level]
+        scraps.tween.props[1].keys = {{0, 255}, {scraps.aura.duration - 0.5, 255}, {scraps.aura.duration, 0}}
+
+        queue_insert(store, scraps)
+    end
+
+    return true
+end
+
+scripts.aura_bullet_tower_ballista_skill_bomb = {}
+
+function scripts.aura_bullet_tower_ballista_skill_bomb.update(this, store)
+    local first_hit_ts
+    local last_hit_ts = 0
+
+    last_hit_ts = store.tick_ts - this.aura.cycle_time
+    this.tween.ts = store.tick_ts
+
+    U.animation_start(this, "in", false, store.tick_ts, false, 1)
+
+    while true do
+        if U.animation_finished(this, 1) and this.render.sprites[1].name ~= "idle" then
+            U.animation_start(this, "idle", false, store.tick_ts, true, 1)
+        end
+
+        if this.interrupt then
+            last_hit_ts = 1e+99
+        end
+
+        if this.aura.duration >= 0 and store.tick_ts - this.aura.ts > this.actual_duration then
+            break
+        end
+
+        if store.tick_ts - last_hit_ts >= this.aura.cycle_time then
+            if this.render and this.aura.cast_resets_sprite_id then
+                this.render.sprites[this.aura.cast_resets_sprite_id].ts = store.tick_ts
+            end
+
+            first_hit_ts = first_hit_ts or store.tick_ts
+            last_hit_ts = store.tick_ts
+
+            local targets = U.find_enemies_in_range_filter_off(this.pos, this.aura.radius, this.aura.vis_flags,
+                this.aura.vis_bans)
+
+            if targets then
+                if this.render.sprites[1].name == "idle" then
+                    local moving_targets = table.filter(targets, function(k, v)
+                        return v.motion.speed.x > 0 or v.motion.speed.y > 0
+                    end)
+
+                    if #moving_targets > 0 then
+                        U.animation_start(this, "ability1", false, store.tick_ts, false, 1)
+
+                        local junk_fx = E:create_entity(this.junk_fx)
+
+                        junk_fx.pos = V.vclone(this.pos)
+                        junk_fx.render.sprites[1].ts = store.tick_ts
+
+                        queue_insert(store, junk_fx)
+                    end
+                end
+                for i, target in ipairs(targets) do
+                    local new_mod = E:create_entity(this.aura.mod)
+
+                    new_mod.modifier.level = this.aura.level
+                    new_mod.modifier.target_id = target.id
+                    new_mod.modifier.source_id = this.id
+
+                    queue_insert(store, new_mod)
+                end
+            end
+        end
+
+        coroutine.yield()
+    end
+
+    queue_remove(store, this)
+end
+
+-- 巨弩哨站 END
 return scripts
