@@ -41,6 +41,7 @@ return {
     ["kr1-desktop/images/fullhd/criket_random_eff_mod.dds"] = { size = 3648},
     ["kr1-desktop/images/fullhd/encyclopedia-1.dds"] = { size = 2742464},
     ["kr1-desktop/images/fullhd/encyclopedia_creeps-1.dds"] = { size = 16844816},
+    ["kr1-desktop/images/fullhd/enemy_shaman_gravity-1.dds"] = { size = 349680},
     ["kr1-desktop/images/fullhd/go_barrack_pirates-1.dds"] = { size = 5592560},
     ["kr1-desktop/images/fullhd/go_decals-1.dds"] = { size = 2616176},
     ["kr1-desktop/images/fullhd/go_editor-1.dds"] = { size = 174928},
