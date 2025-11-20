@@ -26,4 +26,3 @@ zip -r "$ARCHIVE_DIR" . -x ".versions/*" -x "tmp/*" -x ".git/*" -x "KingdomRushD
 
 # echo "Packed -> $ARCHIVE_DIR"
 # echo "Also copied to -> $LOVE_FILE"
-# scp -P 60001 "$LOVE_FILE" root@10.112.99.5:/srv/files/王国保卫战Dove版-Windows端/
