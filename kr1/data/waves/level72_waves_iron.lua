@@ -1,5 +1,5 @@
 local obj1 = {
-	["cash"] = 1200;
+	["cash"] = 1250;
 	["groups"] = {
 		[1] = {
 			["interval"] = 7200;
@@ -17,11 +17,11 @@ local obj1 = {
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[2] = {
+						[4] = {
 							["creep"] = "enemy_skeleton_big";
 							["fixed_sub_path"] = 0;
 							["interval"] = 178.5953953988;
-							["interval_next"] = 32.542890420769;
+							["interval_next"] = 250.542890420769;
 							["max"] = 7;
 							["max_same"] = 0;
 							["path"] = 1;
@@ -35,7 +35,7 @@ local obj1 = {
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[4] = {
+						[2] = {
 							["creep"] = "enemy_wererat";
 							["fixed_sub_path"] = 0;
 							["interval"] = 131.58289246798;
@@ -53,6 +53,15 @@ local obj1 = {
 							["max_same"] = 0;
 							["path"] = 1;
 						};
+                        [6] = {
+							["creep"] = "enemy_skeleton";
+							["fixed_sub_path"] = 0;
+							["interval"] = 35.608507286464;
+							["interval_next"] = 4.09775598273;
+							["max"] = 16;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
 					};
 				};
 				[2] = {
@@ -65,11 +74,11 @@ local obj1 = {
 							["fixed_sub_path"] = 0;
 							["interval"] = 48.910786309377;
 							["interval_next"] = 9.1353538802623;
-							["max"] = 7;
+							["max"] = 8;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[2] = {
+						[3] = {
 							["creep"] = "enemy_zombie";
 							["fixed_sub_path"] = 0;
 							["interval"] = 114.49395095049;
@@ -78,11 +87,11 @@ local obj1 = {
 							["max_same"] = 0;
 							["path"] = 1;
 						};
-						[3] = {
+						[2] = {
 							["creep"] = "enemy_abomination";
 							["fixed_sub_path"] = 0;
 							["interval"] = 245.43444872456;
-							["interval_next"] = 46.677769787459;
+							["interval_next"] = 60.677769787459;
 							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
@@ -91,7 +100,7 @@ local obj1 = {
 							["creep"] = "enemy_zombiemancer";
 							["fixed_sub_path"] = 0;
 							["interval"] = 486.22885527577;
-							["interval_next"] = 91.522717800329;
+							["interval_next"] = 121.522717800329;
 							["max"] = 1;
 							["max_same"] = 0;
 							["path"] = 1;
@@ -100,7 +109,7 @@ local obj1 = {
 							["creep"] = "enemy_halloween_zombie";
 							["fixed_sub_path"] = 0;
 							["interval"] = 47.966840911081;
-							["interval_next"] = 70;
+							["interval_next"] = 90;
 							["max"] = 10;
 							["max_same"] = 0;
 							["path"] = 1;
@@ -108,9 +117,18 @@ local obj1 = {
 						[6] = {
 							["creep"] = "enemy_werewolf";
 							["fixed_sub_path"] = 0;
-							["interval"] = 48.23159338903;
+							["interval"] = 60.23159338903;
 							["interval_next"] = 10.493016003029;
-							["max"] = 2;
+							["max"] = 1;
+							["max_same"] = 0;
+							["path"] = 1;
+						};
+                        [7] = {
+							["creep"] = "enemy_halloween_zombie";
+							["fixed_sub_path"] = 0;
+							["interval"] = 60.966840911081;
+							["interval_next"] = 70;
+							["max"] = 12;
 							["max_same"] = 0;
 							["path"] = 1;
 						};
