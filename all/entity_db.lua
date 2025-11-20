@@ -31,7 +31,9 @@ function entity_db:test_tween()
             for _, prop in pairs(e.tween.props) do
                 for _, key in pairs(prop.keys) do
                     if key[3] then
-                        log.error("template %s has tween with ease function in [keys], which is not supported in entity_db:test_tween()", name)
+                        log.error(
+                            "template %s has tween with ease function in [keys], which is not supported in entity_db:test_tween()",
+                            name)
                     end
                 end
                 if not e.render.sprites[prop.sprite_id] then
@@ -394,15 +396,10 @@ function entity_db:gen_wave(level_idx, game_mode)
         local total_weight = cfg.wave_weight_function(wave_i, total_cash)
 
         -- 计算在本波激活的路径，并根据 cfg.path_weight_map 计算相对权重
-        local active_paths = {}
+        local active_paths = cfg.path_active_map[wave_i]
         local active_weight_sum = 0
-        for _, path in ipairs(cfg.paths) do
-            local active_from = (cfg.path_active_map and cfg.path_active_map[path]) or 1
-            if wave_i >= active_from then
-                table.insert(active_paths, path)
-                local pw = (cfg.path_weight_map and cfg.path_weight_map[path]) or 1
-                active_weight_sum = active_weight_sum + pw
-            end
+        for _, path in ipairs(active_paths) do
+            active_weight_sum = active_weight_sum + cfg.path_weight_map[path]
         end
 
         -- 如果没有活跃路径，跳到下一波
@@ -469,6 +466,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 
                     if cfg.enemy_comeout_wave_map[enemy] and cfg.enemy_comeout_wave_map[enemy] == wave_i then
                         table.insert(guaranteed_enemies, enemy)
+                        table.insert(enemy_pool, enemy)
                     elseif cfg.enemy_comeout_wave_map[enemy] and cfg.enemy_comeout_wave_map[enemy] <= wave_i then
                         table.insert(enemy_pool, enemy)
                     end
@@ -479,7 +477,7 @@ function entity_db:gen_wave(level_idx, game_mode)
                 local remain_weight = path_weights[path]
                 shuffle(enemy_pool)
                 local remain_count = math.max(#enemy_pool - #guaranteed_enemies, 1)
-                enemy_pool = table.slice(enemy_pool, 1, math.min(remain_count , cfg.wave_max_types))
+                enemy_pool = table.slice(enemy_pool, 1, math.min(remain_count, cfg.wave_max_types))
 
                 -- 先处理 guaranteed_enemies，确保它们一定会出现在当前波次
                 for _, enemy in pairs(guaranteed_enemies) do
@@ -491,7 +489,7 @@ function entity_db:gen_wave(level_idx, game_mode)
                     local interval = cfg.interval_function(weight, self.entities[enemy], wave_i)
                     local spawn = {
                         interval = interval * (1 + (math.random() - 0.5) * 0.2), -- ±10%
-                        interval_next = interval * 0.2,
+                        interval_next = interval * cfg.interval_next_factor,
                         creep = enemy,
                         path = 1,
                         fixed_sub_path = 0,
@@ -517,7 +515,7 @@ function entity_db:gen_wave(level_idx, game_mode)
                     local interval = cfg.interval_function(weight, self.entities[enemy], wave_i)
                     local spawn = {
                         interval = interval * (1 + (math.random() - 0.5) * 0.2), -- ±10%
-                        interval_next = interval * 0.2,
+                        interval_next = interval * cfg.interval_next_factor,
                         creep = enemy,
                         path = 1,
                         fixed_sub_path = 0,
@@ -571,7 +569,8 @@ function entity_db:gen_wave(level_idx, game_mode)
                             for _, spawn in pairs(sw.spawns) do
                                 -- 按比例调整 interval 与 interval_next（保持二者相对关系）
                                 spawn.interval = (spawn.interval or 1) * scale
-                                spawn.interval_next = (spawn.interval_next or (spawn.interval * 0.2)) * scale
+                                spawn.interval_next = (spawn.interval_next or
+                                                          (spawn.interval * cfg.interval_next_factor)) * scale
                             end
                         end
                     end

@@ -30,7 +30,7 @@ return {
             y = 187
         },
         r = 0,
-        ["render.sprites[1].r"] = 0,
+        ["render.sprites[1].r"] = 0.54105206811824003,
         ["render.sprites[1].scale"] = {
             x = 1,
             y = 1
@@ -44,7 +44,7 @@ return {
             y = 266
         },
         r = 0,
-        ["render.sprites[1].r"] = 0,
+        ["render.sprites[1].r"] = 0.62831853071795996,
         ["render.sprites[1].scale"] = {
             x = 1,
             y = 1
@@ -58,10 +58,82 @@ return {
             y = 701
         },
         r = 0,
-        ["render.sprites[1].r"] = 0,
+        ["render.sprites[1].r"] = 2.0071286397935002,
         ["render.sprites[1].scale"] = {
             x = 1,
             y = 1
+        }
+    }, {
+        template = "editor_wave_flag",
+        ["editor.len"] = 5,
+        ["editor.path_id"] = 4,
+        ["editor.r"] = 2.8448866807507001,
+        pos = {
+            x = 1158,
+            y = 490
+        }
+    }, {
+        template = "editor_wave_flag",
+        ["editor.len"] = 5,
+        ["editor.path_id"] = 8,
+        ["editor.r"] = -2.5307274153917998,
+        pos = {
+            x = 1095,
+            y = 504
+        }
+    }, {
+        template = "editor_wave_flag",
+        ["editor.len"] = 5,
+        ["editor.path_id"] = 3,
+        ["editor.r"] = 2.8448866807507001,
+        pos = {
+            x = 1175,
+            y = 532
+        }
+    }, {
+        template = "editor_wave_flag",
+        ["editor.len"] = 5,
+        ["editor.path_id"] = 7,
+        ["editor.r"] = 2.3911010752321999,
+        pos = {
+            x = 1123,
+            y = 570
+        }
+    }, {
+        template = "editor_wave_flag",
+        ["editor.len"] = 5,
+        ["editor.path_id"] = 6,
+        ["editor.r"] = -0.19198621771937999,
+        pos = {
+            x = -109,
+            y = 602
+        }
+    }, {
+        template = "editor_wave_flag",
+        ["editor.len"] = 5,
+        ["editor.path_id"] = 2,
+        ["editor.r"] = -0.19198621771937999,
+        pos = {
+            x = -165,
+            y = 613
+        }
+    }, {
+        template = "editor_wave_flag",
+        ["editor.len"] = 5,
+        ["editor.path_id"] = 5,
+        ["editor.r"] = -0.19198621771937999,
+        pos = {
+            x = -91,
+            y = 644
+        }
+    }, {
+        template = "editor_wave_flag",
+        ["editor.len"] = 5,
+        ["editor.path_id"] = 1,
+        ["editor.r"] = -0.19198621771937999,
+        pos = {
+            x = -151,
+            y = 658
         }
     }, {
         template = "tower_holder",
@@ -74,8 +146,8 @@ return {
             x = 262,
             y = 117
         },
-        ["tower.terrain_style"] = 1,
         ["tower.holder_id"] = "26",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "26"
     }, {
         template = "tower_holder",
@@ -102,8 +174,8 @@ return {
             x = 611,
             y = 177
         },
-        ["tower.terrain_style"] = 1,
         ["tower.holder_id"] = "28",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "28"
     }, {
         template = "tower_holder",
@@ -116,8 +188,8 @@ return {
             x = 619,
             y = 229
         },
-        ["tower.terrain_style"] = 1,
         ["tower.holder_id"] = "38",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "38"
     }, {
         template = "tower_holder",
@@ -130,8 +202,8 @@ return {
             x = 395,
             y = 240
         },
-        ["tower.terrain_style"] = 1,
         ["tower.holder_id"] = "16",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "16"
     }, {
         template = "tower_holder",
@@ -140,12 +212,12 @@ return {
             x = 720,
             y = 282
         },
-        ["tower.terrain_style"] = 1,
         ["tower.default_rally_pos"] = {
             x = 618,
             y = 275
         },
         ["tower.holder_id"] = "24",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "24"
     }, {
         template = "tower_holder",
@@ -158,8 +230,8 @@ return {
             x = 401,
             y = 316
         },
-        ["tower.terrain_style"] = 1,
         ["tower.holder_id"] = "30",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "30"
     }, {
         template = "tower_holder",
@@ -172,8 +244,8 @@ return {
             x = 640,
             y = 376
         },
-        ["tower.terrain_style"] = 1,
         ["tower.holder_id"] = "20",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "20"
     }, {
         template = "tower_holder",
@@ -186,8 +258,8 @@ return {
             x = 800,
             y = 429
         },
-        ["tower.terrain_style"] = 1,
         ["tower.holder_id"] = "36",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "36"
     }, {
         template = "tower_holder",
@@ -196,12 +268,12 @@ return {
             x = -71,
             y = 366
         },
-        ["tower.terrain_style"] = 1,
         ["tower.default_rally_pos"] = {
             x = -47,
             y = 474
         },
         ["tower.holder_id"] = "10",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "10"
     }, {
         template = "tower_holder",
@@ -210,12 +282,12 @@ return {
             x = 55,
             y = 366
         },
-        ["tower.terrain_style"] = 1,
         ["tower.default_rally_pos"] = {
             x = 83,
             y = 446
         },
         ["tower.holder_id"] = "22",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "22"
     }, {
         template = "tower_holder",
@@ -224,12 +296,12 @@ return {
             x = 934,
             y = 400
         },
-        ["tower.terrain_style"] = 1,
         ["tower.default_rally_pos"] = {
             x = 975,
             y = 474
         },
         ["tower.holder_id"] = "12",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "12"
     }, {
         template = "tower_holder",
@@ -238,12 +310,12 @@ return {
             x = 548,
             y = 425
         },
-        ["tower.terrain_style"] = 1,
         ["tower.default_rally_pos"] = {
             x = 629,
             y = 435
         },
         ["tower.holder_id"] = "14",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "14"
     }, {
         template = "tower_holder",
@@ -252,12 +324,12 @@ return {
             x = 55,
             y = 527
         },
-        ["tower.terrain_style"] = 1,
         ["tower.default_rally_pos"] = {
             x = 23,
             y = 474
         },
         ["tower.holder_id"] = "2",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "2"
     }, {
         template = "tower_holder",
@@ -266,12 +338,12 @@ return {
             x = 790,
             y = 537
         },
-        ["tower.terrain_style"] = 1,
         ["tower.default_rally_pos"] = {
             x = 759,
             y = 442
         },
         ["tower.holder_id"] = "18",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "18"
     }, {
         template = "tower_holder",
@@ -280,12 +352,12 @@ return {
             x = 188,
             y = 544
         },
-        ["tower.terrain_style"] = 1,
         ["tower.default_rally_pos"] = {
             x = 304,
             y = 569
         },
         ["tower.holder_id"] = "4",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "4"
     }, {
         template = "tower_holder",
@@ -294,12 +366,12 @@ return {
             x = 895,
             y = 579
         },
-        ["tower.terrain_style"] = 1,
         ["tower.default_rally_pos"] = {
             x = 898,
             y = 505
         },
         ["tower.holder_id"] = "8",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "8"
     }, {
         template = "tower_holder",
@@ -312,8 +384,8 @@ return {
             x = 671,
             y = 596
         },
-        ["tower.terrain_style"] = 1,
         ["tower.holder_id"] = "6",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "6"
     }, {
         template = "tower_holder",
@@ -326,8 +398,8 @@ return {
             x = -71,
             y = 603
         },
-        ["tower.terrain_style"] = 1,
         ["tower.holder_id"] = "32",
+        ["tower.terrain_style"] = 1,
         ["ui.nav_mesh_id"] = "32"
     }},
     invalid_path_ranges = {},
@@ -346,6 +418,7 @@ return {
     max_upgrade_level = 6,
     nav_mesh = {nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil,
                 {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}, nil, {}},
-    required_sounds = {"FrontiersJungleAmbienceSounds", "SpecialAlienSounds", "music_stage92"},
-    required_textures = {"go_stage92_bg", "go_stages_jungle", "go_enemies_jungle", "go_stage36", "go_stage35"}
+    required_sounds = {"FrontiersJungleAmbienceSounds", "SpecialAlienSounds", "music_stage92", "SpecialMermaid"},
+    required_textures = {"go_stage92_bg", "go_stages_jungle", "go_enemies_jungle", "go_stage36", "go_stage35",
+                         "go_krdove_enemy_shaman_gravity", "go_stage34"}
 }
