@@ -5755,8 +5755,8 @@ local towers = {
         basic_attack = {
             burst_count = 5,
             cooldown = 2.5,
-            damage_min = {3, 7, 14, 30},
-            damage_max = {5, 11, 22, 40},
+            damage_min = {3, 7, 14, 33},
+            damage_max = {5, 11, 22, 44},
             range = {160, 175, 190, 210},
             damage_type = DAMAGE_PHYSICAL
         },
@@ -5765,7 +5765,7 @@ local towers = {
             stun_time = 60,
             price = {250, 100, 100},
             cooldown = {4, 4, 4},
-            damage_factor = {1.5, 2, 2.5},
+            damage_factor = {1.5, 2.1, 2.7},
             s_damage_factor = {0.5, 1, 1.5},
             damage_type = DAMAGE_AGAINST_ARMOR
         },
