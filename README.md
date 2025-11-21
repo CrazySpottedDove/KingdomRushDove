@@ -86,6 +86,6 @@ lua ./scripts/gen_assets_index.lua
 
 ```sh
 # git remote -v
-server  ssh://root@10.112.99.5:60001/srv/git/KingdomRushDove.git (fetch)
-server  ssh://root@10.112.99.5:60001/srv/git/KingdomRushDove.git (push)
+server  ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git (fetch)
+server  ssh://dove@10.112.99.5:60001/srv/git/KingdomRushDove.git (push)
 ```

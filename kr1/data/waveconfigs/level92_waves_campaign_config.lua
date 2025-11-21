@@ -223,6 +223,7 @@ local data = {
     -- fixed_sub_path 始终赋 0
     -- delay 始终赋 0
     -- 如果怪物的 vis.flags 中含有 F_FLYING，就要为 wave 添加 some_flying = true
+    gap_count_range = {0, 1, 2}, -- 每个 wave 中可接受 gap 数量的值，随机选取
     wave_max_types = 8 -- 每个 wave 最多不同种类敌人数量
 }
 

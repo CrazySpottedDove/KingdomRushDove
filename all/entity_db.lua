@@ -575,6 +575,44 @@ function entity_db:gen_wave(level_idx, game_mode)
                         end
                     end
                 end
+
+                if reference < group.interval then
+                    -- 施加 gap 影响
+                    for i, sw in pairs(group.waves) do
+                        local gap_count = cfg.gap_count_range[math.random(1, #cfg.gap_count_range)]
+                        local gap_weight_sum = 0
+                        for i = 1, gap_count+1 do
+                            gap_weight_sum = gap_weight_sum + i ^ 1.5
+                        end
+                        local total_gap_time = group.interval - reference
+                        local spawn_count = #sw.spawns
+                        local insert_indices = {}
+                        -- 把 spawn 的数量按照每一个 gap 的 gap_weight_sum 做分割，在分割的地方准备插入。还要判断 spawn 的数量，如果不够分就减少 gap。
+                        local factor = 0
+                        for i = 1, gap_count do
+                            factor = factor + (i ^ 1.5) / gap_weight_sum
+                            local insert_index = math.floor(spawn_count * factor)
+                            if insert_index < 1 or insert_index >= spawn_count then
+                                break
+                            end
+                            table.insert(insert_indices, insert_index)
+                        end
+
+                        for i = 1, #insert_indices do
+                            local true_insert_index = insert_indices[i] + (i - 1) -- 插入后索引会变动
+                            local gap_time = total_gap_time * (i ^ 1.5) / gap_weight_sum
+                            table.insert(sw.spawns, true_insert_index, {
+                                interval = 0,
+                                interval_next = gap_time,
+                                creep = "enemy_goblin",
+                                path = 1,
+                                fixed_sub_path = 0,
+                                max_same = 0,
+                                max = 0
+                            })
+                        end
+                    end
+                end
             end
 
             for _, subwave in pairs(group.waves) do
