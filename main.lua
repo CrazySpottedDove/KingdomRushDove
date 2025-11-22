@@ -5,17 +5,9 @@ if ok and type(update_cfg) == "table" and update_cfg.auto_upgrade == false then
     apply_upgrade = false
 end
 
-local binary = "client"
+local binary_path = "client"
 if package.config:sub(1, 1) == "\\" then -- Windows
-    binary = "client.exe"
-end
-local exe_dir = love.filesystem.getWorkingDirectory() or "."
--- 统一分隔符
-exe_dir = exe_dir:gsub("\\", "/")
-local binary_path = exe_dir .. "/" .. binary
--- Windows下再转回反斜杠
-if package.config:sub(1, 1) == "\\" then
-    binary_path = binary_path:gsub("/", "\\")
+    binary_path = "client.exe"
 end
 
 local function check_update_async()
