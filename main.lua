@@ -612,7 +612,7 @@ function love.update(dt)
                         update_result_json = result
                         -- 收集所有 commit message
                         local messages = {}
-                        local max_messages_to_show = 10
+                        local max_messages_to_show = 20
                         if resp.commits then
                             for i, commit in ipairs(resp.commits) do
                                 if i > max_messages_to_show then
