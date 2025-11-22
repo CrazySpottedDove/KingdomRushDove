@@ -15946,7 +15946,7 @@ function scripts.hero_dragon.update(this, store)
 
                 local d = E:create_entity("damage")
 
-                d.damage_type = DAMAGE_PHYSICAL
+                d.damage_type = a.damage_type
                 d.value = (a.damage + this.damage_buff) * this.unit.damage_factor
                 d.target_id = target.id
                 d.source_id = this.id
