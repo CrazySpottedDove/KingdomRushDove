@@ -566,6 +566,23 @@ end
 
 local update_result_json = nil
 
+local function love_update_master(dt)
+    storage:update(dt)
+    main.handler:update(dt)
+    if custom_script and custom_script.update then
+        custom_script:update(dt)
+    end
+end
+local function love_draw_master()
+    main.handler:draw()
+    if main.profiler and main.profiler_displayed then
+        main.profiler.draw(main.params.width, main.params.height, F:f("DroidSansMono", 14))
+    end
+    if main.draw_stats and main.draw_stats_displayed then
+        main.draw_stats:draw(main.params.width, main.params.height)
+    end
+end
+
 function love.update(dt)
     if DEBUG and not main.params.debug and main.params.repl then
         repl_t()
@@ -585,31 +602,35 @@ function love.update(dt)
         if (apply_upgrade) and (not update_popup_shown) then
             local ch = love.thread.getChannel("update_result")
             local result = ch:pop()
-            if result and result ~= false then
-                local ok, resp = pcall(require("json").decode, result)
-                if ok and type(resp) == "table" and resp.has_update then
-                    update_result_json = result
-                    -- 收集所有 commit message
-                    local messages = {}
-                    local max_messages_to_show = 10
-                    if resp.commits then
-                        for i, commit in ipairs(resp.commits) do
-                            if i > max_messages_to_show then
-                                table.insert(messages, string.format("...以及另外 %d 条更新内容。",
-                                    #resp.commits - max_messages_to_show))
-                                break
+            -- 轮询到了结果
+            if result ~= nil and result ~= false then
+                -- 结果有效
+                if result ~= false then
+                    local ok, resp = pcall(require("json").decode, result)
+                    -- 需要更新
+                    if ok and type(resp) == "table" and resp.has_update then
+                        update_result_json = result
+                        -- 收集所有 commit message
+                        local messages = {}
+                        local max_messages_to_show = 10
+                        if resp.commits then
+                            for i, commit in ipairs(resp.commits) do
+                                if i > max_messages_to_show then
+                                    table.insert(messages, string.format("...以及另外 %d 条更新内容。",
+                                        #resp.commits - max_messages_to_show))
+                                    break
+                                end
+                                table.insert(messages, commit.message)
                             end
-                            table.insert(messages, commit.message)
                         end
-                    end
-                    local msg_text = table.concat(messages, "\n\n")
-                    msg_text = msg_text .. "\n\n请耐心等待升级完成..."
-                    local cmd = string.format('"%s" --upgrade-new-version', binary_path)
-                    -- 弹窗有“升级”按钮
-                    local pressed = love.window.showMessageBox("发现新版本",
-                        "检测到有新内容可更新，是否立即更新？", {"更新", "取消"})
-                    if pressed == 1 then
-                        local upgrade_thread = love.thread.newThread([[
+                        local msg_text = table.concat(messages, "\n\n")
+                        msg_text = msg_text .. "\n\n请耐心等待升级完成..."
+                        local cmd = string.format('"%s" --upgrade-new-version', binary_path)
+                        -- 弹窗有“升级”按钮
+                        local pressed = love.window.showMessageBox("发现新版本",
+                            "检测到有新内容可更新，是否立即更新？", {"更新", "取消"})
+                        if pressed == 1 then
+                            local upgrade_thread = love.thread.newThread([[
         local cmd, update_result_json = ...
         local pipe = io.popen(cmd, "w")
         if pipe then
@@ -618,26 +639,52 @@ function love.update(dt)
         end
         love.thread.getChannel("upgrade_result"):push("done")
     ]])
-                        upgrade_thread:start(cmd, update_result_json)
+                            upgrade_thread:start(cmd, update_result_json)
 
-                        love.window.showMessageBox("更新内容", msg_text, {"确定以继续"})
+                            love.window.showMessageBox("更新内容", msg_text, {"确定以继续"})
 
-                        -- 3. 在 love.update 里轮询升级状态
-                        love.update = function(dt)
-                            local ch = love.thread.getChannel("upgrade_result")
-                            local result = ch:pop()
-                            if result == "done" then
-                                upgrading = false
-                                love.window.showMessageBox("升级完成", "资源已更新。", {"点击以退出"})
-                                love.event.quit() -- 升级完成后退出程序
+                            -- 3. 在 love.update 里轮询升级状态
+                            love.update = function(dt)
+                                local ch = love.thread.getChannel("upgrade_result")
+                                local result = ch:pop()
+                                if result == "done" then
+                                    love.window
+                                        .showMessageBox("升级完成", "资源已更新。", {"点击以退出"})
+                                    love.event.quit() -- 升级完成后退出程序
+                                elseif result == "error" then
+                                    love.window.showMessageBox("升级失败，可检查 client.log 并报告。",
+                                        "确定")
+                                    -- 恢复正常的 love.update
+                                    love.update = love_update_master
+                                    love.draw = love_draw_master
+                                end
+                            end
+
+                            -- 也直接改变 love.draw()，显示正在升级的信息
+                            love.draw = function()
+                                G.clear(0, 0, 0)
+                                G.origin()
+                                local font = F:f("JIMOJW", 20)
+                                G.setFont(font)
+                                G.setColor(1, 1, 1, 1)
+                                local w, h = G.getDimensions()
+                                local text = "正在升级资源，请勿关闭游戏..."
+                                local tw = font:getWidth(text)
+                                local th = font:getHeight()
+                                G.print(text, (w - tw) / 2, (h - th) / 2)
+                                -- 来一点点动画效果
+                                G.setColor(1, 1, 1, 0.5 + 0.5 * math.sin(love.timer.getTime() * 5))
+                                G.circle("fill", w / 2, (h + th) / 2 + 30, 10 + 5 * math.sin(love.timer.getTime() * 10))
                             end
                         end
+                    else
+                        -- 不需要更新，那么恢复原 update
+                        love.update = love_update_master
                     end
+                else
+                    -- 结果无效，恢复 love.update
+                    love.update = love_update_master
                 end
-
-                update_popup_shown = true
-            elseif result == false then
-                update_popup_shown = true
             end
         end
     end
