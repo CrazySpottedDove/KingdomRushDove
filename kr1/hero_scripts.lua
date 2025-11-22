@@ -4864,8 +4864,7 @@ scripts.hero_giant = {
     end,
 
     on_damage = function(this, store, damage)
-        damage.value = damage.value - this.health.damage_block
-        damage.value = math.max(0, damage.value)
+        damage.value = math.max(0, damage.value - this.health.damage_block)
         return true
     end
 }

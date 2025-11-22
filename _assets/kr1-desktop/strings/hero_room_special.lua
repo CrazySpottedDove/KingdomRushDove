@@ -758,7 +758,7 @@ map["愤怒鞭笞"] = str(cooldown_str(), "兽王挥舞长鞭，对敌人造成"
 e = E:get_template("aura_beastmaster_regeneration")
 cycle_time = e.hps.heal_every
 local amount = e.hps.heal_min
-map["狂野体质"] = str("每隔", cycle_time, "秒，兽王恢复", amount, "点生命值。")
+map["狂野体质"] = str("兽王免疫剧毒，且每隔", cycle_time, "秒恢复", amount, "点生命值。")
 
 set_hero("hero_voodoo_witch")
 set_skill(h.hero.skills.laughingskulls)
@@ -845,8 +845,9 @@ d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
 e = E:get_template("mod_alien_selfdestruct")
 duration = e.modifier.duration
-map["最终手段"] = str("沙塔复活时间为6秒，并在升级时刷新所有技能冷却。当生命值耗尽时，沙塔自爆，对周围敌人造成", damage_str(),
-    "，并使其受到", duration, "秒的眩晕效果。")
+map["最终手段"] = str(
+    "沙塔复活时间为6秒，并在升级时刷新所有技能冷却。当生命值耗尽时，沙塔自爆，对周围敌人造成",
+    damage_str(), "，并使其受到", duration, "秒的眩晕效果。")
 
 set_hero("hero_monk")
 set_skill(h.hero.skills.tigerstyle)
@@ -854,35 +855,40 @@ get_damage(h.melee.attacks[5])
 d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
 cooldown = h.melee.attacks[5].cooldown
-map["虎型拳"] = str(cooldown_str(),"库绍施展虎型拳，造成",damage_str(),"，并恢复自身30点生命值。")
+map["虎型拳"] = str(cooldown_str(), "库绍施展虎型拳，造成", damage_str(),
+    "，并恢复自身30点生命值。")
 set_skill(h.hero.skills.snakestyle)
 get_damage(h.melee.attacks[4])
 d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
 cooldown = h.melee.attacks[4].cooldown
 factor = s.damage_reduction_factor[max_lvl]
-map["蛇型拳"] = str(cooldown_str(),"库绍对非boss敌人施展蛇形拳，造成",damage_str(),"并使敌人的伤害降低",factor*100,"%","。")
+map["蛇型拳"] = str(cooldown_str(), "库绍对非boss敌人施展蛇形拳，造成", damage_str(),
+    "并使敌人的伤害降低", factor * 100, "%", "。")
 set_skill(h.hero.skills.leopardstyle)
 count = s.loops[max_lvl]
 get_damage(h.timed_attacks.list[2])
 d[1].damage_max = s.damage_max[max_lvl]
 d[1].damage_min = s.damage_min[max_lvl]
 cooldown = h.timed_attacks.list[2].cooldown
-map["豹形拳"] = str(cooldown_str(),"库绍对非boss敌人施展豹形拳，连续攻击",count,"次并短暂阻拦敌人，每次攻击造成",damage_str(),"。")
+map["豹形拳"] = str(cooldown_str(), "库绍对非boss敌人施展豹形拳，连续攻击", count,
+    "次并短暂阻拦敌人，每次攻击造成", damage_str(), "。")
 set_skill(h.hero.skills.dragonstyle)
 get_damage(h.timed_attacks.list[1])
 d[1].damage_max = s.damage_max[max_lvl]
 d[1].damage_min = s.damage_min[max_lvl]
 cooldown = h.timed_attacks.list[1].cooldown
-map["龙形拳"] = str(cooldown_str(),"库绍施展龙形拳，对周围敌人造成",damage_str(),"。")
+map["龙形拳"] = str(cooldown_str(), "库绍施展龙形拳，对周围敌人造成", damage_str(), "。")
 set_skill(h.hero.skills.cranestyle)
 chance = s.chance[max_lvl]
 cooldown = s.cooldown[max_lvl]
 get_damage(h.dodge)
 d[1].damage_min = s.damage[max_lvl]
 d[1].damage_max = s.damage[max_lvl]
-map["鹤形拳"] = str("库绍有",rate_str(chance),"闪避敌人的攻击并以鹤形拳反击，造成",damage_str(),"。该技能有",cooldown,"秒冷却时间。")
-map["诸武精通"] = str("库绍的普攻可触发三种随机效果：降低敌人10%护甲；减少蛇形拳和虎型拳1秒冷却；减少豹形拳和龙形拳一秒冷却。持续战斗时，库绍的普攻、虎型拳、蛇形拳的冷却逐渐减少，最多减少40%。")
+map["鹤形拳"] = str("库绍有", rate_str(chance), "闪避敌人的攻击并以鹤形拳反击，造成",
+    damage_str(), "。该技能有", cooldown, "秒冷却时间。")
+map["诸武精通"] = str(
+    "库绍的普攻可触发三种随机效果：降低敌人10%护甲；减少蛇形拳和虎型拳1秒冷却；减少豹形拳和龙形拳一秒冷却。持续战斗时，库绍的普攻、虎型拳、蛇形拳的冷却逐渐减少，最多减少40%。")
 set_hero("hero_monkey_god")
 set_skill(h.hero.skills.spinningpole)
 count = s.loops[max_lvl]
@@ -890,13 +896,15 @@ get_damage(h.melee.attacks[3])
 radius = h.melee.attacks[3].damage_radius
 cooldown = h.melee.attacks[3].cooldown
 set_damage_value(s.damage[max_lvl])
-map["狼牙风暴"] = str(cooldown_str(),"赛塔姆挥舞狼牙棒，对",radius,"范围内敌人造成",count,"段伤害，每段造成",damage_str(),"。")
+map["狼牙风暴"] = str(cooldown_str(), "赛塔姆挥舞狼牙棒，对", radius, "范围内敌人造成", count,
+    "段伤害，每段造成", damage_str(), "。")
 set_skill(h.hero.skills.tetsubostorm)
 get_damage(h.melee.attacks[4])
 set_damage_value(s.damage[max_lvl])
 cooldown = h.melee.attacks[4].cooldown
 count = h.melee.attacks[4].loops * #h.melee.attacks[4].hit_times
-map["旋风棍法"] = str(cooldown_str(),"赛塔姆挥棒如旋风，对敌人进行",count,"段攻击，每段造成",damage_str(),"。")
+map["旋风棍法"] = str(cooldown_str(), "赛塔姆挥棒如旋风，对敌人进行", count,
+    "段攻击，每段造成", damage_str(), "。")
 set_skill(h.hero.skills.monkeypalm)
 get_damage(h.melee.attacks[5])
 d[1].damage_min = s.damage_min[max_lvl]
@@ -904,7 +912,8 @@ d[1].damage_max = s.damage_max[max_lvl]
 duration = s.stun_duration[max_lvl]
 duration_2 = s.silence_duration[max_lvl]
 cooldown = h.melee.attacks[5].cooldown
-map["猴掌"] = str(cooldown_str(),"赛塔姆凝聚精神拍出一掌，对非BOSS敌人造成",damage_str(),"，并使敌人眩晕",duration,"秒，沉默",duration_2,"秒，且使神怒的冷却减少4秒。")
+map["猴掌"] = str(cooldown_str(), "赛塔姆凝聚精神拍出一掌，对非BOSS敌人造成", damage_str(),
+    "，并使敌人眩晕", duration, "秒，沉默", duration_2, "秒，且使神怒的冷却减少4秒。")
 set_skill(h.hero.skills.angrygod)
 factor = s.received_damage_factor[max_lvl]
 duration = h.timed_attacks.list[1].loops * 17 / 30
@@ -913,18 +922,57 @@ e = E:get_template("mod_monkey_god_fire")
 get_damage(e.dps)
 set_damage_value(e.dps.damage_min + max_lvl * e.dps.damage_inc)
 cycle_time = e.dps.damage_every
-map["神怒"] = str(cooldown_str(),"赛塔姆进入无敌状态，刷新狼牙风暴、旋风棍法和猴掌的冷却，并释放心中的怒火，持续",duration,"秒，期间所有敌人受到的伤害乘以",factor,"，并每隔",cycle_time,"秒受到",damage_str(),"。该技能被手动打断时，恢复等比例冷却时间。")
+map["神怒"] = str(cooldown_str(),
+    "赛塔姆进入无敌状态，刷新狼牙风暴、旋风棍法和猴掌的冷却，并释放心中的怒火，持续",
+    duration, "秒，期间所有敌人受到的伤害乘以", factor, "，并每隔", cycle_time, "秒受到",
+    damage_str(), "。该技能被手动打断时，恢复等比例冷却时间。")
 speed = h.cloudwalk.extra_speed
 e = E:get_template("aura_monkey_god_divinenature")
 cycle_time = e.hps.heal_every
 amount = e.hps.heal_min
-map["神性"] = str("远距离移动时，赛塔姆乘坐祥云，移速提升",speed,"点。每隔",cycle_time,"秒，赛塔姆恢复",amount,"点生命值。")
+map["神性"] = str("远距离移动时，赛塔姆乘坐祥云，移速提升", speed, "点。每隔", cycle_time,
+    "秒，赛塔姆恢复", amount, "点生命值。赛塔姆免疫剧毒。")
 
 set_hero("hero_giant")
-map["巨石投掷"] = str()
-map["岩晶肘击"] = str()
-map["大地震颤"] = str()
-map["堡垒之势"] = str()
+set_skill(h.hero.skills.boulderthrow)
+cooldown = h.ranged.attacks[1].cooldown
+set_bullet("giant_boulder")
+radius = b.bullet.damage_radius
+get_damage(b.bullet)
+d[1].damage_max = s.damage_max[max_lvl]
+d[1].damage_min = s.damage_min[max_lvl]
+map["巨石投掷"] = str(cooldown_str(), "格劳尔投掷巨石，对", radius, "范围内敌人造成", damage_str(),
+    "。")
+set_skill(h.hero.skills.massivedamage)
+factor = s.health_factor
+e = E:get_template("mod_giant_massivedamage")
+get_damage(e)
+set_damage_value(s.extra_damage[max_lvl])
+chance = s.chance[max_lvl]
+cooldown = h.melee.attacks[2].cooldown
+map["岩晶肘击"] = str(cooldown_str(), "格劳尔奋力肘击敌人，额外造成", damage_str(), "。肘击有",
+    rate_str(chance), "概率暴击：若结算伤害后，敌人生命值少于格劳尔", 100 / factor,
+    "%最大生命值，且不为BOSS，则秒杀敌人；否则，额外伤害翻倍。")
+set_skill(h.hero.skills.stomp)
+count = s.loops[max_lvl]
+duration = s.stun_duration[max_lvl]
+get_damage(h.timed_attacks.list[1])
+set_damage_value(s.damage[max_lvl])
+cooldown = h.timed_attacks.list[1].cooldown
+radius = h.timed_attacks.list[1].damage_radius
+chance = h.timed_attacks.list[1].stun_chance
+map["大地震颤"] = str(cooldown_str(), "格劳尔持续锤击地面", count, "次，每次对", radius,
+    "范围内敌人造成", damage_str(), "，并有", rate_str(chance), "概率使其眩晕", duration, "秒。")
+set_skill(h.hero.skills.bastion)
+amount = s.damage_per_tick[max_lvl]
+local amount_2 = s.max_damage[max_lvl]
+e = E:get_template("aura_giant_bastion")
+cycle_time = e.tick_time
+set_skill(h.hero.skills.hardrock)
+local amount_3 = s.damage_block[max_lvl]
+map["堡垒之势"] = str("格劳尔免疫毒伤，且拥有嘲讽效果。当原地不动时，格劳尔每",
+    cycle_time, "秒提升", amount, "点伤害，最多提升", amount_2, "点。格劳尔受到的所有伤害减少",
+    amount_3, "点。")
 
 set_hero("hero_dragon")
 map["龙息"] = str()
@@ -1085,7 +1133,5 @@ set_hero("hero_bolverk")
 map["怒击"] = str()
 map["炎吼"] = str()
 map["狂战血脉"] = str()
-
-
 
 return H
