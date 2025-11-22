@@ -15147,8 +15147,8 @@ function scripts.tower_ballista.update(this, store)
     local pow_b = this.powers.skill_bomb
 
     local function find_target(attack)
-        local target,_ = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, a.range, attack.vis_flags,
-            attack.vis_bans)
+        local target, _ = U.find_foremost_enemy_with_flying_preference_in_range_filter_off(tpos, a.range,
+            attack.vis_flags, attack.vis_bans)
         return target, target and U.calculate_enemy_ffe_pos(target, attack.node_prediction) or nil
     end
 
@@ -15215,6 +15215,16 @@ function scripts.tower_ballista.update(this, store)
         angle_to_target = angle_to_target * 180 / math.pi
 
         return rotate_towards_angle(angle_to_target)
+    end
+
+    local function rotate_towards_pos_instantly(pos)
+        local angle_in_radian = math.atan2(pos.y - this.pos.y - this.tower_top_offset.y,
+            pos.x - this.pos.x - this.tower_top_offset.x)
+        local angle_in_degree = angle_in_radian % (2 * math.pi) * 180 / math.pi
+        a_name, a_flip, angle_idx = animation_name_facing_angle_ballista("idle", angle_in_degree)
+        U.animation_start(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
+
+        this.tower_upgrade_persistent_data.current_angle = angle_in_degree
     end
 
     local function shoot_bomb(attack, dest)
@@ -15323,7 +15333,9 @@ function scripts.tower_ballista.update(this, store)
                 local angle_dist = rotate_towards_pos(pred_pos)
             end
 
+            -- 普攻逻辑
             if ready_to_attack(aa, store, tw.cooldown_factor) then
+
                 target, pred_pos = find_target(aa)
 
                 if not target then
@@ -15334,24 +15346,28 @@ function scripts.tower_ballista.update(this, store)
                 local a_name, a_flip, angle_idx
                 local start_ts = store.tick_ts
 
-                repeat
+                -- 转向……
+                -- repeat
+                do
                     local angle_dist
                     local reached_target = false
 
                     if target and pred_pos then
-                        angle_dist = rotate_towards_pos(pred_pos)
+                        -- angle_dist = rotate_towards_pos(pred_pos)
+                        rotate_towards_pos_instantly(pred_pos)
                         target, pred_pos = find_target(aa)
-                        reached_target = arrive_epsilon >= math.abs(angle_dist) and target and pred_pos
+                        -- reached_target = arrive_epsilon >= math.abs(angle_dist) and target and pred_pos
                     end
 
                     if not target or not pred_pos then
                         goto label_586_1
                     end
 
-                    if not reached_target then
-                        coroutine.yield()
-                    end
-                until reached_target
+                    -- if not reached_target then
+                    -- coroutine.yield()
+                    -- end
+                    -- until reached_target
+                end
 
                 local last_target_pos = V.vclone(pred_pos)
                 local missed_shot = false
@@ -15386,34 +15402,7 @@ function scripts.tower_ballista.update(this, store)
                         offset_x, offset_y = V.rotate(angle, offset_x, offset_y)
                         pred_pos.x, pred_pos.y = V.add(pred_pos.x, pred_pos.y, offset_x, offset_y)
                         missed_shot = true
-                    else
-                        local dist = V.dist(last_target_pos.x, last_target_pos.y, pred_pos.x, pred_pos.y)
-                        local max_dist = aa.max_dist_between_shots
-
-                        if shoot_final_shot then
-                            max_dist = max_dist * 1.5
-                        end
-
-                        if max_dist < dist then
-                            local enemy = U.detect_foremost_enemy_in_range_filter_off(last_target_pos, max_dist,
-                                aa.vis_flags, aa.vis_bans)
-
-                            if not enemy then
-                                local dir_x, dir_y = V.sub(target.pos.x, target.pos.y, last_target_pos.x,
-                                    last_target_pos.y)
-
-                                dir_x, dir_y = V.normalize(dir_x, dir_y)
-                                dir_x, dir_y = V.mul(max_dist, dir_x, dir_y)
-                                pred_pos.x, pred_pos.y = V.add(last_target_pos.x, last_target_pos.y, dir_x, dir_y)
-                                missed_shot = true
-                            else
-                                pred_pos = U.calculate_enemy_ffe_pos(enemy, aa.node_prediction)
-                                target = enemy
-                            end
-                        end
                     end
-
-                    last_target_pos = V.vclone(pred_pos)
 
                     local start_offset = V.vclone(aa.bullet_start_offset[angle_idx])
 
@@ -15424,7 +15413,17 @@ function scripts.tower_ballista.update(this, store)
                     b.pos.x, b.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
                     local bl = b.bullet
                     bl.from = V.vclone(b.pos)
-                    bl.to = V.vclone(pred_pos)
+                    if shoot_final_shot then
+                        local dist = V.dist(bl.from.x, bl.from.y, pred_pos.x, pred_pos.y)
+                        local factor = a.range * 1.5 / dist
+                        bl.to = {
+                            x = bl.from.x + factor * (pred_pos.x - bl.from.x),
+                            y = bl.from.y + factor * (pred_pos.y - bl.from.y)
+                        }
+                    else
+                        bl.to = V.vclone(pred_pos)
+                    end
+                    last_target_pos = V.vclone(pred_pos)
 
                     if not missed_shot and target and not aa.ignore_hit_offset then
                         bl.to.x = bl.to.x + target.unit.hit_offset.x
@@ -15436,7 +15435,6 @@ function scripts.tower_ballista.update(this, store)
                     end
 
                     bl.source_id = this.id
-                    bl.level = this.tower.level
                     bl.damage_factor = bl.damage_factor * tw.damage_factor
                     if shoot_final_shot then
                         bl.damage_factor = this.powers.skill_final_shot.damage_factor * bl.damage_factor
@@ -15676,9 +15674,105 @@ function scripts.bullet_tower_ballista.update(this, store)
     queue_remove(store, this)
 end
 
+scripts.bullet_tower_ballista_skill_final_shot = {
+    update = function(this, store)
+        local b = this.bullet
+        local s = this.render.sprites[1]
+        -- local target = store.entities[b.target_id]
+        local source = store.entities[b.source_id]
+        -- local dest = V.vclone(b.to)
+        local dest = b.to
+        local angle = math.atan2(dest.y - b.from.y, dest.x - b.from.x)
+        s.r = angle
+        local mods
+        if b.mod then
+            mods = type(b.mod) == "table" and b.mod or {b.mod}
+        elseif b.mods then
+            mods = b.mods
+        end
+        local radius = b.damage_radius
+
+        local dist = V.dist(dest.x, dest.y, b.from.x, b.from.y)
+        s.scale = {
+            x = dist / this.image_width,
+            y = 1.35
+        }
+
+        local function hit_target(target)
+            local d = SU.create_bullet_damage(b, target.id, this.id)
+
+            queue_damage(store, d)
+
+            for _, mod_name in pairs(mods) do
+                local mod = E:create_entity(mod_name)
+                mod.modifier.source_id = this.id
+                mod.modifier.target_id = target.id
+                mod.modifier.level = b.level
+                mod.modifier.source_damage = d
+                mod.modifier.damage_factor = b.damage_factor
+                queue_insert(store, mod)
+            end
+
+            local fx = E:create_entity(b.hit_fx)
+
+            fx.pos = V.v(target.pos.x + target.unit.hit_offset.x, target.pos.y + target.unit.hit_offset.y)
+            fx.render.sprites[1].ts = store.tick_ts
+
+            queue_insert(store, fx)
+            fx.render.sprites[1].r = angle
+        end
+
+        local targets = {}
+
+        s.ts = store.tick_ts
+
+        while store.tick_ts - s.ts < b.hit_time do
+            coroutine.yield()
+        end
+
+        local already_hit_target = false
+
+        while store.tick_ts - s.ts < this.ray_duration do
+            if source and not store.entities[source.id] then
+                queue_remove(store, this)
+                break
+            end
+
+            if not already_hit_target and store.tick_ts - s.ts > this.hit_delay then
+                local sample_count = math.ceil(dist / (radius * 1.5))
+                local Dx = dest.x - b.from.x
+                local Dy = dest.y - b.from.y
+                for i = 1, sample_count + 1 do
+                    local lambda = (i - 1) / sample_count
+                    local sample_pos = {
+                        x = lambda * Dx + b.from.x,
+                        y = lambda * Dy + b.from.y
+                    }
+                    local sample_targets = U.find_enemies_in_range_filter_off(sample_pos, radius, F_RANGED, F_NONE)
+                    if sample_targets then
+                        for _, target in pairs(sample_targets) do
+                            targets[target] = true
+                        end
+                    end
+                end
+                for target, _ in pairs(targets) do
+                    hit_target(target)
+                end
+                already_hit_target = true
+            end
+
+            coroutine.yield()
+
+            s.hidden = false
+        end
+
+        queue_remove(store, this)
+    end
+}
+
 scripts.bullet_tower_ballista_skill_bomb = {}
 
-function scripts.bullet_tower_ballista_skill_bomb.update(this, store, script)
+function scripts.bullet_tower_ballista_skill_bomb.update(this, store)
     local b = this.bullet
     local dmin, dmax = b.damage_min, b.damage_max
     local dradius = b.damage_radius
