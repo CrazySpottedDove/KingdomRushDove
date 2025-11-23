@@ -1042,7 +1042,7 @@ e = E:get_template("mod_priest_armor")
 local factor_3 = 1 - e.cooldown_rate
 count = s.count[max_lvl]
 map["光翼庇护"] = str(
-    "德得尔传送时，用光翼庇护周围的友军，使他们物抗与法抗距离免疫的差距减小",
+    "德得尔传送时，用光翼庇护周围最多",count,"名友军，使他们物抗与法抗距离免疫的差距减小",
     factor * 100, "%，并使他们伤害提升", factor_2 * 100, "%，攻速提升", factor_3 * 100, "%。")
 
 set_hero("hero_dwarf")

@@ -3868,14 +3868,12 @@ scripts.hero_priest = {
 
         local function do_armor_buff(pos, out)
             local skill = this.hero.skills.wingsoflight
-            if skill.level < 1 then
-                return
-            end
 
             local targets = U.find_soldiers_in_range(store.soldiers, pos, 0, skill.range, 0, 0)
 
             if targets then
-                for i = 1, math.min(#targets, skill.count[skill.level]) do
+                local count = math.min(#targets, skill.count[skill.level])
+                for i = 1, count do
                     local target = targets[i]
                     local m = E:create_entity("mod_priest_armor")
                     m.modifier.target_id = target.id
