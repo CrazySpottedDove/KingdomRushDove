@@ -3195,7 +3195,7 @@ tt.hero.skills.holylight.xp_level_steps = {
     [8] = 3
 }
 tt.hero.skills.consecrate = CC("hero_skill")
-tt.hero.skills.consecrate.duration = {6, 12, 18}
+tt.hero.skills.consecrate.duration = {8, 15, 22}
 tt.hero.skills.consecrate.extra_damage = {0.18, 0.24, 0.3}
 tt.hero.skills.consecrate.xp_gain_factor = 50
 tt.hero.skills.consecrate.xp_level_steps = {
