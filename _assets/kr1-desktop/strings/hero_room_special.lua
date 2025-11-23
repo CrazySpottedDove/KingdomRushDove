@@ -981,15 +981,15 @@ get_damage(e.bullet)
 set_damage_value(s.damage[max_lvl])
 radius = e.bullet.damage_radius
 cooldown = h.ranged.attacks[2].cooldown
-map["龙息"] = str(cooldown_str(),"阿什比特向随机敌人持续喷吐火焰，对", radius,
+map["龙息"] = str(cooldown_str(), "阿什比特向随机敌人持续喷吐火焰，对", radius,
     "范围内敌人总共造成", damage_str(), "。")
 set_skill(h.hero.skills.feast)
 chance = s.devour_chance[max_lvl]
 get_damage(h.timed_attacks.list[1])
 set_damage_value(s.damage[max_lvl])
 cooldown = h.timed_attacks.list[1].cooldown
-map["猎宴"] = str(cooldown_str(),"阿什比特扑击最近的敌人，造成", damage_str(),
-    "，并有", rate_str(chance), "概率吞噬敌人。如果敌人免疫秒杀或吞噬，则改为造成2倍伤害。")
+map["猎宴"] = str(cooldown_str(), "阿什比特扑击最近的敌人，造成", damage_str(), "，并有",
+    rate_str(chance), "概率吞噬敌人。如果敌人免疫秒杀或吞噬，则改为造成2倍伤害。")
 set_skill(h.hero.skills.fierymist)
 e = E:get_template("aura_fierymist_dragon")
 factor = 1 - s.slow_factor[max_lvl]
@@ -998,17 +998,17 @@ radius = e.aura.radius
 cycle_time = e.aura.cycle_time
 get_damage(e.aura)
 cooldown = h.ranged.attacks[3].cooldown
-map["浓烟"] = str(cooldown_str(),"阿什比特向随机敌人喷吐浓烟，持续", duration,
-    "秒。浓烟每隔", cycle_time, "秒对", radius, "范围内敌人造成", damage_str(), "，并使其受到",
-    factor * 100, "%的减速效果。")
+map["浓烟"] = str(cooldown_str(), "阿什比特向随机敌人喷吐浓烟，持续", duration, "秒。浓烟每隔",
+    cycle_time, "秒对", radius, "范围内敌人造成", damage_str(), "，并使其受到", factor * 100,
+    "%的减速效果。")
 set_skill(h.hero.skills.wildfirebarrage)
 cooldown = h.ranged.attacks[4].cooldown
 count = s.explosions[max_lvl]
 e = E:get_template("wildfirebarrage_dragon")
 get_damage(e.bullet)
 radius = e.bullet.damage_radius
-map["火焰弹幕"] = str(cooldown_str(),"阿什比特向随机敌人发射火球，落地后爆炸产生",
-    count, "次范围",radius,"的爆炸，每次爆炸造成", damage_str(), "。")
+map["火焰弹幕"] = str(cooldown_str(), "阿什比特向随机敌人发射火球，落地后爆炸产生", count,
+    "次范围", radius, "的爆炸，每次爆炸造成", damage_str(), "。")
 set_skill(h.hero.skills.reignoffire)
 e = E:get_template("mod_dragon_reign")
 duration = e.modifier.duration
@@ -1016,13 +1016,34 @@ cycle_time = e.dps.damage_every
 get_damage(e.dps)
 set_damage_value(s.dps[max_lvl])
 count = e.modifier.max_duplicates
-map["烈焰君临"] = str("阿什比特的攻击将会点燃敌人，持续", duration, "秒。点燃状态下的敌人每隔",
-    cycle_time, "秒受到", damage_str(), "，最多叠加",count,"层。当火焰持续时间结束时，火焰将尝试向周围敌人传播。")
+map["烈焰君临"] = str("阿什比特的攻击将会点燃敌人，持续", duration,
+    "秒。点燃状态下的敌人每隔", cycle_time, "秒受到", damage_str(), "，最多叠加", count,
+    "层。当火焰持续时间结束时，火焰将尝试向周围敌人传播。")
 
 set_hero("hero_priest")
-map["圣光术"] = str()
-map["神圣祝颂"] = str()
-map["光翼庇护"] = str()
+set_skill(h.hero.skills.holylight)
+count = s.heal_count[max_lvl]
+chance = s.revive_chance[max_lvl]
+heal = s.heal_hp[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+map["圣光术"] = str(cooldown_str(), "德得尔使用圣光术治疗自己与周围友军，最多恢复", count,
+    "名士兵", heal, "点生命值，驱散他们的异常状态，并有", rate_str(chance), "复活死去的战友。")
+set_skill(h.hero.skills.consecrate)
+duration = s.duration[max_lvl]
+factor = s.extra_damage[max_lvl]
+cooldown = h.timed_attacks.list[2].cooldown
+map["神圣祝颂"] = str(cooldown_str(), "德得尔祝福最近的一座防御塔，使其伤害提升", factor * 100,
+    "%，持续", duration, "秒。")
+set_skill(h.hero.skills.wingsoflight)
+duration = s.duration[max_lvl]
+factor = s.armor_rate[max_lvl]
+local factor_2 = s.damage_rate[max_lvl]
+e = E:get_template("mod_priest_armor")
+local factor_3 = 1 - e.cooldown_rate
+count = s.count[max_lvl]
+map["光翼庇护"] = str(
+    "德得尔传送时，用光翼庇护周围的友军，使他们物抗与法抗距离免疫的差距减小",
+    factor * 100, "%，并使他们伤害提升", factor_2 * 100, "%，攻速提升", factor_3 * 100, "%。")
 
 set_hero("hero_dwarf")
 map["重锤"] = str()

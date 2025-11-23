@@ -3306,6 +3306,8 @@ tt.bullet.damage_max = nil
 tt = RT("mod_priest_heal", "modifier")
 AC(tt, "hps", "render")
 tt.modifier.duration = fts(24)
+tt.modifier.remove_banned = true
+tt.modifier.ban_types = {MOD_TYPE_POISON, MOD_TYPE_STUN, MOD_TYPE_BLEED}
 tt.hps.heal_min = 25
 tt.hps.heal_max = 25
 tt.hps.heal_every = 9e+99
