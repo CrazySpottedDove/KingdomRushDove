@@ -1027,7 +1027,8 @@ chance = s.revive_chance[max_lvl]
 heal = s.heal_hp[max_lvl]
 cooldown = h.timed_attacks.list[1].cooldown
 map["圣光术"] = str(cooldown_str(), "德得尔使用圣光术治疗自己与周围友军，最多恢复", count,
-    "名士兵", heal, "点生命值，驱散他们的异常状态，并有", rate_str(chance), "复活死去的战友。")
+    "名士兵", heal, "点生命值，驱散他们的异常状态，并有", rate_str(chance),
+    "复活死去的战友。")
 set_skill(h.hero.skills.consecrate)
 duration = s.duration[max_lvl]
 factor = s.extra_damage[max_lvl]
@@ -1041,13 +1042,31 @@ local factor_2 = s.damage_rate[max_lvl]
 e = E:get_template("mod_priest_armor")
 local factor_3 = 1 - e.cooldown_rate
 count = s.count[max_lvl]
-map["光翼庇护"] = str(
-    "德得尔传送时，用光翼庇护周围最多",count,"名友军，使他们物抗与法抗距离免疫的差距减小",
-    factor * 100, "%，并使他们伤害提升", factor_2 * 100, "%，攻速提升", factor_3 * 100, "%。")
+map["光翼庇护"] = str("德得尔传送时，用光翼庇护周围最多", count,
+    "名友军，使他们物抗与法抗距离免疫的差距减小", factor * 100, "%，并使他们伤害提升",
+    factor_2 * 100, "%，攻速提升", factor_3 * 100, "%。")
 
 set_hero("hero_dwarf")
-map["重锤"] = str()
-map["大地之力"] = str()
+set_skill(h.hero.skills.ring)
+get_damage(h.melee.attacks[2])
+cooldown = h.melee.attacks[2].cooldown
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+radius = h.melee.attacks[2].damage_radius
+map["重锤"] = str(cooldown_str(), "鲁林挥动重锤，对", radius, "范围内敌人造成", damage_str(), "。")
+set_skill(h.hero.skills.giant)
+factor = s.scale[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+heal_factor = factor * 0.1
+e = E:get_template("mod_dwarf_champion_stun")
+duration = e.modifier.duration
+map["大地之力"] = str(cooldown_str(), "鲁林使用大地之力，身形变为", factor, "倍，恢复",
+    heal_factor * 100, "%最大生命值的生命，并挥动重锤，造成范围伤害与", duration, "秒眩晕，范围与伤害均为重锤技能的", factor,
+    "倍。")
+cooldown = h.timed_attacks.list[2].cooldown
+duration = E:get_template("soldier_dwarf_reinforcement").reinforcement.duration
+map["矮人亲卫"] = str(cooldown_str(), "鲁林召唤可调集的矮人亲卫协助战斗，驻场", duration,
+    "秒。矮人亲卫数值与矮人大厅的士兵相同，技能等级同本技能等级。")
 
 set_hero("hero_minotaur")
 map["蛮牛冲撞"] = str()

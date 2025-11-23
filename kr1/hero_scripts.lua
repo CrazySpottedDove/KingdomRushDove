@@ -701,7 +701,8 @@ scripts.soldier_mirage_illusion = {
 
                 queue_insert(store, smoke)
 
-                local enemies = U.find_enemies_in_range(store, this.pos, 0, this.melee.attacks[1].damage_radius, F_AREA, 0)
+                local enemies = U.find_enemies_in_range(store, this.pos, 0, this.melee.attacks[1].damage_radius, F_AREA,
+                    0)
                 if enemies then
                     for _, e in pairs(enemies) do
                         if e.health and not e.health.dead then
@@ -1334,7 +1335,7 @@ scripts.hero_wizard = {
 
         local arcane_torrent_ts = store.tick_ts
 
-        local function filter_fn (v)
+        local function filter_fn(v)
             return v.health.hp <= a_disintegrate.total_damage * unit.damage_factor
         end
 
@@ -1360,7 +1361,8 @@ scripts.hero_wizard = {
                 skill = skill_disintegrate
 
                 if ready_to_use_skill(a, store) then
-                    local targets = U.find_enemies_in_range_filter_on(this.pos, a.max_range, a.vis_flags, a.vis_bans, filter_fn)
+                    local targets = U.find_enemies_in_range_filter_on(this.pos, a.max_range, a.vis_flags, a.vis_bans,
+                        filter_fn)
 
                     if not targets then
                         a.ts = a.ts + fts(10)
@@ -1412,7 +1414,8 @@ scripts.hero_wizard = {
                 skill = skill_missile
 
                 if ready_to_use_skill(a, store) then
-                    local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, a.max_range, a.vis_flags, a.vis_bans)
+                    local target = U.detect_foremost_enemy_in_range_filter_off(this.pos, a.max_range, a.vis_flags,
+                        a.vis_bans)
                     if target then
                         local start_ts = store.tick_ts
                         this.health.immune_to = F_ALL
@@ -1434,8 +1437,7 @@ scripts.hero_wizard = {
                         end
                     end
                     local tmp = 1 + this.arcanetorrent_factor_base * count
-                    this.unit.damage_factor = this.unit.damage_factor / (1 + this.arcanetorrent_factor) *
-                        tmp
+                    this.unit.damage_factor = this.unit.damage_factor / (1 + this.arcanetorrent_factor) * tmp
                     this.arcanetorrent_factor = tmp - 1
                 end
 
@@ -15739,6 +15741,11 @@ scripts.hero_dwarf = {
             a.scale = s.scale[s.level]
         end)
 
+        upgrade_skill(this, "dwarfsoldier", function(this, s)
+            local a = this.timed_attacks.list[2]
+            a.disabled = nil
+        end)
+
         this.health.hp = this.health.hp_max
     end,
     update = function(this, store)
@@ -15749,7 +15756,8 @@ scripts.hero_dwarf = {
         U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
 
         this.health_bar.hidden = false
-
+        local pow_dwarf = this.hero.skills.dwarfsoldier
+        local a
         while true do
             if h.dead then
                 SU.y_hero_death_and_respawn(store, this)
@@ -15768,7 +15776,46 @@ scripts.hero_dwarf = {
                     U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
                 end
 
-                local a = this.timed_attacks.list[1]
+                a = this.timed_attacks.list[2]
+                if ready_to_use_skill(a, store) then
+                    if U.find_first_enemy_in_range_filter_off(this.pos, 120, F_BLOCK, bor(F_FLYING, F_CLIFF, F_WATER)) ~=
+                        nil then
+                        local nodes = P:nearest_nodes(this.pos.x, this.pos.y, nil, nil, nil, NF_RALLY)
+                        if #nodes < 1 then
+                            a.ts = a.ts + 1
+                        else
+                            U.animation_start(this, a.animation, nil, store.tick_ts)
+                            S:queue(a.sound)
+                            SU.hero_gain_xp_from_skill(this, a)
+                            a.ts = store.tick_ts
+
+                            local pi, spi, ni = unpack(nodes[1])
+
+                            for i = 1, a.count do
+                                local new_soldier = E:create_entity(a.entity)
+                                local e_spi, e_ni = math.random(1, 3), ni
+                                local no = math.random(2, 4) * U.random_sign()
+                                if P:is_node_valid(pi, e_ni + no) then
+                                    e_ni = e_ni + no
+                                end
+                                new_soldier.nav_rally.center = P:node_pos(pi, e_spi, e_ni)
+                                new_soldier.nav_rally.pos = V.vclone(new_soldier.nav_rally.center)
+                                new_soldier.pos = V.vclone(new_soldier.nav_rally.center)
+                                new_soldier.owner = this
+                                for k, p in pairs(new_soldier.powers) do
+                                    p.level = math.min(pow_dwarf.level, E:get_template("tower_barrack_dwarf").powers[k].max_level)
+                                end
+                                queue_insert(store, new_soldier)
+                            end
+                        end
+                        SU.y_hero_animation_wait(this)
+                        goto label_467_0
+                    else
+                        a.ts = a.ts + 1
+                    end
+                end
+
+                a = this.timed_attacks.list[1]
                 if ready_to_use_skill(a, store) then
                     local targets = U.find_enemies_in_range(store, this.pos, 0, ring.damage_radius * a.scale,
                         a.vis_flags, a.vis_bans)
