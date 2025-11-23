@@ -1,0 +1,17 @@
+frame_comic1,61,"5_1.png",316,206,1,1,0,1,0.5,0.5
+TEXT,COMIC_5_1,frame_comic1,-14,36,86,30,0,0,0,0,0
+frame_comic1,64,"5_1.png",332,206,1,1,1,1,0.5,0.5
+TEXT,COMIC_5_1,frame_comic1,-14,36,86,30,0,0,0,0,0
+frame_comic1,67,"5_1.png",329,206,1,1,1,1,0.5,0.5
+TEXT,COMIC_5_1,frame_comic1,-14,36,86,30,0,0,0,0,0
+frame_comic2,109,"5_2.png",743,207,1,1,0,1,0.5,0.5
+frame_comic2,112,"5_2.png",727,207,1,1,1,1,0.5,0.5
+frame_comic2,115,"5_2.png",732,207,1,1,1,1,0.5,0.5
+frame_comic3,160,"5_3.png",515,548,1,1,0,1,0.5,0.5
+frame_comic3,180,"5_3.png",515,543,1,1,1,1,0.5,0.5
+frame_comic91,200,"comicContinue.png",802,703,1,1,0,1,0.5,0.5
+TEXT,CINEMATICS_TAP_TO_CONTINUE,frame_comic91,0,0,195,34,-1.7331390380859375,0,0,0,1
+frame_comic91,208,"comicContinue.png",802,697,1,1,1,1,0.5,0.5
+TEXT,CINEMATICS_TAP_TO_CONTINUE,frame_comic91,0,0,195,34,-1.7331390380859375,0,0,0,1
+PAGE_END,208
+ORDER,frame_comic1,frame_comic2,frame_comic3,frame_comic91
