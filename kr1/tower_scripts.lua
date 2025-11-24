@@ -34,7 +34,7 @@ local y_animation_wait = U.y_animation_wait
 
 local function tpos(e)
     return e.tower and e.tower.range_offset and v(e.pos.x + e.tower.range_offset.x, e.pos.y + e.tower.range_offset.y) or
-               e.pos
+        e.pos
 end
 
 local function enemy_ready_to_magic_attack(this, store, attack)
@@ -51,7 +51,7 @@ end
 
 local function enemy_is_silent_target(e)
     return (band(e.vis.flags, F_SPELLCASTER) ~= 0 or e.ranged or e.timed_attacks or e.auras or e.death_spawns) and
-               e.enemy.can_do_magic
+        e.enemy.can_do_magic
 end
 
 local function fts(v)
@@ -73,7 +73,7 @@ end
 local function soldiers_around_need_heal(this, store, trigger_hp_factor, range)
     local targets = table.filter(store.soldiers, function(k, v)
         return (not v.reinforcement) and (not v.health.dead and v.health.hp < trigger_hp_factor * v.health.hp_max) and
-                   U.is_inside_ellipse(v.pos, this.pos, range)
+            U.is_inside_ellipse(v.pos, this.pos, range)
     end)
     if not targets or #targets == 0 then
         return false
@@ -84,21 +84,21 @@ end
 
 local function ready_to_use_power(power, power_attack, store, factor)
     return power.level > 0 and (store.tick_ts - power_attack.ts > power_attack.cooldown * (factor or 1)) and
-               (not power_attack.silence_ts)
+        (not power_attack.silence_ts)
 end
 local function apply_precision(b)
     local u = UP:get_upgrade("archer_precision")
     if u and random() < u.chance then
         b.bullet.damage_min = b.bullet.damage_min * u.damage_factor
         b.bullet.damage_max = b.bullet.damage_max * u.damage_factor
-        b.bullet.pop = {"pop_crit"}
+        b.bullet.pop = { "pop_crit" }
         b.bullet.pop_conds = DR_DAMAGE
     end
 end
 
 local function valid_rally_node_nearby(pos)
     return GR:cell_is_only(pos.x, pos.y, bor(TERRAIN_LAND, TERRAIN_ICE)) and
-               P:valid_node_nearby(pos.x, pos.y, nil, NF_RALLY)
+        P:valid_node_nearby(pos.x, pos.y, nil, NF_RALLY)
 end
 
 -- 矮人射手
@@ -132,7 +132,7 @@ scripts.tower_archer_dwarf = {
         local ab = this.attacks.list[2]
         local pow_b = this.powers.barrel
         local pow_e = this.powers.extra_damage
-        local shooter_sprite_ids = {3, 4}
+        local shooter_sprite_ids = { 3, 4 }
         local shots_count = 1
         local last_target_pos = v(0, 0)
         local a, pow, enemy, _, pred_pos
@@ -226,7 +226,7 @@ scripts.tower_archer_dwarf = {
 -- 游侠
 scripts.tower_ranger = {
     update = function(this, store)
-        local shooter_sids = {3, 4}
+        local shooter_sids = { 3, 4 }
         local shooter_idx = 2
         local druid_sid = 5
         local a = this.attacks
@@ -301,7 +301,7 @@ scripts.tower_ranger = {
                         if pow_p.level > 0 then
                             local poisonable = table.filter(enemies, function(_, e)
                                 return not U.flag_has(e.vis.bans, F_POISON) and
-                                           not U.has_modifiers(store, e, pow_p.mods[1])
+                                    not U.has_modifiers(store, e, pow_p.mods[1])
                             end)
                             for _, e in pairs(enemies) do
                                 if not U.flag_has(e.vis.bans, F_POISON) and not U.has_modifiers(store, e, pow_p.mods[1]) then
@@ -344,7 +344,7 @@ scripts.tower_ranger = {
 -- 火枪
 scripts.tower_musketeer = {
     update = function(this, store)
-        local shooter_sids = {3, 4}
+        local shooter_sids = { 3, 4 }
         local shooter_idx = 2
         local a = this.attacks
         local aa = this.attacks.list[1]
@@ -426,7 +426,7 @@ scripts.tower_musketeer = {
                 end
                 SU.tower_update_silenced_powers(store, this)
                 if pow_sn.level > 0 then
-                    for _, ax in pairs({asi, asn}) do
+                    for _, ax in pairs({ asi, asn }) do
                         if (ax.chance == 1 or random() < ax.chance) and
                             ready_to_use_power(pow_sn, ax, store, tw.cooldown_factor) then
                             local enemy = U.find_biggest_enemy_in_range_filter_off(tpos, ax.range, ax.vis_flags,
@@ -442,7 +442,7 @@ scripts.tower_musketeer = {
                                 goto continue_ax
                             end
 
-                            for _, axx in pairs({aa, asi, asn}) do
+                            for _, axx in pairs({ aa, asi, asn }) do
                                 axx.ts = store.tick_ts
                             end
 
@@ -589,7 +589,7 @@ scripts.tower_crossbow = {
         return true
     end,
     update = function(this, store)
-        local shooter_sprite_ids = {3, 4}
+        local shooter_sprite_ids = { 3, 4 }
         local a = this.attacks
         local aa = this.attacks.list[1]
         local ma = this.attacks.list[2]
@@ -642,7 +642,7 @@ scripts.tower_crossbow = {
                     local range = ea.range + km.clamp(1, 3, pow_e.level + 1) * ea.range_inc
                     local targets = table.filter(store.towers, function(_, e)
                         return e ~= this and not table.contains(modded_ids, e.id) and
-                                   U.is_inside_ellipse(e.pos, this.pos, range)
+                            U.is_inside_ellipse(e.pos, this.pos, range)
                     end)
 
                     for _, target in pairs(targets) do
@@ -691,7 +691,7 @@ scripts.tower_crossbow = {
                         end)
                         local towers = table.filter(store.towers, function(_, e)
                             return e.tower.can_be_mod and not table.contains(busy_ids, e.id) and
-                                       U.is_inside_ellipse(e.pos, this.pos, eagle_range)
+                                U.is_inside_ellipse(e.pos, this.pos, eagle_range)
                         end)
 
                         for _, tower in pairs(towers) do
@@ -781,7 +781,7 @@ scripts.tower_crossbow = {
 
                                 if crit_chance > random() then
                                     bl.damage_factor = bl.damage_factor * 2
-                                    bl.pop = {"pop_crit"}
+                                    bl.pop = { "pop_crit" }
                                     bl.pop_conds = DR_DAMAGE
                                 end
                             end
@@ -855,7 +855,7 @@ scripts.tower_crossbow = {
                             local crit_chance = aa.critical_chance + pow_e.level * aa.critical_chance_inc
                             if crit_chance > random() then
                                 bl.damage_factor = bl.damage_factor * 2
-                                bl.pop = {"pop_crit"}
+                                bl.pop = { "pop_crit" }
                                 bl.pop_conds = DR_DAMAGE
                             end
                         end
@@ -893,11 +893,11 @@ scripts.tower_totem = {
     update = function(this, store)
         local last_target_pos = v(0, 0)
         local shots_count = 0
-        local shooter_sprite_ids = {3, 4}
+        local shooter_sprite_ids = { 3, 4 }
         local a = this.attacks
         local aa = this.attacks.list[1]
-        local eyes_sids = {8, 7}
-        local attack_ids = {2, 3}
+        local eyes_sids = { 8, 7 }
+        local attack_ids = { 2, 3 }
 
         aa.ts = store.tick_ts
         local tw = this.tower
@@ -909,7 +909,7 @@ scripts.tower_totem = {
             else
                 SU.tower_update_silenced_powers(store, this)
 
-                for i, name in ipairs({"weakness", "silence"}) do
+                for i, name in ipairs({ "weakness", "silence" }) do
                     local pow = this.powers[name]
                     local ta = this.attacks.list[attack_ids[i]]
 
@@ -1143,7 +1143,7 @@ scripts.tower_arcane = {
         return o
     end,
     update = function(this, store)
-        local shooter_sids = {3, 4}
+        local shooter_sids = { 3, 4 }
         local shooter_idx = 2
         local a = this.attacks
         local aa = this.attacks.list[1]
@@ -1202,7 +1202,7 @@ scripts.tower_arcane = {
                 if pow_s.changed then
                     pow_s.changed = nil
                     this.attacks.list[3].chance = this.attacks.list[3].chance_base + pow_s.level *
-                                                      this.attacks.list[3].chance_inc
+                        this.attacks.list[3].chance_inc
                 end
 
                 SU.tower_update_silenced_powers(store, this)
@@ -1349,7 +1349,7 @@ scripts.tower_silver = {
 
             if attack.critical_chances and random() < attack.critical_chances[lidx] then
                 bl.damage_factor = 2 * bl.damage_factor
-                bl.pop = {"pop_crit"}
+                bl.pop = { "pop_crit" }
                 bl.pop_conds = DR_DAMAGE
                 bl.damage_type = DAMAGE_TRUE
             end
@@ -1407,7 +1407,7 @@ scripts.tower_silver = {
 
                         if k == "mark" then
                             this.attacks.list[3].cooldown = this.attacks.list[3].cooldown +
-                                                                this.attacks.list[3].cooldown_inc
+                                this.attacks.list[3].cooldown_inc
                         end
                     end
                 end
@@ -1748,7 +1748,7 @@ scripts.tower_high_elven = {
                     end
                     local targets = table.filter(store.towers, function(_, e)
                         return e ~= this and not table.contains(modded_ids, e.id) and
-                                   U.is_inside_ellipse(e.pos, this.pos, range)
+                            U.is_inside_ellipse(e.pos, this.pos, range)
                     end)
 
                     for _, target in pairs(targets) do
@@ -1788,7 +1788,7 @@ scripts.tower_high_elven = {
                     end)
                     local towers = table.filter(store.towers, function(_, e)
                         return e.tower.can_be_mod and not table.contains(busy_ids, e.id) and
-                                   U.is_inside_ellipse(e.pos, this.pos, pow_s.range)
+                            U.is_inside_ellipse(e.pos, this.pos, pow_s.range)
                     end)
 
                     for _, tower in pairs(towers) do
@@ -1960,7 +1960,7 @@ scripts.tower_arcane_wizard = {
                 function(e)
                     if aa == at then
                         return e.nav_path.ni >= aa.min_nodes and
-                                   (not e.enemy.counts.mod_teleport or e.enemy.counts.mod_teleport < max_times_applied)
+                            (not e.enemy.counts.mod_teleport or e.enemy.counts.mod_teleport < max_times_applied)
                     else
                         return true
                     end
@@ -2017,7 +2017,7 @@ scripts.tower_arcane_wizard = {
                             ad.ts = ad.ts - ad.cooldown + base_time
                         else
                             ad.ts = ad.ts - ad.cooldown + base_time + (enemy.health.hp - exact_base_damage) /
-                                        (exact_upper_damage - exact_base_damage) * (ad.cooldown - base_time)
+                                (exact_upper_damage - exact_base_damage) * (ad.cooldown - base_time)
                         end
                     end
                 end
@@ -2095,7 +2095,7 @@ scripts.tower_arcane_wizard = {
             end
             ::continue::
             if ((ad.ts <= last_ts - (ad.cooldown - a.min_cooldown) * tw.cooldown_factor) or
-                (store.tick_ts - ad.ts >= (ad.cooldown - a.min_cooldown) * tw.cooldown_factor)) and pow_d.level > 0 then
+                    (store.tick_ts - ad.ts >= (ad.cooldown - a.min_cooldown) * tw.cooldown_factor)) and pow_d.level > 0 then
                 if not this.decalmod_disintegrate then
                     local mod = E:create_entity("decalmod_arcane_wizard_disintegrate_ready")
                     mod.modifier.target_id = this.id
@@ -2135,8 +2135,8 @@ scripts.tower_sorcerer = {
         ab.ts = store.tick_ts
 
         local aa, pow
-        local attacks = {ap, ab}
-        local pows = {pow_p}
+        local attacks = { ap, ab }
+        local pows = { pow_p }
 
         while true do
             if this.tower.blocked then
@@ -2374,10 +2374,10 @@ scripts.tower_archmage = {
                     local target = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range, false, ta.vis_flags,
                         ta.vis_bans, function(e)
                             return P:is_node_valid(e.nav_path.pi, e.nav_path.ni, NF_TWISTER) and e.nav_path.ni >
-                                       P:get_start_node(e.nav_path.pi) + ta.nodes_limit and e.nav_path.ni <
-                                       P:get_end_node(e.nav_path.pi) - ta.nodes_limit and
-                                       (not e.enemy.counts.twister or e.enemy.counts.twister <
-                                           E:get_template("twister").max_times_applied)
+                                P:get_start_node(e.nav_path.pi) + ta.nodes_limit and e.nav_path.ni <
+                                P:get_end_node(e.nav_path.pi) - ta.nodes_limit and
+                                (not e.enemy.counts.twister or e.enemy.counts.twister <
+                                    E:get_template("twister").max_times_applied)
                         end)
 
                     if not target then
@@ -2579,9 +2579,9 @@ scripts.tower_necromancer = {
                             s.health.hp_max = s.health.hp_max + s.health.hp_inc
                             s.health.armor = s.health.armor + s.health.armor_inc
                             s.melee.attacks[1].damage_min = s.melee.attacks[1].damage_min +
-                                                                s.melee.attacks[1].damage_inc
+                                s.melee.attacks[1].damage_inc
                             s.melee.attacks[1].damage_max = s.melee.attacks[1].damage_max +
-                                                                s.melee.attacks[1].damage_inc
+                                s.melee.attacks[1].damage_inc
                             s.health.hp = s.health.hp_max
 
                             local auras = table.filter(store.auras, function(k, v)
@@ -2607,9 +2607,9 @@ scripts.tower_necromancer = {
                         s.health.hp_max = s.health.hp_max + s.health.hp_inc * s.unit.level
                         s.health.armor = s.health.armor + s.health.armor_inc * s.unit.level
                         s.melee.attacks[1].damage_min = s.melee.attacks[1].damage_min + s.melee.attacks[1].damage_inc *
-                                                            s.unit.level
+                            s.unit.level
                         s.melee.attacks[1].damage_max = s.melee.attacks[1].damage_max + s.melee.attacks[1].damage_inc *
-                                                            s.unit.level
+                            s.unit.level
                         U.soldier_inherit_tower_buff_factor(s, this)
                         queue_insert(store, s)
 
@@ -2810,7 +2810,7 @@ scripts.tower_faerie_dragon = {
         local a = this.attacks.list[1]
         local pow_m = this.powers.more_dragons
         local pow_i = this.powers.improve_shot
-        local egg_sids = {3, 4}
+        local egg_sids = { 3, 4 }
         local attacks = this.attacks
         local tw = this.tower
         while true do
@@ -2884,7 +2884,7 @@ scripts.tower_faerie_dragon = {
                                     return true
                                 end
                                 return V.dist2(e1.pos.x, e1.pos.y, origin.x, origin.y) <
-                                           V.dist2(e2.pos.x, e2.pos.y, origin.x, origin.y)
+                                    V.dist2(e2.pos.x, e2.pos.y, origin.x, origin.y)
                             end)
 
                             dragon.custom_attack.target_id = targets[1].id
@@ -2946,7 +2946,7 @@ scripts.tower_sunray = {
         local manual = this.powers.manual
         local a = this.attacks.list[1]
         local charging = false
-        local sid_shooters = {7, 8, 9, 10}
+        local sid_shooters = { 7, 8, 9, 10 }
         local group_tower = "tower"
         local splash_radius = 45
         local kill_extra_gold_factor = 0.6
@@ -3062,7 +3062,7 @@ scripts.tower_sunray = {
                     end
                     b.bullet.damage_factor = this.tower.damage_factor
                     local damage = (b.bullet.damage_max + b.bullet.damage_inc * pow.level) * mode_damage_factor *
-                                       this.tower.damage_factor
+                        this.tower.damage_factor
                     local decrease_damage = damage * damage_decrease_rate
                     local pure_damage = {}
                     pure_damage.damage_type = b.bullet.damage_type
@@ -3207,8 +3207,8 @@ function scripts.tower_pixie.update(this, store)
                             target = U.find_random_enemy(store, this.pos, 0, a.range, attack.vis_flags, attack.vis_bans,
                                 function(e)
                                     return not table.contains(a.excluded_templates, e.template_name) and
-                                               not enemy_cooldowns[e.id] and
-                                               (not attack.check_gold_bag or e.enemy.gold_bag > 0)
+                                        not enemy_cooldowns[e.id] and
+                                        (not attack.check_gold_bag or e.enemy.gold_bag > 0)
                                 end)
 
                             if not target then
@@ -3319,8 +3319,8 @@ scripts.tower_bfg = {
         ab.ts = store.tick_ts
 
         local aa, pow
-        local attacks = {am, ac, ab}
-        local pows = {pow_m, pow_c}
+        local attacks = { am, ac, ab }
+        local pows = { pow_m, pow_c }
 
         while true do
             if this.tower.blocked then
@@ -3517,10 +3517,10 @@ scripts.lava_dwaarp = {
                 local targets = U.find_enemies_in_range_filter_on(this.pos, this.aura.radius, this.aura.vis_flags,
                     this.aura.vis_bans, function(e)
                         return (not this.aura.allowed_templates or
-                                   table.contains(this.aura.allowed_templates, e.template_name)) and
-                                   (not this.aura.excluded_templates or
-                                       not table.contains(this.aura.excluded_templates, e.template_name)) and
-                                   (not this.aura.filter_source or this.aura.source_id ~= e.id)
+                                table.contains(this.aura.allowed_templates, e.template_name)) and
+                            (not this.aura.excluded_templates or
+                                not table.contains(this.aura.excluded_templates, e.template_name)) and
+                            (not this.aura.filter_source or this.aura.source_id ~= e.id)
                     end)
                 if not targets then
                     -- last_hit_ts = last_hit_ts + fts(1)
@@ -3778,7 +3778,7 @@ scripts.tower_dwaarp = {
                                 local decal = E:create_entity("decal_tween")
 
                                 decal.pos.x, decal.pos.y = p.pos.x, p.pos.y
-                                decal.tween.props[1].keys = {{0, 255}, {1, 255}, {2.5, 0}}
+                                decal.tween.props[1].keys = { { 0, 255 }, { 1, 255 }, { 2.5, 0 } }
                                 decal.tween.props[1].name = "alpha"
 
                                 if random() < 0.5 then
@@ -3997,7 +3997,7 @@ scripts.tower_entwood = {
                     loaded = nil
 
                     if U.has_enough_enemies_in_range(store, tpos(this), 0, ca.range, ca.vis_flags, ca.vis_bans, nil,
-                        ca.min_count) then
+                            ca.min_count) then
                         ca.ts = store.tick_ts
                         blink_ts = store.tick_ts
 
@@ -4007,7 +4007,7 @@ scripts.tower_entwood = {
 
                         for i = 1, #this.fx_points do
                             local p = this.fx_points[i]
-                            local decal = E:create_entity(table.random({"decal_clobber_1", "decal_clobber_2"}))
+                            local decal = E:create_entity(table.random({ "decal_clobber_1", "decal_clobber_2" }))
 
                             decal.pos.x, decal.pos.y = p.pos.x, p.pos.y
                             decal.render.sprites[1].ts = store.tick_ts
@@ -4197,7 +4197,6 @@ scripts.tower_tesla = {
 
                         if target.health.dead or not store.entities[target.id] or
                             not U.is_inside_ellipse(tpos(this), target.pos, ar.range * a.range_check_factor) then
-
                             target = U.detect_foremost_enemy_in_range_filter_off(tpos(this), ar.range, ar.vis_flags,
                                 ar.vis_bans)
                         end
@@ -4643,7 +4642,7 @@ scripts.tower_frankenstein = {
         return true
     end,
     update = function(this, store)
-        local charges_sids = {7, 8}
+        local charges_sids = { 7, 8 }
         local charges_ts = store.tick_ts
         local charges_cooldown = random(fts(71), fts(116))
         local drcrazy_sid = 9
@@ -4938,7 +4937,7 @@ function scripts.druid_shooter_sylvan.update(this, store)
             local target, enemies = U.find_foremost_enemy_in_range_filter_on(tpos(this.owner), a.range, nil,
                 a.vis_flags, a.vis_bans, function(v)
                     return not table.contains(a.excluded_templates, v.template_name) and
-                               not U.has_modifier(store, v, "mod_druid_sylvan")
+                        not U.has_modifier(store, v, "mod_druid_sylvan")
                 end)
 
             if target and #enemies > 1 then
@@ -5122,8 +5121,8 @@ function scripts.tower_druid.update(this, store)
                     pow.changed = nil
 
                     if not table.contains(table.map(this.shooters, function(k, v)
-                        return v.template_name
-                    end), pow.entity) then
+                            return v.template_name
+                        end), pow.entity) then
                         local s = E:create_entity(pow.entity)
 
                         s.pos = vclone(this.pos)
@@ -5333,14 +5332,14 @@ function scripts.tower_tricannon.update(this, store)
     local pow_o = this.powers and this.powers.overheat
     local last_ts = store.tick_ts - ab.cooldown
     local aa, pow
-    local attacks = {ao, am, ab}
+    local attacks = { ao, am, ab }
     for _, a in pairs(attacks) do
         a.ts = store.tick_ts
     end
     this.decal_mod = nil
 
-    local pows = {pow_o, pow_m}
-    local overheateble_attacks = {am, ab}
+    local pows = { pow_o, pow_m }
+    local overheateble_attacks = { am, ab }
     local tw = this.tower
     local function shoot_bullet(attack, enemy, dest, bullet_idx)
         local b = E:create_entity(attack.bullet)
@@ -5444,7 +5443,7 @@ function scripts.tower_tricannon.update(this, store)
                                     local enemy_index = km.zmod(j + 1, #enemies)
                                     local enemy = enemies[enemy_index]
                                     local ni = enemy.nav_path.ni +
-                                                   P:predict_enemy_node_advance(enemy, aa.node_prediction)
+                                        P:predict_enemy_node_advance(enemy, aa.node_prediction)
                                     local dest = P:node_pos(enemy.nav_path.pi, enemy.nav_path.spi, ni)
 
                                     table.insert(target_positions, {
@@ -5514,7 +5513,7 @@ function scripts.tower_tricannon.update(this, store)
 
                             local dest = enemy and U.calculate_enemy_ffe_pos(enemy, aa.node_prediction) or trigger_pos
                             local dest_path = enemy and enemy.nav_path.pi or trigger_path
-                            local nearest_nodes = P:nearest_nodes(dest.x, dest.y, {dest_path})
+                            local nearest_nodes = P:nearest_nodes(dest.x, dest.y, { dest_path })
                             local pi, spi, ni = unpack(nearest_nodes[1])
                             local spread = aa.spread[pow.level]
                             local node_skip = aa.node_skip[pow.level]
@@ -5698,7 +5697,7 @@ function scripts.tower_dark_elf.update(this, store)
         local d = E:create_entity("damage")
         local bullet = E:get_template(attack.bullet).bullet
         d.value = this.tower.damage_factor *
-                      (bullet.damage_min + this.tower_upgrade_persistent_data.souls_extra_damage_min)
+            (bullet.damage_min + this.tower_upgrade_persistent_data.souls_extra_damage_min)
         d.damage_type = bullet.damage_type
         d.reduce_armor = bullet.reduce_armor
 
@@ -5914,7 +5913,7 @@ function scripts.tower_dark_elf.update(this, store)
                 bullet.pos = vclone(this.pos)
 
                 local offset_x = af and -attack.bullet_start_offset[angle_idx].x or
-                                     attack.bullet_start_offset[angle_idx].x
+                    attack.bullet_start_offset[angle_idx].x
                 local offset_y = attack.bullet_start_offset[angle_idx].y
 
                 bullet.pos = v(this.pos.x + offset_x, this.pos.y + offset_y)
@@ -5924,9 +5923,9 @@ function scripts.tower_dark_elf.update(this, store)
 
                 if pow_buff.level > 0 then
                     bullet.bullet.damage_min = bullet.bullet.damage_min +
-                                                   this.tower_upgrade_persistent_data.souls_extra_damage_min
+                        this.tower_upgrade_persistent_data.souls_extra_damage_min
                     bullet.bullet.damage_max = bullet.bullet.damage_max +
-                                                   this.tower_upgrade_persistent_data.souls_extra_damage_max
+                        this.tower_upgrade_persistent_data.souls_extra_damage_max
                 end
 
                 apply_precision(bullet)
@@ -6010,7 +6009,7 @@ function scripts.mod_tower_dark_elf_big_target.update(this, store)
         end
 
         this.render.sprites[1].hidden = not target or target.health.dead or
-                                            source.tower_upgrade_persistent_data.current_mode == 0
+            source.tower_upgrade_persistent_data.current_mode == 0
 
         if m.duration >= 0 and store.tick_ts - m.ts > m.duration then
             queue_remove(store, this)
@@ -6086,7 +6085,7 @@ function scripts.bullet_tower_dark_elf.update(this, store)
 
             local mods
             if b.mod then
-                mods = type(b.mod) == "table" and b.mod or {b.mod}
+                mods = type(b.mod) == "table" and b.mod or { b.mod }
             elseif b.mods then
                 mods = b.mods
             end
@@ -6537,7 +6536,7 @@ function scripts.bullet_tower_dark_elf_skill_buff.update(this, store)
         end
 
         if b.mod or b.mods then
-            local mods = b.mods or {b.mod}
+            local mods = b.mods or { b.mod }
 
             for _, mod_name in pairs(mods) do
                 local m = E:create_entity(mod_name)
@@ -6645,7 +6644,7 @@ function scripts.tower_demon_pit.update(this, store)
     ab.ts = store.tick_ts - ab.cooldown + a.attack_delay_on_spawn
     local nodes_update_ts = store.tick_ts
     local nodes_limit = #nearest_nodes > 5 and 5 or #nearest_nodes
-    local attacks = {ag, ab}
+    local attacks = { ag, ab }
     local pows = {}
     local pow_g, pow_m
 
@@ -7410,7 +7409,7 @@ function scripts.tower_necromancer_lvl4.update(this, store)
                     b.bullet.level = 4
                     b.bullet.damage_factor = tw.damage_factor
                     b.render.sprites[1].flip_x = this.tower_upgrade_persistent_data.current_skulls > 0 and
-                                                     this.tower_upgrade_persistent_data.current_skulls < 3
+                        this.tower_upgrade_persistent_data.current_skulls < 3
                     b.fire_directly = fire_directly
 
                     if this.tower_upgrade_persistent_data.current_skulls < 2 then
@@ -7895,7 +7894,7 @@ function scripts.mod_tower_necromancer_curse.remove(this, store)
 
     if target then
         local can_spawn = target.health.dead and target._necromancer_entity_name and
-                              band(target.health.last_damage_types, bor(DAMAGE_EAT, DAMAGE_NO_SPAWNS)) == 0
+            band(target.health.last_damage_types, bor(DAMAGE_EAT, DAMAGE_NO_SPAWNS)) == 0
 
         if can_spawn then
             target.death_spawns = nil
@@ -7964,7 +7963,7 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
 
     local targets = table.filter(store.towers, function(k, v)
         return not v.pending_removal and v.template_name == "tower_necromancer_lvl4" and
-                   U.is_inside_ellipse(v.pos, this.pos, v.attacks.range * 1.1)
+            U.is_inside_ellipse(v.pos, this.pos, v.attacks.range * 1.1)
     end)
     local kill_oldest_skeleton = false
     local kill_oldest_golem = false
@@ -7977,7 +7976,7 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
         else
             table.sort(targets, function(e1, e2)
                 return e1.tower_upgrade_persistent_data.current_skeletons <
-                           e2.tower_upgrade_persistent_data.current_skeletons
+                    e2.tower_upgrade_persistent_data.current_skeletons
             end)
         end
 
@@ -7985,16 +7984,16 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
 
         if this.is_golem then
             kill_oldest_golem = this.source_necromancer.tower_upgrade_persistent_data.current_golems >=
-                                    this.source_necromancer.max_golems
+                this.source_necromancer.max_golems
             this.source_necromancer.tower_upgrade_persistent_data.current_golems = this.source_necromancer
-                                                                                       .tower_upgrade_persistent_data
-                                                                                       .current_golems + 1
+                .tower_upgrade_persistent_data
+                .current_golems + 1
         else
             kill_oldest_skeleton = this.source_necromancer.tower_upgrade_persistent_data.current_skeletons >=
-                                       this.source_necromancer.max_skeletons
+                this.source_necromancer.max_skeletons
             this.source_necromancer.tower_upgrade_persistent_data.current_skeletons = this.source_necromancer
-                                                                                          .tower_upgrade_persistent_data
-                                                                                          .current_skeletons + 1
+                .tower_upgrade_persistent_data
+                .current_skeletons + 1
         end
     else
         queue_remove(store, this)
@@ -8008,14 +8007,14 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
         if this.is_golem then
             targets = table.filter(store.soldiers, function(k, v)
                 return not v.pending_removal and v.source_necromancer and this.source_necromancer ==
-                           v.source_necromancer and v.is_golem and v.health and not v.health.dead and
-                           not v.soldier.target_id and this.id ~= v.id
+                    v.source_necromancer and v.is_golem and v.health and not v.health.dead and
+                    not v.soldier.target_id and this.id ~= v.id
             end)
         else
             targets = table.filter(store.soldiers, function(k, v)
                 return not v.pending_removal and v.source_necromancer and this.source_necromancer ==
-                           v.source_necromancer and v.health and not v.health.dead and not v.soldier.target_id and
-                           this.id ~= v.id
+                    v.source_necromancer and v.health and not v.health.dead and not v.soldier.target_id and
+                    this.id ~= v.id
             end)
         end
 
@@ -8029,12 +8028,12 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
         else
             if this.is_golem then
                 this.source_necromancer.tower_upgrade_persistent_data.current_golems = this.source_necromancer
-                                                                                           .tower_upgrade_persistent_data
-                                                                                           .current_golems - 1
+                    .tower_upgrade_persistent_data
+                    .current_golems - 1
             else
                 this.source_necromancer.tower_upgrade_persistent_data.current_skeletons = this.source_necromancer
-                                                                                              .tower_upgrade_persistent_data
-                                                                                              .current_skeletons - 1
+                    .tower_upgrade_persistent_data
+                    .current_skeletons - 1
             end
 
             queue_remove(store, this)
@@ -8091,12 +8090,12 @@ function scripts.soldier_tower_necromancer_skeleton.update(this, store)
 
             if this.is_golem then
                 this.source_necromancer.tower_upgrade_persistent_data.current_golems = this.source_necromancer
-                                                                                           .tower_upgrade_persistent_data
-                                                                                           .current_golems - 1
+                    .tower_upgrade_persistent_data
+                    .current_golems - 1
             else
                 this.source_necromancer.tower_upgrade_persistent_data.current_skeletons = this.source_necromancer
-                                                                                              .tower_upgrade_persistent_data
-                                                                                              .current_skeletons - 1
+                    .tower_upgrade_persistent_data
+                    .current_skeletons - 1
             end
 
             table.removeobject(this.source_necromancer.tower_upgrade_persistent_data.skeletons_ref, this)
@@ -8651,7 +8650,7 @@ function scripts.bolt_tower_pandas_ray.update(this, store)
         queue_damage(store, d)
 
         if b.mod or b.mods then
-            local mods = b.mods or {b.mod}
+            local mods = b.mods or { b.mod }
 
             for _, mod_name in pairs(mods) do
                 local m = E:create_entity(mod_name)
@@ -8869,7 +8868,7 @@ function scripts.tower_pandas.update(this, store)
         local n1, n2 = random_unique_pair(8)
         local n3 = random(1, 4)
 
-        this.tower_upgrade_persistent_data.names = {n1, n2, n3}
+        this.tower_upgrade_persistent_data.names = { n1, n2, n3 }
     end
 
     for i = 1, 3 do
@@ -9136,7 +9135,7 @@ function scripts.tower_pandas.update(this, store)
 
                     bullet.bullet.damage_factor = this.tower.damage_factor
                     bullet.pos.x, bullet.pos.y = this.pos.x + cfg.start_offset.x + cfg.bullet_data.offset.x *
-                                                     (af and -1 or 1),
+                        (af and -1 or 1),
                         this.pos.y + cfg.start_offset.y + cfg.bullet_data.offset.y
                     bullet.bullet.from = vclone(bullet.pos)
                     bullet.bullet.to = v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
@@ -9148,7 +9147,7 @@ function scripts.tower_pandas.update(this, store)
                             bullet.bullet.from.y)
 
                         bullet.bullet.flight_time = bullet.bullet.flight_time_min + dist / at.range *
-                                                        bullet.bullet.flight_time_factor
+                            bullet.bullet.flight_time_factor
                     end
 
                     queue_insert(store, bullet)
@@ -9438,7 +9437,7 @@ function scripts.tower_pandas_ray.update(this, store)
     local mods_added = {}
 
     if target and (b.mod or b.mods) then
-        local mods = b.mods or {b.mod}
+        local mods = b.mods or { b.mod }
 
         for _, mod_name in pairs(mods) do
             local m = E:create_entity(mod_name)
@@ -9681,7 +9680,7 @@ function scripts.bullet_tower_pandas_air.update(this, store)
         queue_damage(store, d)
 
         if b.mod or b.mods then
-            local mods = b.mods or {b.mod}
+            local mods = b.mods or { b.mod }
 
             for _, mod_name in pairs(mods) do
                 local m = E:create_entity(mod_name)
@@ -9733,7 +9732,7 @@ function scripts.bullet_tower_pandas_air.update(this, store)
         if targets then
             table.sort(targets, function(e1, e2)
                 return V.dist2(this.pos.x, this.pos.y, e1.pos.x, e1.pos.y) <
-                           V.dist2(this.pos.x, this.pos.y, e2.pos.x, e2.pos.y)
+                    V.dist2(this.pos.x, this.pos.y, e2.pos.x, e2.pos.y)
             end)
 
             target = targets[1]
@@ -9893,7 +9892,7 @@ function scripts.soldier_tower_pandas.update(this, store)
         end
 
         if not U.has_enough_enemies_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans, nil,
-            a_i.min_targets) then
+                a_i.min_targets) then
             SU.delay_attack(store, a_i, fts(10))
 
             return false
@@ -9919,9 +9918,9 @@ function scripts.soldier_tower_pandas.update(this, store)
             return false
         end
         if not U.has_enemy_in_range(store, this.pos, 0, a_i.max_range, a_i.vis_flags, a_i.vis_bans, function(e)
-            return not e.enemy.counts or not e.enemy.counts.mod_teleport or e.enemy.counts.mod_teleport <
-                       a_i.max_times_applied
-        end) then
+                return not e.enemy.counts or not e.enemy.counts.mod_teleport or e.enemy.counts.mod_teleport <
+                    a_i.max_times_applied
+            end) then
             SU.delay_attack(store, a_i, fts(10))
 
             return false
@@ -10188,7 +10187,7 @@ function scripts.tower_ray.update(this, store)
     ab.ts = store.tick_ts - ab.cooldown + a.attack_delay_on_spawn
 
     local idle_ts = store.tick_ts
-    local attacks = {as, ac, ab}
+    local attacks = { as, ac, ab }
 
     for i = 1, #this.crystals_ids do
         this.tween.props[i].ts = store.tick_ts
@@ -10434,7 +10433,7 @@ function scripts.tower_ray.update(this, store)
                                 goto label_989_1
                             end
 
-                            this.chain_targets = {enemy.id}
+                            this.chain_targets = { enemy.id }
                             b.pos.x, b.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
                             b.bullet.from = vclone(b.pos)
                             b.bullet.to = vclone(enemy_pos)
@@ -10532,7 +10531,7 @@ end
 scripts.fx_tower_ray_lvl4_shock = {}
 
 function scripts.fx_tower_ray_lvl4_shock.update(this, store)
-    local cds = {1, 2, 2, 1, 2, 1}
+    local cds = { 1, 2, 2, 1, 2, 1 }
     local cd_id = 1
 
     local function hide_if_necessary()
@@ -10776,7 +10775,7 @@ function scripts.bullet_tower_ray.update(this, store)
     local mods_added = {}
 
     if target and (b.mod or b.mods) then
-        local mods = b.mods or {b.mod}
+        local mods = b.mods or { b.mod }
 
         for _, mod_name in pairs(mods) do
             local m = E:create_entity(mod_name)
@@ -11627,7 +11626,7 @@ function scripts.tower_sand.update(this, store)
 
     local ga = a.list[2]
     local bba = a.list[3]
-    local shooter_sids = {3, 4}
+    local shooter_sids = { 3, 4 }
     local shooter_idx = 1
 
     if not a._last_target_pos then
@@ -11714,7 +11713,7 @@ function scripts.tower_sand.update(this, store)
                 if not enemies or #enemies < bba.min_targets then
                     bba.ts = bba.ts + fts(10)
                 else
-                    local nearest_nodes = P:nearest_nodes(pred_pos.x, pred_pos.y, {enemies[1].nav_path.pi})
+                    local nearest_nodes = P:nearest_nodes(pred_pos.x, pred_pos.y, { enemies[1].nav_path.pi })
 
                     if #nearest_nodes == 0 then
                         SU.delay_attack(store, bba, fts(10))
@@ -11834,7 +11833,7 @@ function scripts.bullet_tower_sand.update(this, store)
         queue_damage(store, d)
         local mods
         if b.mod then
-            mods = type(b.mod) == "table" and b.mod or {b.mod}
+            mods = type(b.mod) == "table" and b.mod or { b.mod }
         elseif b.mods then
             mods = b.mods
         end
@@ -11889,7 +11888,7 @@ function scripts.bullet_tower_sand.update(this, store)
 
         if not targets then
             if target and not target.health.dead then
-                already_hit = {target.id}
+                already_hit = { target.id }
             else
                 already_hit = {}
             end
@@ -11900,7 +11899,7 @@ function scripts.bullet_tower_sand.update(this, store)
         if targets then
             table.sort(targets, function(e1, e2)
                 return V.dist2(this.pos.x, this.pos.y, e1.pos.x, e1.pos.y) <
-                           V.dist2(this.pos.x, this.pos.y, e2.pos.x, e2.pos.y)
+                    V.dist2(this.pos.x, this.pos.y, e2.pos.x, e2.pos.y)
             end)
 
             local target = targets[1]
@@ -12052,7 +12051,7 @@ function scripts.aura_tower_sand_skill_big_blade.update(this, store)
 
                     queue_insert(store, fx)
 
-                    local mods = this.aura.mods or {this.aura.mod}
+                    local mods = this.aura.mods or { this.aura.mod }
 
                     for _, mod_name in pairs(mods) do
                         local new_mod = E:create_entity(mod_name)
@@ -12090,7 +12089,7 @@ end
 scripts.tower_royal_archers = {}
 
 function scripts.tower_royal_archers.update(this, store)
-    local shooter_sids = {3, 4}
+    local shooter_sids = { 3, 4 }
     local a = this.attacks
     local aa = this.attacks.list[1]
     local ap = this.attacks.list[2]
@@ -12127,7 +12126,7 @@ function scripts.tower_royal_archers.update(this, store)
         end
 
         if enemy and band(enemy.vis.flags, F_MOCKING) ~= 0 then
-            return {enemy, enemy, enemy}
+            return { enemy, enemy, enemy }
         end
 
         local targets = {}
@@ -12148,7 +12147,7 @@ function scripts.tower_royal_archers.update(this, store)
 
         table.sort(targets, function(e1, e2)
             return V.dist2(this.pos.x, this.pos.y, e1.pos.x, e1.pos.y) >
-                       V.dist2(this.pos.x, this.pos.y, e2.pos.x, e2.pos.y)
+                V.dist2(this.pos.x, this.pos.y, e2.pos.x, e2.pos.y)
         end)
 
         return targets
@@ -12596,7 +12595,7 @@ function scripts.tower_royal_archers_pow_rapacious_hunter_eagle.update(this, sto
 
                 local flip_sign = sf.flip_x and -1 or 1
 
-                trail.particle_system.scales_x = {flip_sign, flip_sign}
+                trail.particle_system.scales_x = { flip_sign, flip_sign }
 
                 coroutine.yield()
 
@@ -12751,7 +12750,6 @@ function scripts.tower_arcane_wizard5.get_info(this)
     end
     o.damage_type = DAMAGE_MAGICAL
     return o
-
 end
 
 function scripts.tower_arcane_wizard5.update(this, store)
@@ -12847,7 +12845,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
                     end
 
                     return t.tower.can_be_mod and max_factor < pow_e.damage_factor[pow_e.level] and
-                               band(t.vis.flags, ae.vis_bans) == 0 and band(t.vis.bans, ae.vis_flags) == 0
+                        band(t.vis.flags, ae.vis_bans) == 0 and band(t.vis.bans, ae.vis_flags) == 0
                 end)
 
                 if not towers or #towers <= 0 then
@@ -12953,7 +12951,7 @@ function scripts.tower_arcane_wizard5.update(this, store)
                     local _, enemies = U.find_foremost_enemy_in_range_filter_on(tpos(this), a.range, ad.node_prediction,
                         ad.vis_flags, ad.vis_bans, function(e)
                             return not ad.excluded_templates or
-                                       not table.contains(ad.excluded_templates, e.template_name)
+                                not table.contains(ad.excluded_templates, e.template_name)
                         end)
 
                     -- enemy, pred_pos = find_target(aa)
@@ -12983,7 +12981,6 @@ function scripts.tower_arcane_wizard5.update(this, store)
 
                     goto label_792_0
                 end
-
             end
             if ready_to_attack(ar, store, tw.cooldown_factor) then
                 local enemy, pred_pos = find_target(ar)
@@ -13153,6 +13150,7 @@ function scripts.tower_arcane_wizard_power_empowerment_mark_mod.update(this, sto
         coroutine.yield()
     end
 end
+
 scripts.tower_arcane_wizard_ray_disintegrate_mod = {}
 
 function scripts.tower_arcane_wizard_ray_disintegrate_mod.update(this, store)
@@ -13300,7 +13298,7 @@ function scripts.tower_rocket_gunners.update(this, store)
                 end
             else
                 sting_missiles_ready = store.tick_ts - sting_missiles_ts > pow_s.cooldown[pow_s.level] *
-                                           this.tower.cooldown_factor
+                    this.tower.cooldown_factor
             end
         end
 
@@ -13413,8 +13411,8 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
         this.unit.mod_offset.y = this.render.sprites[1].offset.y + 13
 
         if this.ranged.attacks[3] then
-            this.ranged.attacks[3].bullet_start_offset = {v(this.ranged.attacks[3].bullet_start_offset_relative.x,
-                this.render.sprites[1].offset.y + this.ranged.attacks[3].bullet_start_offset_relative.y)}
+            this.ranged.attacks[3].bullet_start_offset = { v(this.ranged.attacks[3].bullet_start_offset_relative.x,
+                this.render.sprites[1].offset.y + this.ranged.attacks[3].bullet_start_offset_relative.y) }
         end
 
         if this.current_mode == MODE_GROUND then
@@ -13640,7 +13638,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
         this.tween.props[1].disabled = false
         this.tween.disabled = false
         this.tween.props[1].ts = store.tick_ts
-        this.render.sprites[1].angles.walk = {"idle_air"}
+        this.render.sprites[1].angles.walk = { "idle_air" }
         this.vis.flags = bor(this.vis.flags, F_FLYING)
     end
 
@@ -13691,7 +13689,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
         animation_start(this, "idle_floor", nil, store.tick_ts, 1)
 
         this.idle_flip.last_animation = "idle_floor"
-        this.render.sprites[1].angles.walk = {"walk"}
+        this.render.sprites[1].angles.walk = { "walk" }
         this.vis.flags = U.flag_clear(this.vis.flags, F_FLYING)
     end
 
@@ -13853,7 +13851,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
             animation_start(this, "idle_floor", nil, store.tick_ts, true)
 
             this.idle_flip.last_animation = "idle_floor"
-            this.render.sprites[1].angles.walk = {"walk"}
+            this.render.sprites[1].angles.walk = { "walk" }
             this.vis.flags = U.flag_clear(this.vis.flags, F_FLYING)
         end
 
@@ -13901,7 +13899,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
                     this.ranged.attacks[3].filter_fn = function(e)
                         return
                             e.health and e.health.hp <= e.health.hp_max * p.kill_hp_factor[p.level] and e.health.hp >=
-                                500
+                            500
                     end
                 end
             end
@@ -13954,7 +13952,7 @@ function scripts.soldier_tower_rocket_gunners.update(this, store)
             if this.ranged.attacks[2] and this.ranged.attacks[2].bullet_start_offset then
                 for _, start_offset in ipairs(this.ranged.attacks[2].bullet_start_offset) do
                     start_offset.y = this.render.sprites[1].offset.y +
-                                         this.ranged.attacks[2].bullet_start_offset_relative.y
+                        this.ranged.attacks[2].bullet_start_offset_relative.y
                     start_offset.x = this.ranged.attacks[2].bullet_start_offset_relative.x
                 end
             end
@@ -14318,7 +14316,7 @@ function scripts.bullet_soldier_tower_rocket_gunners_sting_missiles.update(this,
         queue_damage(store, d)
 
         if b.mod or b.mods then
-            local mods = b.mods or {b.mod}
+            local mods = b.mods or { b.mod }
 
             for _, mod_name in pairs(mods) do
                 local m = E:create_entity(mod_name)
@@ -14551,7 +14549,7 @@ function scripts.tower_flamespitter.update(this, store)
         local angle_dist = km.short_angle_deg(current_angle, target_angle_deg)
 
         current_angle = km.unroll_deg(current_angle + math.min(this.turn_speed, math.abs(angle_dist)) *
-                                          km.sign(angle_dist))
+            km.sign(angle_dist))
         a_name, a_flip, angle_idx = animation_name_facing_angle_flamespitter("idle", current_angle)
 
         animation_start(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
@@ -14618,7 +14616,7 @@ function scripts.tower_flamespitter.update(this, store)
             return
         end
 
-        local available_paths = {enemy.nav_path.pi}
+        local available_paths = { enemy.nav_path.pi }
         local nearest = P:nearest_nodes(pred_pos.x, pred_pos.y, available_paths)
 
         if #nearest > 0 then
@@ -14645,7 +14643,6 @@ function scripts.tower_flamespitter.update(this, store)
     end
 
     local function check_skill_columns()
-
         local power = this.powers.skill_columns
         local a = attack_columns
 
@@ -14664,7 +14661,7 @@ function scripts.tower_flamespitter.update(this, store)
 
         local start_ts = store.tick_ts
         local path = enemy.nav_path.pi
-        local nearest = P:nearest_nodes(pred_pos.x, pred_pos.y, {path}, {1, 2, 3}, true)
+        local nearest = P:nearest_nodes(pred_pos.x, pred_pos.y, { path }, { 1, 2, 3 }, true)
 
         if #nearest == 0 then
             return
@@ -14922,7 +14919,7 @@ function scripts.tower_flamespitter.update(this, store)
                                     d.value = attack_basic.damage_max * tw.damage_factor
                                 else
                                     d.value = (random(attack_basic.damage_min, attack_basic.damage_max)) *
-                                                  tw.damage_factor
+                                        tw.damage_factor
                                 end
 
                                 queue_damage(store, d)
@@ -15197,7 +15194,7 @@ function scripts.tower_ballista.update(this, store)
         local angle_dist = km.short_angle_deg(current_angle, target_angle_deg)
 
         current_angle = km.unroll_deg(current_angle + math.min(this.turn_speed, math.abs(angle_dist)) *
-                                          km.sign(angle_dist))
+            km.sign(angle_dist))
         a_name, a_flip, angle_idx = animation_name_facing_angle_ballista("idle", current_angle)
 
         U.animation_start(this, a_name, a_flip, store.tick_ts, false, this.render.sid_tower_top)
@@ -15248,13 +15245,13 @@ function scripts.tower_ballista.update(this, store)
 
         local enemy, enemies, pred_pos = U.find_foremost_enemy_with_max_coverage_in_range_filter_off(tpos, ab.max_range,
             ab.node_prediction, ab.vis_flags, ab.vis_bans, E:get_template("bullet_tower_ballista_skill_bomb").bullet
-                .damage_radius)
+            .damage_radius)
 
         if not enemy or #enemies < ab.min_targets then
             return
         end
 
-        local available_paths = {enemy.nav_path.pi}
+        local available_paths = { enemy.nav_path.pi }
         local nearest = P:nearest_nodes(pred_pos.x, pred_pos.y, available_paths)
 
         if #nearest > 0 then
@@ -15335,7 +15332,6 @@ function scripts.tower_ballista.update(this, store)
 
             -- 普攻逻辑
             if ready_to_attack(aa, store, tw.cooldown_factor) then
-
                 target, pred_pos = find_target(aa)
 
                 if not target then
@@ -15553,7 +15549,7 @@ function scripts.bullet_tower_ballista.update(this, store)
 
             local mods
             if b.mod then
-                mods = type(b.mod) == "table" and b.mod or {b.mod}
+                mods = type(b.mod) == "table" and b.mod or { b.mod }
             elseif b.mods then
                 mods = b.mods
             end
@@ -15686,7 +15682,7 @@ scripts.bullet_tower_ballista_skill_final_shot = {
         s.r = angle
         local mods
         if b.mod then
-            mods = type(b.mod) == "table" and b.mod or {b.mod}
+            mods = type(b.mod) == "table" and b.mod or { b.mod }
         elseif b.mods then
             mods = b.mods
         end
@@ -15812,7 +15808,7 @@ function scripts.bullet_tower_ballista_skill_bomb.update(this, store)
 
         if b.hide_radius then
             this.render.sprites[1].hidden = V.dist(this_pos.x, this_pos.y, b.from.x, b.from.y) < b.hide_radius or
-                                                V.dist(this_pos.x, this_pos.y, b.to.x, b.to.y) < b.hide_radius
+                V.dist(this_pos.x, this_pos.y, b.to.x, b.to.y) < b.hide_radius
         end
         last_ts = store.tick_ts
         v_y = v_y + b.g * dt
@@ -15844,7 +15840,6 @@ function scripts.bullet_tower_ballista_skill_bomb.update(this, store)
 
             queue_damage(store, d)
         end
-
     end
 
     local p = SU.create_bullet_pop(store, this)
@@ -15887,7 +15882,7 @@ function scripts.bullet_tower_ballista_skill_bomb.remove(this, store)
         scraps.pos = U.point_on_ellipse(this.pos, 30, angle_aux * (i - 1))
 
         scraps.aura.duration = this.duration_config[b.level]
-        scraps.tween.props[1].keys = {{0, 255}, {scraps.aura.duration - 0.5, 255}, {scraps.aura.duration, 0}}
+        scraps.tween.props[1].keys = { { 0, 255 }, { scraps.aura.duration - 0.5, 255 }, { scraps.aura.duration, 0 } }
 
         queue_insert(store, scraps)
     end
@@ -15966,4 +15961,162 @@ function scripts.aura_bullet_tower_ballista_skill_bomb.update(this, store)
 end
 
 -- 巨弩哨站 END
+
+-- 圣骑兵 START
+scripts.tower_paladin_rider = {}
+function scripts.tower_paladin_rider.update(this, store)
+    local tower_sid = 2
+    local door_sid = 3
+
+    while true do
+        local b = this.barrack
+
+        if this.powers then
+            for pn, p in pairs(this.powers) do
+                if p.changed then
+                    p.changed = nil
+
+                    for _, s in pairs(b.soldiers) do
+                        s.powers[pn].level = p.level
+                        s.powers[pn].changed = true
+                    end
+                end
+            end
+        end
+
+        if not this.tower.blocked then
+            for i = 1, b.max_soldiers do
+                local s = b.soldiers[i]
+                if not s or s.health.dead and not store.entities[s.id] then
+                    if not b.door_open then
+                        S:queue("GUITowerOpenDoor")
+                        U.animation_start(this, "open", nil, store.tick_ts, 1, door_sid)
+
+                        while not U.animation_finished(this, door_sid) do
+                            coroutine.yield()
+                        end
+
+                        b.door_open = true
+                        b.door_open_ts = store.tick_ts
+                    end
+
+                    local soldier_type
+
+                    if s then
+                        soldier_type = s.template_name
+                    elseif b.soldier_types then
+                        soldier_type = b.soldier_types[i]
+                    else
+                        soldier_type = b.soldier_type
+                    end
+
+                    s = E:create_entity(soldier_type)
+                    s.soldier.tower_id = this.id
+
+                    local spi = math.random(1, 3)
+
+                    local nearest_node = P:nearest_nodes(this.pos.x, this.pos.y, nil, {
+                        spi
+                    })[1]
+
+                    local npi, nspi, nni = unpack(nearest_node)
+
+                    local node_pos = P:node_pos(npi, nspi, nni)
+
+                    s.pos = V.v(V.add(node_pos.x, node_pos.y, b.respawn_offset.x, b.respawn_offset.y))
+                    s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)
+                    s.nav_rally.new = true
+                    s.nav_path.pi = npi
+                    s.nav_path.spi = nspi
+                    s.nav_path.ni = nni
+
+                    if this.powers then
+                        for pn, p in pairs(this.powers) do
+                            s.powers[pn].level = p.level
+                        end
+                    end
+
+                    U.soldier_inherit_tower_buff_factor(s, this)
+                    queue_insert(store, s)
+
+                    b.soldiers[i] = s
+
+                    signal.emit("tower-spawn", this, s)
+                end
+            end
+        end
+
+        if b.door_open and store.tick_ts - b.door_open_ts > b.door_hold_time then
+            U.animation_start(this, "close", nil, store.tick_ts, 1, door_sid)
+
+            while not U.animation_finished(this, door_sid) do
+                coroutine.yield()
+            end
+
+            b.door_open = false
+        end
+
+        if b.rally_new then
+            b.rally_new = false
+
+            signal.emit("rally-point-changed", this)
+
+            local all_dead = true
+
+            for i, s in ipairs(b.soldiers) do
+                s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers,
+                    b.rally_angle_offset)
+                s.nav_rally.new = true
+                all_dead = all_dead and s.health.dead
+            end
+
+            if not all_dead then
+                S:queue(this.sound_events.change_rally_point)
+            end
+        end
+
+        coroutine.yield()
+    end
+end
+
+scripts.soldier_paladin_rider = {}
+function scripts.soldier_paladin_rider.update(this, store, script)
+    while true do
+        if h.dead then
+            SU.y_soldier_death(store, this)
+            U.y_wait(store, this.health.dead_lifetime)
+            queue_remove(store, this)
+
+            return
+        end
+
+        if this.unit.is_stunned then
+            SU.soldier_idle(store, this)
+        else
+            local brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+            if brk or sta ~= A_NO_TARGET then
+                -- block empty
+            elseif sta == A_NO_TARGET then
+                local next_pos = P:next_entity_node(this, store.tick_length)
+
+                U.set_destination(this, next_pos)
+
+                local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+
+                U.animation_start(this, an, af, store.tick_ts, -1)
+                U.walk(this, store.tick_length)
+
+                this.nav_rally.center = next_pos
+            else
+                SU.soldier_idle(store, this)
+            end
+
+            coroutine.yield()
+        end
+    end
+end
+
+-- 圣骑兵 END
+
 return scripts
