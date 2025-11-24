@@ -31714,4 +31714,161 @@ scripts.shaman_gravity_aura = {
     end
 }
 
+-- 圣骑兵 START
+scripts.tower_paladin_rider = {}
+function scripts.tower_paladin_rider.update(this, store)
+    local tower_sid = 2
+    local door_sid = 3
+
+    while true do
+        local b = this.barrack
+
+        if this.powers then
+            for pn, p in pairs(this.powers) do
+                if p.changed then
+                    p.changed = nil
+
+                    for _, s in pairs(b.soldiers) do
+                        s.powers[pn].level = p.level
+                        s.powers[pn].changed = true
+                    end
+                end
+            end
+        end
+
+        if not this.tower.blocked then
+            for i = 1, b.max_soldiers do
+                local s = b.soldiers[i]
+                if not s or s.health.dead and not store.entities[s.id] then
+                    if not b.door_open then
+                        S:queue("GUITowerOpenDoor")
+                        U.animation_start(this, "open", nil, store.tick_ts, 1, door_sid)
+
+                        while not U.animation_finished(this, door_sid) do
+                            coroutine.yield()
+                        end
+
+                        b.door_open = true
+                        b.door_open_ts = store.tick_ts
+                    end
+
+                    local soldier_type
+
+                    if s then
+                        soldier_type = s.template_name
+                    elseif b.soldier_types then
+                        soldier_type = b.soldier_types[i]
+                    else
+                        soldier_type = b.soldier_type
+                    end
+
+                    s = E:create_entity(soldier_type)
+                    s.soldier.tower_id = this.id
+
+                    local spi = math.random(1, 3)
+
+                    local nearest_node = P:nearest_nodes(this.pos.x, this.pos.y, nil, {
+                        spi
+                    })[1]
+
+                    local npi, nspi, nni = unpack(nearest_node)
+
+                    local node_pos = P:node_pos(npi, nspi, nni)
+
+                    s.pos = V.v(V.add(node_pos.x, node_pos.y, b.respawn_offset.x, b.respawn_offset.y))
+                    s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers)
+                    s.nav_rally.new = true
+                    s.nav_path.pi = npi
+                    s.nav_path.spi = nspi
+                    s.nav_path.ni = nni
+
+                    if this.powers then
+                        for pn, p in pairs(this.powers) do
+                            s.powers[pn].level = p.level
+                        end
+                    end
+
+                    U.soldier_inherit_tower_buff_factor(s, this)
+                    queue_insert(store, s)
+
+                    b.soldiers[i] = s
+
+                    signal.emit("tower-spawn", this, s)
+                end
+            end
+        end
+
+        if b.door_open and store.tick_ts - b.door_open_ts > b.door_hold_time then
+            U.animation_start(this, "close", nil, store.tick_ts, 1, door_sid)
+
+            while not U.animation_finished(this, door_sid) do
+                coroutine.yield()
+            end
+
+            b.door_open = false
+        end
+
+        if b.rally_new then
+            b.rally_new = false
+
+            signal.emit("rally-point-changed", this)
+
+            local all_dead = true
+
+            for i, s in ipairs(b.soldiers) do
+                s.nav_rally.pos, s.nav_rally.center = U.rally_formation_position(i, b, b.max_soldiers,
+                    b.rally_angle_offset)
+                s.nav_rally.new = true
+                all_dead = all_dead and s.health.dead
+            end
+
+            if not all_dead then
+                S:queue(this.sound_events.change_rally_point)
+            end
+        end
+
+        coroutine.yield()
+    end
+end
+
+scripts.soldier_paladin_rider = {}
+function scripts.soldier_paladin_rider.update(this, store, script)
+    while true do
+        if h.dead then
+            SU.y_soldier_death(store, this)
+            U.y_wait(store, this.health.dead_lifetime)
+            queue_remove(store, this)
+
+            return
+        end
+
+        if this.unit.is_stunned then
+            SU.soldier_idle(store, this)
+        else
+            local brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+            if brk or sta ~= A_NO_TARGET then
+                -- block empty
+            elseif sta == A_NO_TARGET then
+                local next_pos = P:next_entity_node(this, store.tick_length)
+
+                U.set_destination(this, next_pos)
+
+                local an, af = U.animation_name_facing_point(this, "walk", this.motion.dest)
+
+                U.animation_start(this, an, af, store.tick_ts, -1)
+                U.walk(this, store.tick_length)
+
+                this.nav_rally.center = next_pos
+            else
+                SU.soldier_idle(store, this)
+            end
+
+            coroutine.yield()
+        end
+    end
+end
+
+-- 圣骑兵 END
+
 return scripts
