@@ -708,14 +708,16 @@ function scripts.soldier_dwarf.update(this, store)
         this.vis._bans = nil
     end
 
-    while true do
-        if this.powers then
-            for pn, p in pairs(this.powers) do
-                if p.changed then
-                    p.changed = nil
+    if this.reinforcement then
+        this.reinforcement.ts = store.tick_ts
+    end 
 
-                    SU.soldier_power_upgrade(this, pn)
-                end
+    while true do
+        for pn, p in pairs(this.powers) do
+            if p.changed then
+                p.changed = nil
+
+                SU.soldier_power_upgrade(this, pn)
             end
         end
 
@@ -723,6 +725,22 @@ function scripts.soldier_dwarf.update(this, store)
             SU.y_soldier_death(store, this)
 
             return
+        end
+
+        if this.reinforcement then
+
+            if this.reinforcement.duration and store.tick_ts - this.reinforcement.ts >
+                this.reinforcement.duration then
+                if this.health.hp > 0 then
+                    this.reinforcement.hp_before_timeout = this.health.hp
+                end
+
+                this.health.hp = 0
+
+                SU.y_soldier_death(store, this)
+
+                return
+            end
         end
 
         if this.unit.is_stunned then
@@ -1170,7 +1188,6 @@ function scripts.fireball_dragon.update(this, store)
 
     queue_remove(store, this)
 end
-
 
 scripts.kraken_aura = {}
 
@@ -14803,7 +14820,6 @@ function scripts.mod_saurian_king_tongue.insert(this, store)
     return false
 end
 
-
 scripts.alien_glaive = {}
 
 function scripts.alien_glaive.update(this, store)
@@ -15043,7 +15059,6 @@ function scripts.alien_abduction_ship.update(this, store)
 
     this.render.sprites[3].hidden = true
 end
-
 
 scripts.voodoo_witch_skull_aura = {}
 
