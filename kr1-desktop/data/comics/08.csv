@@ -1,0 +1,13 @@
+frame_comic1,61,"6_1.png",283,217,1,1,0,1,0.5,0.49
+frame_comic1,92,"6_1.png",294,217,1,1,1,1,0.5,0.49
+frame_comic2,119,"6_2.png",323,504,1,1,0,1,0.5,0.5
+frame_comic2,151,"6_2.png",323,496,1,1,1,1,0.5,0.5
+frame_comic3,188,"6_3.png",702,397,1.071,1.071,0,1,0.5,0.5
+frame_comic3,191,"6_3.png",702,397,0.974,0.974,1,1,0.5,0.5
+frame_comic3,194,"6_3.png",702,397,1,1,1,1,0.5,0.5
+frame_comic91,216,"comicContinue.png",812,655,1,1,0,1,0.5,0.5
+TEXT,CINEMATICS_TAP_TO_CONTINUE,frame_comic91,0,0,195,34,-1.7331390380859375,0,0,0,1
+frame_comic91,224,"comicContinue.png",812,649,1,1,1,1,0.5,0.5
+TEXT,CINEMATICS_TAP_TO_CONTINUE,frame_comic91,0,0,195,34,-1.7331390380859375,0,0,0,1
+PAGE_END,224
+ORDER,frame_comic1,frame_comic2,frame_comic3,frame_comic91

@@ -8,6 +8,7 @@ require("constants")
 
 simulation = {}
 
+-- 把 game 的 store 挂载给 simulation
 function simulation:init(store, system_names)
 	self.store = store
 
