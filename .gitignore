@@ -20,6 +20,7 @@ _trashed_assets
 mdbuild/
 /data/
 tmp/
+kr1-desktop/data/comics
 patches/config.lua
 patches/criket.lua
 patches/keyset_custom.lua

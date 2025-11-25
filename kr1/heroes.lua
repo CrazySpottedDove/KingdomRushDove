@@ -10588,7 +10588,7 @@ tt.timed_attacks.list[2].min_targets = b.ricochet.min_targets
 tt.timed_attacks.list[2].vis_flags = bor(F_RANGED)
 tt.timed_attacks.list[2].vis_bans = bor(F_FLYING)
 tt.timed_attacks.list[2].node_prediction = fts(10)
-tt.timed_attacks.list[2].min_cooldown = 5
+-- tt.timed_attacks.list[2].min_cooldown = 5
 tt.timed_attacks.list[2].entity_waiting = "decal_hero_hunter_skill_ricochet_entity"
 tt.timed_attacks.list[2].sound = "HeroHunterRicochetCast"
 tt.timed_attacks.list[3] = CC("custom_attack")
@@ -10601,7 +10601,6 @@ tt.timed_attacks.list[3].min_targets = b.shoot_around.min_targets
 tt.timed_attacks.list[3].aura = "aura_hero_hunter_shoot_around"
 tt.timed_attacks.list[3].vis_bans = bor(F_FLYING)
 tt.timed_attacks.list[3].fx = "fx_hero_builder_demolition_man"
-tt.timed_attacks.list[3].min_cooldown = 5
 tt.timed_attacks.list[3].min_fight_cooldown = 2
 tt.timed_attacks.list[3].sound = "HeroHunterShootAroundCast"
 tt.timed_attacks.list[3].sound_interrupt = "HeroHunterShootAroundInterrupt"
@@ -10613,7 +10612,6 @@ tt.timed_attacks.list[4].cast_time = fts(15)
 tt.timed_attacks.list[4].max_range = b.shoot_around.max_range
 tt.timed_attacks.list[4].vis_bans = bor(F_FLYING)
 tt.timed_attacks.list[4].vis_flags = bor(F_RANGED)
-tt.timed_attacks.list[4].min_cooldown = 5
 tt.timed_attacks.list[4].entity = "soldier_hero_hunter_beast"
 tt.timed_attacks.list[4].spawn_offset_y = 0
 tt.timed_attacks.list[4].spawn_offset_x = 30
@@ -10699,15 +10697,19 @@ tt.aura.radius = b.radius
 tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)
 tt.aura.vis_flags = F_RANGED
 tt.main_script.update = scripts.aura_hero_hunter_shoot_around.update
-tt.aura.mods = {"mod_hero_hunter_skill_shoot_around_hit_fx"}
+tt.aura.mods = {"mod_hero_hunter_skill_shoot_around_hit_fx", "mod_hero_hunter_shoot_around_slow"}
 tt.fx = "fx_hero_hunter_skill_shoot_around_decal"
 tt.fx_every = fts(15)
 tt.fx_amount = 3
+
+tt = RT("mod_hero_hunter_shoot_around_slow", "mod_slow")
+b = balance.heroes.hero_hunter.shoot_around
+tt.slow.factor = b.slow_factor
+tt.modifier.duration = b.slow_duration
+
 tt = RT("aura_hero_hunter_ultimate", "aura")
 b = balance.heroes.hero_hunter.ultimate
-
 AC(tt, "render")
-
 tt.aura.mod = "mod_hero_hunter_ultimate_slow"
 tt.aura.radius = b.slow_radius
 tt.aura.vis_bans = bor(F_FLYING, F_FRIEND)

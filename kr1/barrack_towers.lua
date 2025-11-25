@@ -2592,3 +2592,67 @@ tt.main_script.dequeue = scripts.mod_mark_flags.dequeue
 tt.main_script.update = scripts.mod_mark_flags.update
 
 -- 牢大 END
+
+-- 圣骑兵 START
+tt = RT("tower_paladin_rider", "tower_barrack_1")
+AC(tt, "powers")
+tt.info.portrait = "info_portraits_towers_0105"
+tt.info.enc_icon = 114
+tt.info.i18n_key = "TOWER_PALADIN_RIDER"
+tt.tower.type = "imperial_patrol"
+tt.tower.kind = TOWER_KIND_BARRACK
+tt.tower.price = 300
+tt.barrack.soldier_type = "soldier_paladin_rider"
+tt.barrack.rally_range = 1450
+tt.barrack.max_soldiers = 3
+tt.main_script.update = scripts.tower_paladin_rider.update
+tt.render.sprites[1].name = "terrains_%04i"
+tt.render.sprites[1].offset = v(0, 13)
+tt.render.sprites[2].name = "tower_HolyKnight_1"
+tt.render.sprites[2].offset = v(0, 39)
+tt.render.sprites[3].prefix = "towerbarracklvl4_paladin_door"
+tt.render.sprites[3].offset = v(0, 39)
+tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4].name = "tower_HolyFlag"
+tt.render.sprites[4].offset = v(7, 72)
+tt.sound_events.insert = {
+	"BarrackPaladinTaunt",
+	"GUITowerUpgrade"
+}
+tt.sound_events.change_rally_point = "BarrackPaladinTaunt"
+
+tt = RT("soldier_paladin_rider", "soldier_militia")
+AC(tt, "editor", "powers", "pickpocket", "track_damage", "nav_path")
+anchor_y = 0.17
+image_y = 42
+tt.health.armor = 0.7
+tt.health.dead_lifetime = 3
+tt.health.hp_max = 510
+tt.health.armor_power_name = "shield"
+tt.health.armor_inc = 0.15
+tt.health_bar.offset = v(0, 50)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.nav_path.dir = -1
+tt.main_script.update = scripts.soldier_paladin_rider.update
+tt.info.portrait = "info_portraits_sc_0004"
+tt.info.random_name_count = 20
+tt.info.random_name_format = "SOLDIER_PALADIN_RANDOM_%i_NAME"
+tt.melee.attacks[1].damage_max = 50
+tt.melee.attacks[1].damage_min = 30
+tt.melee.attacks[1].damage_inc = 10
+tt.melee.attacks[1].power_name = "holystrike"
+tt.melee.attacks[1].shared_cooldown = true
+tt.melee.cooldown = 0.5 + fts(13)
+tt.melee.range = 60
+tt.motion.max_speed = 75
+tt.powers.healing = E:clone_c("power")
+tt.powers.shield = E:clone_c("power")
+tt.powers.holystrike = E:clone_c("power")
+tt.regen.health = 25
+tt.render.sprites[1].prefix = "soldier_paladin_rider"
+tt.render.sprites[1].anchor.y = anchor_y
+tt.soldier.melee_slot_offset = v(5, 0)
+tt.unit.hit_offset = v(0, 14)
+tt.unit.marker_offset = v(0, ady(10))
+tt.unit.size = UNIT_SIZE_MEDIUM
+tt.vis.bans = bor(F_POLYMORPH, F_POISON, F_LYCAN, F_CANNIBALIZE)

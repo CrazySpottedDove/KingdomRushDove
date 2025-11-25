@@ -16620,21 +16620,10 @@ function scripts.hero_hunter.update(this, store)
 
         bullet = E:create_entity(attack.bullet)
         bullet.pos = V.vclone(this.pos)
-
-        if attack.bullet_start_offset then
-            local offset = attack.bullet_start_offset[ai]
-
-            bullet.pos.x, bullet.pos.y = bullet.pos.x + (af and -1 or 1) * offset.x, bullet.pos.y + offset.y
-        end
-
         bullet.bullet.from = V.vclone(bullet.pos)
         bullet.bullet.to = V.vclone(bullet_to)
-
-        if not attack.ignore_hit_offset then
-            bullet.bullet.to.x = bullet.bullet.to.x + target.unit.hit_offset.x
-            bullet.bullet.to.y = bullet.bullet.to.y + target.unit.hit_offset.y
-        end
-
+        bullet.bullet.to.x = bullet.bullet.to.x + target.unit.hit_offset.x
+        bullet.bullet.to.y = bullet.bullet.to.y + target.unit.hit_offset.y
         bullet.bullet.target_id = target.id
         bullet.bullet.source_id = this.id
         bullet.bullet.xp_dest_id = this.id
@@ -16643,9 +16632,7 @@ function scripts.hero_hunter.update(this, store)
 
         queue_insert(store, bullet)
 
-        if attack.xp_from_skill then
-            SU.hero_gain_xp_from_skill(this, this.hero.skills[attack.xp_from_skill])
-        end
+        SU.hero_gain_xp_from_skill(this, this.hero.skills[attack.xp_from_skill])
 
         attack_done = true
 
@@ -17072,7 +17059,7 @@ function scripts.hero_hunter.update(this, store)
             skill = this.hero.skills.ricochet
             a = ricochet_attack
 
-            if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
+            if ready_to_use_skill(a, store) then
                 local enemy, enemies = U.find_foremost_enemy(store, tpos(this), a.min_range, a.max_range_trigger,
                     a.node_prediction, a.vis_flags, a.vis_bans)
 
@@ -17103,7 +17090,9 @@ function scripts.hero_hunter.update(this, store)
 
                     ricochet_attack.ts = start_ts
                     last_ts = start_ts
-
+                    if shooting_state then
+                        ranged_attack.ts = store.tick_ts
+                    end
                     goto label_337_1
                 end
             end
@@ -17111,7 +17100,7 @@ function scripts.hero_hunter.update(this, store)
             skill = this.hero.skills.shoot_around
             a = shoot_around_attack
 
-            if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
+            if ready_to_use_skill(a, store) then
                 local enemies = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                 if not enemies or #enemies < a.min_targets then
@@ -17160,7 +17149,7 @@ function scripts.hero_hunter.update(this, store)
             skill = this.hero.skills.beasts
             a = beasts_attack
 
-            if ready_to_use_skill(a, store) and store.tick_ts - last_ts > a.min_cooldown then
+            if ready_to_use_skill(a, store) then
                 local enemies = U.find_enemies_in_range(store, this.pos, 0, a.max_range, a.vis_flags, a.vis_bans)
 
                 if not enemies or #enemies < 1 then
