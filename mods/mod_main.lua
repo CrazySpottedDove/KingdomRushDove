@@ -21,11 +21,9 @@ local mod_main = {}
 function mod_main:init(director)
     local config = require("config")
 
-    local descending_mods_data, ascending_mods_data = mod_utils:check_get_available_mods(config)
-    self.desc_mods_data = descending_mods_data
-    self.asc_mods_data = ascending_mods_data
-    mod_hook.desc_mods_data = descending_mods_data
-    mod_hook.asc_mods_data = ascending_mods_data
+    local mods_data = mod_utils.check_get_available_mods(config)
+    self.mods_data = mods_data
+    mod_hook.mods_data = mods_data
 
     if config.enabled then
         self:front_init()
@@ -45,28 +43,44 @@ end
 --- 初始化所有已启用的模组
 ---@return nil
 function mod_main:after_init()
-    -- 正序加载所有模组，确保加载模块顺序正确
-    for _, mod_data in ipairs(self.desc_mods_data) do
+    local loaded_mods = {}
+
+    -- 正序增加模组路径
+    for i = 1, #self.mods_data do
+        local mod_data = self.mods_data[i]
+
         -- 添加模组路径到package.path
-        mod_utils:add_path(mod_data)
+        mod_utils.add_path(mod_data)
 
-        -- 加载模组
-        mod_data.module = require(mod_data.name)
-
-        if type(mod_data.module) ~= "table" then
-            error(string.format("Must return table, mod: %s", mod_data.name))
-        end
-
-        mod_data.module.config = require(mod_utils.ppref .. mod_data.path .. ".config")
+        log.debug("Current package.path: %s", package.path)
     end
 
-    -- 倒序初始化模组，确保高优先级覆盖低优先级
-    for _, mod_data in ipairs(self.asc_mods_data) do
+    -- 倒序加载模组，确保加载模块顺序正确
+    for i = #self.mods_data, 1, -1 do
+        local mod_data = self.mods_data[i]
+
+        -- 加载模组
+        local mod = require(mod_data.name)
+
+        if type(mod) ~= "table" then
+            log.error(string.format("Must return table, mod: %s", mod_data.name))
+        else
+            table.insert(loaded_mods, {
+                mod,
+                mod_data
+            })
+        end
+    end
+
+    -- 正序初始化模组，确保高优先级覆盖低优先级
+    for i = #loaded_mods, 1, -1 do
+        local loaded_mod, mod_data = unpack(loaded_mods[i])
+
         -- 初始化模组
-        mod_data.module:init()
+        loaded_mod:init(mod_data)
 
         -- 打印模组加载信息
-        log.error(mod_utils:get_debug_info(mod_data.module.config))
+        log.error(mod_utils.get_debug_info(mod_data.config))
     end
 
     mod_hook:after_init()
