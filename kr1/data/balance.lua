@@ -1356,6 +1356,8 @@ local heroes = {
             damage_max = {6, 7, 8},
             s_damage_min = {44, 66, 88},
             s_damage_max = {110, 132, 154},
+            slow_factor = 0.75,
+            slow_duration = 2,
             duration = {3, 3.5, 4},
             xp_gain = {160, 320, 480}
         },
