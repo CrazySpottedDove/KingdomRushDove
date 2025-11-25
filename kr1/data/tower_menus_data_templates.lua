@@ -98,4 +98,21 @@ templates.point = {
     place = 8
 }
 
+-- 切换模式按钮
+templates.mode = {
+    halo = "quickmenu_action_icons_0001_hover",
+    action = "tw_change_mode",
+    image = nil,
+    image_mode0 = nil,
+    image_mode1 = nil,
+    place = 3,
+    tt_title_mode0 = nil,
+    tt_desc_mode0 = nil,
+    tt_phrase_mode0 = nil,
+    tt_title_mode1 = nil,
+    tt_desc_mode1 = nil,
+    tt_phrase_mode1 = nil,
+    sounds = nil
+}
+
 return templates
