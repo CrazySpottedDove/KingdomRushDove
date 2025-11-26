@@ -8498,7 +8498,7 @@ scripts.hero_minotaur = {
 
                     local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, false, a.vis_flags,
                         a.vis_bans, function(v)
-                            return (band(bnot(v.enemy.valid_terrains), terrains) == 0) and v.health.hp > 540
+                            return (band(bnot(v.enemy.valid_terrains), terrains) == 0) and v.health.hp > this.health.hp * 2
                         end)
 
                     if not target then
