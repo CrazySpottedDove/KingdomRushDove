@@ -10,6 +10,18 @@ if package.config:sub(1, 1) == "\\" then -- Windows
     binary_path = "client.exe"
 end
 
+-- local function check_client_update()
+-- 如果主目录有 $binary_path.new，就用这个文件替换掉 $binary_path
+local new_path = binary_path .. ".new"
+local f = io.open(new_path, "r")
+if f then
+    f:close()
+    -- 存在 .new 文件，进行替换
+    os.remove(binary_path)
+    os.rename(new_path, binary_path)
+end
+-- end
+
 local function check_update_async()
     local hash_file = io.open("current_version_commit_hash.txt", "r")
     if not hash_file then
@@ -675,6 +687,9 @@ function love.update(dt)
                     end
                 else
                     -- 结果无效，恢复 love.update
+                    -- 这里应该提示更新失败
+                    love.window.showMessageBox("更新失败", "可检查client.log。只影响更新，不影响游戏。",
+                        {"确定"})
                     love.update = love_update_master
                 end
             end
