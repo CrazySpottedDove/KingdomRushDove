@@ -12,6 +12,7 @@ end
 
 if apply_upgrade then
     -- 如果主目录有 $binary_path.new，就用这个文件替换掉 $binary_path
+    local client_updated = false
     local new_path = binary_path .. ".new"
     local f = io.open(new_path, "r")
     if f then
@@ -19,10 +20,11 @@ if apply_upgrade then
         -- 存在 .new 文件，进行替换
         os.remove(binary_path)
         os.rename(new_path, binary_path)
+        client_updated = true
     end
 
     -- 运行 $binary_path --quiz，强等待。
-    local cmd = string.format('"%s" --quiz', binary_path)
+    local cmd = client_updated and string.format('"%s" --quiz-force', binary_path) or string.format('"%s" --quiz', binary_path)
     local ret = os.execute(cmd)
 end
 
