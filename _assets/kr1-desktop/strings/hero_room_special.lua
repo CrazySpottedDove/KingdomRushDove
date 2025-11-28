@@ -1101,10 +1101,40 @@ d[1].damage_max = s.damage_max[max_lvl]
 map["巨斧风暴"] = str(cooldown_str(),"卡兹对",radius,"范围内敌人造成",damage_str(),"并恢复造成伤害总量25%的生命值。")
 
 set_hero("hero_crab")
-map["战争强硬"] = str()
-map["折叠蟹钳"] = str()
-map["水炮"] = str()
-map["裂地攻势"] = str()
+set_skill(h.hero.skills.battlehardened)
+chance = s.chance[max_lvl]
+duration = h.invuln.duration
+map["战争强硬"] = str("每当卡基诺斯受到攻击，有",rate_str(chance),"触发战争强硬，使得接下来",duration,"秒内受到的攻击改为使卡基诺斯恢复一半伤害量的生命值。该效果持续期间无法重复触发。")
+set_skill(h.hero.skills.pincerattack)
+cooldown = h.timed_attacks.list[1].cooldown
+get_damage(h.timed_attacks.list[1])
+d[1].damage_min = s.damage_min[max_lvl]
+d[1].damage_max = s.damage_max[max_lvl]
+local x = h.timed_attacks.list[1].damage_size.x
+local y = h.timed_attacks.list[1].damage_size.y
+map["折叠蟹钳"] = str(cooldown_str(),"卡基诺斯使用折叠蟹钳，对面前",x,"x",y,"区域内的敌人造成",damage_str(),"。")
+set_skill(h.hero.skills.shouldercannon)
+get_damage(E:get_template("crab_water_bomb").bullet)
+set_damage_value(s.damage[max_lvl])
+factor = s.slow_factor[max_lvl]
+duration = s.slow_duration[max_lvl]
+radius = E:get_template("aura_slow_water_bomb").aura.radius
+for _, inc in pairs(s.radius_inc) do
+    radius = radius + inc
+end
+cooldown = h.ranged.attacks[1].cooldown
+map["水炮"] = str(cooldown_str(),"卡基诺斯发射水炮，对",radius,"范围内敌人造成",damage_str(),"与持续",duration,"秒的",factor*100,"%减速效果。")
+set_skill(h.hero.skills.burrow)
+amount = s.extra_speed[max_lvl]
+d[1].damage_type = DAMAGE_EXPLOSION
+set_damage_value(s.damage[max_lvl])
+amount_2 = h.motion.speed_limit - h.motion.max_speed
+amount_3 = h.burrow.init_accel
+cooldown = h.burrow.cooldown
+radius = h.burrow.radius
+local amount_4 = h.burrow.stun_speed - h.motion.max_speed
+duration = E:get_template("mod_stun_burrow").modifier.duration
+map["裂地攻势"] = str("卡基诺斯可在海洋中自由穿梭。长距离移动时，卡基诺斯遁地，立刻提升",amount_3,"点移速，并每秒提高",amount,"点移速，最高提升",amount_2,"点。当卡基诺斯出土时，若提升的速度超过",amount_4,"，则在",radius,"范围内造成基于加速效果（最多两倍）倍数的",damage_str(),"与",duration,"秒眩晕效果。伤害与眩晕效果每",cooldown,"秒仅触发一次。")
 
 set_hero("hero_van_helsing")
 map["纯银子弹"] = str()
