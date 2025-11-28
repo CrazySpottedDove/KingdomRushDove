@@ -82,6 +82,7 @@ tt.attacks.list[3].node_prediction = fts(40)
 tt.attacks.list[3].vis_bans = 0
 
 tt = RT("bomb_bfg", "bomb")
+-- dps = 34.25
 tt.bullet.damage_max = 125
 tt.bullet.damage_min = 63
 tt.bullet.damage_radius = 75
@@ -1921,7 +1922,7 @@ tt.unit.fade_time_after_death = tt.health.dead_lifetime
 tt.soldier.melee_slot_offset = vec_2(20, 0)
 tt.main_script.insert = scripts.soldier_tower_barrel_skill_warrior.insert
 tt.main_script.update = scripts.soldier_tower_barrel_skill_warrior.update
-tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE)
+tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE, F_POISON)
 tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
 tt.tween.props[1].name = "alpha"
 tt.tween.remove = false

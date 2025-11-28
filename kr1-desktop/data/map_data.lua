@@ -2257,7 +2257,8 @@ return {
         icon = 1,
         detail_icon = 1,
         from_kr = 5
-    }, {
+    }, -- 2：圣巢
+    {
         name = "tower_royal_archers_lvl4",
         icon = 3,
         detail_icon = 3,
@@ -2268,9 +2269,20 @@ return {
         detail_icon = 4,
         from_kr = 5
     }, {
+        name = "tower_ballista_lvl4",
+        icon = 5,
+        detail_icon = 5,
+        from_kr = 5
+    }, -- 6：树灵
+    {
         name = "tower_demon_pit_lvl4",
         icon = 7,
         detail_icon = 7,
+        from_kr = 5
+    }, {
+        name = "tower_barrel_lvl4",
+        icon = 8,
+        detail_icon = 8,
         from_kr = 5
     }, {
         name = "tower_necromancer_lvl4",
@@ -2302,20 +2314,14 @@ return {
         icon = 20,
         detail_icon = 21,
         from_kr = 5
-    },{
+    }, {
         name = "tower_flamespitter_lvl4",
         icon = 11,
         detail_icon = 11,
         from_kr = 5
-    },
-    -- 16, 17: 蛤蟆
+    } -- 16, 17: 蛤蟆
     -- 18: 巨像
-    {
-        name = "tower_ballista_lvl4",
-        icon = 5,
-        detail_icon = 5,
-        from_kr = 5
-    }},
+    },
     map_animations1 = {{
         sail_time = 15,
         id = "ma_big_boat",

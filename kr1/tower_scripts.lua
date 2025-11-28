@@ -16377,15 +16377,10 @@ function scripts.aura_bullet_tower_barrel_skill_barrel.update(this, store, scrip
             U.animation_start(this, "loop", nil, store.tick_ts, true, this.sid_barrel)
         end
 
-        if this.interrupt then
-            last_hit_ts = 1e+99
-        end
-
         if (store.tick_ts - last_hit_ts >= a.cycle_time) then
             last_hit_ts = store.tick_ts
 
-            local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags,
-                a.vis_bans)
+            local targets = U.find_enemies_in_range_filter_off(this.pos, a.radius, a.vis_flags, a.vis_bans)
 
             if targets then
                 for i, target in ipairs(targets) do
@@ -16397,7 +16392,7 @@ function scripts.aura_bullet_tower_barrel_skill_barrel.update(this, store, scrip
                         new_mod.modifier.damage_factor = a.damage_factor
                         queue_insert(store, new_mod)
                     end
-                    if not target._attract_pos then
+                    if not target._attract_pos and band(target.vis.flags, bor(F_BOSS, F_STUN)) == 0 then
                         local attract_mod = E:create_entity("mod_tower_barrel_skill_barrel_attract")
                         attract_mod.modifier.source_id = this.id
                         attract_mod.modifier.target_id = target.id

@@ -8819,9 +8819,14 @@ end
 scripts.enemy_attracted = {}
 scripts.enemy_attracted.update = function(this, store)
     local this_pos = this.pos
+    -- 这里使用引用，不具体到数值，是为了之后可能的 attract_pos 动态变化拓展做准备
     local attract_pos = this._attract_pos
-    local attract_radius2 = this._attract_radius * this._attract_radius
+    -- attract_radius 定死
+    local attract_radius = this._attract_radius
+    local attract_radius2 = attract_radius * attract_radius
     local motion = this.motion
+    local angle
+    local d_angle = math.pi / 180
     while true do
         if this.health.dead then
             SU.y_enemy_death(store, this)
@@ -8831,14 +8836,20 @@ scripts.enemy_attracted.update = function(this, store)
             SU.y_enemy_stun(store, this)
         else
             if V.dist2(this_pos.x, this_pos.y, attract_pos.x, attract_pos.y) < attract_radius2 then
-                U.animation_start(this, "idle", nil, store.tick_ts, true)
+                -- U.animation_start(this, "idle", nil, store.tick_ts, true)
+                angle = math.atan2(this_pos.y - attract_pos.y, this_pos.x - attract_pos.x)
+                local dest = {
+                    x = attract_pos.x + attract_radius * math.cos(angle + d_angle),
+                    y = attract_pos.y + attract_radius * math.sin(angle + d_angle)
+                }
+                U.set_destination(this, dest)
             else
                 U.set_destination(this, attract_pos)
-                local an, af = U.animation_name_facing_point(this, "walk", motion.dest)
-                U.animation_start(this, an, af, store.tick_ts, true)
-                U.walk(this, store.tick_length)
-                motion.speed.x, motion.speed.y = 0, 0
             end
+            local an, af = U.animation_name_facing_point(this, "walk", motion.dest)
+            U.animation_start(this, an, af, store.tick_ts, true)
+            U.walk(this, store.tick_length)
+            motion.speed.x, motion.speed.y = 0, 0
         end
         coroutine.yield()
     end
@@ -8850,9 +8861,9 @@ function scripts.mod_attract.insert(this, store)
     if not target or target.health.dead then
         return false
     end
-    -- _attract_pos 是 this.pos 的只读引用
+    -- _attract_pos 是 this.pos 的只读引用!
     target._attract_pos = this.pos
-    target._attract_radius = this.attract_radius * math.random()
+    target._attract_radius = this.attract_radius * (0.2 + 0.8 * math.random())
     if not target.main_script.origin_update then
         target.main_script.origin_update = target.main_script.update
     end
