@@ -217,6 +217,12 @@ return {
         place = 16,
         tt_title = _("TOWER_FLAMESPITTER_NAME"),
         tt_desc = _("TOWER_FLAMESPITTER_1_DESCRIPTION")
+    }),merge(templates.upgrade, {
+        action_arg = "tower_barrel_lvl4",
+        image = "kr5_main_icons_0017",
+        place = 17,
+        tt_title = _("TOWER_BARREL_NAME"),
+        tt_desc = _("TOWER_BARREL_1_DESCRIPTION")
     }), templates.sell}},
 
     -- 箭塔
@@ -2440,5 +2446,38 @@ return {
             tt_title = _("TOWER_BALLISTA_4_SKILL_BOMB_3_NAME"),
             tt_desc = _("TOWER_BALLISTA_4_SKILL_BOMB_3_DESCRIPTION")
         }}
-    }),templates.sell}}
+    }), templates.sell}},
+    barrel = {{merge(templates.upgrade_power, {
+        action_arg = "skill_warrior",
+        image = "kr5_special_icons_0026",
+        place = 6,
+        sounds = {"TowerBarrelSkillATaunt"},
+        tt_phrase = _("TOWER_BARREL_4_SKILL_WARRIOR_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_BARREL_4_SKILL_WARRIOR_1_NAME"),
+            tt_desc = _("TOWER_BARREL_4_SKILL_WARRIOR_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_BARREL_4_SKILL_WARRIOR_2_NAME"),
+            tt_desc = _("TOWER_BARREL_4_SKILL_WARRIOR_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_BARREL_4_SKILL_WARRIOR_3_NAME"),
+            tt_desc = _("TOWER_BARREL_4_SKILL_WARRIOR_3_DESCRIPTION")
+        }}
+    }), merge(templates.upgrade_power, {
+        action_arg = "skill_barrel",
+        image = "kr5_special_icons_0027",
+        place = 7,
+        sounds = {"TowerBarrelSkillBTaunt"},
+        tt_phrase = _("TOWER_BARREL_4_SKILL_BARREL_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_BARREL_4_SKILL_BARREL_1_NAME"),
+            tt_desc = _("TOWER_BARREL_4_SKILL_BARREL_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_BARREL_4_SKILL_BARREL_2_NAME"),
+            tt_desc = _("TOWER_BARREL_4_SKILL_BARREL_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_BARREL_4_SKILL_BARREL_3_NAME"),
+            tt_desc = _("TOWER_BARREL_4_SKILL_BARREL_3_DESCRIPTION")
+        }}
+    }), templates.rally, templates.sell}}
 }

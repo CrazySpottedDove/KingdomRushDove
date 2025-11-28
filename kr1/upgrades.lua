@@ -382,12 +382,12 @@ end
 
 function upgrades:engineer_bombs()
     return {"bomb", "bomb_dynamite", "bomb_black", "bomb_bfg", "bomb_mecha", "rock_druid", "rock_entwood",
-            "rock_firey_nut", "tower_tricannon_bomb", "tower_tricannon_bomb_overheated","bullet_tower_demon_pit_basic_attack_lvl4","bullet_tower_demon_pit_big_guy_lvl4"}
+            "rock_firey_nut", "tower_tricannon_bomb", "tower_tricannon_bomb_overheated","bullet_tower_demon_pit_basic_attack_lvl4","bullet_tower_demon_pit_big_guy_lvl4","bullet_tower_barrel_lvl4"}
 end
 
 function upgrades:engineer_advanced_towers()
     return {"tower_bfg", "tower_tesla", "tower_dwaarp", "tower_mech", "tower_frankenstein", "tower_druid",
-            "tower_entwood", "tower_tricannon_lvl4","tower_demon_pit_lvl4", "tower_flamespitter_lvl4"}
+            "tower_entwood", "tower_tricannon_lvl4","tower_demon_pit_lvl4", "tower_flamespitter_lvl4", "tower_barrel_lvl4"}
 end
 function upgrades:patch_templates(max_level)
     if max_level then
@@ -398,11 +398,6 @@ function upgrades:patch_templates(max_level)
     local archer_towers = self:archer_towers()
 
     u = self:get_upgrade("archer_salvage")
-
-    -- if u then
-    -- 	for _, n in pairs(archer_towers) do
-    -- 		T(n).tower.refund_factor = u.refund_factor
-    -- 	end
 
     if u then
         for _, n in pairs(archer_towers) do
@@ -638,11 +633,8 @@ function upgrades:patch_templates(max_level)
             end
         end
 
-        -- T("tower_bfg").attacks.list[1].range = math.ceil(T("tower_bfg").attacks.list[1].range * u.range_factor)
         T("tower_bfg").attacks.list[2].range_base =
             math.ceil(T("tower_bfg").attacks.list[2].range_base * u.range_factor)
-        -- T("tower_bfg").attacks.list[3].range = math.ceil(T("tower_bfg").attacks.list[3].range * u.range_factor)
-
         T("tower_tesla").attacks.list[1].range = math.ceil(T("tower_tesla").attacks.list[1].range * u.range_factor)
         T("tower_tricannon_lvl4").attacks.list[1].range = math.ceil(
             T("tower_tricannon_lvl4").attacks.list[1].range * u.range_factor)

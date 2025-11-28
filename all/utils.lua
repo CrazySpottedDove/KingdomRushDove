@@ -2534,4 +2534,32 @@ function U.is_inside_square(o, half_x, half_y, r, p)
     return false
 end
 
+-- 为 vis.flags 添加引用计数标志位
+function U.flag_add(vis, mask)
+    vis.flag_ref = vis.flag_ref or {}
+    vis.flag_ref[mask] = (vis.flag_ref[mask] or 0) + 1
+    vis.flags = bor(vis.flags, mask)
+end
+
+-- 为 vis.flags 移除引用计数标志位，使用时必须保证 vis 经历了 U.flag_add
+function U.flag_remove(vis, mask)
+    vis.flag_ref[mask] = vis.flag_ref[mask] - 1
+    if vis.flag_ref[mask] <= 0 then
+        vis.flags = band(vis.flags, bnot(mask))
+    end
+end
+
+function U.bans_add(vis, mask)
+    vis.bans_ref = vis.bans_ref or {}
+    vis.bans_ref[mask] = (vis.bans_ref[mask] or 0) + 1
+    vis.bans = bor(vis.bans, mask)
+end
+
+function U.bans_remove(vis, mask)
+    vis.bans_ref[mask] = vis.bans_ref[mask] - 1
+    if vis.bans_ref[mask] <= 0 then
+        vis.bans = band(vis.bans, bnot(mask))
+    end
+end
+
 return U

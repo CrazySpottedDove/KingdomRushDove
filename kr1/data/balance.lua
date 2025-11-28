@@ -5879,7 +5879,7 @@ local towers = {
                 damage_min = {26, 37, 48},
                 damage_max = {38, 55, 72},
                 damage_type = DAMAGE_PHYSICAL,
-                hp_max = {100, 120, 140},
+                hp_max = {130, 156, 182},
                 armor = {0, 0, 0}
             }
         },

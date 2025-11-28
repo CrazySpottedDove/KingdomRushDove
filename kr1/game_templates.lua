@@ -9782,12 +9782,12 @@ tt.timed.duration = 6
 tt.timed.runs = 1e+99
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {tt.timed.duration - 0.5, 255}, {tt.timed.duration, 0}}
+
 tt = E:register_t("fx_bullet_tower_ballista_missed_arrow_dust", "fx")
 tt.render.sprites[1].name = "ballista_tower_missed_arrow_dust"
+
 tt = E:register_t("fx_bullet_tower_ballista_missed_arrow_decal", "fx")
-
 E:add_comps(tt, "tween")
-
 tt.render.sprites[1].name = "ballista_tower_missed_arrow_decal"
 tt.render.sprites[1].z = Z_DECALS
 tt.render.sprites[1].animated = false
@@ -9795,13 +9795,70 @@ tt.timed.duration = 6
 tt.timed.runs = 1e+99
 tt.tween.props[1].name = "alpha"
 tt.tween.props[1].keys = {{0, 255}, {tt.timed.duration - 0.5, 255}, {tt.timed.duration, 0}}
+
 tt = E:register_t("fx_bullet_tower_ballista_bomb_spawn", "fx")
 tt.render.sprites[1].name = "ballista_tower_bomb_fx_idle"
+
 tt = E:register_t("fx_bullet_tower_ballista_bomb_junk_floor", "fx")
 tt.render.sprites[1].name = "ballista_tower_junk_particle_floor"
 tt.render.sprites[1].animated = true
 tt.render.sprites[1].z = Z_OBJECTS
 tt.timed.duration = fts(16)
 tt.timed.runs = 1e+99
+
 tt = E:register_t("fx_bullet_tower_ballista_bomb_explosion", "fx")
 tt.render.sprites[1].name = "ballista_tower_bomb_explotion_idle"
+
+tt = E:register_t("ps_bullet_tower_barrel")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "barrel_tower_projectile_particle"
+tt.particle_system.animated = false
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 45
+tt.particle_system.animation_fps = 30
+tt.particle_system.emit_area_spread = vec_2(10, 10)
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.emit_direction = math.pi / 3
+tt.particle_system.emit_speed = {20, 20}
+tt.particle_system.z = Z_BULLET_PARTICLES
+tt.particle_system.scale_var = {0.3, 0.5}
+tt.particle_system.alphas = {255, 255, 255, 0}
+
+tt = E:register_t("ps_bullet_tower_barrel_skill_barrel")
+E:add_comps(tt, "pos", "particle_system")
+tt.particle_system.name = "barrel_tower_lvl4_bad_barrel_projectile_particle_idle"
+tt.particle_system.animated = true
+tt.particle_system.loop = false
+tt.particle_system.emission_rate = 150
+tt.particle_system.animation_fps = 30
+tt.particle_system.emit_area_spread = vec_2(10, 0)
+tt.particle_system.particle_lifetime = {fts(10), fts(10)}
+tt.particle_system.z = Z_BULLET_PARTICLES
+
+tt = E:register_t("fx_bullet_tower_barrel", "fx")
+tt.render.sprites[1].name = "barrel_tower_projectile_hit_fx_idle"
+tt.render.sprites[1].z = Z_OBJECTS
+tt = E:register_t("fx_soldier_tower_barrel_skill_warrior_hit", "fx")
+tt.render.sprites[1].name = "barrel_tower_berserker_unit_hit_fx_idle"
+tt = E:register_t("fx_soldier_tower_barrel_skill_warrior_spawn", "fx")
+tt.render.sprites[1].name = "barrel_tower_lvl4_tower_berserker_spawn_fx_idle"
+tt = E:register_t("decal_bullet_tower_barrel", "decal_timed")
+tt.render.sprites[1].name = "barrel_tower_projectile_hit_fx_decal_idle"
+tt.render.sprites[1].animated = true
+tt.timed.duration = fts(22)
+tt = E:register_t("decal_aura_bullet_tower_barrel_skill_barrel_explosion", "decal_tween")
+tt.render.sprites[1].name = "barrel_tower_lvl4_bad_barrel_projectile_decal"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {fts(20), 255}, {fts(40), 0}}
+tt.tween.remove = true
+tt = E:register_t("decal_soldier_tower_barrel_skill_warrior", "decal_tween")
+tt.render.sprites[1].prefix = "barrel_tower_berserker_unit_decal"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {fts(10), 0}}
+tt.tween.remove = true
+tt.tween.disabled = true

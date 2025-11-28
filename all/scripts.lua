@@ -8814,4 +8814,80 @@ function scripts.arrow5_fixed_height.insert(this, store)
     return scripts.arrow.insert(this, store)
 end
 
+-- 敌人被某个源吸引，直接朝着这个源行走，不做任何其它事情。这种敌人必须保证处于无法被拦截状态
+-- 敌人需实现 walk 动画
+scripts.enemy_attracted = {}
+scripts.enemy_attracted.update = function(this, store)
+    local this_pos = this.pos
+    local attract_pos = this._attract_pos
+    local attract_radius2 = this._attract_radius * this._attract_radius
+    local motion = this.motion
+    while true do
+        if this.health.dead then
+            SU.y_enemy_death(store, this)
+            return
+        end
+        if this.unit.is_stunned then
+            SU.y_enemy_stun(store, this)
+        else
+            if V.dist2(this_pos.x, this_pos.y, attract_pos.x, attract_pos.y) < attract_radius2 then
+                U.animation_start(this, "idle", nil, store.tick_ts, true)
+            else
+                U.set_destination(this, attract_pos)
+                local an, af = U.animation_name_facing_point(this, "walk", motion.dest)
+                U.animation_start(this, an, af, store.tick_ts, true)
+                U.walk(this, store.tick_length)
+                motion.speed.x, motion.speed.y = 0, 0
+            end
+        end
+        coroutine.yield()
+    end
+end
+
+scripts.mod_attract = {}
+function scripts.mod_attract.insert(this, store)
+    local target = store.entities[this.modifier.target_id]
+    if not target or target.health.dead then
+        return false
+    end
+    -- _attract_pos 是 this.pos 的只读引用
+    target._attract_pos = this.pos
+    target._attract_radius = this.attract_radius * math.random()
+    if not target.main_script.origin_update then
+        target.main_script.origin_update = target.main_script.update
+    end
+    target.main_script.update = scripts.enemy_attracted.update
+    target.main_script.co = coroutine.create(target.main_script.update)
+    U.bans_add(target.vis, F_BLOCK)
+    U.unblock_all(store, target)
+    return true
+end
+
+function scripts.mod_attract.remove(this, store)
+    local target = store.entities[this.modifier.target_id]
+    if not target or target.health.dead then
+        return true
+    end
+    target._attract_pos = nil
+    target._attract_radius = nil
+
+    target.main_script.update = target.main_script.origin_update
+    target.main_script.co = coroutine.create(target.main_script.update)
+    U.bans_remove(target.vis, F_BLOCK)
+    local nodes = P:nearest_nodes(target.pos.x, target.pos.y, {target.nav_path.pi}, {target.nav_path.spi})
+    if nodes and nodes[1] then
+        target.nav_path.pi, target.nav_path.spi, target.nav_path.ni = unpack(nodes[1], 1, 3)
+    end
+    return true
+end
+
+function scripts.mod_attract.update(this, store)
+    local start_ts = store.tick_ts
+    local duration = this.modifier.duration
+    while store.tick_ts - start_ts < duration do
+        coroutine.yield()
+    end
+    queue_remove(store, this)
+end
+
 return scripts

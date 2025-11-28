@@ -1162,7 +1162,7 @@ tt.attacks.list[2].animation_loop = "loop"
 tt.attacks.list[2].animation_end = "loop_end"
 tt.attacks.list[2].shoot_time = fts(45)
 tt.attacks.list[2].sounds = {"TowerTricannonBombardmentLvl1", "TowerTricannonBombardmentLvl2",
-                                "TowerTricannonBombardmentLvl3"}
+                             "TowerTricannonBombardmentLvl3"}
 tt.attacks.list[3] = table.deepclone(tt.attacks.list[1])
 tt.attacks.list[3].cooldown = nil
 tt.attacks.list[3].duration = nil
@@ -1300,10 +1300,7 @@ tt.particle_system.name = "demon_pit_tower_demon_projectile_particle_idle"
 tt.particle_system.animated = true
 tt.particle_system.loop = false
 tt.particle_system.emission_rate = 50
-tt.particle_system.particle_lifetime = {
-    0.2,
-    0.4
-}
+tt.particle_system.particle_lifetime = {0.2, 0.4}
 tt.particle_system.emit_rotation_spread = math.pi * 2
 tt.particle_system.emit_area_spread = vec_2(10, 10)
 tt.particle_system.z = Z_BULLET_PARTICLES
@@ -1318,16 +1315,7 @@ AC(tt, "render", "tween")
 tt.render.sprites[1].name = "demon_pit_tower_demon_minion_explosion_decal"
 tt.render.sprites[1].animated = false
 tt.tween.props[1].name = "alpha"
-tt.tween.props[1].keys = {
-    {
-        1,
-        255
-    },
-    {
-        2.5,
-        0
-    }
-}
+tt.tween.props[1].keys = {{1, 255}, {2.5, 0}}
 tt.tween.remove = true
 
 tt = RT("tower_demon_pit_lvl4", "tower")
@@ -1435,16 +1423,7 @@ tt.render.sprites[1].prefix = "demon_pit_tower_demon_minion"
 tt.render.sprites[1].name = "raise"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
 tt.soldier.melee_slot_offset = vec_2(2, 0)
-tt.tween.props[1].keys = {
-    {
-        0,
-        0
-    },
-    {
-        fts(5),
-        255
-    }
-}
+tt.tween.props[1].keys = {{0, 0}, {fts(5), 255}}
 tt.tween.props[1].name = "alpha"
 tt.tween.disabled = true
 tt.tween.remove = false
@@ -1498,16 +1477,7 @@ tt.reinforcement.duration = b.big_guy.duration
 tt.render.sprites[1].prefix = "demon_pit_tower_demon_big_guy"
 tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
 tt.soldier.melee_slot_offset = vec_2(15, 0)
-tt.tween.props[1].keys = {
-    {
-        0,
-        0
-    },
-    {
-        fts(10),
-        255
-    }
-}
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
 tt.tween.props[1].name = "alpha"
 tt.tween.disabled = true
 tt.tween.remove = false
@@ -1562,11 +1532,7 @@ tt.dps.damage_type = b.master_exploders.damage_type
 tt.dps.damage_every = b.master_exploders.damage_every
 tt.main_script.insert = scripts.mod_dps.insert
 tt.main_script.update = scripts.mod_dps.update
-tt.render.sprites[1].size_names = {
-    "small",
-    "medium",
-    "large"
-}
+tt.render.sprites[1].size_names = {"small", "medium", "large"}
 tt.render.sprites[1].prefix = "fire"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].draw_order = 2
@@ -1615,9 +1581,9 @@ tt.render.sprites[4] = E:clone_c("sprite")
 tt.render.sprites[4].animated = true
 tt.render.sprites[4].name = "idle_diagonal_down"
 tt.render.sprites[4].angles = {}
-tt.render.sprites[4].angles.idle = { "idle_diagonal_down", "idle_side", "idle_diagonal_up", "idle_up", "idle_down" }
-tt.render.sprites[4].angles.attack = { "attack_diagonal_down", "attack_side", "attack_diagonal_up", "attack_up",
-    "attack_down" }
+tt.render.sprites[4].angles.idle = {"idle_diagonal_down", "idle_side", "idle_diagonal_up", "idle_up", "idle_down"}
+tt.render.sprites[4].angles.attack = {"attack_diagonal_down", "attack_side", "attack_diagonal_up", "attack_up",
+                                      "attack_down"}
 tt.render.sprites[4].offset = vec_2(1.5, tt.render.sprites[2].offset.y)
 tt.render.sprites[4].prefix = "dwarven_flamespitter_tower_lvl4_cannon"
 tt.render.sprites[4].offset = tt.render.sprites[2].offset
@@ -1662,12 +1628,12 @@ tt.attacks.list[1].shoot_time = fts(8)
 tt.attacks.list[1].vis_flags = bor(F_RANGED, F_AREA)
 tt.attacks.list[1].vis_bans = bor(F_NIGHTMARE)
 tt.attacks.list[1].burst_count = 5
-tt.attacks.list[1].aura_offset = { vec_2(13, 35), vec_2(20, 42), vec_2(20, 58), vec_2(0, 63), vec_2(0, 28) }
+tt.attacks.list[1].aura_offset = {vec_2(13, 35), vec_2(20, 42), vec_2(20, 58), vec_2(0, 63), vec_2(0, 28)}
 tt.attacks.list[1].flame_fx = "fx_tower_flamespitter_flame"
-tt.attacks.list[1].flame_fx_scale_x = { 1, 0.9, 0.8, 0.7, 1.1 }
+tt.attacks.list[1].flame_fx_scale_x = {1, 0.9, 0.8, 0.7, 1.1}
 tt.attacks.list[1].duration = b.basic_attack.duration
 tt.attacks.list[1].node_prediction = fts(35)
-tt.attacks.list[1].bullet_start_offset = { vec_2(20, 55), vec_2(20, 62), vec_2(20, 72), vec_2(0, 85), vec_2(0, 50) }
+tt.attacks.list[1].bullet_start_offset = {vec_2(20, 55), vec_2(20, 62), vec_2(20, 72), vec_2(0, 85), vec_2(0, 50)}
 tt.attacks.list[1].sound = "TowerFlamespitterBasicAttack"
 tt.attacks.list[1].cycle_time = b.basic_attack.cycle_time
 tt.attacks.list[1].damage_min = b.basic_attack.damage_min[4]
@@ -1796,7 +1762,7 @@ tt.dps.damage_min = b.damage[4]
 tt.dps.damage_max = b.damage[4]
 tt.dps.damage_type = DAMAGE_TRUE
 tt.dps.damage_every = b.cycle_time
-tt.render.sprites[1].size_names = { "small", "medium", "large" }
+tt.render.sprites[1].size_names = {"small", "medium", "large"}
 tt.render.sprites[1].prefix = "fire"
 tt.render.sprites[1].name = "small"
 tt.render.sprites[1].draw_order = 2
@@ -1819,3 +1785,293 @@ tt.modifier.vis_flags = bor(F_MOD, F_STUN)
 tt.modifier.vis_bans = bor(F_BOSS)
 
 -- 喷火器 END
+
+-- 酒桶 BEGIN
+tt = E:register_t("tower_barrel_lvl4", "tower")
+E:add_comps(tt, "attacks", "vis", "powers", "barrack")
+b = balance.towers.barrel
+tt.tower.type = "barrel"
+tt.tower.kind = TOWER_KIND_ENGINEER
+tt.tower.team = TEAM_LINIREA
+tt.tower.level = 1
+tt.tower.price = b.price[1]
+tt.tower.menu_offset = vec_2(0, 18)
+tt.info.portrait = "kr5_portraits_towers_0017"
+tt.info.room_portrait = "quickmenu_main_icons_main_icons_0016_0001"
+tt.info.tower_portrait = "towerselect_portraits_big_" .. "0006"
+tt.info.enc_icon = 1
+tt.info.i18n_key = "TOWER_BARREL_4"
+tt.info.stat_damage = b.stats.damage
+tt.info.stat_cooldown = b.stats.cooldown
+tt.info.stat_range = b.stats.range
+tt.main_script.insert = scripts.tower_barrel.insert
+tt.main_script.update = scripts.tower_barrel.update
+tt.attacks.range = b.basic_attack.range[4]
+tt.attacks.attack_delay_on_spawn = fts(10)
+tt.attacks.list[1] = E:clone_c("bullet_attack")
+tt.attacks.list[1].bullet = "bullet_tower_barrel_lvl4"
+tt.attacks.list[1].range = b.basic_attack.range[1]
+tt.attacks.list[1].bullet_start_offset = vec_2(-3, 80)
+tt.attacks.list[1].cooldown = b.basic_attack.cooldown
+tt.attacks.list[1].shoot_time = fts(8)
+tt.attacks.list[1].vis_bans = bor(F_FLYING, F_NIGHTMARE, F_CLIFF)
+tt.attacks.list[1].node_prediction = fts(25)
+tt.attacks.list[1].animation = "attack"
+tt.attacks.list[1].sound = "TowerBarrelBasicAttackCast"
+tt.attacks.list[2] = table.deepclone(tt.attacks.list[1])
+tt.attacks.list[2].bullet = "bullet_tower_barrel_skill_barrel"
+tt.attacks.list[2].bullet_start_offset = vec_2(-3, 85)
+tt.attacks.list[2].shoot_time = fts(43)
+tt.attacks.list[2].min_targets = b.skill_barrel.min_targets
+tt.attacks.list[2].animation = "bad_barrel"
+tt.attacks.list[3] = E:clone_c("custom_attack")
+tt.attacks.list[3].entity = "controller_soldier_tower_barrel_skill_warrior_spawn"
+tt.attacks.list[3].min_targets = b.skill_warrior.min_targets
+tt.attacks.list[3].animation = "berserker"
+tt.attacks.list[3].drunk_man_spawn_delay = fts(18)
+tt.attacks.list[3].range = b.skill_warrior.range
+tt.attacks.list[3].cooldown = b.skill_warrior.cooldown
+tt.attacks.list[3].vis_bans = bor(F_FLYING, F_CLIFF)
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].name = "terrain_artillery_%04i"
+tt.render.sprites[1].offset = vec_2(0, 10)
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "barrel_tower_lvl4_tower"
+tt.render.sprites[2].name = "idle"
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].offset = vec_2(0, 10)
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "barrel_tower_lvl4_tower_flow"
+tt.render.sprites[3].name = "idle"
+tt.render.sprites[3].offset = tt.render.sprites[2].offset
+tt.render.sprites[4] = E:clone_c("sprite")
+tt.render.sprites[4].name = "barrel_tower_lvl4_tower_tube"
+tt.render.sprites[4].animated = false
+tt.render.sprites[4].offset = tt.render.sprites[2].offset
+tt.render.sprites[5] = E:clone_c("sprite")
+tt.render.sprites[5].prefix = "barrel_tower_lvl4_viking"
+tt.render.sprites[5].offset = vec_2(-3, 45)
+tt.render.sprites[5].name = "idle"
+tt.sid_tower = 2
+tt.sid_viking = 5
+tt.sound_events.insert = "TowerBarrelTaunt"
+tt.sound_events.tower_room_select = "TowerBarrelTauntSelect"
+tt.ui.click_rect = r(-40, -3, 80, 85)
+tt.tower.price = b.price[4]
+tt.tower.menu_offset = vec_2(0, 30)
+tt.tower.type = "barrel"
+tt.powers.skill_warrior = E:clone_c("power")
+tt.powers.skill_warrior.price_base = b.skill_warrior.price[1]
+tt.powers.skill_warrior.price_inc = b.skill_warrior.price[2]
+tt.powers.skill_warrior.cooldown = b.skill_warrior.cooldown
+tt.powers.skill_warrior.duration = b.skill_warrior.duration
+tt.powers.skill_warrior.hp_max = b.skill_warrior.entity.hp_max
+tt.powers.skill_warrior.armor = b.skill_warrior.entity.armor
+tt.powers.skill_warrior.enc_icon = 23
+tt.powers.skill_warrior.attack_idx = 3
+tt.powers.skill_warrior.sound_evict = "TowerBarrelElixirOfMightEvict"
+tt.powers.skill_warrior.sound_drink = "TowerBarrelElixirOfMightDrink"
+tt.powers.skill_warrior.show_rally = true
+tt.powers.skill_warrior.spawn_fx = "controller_soldier_tower_barrel_skill_warrior_spawn"
+tt.powers.skill_barrel = E:clone_c("power")
+tt.powers.skill_barrel.cooldown = b.skill_barrel.cooldown
+tt.powers.skill_barrel.price_base = b.skill_barrel.price[1]
+tt.powers.skill_barrel.price_inc = b.skill_barrel.price[2]
+tt.powers.skill_barrel.enc_icon = 24
+tt.powers.skill_barrel.attack_idx = 2
+tt.barrack.rally_range = b.rally_range
+tt.barrack.rally_radius = 25
+tt.barrack.soldier_type = "soldier_tower_barrel_skill_warrior"
+tt.barrack.max_soldiers = 1
+tt.barrack.respawn_offset = vec_2(0, 0)
+
+tt = E:register_t("controller_soldier_tower_barrel_skill_warrior_spawn")
+E:add_comps(tt, "pos", "render", "main_script")
+tt.render.sprites[1] = E:clone_c("sprite")
+tt.render.sprites[1].prefix = "barrel_tower_lvl4_tower_berserker"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].hidden = false
+tt.render.sprites[1].draw_order = 10
+tt.main_script.update = scripts.controller_soldier_tower_barrel_skill_warrior_spawn.update
+tt.berzerker_spawn_offset = vec_2(-35, -17)
+tt.berzerker_spawn_delay = fts(58)
+tt.spawn_fx = "fx_soldier_tower_barrel_skill_warrior_spawn"
+tt.berzerker_entity = "soldier_tower_barrel_skill_warrior"
+
+tt = E:register_t("soldier_tower_barrel_skill_warrior", "soldier_militia")
+E:add_comps(tt, "tween", "nav_grid")
+b = balance.towers.barrel.skill_warrior.entity
+tt.health_bar.offset = vec_2(0, 50)
+tt.health_bar.type = HEALTH_BAR_SIZE_MEDIUM
+tt.motion.max_speed = b.speed
+tt.info.i18n_key = "TOWER_BARREL_WARRIOR"
+tt.info.enc_icon = 12
+tt.info.portrait = "kr5_info_portraits_soldiers_0012"
+tt.info.random_name_format = nil
+tt.render.sprites[1].anchor = vec_2(0.5, 0.5)
+tt.render.sprites[1].prefix = "barrel_tower_berserker_unit"
+tt.render.sprites[1].name = "spawn"
+tt.render.sprites[1].draw_order = DO_SOLDIER_BIG
+tt.render.sprites[1].angles = {}
+tt.render.sprites[1].angles.walk = {"walk"}
+tt.sound_events.death = "HeroRaelynUltimateDeath"
+tt.unit.hit_offset = vec_2(0, 16)
+tt.unit.size = UNIT_SIZE_LARGE
+tt.unit.fade_time_after_death = tt.health.dead_lifetime
+tt.soldier.melee_slot_offset = vec_2(20, 0)
+tt.main_script.insert = scripts.soldier_tower_barrel_skill_warrior.insert
+tt.main_script.update = scripts.soldier_tower_barrel_skill_warrior.update
+tt.vis.bans = bor(F_SKELETON, F_CANNIBALIZE)
+tt.tween.props[1].keys = {{0, 0}, {fts(10), 255}}
+tt.tween.props[1].name = "alpha"
+tt.tween.remove = false
+tt.tween.reverse = false
+tt.tween.disabled = true
+tt.melee.attacks[1].vis_bans = bor(F_FLYING, F_CLIFF, F_WATER)
+tt.melee.attacks[1].vis_flags = F_BLOCK
+tt.melee.attacks[1].damage_min_config = b.damage_min
+tt.melee.attacks[1].damage_max_config = b.damage_max
+tt.melee.attacks[1].damage_type = b.damage_type
+tt.melee.attacks[1].hit_time = fts(8)
+tt.melee.attacks[1].hit_fx = "fx_soldier_tower_barrel_skill_warrior_hit"
+tt.melee.attacks[1].hit_offset = vec_2(30, 20)
+tt.melee.attacks[1].animation = "attack"
+tt.melee.attacks[1].shared_cooldown = true
+tt.melee.attacks[1].sound = "CommonNoSwordAttack"
+tt.melee.attacks[1].sound_args = {
+    delay = fts(8)
+}
+tt.melee.attacks[2] = table.deepclone(tt.melee.attacks[1])
+tt.melee.attacks[2].animation = "attack_2"
+tt.melee.attacks[2].chance = 0.5
+tt.melee.range = b.range
+tt.melee.cooldown = b.cooldown
+tt.floor_decal = "decal_soldier_tower_barrel_skill_warrior"
+tt.ui.click_rect = r(-20, -5, 40, 50)
+
+tt = E:register_t("bullet_tower_barrel_lvl4", "bomb")
+local b = balance.towers.barrel.basic_attack
+tt.bullet.damage_radius = b.damage_radius
+tt.bullet.flight_time = fts(25)
+tt.bullet.hit_fx = "fx_bullet_tower_barrel"
+tt.bullet.hit_decal = "decal_bullet_tower_barrel"
+tt.bullet.pop_chance = 0.5
+tt.bullet.particles_name = "ps_bullet_tower_barrel"
+tt.bullet.align_with_trajectory = false
+tt.bullet.mod = "mod_bullet_tower_barrel_lvl1"
+tt.bullet.rotation_speed = 0
+tt.sound_events.hit_water = nil
+tt.sound_events.hit = "TowerBarrelBasicAttackImpact"
+tt.sound_events.insert = nil
+tt.render.sprites[1].prefix = "barrel_tower_projectile"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].hidden = false
+tt.bullet.damage_max = b.damage_max[4]
+tt.bullet.damage_min = b.damage_min[4]
+tt.bullet.mod = "mod_bullet_tower_barrel_lvl4"
+
+tt = E:register_t("bullet_tower_barrel_skill_barrel", "bomb")
+local b = balance.towers.barrel.skill_barrel
+tt.bullet.damage_max = 0
+tt.bullet.damage_min = 0
+tt.bullet.hit_fx = nil
+tt.bullet.hit_decal = nil
+tt.bullet.hit_payload = "aura_bullet_tower_barrel_skill_barrel"
+tt.bullet.flight_time = fts(25)
+tt.bullet.pop_chance = 0
+tt.bullet.particles_name = "ps_bullet_tower_barrel_skill_barrel"
+tt.bullet.align_with_trajectory = false
+tt.bullet.rotation_speed = nil
+tt.sound_events.hit_water = nil
+tt.sound_events.insert = nil
+tt.sound_events.remove = "TowerBarrelBadBatchRattle"
+tt.render.sprites[1].name = "barrel_tower_lvl4_bad_barrel_projectile"
+tt.render.sprites[1].animated = false
+tt.render.sprites[1].hidden = false
+tt.render.sprites[1].r = 0
+
+tt = E:register_t("aura_bullet_tower_barrel_skill_barrel", "aura")
+E:add_comps(tt, "render", "tween")
+b = balance.towers.barrel.skill_barrel
+tt.aura.duration = b.duration
+tt.aura.duration_inc = nil
+tt.aura.radius = b.radius
+tt.aura.vis_bans = bor(F_FRIEND, F_FLYING)
+tt.aura.vis_flags = bor(F_AREA)
+-- 事实上还有 mod_tower_barrel_skill_barrel_attract，这里单独处理它，所以不写进 mods 里了
+tt.aura.mods = {"mod_tower_barrel_skill_barrel_poison", "mod_tower_barrel_skill_barrel_slow"}
+tt.aura.cycle_time = fts(10)
+tt.main_script.insert = scripts.aura_apply_mod.insert
+tt.main_script.update = scripts.aura_bullet_tower_barrel_skill_barrel.update
+tt.render.sprites[1].prefix = "barrel_tower_lvl4_bad_barrel_decal"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].loop = false
+tt.render.sprites[1].animated = true
+tt.render.sprites[1].z = Z_DECALS
+tt.render.sprites[2] = E:clone_c("sprite")
+tt.render.sprites[2].prefix = "barrel_tower_lvl4_bad_barrel"
+tt.render.sprites[2].name = "start"
+tt.render.sprites[2].animated = true
+tt.render.sprites[2].z = Z_OBJECTS
+tt.render.sprites[3] = E:clone_c("sprite")
+tt.render.sprites[3].prefix = "barrel_tower_lvl4_bad_barrel_bubbles_fx"
+tt.render.sprites[3].name = "loop"
+tt.render.sprites[3].animated = true
+tt.render.sprites[3].z = Z_EFFECTS
+tt.tween.props[1].name = "alpha"
+tt.tween.props[1].keys = {{0, 255}, {fts(18), 0}}
+tt.tween.props[1].sprite_id = 1
+tt.tween.props[2] = E:clone_c("tween_prop")
+tt.tween.props[2].name = "alpha"
+tt.tween.props[2].keys = {{0, 255}, {fts(18), 0}}
+tt.tween.props[2].sprite_id = 3
+tt.tween.remove = true
+tt.tween.disabled = true
+tt.explosion_decal = "decal_aura_bullet_tower_barrel_skill_barrel_explosion"
+tt.explosion_damage_min = b.explosion.damage_min
+tt.explosion_damage_max = b.explosion.damage_max
+tt.explosion_damage_type = b.explosion.damage_type
+tt.explosion_damage_radius = b.explosion.damage_radius
+tt.explosion_vis_bans = bor(F_FRIEND, F_FLYING)
+tt.explosion_vis_flags = bor(F_AREA)
+tt.explosion_sfx = "TowerBarrelBadBatchExplosion"
+tt.sid_barrel = 2
+
+tt = E:register_t("mod_tower_barrel_skill_barrel_attract", "mod_attract")
+tt.attract_radius = 50
+
+tt = E:register_t("mod_bullet_tower_barrel_lvl4", "modifier")
+b = balance.towers.barrel.basic_attack.debuff
+E:add_comps(tt, "render")
+tt.modifier.vis_flags = F_MOD
+tt.modifier.type = MOD_TYPE_POISON
+tt.modifier.resets_same = true
+tt.modifier.replaces_lower = true
+tt.main_script.insert = scripts.mod_bullet_tower_barrel.insert
+tt.main_script.remove = scripts.mod_bullet_tower_barrel.remove
+tt.main_script.update = scripts.mod_track_target.update
+tt.render.sprites[1].prefix = "barrel_tower_projectile_mod"
+tt.render.sprites[1].name = "idle"
+tt.render.sprites[1].draw_order = DO_MOD_FX
+tt.render.sprites[1].size_names = {"barrel_tower_projectile_mod", "barrel_tower_projectile_mod",
+                                   "barrel_tower_projectile_mod_big"}
+tt.modifier.level = 4
+tt.modifier.duration = b.duration[4]
+tt.damage_reduction = b.damage_reduction[4]
+
+tt = E:register_t("mod_tower_barrel_skill_barrel_poison", "mod_poison")
+b = balance.towers.barrel.skill_barrel.poison
+tt.dps.damage_every = b.every
+tt.dps.damage_min = b.damage_min
+tt.dps.damage_max = b.damage_max
+tt.dps.kill = true
+tt.modifier.duration = b.duration
+tt.render.sprites[1].draw_order = DO_MOD_FX
+
+tt = E:register_t("mod_tower_barrel_skill_barrel_slow", "mod_slow")
+b = balance.towers.barrel.skill_barrel.slow
+tt.slow.factor = b.factor
+tt.modifier.duration = b.duration
+
+-- 酒桶 END
