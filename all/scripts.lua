@@ -8863,7 +8863,7 @@ function scripts.mod_attract.insert(this, store)
     end
     -- _attract_pos 是 this.pos 的只读引用!
     target._attract_pos = this.pos
-    target._attract_radius = this.attract_radius * (0.2 + 0.8 * math.random())
+    target._attract_radius = this.attract_radius * (0.05 + 0.95 * math.random())
     if not target.main_script.origin_update then
         target.main_script.origin_update = target.main_script.update
     end
