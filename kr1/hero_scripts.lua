@@ -3096,7 +3096,7 @@ scripts.mod_van_helsing_relic = {
     update = function(this, store)
         local m = this.modifier
         local target = store.entities[m.target_id]
-        local factor = 1 - this.armor_reduce_factor
+        local factor = this.armor_reduce_factor
 
         if not target or not target.health or target.health.dead then
             -- block empty
@@ -3104,7 +3104,6 @@ scripts.mod_van_helsing_relic = {
             for _, n in pairs(this.remove_mods) do
                 SU.remove_modifiers(store, target, n)
             end
-            factor = factor * (1 - target.health.armor_resilience)
 
             if target.health.armor > 0 then
                 SU.armor_dec(target, target.health.armor * factor)
@@ -3290,13 +3289,7 @@ scripts.hero_van_helsing = {
 
                 if ready_to_use_skill(a, store) and not shot_ready() then
                     local target, targets = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
-                        a.shoot_time, a.vis_flags, a.vis_bans, function(e)
-                            local center_pos = P:node_pos(e.nav_path.pi, 1, e.nav_path.ni)
-                            local nearby = U.find_enemies_in_range(store, center_pos, 0, a.search_range, a.vis_flags,
-                                a.vis_bans)
-
-                            return nearby and #nearby >= a.search_min_count
-                        end)
+                        a.shoot_time, a.vis_flags, a.vis_bans)
 
                     if not target then
                         SU.delay_attack(store, a, 0.2)
@@ -3313,11 +3306,6 @@ scripts.hero_van_helsing = {
                         end
 
                         for i = 1, a.loops * 0.5 do
-                            log.paranoid("van_helsing multishoot target:%s (targets: %s)", target.id,
-                                table.concat(table.map(targets, function(k, v)
-                                    return v.id
-                                end), ","))
-
                             an, af, aidx = U.animation_name_facing_point(this, a.animations[2], target.pos)
 
                             U.animation_start(this, an, af, store.tick_ts, false)
@@ -10628,8 +10616,7 @@ function scripts.mod_lynn_weakening.insert(this, store)
     else
         this.armor_reduction = this.armor_reduction + 0.5 * this.magic_armor_reduction
     end
-    this.magic_armor_reduction = this.magic_armor_reduction * (1 - target.health.armor_resilience)
-    this.armor_reduction = this.armor_reduction * (1 - target.health.armor_resilience)
+
     SU.armor_dec(target, this.armor_reduction)
     SU.magic_armor_dec(target, this.magic_armor_reduction)
 

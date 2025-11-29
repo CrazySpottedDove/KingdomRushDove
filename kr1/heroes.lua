@@ -4504,7 +4504,6 @@ tt.timed_attacks.list[1].max_range = 160
 tt.timed_attacks.list[1].min_range = 0
 tt.timed_attacks.list[1].cooldown = 12
 tt.timed_attacks.list[1].search_range = 75
-tt.timed_attacks.list[1].search_min_count = 1
 tt.timed_attacks.list[2] = CC("bullet_attack")
 tt.timed_attacks.list[2].disabled = true
 tt.timed_attacks.list[2].animation = "silverbullet"

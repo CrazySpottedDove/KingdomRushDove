@@ -2040,7 +2040,7 @@ tt.explosion_sfx = "TowerBarrelBadBatchExplosion"
 tt.sid_barrel = 2
 
 tt = E:register_t("mod_tower_barrel_skill_barrel_attract", "mod_attract")
-tt.attract_radius = 50
+tt.attract_radius = 45
 
 tt = E:register_t("mod_bullet_tower_barrel_lvl4", "modifier")
 b = balance.towers.barrel.basic_attack.debuff

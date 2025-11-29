@@ -1232,15 +1232,10 @@ function sys.health:on_update(dt, ts, store)
                     damages_applied[damages_applied_count] = d
                     -- 减护甲
                 elseif band(d.damage_type, DAMAGE_ARMOR) ~= 0 then
-
-                    d.value = d.value * (1 - e.health.armor_resilience)
-
                     SU.armor_dec(e, d.value)
                     d.damage_result = bor(d.damage_result, DR_ARMOR)
                     -- 减法抗
                 elseif band(d.damage_type, DAMAGE_MAGICAL_ARMOR) ~= 0 then
-                    d.value = d.value * (1 - e.health.armor_resilience)
-
                     SU.magic_armor_dec(e, d.value)
                     d.damage_result = bor(d.damage_result, DR_MAGICAL_ARMOR)
                     -- 造成伤害

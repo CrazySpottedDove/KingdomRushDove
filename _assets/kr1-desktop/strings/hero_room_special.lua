@@ -60,6 +60,10 @@ H.default = {
     ["加工中"] = "加工中"
 }
 
+local function ss(key)
+    return s[key][max_lvl]
+end
+
 local function set_hero(hero_name)
     h = E:get_template(hero_name)
     H[hero_name] = {}
@@ -1137,10 +1141,24 @@ duration = E:get_template("mod_stun_burrow").modifier.duration
 map["裂地攻势"] = str("卡基诺斯可在海洋中自由穿梭。长距离移动时，卡基诺斯遁地，立刻提升",amount_3,"点移速，并每秒提高",amount,"点移速，最高提升",amount_2,"点。当卡基诺斯出土时，若提升的速度超过",amount_4,"，则在",radius,"范围内造成基于加速效果（最多两倍）倍数的",damage_str(),"与",duration,"秒眩晕效果。伤害与眩晕效果每",cooldown,"秒仅触发一次。")
 
 set_hero("hero_van_helsing")
-map["纯银子弹"] = str()
-map["致命连射"] = str()
+set_skill(h.hero.skills.silverbullet)
+cooldown = h.timed_attacks.list[2].cooldown
+get_damage(E:get_template("van_helsing_silverbullet").bullet)
+set_damage_value(s.damage[max_lvl])
+map["纯银子弹"] = str(cooldown_str(),"但丁射出一发纯银子弹，造成",damage_str(),"。该攻击优先攻击极接近驻守点的敌人，其次是折算物抗后生命值最高的敌人。对于狼人，该折算生命值翻倍，造成的伤害也翻倍。")
+set_skill(h.hero.skills.multishoot)
+count = s.loops[max_lvl]
+cooldown = h.timed_attacks.list[1].cooldown
+get_damage(E:get_template("van_helsing_shotgun").bullet)
+map["致命连射"] = str(cooldown_str(),"但丁使用手枪连射",count,"发，每发造成",damage_str(),"。射击目标死亡后，就近转火。")
+set_skill(h.hero.skills.relicofpower)
+factor = ss("armor_reduce_factor")
 map["遗迹之力"] = str()
+set_skill(h.hero.skills.holygrenade)
+duration = ss("silence_duration")
 map["圣水炸弹"] = str()
+set_skill(h.hero.skills.beaconoflight)
+factor=ss("inflicted_damage_factor")
 map["光明信标"] = str()
 
 set_hero("hero_dracolich")

@@ -279,7 +279,7 @@ end
 ---@param value number 增加值
 ---@return nil
 local function armor_inc(this, value)
-    this.health.armor_buff = this.health.armor_buff + value
+    this.health.armor_buff = this.health.armor_buff + value * (1 - this.health.armor_resilience)
     update_armor(this)
 end
 
@@ -296,7 +296,7 @@ end
 ---@param value number 增加值
 ---@return nil
 local function magic_armor_inc(this, value)
-    this.health.magic_armor_buff = this.health.magic_armor_buff + value
+    this.health.magic_armor_buff = this.health.magic_armor_buff + value * (1 - this.health.armor_resilience)
     update_magic_armor(this)
 end
 
