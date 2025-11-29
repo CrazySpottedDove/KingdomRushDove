@@ -1832,25 +1832,10 @@ function U.unlock_next_levels_in_ranges(unlock_data, levels, game_settings, gene
 
     for _, range in pairs(level_ranges) do
         if range[2] then
-            if range.list then
-                local prev
-
-                for i, v in ipairs(range) do
-                    if prev and levels[prev] and levels[prev][GAME_MODE_CAMPAIGN] and not levels[v] then
-                        sanitize_unlock(v)
-
-                        break
-                    end
-
-                    prev = v
-                end
-            else
-                for i = range[1], range[2] - 1 do
-                    if levels[i] and levels[i][GAME_MODE_CAMPAIGN] and not levels[i + 1] then
-                        sanitize_unlock(i + 1)
-
-                        break
-                    end
+            for i = range[1], range[2] - 1 do
+                if levels[i] and levels[i][GAME_MODE_CAMPAIGN] and not levels[i + 1] then
+                    sanitize_unlock(i + 1)
+                    break
                 end
             end
         end

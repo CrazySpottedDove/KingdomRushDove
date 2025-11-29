@@ -982,26 +982,26 @@ function screen_map:keypressed(key, isrepeat)
             self._test_unlocked_level = 1
 
             self.map_view:show_flags()
-        elseif key == "n" then
-            local cur = self._test_unlocked_level
-            local nex = U.find_next_level_in_ranges(GS.level_ranges, cur)
+        -- elseif key == "n" then
+        --     local cur = self._test_unlocked_level
+        --     local nex = U.find_next_level_in_ranges(GS.level_ranges, cur)
 
-            self.map_view:clear_flags()
-            reset_unlock_data()
+        --     self.map_view:clear_flags()
+        --     reset_unlock_data()
 
-            self.user_data.levels[cur] = {
-                2,
-                stars = 1
-            }
-            self.unlock_data.show_stars_level = cur
-            self.unlock_data.star_count_before = 0
+        --     self.user_data.levels[cur] = {
+        --         2,
+        --         stars = 1
+        --     }
+        --     self.unlock_data.show_stars_level = cur
+        --     self.unlock_data.star_count_before = 0
 
-            U.unlock_next_levels_in_ranges(self.unlock_data, self.user_data.levels, GS)
-            log.debug("test unlock level: %s", tul)
+        --     U.unlock_next_levels_in_ranges(self.unlock_data, self.user_data.levels, GS)
+        --     log.debug("test unlock level: %s", tul)
 
-            self._test_unlocked_level = nex
+        --     self._test_unlocked_level = nex
 
-            self.map_view:show_flags()
+        --     self.map_view:show_flags()
         end
 
         if self._test_unlocked_level > 1 then
