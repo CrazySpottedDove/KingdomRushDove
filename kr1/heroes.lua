@@ -6180,8 +6180,9 @@ tt.tween.props[1].keys = {{0, 255}, {0.5, 0}}
 tt = RT("mod_minotaur_daedalus", "modifier")
 AC(tt, "render")
 tt.modifier.duration = nil
-tt.main_script.queue = scripts.mod_minotaur_daedalus.queue
+tt.main_script.insert = scripts.mod_minotaur_daedalus.insert
 tt.main_script.update = scripts.mod_minotaur_daedalus.update
+tt.main_script.remove = scripts.mod_minotaur_daedalus.remove
 tt.render.sprites[1].prefix = "stun"
 tt.render.sprites[1].size_names = {"small", "big", "big"}
 tt.render.sprites[1].name = "loop"

@@ -8335,46 +8335,29 @@ end
 
 -- 卡兹 - 代达罗斯
 scripts.mod_minotaur_daedalus = {
-    queue = function(this, store, insertion)
+    insert = function(this, store)
         local target = store.entities[this.modifier.target_id]
-
         if not target then
-            return
+            return false
         end
-
-        if insertion then
-            target.vis._bans = target.vis.bans
-            target.vis.bans = F_ALL
-            target.health.ignore_damage = true
-
-            SU.stun_inc(target)
-
-            local s = this.render.sprites[1]
-            local m = this.modifier
-
-            if s.size_names then
-                s.prefix = s.prefix .. "_" .. s.size_names[target.unit.size]
-            end
-
-            if s.size_anchor then
-                s.anchor = s.size_anchors[target.unit.size]
-            end
-
-            if m.custom_offsets then
-                s.offset = m.custom_offsets[target.template_name] or m.custom_offsets.default
-            elseif m.use_mod_offset and target.unit.mod_offset then
-                s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
-            end
-        else
-            SU.stun_dec(target)
-
-            if target.vis._bans then
-                target.vis.bans = target.vis._bans
-                target.vis._bans = nil
-                target.health.ignore_damage = true
-            end
+        U.bans_add(target.vis, F_ALL)
+        SU.stun_inc(target)
+        local s = this.render.sprites[1]
+        local m = this.modifier
+        s.prefix = s.prefix .. "_" .. s.size_names[target.unit.size]
+        if target.unit.mod_offset then
+            s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
         end
-
+        return true
+    end,
+    remove = function(this, store)
+        local target = store.entities[this.modifier.target_id]
+        if not target then
+            return true
+        end
+        SU.stun_dec(target)
+        U.flags_remove(target.vis, F_ALL)
+        return true
     end,
     update = function(this, store)
         local m = this.modifier
@@ -8382,7 +8365,6 @@ scripts.mod_minotaur_daedalus = {
 
         if not target then
             queue_remove(store, this)
-
             return
         end
 
@@ -8429,12 +8411,6 @@ scripts.mod_minotaur_daedalus = {
         U.sprites_show(target)
 
         target.health_bar.hidden = nil
-        target.health.ignore_damage = nil
-
-        if target.vis._bans then
-            target.vis.bans = target.vis._bans
-            target.vis._bans = nil
-        end
 
         local s = this.render.sprites[1]
 
