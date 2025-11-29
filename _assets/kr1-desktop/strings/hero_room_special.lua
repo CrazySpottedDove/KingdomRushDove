@@ -9,7 +9,8 @@ local damage_type_map = {
     [DAMAGE_STAB] = "穿刺伤害",
     [DAMAGE_MAGICAL_EXPLOSION] = "法术爆炸伤害",
     [DAMAGE_ELECTRICAL] = "雷电伤害",
-    [DAMAGE_MIXED] = "物法混合伤害"
+    [DAMAGE_MIXED] = "物法混合伤害",
+    [DAMAGE_SHOT] = "枪击伤害",
 }
 local bit = require("bit")
 local band = bit.band
@@ -1065,8 +1066,8 @@ heal_factor = factor * 0.1
 e = E:get_template("mod_dwarf_champion_stun")
 duration = e.modifier.duration
 map["大地之力"] = str(cooldown_str(), "鲁林使用大地之力，身形变为", factor, "倍，恢复",
-    heal_factor * 100, "%最大生命值的生命，并挥动重锤，造成范围伤害与", duration, "秒眩晕，范围与伤害均为重锤技能的", factor,
-    "倍。")
+    heal_factor * 100, "%最大生命值的生命，并挥动重锤，造成范围伤害与", duration,
+    "秒眩晕，范围与伤害均为重锤技能的", factor, "倍。")
 cooldown = h.timed_attacks.list[2].cooldown
 duration = E:get_template("soldier_dwarf_reinforcement").reinforcement.duration
 map["矮人亲卫"] = str(cooldown_str(), "鲁林召唤可调集的矮人亲卫协助战斗，驻场", duration,
@@ -1082,33 +1083,43 @@ d[2].damage_min = s.run_damage_min[max_lvl]
 d[2].damage_max = s.run_damage_max[max_lvl]
 duration = s.duration[max_lvl]
 cooldown = h.timed_attacks.list[3].cooldown
-map["蛮牛冲撞"] = str(cooldown_str(),"卡兹刷新巨斧风暴的冷却，对首个离自己一定距离的敌人发动冲撞，使路径上所有敌人受到",damage_str(2),"，冲撞终点的敌人受到",damage_str(),"。上述所有敌人眩晕",duration,"秒。")
+map["蛮牛冲撞"] = str(cooldown_str(),
+    "卡兹刷新巨斧风暴的冷却，对首个离自己一定距离的敌人发动冲撞，使路径上所有敌人受到",
+    damage_str(2), "，冲撞终点的敌人受到", damage_str(), "。上述所有敌人眩晕", duration, "秒。")
 set_skill(h.hero.skills.bloodaxe)
 factor = s.damage_factor[max_lvl]
 chance = h.melee.attacks[2].chance
-map["英勇打击"] = str("卡兹每次攻击有",rate_str(chance),"概率发动英勇打击，该攻击无法闪避且能够破除护盾，造成",factor,"倍于普攻的真实伤害。")
+map["英勇打击"] = str("卡兹每次攻击有", rate_str(chance),
+    "概率发动英勇打击，该攻击无法闪避且能够破除护盾，造成", factor,
+    "倍于普攻的真实伤害。")
 set_skill(h.hero.skills.daedalusmaze)
 cooldown = h.timed_attacks.list[4].cooldown
 duration = s.duration[max_lvl]
 range = h.timed_attacks.list[4].min_range
-map["代达罗斯的迷宫"] = str(cooldown_str(),"卡兹刷新巨斧风暴和野牛怒吼的冷却，并将",range,"距离外最近的一名生命值大于卡兹当前生命值2倍的敌人传送至身前，使其眩晕",duration,"秒。")
+map["代达罗斯的迷宫"] = str(cooldown_str(), "卡兹刷新巨斧风暴和野牛怒吼的冷却，并将", range,
+    "距离外最近的一名生命值大于卡兹当前生命值2倍的敌人传送至身前，使其眩晕", duration,
+    "秒。")
 set_skill(h.hero.skills.roaroffury)
 cooldown = h.timed_attacks.list[2].cooldown
 factor = s.extra_damage[max_lvl]
-map["野牛怒吼"] = str(cooldown_str(),"卡兹一声怒吼鼓舞士气，使所有的防御塔伤害提升",factor*100,"%。")
+map["野牛怒吼"] = str(cooldown_str(), "卡兹一声怒吼鼓舞士气，使所有的防御塔伤害提升",
+    factor * 100, "%。")
 set_skill(h.hero.skills.doomspin)
 get_damage(h.timed_attacks.list[1])
 cooldown = h.timed_attacks.list[1].cooldown
 radius = h.timed_attacks.list[1].damage_radius
 d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
-map["巨斧风暴"] = str(cooldown_str(),"卡兹对",radius,"范围内敌人造成",damage_str(),"并恢复造成伤害总量25%的生命值。")
+map["巨斧风暴"] = str(cooldown_str(), "卡兹对", radius, "范围内敌人造成", damage_str(),
+    "并恢复造成伤害总量25%的生命值。")
 
 set_hero("hero_crab")
 set_skill(h.hero.skills.battlehardened)
 chance = s.chance[max_lvl]
 duration = h.invuln.duration
-map["战争强硬"] = str("每当卡基诺斯受到攻击，有",rate_str(chance),"触发战争强硬，使得接下来",duration,"秒内受到的攻击改为使卡基诺斯恢复一半伤害量的生命值。该效果持续期间无法重复触发。")
+map["战争强硬"] = str("每当卡基诺斯受到攻击，有", rate_str(chance),
+    "触发战争强硬，使得接下来", duration,
+    "秒内受到的攻击改为使卡基诺斯恢复一半伤害量的生命值。该效果持续期间无法重复触发。")
 set_skill(h.hero.skills.pincerattack)
 cooldown = h.timed_attacks.list[1].cooldown
 get_damage(h.timed_attacks.list[1])
@@ -1116,7 +1127,8 @@ d[1].damage_min = s.damage_min[max_lvl]
 d[1].damage_max = s.damage_max[max_lvl]
 local x = h.timed_attacks.list[1].damage_size.x
 local y = h.timed_attacks.list[1].damage_size.y
-map["折叠蟹钳"] = str(cooldown_str(),"卡基诺斯使用折叠蟹钳，对面前",x,"x",y,"区域内的敌人造成",damage_str(),"。")
+map["折叠蟹钳"] = str(cooldown_str(), "卡基诺斯使用折叠蟹钳，对面前", x, "x", y,
+    "区域内的敌人造成", damage_str(), "。")
 set_skill(h.hero.skills.shouldercannon)
 get_damage(E:get_template("crab_water_bomb").bullet)
 set_damage_value(s.damage[max_lvl])
@@ -1127,7 +1139,8 @@ for _, inc in pairs(s.radius_inc) do
     radius = radius + inc
 end
 cooldown = h.ranged.attacks[1].cooldown
-map["水炮"] = str(cooldown_str(),"卡基诺斯发射水炮，对",radius,"范围内敌人造成",damage_str(),"与持续",duration,"秒的",factor*100,"%减速效果。")
+map["水炮"] = str(cooldown_str(), "卡基诺斯发射水炮，对", radius, "范围内敌人造成", damage_str(),
+    "与持续", duration, "秒的", factor * 100, "%减速效果。")
 set_skill(h.hero.skills.burrow)
 amount = s.extra_speed[max_lvl]
 d[1].damage_type = DAMAGE_EXPLOSION
@@ -1138,28 +1151,41 @@ cooldown = h.burrow.cooldown
 radius = h.burrow.radius
 local amount_4 = h.burrow.stun_speed - h.motion.max_speed
 duration = E:get_template("mod_stun_burrow").modifier.duration
-map["裂地攻势"] = str("卡基诺斯可在海洋中自由穿梭。长距离移动时，卡基诺斯遁地，立刻提升",amount_3,"点移速，并每秒提高",amount,"点移速，最高提升",amount_2,"点。当卡基诺斯出土时，若提升的速度超过",amount_4,"，则在",radius,"范围内造成基于加速效果（最多两倍）倍数的",damage_str(),"与",duration,"秒眩晕效果。伤害与眩晕效果每",cooldown,"秒仅触发一次。")
+map["裂地攻势"] = str(
+    "卡基诺斯可在海洋中自由穿梭。长距离移动时，卡基诺斯遁地，立刻提升", amount_3,
+    "点移速，并每秒提高", amount, "点移速，最高提升", amount_2,
+    "点。当卡基诺斯出土时，若提升的速度超过", amount_4, "，则在", radius,
+    "范围内造成基于加速效果（最多两倍）倍数的", damage_str(), "与", duration,
+    "秒眩晕效果。伤害与眩晕效果每", cooldown, "秒仅触发一次。")
 
 set_hero("hero_van_helsing")
 set_skill(h.hero.skills.silverbullet)
 cooldown = h.timed_attacks.list[2].cooldown
 get_damage(E:get_template("van_helsing_silverbullet").bullet)
 set_damage_value(s.damage[max_lvl])
-map["纯银子弹"] = str(cooldown_str(),"但丁射出一发纯银子弹，造成",damage_str(),"。该攻击优先攻击极接近驻守点的敌人，其次是折算物抗后生命值最高的敌人。对于狼人，该折算生命值翻倍，造成的伤害也翻倍。")
+map["纯银子弹"] = str(cooldown_str(), "但丁射出一发纯银子弹，造成", damage_str(),
+    "。该攻击优先攻击极接近驻守点的敌人，其次是折算物抗后生命值最高的敌人。对于狼人，该折算生命值翻倍，造成的伤害也翻倍。")
 set_skill(h.hero.skills.multishoot)
 count = s.loops[max_lvl]
 cooldown = h.timed_attacks.list[1].cooldown
 get_damage(E:get_template("van_helsing_shotgun").bullet)
-map["致命连射"] = str(cooldown_str(),"但丁使用手枪连射",count,"发，每发造成",damage_str(),"。射击目标死亡后，就近转火。")
+map["致命连射"] = str(cooldown_str(), "但丁使用手枪连射", count, "发，每发造成", damage_str(),
+    "。射击目标死亡后，就近转火。")
 set_skill(h.hero.skills.relicofpower)
 factor = ss("armor_reduce_factor")
-map["遗迹之力"] = str()
+cooldown = h.melee.attacks[2].cooldown
+map["遗迹之力"] = str(cooldown_str(), "但丁对面前敌人使用遗迹之力，削减他", factor * 100,
+    "%的双抗。该技能只会对生命高于500，且护甲/法抗高于0的敌人使用。")
 set_skill(h.hero.skills.holygrenade)
 duration = ss("silence_duration")
-map["圣水炸弹"] = str()
+radius = E:get_template("van_helsing_grenade").bullet.damage_radius
+cooldown = h.timed_attacks.list[3].cooldown
+map["圣水炸弹"] = str(cooldown_str(), "但丁对可沉默单位投掷一枚圣水炸弹，在", radius,
+    "范围内造成沉默效果，持续", duration, "秒。")
 set_skill(h.hero.skills.beaconoflight)
-factor=ss("inflicted_damage_factor")
-map["光明信标"] = str()
+factor = ss("inflicted_damage_factor")
+map["光明信标"] = str("但丁的光明信标鼓舞着友军，使身边友军的伤害乘以", factor,
+    "。但丁死亡后，魂灵依旧留在战场。")
 
 set_hero("hero_dracolich")
 map["脊雨"] = str()
