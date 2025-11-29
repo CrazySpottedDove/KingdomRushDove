@@ -1,12 +1,12 @@
 ﻿-- chunkname: @./all/shop_views.lua
 
-local log = require("klua.log"):new("shop_views")
+local log = require("lib.klua.log"):new("shop_views")
 local class = require("middleclass")
 local signal = require("hump.signal")
 local I = require("klove.image_db")
 local S = require("sound_db")
 local PS = require("platform_services")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
 local storage = require("storage")
 local iap_data = require("data.iap_data")

@@ -1,11 +1,11 @@
 ﻿-- chunkname: @./all/storage.lua
-local log = require("klua.log"):new("storage")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("storage")
+local km = require("lib.klua.macros")
 local FS = love.filesystem
-local persistence = require("klua.persistence")
+local persistence = require("lib.klua.persistence")
 local signal = require("hump.signal")
 
-require("klua.string")
+require("lib.klua.string")
 
 local GS = require("game_settings")
 local features = require("features")
@@ -519,7 +519,7 @@ function storage:get_best_slot(slot_a, slot_b)
 end
 
 function storage:import_plist(filename)
-    local plist = require("klua.plist")
+    local plist = require("lib.klua.plist")
     local storage_mappings = require("storage_mappings")
     local global = storage:load_global()
 

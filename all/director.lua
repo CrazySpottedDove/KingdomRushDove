@@ -1,13 +1,13 @@
 ﻿-- chunkname: @./all/director.lua
-local log = require("klua.log"):new("director")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("director")
+local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 
-require("klua.dump")
+require("lib.klua.dump")
 
 local features = require("features")
 local i18n = require("i18n")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local I = require("klove.image_db")
 local F = require("klove.font_db")
 local SH = require("klove.shader_db")

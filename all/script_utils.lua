@@ -1,10 +1,10 @@
 ﻿-- chunkname: @./all/script_utils.lua
-local log = require("klua.log"):new("script_utils")
+local log = require("lib.klua.log"):new("script_utils")
 local log_xp = log.xp or log:new("xp")
 
-require("klua.table")
+require("lib.klua.table")
 
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 local AC = require("achievements")
 local E = require("entity_db")
@@ -15,7 +15,7 @@ local S = require("sound_db")
 local U = require("utils")
 local LU = require("level_utils")
 local UP = require("upgrades")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local bit = require("bit")
 local band = bit.band
 local bor = bit.bor

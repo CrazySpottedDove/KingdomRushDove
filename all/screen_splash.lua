@@ -1,7 +1,7 @@
 ﻿-- chunkname: @./all/screen_splash.lua
 
-local log = require("klua.log"):new("screen_splash")
-local V = require("klua.vector")
+local log = require("lib.klua.log"):new("screen_splash")
+local V = require("lib.klua.vector")
 local F = require("klove.font_db")
 local FS = love.filesystem
 local SU = require("screen_utils")

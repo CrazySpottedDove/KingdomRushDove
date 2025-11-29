@@ -4,10 +4,10 @@ if DEBUG then
     package.loaded.gg_views_custom = nil
 end
 
-local log = require("klua.log"):new("game_gui")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("game_gui")
+local km = require("lib.klua.macros")
 
-require("klua.table")
+require("lib.klua.table")
 require("klove.kui")
 
 local kui_db = require("klove.kui_db")
@@ -25,7 +25,7 @@ local S = require("sound_db")
 local SU = require("screen_utils")
 local E = require("entity_db")
 local U = require("utils")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
 local r = V.r
 local P = require("path_db")

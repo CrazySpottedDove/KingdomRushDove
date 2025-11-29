@@ -1,8 +1,8 @@
 ﻿-- chunkname: @./all/platform_services_ads.lua
 
-local log = require("klua.log"):new("platform_services_ads")
+local log = require("lib.klua.log"):new("platform_services_ads")
 
-require("klua.table")
+require("lib.klua.table")
 
 local signal = require("hump.signal")
 local storage = require("storage")

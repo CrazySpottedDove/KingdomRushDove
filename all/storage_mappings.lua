@@ -1,8 +1,8 @@
 ﻿-- chunkname: @./all/storage_mappings.lua
 
-local log = require("klua.log"):new("storage_mappings")
+local log = require("lib.klua.log"):new("storage_mappings")
 
-require("klua.string")
+require("lib.klua.string")
 
 local bit = require("bit")
 local GS = require("game_settings")

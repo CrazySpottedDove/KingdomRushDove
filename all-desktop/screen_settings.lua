@@ -1,12 +1,12 @@
 ﻿-- chunkname: @./all-desktop/screen_settings.lua
-local log = require("klua.log"):new("game_gui")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("game_gui")
+local km = require("lib.klua.macros")
 
-require("klua.table")
+require("lib.klua.table")
 
 local class = require("middleclass")
 local G = love.graphics
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
 local F = require("klove.font_db")
 

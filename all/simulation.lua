@@ -1,7 +1,7 @@
 ﻿-- chunkname: @./all/simulation.lua
 
-local log = require("klua.log"):new("simulation")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("simulation")
+local km = require("lib.klua.macros")
 local S = require("systems")
 
 require("constants")

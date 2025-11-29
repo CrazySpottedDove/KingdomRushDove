@@ -1,8 +1,8 @@
 ﻿-- chunkname: @./all/main_utils.lua
 
-local log = require("klua.log")
+local log = require("lib.klua.log")
 
-require("klua.table")
+require("lib.klua.table")
 
 local i18n = require("i18n")
 local mu = {}
@@ -347,7 +347,7 @@ function mu.start_debugger(params)
 			m.coro()
 			m.start()
 		elseif params.repl then
-			require("klua.repl")
+			require("lib.klua.repl")
 
 			local repl_port, repl_address
 

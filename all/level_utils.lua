@@ -1,12 +1,12 @@
 ﻿-- chunkname: @./all/level_utils.lua
 
-local log = require("klua.log"):new("level_utils")
+local log = require("lib.klua.log"):new("level_utils")
 
-require("klua.table")
+require("lib.klua.table")
 
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local signal = require("hump.signal")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local E = require("entity_db")
 local GS = require("game_settings")
 local I = require("klove.image_db")
@@ -437,7 +437,7 @@ function LU.insert_hero(store, name, pos, force_full_level)
         end
         hero.unit.damage_factor = store.config.hero_damage_multiplier * hero.unit.damage_factor
         hero.health.damage_factor = store.config.hero_health_damage_multiplier * hero.health.damage_factor
-        
+
         LU.queue_insert(store, hero)
         signal.emit("hero-added", hero)
     end

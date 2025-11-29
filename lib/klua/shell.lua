@@ -1,10 +1,10 @@
 ﻿-- chunkname: @./lib/klua/shell.lua
 
-local klog = require("klua.log"):new("klog.shell")
+local klog = require("lib.klua.log"):new("klog.shell")
 local lfs = require("lfs")
 
-require("klua.table")
-require("klua.string")
+require("lib.klua.table")
+require("lib.klua.string")
 
 local shell = {}
 

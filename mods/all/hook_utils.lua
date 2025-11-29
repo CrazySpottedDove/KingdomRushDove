@@ -1,5 +1,5 @@
 -- chunkname: @./mods/all/hook_utils.lua
-local log = require("klua.log"):new("hook_utils")
+local log = require("lib.klua.log"):new("hook_utils")
 local IS_KR5 = KR_GAME == "kr5"
 local serpent = require("serpent")
 

@@ -1,5 +1,5 @@
 ﻿-- chunkname: @./all-desktop/screen_map.lua
-local log = require("klua.log"):new("screen_map")
+local log = require("lib.klua.log"):new("screen_map")
 local class = require("middleclass")
 local DI = require("difficulty")
 local E = require("entity_db")
@@ -14,9 +14,9 @@ local SH = require("klove.shader_db")
 local SU = require("screen_utils")
 local U = require("utils")
 local UPGR = require("upgrades")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local i18n = require("i18n")
 local storage = require("storage")
 local signal = require("hump.signal")

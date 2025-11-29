@@ -1,12 +1,12 @@
 ﻿-- chunkname: @./all/marketing.lua
 
-local log = require("klua.log"):new("marketing")
+local log = require("lib.klua.log"):new("marketing")
 local PS = require("platform_services")
 local RC = require("remote_config")
 local storage = require("storage")
 local signal = require("hump.signal")
 
-require("klua.table")
+require("lib.klua.table")
 require("constants")
 
 marketing = {}

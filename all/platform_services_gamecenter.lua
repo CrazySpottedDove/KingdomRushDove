@@ -1,8 +1,8 @@
 ﻿-- chunkname: @./all/platform_services_gamecenter.lua
 
-require("klua.string")
+require("lib.klua.string")
 
-local log = require("klua.log"):new("platform_services_gamecenter")
+local log = require("lib.klua.log"):new("platform_services_gamecenter")
 local PSU = require("platform_services_utils")
 local signal = require("hump.signal")
 local gamecenter = {}

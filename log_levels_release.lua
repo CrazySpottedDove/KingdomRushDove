@@ -1,5 +1,5 @@
 ﻿-- chunkname: @./log_levels_release.lua
 
-log = require("klua.log")
+log = require("lib.klua.log")
 
 return {}

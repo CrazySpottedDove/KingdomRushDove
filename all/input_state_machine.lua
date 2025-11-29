@@ -1,8 +1,8 @@
 ﻿-- chunkname: @./all/input_state_machine.lua
 
-local log = require("klua.log"):new("ism")
+local log = require("lib.klua.log"):new("ism")
 local J = love.joystick
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local storage = require("storage")
 local ism = {}
 

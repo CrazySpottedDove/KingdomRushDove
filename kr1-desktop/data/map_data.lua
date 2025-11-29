@@ -1,5 +1,5 @@
 ﻿-- chunkname: @./kr1-desktop/data/map_data.lua
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
 local r = V.r
 local deco_fn = require("map_decos_functions")

@@ -33,7 +33,7 @@ local ceil = math.ceil
 local floor = math.floor
 local max = math.max
 local min = math.min
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
 local vclone = V.vclone
 

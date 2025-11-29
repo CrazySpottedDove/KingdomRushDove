@@ -1,7 +1,7 @@
 ﻿-- chunkname: @./all/debug_view_editor.lua
 
-local log = require("klua.log"):new("debug_view_editor")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("debug_view_editor")
+local km = require("lib.klua.macros")
 
 dbe = {}
 

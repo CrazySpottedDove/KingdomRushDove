@@ -1,10 +1,10 @@
 ﻿-- chunkname: @./all/platform_services_firebase_a.lua
 
-local log = require("klua.log"):new("platform_services_firebase_a")
+local log = require("lib.klua.log"):new("platform_services_firebase_a")
 local signal = require("hump.signal")
 
-require("klua.table")
-require("klua.string")
+require("lib.klua.table")
+require("lib.klua.string")
 require("constants")
 
 local fba = {}

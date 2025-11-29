@@ -1,14 +1,14 @@
 ﻿-- chunkname: @./all/utils.lua
-local log = require("klua.log"):new("utils")
+local log = require("lib.klua.log"):new("utils")
 
-require("klua.table")
+require("lib.klua.table")
 
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local bit = require("bit")
 local bor = bit.bor
 local band = bit.band
 local bnot = bit.bnot
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local P = require("path_db")
 
 require("constants")

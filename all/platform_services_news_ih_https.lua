@@ -1,9 +1,9 @@
 ﻿-- chunkname: @./all/platform_services_news_ih_https.lua
 
-local log = require("klua.log"):new("platform_services_news_ih_https")
+local log = require("lib.klua.log"):new("platform_services_news_ih_https")
 
-require("klua.table")
-require("klua.string")
+require("lib.klua.table")
+require("lib.klua.string")
 
 local signal = require("hump.signal")
 local PS = require("platform_services")

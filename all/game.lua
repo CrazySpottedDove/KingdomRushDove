@@ -1,6 +1,6 @@
 ﻿-- chunkname: @./all/game.lua
-local log = require("klua.log"):new("game")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("game")
+local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 local V = require("hump.vector-light")
 local U = require("utils")

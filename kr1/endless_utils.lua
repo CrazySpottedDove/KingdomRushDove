@@ -10,7 +10,7 @@ local enemy_upgrade_max_levels = EL.enemy_upgrade_max_levels
 local endless_template = EL.template
 local SU = require("script_utils")
 local storage = require("storage")
-local log = require("klua.log"):new("endless_utils")
+local log = require("lib.klua.log"):new("endless_utils")
 local GR = require("grid_db")
 local S = require("sound_db")
 local P = require("path_db")
@@ -23,7 +23,7 @@ local function vv(x)
         y = x
     }
 end
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
