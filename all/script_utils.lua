@@ -1769,7 +1769,6 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
     end
     for i = 1, attack.loops do
         if attack.interrupt_loop_on_dead_target and target.health.dead then
-            log.debug("interrupt_loop_on_dead_target")
             goto label_70_1
         end
         local loop_ts = store.tick_ts
@@ -1783,7 +1782,6 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
                     goto label_70_0
                 end
                 if attack.interrupt_on_dead_target and target.health.dead then
-                    log.debug("interrupt_on_dead_target")
                     goto label_70_1
                 end
                 if this.health.dead or this.nav_rally and this.nav_rally.new then

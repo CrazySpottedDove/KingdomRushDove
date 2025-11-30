@@ -2116,31 +2116,8 @@ return {
             iron = {}
         }
     },
+    -- encyclopedia/tower
     tower_data = {{
-        --     name = "tower_archer_1"
-        -- }, {
-        --     name = "tower_barrack_1"
-        -- }, {
-        --     name = "tower_mage_1"
-        -- }, {
-        --     name = "tower_engineer_1"
-        -- }, {
-        --     name = "tower_archer_2"
-        -- }, {
-        --     name = "tower_barrack_2"
-        -- }, {
-        --     name = "tower_mage_2"
-        -- }, {
-        --     name = "tower_engineer_2"
-        -- }, {
-        --     name = "tower_archer_3"
-        -- }, {
-        --     name = "tower_barrack_3"
-        -- }, {
-        --     name = "tower_mage_3"
-        -- }, {
-        --     name = "tower_engineer_3"
-        -- },{
         name = "tower_ranger",
         icon = 13,
         detail_icon = 13

@@ -95,7 +95,6 @@ for _, range in ipairs(GS.level_ranges3) do
     end
 end
 
-
 GS.default_hero = nil
 GS.hero_xp_thresholds = {300, 900, 2000, 4000, 8000, 12000, 16000, 20000, 26000}
 GS.hero_xp_ephemeral = true
