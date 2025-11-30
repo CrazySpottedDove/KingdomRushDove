@@ -571,8 +571,8 @@ function scripts.enemy_basic.insert(this, store)
 
             if a.cooldown == 0 then
                 local e = E:create_entity(a.name)
-
-                e.pos = V.vclone(this.pos)
+                e.pos.x = this.pos.x
+                e.pos.y = this.pos.y
                 e.aura.level = this.unit.level
                 e.aura.source_id = this.id
                 e.aura.ts = store.tick_ts
@@ -999,7 +999,8 @@ function scripts.delayed_spawn.update(this, store)
     local e = this.payload
 
     e.nav_path = table.deepclone(this.nav_path)
-    e.pos = V.vclone(this.pos)
+    e.pos.x = this.pos.x
+    e.pos.y = this.pos.y
 
     if this.motion then
         e.motion.forced_waypoint = this.motion.forced_waypoint
@@ -1250,8 +1251,8 @@ function scripts.soldier_barrack.insert(this, store)
         for _, a in pairs(this.auras.list) do
             if a.cooldown == 0 then
                 local e = E:create_entity(a.name)
-
-                e.pos = V.vclone(this.pos)
+                e.pos.x = this.pos.x
+                e.pos.y = this.pos.y
                 e.aura.level = this.unit.level
                 e.aura.source_id = this.id
                 e.aura.ts = store.tick_ts
@@ -1266,14 +1267,17 @@ function scripts.soldier_barrack.insert(this, store)
         local m = E:create_entity(mod_name)
         m.modifier.target_id = this.id
         m.modifier.source_id = this.id
-        m.pos = V.vclone(this.pos)
+        m.pos.x = this.pos.x
+        m.pos.y = this.pos.y
+
         queue_insert(store, m)
     end
 
     if this.track_damage and this.track_damage.mod then
         local e = E:create_entity(this.track_damage.mod)
 
-        e.pos = V.vclone(this.pos)
+        e.pos.x = this.pos.x
+        e.pos.y = this.pos.y
         e.modifier.target_id = this.id
         e.modifier.source_id = this.id
 
@@ -1570,49 +1574,33 @@ function scripts.tower_archer.update(this, store)
                     this.render.sprites[shooter_sid].flip_x = af
 
                     local bullet = E:create_entity(a.bullet)
-
-                    bullet.bullet.damage_factor = this.tower.damage_factor
+                    local b = bullet.bullet
+                    b.damage_factor = this.tower.damage_factor
                     bullet.pos.x, bullet.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
-                    bullet.bullet.from = V.vclone(bullet.pos)
-                    bullet.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
-                    bullet.bullet.target_id = enemy.id
+                    b.from.x = bullet.pos.x
+                    b.from.y = bullet.pos.y
+                    b.to.x = enemy.pos.x + enemy.unit.hit_offset.x
+                    b.to.y = enemy.pos.y + enemy.unit.hit_offset.y
+                    b.target_id = enemy.id
 
-                    if bullet.bullet.flight_time_min and bullet.bullet.flight_time_factor then
-                        local dist = V.dist(bullet.bullet.to.x, bullet.bullet.to.y, bullet.bullet.from.x,
-                            bullet.bullet.from.y)
+                    if b.flight_time_min and b.flight_time_factor then
+                        local dist = V.dist(b.to.x, b.to.y, b.from.x,
+                            b.from.y)
 
-                        bullet.bullet.flight_time = bullet.bullet.flight_time_min + dist / at.range *
-                                                        bullet.bullet.flight_time_factor
+                        b.flight_time = b.flight_time_min + dist / at.range *
+                                                        b.flight_time_factor
                     end
-
-                    -- local u = UP:get_upgrade("archer_el_obsidian_heads")
-
-                    -- if u and enemy.health and enemy.health.armor == 0 then
-                    --     bullet.bullet.damage_min = bullet.bullet.damage_max
-                    -- end
 
                     local u = UP:get_upgrade("archer_precision")
 
                     if u and math.random() < u.chance then
-                        bullet.bullet.damage_min = bullet.bullet.damage_min * u.damage_factor
-                        bullet.bullet.damage_max = bullet.bullet.damage_max * u.damage_factor
-                        bullet.bullet.pop = {"pop_crit"}
-                        bullet.bullet.pop_conds = DR_DAMAGE
+                        b.damage_min = b.damage_min * u.damage_factor
+                        b.damage_max = b.damage_max * u.damage_factor
+                        b.pop = {"pop_crit"}
+                        b.pop_conds = DR_DAMAGE
                     end
 
                     queue_insert(store, bullet)
-
-                    -- u = UP:get_upgrade("archer_twin_shot")
-
-                    -- if u and math.random() < u.chance then
-                    --     local b2 = E:clone_entity(bullet)
-
-                    --     b2.bullet.flight_time = b2.bullet.flight_time - 1 / FPS
-
-                    --     queue_insert(store, b2)
-
-                    --     bullet.bullet.flight_time = bullet.bullet.flight_time + 1 / FPS
-                    -- end
                 end
 
                 while not U.animation_finished(this, shooter_sid) do
@@ -1671,14 +1659,12 @@ function scripts.tower_mage.update(this, store)
     aa.ts = store.tick_ts
 
     while true do
-        local enemy, enemies
-
         if this.tower.blocked then
             -- block empty
         elseif store.tick_ts - aa.ts <= aa.cooldown * this.tower.cooldown_factor then
             -- block empty
         else
-            enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags, aa.vis_bans)
+            local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags, aa.vis_bans)
 
             if enemy then
                 aa.ts = store.tick_ts
@@ -1703,23 +1689,23 @@ function scripts.tower_mage.update(this, store)
 
                     local in_range = U.is_inside_ellipse(tpos(this), enemy.pos, a.range * 1.1)
                     local bullet = E:create_entity(aa.bullet)
-
-                    bullet.bullet.shot_index = i
-                    bullet.bullet.damage_factor = this.tower.damage_factor
+                    local b = bullet.bullet
+                    b.shot_index = i
+                    b.damage_factor = this.tower.damage_factor
 
                     if in_range then
-                        bullet.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x,
-                            enemy.pos.y + enemy.unit.hit_offset.y)
-                        bullet.bullet.target_id = enemy.id
+                        b.to.x = enemy.pos.x + enemy.unit.hit_offset.x
+                        b.to.y = enemy.pos.y + enemy.unit.hit_offset.y
+                        b.target_id = enemy.id
                     else
-                        bullet.bullet.to = last_target_pos
-                        bullet.bullet.target_id = nil
+                        b.to = last_target_pos
+                        b.target_id = nil
                     end
 
                     local start_offset = aa.bullet_start_offset[ai]
-
-                    bullet.bullet.from = V.v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
-                    bullet.pos = V.vclone(bullet.bullet.from)
+                    b.from.x = this.pos.x + start_offset.x
+                    b.from.y = this.pos.y + start_offset.y
+                    bullet.pos.x, bullet.pos.y = b.from.x, b.from.y
 
                     queue_insert(store, bullet)
                 end

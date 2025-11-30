@@ -702,7 +702,8 @@ end
 ---@param e table 实体
 ---@param pos table 目标位置 {x, y}
 function U.set_destination(e, pos)
-    e.motion.dest = V.vclone(pos)
+    e.motion.dest.x = pos.x
+    e.motion.dest.y = pos.y
     e.motion.arrived = false
 end
 
