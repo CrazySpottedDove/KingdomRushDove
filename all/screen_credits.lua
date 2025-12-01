@@ -1,11 +1,11 @@
 ﻿-- chunkname: @./all/screen_credits.lua
 
-local log = require("klua.log"):new("screen_slots")
+local log = require("lib.klua.log"):new("screen_slots")
 local class = require("middleclass")
 local F = require("klove.font_db")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local timer = require("hump.timer").new()
 local S = require("sound_db")
 local SU = require("screen_utils")

@@ -1,6 +1,6 @@
 ﻿-- chunkname: @./all/debug_tools.lua
 
-local log = require("klua.log"):new("debug_tools")
+local log = require("lib.klua.log"):new("debug_tools")
 
 log.level = log.DEBUG_LEVEL
 dd = {}

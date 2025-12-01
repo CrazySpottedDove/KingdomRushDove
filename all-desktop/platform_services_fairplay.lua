@@ -1,6 +1,6 @@
 ﻿-- chunkname: @./all-desktop/platform_services_fairplay.lua
 
-local log = require("klua.log"):new("platform_services_fairplay")
+local log = require("lib.klua.log"):new("platform_services_fairplay")
 local PSU = require("platform_services_utils")
 local signal = require("hump.signal")
 local srv = {}

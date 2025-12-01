@@ -1,6 +1,6 @@
 -- chunkname: @./mods/mod_main.lua
 
-local log = require("klua.log"):new("mod_main")
+local log = require("lib.klua.log"):new("mod_main")
 local IS_KR5 = KR_GAME == "kr5"
 local FS = love.filesystem
 

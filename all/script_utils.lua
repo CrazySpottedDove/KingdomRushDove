@@ -1,10 +1,10 @@
 ﻿-- chunkname: @./all/script_utils.lua
-local log = require("klua.log"):new("script_utils")
+local log = require("lib.klua.log"):new("script_utils")
 local log_xp = log.xp or log:new("xp")
 
-require("klua.table")
+require("lib.klua.table")
 
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 local AC = require("achievements")
 local E = require("entity_db")
@@ -15,7 +15,7 @@ local S = require("sound_db")
 local U = require("utils")
 local LU = require("level_utils")
 local UP = require("upgrades")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
@@ -279,7 +279,7 @@ end
 ---@param value number 增加值
 ---@return nil
 local function armor_inc(this, value)
-    this.health.armor_buff = this.health.armor_buff + value
+    this.health.armor_buff = this.health.armor_buff + value * (1 - this.health.armor_resilience)
     update_armor(this)
 end
 
@@ -296,7 +296,7 @@ end
 ---@param value number 增加值
 ---@return nil
 local function magic_armor_inc(this, value)
-    this.health.magic_armor_buff = this.health.magic_armor_buff + value
+    this.health.magic_armor_buff = this.health.magic_armor_buff + value * (1 - this.health.armor_resilience)
     update_magic_armor(this)
 end
 
@@ -1769,7 +1769,6 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
     end
     for i = 1, attack.loops do
         if attack.interrupt_loop_on_dead_target and target.health.dead then
-            log.debug("interrupt_loop_on_dead_target")
             goto label_70_1
         end
         local loop_ts = store.tick_ts
@@ -1783,7 +1782,6 @@ local function y_soldier_do_loopable_melee_attack(store, this, target, attack)
                     goto label_70_0
                 end
                 if attack.interrupt_on_dead_target and target.health.dead then
-                    log.debug("interrupt_on_dead_target")
                     goto label_70_1
                 end
                 if this.health.dead or this.nav_rally and this.nav_rally.new then

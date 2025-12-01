@@ -1,10 +1,10 @@
 ﻿-- chunkname: @./all/platform_services_iap_premium.lua
 
-local log = require("klua.log"):new("platform_services_iap_premium")
+local log = require("lib.klua.log"):new("platform_services_iap_premium")
 
 log.level = log.DEBUG_LEVEL
 
-require("klua.table")
+require("lib.klua.table")
 
 local signal = require("hump.signal")
 local storage = require("storage")

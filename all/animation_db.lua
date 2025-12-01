@@ -1,9 +1,9 @@
 ﻿-- chunkname: @./all/animation_db.lua
-local log = require("klua.log"):new("animation_db")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("animation_db")
+local km = require("lib.klua.macros")
 
-require("klua.table")
-require("klua.dump")
+require("lib.klua.table")
+require("lib.klua.dump")
 
 local G = love.graphics
 local FS = love.filesystem

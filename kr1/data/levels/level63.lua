@@ -1,13 +1,13 @@
 ﻿-- chunkname: @./kr3/data/levels/level15.lua
 
-local log = require("klua.log"):new("level15")
+local log = require("lib.klua.log"):new("level15")
 local signal = require("hump.signal")
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local E = require("entity_db")
 local S = require("sound_db")
 local U = require("utils")
 local LU = require("level_utils")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local P = require("path_db")
 local SU = require("script_utils")
 

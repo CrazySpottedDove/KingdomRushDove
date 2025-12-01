@@ -1,7 +1,7 @@
 ﻿-- chunkname: @./all/entity_db.lua
-local log = require("klua.log"):new("entity_db")
+local log = require("lib.klua.log"):new("entity_db")
 
-require("klua.table")
+require("lib.klua.table")
 
 local copy = table.deepclone
 local entity_db = {}
@@ -643,7 +643,7 @@ function entity_db:gen_wave(level_idx, game_mode)
 
     local save_file_name = string.format("kr1/data/waves/level%02d_waves_%s.lua", level_idx,
         game_mode_str_map[game_mode])
-    local persistence = require("klua.persistence")
+    local persistence = require("lib.klua.persistence")
     local data_string = persistence.serialize_to_string(file_data)
 
     -- 写入文件

@@ -1,9 +1,9 @@
 ﻿-- chunkname: @./all/scripts.lua
-local log = require("klua.log"):new("scripts")
+local log = require("lib.klua.log"):new("scripts")
 
-require("klua.table")
+require("lib.klua.table")
 
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 local AC = require("achievements")
 local E = require("entity_db")
@@ -15,7 +15,7 @@ local SU = require("script_utils")
 local U = require("utils")
 local LU = require("level_utils")
 local UP = require("upgrades")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
@@ -5980,14 +5980,12 @@ function scripts.mod_armor_buff.insert(this, store)
         if buff.factor then
             inc = buff.factor * target.health.magic_armor
         end
-        inc = (1 - target.health.armor_resilience) * inc
         SU.magic_armor_inc(target, inc)
     end
     local function inc_armor()
         if buff.factor then
             inc = buff.factor * target.health.armor
         end
-        inc = (1 - target.health.armor_resilience) * inc
         SU.armor_inc(target, inc)
     end
 
@@ -8863,7 +8861,7 @@ function scripts.mod_attract.insert(this, store)
     end
     -- _attract_pos 是 this.pos 的只读引用!
     target._attract_pos = this.pos
-    target._attract_radius = this.attract_radius * (0.2 + 0.8 * math.random())
+    target._attract_radius = this.attract_radius * (0.05 + 0.95 * math.random())
     if not target.main_script.origin_update then
         target.main_script.origin_update = target.main_script.update
     end

@@ -1,11 +1,11 @@
 ﻿-- chunkname: @./all/storage_io_generic.lua
 
-local log = require("klua.log"):new("storage_io_generic")
+local log = require("lib.klua.log"):new("storage_io_generic")
 local signal = require("hump.signal")
-local km = require("klua.macros")
-local persistence = require("klua.persistence")
+local km = require("lib.klua.macros")
+local persistence = require("lib.klua.persistence")
 
-require("klua.table")
+require("lib.klua.table")
 
 local sio = {}
 

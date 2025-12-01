@@ -1,6 +1,6 @@
 ﻿-- chunkname: @./kr1/upgrades.lua
-local log = require("klua.log"):new("upgrades")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("upgrades")
+local km = require("lib.klua.macros")
 local E = require("entity_db")
 local bit = require("bit")
 

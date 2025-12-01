@@ -1,6 +1,6 @@
 ﻿-- chunkname: @./kr1-desktop/map_decos_functions.lua
-local km = require("klua.macros")
-local V = require("klua.vector")
+local km = require("lib.klua.macros")
+local V = require("lib.klua.vector")
 local v = V.v
 local deco_fn = {}
 

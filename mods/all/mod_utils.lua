@@ -1,5 +1,5 @@
 -- chunkname: @./mods/all/mod_utils.lua
-local log = require("klua.log"):new("mod_utils")
+local log = require("lib.klua.log"):new("mod_utils")
 local IS_KR5 = KR_GAME == "kr5"
 local FS = love.filesystem
 local hook_utils = require("hook_utils")
@@ -299,11 +299,11 @@ end
 --]]
 
 require("klove.kui")
-require("klua.table")
+require("lib.klua.table")
 signal = require("hump.signal")
-km = require("klua.macros")
+km = require("lib.klua.macros")
 SH = require("klove.shader_db")
-V = require("klua.vector")
+V = require("lib.klua.vector")
 class = require("middleclass")
 bit = require("bit")
 band = bit.band

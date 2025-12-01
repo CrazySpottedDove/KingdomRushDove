@@ -1,5 +1,5 @@
 ﻿-- chunkname: @./lib/hump/timer.lua
-local log = require("klua.log"):new("timer")
+local log = require("lib.klua.log"):new("timer")
 
 local Timer = {}
 

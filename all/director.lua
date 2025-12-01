@@ -1,13 +1,13 @@
 ﻿-- chunkname: @./all/director.lua
-local log = require("klua.log"):new("director")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("director")
+local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 
-require("klua.dump")
+require("lib.klua.dump")
 
 local features = require("features")
 local i18n = require("i18n")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local I = require("klove.image_db")
 local F = require("klove.font_db")
 local SH = require("klove.shader_db")
@@ -320,28 +320,21 @@ function director:unload_item(item)
         scaled_groups = table.append(scaled_groups, replace_locale(game.scale_required_textures))
         if game.store.config.enable_hero_menu then
             local hero_data = require("data.map_data").hero_data
-            for _ , data in pairs(hero_data) do
+            for _, data in pairs(hero_data) do
                 local hero = data.name
                 local hero_textures = {"go_" .. hero}
-                if GS.heroes_require_scaled_texture[hero] then
-                    scaled_groups = table.append(scaled_groups, hero_textures)
-                else
-                    groups = table.append(groups, hero_textures)
-                end
+                groups = table.append(groups, hero_textures)
             end
         elseif game.store.selected_hero then
             for _, hero in pairs(game.store.selected_hero) do
                 if hero then
-                    if GS.heroes_require_scaled_texture[hero] then
-                        scaled_groups = table.append(scaled_groups, {"go_" .. hero})
-                    else
-                        groups = table.append(groups, {"go_" .. hero})
-                    end
+                    groups = table.append(groups, {"go_" .. hero})
                 end
             end
         end
         self:unload_texture_groups(groups, self.params.texture_size, game.ref_res, "game")
-        self:unload_texture_groups(scaled_groups, self.params.texture_size, game.ref_res * game.scale_required_textures_scale, "game")
+        self:unload_texture_groups(scaled_groups, self.params.texture_size,
+            game.ref_res * game.scale_required_textures_scale, "game")
         I:unload_atlas("temp_game_texts", game.store.screen_scale)
 
         if item.required_sounds then
@@ -481,7 +474,7 @@ function director:queue_load_item_named(name, force_reload)
         local item = _require("screen_comics")
 
         item.item_name = "comics"
-        item.required_textures = { "loading_common", "kr3_comic", "kr2_comic" }
+        item.required_textures = {"loading_common", "kr3_comic", "kr2_comic"}
         item.comic_data = love.filesystem.read(KR_PATH_GAME_TARGET .. string.format("/data/comics/%02i.csv", comic_idx))
 
         self:load_texture_groups(replace_locale(item.required_textures), self.params.texture_size, item.ref_res, true)
@@ -533,15 +526,12 @@ function director:queue_load_item_named(name, force_reload)
 
         if game.store.config.enable_hero_menu then
             local hero_data = require("data.map_data").hero_data
-            for _ , data in pairs(hero_data) do
+            for _, data in pairs(hero_data) do
                 local hero = data.name
                 local hero_textures = {"go_" .. hero}
-                    if GS.heroes_require_scaled_texture[hero] then
-                        self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res * game.scale_required_textures_scale,
-                            true, "game")
-                    else
-                        self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
-                    end
+
+                self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
+
                 self:load_sound_groups({hero})
             end
         else
@@ -550,12 +540,7 @@ function director:queue_load_item_named(name, force_reload)
                 for _, hero in pairs(slot.heroes.selected) do
                     if hero then
                         local hero_textures = {"go_" .. hero}
-                        if GS.heroes_require_scaled_texture[hero] then
-                            self:load_texture_groups(hero_textures, self.params.texture_size,
-                                game.ref_res * game.scale_required_textures_scale, true, "game")
-                        else
-                            self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
-                        end
+                        self:load_texture_groups(hero_textures, self.params.texture_size, game.ref_res, true, "game")
                         self:load_sound_groups({hero})
                     end
                 end
@@ -831,7 +816,6 @@ function director:limit_fps()
         love.timer.sleep(sleep_time)
     end
 end
-
 
 function director:keypressed(key, isrepeat)
     if key == "tab" and love.window.getFullscreen() and love.system.getOS() == "OS X" and

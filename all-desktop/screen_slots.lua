@@ -1,10 +1,10 @@
 ﻿-- chunkname: @./all-desktop/screen_slots.lua
 
-local log = require("klua.log"):new("screen_slots")
+local log = require("lib.klua.log"):new("screen_slots")
 local class = require("middleclass")
 local F = require("klove.font_db")
 local I = require("klove.image_db")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
 local signal = require("hump.signal")
 local storage = require("storage")
@@ -14,7 +14,7 @@ local PS = require("platform_services")
 local S = require("sound_db")
 local SU = require("screen_utils")
 local U = require("utils")
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local GS = require("game_settings")
 local i18n = require("i18n")
 local features = require("features")

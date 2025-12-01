@@ -1,8 +1,8 @@
 ﻿-- chunkname: @./all/privacy_policy_consent.lua
 
-local log = require("klua.log"):new("privacy_policy_consent")
+local log = require("lib.klua.log"):new("privacy_policy_consent")
 
-require("klua.table")
+require("lib.klua.table")
 
 local features = require("features")
 local storage = require("storage")

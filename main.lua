@@ -300,10 +300,10 @@ if KR_TARGET == "tablet" then
 end
 -- ...existing code...
 
-local log = require("klua.log")
+local log = require("lib.klua.log")
 
-require("klua.table")
-require("klua.dump")
+require("lib.klua.table")
+require("lib.klua.dump")
 require("version")
 require("constants")
 

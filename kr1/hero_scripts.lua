@@ -1,10 +1,10 @@
-require("klua.table")
+require("lib.klua.table")
 require("i18n")
 local scripts = require("scripts")
 local AC = require("achievements")
-local log = require("klua.log"):new("hero_scripts")
-require("klua.table")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("hero_scripts")
+require("lib.klua.table")
+local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 local E = require("entity_db")
 local GR = require("grid_db")
@@ -15,7 +15,7 @@ local SU = require("script_utils")
 local U = require("utils")
 local LU = require("level_utils")
 local UP = require("upgrades")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
 local W = require("wave_db")
 local bit = require("bit")
@@ -3096,7 +3096,7 @@ scripts.mod_van_helsing_relic = {
     update = function(this, store)
         local m = this.modifier
         local target = store.entities[m.target_id]
-        local factor = 1 - this.armor_reduce_factor
+        local factor = this.armor_reduce_factor
 
         if not target or not target.health or target.health.dead then
             -- block empty
@@ -3104,7 +3104,6 @@ scripts.mod_van_helsing_relic = {
             for _, n in pairs(this.remove_mods) do
                 SU.remove_modifiers(store, target, n)
             end
-            factor = factor * (1 - target.health.armor_resilience)
 
             if target.health.armor > 0 then
                 SU.armor_dec(target, target.health.armor * factor)
@@ -3290,13 +3289,7 @@ scripts.hero_van_helsing = {
 
                 if ready_to_use_skill(a, store) and not shot_ready() then
                     local target, targets = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
-                        a.shoot_time, a.vis_flags, a.vis_bans, function(e)
-                            local center_pos = P:node_pos(e.nav_path.pi, 1, e.nav_path.ni)
-                            local nearby = U.find_enemies_in_range(store, center_pos, 0, a.search_range, a.vis_flags,
-                                a.vis_bans)
-
-                            return nearby and #nearby >= a.search_min_count
-                        end)
+                        a.shoot_time, a.vis_flags, a.vis_bans)
 
                     if not target then
                         SU.delay_attack(store, a, 0.2)
@@ -3313,11 +3306,6 @@ scripts.hero_van_helsing = {
                         end
 
                         for i = 1, a.loops * 0.5 do
-                            log.paranoid("van_helsing multishoot target:%s (targets: %s)", target.id,
-                                table.concat(table.map(targets, function(k, v)
-                                    return v.id
-                                end), ","))
-
                             an, af, aidx = U.animation_name_facing_point(this, a.animations[2], target.pos)
 
                             U.animation_start(this, an, af, store.tick_ts, false)
@@ -8347,46 +8335,29 @@ end
 
 -- 卡兹 - 代达罗斯
 scripts.mod_minotaur_daedalus = {
-    queue = function(this, store, insertion)
+    insert = function(this, store)
         local target = store.entities[this.modifier.target_id]
-
         if not target then
-            return
+            return false
         end
-
-        if insertion then
-            target.vis._bans = target.vis.bans
-            target.vis.bans = F_ALL
-            target.health.ignore_damage = true
-
-            SU.stun_inc(target)
-
-            local s = this.render.sprites[1]
-            local m = this.modifier
-
-            if s.size_names then
-                s.prefix = s.prefix .. "_" .. s.size_names[target.unit.size]
-            end
-
-            if s.size_anchor then
-                s.anchor = s.size_anchors[target.unit.size]
-            end
-
-            if m.custom_offsets then
-                s.offset = m.custom_offsets[target.template_name] or m.custom_offsets.default
-            elseif m.use_mod_offset and target.unit.mod_offset then
-                s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
-            end
-        else
-            SU.stun_dec(target)
-
-            if target.vis._bans then
-                target.vis.bans = target.vis._bans
-                target.vis._bans = nil
-                target.health.ignore_damage = true
-            end
+        U.bans_add(target.vis, F_ALL)
+        SU.stun_inc(target)
+        local s = this.render.sprites[1]
+        local m = this.modifier
+        s.prefix = s.prefix .. "_" .. s.size_names[target.unit.size]
+        if target.unit.mod_offset then
+            s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
         end
-
+        return true
+    end,
+    remove = function(this, store)
+        local target = store.entities[this.modifier.target_id]
+        if not target then
+            return true
+        end
+        SU.stun_dec(target)
+        U.flags_remove(target.vis, F_ALL)
+        return true
     end,
     update = function(this, store)
         local m = this.modifier
@@ -8394,7 +8365,6 @@ scripts.mod_minotaur_daedalus = {
 
         if not target then
             queue_remove(store, this)
-
             return
         end
 
@@ -8441,12 +8411,6 @@ scripts.mod_minotaur_daedalus = {
         U.sprites_show(target)
 
         target.health_bar.hidden = nil
-        target.health.ignore_damage = nil
-
-        if target.vis._bans then
-            target.vis.bans = target.vis._bans
-            target.vis._bans = nil
-        end
 
         local s = this.render.sprites[1]
 
@@ -10628,8 +10592,7 @@ function scripts.mod_lynn_weakening.insert(this, store)
     else
         this.armor_reduction = this.armor_reduction + 0.5 * this.magic_armor_reduction
     end
-    this.magic_armor_reduction = this.magic_armor_reduction * (1 - target.health.armor_resilience)
-    this.armor_reduction = this.armor_reduction * (1 - target.health.armor_resilience)
+
     SU.armor_dec(target, this.armor_reduction)
     SU.magic_armor_dec(target, this.magic_armor_reduction)
 

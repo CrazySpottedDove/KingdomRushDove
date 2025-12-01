@@ -1,6 +1,6 @@
 ﻿-- chunkname: @./all/render_utils.lua
 
-local log = require("klua.log"):new("render_utils")
+local log = require("lib.klua.log"):new("render_utils")
 local I = require("klove.image_db")
 local G = love.graphics
 local RU = {}
