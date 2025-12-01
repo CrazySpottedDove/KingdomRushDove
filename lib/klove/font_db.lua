@@ -1,11 +1,11 @@
 ﻿-- chunkname: @./lib/klove/font_db.lua
 
-local log = require("klua.log"):new("font_db")
+local log = require("lib.klua.log"):new("font_db")
 local G = love.graphics
 local FS = love.filesystem
 
-require("klua.dump")
-require("klua.string")
+require("lib.klua.dump")
+require("lib.klua.string")
 
 local font_db = {}
 

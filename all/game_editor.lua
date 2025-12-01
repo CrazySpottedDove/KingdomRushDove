@@ -1,12 +1,12 @@
 ﻿-- chunkname: @./all/game_editor.lua
 
-local log = require("klua.log"):new("game")
+local log = require("lib.klua.log"):new("game")
 
 log.level = log.DEBUG_LEVEL
 
-require("klua.dump")
+require("lib.klua.dump")
 
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 local V = require("hump.vector-light")
 local F = require("klove.font_db")

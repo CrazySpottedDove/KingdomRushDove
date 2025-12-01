@@ -1,6 +1,6 @@
 ﻿-- chunkname: @./lib/klove/shader_db.lua
 
-local log = require("klua.log"):new("shader_db")
+local log = require("lib.klua.log"):new("shader_db")
 local FS = love.filesystem
 local shader_db = {}
 local function is_file(path)

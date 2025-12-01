@@ -1,13 +1,13 @@
 ﻿-- chunkname: @./all/path_db.lua
 
 local bit = require("bit")
-local log = require("klua.log"):new("path_db")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("path_db")
+local km = require("lib.klua.macros")
 local FS = love.filesystem
 
-require("klua.table")
+require("lib.klua.table")
 
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local GR = require("grid_db")
 local serpent = require("serpent")
 local path_db = {}

@@ -1,9 +1,9 @@
 ﻿-- chunkname: @./all/game_editor_gui.lua
-local log = require("klua.log"):new("game_editor_gui")
+local log = require("lib.klua.log"):new("game_editor_gui")
 
 local ism
-local km = require("klua.macros")
-require("klua.table")
+local km = require("lib.klua.macros")
+require("lib.klua.table")
 require("klove.kui")
 local kui_db = require("klove.kui_db")
 local F = require("klove.font_db")
@@ -12,7 +12,7 @@ local SU = require("screen_utils")
 local LU = require("level_utils")
 local E = require("entity_db")
 local U = require("utils")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
 local r = V.r
 local P = require("path_db")

@@ -1,14 +1,14 @@
 ﻿-- chunkname: @./all/utils.lua
-local log = require("klua.log"):new("utils")
+local log = require("lib.klua.log"):new("utils")
 
-require("klua.table")
+require("lib.klua.table")
 
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local bit = require("bit")
 local bor = bit.bor
 local band = bit.band
 local bnot = bit.bnot
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local P = require("path_db")
 
 require("constants")
@@ -79,11 +79,7 @@ end
 ---随机返回 -1 或 1
 ---@return number 随机符号（-1 或 1）
 function U.random_sign()
-    if random() < 0.5 then
-        return -1
-    else
-        return 1
-    end
+    return random() < 0.5 and -1 or 1
 end
 
 ---对于索引从 1 开始的连续的数组，返回一个随机索引
@@ -706,7 +702,8 @@ end
 ---@param e table 实体
 ---@param pos table 目标位置 {x, y}
 function U.set_destination(e, pos)
-    e.motion.dest = V.vclone(pos)
+    e.motion.dest.x = pos.x
+    e.motion.dest.y = pos.y
     e.motion.arrived = false
 end
 
@@ -1836,25 +1833,10 @@ function U.unlock_next_levels_in_ranges(unlock_data, levels, game_settings, gene
 
     for _, range in pairs(level_ranges) do
         if range[2] then
-            if range.list then
-                local prev
-
-                for i, v in ipairs(range) do
-                    if prev and levels[prev] and levels[prev][GAME_MODE_CAMPAIGN] and not levels[v] then
-                        sanitize_unlock(v)
-
-                        break
-                    end
-
-                    prev = v
-                end
-            else
-                for i = range[1], range[2] - 1 do
-                    if levels[i] and levels[i][GAME_MODE_CAMPAIGN] and not levels[i + 1] then
-                        sanitize_unlock(i + 1)
-
-                        break
-                    end
+            for i = range[1], range[2] - 1 do
+                if levels[i] and levels[i][GAME_MODE_CAMPAIGN] and not levels[i + 1] then
+                    sanitize_unlock(i + 1)
+                    break
                 end
             end
         end
@@ -2532,6 +2514,119 @@ function U.is_inside_square(o, half_x, half_y, r, p)
         return true
     end
     return false
+end
+
+-- 根据标志位的引用计数表计算最终标志位
+local function gain_f(f_refs)
+    local new_f = F_NONE
+    for _, flag_pair in pairs(f_refs) do
+        if flag_pair[2] > 0 then
+            new_f = bor(new_f, flag_pair[1])
+        elseif flag_pair[2] < 0 then
+            new_f = band(new_f, bnot(flag_pair[1]))
+        end
+    end
+    return new_f
+end
+
+--- 为 vis.flags 添加引用计数标志位，并更新 vis.flags
+---@param vis number
+---@param mask number
+function U.flags_add(vis, mask)
+    local f_refs = vis.flag_refs
+    if not f_refs then
+        f_refs = {{vis.flags, 1}}
+        vis.flag_refs = f_refs
+    end
+
+    for _, flag_pair in pairs(f_refs) do
+        if flag_pair[1] == mask then
+            flag_pair[2] = flag_pair[2] + 1
+            if flag_pair[2] == 0 then
+                table.removeobject(f_refs, flag_pair)
+            end
+            vis.flags = gain_f(f_refs)
+            return
+        end
+    end
+
+    f_refs[#f_refs + 1] = {mask, 1}
+    vis.flags = gain_f(f_refs)
+end
+
+--- 为 vis.flags 移除引用计数标志位，并更新 vis.flags
+---@param vis number
+---@param mask number
+function U.flags_remove(vis, mask)
+    local f_refs = vis.flag_refs
+    if not f_refs then
+        f_refs = {{vis.flags, 1}}
+        vis.flag_refs = f_refs
+    end
+
+    for _, flag_pair in pairs(f_refs) do
+        if flag_pair[1] == mask then
+            flag_pair[2] = flag_pair[2] - 1
+            if flag_pair[2] == 0 then
+                table.removeobject(f_refs, flag_pair)
+            end
+            vis.flags = gain_f(f_refs)
+            return
+        end
+    end
+
+    f_refs[#f_refs + 1] = {mask, -1}
+    vis.flags = gain_f(f_refs)
+end
+
+--- 为 vis.bans 添加引用计数标志位，并更新 vis.bans
+---@param vis number
+---@param mask number
+function U.bans_add(vis, mask)
+    local f_refs = vis.ban_refs
+    if not f_refs then
+        f_refs = {{vis.bans, 1}}
+        vis.ban_refs = f_refs
+    end
+
+    for _, flag_pair in pairs(f_refs) do
+        if flag_pair[1] == mask then
+            flag_pair[2] = flag_pair[2] + 1
+            if flag_pair[2] == 0 then
+                table.removeobject(f_refs, flag_pair)
+            end
+            vis.bans = gain_f(f_refs)
+            return
+        end
+    end
+
+    f_refs[#f_refs + 1] = {mask, 1}
+    vis.bans = gain_f(f_refs)
+end
+
+--- 为 vis.bans 移除引用计数标志位，并更新 vis.bans
+---@param vis number
+---@param mask number
+function U.bans_remove(vis, mask)
+    local f_refs = vis.ban_refs
+    if not f_refs then
+        f_refs = {{vis.bans, 1}}
+        vis.ban_refs = f_refs
+    end
+
+    for _, flag_pair in pairs(f_refs) do
+        if flag_pair[1] == mask then
+            flag_pair[2] = flag_pair[2] - 1
+            if flag_pair[2] == 0 then
+                table.removeobject(f_refs, flag_pair)
+            end
+            vis.bans = gain_f(f_refs)
+            return
+        end
+    end
+
+    f_refs[#f_refs + 1] = {mask, -1}
+    vis.bans = gain_f(f_refs)
 end
 
 return U

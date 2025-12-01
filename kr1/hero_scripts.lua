@@ -1,10 +1,10 @@
-require("klua.table")
+require("lib.klua.table")
 require("i18n")
 local scripts = require("scripts")
 local AC = require("achievements")
-local log = require("klua.log"):new("hero_scripts")
-require("klua.table")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("hero_scripts")
+require("lib.klua.table")
+local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 local E = require("entity_db")
 local GR = require("grid_db")
@@ -15,7 +15,7 @@ local SU = require("script_utils")
 local U = require("utils")
 local LU = require("level_utils")
 local UP = require("upgrades")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
 local W = require("wave_db")
 local bit = require("bit")
@@ -3096,7 +3096,7 @@ scripts.mod_van_helsing_relic = {
     update = function(this, store)
         local m = this.modifier
         local target = store.entities[m.target_id]
-        local factor = 1 - this.armor_reduce_factor
+        local factor = this.armor_reduce_factor
 
         if not target or not target.health or target.health.dead then
             -- block empty
@@ -3104,7 +3104,6 @@ scripts.mod_van_helsing_relic = {
             for _, n in pairs(this.remove_mods) do
                 SU.remove_modifiers(store, target, n)
             end
-            factor = factor * (1 - target.health.armor_resilience)
 
             if target.health.armor > 0 then
                 SU.armor_dec(target, target.health.armor * factor)
@@ -3290,13 +3289,7 @@ scripts.hero_van_helsing = {
 
                 if ready_to_use_skill(a, store) and not shot_ready() then
                     local target, targets = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range,
-                        a.shoot_time, a.vis_flags, a.vis_bans, function(e)
-                            local center_pos = P:node_pos(e.nav_path.pi, 1, e.nav_path.ni)
-                            local nearby = U.find_enemies_in_range(store, center_pos, 0, a.search_range, a.vis_flags,
-                                a.vis_bans)
-
-                            return nearby and #nearby >= a.search_min_count
-                        end)
+                        a.shoot_time, a.vis_flags, a.vis_bans)
 
                     if not target then
                         SU.delay_attack(store, a, 0.2)
@@ -3313,11 +3306,6 @@ scripts.hero_van_helsing = {
                         end
 
                         for i = 1, a.loops * 0.5 do
-                            log.paranoid("van_helsing multishoot target:%s (targets: %s)", target.id,
-                                table.concat(table.map(targets, function(k, v)
-                                    return v.id
-                                end), ","))
-
                             an, af, aidx = U.animation_name_facing_point(this, a.animations[2], target.pos)
 
                             U.animation_start(this, an, af, store.tick_ts, false)
@@ -7152,6 +7140,161 @@ scripts.hero_vampiress = {
         this.health.hp = this.health.hp_max
     end
 }
+function scripts.hero_vampiress.insert(this, store)
+    this.hero.fn_level_up(this, store)
+    this.melee.order = U.attack_order(this.melee.attacks)
+    local mod_name = this.track_kills.mod
+    local m = E:create_entity(mod_name)
+    m.modifier.target_id = this.id
+    m.modifier.source_id = this.id
+    m.pos = V.vclone(this.pos)
+    queue_insert(store, m)
+
+    return true
+end
+
+function scripts.hero_vampiress.update(this, store)
+    local h = this.health
+    local he = this.hero
+    local r = this.nav_rally
+    local brk, sta, should_fly, already_flying
+    local orig_prefix = this.render.sprites[1].prefix
+    local orig_vis_bans = this.vis.bans
+    local orig_speed = this.motion.max_speed
+    local a, skill
+    U.y_animation_play(this, "respawn", nil, store.tick_ts, 1)
+
+    this.health_bar.hidden = false
+
+    while true do
+        if h.dead then
+            SU.y_hero_death_and_respawn(store, this)
+        end
+
+        if this.unit.is_stunned then
+            SU.soldier_idle(store, this)
+        else
+            while r.new do
+                if not already_flying then
+                    should_fly = V.dist2(this.pos.x, this.pos.y, r.pos.x, r.pos.y) > this.fly_to.min_distance *
+                                     this.fly_to.min_distance
+
+                    if should_fly then
+                        already_flying = true
+                        this.vis.bans = F_ALL
+                        this.health.ignore_damage = true
+                        this.render.sprites[1].prefix = this.fly_to.animation_prefix
+                        this.render.sprites[2].hidden = false
+                        orig_speed = this.motion.max_speed
+                        U.update_max_speed(this, this.motion.max_speed_bat)
+                        U.animation_start(this, "enter", nil, store.tick_ts)
+                        -- U.y_wait(store, fts(7))
+
+                        local fx = E:create_entity("fx_vampiress_transform")
+
+                        fx.pos.x, fx.pos.y = this.pos.x, this.pos.y
+                        fx.render.sprites[1].ts = store.tick_ts
+
+                        queue_insert(store, fx)
+                        U.y_animation_wait(this)
+                    end
+                end
+
+                if SU.y_hero_new_rally(store, this) then
+                    goto label_477_0
+                end
+
+                if already_flying and not r.new then
+                    already_flying = nil
+                    this.render.sprites[2].hidden = true
+                    U.y_animation_play(this, "exit", nil, store.tick_ts)
+                    U.y_animation_wait(this, nil, 1)
+                    this.render.sprites[1].prefix = orig_prefix
+                    U.update_max_speed(this, orig_speed)
+                    this.vis.bans = orig_vis_bans
+                    this.health.ignore_damage = false
+                end
+            end
+
+            if SU.hero_level_up(store, this) then
+                U.y_animation_play(this, "levelup", nil, store.tick_ts)
+            end
+
+            a = this.timed_attacks.list[1]
+            skill = this.hero.skills.slayer
+            if not a.disabled and store.tick_ts - a.ts > a.cooldown then
+                local targets = U.find_enemies_in_range(store, this.pos, 0, a.trigger_radius, a.vis_flags, a.vis_bans)
+
+                if not targets then
+                    SU.delay_attack(store, a, 0.13333333333333333)
+                else
+                    local start_ts = store.tick_ts
+
+                    S:queue(a.sound)
+                    U.animation_start(this, a.animation, nil, store.tick_ts, false)
+                    a.ts = store.tick_ts
+                    while store.tick_ts - start_ts < a.hit_time do
+                        if SU.hero_interrupted(this) then
+                            goto label_477_0
+                        end
+
+                        coroutine.yield()
+                    end
+
+                    targets = U.find_enemies_in_range(store, this.pos, 0, a.damage_radius, a.vis_flags, a.vis_bans)
+
+                    if targets then
+                        for _, e in pairs(targets) do
+                            local d = E:create_entity("damage")
+
+                            d.source_id = this.id
+                            d.target_id = e.id
+                            d.value = (math.random(a.damage_min, a.damage_max) + this.damage_buff) *
+                                          this.unit.damage_factor
+                            d.damage_type = a.damage_type
+                            d.track_kills = true
+                            if table.contains(a.extra_damage_templates, e.template_name) then
+                                d.value = d.value * a.extra_damage_factor
+                            end
+
+                            queue_damage(store, d)
+                        end
+                    end
+
+                    while not U.animation_finished(this) do
+                        if SU.hero_interrupted(this) then
+                            goto label_477_0
+                        end
+
+                        coroutine.yield()
+                    end
+
+                    SU.hero_gain_xp_from_skill(this, skill)
+                end
+            end
+
+            if this.melee then
+                brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+                if brk or sta ~= A_NO_TARGET then
+                    goto label_477_0
+                end
+            end
+
+            if SU.soldier_go_back_step(store, this) then
+                -- block empty
+            else
+                SU.soldier_idle(store, this)
+                SU.soldier_regen(store, this)
+            end
+        end
+
+        ::label_477_0::
+
+        coroutine.yield()
+    end
+end
+
 -- 沙塔
 scripts.hero_alien = {
     level_up = function(this, store)
@@ -8000,61 +8143,376 @@ scripts.hero_crab = {
             this.burrow.damage = s.damage[s.level]
         end)
 
-        upgrade_skill(this, "hookedclaw", function(this, s)
-            local pa = this.timed_attacks.list[1]
-            if not pa.disabled then
-                pa.damage_min = pa.damage_min + s.extra_damage[s.level]
-                pa.damage_max = pa.damage_max + s.extra_damage[s.level]
-            end
-            this.melee.attacks[1].damage_min = this.melee.attacks[1].damage_min + s.extra_damage[s.level]
-            this.melee.attacks[1].damage_max = this.melee.attacks[1].damage_max + s.extra_damage[s.level]
-        end)
-
         this.health.hp = this.health.hp_max
     end
 }
+function scripts.hero_crab.on_damage(this, store, damage)
+    log.paranoid("  CRAB DAMAGE: %s", damage.value)
+
+    local h = this.health
+    local i = this.invuln
+
+    if (i.active or i.pending) and band(damage.damage_type, i.exclude_damage_types) == 0 then
+        scripts.heal(this, damage.value * 0.5)
+        return false
+    end
+
+    if i.disabled or this.unit.is_stunned or store.tick_ts - i.ts < i.cooldown or math.random() > i.chance then
+        return true
+    end
+
+    local predicted_damage = U.predict_damage(this, damage)
+
+    if h.hp - predicted_damage < i.trigger_factor * h.hp_max then
+        i.pending = true
+        return false
+    end
+
+    return true
+end
+
+function scripts.hero_crab.insert(this, store)
+    this.hero.fn_level_up(this, store)
+    this.melee.order = U.attack_order(this.melee.attacks)
+    return true
+end
+
+function scripts.hero_crab.update(this, store)
+    local h = this.health
+    local he = this.hero
+    local a, skill, brk, sta
+
+    U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+
+    this.health_bar.hidden = false
+
+    while true do
+        if h.dead then
+            SU.y_hero_death_and_respawn(store, this)
+        end
+
+        if this.unit.is_stunned then
+            SU.soldier_idle(store, this)
+        else
+            while this.nav_rally.new do
+                local b = this.burrow
+                local r = this.nav_rally
+
+                if not b.disabled and V.dist(this.pos.x, this.pos.y, r.pos.x, r.pos.y) > b.min_distance then
+                    r.new = false
+
+                    U.unblock_target(store, this)
+
+                    local vis_bans = this.vis.bans
+
+                    this.vis.bans = F_ALL
+                    this.health.immune_to = F_ALL
+
+                    local original_speed = this.motion.max_speed
+                    U.speed_inc_self(this, b.init_accel)
+                    this.unit.marker_hidden = true
+
+                    S:queue(this.sound_events.change_rally_point)
+                    S:queue(this.sound_events.burrow_in)
+                    U.y_animation_play(this, "burrow_in", r.pos.x < this.pos.x, store.tick_ts)
+
+                    this.health_bar._orig_offset = this.health_bar.offset
+                    this.health_bar.offset = b.health_bar_offset
+                    this.unit._orig_hit_offset = this.unit.hit_offset
+                    this.unit.hit_offset = b.hit_offset
+                    this.unit._orig_mod_offset = this.unit.mod_offset
+                    this.unit.mod_offset = b.mod_offset
+
+                    local water_trail = E:create_entity("ps_water_trail")
+
+                    water_trail.particle_system.track_id = this.id
+                    water_trail.particle_system.emit = false
+                    water_trail.particle_system.z = Z_OBJECTS - 1
+
+                    queue_insert(store, water_trail)
+
+                    ::label_400_0::
+
+                    local last_t = band(GR:cell_type(this.pos.x, this.pos.y), TERRAIN_TYPES_MASK)
+                    local dest = r.pos
+                    local n = this.nav_grid
+                    while not V.veq(this.pos, dest) do
+                        local w = table.remove(n.waypoints, 1) or dest
+
+                        U.set_destination(this, w)
+
+                        local ani = last_t == TERRAIN_WATER and "burrow_water" or "burrow_land"
+                        local an, af = U.animation_name_facing_point(this, ani, this.motion.dest)
+
+                        U.animation_start(this, an, af, store.tick_ts, true)
+
+                        while not this.motion.arrived do
+                            if r.new then
+                                r.new = false
+
+                                goto label_400_0
+                            end
+
+                            U.walk(this, store.tick_length, b.extra_speed)
+                            coroutine.yield()
+
+                            this.motion.speed.x, this.motion.speed.y = 0, 0
+
+                            local t = band(GR:cell_type(this.pos.x, this.pos.y), TERRAIN_TYPES_MASK)
+
+                            if t ~= last_t then
+                                if last_t and bor(last_t, t) == bor(TERRAIN_WATER, TERRAIN_LAND) then
+                                    local fx = E:create_entity("fx_enemy_splash")
+
+                                    fx.render.sprites[1].name = "big"
+                                    fx.render.sprites[1].ts = store.tick_ts
+                                    fx.render.sprites[1].sort_y_offset = 0
+                                    fx.pos = V.vclone(this.pos)
+
+                                    queue_insert(store, fx)
+
+                                    if this.sound_events and this.sound_events.water_splash then
+                                        S:queue(this.sound_events.water_splash)
+                                    end
+                                end
+
+                                local in_water = t == TERRAIN_WATER
+                                local ani = in_water and "burrow_water" or "burrow_land"
+                                local an, af = U.animation_name_facing_point(this, ani, this.motion.dest)
+
+                                U.animation_start(this, an, af, store.tick_ts, true)
+
+                                water_trail.particle_system.emit = in_water
+                                last_t = t
+                            end
+                        end
+                    end
+                    if this.motion.real_speed >= b.stun_speed and store.tick_ts - b.ts >= b.cooldown then
+                        local enemies = U.find_enemies_in_range(store, this.pos, 0, b.radius, F_STUN,
+                            bor(F_BOSS, F_FLYING))
+                        if enemies then
+                            local rate = (this.motion.real_speed - 60) / (b.stun_speed - 60)
+                            for _, e in pairs(enemies) do
+                                if not e.health.dead then
+                                    local mod = E:create_entity("mod_stun_burrow")
+                                    mod.modifier.target_id = e.id
+                                    mod.modifier.source_id = this.id
+                                    queue_insert(store, mod)
+                                    local d = E:create_entity("damage")
+                                    d.source_id = this.id
+                                    d.target_id = e.id
+                                    d.value = (b.damage + this.damage_buff) * this.unit.damage_factor * rate
+                                    d.damage_type = DAMAGE_EXPLOSION
+                                    queue_damage(store, d)
+                                end
+                            end
+                            SU.hero_gain_xp_from_skill(this, this.hero.skills.burrow)
+                            b.ts = store.tick_ts
+                        end
+                        for i, pos in pairs({v(10, -16), v(-12, -14), v(22, -1), v(-24, -1)}) do
+                            local fx = E:create_entity("fx")
+
+                            fx.render.sprites[1].name = "fx_hero_crab_quake"
+                            fx.render.sprites[1].ts = store.tick_ts + (i - 1) * 0.1
+                            fx.render.sprites[1].scale = v(0.8, 0.8)
+                            fx.render.sprites[1].alpha = 166
+                            fx.render.sprites[1].anchor.y = 0.24
+                            fx.pos.x, fx.pos.y = this.pos.x + pos.x, this.pos.y + pos.y
+
+                            queue_insert(store, fx)
+                        end
+                    end
+                    this.health_bar.offset = this.health_bar._orig_offset
+                    this.unit.hit_offset = this.unit._orig_hit_offset
+                    this.unit.mod_offset = this.unit._orig_mod_offset
+
+                    S:queue(this.sound_events.burrow_out)
+                    U.y_animation_play(this, "burrow_out", r.pos.x < this.pos.x, store.tick_ts)
+                    U.update_max_speed(this, original_speed)
+                    this.vis.bans = vis_bans
+                    this.health.immune_to = 0
+                    this.unit.marker_hidden = nil
+                elseif SU.y_hero_new_rally(store, this) then
+                    goto label_400_2
+                end
+            end
+
+            if this.invuln and this.invuln.pending then
+                local e = E:create_entity(this.invuln.aura_name)
+
+                e.aura.ts = store.tick_ts
+                e.aura.source_id = this.id
+
+                queue_insert(store, e)
+
+                local skill = this.hero.skills.battlehardened
+
+                SU.hero_gain_xp_from_skill(this, skill)
+                S:queue(this.invuln.sound)
+                U.y_animation_play(this, this.invuln.animation, nil, store.tick_ts)
+
+                this.invuln.ts = store.tick_ts
+                this.invuln.pending = nil
+            end
+
+            if SU.hero_level_up(store, this) then
+                U.y_animation_play(this, "levelup", nil, store.tick_ts, 1)
+            end
+
+            a = this.timed_attacks.list[1]
+            skill = this.hero.skills.pincerattack
+
+            if not a.disabled and store.tick_ts - a.ts > a.cooldown then
+                local left_targets, right_targets = {}, {}
+                local targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags,
+                    a.vis_bans, function(v)
+                        local px, py = this.pos.x, this.pos.y
+                        local vx, vy = v.pos.x, v.pos.y
+                        local rx, ry = a.damage_size.x, a.damage_size.y
+
+                        if vy >= py - ry * 0.5 and vy < py + ry * 0.5 then
+                            if px < vx and vx < px + rx then
+                                table.insert(right_targets, v)
+
+                                return true
+                            elseif vx < px and vx > px - rx then
+                                table.insert(left_targets, v)
+
+                                return true
+                            end
+                        end
+
+                        return false
+                    end)
+
+                if not targets or #left_targets < a.min_count and #right_targets < a.min_count then
+                    SU.delay_attack(store, a, 0.13333333333333333)
+
+                    goto label_400_1
+                end
+
+                if #left_targets > #right_targets then
+                    targets = left_targets
+                else
+                    targets = right_targets
+                end
+
+                local start_ts = store.tick_ts
+
+                S:queue(a.sound)
+
+                local an, af = U.animation_name_facing_point(this, a.animation, targets[1].pos)
+
+                U.animation_start(this, an, af, store.tick_ts, false)
+
+                local flip_x = this.render.sprites[1].flip_x
+
+                while store.tick_ts - start_ts < a.hit_time do
+                    if SU.hero_interrupted(this) then
+                        goto label_400_2
+                    end
+
+                    coroutine.yield()
+                end
+
+                a.ts = start_ts
+
+                SU.hero_gain_xp_from_skill(this, skill)
+
+                targets = U.find_enemies_in_range(store, this.pos, a.min_range, a.max_range, a.vis_flags, a.vis_bans,
+                    function(v)
+                        local px, py = this.pos.x, this.pos.y
+                        local vx, vy = v.pos.x, v.pos.y
+                        local rx, ry = a.damage_size.x, a.damage_size.y
+
+                        if vy >= py - ry * 0.5 and vy < py + ry * 0.5 then
+                            if not flip_x and px < vx and vx < px + rx then
+                                return true
+                            elseif flip_x and vx < px and vx > px - rx then
+                                return true
+                            end
+                        end
+
+                        return false
+                    end)
+
+                if targets then
+                    for _, t in pairs(targets) do
+                        local d = E:create_entity("damage")
+
+                        d.source_id = this.id
+                        d.target_id = t.id
+                        d.value = math.random(a.damage_min, a.damage_max)
+                        d.damage_type = a.damage_type
+
+                        queue_damage(store, d)
+                    end
+                end
+
+                while not U.animation_finished(this) do
+                    if SU.hero_interrupted(this) then
+                        goto label_400_2
+                    end
+
+                    coroutine.yield()
+                end
+
+                goto label_400_2
+
+                this.render.sprites[1].flip_x = flip_x
+            end
+
+            ::label_400_1::
+
+            brk, sta = SU.y_soldier_ranged_attacks(store, this)
+
+            if brk then
+                -- block empty
+            else
+                brk, sta = SU.y_soldier_melee_block_and_attacks(store, this)
+
+                if brk or sta ~= A_NO_TARGET then
+                    -- block empty
+                elseif SU.soldier_go_back_step(store, this) then
+                    -- block empty
+                else
+                    SU.soldier_idle(store, this)
+                    SU.soldier_regen(store, this)
+                end
+            end
+        end
+
+        ::label_400_2::
+
+        coroutine.yield()
+    end
+end
+
 -- 卡兹 - 代达罗斯
 scripts.mod_minotaur_daedalus = {
-    queue = function(this, store, insertion)
+    insert = function(this, store)
         local target = store.entities[this.modifier.target_id]
-
         if not target then
-            return
+            return false
         end
-
-        if insertion then
-            target.vis._bans = target.vis.bans
-            target.vis.bans = F_ALL
-            target.health.ignore_damage = true
-
-            SU.stun_inc(target)
-
-            local s = this.render.sprites[1]
-            local m = this.modifier
-
-            if s.size_names then
-                s.prefix = s.prefix .. "_" .. s.size_names[target.unit.size]
-            end
-
-            if s.size_anchor then
-                s.anchor = s.size_anchors[target.unit.size]
-            end
-
-            if m.custom_offsets then
-                s.offset = m.custom_offsets[target.template_name] or m.custom_offsets.default
-            elseif m.use_mod_offset and target.unit.mod_offset then
-                s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
-            end
-        else
-            SU.stun_dec(target)
-
-            if target.vis._bans then
-                target.vis.bans = target.vis._bans
-                target.vis._bans = nil
-                target.health.ignore_damage = true
-            end
+        U.bans_add(target.vis, F_ALL)
+        SU.stun_inc(target)
+        local s = this.render.sprites[1]
+        local m = this.modifier
+        s.prefix = s.prefix .. "_" .. s.size_names[target.unit.size]
+        if target.unit.mod_offset then
+            s.offset.x, s.offset.y = target.unit.mod_offset.x, target.unit.mod_offset.y
         end
-
+        return true
+    end,
+    remove = function(this, store)
+        local target = store.entities[this.modifier.target_id]
+        if not target then
+            return true
+        end
+        SU.stun_dec(target)
+        U.flags_remove(target.vis, F_ALL)
+        return true
     end,
     update = function(this, store)
         local m = this.modifier
@@ -8062,7 +8520,6 @@ scripts.mod_minotaur_daedalus = {
 
         if not target then
             queue_remove(store, this)
-
             return
         end
 
@@ -8109,12 +8566,6 @@ scripts.mod_minotaur_daedalus = {
         U.sprites_show(target)
 
         target.health_bar.hidden = nil
-        target.health.ignore_damage = nil
-
-        if target.vis._bans then
-            target.vis.bans = target.vis._bans
-            target.vis._bans = nil
-        end
 
         local s = this.render.sprites[1]
 
@@ -8498,7 +8949,7 @@ scripts.hero_minotaur = {
 
                     local target = U.find_foremost_enemy(store, this.pos, a.min_range, a.max_range, false, a.vis_flags,
                         a.vis_bans, function(v)
-                            return (band(bnot(v.enemy.valid_terrains), terrains) == 0) and v.health.hp > 540
+                            return (band(bnot(v.enemy.valid_terrains), terrains) == 0) and v.health.hp > this.health.hp * 2
                         end)
 
                     if not target then
@@ -10296,8 +10747,7 @@ function scripts.mod_lynn_weakening.insert(this, store)
     else
         this.armor_reduction = this.armor_reduction + 0.5 * this.magic_armor_reduction
     end
-    this.magic_armor_reduction = this.magic_armor_reduction * (1 - target.health.armor_resilience)
-    this.armor_reduction = this.armor_reduction * (1 - target.health.armor_resilience)
+
     SU.armor_dec(target, this.armor_reduction)
     SU.magic_armor_dec(target, this.magic_armor_reduction)
 

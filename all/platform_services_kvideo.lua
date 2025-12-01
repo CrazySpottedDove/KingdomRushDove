@@ -1,6 +1,6 @@
 ﻿-- chunkname: @./all/platform_services_kvideo.lua
 
-local log = require("klua.log"):new("platform_services_kvideo")
+local log = require("lib.klua.log"):new("platform_services_kvideo")
 local PSU = require("platform_services_utils")
 local signal = require("hump.signal")
 local srv = {}

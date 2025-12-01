@@ -1,9 +1,9 @@
 ﻿-- chunkname: @./all/scripts.lua
-local log = require("klua.log"):new("scripts")
+local log = require("lib.klua.log"):new("scripts")
 
-require("klua.table")
+require("lib.klua.table")
 
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 local AC = require("achievements")
 local E = require("entity_db")
@@ -15,7 +15,7 @@ local SU = require("script_utils")
 local U = require("utils")
 local LU = require("level_utils")
 local UP = require("upgrades")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local bit = require("bit")
 local band = bit.band
 local bor = bit.bor
@@ -571,8 +571,8 @@ function scripts.enemy_basic.insert(this, store)
 
             if a.cooldown == 0 then
                 local e = E:create_entity(a.name)
-
-                e.pos = V.vclone(this.pos)
+                e.pos.x = this.pos.x
+                e.pos.y = this.pos.y
                 e.aura.level = this.unit.level
                 e.aura.source_id = this.id
                 e.aura.ts = store.tick_ts
@@ -999,7 +999,8 @@ function scripts.delayed_spawn.update(this, store)
     local e = this.payload
 
     e.nav_path = table.deepclone(this.nav_path)
-    e.pos = V.vclone(this.pos)
+    e.pos.x = this.pos.x
+    e.pos.y = this.pos.y
 
     if this.motion then
         e.motion.forced_waypoint = this.motion.forced_waypoint
@@ -1250,8 +1251,8 @@ function scripts.soldier_barrack.insert(this, store)
         for _, a in pairs(this.auras.list) do
             if a.cooldown == 0 then
                 local e = E:create_entity(a.name)
-
-                e.pos = V.vclone(this.pos)
+                e.pos.x = this.pos.x
+                e.pos.y = this.pos.y
                 e.aura.level = this.unit.level
                 e.aura.source_id = this.id
                 e.aura.ts = store.tick_ts
@@ -1266,14 +1267,17 @@ function scripts.soldier_barrack.insert(this, store)
         local m = E:create_entity(mod_name)
         m.modifier.target_id = this.id
         m.modifier.source_id = this.id
-        m.pos = V.vclone(this.pos)
+        m.pos.x = this.pos.x
+        m.pos.y = this.pos.y
+
         queue_insert(store, m)
     end
 
     if this.track_damage and this.track_damage.mod then
         local e = E:create_entity(this.track_damage.mod)
 
-        e.pos = V.vclone(this.pos)
+        e.pos.x = this.pos.x
+        e.pos.y = this.pos.y
         e.modifier.target_id = this.id
         e.modifier.source_id = this.id
 
@@ -1570,49 +1574,33 @@ function scripts.tower_archer.update(this, store)
                     this.render.sprites[shooter_sid].flip_x = af
 
                     local bullet = E:create_entity(a.bullet)
-
-                    bullet.bullet.damage_factor = this.tower.damage_factor
+                    local b = bullet.bullet
+                    b.damage_factor = this.tower.damage_factor
                     bullet.pos.x, bullet.pos.y = this.pos.x + start_offset.x, this.pos.y + start_offset.y
-                    bullet.bullet.from = V.vclone(bullet.pos)
-                    bullet.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x, enemy.pos.y + enemy.unit.hit_offset.y)
-                    bullet.bullet.target_id = enemy.id
+                    b.from.x = bullet.pos.x
+                    b.from.y = bullet.pos.y
+                    b.to.x = enemy.pos.x + enemy.unit.hit_offset.x
+                    b.to.y = enemy.pos.y + enemy.unit.hit_offset.y
+                    b.target_id = enemy.id
 
-                    if bullet.bullet.flight_time_min and bullet.bullet.flight_time_factor then
-                        local dist = V.dist(bullet.bullet.to.x, bullet.bullet.to.y, bullet.bullet.from.x,
-                            bullet.bullet.from.y)
+                    if b.flight_time_min and b.flight_time_factor then
+                        local dist = V.dist(b.to.x, b.to.y, b.from.x,
+                            b.from.y)
 
-                        bullet.bullet.flight_time = bullet.bullet.flight_time_min + dist / at.range *
-                                                        bullet.bullet.flight_time_factor
+                        b.flight_time = b.flight_time_min + dist / at.range *
+                                                        b.flight_time_factor
                     end
-
-                    -- local u = UP:get_upgrade("archer_el_obsidian_heads")
-
-                    -- if u and enemy.health and enemy.health.armor == 0 then
-                    --     bullet.bullet.damage_min = bullet.bullet.damage_max
-                    -- end
 
                     local u = UP:get_upgrade("archer_precision")
 
                     if u and math.random() < u.chance then
-                        bullet.bullet.damage_min = bullet.bullet.damage_min * u.damage_factor
-                        bullet.bullet.damage_max = bullet.bullet.damage_max * u.damage_factor
-                        bullet.bullet.pop = {"pop_crit"}
-                        bullet.bullet.pop_conds = DR_DAMAGE
+                        b.damage_min = b.damage_min * u.damage_factor
+                        b.damage_max = b.damage_max * u.damage_factor
+                        b.pop = {"pop_crit"}
+                        b.pop_conds = DR_DAMAGE
                     end
 
                     queue_insert(store, bullet)
-
-                    -- u = UP:get_upgrade("archer_twin_shot")
-
-                    -- if u and math.random() < u.chance then
-                    --     local b2 = E:clone_entity(bullet)
-
-                    --     b2.bullet.flight_time = b2.bullet.flight_time - 1 / FPS
-
-                    --     queue_insert(store, b2)
-
-                    --     bullet.bullet.flight_time = bullet.bullet.flight_time + 1 / FPS
-                    -- end
                 end
 
                 while not U.animation_finished(this, shooter_sid) do
@@ -1671,14 +1659,12 @@ function scripts.tower_mage.update(this, store)
     aa.ts = store.tick_ts
 
     while true do
-        local enemy, enemies
-
         if this.tower.blocked then
             -- block empty
         elseif store.tick_ts - aa.ts <= aa.cooldown * this.tower.cooldown_factor then
             -- block empty
         else
-            enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags, aa.vis_bans)
+            local enemy, enemies = U.find_foremost_enemy(store, tpos(this), 0, a.range, false, aa.vis_flags, aa.vis_bans)
 
             if enemy then
                 aa.ts = store.tick_ts
@@ -1703,23 +1689,23 @@ function scripts.tower_mage.update(this, store)
 
                     local in_range = U.is_inside_ellipse(tpos(this), enemy.pos, a.range * 1.1)
                     local bullet = E:create_entity(aa.bullet)
-
-                    bullet.bullet.shot_index = i
-                    bullet.bullet.damage_factor = this.tower.damage_factor
+                    local b = bullet.bullet
+                    b.shot_index = i
+                    b.damage_factor = this.tower.damage_factor
 
                     if in_range then
-                        bullet.bullet.to = V.v(enemy.pos.x + enemy.unit.hit_offset.x,
-                            enemy.pos.y + enemy.unit.hit_offset.y)
-                        bullet.bullet.target_id = enemy.id
+                        b.to.x = enemy.pos.x + enemy.unit.hit_offset.x
+                        b.to.y = enemy.pos.y + enemy.unit.hit_offset.y
+                        b.target_id = enemy.id
                     else
-                        bullet.bullet.to = last_target_pos
-                        bullet.bullet.target_id = nil
+                        b.to = last_target_pos
+                        b.target_id = nil
                     end
 
                     local start_offset = aa.bullet_start_offset[ai]
-
-                    bullet.bullet.from = V.v(this.pos.x + start_offset.x, this.pos.y + start_offset.y)
-                    bullet.pos = V.vclone(bullet.bullet.from)
+                    b.from.x = this.pos.x + start_offset.x
+                    b.from.y = this.pos.y + start_offset.y
+                    bullet.pos.x, bullet.pos.y = b.from.x, b.from.y
 
                     queue_insert(store, bullet)
                 end
@@ -5980,14 +5966,12 @@ function scripts.mod_armor_buff.insert(this, store)
         if buff.factor then
             inc = buff.factor * target.health.magic_armor
         end
-        inc = (1 - target.health.armor_resilience) * inc
         SU.magic_armor_inc(target, inc)
     end
     local function inc_armor()
         if buff.factor then
             inc = buff.factor * target.health.armor
         end
-        inc = (1 - target.health.armor_resilience) * inc
         SU.armor_inc(target, inc)
     end
 
@@ -8812,6 +8796,93 @@ function scripts.arrow5_fixed_height.insert(this, store)
     this.bullet.flight_time = 2 * (math.sqrt(2 * this.bullet.fixed_height * this.bullet.g * -1) / this.bullet.g * -1)
 
     return scripts.arrow.insert(this, store)
+end
+
+-- 敌人被某个源吸引，直接朝着这个源行走，不做任何其它事情。这种敌人必须保证处于无法被拦截状态
+-- 敌人需实现 walk 动画
+scripts.enemy_attracted = {}
+scripts.enemy_attracted.update = function(this, store)
+    local this_pos = this.pos
+    -- 这里使用引用，不具体到数值，是为了之后可能的 attract_pos 动态变化拓展做准备
+    local attract_pos = this._attract_pos
+    -- attract_radius 定死
+    local attract_radius = this._attract_radius
+    local attract_radius2 = attract_radius * attract_radius
+    local motion = this.motion
+    local angle
+    local d_angle = math.pi / 180
+    while true do
+        if this.health.dead then
+            SU.y_enemy_death(store, this)
+            return
+        end
+        if this.unit.is_stunned then
+            SU.y_enemy_stun(store, this)
+        else
+            if V.dist2(this_pos.x, this_pos.y, attract_pos.x, attract_pos.y) < attract_radius2 then
+                -- U.animation_start(this, "idle", nil, store.tick_ts, true)
+                angle = math.atan2(this_pos.y - attract_pos.y, this_pos.x - attract_pos.x)
+                local dest = {
+                    x = attract_pos.x + attract_radius * math.cos(angle + d_angle),
+                    y = attract_pos.y + attract_radius * math.sin(angle + d_angle)
+                }
+                U.set_destination(this, dest)
+            else
+                U.set_destination(this, attract_pos)
+            end
+            local an, af = U.animation_name_facing_point(this, "walk", motion.dest)
+            U.animation_start(this, an, af, store.tick_ts, true)
+            U.walk(this, store.tick_length)
+            motion.speed.x, motion.speed.y = 0, 0
+        end
+        coroutine.yield()
+    end
+end
+
+scripts.mod_attract = {}
+function scripts.mod_attract.insert(this, store)
+    local target = store.entities[this.modifier.target_id]
+    if not target or target.health.dead then
+        return false
+    end
+    -- _attract_pos 是 this.pos 的只读引用!
+    target._attract_pos = this.pos
+    target._attract_radius = this.attract_radius * (0.05 + 0.95 * math.random())
+    if not target.main_script.origin_update then
+        target.main_script.origin_update = target.main_script.update
+    end
+    target.main_script.update = scripts.enemy_attracted.update
+    target.main_script.co = coroutine.create(target.main_script.update)
+    U.bans_add(target.vis, F_BLOCK)
+    U.unblock_all(store, target)
+    return true
+end
+
+function scripts.mod_attract.remove(this, store)
+    local target = store.entities[this.modifier.target_id]
+    if not target or target.health.dead then
+        return true
+    end
+    target._attract_pos = nil
+    target._attract_radius = nil
+
+    target.main_script.update = target.main_script.origin_update
+    target.main_script.co = coroutine.create(target.main_script.update)
+    U.bans_remove(target.vis, F_BLOCK)
+    local nodes = P:nearest_nodes(target.pos.x, target.pos.y, {target.nav_path.pi}, {target.nav_path.spi})
+    if nodes and nodes[1] then
+        target.nav_path.pi, target.nav_path.spi, target.nav_path.ni = unpack(nodes[1], 1, 3)
+    end
+    return true
+end
+
+function scripts.mod_attract.update(this, store)
+    local start_ts = store.tick_ts
+    local duration = this.modifier.duration
+    while store.tick_ts - start_ts < duration do
+        coroutine.yield()
+    end
+    queue_remove(store, this)
 end
 
 return scripts

@@ -1,8 +1,8 @@
 ﻿-- -- chunkname: @./all/grid_a_star.lua
 
--- local log = require("klua.log"):new("grid_a_star")
+-- local log = require("lib.klua.log"):new("grid_a_star")
 
--- require("klua.table")
+-- require("lib.klua.table")
 
 -- local a = {}
 
@@ -235,8 +235,8 @@
 -- end
 
 -- return a
-local log = require("klua.log"):new("grid_a_star")
-require("klua.table")
+local log = require("lib.klua.log"):new("grid_a_star")
+require("lib.klua.table")
 
 local a = {}
 

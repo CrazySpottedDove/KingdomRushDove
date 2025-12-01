@@ -147,77 +147,83 @@ return {
 
     -- 炮塔
     engineer = { -- 二级炮塔
-        { merge(templates.common_upgrade, {
-            action_arg = "tower_engineer_2",
-            tt_title = _("TOWER_ENGINEER_2_NAME"),
-            tt_desc = _("TOWER_ENGINEER_2_DESCRIPTION")
-        }), templates.sell }, -- 三级炮塔
-        { merge(templates.common_upgrade, {
-            action_arg = "tower_engineer_3",
-            tt_title = _("TOWER_ENGINEER_3_NAME"),
-            tt_desc = _("TOWER_ENGINEER_3_DESCRIPTION")
-        }), templates.sell }, -- 四级炮塔
-        { merge(templates.upgrade, {
-            action_arg = "tower_bfg",
-            image = "main_icons_0013",
-            place = 5,
-            tt_title = _("TOWER_BFG_NAME"),
-            tt_desc = _("TOWER_BFG_DESCRIPTION")
-        }), merge(templates.upgrade, {
-            action_arg = "tower_tesla",
-            image = "main_icons_0012",
-            place = 6,
-            tt_title = _("TOWER_TESLA_NAME"),
-            tt_desc = _("TOWER_TESLA_DESCRIPTION")
-        }), merge(templates.upgrade, {
-            action_arg = "tower_dwaarp",
-            image = "main_icons_0027",
-            place = 7,
-            tt_title = _("TOWER_DWAARP_NAME"),
-            tt_desc = _("TOWER_DWAARP_DESCRIPTION")
-        }), merge(templates.upgrade, {
-            action_arg = "tower_mech",
-            image = "main_icons_0028",
-            place = 10,
-            tt_title = _("TOWER_MECH_NAME"),
-            tt_desc = _("TOWER_MECH_DESCRIPTION")
-        }), merge(templates.upgrade, {
-            action_arg = "tower_frankenstein",
-            image = "main_icons_0039",
-            place = 11,
-            tt_title = _("SPECIAL_TOWER_FRANKENSTEIN_NAME"),
-            tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_DESCRIPTION")
-        }), merge(templates.upgrade, {
-            action_arg = "tower_druid",
-            image = "kr3_main_icons_0008",
-            place = 12,
-            tt_title = _("TOWER_STONE_DRUID_NAME"),
-            tt_desc = _("TOWER_STONE_DRUID_DESCRIPTION")
-        }), merge(templates.upgrade, {
-            action_arg = "tower_entwood",
-            image = "kr3_main_icons_0007",
-            place = 13,
-            tt_title = _("TOWER_ENTWOOD_NAME"),
-            tt_desc = _("TOWER_ENTWOOD_DESCRIPTION")
-        }), merge(templates.upgrade, {
-            action_arg = "tower_tricannon_lvl4",
-            image = "kr5_main_icons_0004",
-            tt_title = _("TOWER_TRICANNON_NAME"),
-            tt_desc = _("TOWER_TRICANNON_1_DESCRIPTION"),
-            place = 14
-        }), merge(templates.upgrade, {
-            action_arg = "tower_demon_pit_lvl4",
-            image = "kr5_main_icons_0007",
-            tt_title = _("TOWER_DEMON_PIT_NAME"),
-            tt_desc = _("TOWER_DEMON_PIT_1_DESCRIPTION"),
-            place = 15
-        }), merge(templates.upgrade, {
-            action_arg = "tower_flamespitter_lvl4",
-            image = "kr5_main_icons_0012",
-            place = 16,
-            tt_title = _("TOWER_FLAMESPITTER_NAME"),
-            tt_desc = _("TOWER_FLAMESPITTER_1_DESCRIPTION")
-        }), templates.sell } },
+    {merge(templates.common_upgrade, {
+        action_arg = "tower_engineer_2",
+        tt_title = _("TOWER_ENGINEER_2_NAME"),
+        tt_desc = _("TOWER_ENGINEER_2_DESCRIPTION")
+    }), templates.sell}, -- 三级炮塔
+    {merge(templates.common_upgrade, {
+        action_arg = "tower_engineer_3",
+        tt_title = _("TOWER_ENGINEER_3_NAME"),
+        tt_desc = _("TOWER_ENGINEER_3_DESCRIPTION")
+    }), templates.sell}, -- 四级炮塔
+    {merge(templates.upgrade, {
+        action_arg = "tower_bfg",
+        image = "main_icons_0013",
+        place = 5,
+        tt_title = _("TOWER_BFG_NAME"),
+        tt_desc = _("TOWER_BFG_DESCRIPTION")
+    }), merge(templates.upgrade, {
+        action_arg = "tower_tesla",
+        image = "main_icons_0012",
+        place = 6,
+        tt_title = _("TOWER_TESLA_NAME"),
+        tt_desc = _("TOWER_TESLA_DESCRIPTION")
+    }), merge(templates.upgrade, {
+        action_arg = "tower_dwaarp",
+        image = "main_icons_0027",
+        place = 7,
+        tt_title = _("TOWER_DWAARP_NAME"),
+        tt_desc = _("TOWER_DWAARP_DESCRIPTION")
+    }), merge(templates.upgrade, {
+        action_arg = "tower_mech",
+        image = "main_icons_0028",
+        place = 10,
+        tt_title = _("TOWER_MECH_NAME"),
+        tt_desc = _("TOWER_MECH_DESCRIPTION")
+    }), merge(templates.upgrade, {
+        action_arg = "tower_frankenstein",
+        image = "main_icons_0039",
+        place = 11,
+        tt_title = _("SPECIAL_TOWER_FRANKENSTEIN_NAME"),
+        tt_desc = _("SPECIAL_TOWER_FRANKENSTEIN_DESCRIPTION")
+    }), merge(templates.upgrade, {
+        action_arg = "tower_druid",
+        image = "kr3_main_icons_0008",
+        place = 12,
+        tt_title = _("TOWER_STONE_DRUID_NAME"),
+        tt_desc = _("TOWER_STONE_DRUID_DESCRIPTION")
+    }), merge(templates.upgrade, {
+        action_arg = "tower_entwood",
+        image = "kr3_main_icons_0007",
+        place = 13,
+        tt_title = _("TOWER_ENTWOOD_NAME"),
+        tt_desc = _("TOWER_ENTWOOD_DESCRIPTION")
+    }), merge(templates.upgrade, {
+        action_arg = "tower_tricannon_lvl4",
+        image = "kr5_main_icons_0004",
+        tt_title = _("TOWER_TRICANNON_NAME"),
+        tt_desc = _("TOWER_TRICANNON_1_DESCRIPTION"),
+        place = 14
+    }), merge(templates.upgrade, {
+        action_arg = "tower_demon_pit_lvl4",
+        image = "kr5_main_icons_0007",
+        tt_title = _("TOWER_DEMON_PIT_NAME"),
+        tt_desc = _("TOWER_DEMON_PIT_1_DESCRIPTION"),
+        place = 15
+    }), merge(templates.upgrade, {
+        action_arg = "tower_flamespitter_lvl4",
+        image = "kr5_main_icons_0012",
+        place = 16,
+        tt_title = _("TOWER_FLAMESPITTER_NAME"),
+        tt_desc = _("TOWER_FLAMESPITTER_1_DESCRIPTION")
+    }),merge(templates.upgrade, {
+        action_arg = "tower_barrel_lvl4",
+        image = "kr5_main_icons_0017",
+        place = 17,
+        tt_title = _("TOWER_BARREL_NAME"),
+        tt_desc = _("TOWER_BARREL_1_DESCRIPTION")
+    }), templates.sell}},
 
     -- 箭塔
     archer = { -- 二级箭塔
@@ -2432,6 +2438,39 @@ return {
         }, {
             tt_title = _("TOWER_BALLISTA_4_SKILL_BOMB_3_NAME"),
             tt_desc = _("TOWER_BALLISTA_4_SKILL_BOMB_3_DESCRIPTION")
-        } }
-    }), templates.sell } }
+        }}
+    }), templates.sell}},
+    barrel = {{merge(templates.upgrade_power, {
+        action_arg = "skill_warrior",
+        image = "kr5_special_icons_0026",
+        place = 6,
+        sounds = {"TowerBarrelSkillATaunt"},
+        tt_phrase = _("TOWER_BARREL_4_SKILL_WARRIOR_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_BARREL_4_SKILL_WARRIOR_1_NAME"),
+            tt_desc = _("TOWER_BARREL_4_SKILL_WARRIOR_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_BARREL_4_SKILL_WARRIOR_2_NAME"),
+            tt_desc = _("TOWER_BARREL_4_SKILL_WARRIOR_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_BARREL_4_SKILL_WARRIOR_3_NAME"),
+            tt_desc = _("TOWER_BARREL_4_SKILL_WARRIOR_3_DESCRIPTION")
+        }}
+    }), merge(templates.upgrade_power, {
+        action_arg = "skill_barrel",
+        image = "kr5_special_icons_0027",
+        place = 7,
+        sounds = {"TowerBarrelSkillBTaunt"},
+        tt_phrase = _("TOWER_BARREL_4_SKILL_BARREL_NOTE"),
+        tt_list = {{
+            tt_title = _("TOWER_BARREL_4_SKILL_BARREL_1_NAME"),
+            tt_desc = _("TOWER_BARREL_4_SKILL_BARREL_1_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_BARREL_4_SKILL_BARREL_2_NAME"),
+            tt_desc = _("TOWER_BARREL_4_SKILL_BARREL_2_DESCRIPTION")
+        }, {
+            tt_title = _("TOWER_BARREL_4_SKILL_BARREL_3_NAME"),
+            tt_desc = _("TOWER_BARREL_4_SKILL_BARREL_3_DESCRIPTION")
+        }}
+    }), templates.rally, templates.sell}}
 }

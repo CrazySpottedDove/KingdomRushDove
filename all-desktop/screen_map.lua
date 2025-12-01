@@ -1,5 +1,5 @@
 ﻿-- chunkname: @./all-desktop/screen_map.lua
-local log = require("klua.log"):new("screen_map")
+local log = require("lib.klua.log"):new("screen_map")
 local class = require("middleclass")
 local DI = require("difficulty")
 local E = require("entity_db")
@@ -14,9 +14,9 @@ local SH = require("klove.shader_db")
 local SU = require("screen_utils")
 local U = require("utils")
 local UPGR = require("upgrades")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local i18n = require("i18n")
 local storage = require("storage")
 local signal = require("hump.signal")
@@ -982,26 +982,26 @@ function screen_map:keypressed(key, isrepeat)
             self._test_unlocked_level = 1
 
             self.map_view:show_flags()
-        elseif key == "n" then
-            local cur = self._test_unlocked_level
-            local nex = U.find_next_level_in_ranges(GS.level_ranges, cur)
+        -- elseif key == "n" then
+        --     local cur = self._test_unlocked_level
+        --     local nex = U.find_next_level_in_ranges(GS.level_ranges, cur)
 
-            self.map_view:clear_flags()
-            reset_unlock_data()
+        --     self.map_view:clear_flags()
+        --     reset_unlock_data()
 
-            self.user_data.levels[cur] = {
-                2,
-                stars = 1
-            }
-            self.unlock_data.show_stars_level = cur
-            self.unlock_data.star_count_before = 0
+        --     self.user_data.levels[cur] = {
+        --         2,
+        --         stars = 1
+        --     }
+        --     self.unlock_data.show_stars_level = cur
+        --     self.unlock_data.star_count_before = 0
 
-            U.unlock_next_levels_in_ranges(self.unlock_data, self.user_data.levels, GS)
-            log.debug("test unlock level: %s", tul)
+        --     U.unlock_next_levels_in_ranges(self.unlock_data, self.user_data.levels, GS)
+        --     log.debug("test unlock level: %s", tul)
 
-            self._test_unlocked_level = nex
+        --     self._test_unlocked_level = nex
 
-            self.map_view:show_flags()
+        --     self.map_view:show_flags()
         end
 
         if self._test_unlocked_level > 1 then

@@ -344,6 +344,7 @@ return {
     ["kr1-desktop/images/fullhd/go_stage72_bg-1.dds"] = { size = 1069328},
     ["kr1-desktop/images/fullhd/go_stage90_bg-1.dds"] = { size = 2138528},
     ["kr1-desktop/images/fullhd/go_stage91_bg-1.dds"] = { size = 2138528},
+    ["kr1-desktop/images/fullhd/go_stage92-1.dds"] = { size = 5592580},
     ["kr1-desktop/images/fullhd/go_stage92_bg-1.dds"] = { size = 2138528},
     ["kr1-desktop/images/fullhd/go_stages_ancient_metropolis-1.dds"] = { size = 2796368},
     ["kr1-desktop/images/fullhd/go_stages_bittering_rancor-1.dds"] = { size = 2796368},

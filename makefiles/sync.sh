@@ -2,7 +2,7 @@
 
 # 资源目录
 WINDOWS_DIR="$1"
-
+FULL="$2"
 # 上一次执行 sync 时的 git commit head
 LAST_SYNC_COMMIT_FILE="makefiles/.last_sync_commit_file"
 SYNC_LIST_FILE="makefiles/.sync_file_list"
@@ -12,6 +12,7 @@ echo -e "\033[1;36m=== sync changed files since last sync to: $WINDOWS_DIR ===\0
 # 当前的 git commit head
 current_commit=$(git rev-parse HEAD)
 
+# 存在 last_sync_commit_file 且非 FULL
 if [ -f "$LAST_SYNC_COMMIT_FILE" ]; then
     # 获取上一次执行 sync 时的 git commit head
     last_commit=$(cat "$LAST_SYNC_COMMIT_FILE")

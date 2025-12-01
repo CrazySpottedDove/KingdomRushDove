@@ -1,16 +1,16 @@
 ﻿-- chunkname: @./all/game_editor_classes.lua
 
-local log = require("klua.log"):new("game_editor_classes")
+local log = require("lib.klua.log"):new("game_editor_classes")
 
 log.level = log.DEBUG_LEVEL
 
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 
-require("klua.table")
+require("lib.klua.table")
 require("klove.kui")
 
 local class = require("middleclass")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
 local r = V.r
 local utf8 = require("utf8")

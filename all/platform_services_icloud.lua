@@ -1,8 +1,8 @@
 ﻿-- chunkname: @./all/platform_services_icloud.lua
 
-require("klua.string")
+require("lib.klua.string")
 
-local log = require("klua.log"):new("platform_services_icloud")
+local log = require("lib.klua.log"):new("platform_services_icloud")
 local PSU = require("platform_services_utils")
 local signal = require("hump.signal")
 local storage = require("storage")
@@ -190,7 +190,7 @@ function ic:sync_slots()
 					if rodata then
 						log.debug("comparing legacy cloud save...")
 
-						local plist = require("klua.plist")
+						local plist = require("lib.klua.plist")
 						local storage_mappings = require("storage_mappings")
 						local roparsed = plist:parse(rodata)
 

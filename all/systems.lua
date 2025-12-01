@@ -1,12 +1,12 @@
 ﻿-- chunkname: @./all/systems.lua
-local log = require("klua.log"):new("systems")
+local log = require("lib.klua.log"):new("systems")
 local log_xp = log.xp or log:new("xp")
 local log_hp = log.hp or log:new("hp")
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 
-require("klua.table")
-require("klua.dump")
+require("lib.klua.table")
+require("lib.klua.dump")
 local EU = require("endless_utils")
 local A = require("animation_db")
 local AC = require("achievements")
@@ -24,7 +24,7 @@ local W = require("wave_db")
 local U = require("utils")
 local SU = require("script_utils")
 local LU = require("level_utils")
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local storage = require("storage")
 local bit = require("bit")
 local band = bit.band
@@ -1232,15 +1232,10 @@ function sys.health:on_update(dt, ts, store)
                     damages_applied[damages_applied_count] = d
                     -- 减护甲
                 elseif band(d.damage_type, DAMAGE_ARMOR) ~= 0 then
-
-                    d.value = d.value * (1 - e.health.armor_resilience)
-
                     SU.armor_dec(e, d.value)
                     d.damage_result = bor(d.damage_result, DR_ARMOR)
                     -- 减法抗
                 elseif band(d.damage_type, DAMAGE_MAGICAL_ARMOR) ~= 0 then
-                    d.value = d.value * (1 - e.health.armor_resilience)
-
                     SU.magic_armor_dec(e, d.value)
                     d.damage_result = bor(d.damage_result, DR_MAGICAL_ARMOR)
                     -- 造成伤害

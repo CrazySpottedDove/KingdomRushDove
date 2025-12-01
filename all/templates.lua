@@ -1319,3 +1319,9 @@ tt.cooldown_factor = 0.9
 
 tt = E:register_t("arrow5_fixed_height", "arrow")
 tt.main_script.insert = scripts.arrow5_fixed_height.insert
+
+tt = E:register_t("mod_attract", "modifier")
+tt.main_script.insert = scripts.mod_attract.insert
+tt.main_script.update = scripts.mod_attract.update
+tt.main_script.remove = scripts.mod_attract.remove
+tt.attract_radius = 50

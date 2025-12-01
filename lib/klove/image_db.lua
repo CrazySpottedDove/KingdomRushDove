@@ -1,6 +1,6 @@
 ﻿-- chunkname: @./lib/klove/image_db.lua
 
-local log = require("klua.log"):new("image_db")
+local log = require("lib.klua.log"):new("image_db")
 local G = love.graphics
 local FS = love.filesystem
 local function is_file(path)
@@ -8,10 +8,10 @@ local function is_file(path)
     return info and info.type == "file"
 end
 
-require("klua.table")
-require("klua.dump")
+require("lib.klua.table")
+require("lib.klua.dump")
 
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local image_db = {}
 
 image_db.db_images = {}

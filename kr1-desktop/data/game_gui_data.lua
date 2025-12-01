@@ -1,6 +1,6 @@
 ﻿-- chunkname: @./kr1-desktop/data/game_gui_data.lua
 
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
 local i18n = require("i18n")
 

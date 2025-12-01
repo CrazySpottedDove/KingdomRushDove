@@ -1,10 +1,10 @@
 ﻿-- chunkname: @./all/sound_db.lua
 
-local log = require("klua.log"):new("sound_db")
+local log = require("lib.klua.log"):new("sound_db")
 
-require("klua.table")
+require("lib.klua.table")
 
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local LA = love.audio
 local LS = love.sound
 local FS = love.filesystem

@@ -1,12 +1,12 @@
 ﻿-- chunkname: @./all-desktop/gg_views_custom.lua
 
-local log = require("klua.log"):new("gg_views_custom")
+local log = require("lib.klua.log"):new("gg_views_custom")
 
 require("klove.kui")
 
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local class = require("middleclass")
-local km = require("klua.macros")
+local km = require("lib.klua.macros")
 local F = require("klove.font_db")
 local G = love.graphics
 local i18n = require("i18n")

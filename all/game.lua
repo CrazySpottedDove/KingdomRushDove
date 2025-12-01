@@ -1,6 +1,6 @@
 ﻿-- chunkname: @./all/game.lua
-local log = require("klua.log"):new("game")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("game")
+local km = require("lib.klua.macros")
 local signal = require("hump.signal")
 local V = require("hump.vector-light")
 local U = require("utils")
@@ -27,7 +27,7 @@ game = {}
 game.required_textures = {"go_decals", "go_enemies_common", "go_towers", "go_towers_pandas", "go_towers_dark_elf",
                           "go_towers_tricannon", "go_towers_demon_pit", "go_towers_necromancer", "go_towers_ray",
                           "go_towers_elven_stargazers", "go_towers_sand", "go_towers_royal_archers",
-                          "go_towers_arcane_wizard", "go_towers_rocket_gunners", "go_towers_flamespitter","go_towers_ballista"}
+                          "go_towers_arcane_wizard", "go_towers_rocket_gunners", "go_towers_flamespitter","go_towers_ballista","go_towers_barrel"}
 game.scale_required_textures = {}
 game.ref_h = REF_H
 game.ref_w = REF_W
@@ -36,7 +36,7 @@ game.scale_required_textures_scale = TEXTURE_SIZE_ALIAS.ipad / TEXTURE_SIZE_ALIA
 game.required_sounds = {"common", "ElvesTowerTaunts", "ElvesCommonSounds", "tower_dark_elf", "tower_tricannon",
                         "tower_demon_pit", "tower_necromancer", "tower_pandas", "tower_ray", "tower_elven_stargazers",
                         "tower_sand", "tower_royal_archers", "tower_arcane_wizard", "tower_rocket_gunners",
-                        "tower_flamespitter","tower_ballista"}
+                        "tower_flamespitter","tower_ballista","tower_barrel"}
 
 game.simulation_systems = {"level", "wave_spawn", "mod_lifecycle", "main_script", "timed", "tween", "endless_patch",
                            "health", "count_groups", "hero_xp_tracking", "pops", "goal_line", "tower_upgrade",

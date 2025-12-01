@@ -3,7 +3,7 @@ VERSION_FILE="./version.lua"
 # BASE_COMMIT=$(cat "makefiles/.main_version_commit_hash")
 
 # 读取当前 id
-current_id=$(awk -F'"' '/version\.id[ ]*=/ {print $2}' "$VERSION_FILE" | head -n 1)
+current_id=$(awk -F'"' '/   id[ ]*=/ {print $2}' "$VERSION_FILE" | head -n 1)
 
 if [[ ! $current_id =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
     echo "version.id 格式错误，当前值：$current_id"

@@ -1,8 +1,8 @@
 ﻿-- chunkname: @./all-desktop/screen_loading.lua
 
-local log = require("klua.log"):new("screen_loading")
-local km = require("klua.macros")
-local V = require("klua.vector")
+local log = require("lib.klua.log"):new("screen_loading")
+local km = require("lib.klua.macros")
+local V = require("lib.klua.vector")
 local F = require("klove.font_db")
 local I = require("klove.image_db")
 local S = require("sound_db")

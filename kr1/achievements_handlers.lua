@@ -1,6 +1,6 @@
 ﻿-- chunkname: @./kr1/achievements_handlers.lua
 
-local log = require("klua.log"):new("achievements_handlers")
+local log = require("lib.klua.log"):new("achievements_handlers")
 local signal = require("hump.signal")
 local bit = require("bit")
 local E = require("entity_db")

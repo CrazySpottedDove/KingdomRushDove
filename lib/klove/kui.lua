@@ -1,11 +1,11 @@
 ﻿-- chunkname: @./lib/klove/kui.lua
 
-local log = require("klua.log"):new("kui")
+local log = require("lib.klua.log"):new("kui")
 
-require("klua.table")
+require("lib.klua.table")
 
-local km = require("klua.macros")
-local V = require("klua.vector")
+local km = require("lib.klua.macros")
+local V = require("lib.klua.vector")
 local I = require("klove.image_db")
 local F = require("klove.font_db")
 local SH = require("klove.shader_db")

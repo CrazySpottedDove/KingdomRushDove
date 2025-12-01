@@ -9,14 +9,14 @@ else
 	package.path = package.path .. ";" .. "src/lib/?.lua"
 end
 
-local log = require("klua.log"):new("dotnet_slot_parser")
+local log = require("lib.klua.log"):new("dotnet_slot_parser")
 
-require("klua.string")
-require("klua.table")
-require("klua.dump")
+require("lib.klua.string")
+require("lib.klua.table")
+require("lib.klua.dump")
 
 local bit = require("bit")
-local bf = require("klua.dotnet_bfds")
+local bf = require("lib.klua.dotnet_bfds")
 local sm = {}
 
 function sm.map_difficulty(input, output, args)
@@ -1115,7 +1115,7 @@ if _TESTING then
 
 	local o = sm:parse(fs)
 
-	require("klua.dump")
+	require("lib.klua.dump")
 	log.error("table: %s", getfulldump(o))
 else
 	return sm

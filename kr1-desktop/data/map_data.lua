@@ -1,5 +1,5 @@
 ﻿-- chunkname: @./kr1-desktop/data/map_data.lua
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local v = V.v
 local r = V.r
 local deco_fn = require("map_decos_functions")
@@ -2116,31 +2116,8 @@ return {
             iron = {}
         }
     },
+    -- encyclopedia/tower
     tower_data = {{
-        --     name = "tower_archer_1"
-        -- }, {
-        --     name = "tower_barrack_1"
-        -- }, {
-        --     name = "tower_mage_1"
-        -- }, {
-        --     name = "tower_engineer_1"
-        -- }, {
-        --     name = "tower_archer_2"
-        -- }, {
-        --     name = "tower_barrack_2"
-        -- }, {
-        --     name = "tower_mage_2"
-        -- }, {
-        --     name = "tower_engineer_2"
-        -- }, {
-        --     name = "tower_archer_3"
-        -- }, {
-        --     name = "tower_barrack_3"
-        -- }, {
-        --     name = "tower_mage_3"
-        -- }, {
-        --     name = "tower_engineer_3"
-        -- },{
         name = "tower_ranger",
         icon = 13,
         detail_icon = 13
@@ -2257,7 +2234,8 @@ return {
         icon = 1,
         detail_icon = 1,
         from_kr = 5
-    }, {
+    }, -- 2：圣巢
+    {
         name = "tower_royal_archers_lvl4",
         icon = 3,
         detail_icon = 3,
@@ -2268,9 +2246,20 @@ return {
         detail_icon = 4,
         from_kr = 5
     }, {
+        name = "tower_ballista_lvl4",
+        icon = 5,
+        detail_icon = 5,
+        from_kr = 5
+    }, -- 6：树灵
+    {
         name = "tower_demon_pit_lvl4",
         icon = 7,
         detail_icon = 7,
+        from_kr = 5
+    }, {
+        name = "tower_barrel_lvl4",
+        icon = 8,
+        detail_icon = 8,
         from_kr = 5
     }, {
         name = "tower_necromancer_lvl4",
@@ -2302,20 +2291,14 @@ return {
         icon = 20,
         detail_icon = 21,
         from_kr = 5
-    },{
+    }, {
         name = "tower_flamespitter_lvl4",
         icon = 11,
         detail_icon = 11,
         from_kr = 5
-    },
-    -- 16, 17: 蛤蟆
+    } -- 16, 17: 蛤蟆
     -- 18: 巨像
-    {
-        name = "tower_ballista_lvl4",
-        icon = 5,
-        detail_icon = 5,
-        from_kr = 5
-    }},
+    },
     map_animations1 = {{
         sail_time = 15,
         id = "ma_big_boat",

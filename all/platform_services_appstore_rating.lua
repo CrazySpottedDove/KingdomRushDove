@@ -1,8 +1,8 @@
 ﻿-- chunkname: @./all/platform_services_appstore_rating.lua
 
-require("klua.string")
+require("lib.klua.string")
 
-local log = require("klua.log"):new("platform_services_appstore_rating")
+local log = require("lib.klua.log"):new("platform_services_appstore_rating")
 local PSU = require("platform_services_utils")
 local signal = require("hump.signal")
 local rr = {}

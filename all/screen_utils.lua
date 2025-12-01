@@ -1,6 +1,6 @@
 ﻿-- chunkname: @./all/screen_utils.lua
 
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local SU = {}
 
 function SU.clamp_window_aspect(w, h, ref_w, ref_h, min_aspect, max_aspect)

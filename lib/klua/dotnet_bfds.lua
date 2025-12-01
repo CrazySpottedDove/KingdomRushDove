@@ -2,15 +2,15 @@
 
 local _TESTING
 
-if ... == "klua.dotnet_bfds" then
+if ... == "lib.klua.dotnet_bfds" then
 	-- block empty
 else
 	_TESTING = true
 
-	require("klua.dump")
+	require("lib.klua.dump")
 end
 
-local log = require("klua.log"):new("dotnet_bfds")
+local log = require("lib.klua.log"):new("dotnet_bfds")
 
 if _TESTING then
 	log.level = log.DEBUG_LEVEL
@@ -607,7 +607,7 @@ if _TESTING then
 
 	local o = bf:parse(fs)
 
-	require("klua.dump")
+	require("lib.klua.dump")
 	log.error("table: %s", getfulldump(o))
 else
 	return bf

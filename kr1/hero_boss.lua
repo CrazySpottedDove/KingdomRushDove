@@ -7,9 +7,9 @@ local image_y = 0
 local tt = nil
 local scripts = require("game_scripts")
 require("templates")
-require("klua.table")
-local log = require("klua.log"):new("hero_boss")
-local km = require("klua.macros")
+require("lib.klua.table")
+local log = require("lib.klua.log"):new("hero_boss")
+local km = require("lib.klua.macros")
 local GR = require("grid_db")
 local GS = require("game_settings")
 local P = require("path_db")
@@ -69,7 +69,7 @@ local IS_PHONE = KR_TARGET == "phone"
 local IS_PHONE_OR_TABLET = KR_TARGET == "phone" or KR_TARGET == "tablet"
 local IS_CONSOLE = KR_TARGET == "console"
 local a
-local V = require("klua.vector")
+local V = require("lib.klua.vector")
 local function v(v1, v2)
     return {
         x = v1,

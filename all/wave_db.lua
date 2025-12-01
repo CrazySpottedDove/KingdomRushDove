@@ -1,6 +1,6 @@
 ﻿-- chunkname: @./all/wave_db.lua
-local log = require("klua.log"):new("wave_db")
-local km = require("klua.macros")
+local log = require("lib.klua.log"):new("wave_db")
+local km = require("lib.klua.macros")
 local FS = love.filesystem
 local E = require("entity_db")
 local EL = require("kr1.data.endless")
