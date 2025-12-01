@@ -10,7 +10,7 @@ local damage_type_map = {
     [DAMAGE_MAGICAL_EXPLOSION] = "法术爆炸伤害",
     [DAMAGE_ELECTRICAL] = "雷电伤害",
     [DAMAGE_MIXED] = "物法混合伤害",
-    [DAMAGE_SHOT] = "枪击伤害",
+    [DAMAGE_SHOT] = "枪击伤害"
 }
 local bit = require("bit")
 local band = bit.band
@@ -1197,7 +1197,8 @@ radius = e.bullet.damage_radius
 get_damage(e.bullet)
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
-map["脊雨"] = str(cooldown_str(),"波恩哈特向随机敌人发射",count,"根脊柱，每根对",radius,"范围内敌人造成",damage_str(),"。该技能不会主动对空军释放。")
+map["脊雨"] = str(cooldown_str(), "波恩哈特向随机敌人发射", count, "根脊柱，每根对", radius,
+    "范围内敌人造成", damage_str(), "。该技能不会主动对空军释放。")
 set_skill(h.hero.skills.diseasenova)
 a = h.timed_attacks.list[3]
 cooldown = a.cooldown
@@ -1205,7 +1206,8 @@ get_damage(a)
 radius = a.max_range
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
-map["疾病新星"] = str(cooldown_str(),"波恩哈特撞击敌人，在",radius,"范围内造成",damage_str(),"，并使敌人感染瘟疫。")
+map["疾病新星"] = str(cooldown_str(), "波恩哈特撞击敌人，在", radius, "范围内造成", damage_str(),
+    "，并使敌人感染瘟疫。")
 set_skill(h.hero.skills.plaguecarrier)
 count = ss("count")
 duration = ss("duration")
@@ -1213,7 +1215,9 @@ a = h.timed_attacks.list[1]
 cooldown = a.cooldown
 e = E:get_template("dracolich_plague_carrier")
 get_damage(e.aura)
-map["死亡之触"] = str(cooldown_str(),"波恩哈特向前吐出",count,"枚瘟疫球，每枚瘟疫球持续前进",duration,"秒，并对路径上的敌人造成",damage_str(),"，让他们感染瘟疫。")
+map["死亡之触"] = str(cooldown_str(), "波恩哈特向前吐出", count,
+    "枚瘟疫球，每枚瘟疫球持续前进", duration, "秒，并对路径上的敌人造成", damage_str(),
+    "，让他们感染瘟疫。")
 set_skill(h.hero.skills.bonegolem)
 e = E:get_template("soldier_dracolich_golem")
 get_health(e)
@@ -1222,7 +1226,8 @@ health[1].hp_max = ss("hp_max")
 d[1].damage_min = ss("damage_min")
 d[1].damage_max = ss("damage_max")
 duration = ss("duration")
-map["亡灵眷属"] = str(cooldown_str(),"波恩哈特召唤亡灵眷属协助战斗，驻场",duration,"秒。亡灵眷属拥有",health_str(),"，每次攻击造成",damage_str(),"。")
+map["亡灵眷属"] = str(cooldown_str(), "波恩哈特召唤亡灵眷属协助战斗，驻场", duration,
+    "秒。亡灵眷属拥有", health_str(), "，每次攻击造成", damage_str(), "。")
 set_skill(h.hero.skills.unstabledisease)
 e = E:get_template("mod_dracolich_disease")
 set_damage_value(ss("spread_damage"))
@@ -1232,12 +1237,52 @@ get_damage(e.dps, 2)
 set_damage_value(h.hero.level_stats.disease_damage[#h.hero.level_stats.disease_damage], 2)
 cycle_time = e.dps.damage_every
 radius = e.spread_radius
-map["凋零"]=str("波恩哈特的攻击会使敌人感染瘟疫，持续",duration,"秒，每",cycle_time,"秒造成",damage_str(2),"。当感染瘟疫的敌人死亡时，会触发尸爆，对",radius,"范围内敌人造成",damage_str(1),"。")
+map["凋零"] = str("波恩哈特的攻击会使敌人感染瘟疫，持续", duration, "秒，每", cycle_time,
+    "秒造成", damage_str(2), "。当感染瘟疫的敌人死亡时，会触发尸爆，对", radius,
+    "范围内敌人造成", damage_str(1), "。")
 
 set_hero("hero_vampiress")
-map["生命汲取"] = str()
-map["绛红之舞"] = str()
-map["杀戮生长"] = str()
+set_skill(h.hero.skills.vampirism)
+a = h.melee.attacks[2]
+get_damage(a)
+set_damage_value(ss("damage"))
+cooldown = a.cooldown
+e = E:get_template("mod_vampiress_blood")
+duration = e.modifier.duration
+cycle_time = e.dps.damage_every
+get_damage(e.dps, 2)
+set_damage_value(e.dps.damage_min + max_lvl * e.dps.damage_inc, 2)
+map["生命汲取"] = str(cooldown_str(), "卢克蕾齐亚汲取敌人的生命，造成", damage_str(),
+    "并恢复等量生命值。被汲取的敌人流血", duration, "秒，每", cycle_time, "秒受到",
+    damage_str(2), "。")
+set_skill(h.hero.skills.slayer)
+a = h.timed_attacks.list[1]
+get_damage(a)
+d[1].damage_min = ss("damage_min")
+d[1].damage_max = ss("damage_max")
+radius = a.damage_radius
+factor = a.extra_damage_factor
+cooldown = a.cooldown
+map["绛红之舞"] = str(cooldown_str(), "卢克蕾齐亚对周围", radius, "范围内敌人造成", damage_str(),
+    "。该伤害对吸血鬼夫人x", factor, "。")
+e = E:get_template("mod_vampiress_gain")
+count = e.max_gain_count
+amount = e.gain.damage
+amount_2 = e.gain.hp
+amount_3 = e.gain.magic_armor
+heal = e.gain.heal
+amount_4 = e.gain.cooldown
+local amount_5 = e.gain.radius
+local amount_6 = e.gain.speed
+local amount_7 = e.gain.armor
+map["杀戮生长"] = str("卢克蕾齐亚在杀戮中成长，每杀死一名敌人，就恢复", heal,
+    "点生命值，并提升：", amount_2, "点最大生命值，", amount, "点普攻伤害，", amount_7 * 100,
+    "点物抗，", amount_3 * 100, "点法抗，", amount_6, "点移速，", amount_5,
+    "点绛红之舞的伤害范围，并永久减少", amount_4,
+    "秒生命汲取和绛红之舞的冷却时间。上述属性提升最多", count, "次。")
+map["鲜血后裔"] = str(
+    "卢克蕾齐亚免疫毒素，每次普攻恢复3点生命值，且被视为亡灵单位。远距离移动时，卢克蕾齐亚变身蝙蝠飞行，提升自身",
+    h.motion.max_speed_bat - h.motion.max_speed, "点移速。")
 
 set_hero("hero_elves_archer")
 map["迅闪"] = str()
