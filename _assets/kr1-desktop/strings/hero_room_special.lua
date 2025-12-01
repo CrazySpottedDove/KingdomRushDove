@@ -1252,7 +1252,7 @@ duration = e.modifier.duration
 cycle_time = e.dps.damage_every
 get_damage(e.dps, 2)
 set_damage_value(e.dps.damage_min + max_lvl * e.dps.damage_inc, 2)
-map["生命汲取"] = str(cooldown_str(), "卢克蕾齐亚汲取敌人的生命，造成", damage_str(),
+map["生命汲取"] = str(cooldown_str(), "卢克蕾齐娅汲取敌人的生命，造成", damage_str(),
     "并恢复等量生命值。被汲取的敌人流血", duration, "秒，每", cycle_time, "秒受到",
     damage_str(2), "。")
 set_skill(h.hero.skills.slayer)
@@ -1263,7 +1263,7 @@ d[1].damage_max = ss("damage_max")
 radius = a.damage_radius
 factor = a.extra_damage_factor
 cooldown = a.cooldown
-map["绛红之舞"] = str(cooldown_str(), "卢克蕾齐亚对周围", radius, "范围内敌人造成", damage_str(),
+map["绛红之舞"] = str(cooldown_str(), "卢克蕾齐娅对周围", radius, "范围内敌人造成", damage_str(),
     "。该伤害对吸血鬼夫人x", factor, "。")
 e = E:get_template("mod_vampiress_gain")
 count = e.max_gain_count
@@ -1275,13 +1275,13 @@ amount_4 = e.gain.cooldown
 local amount_5 = e.gain.radius
 local amount_6 = e.gain.speed
 local amount_7 = e.gain.armor
-map["杀戮生长"] = str("卢克蕾齐亚在杀戮中成长，每杀死一名敌人，就恢复", heal,
+map["杀戮生长"] = str("卢克蕾齐娅在杀戮中成长，每杀死一名敌人，就恢复", heal,
     "点生命值，并提升：", amount_2, "点最大生命值，", amount, "点普攻伤害，", amount_7 * 100,
     "点物抗，", amount_3 * 100, "点法抗，", amount_6, "点移速，", amount_5,
     "点绛红之舞的伤害范围，并永久减少", amount_4,
     "秒生命汲取和绛红之舞的冷却时间。上述属性提升最多", count, "次。")
 map["鲜血后裔"] = str(
-    "卢克蕾齐亚免疫毒素，每次普攻恢复3点生命值，且被视为亡灵单位。远距离移动时，卢克蕾齐亚变身蝙蝠飞行，提升自身",
+    "卢克蕾齐娅免疫毒素，每次普攻恢复3点生命值，且被视为亡灵单位。远距离移动时，卢克蕾齐娅变身蝙蝠飞行，提升自身",
     h.motion.max_speed_bat - h.motion.max_speed, "点移速。")
 
 set_hero("hero_elves_archer")
